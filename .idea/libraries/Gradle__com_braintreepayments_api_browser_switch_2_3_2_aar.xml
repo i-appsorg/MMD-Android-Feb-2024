@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.braintreepayments.api:browser-switch:2.3.2@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/e7e4e383d25455df48ec94c4c10ff3f2/transformed/jetified-browser-switch-2.3.2/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/e7e4e383d25455df48ec94c4c10ff3f2/transformed/jetified-browser-switch-2.3.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e7e4e383d25455df48ec94c4c10ff3f2/transformed/jetified-browser-switch-2.3.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e7e4e383d25455df48ec94c4c10ff3f2/transformed/jetified-browser-switch-2.3.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.braintreepayments.api/browser-switch/2.3.2/77ec063abb7b550c97570bb38fb8fb1f519fcc88/browser-switch-2.3.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.braintreepayments.api/browser-switch/2.3.2/8a518796e4b1463d9e68188adc2acefd41b6a904/browser-switch-2.3.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

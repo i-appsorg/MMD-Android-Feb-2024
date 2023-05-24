@@ -1,0 +1,1242 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.i2donate"
+4    android:versionCode="22"
+5    android:versionName="1.0.22" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml
+10
+11    <supports-screens
+11-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:6:5-11:40
+12        android:anyDensity="true"
+12-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:7:9-34
+13        android:largeScreens="true"
+13-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:8:9-36
+14        android:normalScreens="true"
+14-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:9:9-37
+15        android:smallScreens="true"
+15-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:10:9-36
+16        android:xlargeScreens="true" />
+16-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:11:9-37
+17
+18    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+18-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:13:5-82
+18-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:13:22-79
+19    <uses-permission android:name="android.permission.WAKE_LOCK" />
+19-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:14:5-68
+19-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:14:22-65
+20
+21    <permission
+21-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:16:5-18:47
+22        android:name="com.kuliza.taxi.permission.MAPS_RECEIVE"
+22-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:17:9-63
+23        android:protectionLevel="signature" />
+23-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:18:9-44
+24
+25    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+25-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:20:5-75
+25-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:20:22-72
+26    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+26-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:21:5-98
+26-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:21:22-95
+27    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+27-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:22:5-81
+27-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:22:22-78
+28    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+28-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:23:5-79
+28-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:23:22-76
+29    <uses-permission android:name="android.permission.INTERNET" />
+29-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:24:5-67
+29-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:24:22-64
+30    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+30-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:25:5-79
+30-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:25:22-76
+31    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+31-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:26:5-76
+31-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:26:22-73
+32    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+32-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:27:5-76
+32-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:27:22-73
+33    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+33-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:28:5-71
+33-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:28:22-68
+34    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+34-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:29:5-71
+34-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:29:22-68
+35    <uses-permission android:name="android.permission.CAMERA" />
+35-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:30:5-65
+35-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:30:22-62
+36    <uses-permission android:name="android.permission.CALL_PHONE" />
+36-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:31:5-69
+36-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:31:22-66
+37    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+37-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:32:5-80
+37-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:32:22-77
+38    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+38-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:33:5-81
+38-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:33:22-78
+39    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+39-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:20:5-75
+39-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:20:22-72
+40
+41    <uses-feature
+41-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:36:5-38:35
+42        android:name="android.hardware.camera.any"
+42-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:37:9-51
+43        android:required="true" />
+43-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:38:9-32
+44    <uses-feature
+44-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:39:5-41:36
+45        android:name="android.hardware.camera.autofocus"
+45-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:40:9-57
+46        android:required="false" />
+46-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:41:9-33
+47
+48    <queries>
+48-->[com.facebook.android:facebook-common:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/40c767da5aa3983bd2b36169b9378e56/transformed/jetified-facebook-common-16.0.1/AndroidManifest.xml:17:5-19:15
+49        <package android:name="com.facebook.katana" />
+49-->[com.facebook.android:facebook-common:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/40c767da5aa3983bd2b36169b9378e56/transformed/jetified-facebook-common-16.0.1/AndroidManifest.xml:18:9-55
+49-->[com.facebook.android:facebook-common:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/40c767da5aa3983bd2b36169b9378e56/transformed/jetified-facebook-common-16.0.1/AndroidManifest.xml:18:18-52
+50        <package android:name="com.venmo" />
+50-->[com.braintreepayments.api:braintree-core:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9c5a811515591ceacb555ff17aa65be0/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:15:9-45
+50-->[com.braintreepayments.api:braintree-core:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9c5a811515591ceacb555ff17aa65be0/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:15:18-42
+51        <package android:name="com.paypal.android.p2pmobile" />
+51-->[com.braintreepayments.api:braintree-core:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9c5a811515591ceacb555ff17aa65be0/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:16:9-64
+51-->[com.braintreepayments.api:braintree-core:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9c5a811515591ceacb555ff17aa65be0/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:16:18-61
+52
+53        <intent>
+53-->[com.braintreepayments.api:browser-switch:2.3.2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e7e4e383d25455df48ec94c4c10ff3f2/transformed/jetified-browser-switch-2.3.2/AndroidManifest.xml:10:9-16:18
+54            <action android:name="android.intent.action.VIEW" />
+54-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:80:17-69
+54-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:80:25-66
+55
+56            <category android:name="android.intent.category.BROWSABLE" />
+56-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:83:17-78
+56-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:83:27-75
+57
+58            <data android:scheme="https" />
+58-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:85:23-66
+59        </intent>
+60        <intent>
+60-->[com.braintreepayments.api:browser-switch:2.3.2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e7e4e383d25455df48ec94c4c10ff3f2/transformed/jetified-browser-switch-2.3.2/AndroidManifest.xml:17:9-19:18
+61            <action android:name="android.support.customtabs.action.CustomTabsService" />
+61-->[com.braintreepayments.api:browser-switch:2.3.2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e7e4e383d25455df48ec94c4c10ff3f2/transformed/jetified-browser-switch-2.3.2/AndroidManifest.xml:18:13-90
+61-->[com.braintreepayments.api:browser-switch:2.3.2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e7e4e383d25455df48ec94c4c10ff3f2/transformed/jetified-browser-switch-2.3.2/AndroidManifest.xml:18:21-87
+62        </intent> <!-- Needs to be explicitly declared on Android R+ -->
+63        <package android:name="com.google.android.apps.maps" />
+63-->[com.google.android.gms:play-services-maps:18.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/fe7a0183c67c23801359a0321a2823e6/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:33:9-64
+63-->[com.google.android.gms:play-services-maps:18.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/fe7a0183c67c23801359a0321a2823e6/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:33:18-61
+64    </queries>
+65
+66    <uses-feature
+66-->[com.google.android.gms:play-services-maps:18.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/fe7a0183c67c23801359a0321a2823e6/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:26:5-28:35
+67        android:glEsVersion="0x00020000"
+67-->[com.google.android.gms:play-services-maps:18.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/fe7a0183c67c23801359a0321a2823e6/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:27:9-41
+68        android:required="true" />
+68-->[com.google.android.gms:play-services-maps:18.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/fe7a0183c67c23801359a0321a2823e6/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:28:9-32
+69
+70    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+70-->[com.google.android.gms:play-services-measurement-api:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/be4111d33d04896afe28bd8fbc879529/transformed/jetified-play-services-measurement-api-21.1.1/AndroidManifest.xml:25:5-79
+70-->[com.google.android.gms:play-services-measurement-api:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/be4111d33d04896afe28bd8fbc879529/transformed/jetified-play-services-measurement-api-21.1.1/AndroidManifest.xml:25:22-76
+71    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+71-->[com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:26:5-110
+71-->[com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:26:22-107
+72    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+72-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:27:5-81
+72-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:27:22-78
+73    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+73-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:28:5-77
+73-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:28:22-74
+74
+75    <application
+75-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:43:5-259:19
+76        android:name="com.i2donate.Interwork.MyApplication"
+76-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:44:9-48
+77        android:allowBackup="true"
+77-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:45:9-35
+78        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+78-->[androidx.core:core:1.8.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/1d6984a21c9b376709d4727d25d10d0c/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
+79        android:debuggable="true"
+80        android:exported="false"
+80-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:46:9-33
+81        android:fullBackupContent="false"
+81-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:47:9-42
+82        android:grantUriPermissions="true"
+82-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:48:9-43
+83        android:hardwareAccelerated="false"
+83-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:49:9-44
+84        android:icon="@drawable/logo"
+84-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:50:9-38
+85        android:label="@string/app_name"
+85-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:51:9-41
+86        android:largeHeap="true"
+86-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:52:9-33
+87        android:requestLegacyExternalStorage="true"
+87-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:53:9-52
+88        android:roundIcon="@mipmap/ic_launcher"
+88-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:54:9-48
+89        android:supportsRtl="true"
+89-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:55:9-35
+90        android:testOnly="true"
+91        android:theme="@style/ChatBackground"
+91-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:56:9-46
+92        android:usesCleartextTraffic="true"
+92-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:57:9-44
+93        android:windowSoftInputMode="adjustResize|stateAlwaysHidden" >
+93-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:58:9-69
+94        <activity
+94-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:60:9-66:20
+95            android:name="com.i2donate.Activity.NamePlaceSerachActivity"
+95-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:61:13-61
+96            android:exported="false" >
+96-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:62:13-37
+97            <meta-data
+97-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:63:13-65:36
+98                android:name="android.app.lib_name"
+98-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:64:17-52
+99                android:value="" />
+99-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:65:17-33
+100        </activity>
+101        <activity
+101-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:67:9-73:20
+102            android:name="com.i2donate.Activity.TypeSerchActivity"
+102-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:68:13-55
+103            android:exported="false" >
+103-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:69:13-37
+104            <meta-data
+104-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:63:13-65:36
+105                android:name="android.app.lib_name"
+105-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:64:17-52
+106                android:value="" />
+106-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:65:17-33
+107        </activity>
+108        <activity android:name="com.i2donate.Activity.PrivactPolicyActivity" />
+108-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:74:9-68
+108-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:74:19-65
+109        <activity
+109-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:75:9-87:20
+110            android:name="com.braintreepayments.api.BraintreeBrowserSwitchActivity"
+110-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:76:13-84
+111            android:exported="true"
+111-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:77:13-36
+112            android:launchMode="singleTask" >
+112-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:78:13-44
+113            <intent-filter>
+113-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:79:13-86:29
+114                <action android:name="android.intent.action.VIEW" />
+114-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:80:17-69
+114-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:80:25-66
+115
+116                <category android:name="android.intent.category.DEFAULT" />
+116-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:82:17-76
+116-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:82:27-73
+117                <category android:name="android.intent.category.BROWSABLE" />
+117-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:83:17-78
+117-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:83:27-75
+118
+119                <data android:scheme="com.i2donate.braintree" />
+119-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:85:23-66
+120            </intent-filter>
+121        </activity>
+122        <activity android:name="com.i2donate.Activity.BrainTreePaymentActivity" />
+122-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:88:9-71
+122-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:88:19-68
+123        <activity android:name="com.i2donate.Activity.PrivacyPolicyActivity" />
+123-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:89:9-68
+123-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:89:19-65
+124        <activity android:name="com.i2donate.Activity.TermsAndConditionActivity" />
+124-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:90:9-72
+124-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:90:19-69
+125        <activity android:name="com.i2donate.Activity.NewtypesActivity" />
+125-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:91:9-63
+125-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:91:19-60
+126
+127        <meta-data
+127-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:93:9-95:37
+128            android:name="firebase_crashlytics_collection_enabled"
+128-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:94:13-67
+129            android:value="false" />
+129-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:95:13-34
+130
+131        <service
+131-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:97:9-103:19
+132            android:name="com.i2donate.Notification.fcm.MyFirebaseMessagingService"
+132-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:98:13-72
+133            android:exported="false" >
+133-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:99:13-37
+134            <intent-filter>
+134-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:100:13-102:29
+135                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+135-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:101:17-78
+135-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:101:25-75
+136            </intent-filter>
+137        </service>
+138
+139        <receiver
+139-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:105:9-111:20
+140            android:name="com.i2donate.Notification.fcm.OnBootBroadcastReceiver"
+140-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:106:13-69
+141            android:exported="false" >
+141-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:107:13-37
+142            <intent-filter>
+142-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:108:13-110:29
+143                <action android:name="android.intent.action.BOOT_COMPLETED" />
+143-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:109:17-79
+143-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:109:25-76
+144            </intent-filter>
+145        </receiver>
+146
+147        <activity android:name="com.i2donate.Activity.ConfirmationActivity" />
+147-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:113:9-67
+147-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:113:19-64
+148        <activity android:name="com.i2donate.Activity.AnnualRevenueActivity" />
+148-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:114:9-68
+148-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:114:19-65
+149        <activity android:name="com.i2donate.Activity.TitleSubTitleActivity" />
+149-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:115:9-68
+149-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:115:19-65
+150        <activity android:name="com.i2donate.Activity.SubCategoryActivity" />
+150-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:116:9-66
+150-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:116:19-63
+151        <activity android:name="com.i2donate.Activity.AdvanceCompletedActivity" />
+151-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:117:9-71
+151-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:117:19-68
+152        <activity android:name="com.i2donate.Activity.PaymentSuccessActivity" />
+152-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:118:9-69
+152-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:118:19-66
+153        <activity android:name="com.i2donate.Activity.SelectPaymentActivity" />
+153-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:119:9-68
+153-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:119:19-65
+154        <activity android:name="com.i2donate.Activity.ChangePasswordActivity" />
+154-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:120:9-69
+154-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:120:19-66
+155        <activity
+155-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:121:9-123:76
+156            android:name="com.i2donate.Activity.OtpActivity"
+156-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:122:13-49
+157            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+157-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:123:13-73
+158        <activity android:name="com.i2donate.Activity.ForgotActivity" />
+158-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:124:9-61
+158-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:124:19-58
+159        <activity android:name="com.i2donate.Activity.AdvanceSearchActivity" />
+159-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:125:9-68
+159-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:125:19-65
+160        <activity
+160-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:126:9-128:53
+161            android:name="com.i2donate.Activity.AdavanceSearchUIDesign"
+161-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:127:13-60
+162            android:theme="@style/adavance_theme" />
+162-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:128:13-50
+163        <activity android:name="com.i2donate.Activity.AdavanceSearch_new" />
+163-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:129:9-65
+163-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:129:19-62
+164        <activity android:name="com.i2donate.Activity.HelpSupportActivity" />
+164-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:130:9-66
+164-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:130:19-63
+165        <activity android:name="com.i2donate.Activity.AboutActivity" />
+165-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:131:9-60
+165-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:131:19-57
+166        <activity android:name="com.i2donate.Activity.InternationalCharitiesActivity" />
+166-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:132:9-77
+166-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:132:19-74
+167        <activity android:name="com.i2donate.Activity.PlaceSearchActivity" />
+167-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:133:9-66
+167-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:133:19-63
+168        <activity android:name="com.i2donate.Activity.AutosearchActivity" />
+168-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:134:9-65
+168-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:134:19-62
+169        <!--
+170             The API key for Google Maps-based APIs is defined as a string resource.
+171             (See the file "res/values/google_maps_api.xml").
+172             Note that the API key is linked to the encryption key used to sign the APK.
+173             You need a different API key for each encryption key, including the release key that is used to
+174             sign the APK for publishing.
+175             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+176        -->
+177        <!--
+178   <meta-data
+179            android:name="com.google.android.geo.API_KEY"
+180            android:value="AIzaSyDwyL_q0Z9StsO0xYL_7qR7_ZIeW85I110" />
+181        -->
+182        <activity android:name="com.i2donate.Activity.UpdateActivity" />
+182-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:148:9-61
+182-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:148:19-58
+183        <activity android:name="com.i2donate.Activity.AdvanceSearch1Activity" />
+183-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:149:9-69
+183-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:149:19-66
+184        <activity
+184-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:150:9-159:20
+185            android:name="com.i2donate.Activity.WelcomeActivity"
+185-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:151:13-53
+186            android:exported="true"
+186-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:152:13-36
+187            android:theme="@style/inter_splash_screen" >
+187-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:153:13-55
+188            <intent-filter>
+188-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:154:13-158:29
+189                <action android:name="android.intent.action.MAIN" />
+189-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:155:17-69
+189-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:155:25-66
+190
+191                <category android:name="android.intent.category.LAUNCHER" />
+191-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:157:17-77
+191-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:157:27-74
+192            </intent-filter>
+193        </activity>
+194        <activity
+194-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:160:9-162:76
+195            android:name="com.i2donate.Activity.UnitedStateDetailsActivity"
+195-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:161:13-64
+196            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+196-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:162:13-73
+197        <activity
+197-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:163:9-165:48
+198            android:name="com.i2donate.Activity.SettingActivity"
+198-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:164:13-53
+199            android:theme="@style/AppTheme1" />
+199-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:165:13-45
+200        <activity android:name="com.i2donate.Activity.NotificationActivity" />
+200-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:166:9-67
+200-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:166:19-64
+201        <activity android:name="com.i2donate.Activity.FollowingActivity" />
+201-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:167:9-64
+201-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:167:19-61
+202        <activity android:name="com.i2donate.Activity.TypesActivity" />
+202-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:168:9-60
+202-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:168:19-57
+203        <activity
+203-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:169:9-172:76
+204            android:name="com.i2donate.Activity.NameSearchActivity"
+204-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:170:13-56
+205            android:theme="@style/ChatBackground"
+205-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:171:13-50
+206            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+206-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:172:13-73
+207        <activity
+207-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:173:9-175:67
+208            android:name="com.i2donate.Activity.UnitedStateActivity"
+208-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:174:13-57
+209            android:windowSoftInputMode="adjustPan|stateHidden" />
+209-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:175:13-64
+210        <activity
+210-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:176:9-179:76
+211            android:name="com.i2donate.CommonActivity.CommonBackActivity"
+211-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:177:13-62
+212            android:theme="@style/ChatBackground"
+212-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:178:13-50
+213            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+213-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:179:13-73
+214        <activity android:name="com.i2donate.Activity.RegisterActivity" />
+214-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:180:9-63
+214-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:180:19-60
+215        <activity
+215-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:181:9-184:48
+216            android:name="com.facebook.FacebookActivity"
+216-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:182:13-57
+217            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+217-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:183:13-96
+218            android:label="@string/app_name"
+218-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:184:13-45
+219            android:theme="@style/com_facebook_activity_theme" />
+219-->[com.facebook.android:facebook-common:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/40c767da5aa3983bd2b36169b9378e56/transformed/jetified-facebook-common-16.0.1/AndroidManifest.xml:25:13-63
+220        <activity
+220-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:185:9-196:20
+221            android:name="com.facebook.CustomTabActivity"
+221-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:186:13-58
+222            android:exported="true" >
+222-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:187:13-36
+223            <intent-filter>
+223-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:188:13-195:29
+224                <action android:name="android.intent.action.VIEW" />
+224-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:80:17-69
+224-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:80:25-66
+225
+226                <category android:name="android.intent.category.DEFAULT" />
+226-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:82:17-76
+226-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:82:27-73
+227                <category android:name="android.intent.category.BROWSABLE" />
+227-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:83:17-78
+227-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:83:27-75
+228
+229                <data android:scheme="@string/fb_login_protocol_scheme" />
+229-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:85:23-66
+230            </intent-filter>
+231            <intent-filter>
+231-->[com.facebook.android:facebook-common:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/40c767da5aa3983bd2b36169b9378e56/transformed/jetified-facebook-common-16.0.1/AndroidManifest.xml:31:13-40:29
+232                <action android:name="android.intent.action.VIEW" />
+232-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:80:17-69
+232-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:80:25-66
+233
+234                <category android:name="android.intent.category.DEFAULT" />
+234-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:82:17-76
+234-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:82:27-73
+235                <category android:name="android.intent.category.BROWSABLE" />
+235-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:83:17-78
+235-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:83:27-75
+236
+237                <data
+238                    android:host="cct.com.i2donate"
+239                    android:scheme="fbconnect" />
+239-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:85:23-66
+240            </intent-filter>
+241        </activity> <!-- facebooklogin -->
+242        <activity
+242-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:197:9-200:76
+243            android:name="com.i2donate.Activity.LoginActivity"
+243-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:198:13-51
+244            android:theme="@style/ChatBackground"
+244-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:199:13-50
+245            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+245-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:200:13-73
+246        <activity
+246-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:201:9-212:20
+247            android:name="com.i2donate.Activity.SplashScreenActivity"
+247-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:202:13-58
+248            android:exported="true"
+248-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:203:13-36
+249            android:theme="@style/inter_splash_screen" >
+249-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:204:13-55
+250
+251            <!-- <intent-filter> -->
+252            <!-- <action android:name="android.intent.action.MAIN" /> -->
+253
+254
+255            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+256            <!-- </intent-filter> -->
+257        </activity>
+258        <activity android:name="com.i2donate.Activity.MyspaceActivity" />
+258-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:213:9-62
+258-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:213:19-59
+259        <activity android:name="com.i2donate.CommonActivity.CommonMenuActivity" />
+259-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:214:9-71
+259-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:214:19-68
+260        <activity
+260-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:215:9-217:58
+261            android:name="com.i2donate.Activity.BrowseActivity"
+261-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:216:13-52
+262            android:windowSoftInputMode="adjustResize" />
+262-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:217:13-55
+263
+264        <meta-data
+264-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:219:9-221:71
+265            android:name="com.google.android.geo.API_KEY"
+265-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:220:13-58
+266            android:value="AIzaSyDfOZf_bITlewuOVvnVICvjQ70VdFHmR2Q" />
+266-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:221:13-68
+267        <meta-data
+267-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:222:9-224:69
+268            android:name="com.google.android.gms.version"
+268-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:223:13-58
+269            android:value="@integer/google_play_services_version" /> <!-- <meta-data -->
+269-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:224:13-66
+270        <!-- android:name="com.facebook.sdk.ApplicationId" -->
+271        <!-- android:value="@string/facebook_app_id" /> -->
+272        <meta-data
+272-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:227:9-229:55
+273            android:name="com.facebook.sdk.ApplicationId"
+273-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:228:13-58
+274            android:value="@string/facebook_app_id" />
+274-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:229:13-52
+275        <meta-data
+275-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:230:9-232:61
+276            android:name="com.facebook.sdk.ClientToken"
+276-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:231:13-56
+277            android:value="@string/facebook_client_token" />
+277-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:232:13-58
+278
+279        <receiver
+279-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:234:9-241:20
+280            android:name="com.i2donate.Interwork.ConnectivityReceiver"
+280-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:235:13-59
+281            android:enabled="true"
+281-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:236:13-35
+282            android:exported="false" >
+282-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:237:13-37
+283            <intent-filter>
+283-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:238:13-240:29
+284                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+284-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:239:17-79
+284-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:239:25-76
+285            </intent-filter>
+286        </receiver>
+287
+288        <meta-data
+288-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:243:9-245:57
+289            android:name="com.google.firebase.messaging.default_notification_icon"
+289-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:244:13-83
+290            android:resource="@drawable/idonate_logo" />
+290-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:245:13-54
+291        <!--
+292 Set color used with incoming notification messages. This is used when no color is set for the incoming
+293             notification message. See README(https://goo.gl/6BKBk7) for more.
+294        -->
+295        <meta-data
+295-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:250:9-252:53
+296            android:name="com.google.firebase.messaging.default_notification_color"
+296-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:251:13-84
+297            android:resource="@color/colorAccent" />
+297-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:252:13-50
+298        <meta-data
+298-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:253:9-255:37
+299            android:name="firebase_messaging_auto_init_enabled"
+299-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:254:13-64
+300            android:value="false" />
+300-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:255:13-34
+301        <meta-data
+301-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:256:9-258:37
+302            android:name="firebase_analytics_collection_enabled"
+302-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:257:13-65
+303            android:value="false" />
+303-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:258:13-34
+304
+305        <activity
+305-->[com.karumi:dexter:5.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7d13c14e14b2215db082d95d5cb21f22/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:27:9-29:72
+306            android:name="com.karumi.dexter.DexterActivity"
+306-->[com.karumi:dexter:5.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7d13c14e14b2215db082d95d5cb21f22/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:28:13-60
+307            android:theme="@style/Dexter.Internal.Theme.Transparent" />
+307-->[com.karumi:dexter:5.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7d13c14e14b2215db082d95d5cb21f22/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:29:13-69
+308        <activity
+308-->[com.braintreepayments.api:drop-in:6.9.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/63f1873bc52196e5b3e511184612a6cc/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:16:9-29:20
+309            android:name="com.braintreepayments.api.DropInActivity"
+309-->[com.braintreepayments.api:drop-in:6.9.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/63f1873bc52196e5b3e511184612a6cc/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:17:13-68
+310            android:exported="true"
+310-->[com.braintreepayments.api:drop-in:6.9.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/63f1873bc52196e5b3e511184612a6cc/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:18:13-36
+311            android:launchMode="singleTask"
+311-->[com.braintreepayments.api:drop-in:6.9.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/63f1873bc52196e5b3e511184612a6cc/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:19:13-44
+312            android:theme="@style/bt_drop_in_activity_theme" >
+312-->[com.braintreepayments.api:drop-in:6.9.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/63f1873bc52196e5b3e511184612a6cc/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:20:13-61
+313            <intent-filter>
+313-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:79:13-86:29
+314                <action android:name="android.intent.action.VIEW" />
+314-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:80:17-69
+314-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:80:25-66
+315
+316                <data android:scheme="com.i2donate.braintree" />
+316-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:85:23-66
+317
+318                <category android:name="android.intent.category.DEFAULT" />
+318-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:82:17-76
+318-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:82:27-73
+319                <category android:name="android.intent.category.BROWSABLE" />
+319-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:83:17-78
+319-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:83:27-75
+320            </intent-filter>
+321        </activity>
+322
+323        <provider
+323-->[com.balsikandar.android:crashreporter:1.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e248510c28ba4a835a4c9d4df74409a4/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:12:9-16:40
+324            android:name="com.balsikandar.crashreporter.CrashReporterInitProvider"
+324-->[com.balsikandar.android:crashreporter:1.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e248510c28ba4a835a4c9d4df74409a4/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:13:13-83
+325            android:authorities="com.i2donate.CrashReporterInitProvider"
+325-->[com.balsikandar.android:crashreporter:1.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e248510c28ba4a835a4c9d4df74409a4/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:14:13-77
+326            android:enabled="true"
+326-->[com.balsikandar.android:crashreporter:1.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e248510c28ba4a835a4c9d4df74409a4/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:15:13-35
+327            android:exported="false" />
+327-->[com.balsikandar.android:crashreporter:1.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e248510c28ba4a835a4c9d4df74409a4/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:16:13-37
+328
+329        <activity
+329-->[com.balsikandar.android:crashreporter:1.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e248510c28ba4a835a4c9d4df74409a4/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:18:9-22:58
+330            android:name="com.balsikandar.crashreporter.ui.CrashReporterActivity"
+330-->[com.balsikandar.android:crashreporter:1.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e248510c28ba4a835a4c9d4df74409a4/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:19:13-82
+331            android:launchMode="singleTask"
+331-->[com.balsikandar.android:crashreporter:1.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e248510c28ba4a835a4c9d4df74409a4/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:20:13-44
+332            android:taskAffinity="com.balsikandar.android.task"
+332-->[com.balsikandar.android:crashreporter:1.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e248510c28ba4a835a4c9d4df74409a4/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:21:13-64
+333            android:theme="@style/CrashReporter.Theme" />
+333-->[com.balsikandar.android:crashreporter:1.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e248510c28ba4a835a4c9d4df74409a4/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:22:13-55
+334        <activity
+334-->[com.balsikandar.android:crashreporter:1.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e248510c28ba4a835a4c9d4df74409a4/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:23:9-26:58
+335            android:name="com.balsikandar.crashreporter.ui.LogMessageActivity"
+335-->[com.balsikandar.android:crashreporter:1.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e248510c28ba4a835a4c9d4df74409a4/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:24:13-79
+336            android:parentActivityName="com.balsikandar.crashreporter.ui.CrashReporterActivity"
+336-->[com.balsikandar.android:crashreporter:1.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e248510c28ba4a835a4c9d4df74409a4/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:25:13-96
+337            android:theme="@style/CrashReporter.Theme" />
+337-->[com.balsikandar.android:crashreporter:1.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e248510c28ba4a835a4c9d4df74409a4/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:26:13-55
+338        <activity
+338-->[com.google.android.libraries.places:places:2.6.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/baf55be16a092e4414622aeeef439495/transformed/jetified-places-2.6.0/AndroidManifest.xml:14:9-20:20
+339            android:name="com.google.android.libraries.places.widget.AutocompleteActivity"
+339-->[com.google.android.libraries.places:places:2.6.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/baf55be16a092e4414622aeeef439495/transformed/jetified-places-2.6.0/AndroidManifest.xml:15:13-91
+340            android:exported="false"
+340-->[com.google.android.libraries.places:places:2.6.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/baf55be16a092e4414622aeeef439495/transformed/jetified-places-2.6.0/AndroidManifest.xml:16:13-37
+341            android:label="@string/places_autocomplete_label"
+341-->[com.google.android.libraries.places:places:2.6.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/baf55be16a092e4414622aeeef439495/transformed/jetified-places-2.6.0/AndroidManifest.xml:17:13-62
+342            android:theme="@style/PlacesAutocompleteOverlay"
+342-->[com.google.android.libraries.places:places:2.6.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/baf55be16a092e4414622aeeef439495/transformed/jetified-places-2.6.0/AndroidManifest.xml:18:13-61
+343            android:windowSoftInputMode="adjustResize" >
+343-->[com.google.android.libraries.places:places:2.6.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/baf55be16a092e4414622aeeef439495/transformed/jetified-places-2.6.0/AndroidManifest.xml:19:13-55
+344        </activity>
+345        <activity android:name="com.facebook.CustomTabMainActivity" />
+345-->[com.facebook.android:facebook-common:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/40c767da5aa3983bd2b36169b9378e56/transformed/jetified-facebook-common-16.0.1/AndroidManifest.xml:26:9-71
+345-->[com.facebook.android:facebook-common:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/40c767da5aa3983bd2b36169b9378e56/transformed/jetified-facebook-common-16.0.1/AndroidManifest.xml:26:19-68
+346        <activity
+346-->[com.braintreepayments.api:three-d-secure:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9f25c3eef26339cafc45aaf804630c4a/transformed/jetified-three-d-secure-4.27.0/AndroidManifest.xml:10:9-12:54
+347            android:name="com.braintreepayments.api.ThreeDSecureActivity"
+347-->[com.braintreepayments.api:three-d-secure:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9f25c3eef26339cafc45aaf804630c4a/transformed/jetified-three-d-secure-4.27.0/AndroidManifest.xml:11:13-74
+348            android:theme="@style/Theme.AppCompat" />
+348-->[com.braintreepayments.api:three-d-secure:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9f25c3eef26339cafc45aaf804630c4a/transformed/jetified-three-d-secure-4.27.0/AndroidManifest.xml:12:13-51
+349
+350        <meta-data
+350-->[com.braintreepayments.api:google-pay:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/c24b2fc09ee0e3ffd59e5e402ee23692/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:10:9-12:36
+351            android:name="com.google.android.gms.wallet.api.enabled"
+351-->[com.braintreepayments.api:google-pay:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/c24b2fc09ee0e3ffd59e5e402ee23692/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:11:13-69
+352            android:value="true" />
+352-->[com.braintreepayments.api:google-pay:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/c24b2fc09ee0e3ffd59e5e402ee23692/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:12:13-33
+353
+354        <activity
+354-->[com.braintreepayments.api:google-pay:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/c24b2fc09ee0e3ffd59e5e402ee23692/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:14:9-16:62
+355            android:name="com.braintreepayments.api.GooglePayActivity"
+355-->[com.braintreepayments.api:google-pay:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/c24b2fc09ee0e3ffd59e5e402ee23692/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:15:13-71
+356            android:theme="@style/bt_transparent_activity" />
+356-->[com.braintreepayments.api:google-pay:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/c24b2fc09ee0e3ffd59e5e402ee23692/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:16:13-59
+357        <activity
+357-->[com.braintreepayments.api:braintree-core:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9c5a811515591ceacb555ff17aa65be0/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:20:9-32:20
+358            android:name="com.braintreepayments.api.BraintreeDeepLinkActivity"
+358-->[com.braintreepayments.api:braintree-core:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9c5a811515591ceacb555ff17aa65be0/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:21:13-79
+359            android:exported="true"
+359-->[com.braintreepayments.api:braintree-core:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9c5a811515591ceacb555ff17aa65be0/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:22:13-36
+360            android:launchMode="singleTask" >
+360-->[com.braintreepayments.api:braintree-core:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9c5a811515591ceacb555ff17aa65be0/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:23:13-44
+361            <intent-filter>
+361-->[com.braintreepayments.api:braintree-core:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9c5a811515591ceacb555ff17aa65be0/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:24:13-31:29
+362                <action android:name="android.intent.action.VIEW" />
+362-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:80:17-69
+362-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:80:25-66
+363
+364                <data android:scheme="com.i2donate.braintree.deeplinkhandler" />
+364-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:85:23-66
+365
+366                <category android:name="android.intent.category.DEFAULT" />
+366-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:82:17-76
+366-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:82:27-73
+367                <category android:name="android.intent.category.BROWSABLE" />
+367-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:83:17-78
+367-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:83:27-75
+368            </intent-filter>
+369        </activity>
+370        <activity
+370-->[com.google.android.gms:play-services-auth:20.3.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/0e9f0bdb64f5e2240feb6d5f927c9c48/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:23:9-27:75
+371            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+371-->[com.google.android.gms:play-services-auth:20.3.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/0e9f0bdb64f5e2240feb6d5f927c9c48/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:24:13-93
+372            android:excludeFromRecents="true"
+372-->[com.google.android.gms:play-services-auth:20.3.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/0e9f0bdb64f5e2240feb6d5f927c9c48/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:25:13-46
+373            android:exported="false"
+373-->[com.google.android.gms:play-services-auth:20.3.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/0e9f0bdb64f5e2240feb6d5f927c9c48/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:26:13-37
+374            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+374-->[com.google.android.gms:play-services-auth:20.3.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/0e9f0bdb64f5e2240feb6d5f927c9c48/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:27:13-72
+375        <!--
+376            Service handling Google Sign-In user revocation. For apps that do not integrate with
+377            Google Sign-In, this service will never be started.
+378        -->
+379        <service
+379-->[com.google.android.gms:play-services-auth:20.3.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/0e9f0bdb64f5e2240feb6d5f927c9c48/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:33:9-37:51
+380            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+380-->[com.google.android.gms:play-services-auth:20.3.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/0e9f0bdb64f5e2240feb6d5f927c9c48/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:34:13-89
+381            android:exported="true"
+381-->[com.google.android.gms:play-services-auth:20.3.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/0e9f0bdb64f5e2240feb6d5f927c9c48/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:35:13-36
+382            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+382-->[com.google.android.gms:play-services-auth:20.3.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/0e9f0bdb64f5e2240feb6d5f927c9c48/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:36:13-107
+383            android:visibleToInstantApps="true" />
+383-->[com.google.android.gms:play-services-auth:20.3.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/0e9f0bdb64f5e2240feb6d5f927c9c48/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:37:13-48
+384
+385        <activity
+385-->[com.twitter.sdk.android:tweet-ui:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/eaaa1a23da319d5c4605861a3fae1b65/transformed/jetified-tweet-ui-3.1.1/AndroidManifest.xml:28:9-31:49
+386            android:name="com.twitter.sdk.android.tweetui.PlayerActivity"
+386-->[com.twitter.sdk.android:tweet-ui:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/eaaa1a23da319d5c4605861a3fae1b65/transformed/jetified-tweet-ui-3.1.1/AndroidManifest.xml:29:13-74
+387            android:configChanges="keyboardHidden|orientation|screenSize"
+387-->[com.twitter.sdk.android:tweet-ui:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/eaaa1a23da319d5c4605861a3fae1b65/transformed/jetified-tweet-ui-3.1.1/AndroidManifest.xml:30:13-74
+388            android:theme="@style/MediaTheme" />
+388-->[com.twitter.sdk.android:tweet-ui:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/eaaa1a23da319d5c4605861a3fae1b65/transformed/jetified-tweet-ui-3.1.1/AndroidManifest.xml:31:13-46
+389        <activity
+389-->[com.twitter.sdk.android:tweet-ui:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/eaaa1a23da319d5c4605861a3fae1b65/transformed/jetified-tweet-ui-3.1.1/AndroidManifest.xml:32:9-34:49
+390            android:name="com.twitter.sdk.android.tweetui.GalleryActivity"
+390-->[com.twitter.sdk.android:tweet-ui:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/eaaa1a23da319d5c4605861a3fae1b65/transformed/jetified-tweet-ui-3.1.1/AndroidManifest.xml:33:13-75
+391            android:theme="@style/MediaTheme" />
+391-->[com.twitter.sdk.android:tweet-ui:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/eaaa1a23da319d5c4605861a3fae1b65/transformed/jetified-tweet-ui-3.1.1/AndroidManifest.xml:34:13-46
+392        <activity
+392-->[com.twitter.sdk.android:tweet-composer:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/8c57d2d13054e7c0ab163381e28abf81/transformed/jetified-tweet-composer-3.1.1/AndroidManifest.xml:28:9-31:71
+393            android:name="com.twitter.sdk.android.tweetcomposer.ComposerActivity"
+393-->[com.twitter.sdk.android:tweet-composer:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/8c57d2d13054e7c0ab163381e28abf81/transformed/jetified-tweet-composer-3.1.1/AndroidManifest.xml:29:13-82
+394            android:exported="false"
+394-->[com.twitter.sdk.android:tweet-composer:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/8c57d2d13054e7c0ab163381e28abf81/transformed/jetified-tweet-composer-3.1.1/AndroidManifest.xml:30:13-37
+395            android:windowSoftInputMode="adjustResize|stateVisible" />
+395-->[com.twitter.sdk.android:tweet-composer:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/8c57d2d13054e7c0ab163381e28abf81/transformed/jetified-tweet-composer-3.1.1/AndroidManifest.xml:31:13-68
+396
+397        <service
+397-->[com.twitter.sdk.android:tweet-composer:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/8c57d2d13054e7c0ab163381e28abf81/transformed/jetified-tweet-composer-3.1.1/AndroidManifest.xml:33:9-36:40
+398            android:name="com.twitter.sdk.android.tweetcomposer.TweetUploadService"
+398-->[com.twitter.sdk.android:tweet-composer:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/8c57d2d13054e7c0ab163381e28abf81/transformed/jetified-tweet-composer-3.1.1/AndroidManifest.xml:34:13-84
+399            android:enabled="true"
+399-->[com.twitter.sdk.android:tweet-composer:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/8c57d2d13054e7c0ab163381e28abf81/transformed/jetified-tweet-composer-3.1.1/AndroidManifest.xml:35:13-35
+400            android:exported="false" />
+400-->[com.twitter.sdk.android:tweet-composer:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/8c57d2d13054e7c0ab163381e28abf81/transformed/jetified-tweet-composer-3.1.1/AndroidManifest.xml:36:13-37
+401
+402        <activity
+402-->[com.twitter.sdk.android:twitter-core:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9b03e4b5877bd8e9eae754b2feb72eda/transformed/jetified-twitter-core-3.1.1/AndroidManifest.xml:28:9-32:40
+403            android:name="com.twitter.sdk.android.core.identity.OAuthActivity"
+403-->[com.twitter.sdk.android:twitter-core:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9b03e4b5877bd8e9eae754b2feb72eda/transformed/jetified-twitter-core-3.1.1/AndroidManifest.xml:29:13-79
+404            android:configChanges="orientation|screenSize"
+404-->[com.twitter.sdk.android:twitter-core:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9b03e4b5877bd8e9eae754b2feb72eda/transformed/jetified-twitter-core-3.1.1/AndroidManifest.xml:30:13-59
+405            android:excludeFromRecents="true"
+405-->[com.twitter.sdk.android:twitter-core:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9b03e4b5877bd8e9eae754b2feb72eda/transformed/jetified-twitter-core-3.1.1/AndroidManifest.xml:31:13-46
+406            android:exported="false" />
+406-->[com.twitter.sdk.android:twitter-core:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9b03e4b5877bd8e9eae754b2feb72eda/transformed/jetified-twitter-core-3.1.1/AndroidManifest.xml:32:13-37
+407        <!--
+408             FirebaseMessagingService performs security checks at runtime,
+409             but set to not exported to explicitly avoid allowing another app to call it.
+410        -->
+411        <service
+411-->[com.google.firebase:firebase-messaging:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/aff7acbd3976744cf13e8cfe18dc5873/transformed/jetified-firebase-messaging-20.2.1/AndroidManifest.xml:28:9-35:19
+412            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+412-->[com.google.firebase:firebase-messaging:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/aff7acbd3976744cf13e8cfe18dc5873/transformed/jetified-firebase-messaging-20.2.1/AndroidManifest.xml:29:13-82
+413            android:directBootAware="true"
+413-->[com.google.firebase:firebase-messaging:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/aff7acbd3976744cf13e8cfe18dc5873/transformed/jetified-firebase-messaging-20.2.1/AndroidManifest.xml:30:13-43
+414            android:exported="false" >
+414-->[com.google.firebase:firebase-messaging:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/aff7acbd3976744cf13e8cfe18dc5873/transformed/jetified-firebase-messaging-20.2.1/AndroidManifest.xml:31:13-37
+415            <intent-filter android:priority="-500" >
+415-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:100:13-102:29
+416                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+416-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:101:17-78
+416-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:101:25-75
+417            </intent-filter>
+418        </service>
+419        <service
+419-->[com.google.firebase:firebase-messaging:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/aff7acbd3976744cf13e8cfe18dc5873/transformed/jetified-firebase-messaging-20.2.1/AndroidManifest.xml:36:9-42:19
+420            android:name="com.google.firebase.components.ComponentDiscoveryService"
+420-->[com.google.firebase:firebase-messaging:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/aff7acbd3976744cf13e8cfe18dc5873/transformed/jetified-firebase-messaging-20.2.1/AndroidManifest.xml:37:13-84
+421            android:directBootAware="true"
+421-->[com.google.firebase:firebase-common:20.1.2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a2139578e4fb06c1578f1a8577eac9be/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:35:13-43
+422            android:exported="false" >
+422-->[com.google.firebase:firebase-messaging:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/aff7acbd3976744cf13e8cfe18dc5873/transformed/jetified-firebase-messaging-20.2.1/AndroidManifest.xml:38:13-37
+423            <meta-data
+423-->[com.google.firebase:firebase-messaging:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/aff7acbd3976744cf13e8cfe18dc5873/transformed/jetified-firebase-messaging-20.2.1/AndroidManifest.xml:39:13-41:85
+424                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+424-->[com.google.firebase:firebase-messaging:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/aff7acbd3976744cf13e8cfe18dc5873/transformed/jetified-firebase-messaging-20.2.1/AndroidManifest.xml:40:17-119
+425                android:value="com.google.firebase.components.ComponentRegistrar" />
+425-->[com.google.firebase:firebase-messaging:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/aff7acbd3976744cf13e8cfe18dc5873/transformed/jetified-firebase-messaging-20.2.1/AndroidManifest.xml:41:17-82
+426            <meta-data
+426-->[com.google.firebase:firebase-iid:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/309862d3773acaccb1b8bc091c6085f2/transformed/jetified-firebase-iid-20.2.1/AndroidManifest.xml:32:13-34:85
+427                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+427-->[com.google.firebase:firebase-iid:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/309862d3773acaccb1b8bc091c6085f2/transformed/jetified-firebase-iid-20.2.1/AndroidManifest.xml:33:17-96
+428                android:value="com.google.firebase.components.ComponentRegistrar" />
+428-->[com.google.firebase:firebase-iid:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/309862d3773acaccb1b8bc091c6085f2/transformed/jetified-firebase-iid-20.2.1/AndroidManifest.xml:34:17-82
+429            <meta-data
+429-->[com.google.android.gms:play-services-measurement-api:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/be4111d33d04896afe28bd8fbc879529/transformed/jetified-play-services-measurement-api-21.1.1/AndroidManifest.xml:31:13-33:85
+430                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+430-->[com.google.android.gms:play-services-measurement-api:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/be4111d33d04896afe28bd8fbc879529/transformed/jetified-play-services-measurement-api-21.1.1/AndroidManifest.xml:32:17-139
+431                android:value="com.google.firebase.components.ComponentRegistrar" />
+431-->[com.google.android.gms:play-services-measurement-api:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/be4111d33d04896afe28bd8fbc879529/transformed/jetified-play-services-measurement-api-21.1.1/AndroidManifest.xml:33:17-82
+432            <meta-data
+432-->[com.google.firebase:firebase-datatransport:17.0.3] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6441f5e284a2887ec13e0e5d9bda4cf6/transformed/jetified-firebase-datatransport-17.0.3/AndroidManifest.xml:28:13-30:85
+433                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+433-->[com.google.firebase:firebase-datatransport:17.0.3] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6441f5e284a2887ec13e0e5d9bda4cf6/transformed/jetified-firebase-datatransport-17.0.3/AndroidManifest.xml:29:17-115
+434                android:value="com.google.firebase.components.ComponentRegistrar" />
+434-->[com.google.firebase:firebase-datatransport:17.0.3] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6441f5e284a2887ec13e0e5d9bda4cf6/transformed/jetified-firebase-datatransport-17.0.3/AndroidManifest.xml:30:17-82
+435            <meta-data
+435-->[com.google.firebase:firebase-installations:17.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a26736a379b2372c12ba888acc08dc24/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:18:13-20:85
+436                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+436-->[com.google.firebase:firebase-installations:17.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a26736a379b2372c12ba888acc08dc24/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:19:17-127
+437                android:value="com.google.firebase.components.ComponentRegistrar" />
+437-->[com.google.firebase:firebase-installations:17.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a26736a379b2372c12ba888acc08dc24/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:20:17-82
+438        </service> <!-- Needs to be explicitly declared on P+ -->
+439        <uses-library
+439-->[com.google.android.gms:play-services-maps:18.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/fe7a0183c67c23801359a0321a2823e6/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:39:9-41:40
+440            android:name="org.apache.http.legacy"
+440-->[com.google.android.gms:play-services-maps:18.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/fe7a0183c67c23801359a0321a2823e6/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:40:13-50
+441            android:required="false" />
+441-->[com.google.android.gms:play-services-maps:18.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/fe7a0183c67c23801359a0321a2823e6/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:41:13-37
+442
+443        <receiver
+443-->[com.google.firebase:firebase-iid:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/309862d3773acaccb1b8bc091c6085f2/transformed/jetified-firebase-iid-20.2.1/AndroidManifest.xml:37:9-44:20
+444            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+444-->[com.google.firebase:firebase-iid:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/309862d3773acaccb1b8bc091c6085f2/transformed/jetified-firebase-iid-20.2.1/AndroidManifest.xml:38:13-78
+445            android:exported="true"
+445-->[com.google.firebase:firebase-iid:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/309862d3773acaccb1b8bc091c6085f2/transformed/jetified-firebase-iid-20.2.1/AndroidManifest.xml:39:13-36
+446            android:permission="com.google.android.c2dm.permission.SEND" >
+446-->[com.google.firebase:firebase-iid:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/309862d3773acaccb1b8bc091c6085f2/transformed/jetified-firebase-iid-20.2.1/AndroidManifest.xml:40:13-73
+447            <intent-filter>
+447-->[com.google.firebase:firebase-iid:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/309862d3773acaccb1b8bc091c6085f2/transformed/jetified-firebase-iid-20.2.1/AndroidManifest.xml:41:13-43:29
+448                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+448-->[com.google.firebase:firebase-iid:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/309862d3773acaccb1b8bc091c6085f2/transformed/jetified-firebase-iid-20.2.1/AndroidManifest.xml:42:17-81
+448-->[com.google.firebase:firebase-iid:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/309862d3773acaccb1b8bc091c6085f2/transformed/jetified-firebase-iid-20.2.1/AndroidManifest.xml:42:25-78
+449            </intent-filter>
+450        </receiver>
+451
+452        <activity
+452-->[com.google.android.gms:play-services-base:18.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6e3971dfd7af90b8f08b579d1a77a0ec/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+453            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+453-->[com.google.android.gms:play-services-base:18.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6e3971dfd7af90b8f08b579d1a77a0ec/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+454            android:exported="false"
+454-->[com.google.android.gms:play-services-base:18.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6e3971dfd7af90b8f08b579d1a77a0ec/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+455            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+455-->[com.google.android.gms:play-services-base:18.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6e3971dfd7af90b8f08b579d1a77a0ec/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+456
+457        <provider
+457-->[com.google.firebase:firebase-common:20.1.2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a2139578e4fb06c1578f1a8577eac9be/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:26:9-31:39
+458            android:name="com.google.firebase.provider.FirebaseInitProvider"
+458-->[com.google.firebase:firebase-common:20.1.2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a2139578e4fb06c1578f1a8577eac9be/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:27:13-77
+459            android:authorities="com.i2donate.firebaseinitprovider"
+459-->[com.google.firebase:firebase-common:20.1.2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a2139578e4fb06c1578f1a8577eac9be/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:28:13-72
+460            android:directBootAware="true"
+460-->[com.google.firebase:firebase-common:20.1.2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a2139578e4fb06c1578f1a8577eac9be/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:29:13-43
+461            android:exported="false"
+461-->[com.google.firebase:firebase-common:20.1.2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a2139578e4fb06c1578f1a8577eac9be/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:30:13-37
+462            android:initOrder="100" />
+462-->[com.google.firebase:firebase-common:20.1.2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a2139578e4fb06c1578f1a8577eac9be/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:31:13-36
+463
+464        <receiver
+464-->[com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:29:9-33:20
+465            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+465-->[com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:30:13-85
+466            android:enabled="true"
+466-->[com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:31:13-35
+467            android:exported="false" >
+467-->[com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:32:13-37
+468        </receiver>
+469
+470        <service
+470-->[com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:35:9-38:40
+471            android:name="com.google.android.gms.measurement.AppMeasurementService"
+471-->[com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:36:13-84
+472            android:enabled="true"
+472-->[com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:37:13-35
+473            android:exported="false" />
+473-->[com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:38:13-37
+474        <service
+474-->[com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:39:9-43:72
+475            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+475-->[com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:40:13-87
+476            android:enabled="true"
+476-->[com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:41:13-35
+477            android:exported="false"
+477-->[com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:42:13-37
+478            android:permission="android.permission.BIND_JOB_SERVICE" />
+478-->[com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:43:13-69
+479        <!--
+480         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
+481         with the application context. This config is merged in with the host app's manifest,
+482         but there can only be one provider with the same authority activated at any given
+483         point; so if the end user has two or more different apps that use Facebook SDK, only the
+484         first one will be able to use the provider. To work around this problem, we use the
+485         following placeholder in the authority to identify each host application as if it was
+486         a completely different provider.
+487        -->
+488        <provider
+488-->[com.facebook.android:facebook-core:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7ec115b6fffb8c10913e122a829fa87b/transformed/jetified-facebook-core-16.0.1/AndroidManifest.xml:29:9-32:40
+489            android:name="com.facebook.internal.FacebookInitProvider"
+489-->[com.facebook.android:facebook-core:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7ec115b6fffb8c10913e122a829fa87b/transformed/jetified-facebook-core-16.0.1/AndroidManifest.xml:30:13-70
+490            android:authorities="com.i2donate.FacebookInitProvider"
+490-->[com.facebook.android:facebook-core:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7ec115b6fffb8c10913e122a829fa87b/transformed/jetified-facebook-core-16.0.1/AndroidManifest.xml:31:13-72
+491            android:exported="false" />
+491-->[com.facebook.android:facebook-core:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7ec115b6fffb8c10913e122a829fa87b/transformed/jetified-facebook-core-16.0.1/AndroidManifest.xml:32:13-37
+492
+493        <receiver
+493-->[com.facebook.android:facebook-core:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7ec115b6fffb8c10913e122a829fa87b/transformed/jetified-facebook-core-16.0.1/AndroidManifest.xml:34:9-40:20
+494            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+494-->[com.facebook.android:facebook-core:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7ec115b6fffb8c10913e122a829fa87b/transformed/jetified-facebook-core-16.0.1/AndroidManifest.xml:35:13-86
+495            android:exported="false" >
+495-->[com.facebook.android:facebook-core:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7ec115b6fffb8c10913e122a829fa87b/transformed/jetified-facebook-core-16.0.1/AndroidManifest.xml:36:13-37
+496            <intent-filter>
+496-->[com.facebook.android:facebook-core:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7ec115b6fffb8c10913e122a829fa87b/transformed/jetified-facebook-core-16.0.1/AndroidManifest.xml:37:13-39:29
+497                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+497-->[com.facebook.android:facebook-core:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7ec115b6fffb8c10913e122a829fa87b/transformed/jetified-facebook-core-16.0.1/AndroidManifest.xml:38:17-95
+497-->[com.facebook.android:facebook-core:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7ec115b6fffb8c10913e122a829fa87b/transformed/jetified-facebook-core-16.0.1/AndroidManifest.xml:38:25-92
+498            </intent-filter>
+499        </receiver>
+500        <receiver
+500-->[com.facebook.android:facebook-core:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7ec115b6fffb8c10913e122a829fa87b/transformed/jetified-facebook-core-16.0.1/AndroidManifest.xml:41:9-47:20
+501            android:name="com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver"
+501-->[com.facebook.android:facebook-core:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7ec115b6fffb8c10913e122a829fa87b/transformed/jetified-facebook-core-16.0.1/AndroidManifest.xml:42:13-118
+502            android:exported="false" >
+502-->[com.facebook.android:facebook-core:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7ec115b6fffb8c10913e122a829fa87b/transformed/jetified-facebook-core-16.0.1/AndroidManifest.xml:43:13-37
+503            <intent-filter>
+503-->[com.facebook.android:facebook-core:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7ec115b6fffb8c10913e122a829fa87b/transformed/jetified-facebook-core-16.0.1/AndroidManifest.xml:44:13-46:29
+504                <action android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED" />
+504-->[com.facebook.android:facebook-core:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7ec115b6fffb8c10913e122a829fa87b/transformed/jetified-facebook-core-16.0.1/AndroidManifest.xml:45:17-103
+504-->[com.facebook.android:facebook-core:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7ec115b6fffb8c10913e122a829fa87b/transformed/jetified-facebook-core-16.0.1/AndroidManifest.xml:45:25-100
+505            </intent-filter>
+506        </receiver>
+507
+508        <provider
+508-->[androidx.emoji2:emoji2:1.2.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3665b05fc61988070bb2efae7a215e30/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+509            android:name="androidx.startup.InitializationProvider"
+509-->[androidx.emoji2:emoji2:1.2.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3665b05fc61988070bb2efae7a215e30/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+510            android:authorities="com.i2donate.androidx-startup"
+510-->[androidx.emoji2:emoji2:1.2.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3665b05fc61988070bb2efae7a215e30/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+511            android:exported="false" >
+511-->[androidx.emoji2:emoji2:1.2.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3665b05fc61988070bb2efae7a215e30/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+512            <meta-data
+512-->[androidx.emoji2:emoji2:1.2.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3665b05fc61988070bb2efae7a215e30/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+513                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+513-->[androidx.emoji2:emoji2:1.2.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3665b05fc61988070bb2efae7a215e30/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+514                android:value="androidx.startup" />
+514-->[androidx.emoji2:emoji2:1.2.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3665b05fc61988070bb2efae7a215e30/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+515            <meta-data
+515-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:36:13-38:52
+516                android:name="androidx.work.WorkManagerInitializer"
+516-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:37:17-68
+517                android:value="androidx.startup" />
+517-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:38:17-49
+518            <meta-data
+518-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/df594bffbba276864bce47bb3085a219/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+519                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+519-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/df594bffbba276864bce47bb3085a219/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+520                android:value="androidx.startup" />
+520-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/df594bffbba276864bce47bb3085a219/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+521        </provider>
+522
+523        <service
+523-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:41:9-46:35
+524            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+524-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:42:13-88
+525            android:directBootAware="false"
+525-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:43:13-44
+526            android:enabled="@bool/enable_system_alarm_service_default"
+526-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:44:13-72
+527            android:exported="false" />
+527-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:45:13-37
+528        <service
+528-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:47:9-53:35
+529            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+529-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:48:13-84
+530            android:directBootAware="false"
+530-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:49:13-44
+531            android:enabled="@bool/enable_system_job_service_default"
+531-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:50:13-70
+532            android:exported="true"
+532-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:51:13-36
+533            android:permission="android.permission.BIND_JOB_SERVICE" />
+533-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:52:13-69
+534        <service
+534-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:54:9-59:35
+535            android:name="androidx.work.impl.foreground.SystemForegroundService"
+535-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:55:13-81
+536            android:directBootAware="false"
+536-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:56:13-44
+537            android:enabled="@bool/enable_system_foreground_service_default"
+537-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:57:13-77
+538            android:exported="false" />
+538-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:58:13-37
+539
+540        <receiver
+540-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:61:9-66:35
+541            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+541-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:62:13-88
+542            android:directBootAware="false"
+542-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:63:13-44
+543            android:enabled="true"
+543-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:64:13-35
+544            android:exported="false" />
+544-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:65:13-37
+545        <receiver
+545-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:67:9-77:20
+546            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+546-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:68:13-106
+547            android:directBootAware="false"
+547-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:69:13-44
+548            android:enabled="false"
+548-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:70:13-36
+549            android:exported="false" >
+549-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:71:13-37
+550            <intent-filter>
+550-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:73:13-76:29
+551                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+551-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:74:17-87
+551-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:74:25-84
+552                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+552-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:75:17-90
+552-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:75:25-87
+553            </intent-filter>
+554        </receiver>
+555        <receiver
+555-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:78:9-88:20
+556            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+556-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:79:13-104
+557            android:directBootAware="false"
+557-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:80:13-44
+558            android:enabled="false"
+558-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:81:13-36
+559            android:exported="false" >
+559-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:82:13-37
+560            <intent-filter>
+560-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:84:13-87:29
+561                <action android:name="android.intent.action.BATTERY_OKAY" />
+561-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:85:17-77
+561-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:85:25-74
+562                <action android:name="android.intent.action.BATTERY_LOW" />
+562-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:86:17-76
+562-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:86:25-73
+563            </intent-filter>
+564        </receiver>
+565        <receiver
+565-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:89:9-99:20
+566            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+566-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:90:13-104
+567            android:directBootAware="false"
+567-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:91:13-44
+568            android:enabled="false"
+568-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:92:13-36
+569            android:exported="false" >
+569-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:93:13-37
+570            <intent-filter>
+570-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:95:13-98:29
+571                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+571-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:96:17-83
+571-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:96:25-80
+572                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+572-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:97:17-82
+572-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:97:25-79
+573            </intent-filter>
+574        </receiver>
+575        <receiver
+575-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:100:9-109:20
+576            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+576-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:101:13-103
+577            android:directBootAware="false"
+577-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:102:13-44
+578            android:enabled="false"
+578-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:103:13-36
+579            android:exported="false" >
+579-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:104:13-37
+580            <intent-filter>
+580-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:238:13-240:29
+581                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+581-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:239:17-79
+581-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:239:25-76
+582            </intent-filter>
+583        </receiver>
+584        <receiver
+584-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:110:9-121:20
+585            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+585-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:111:13-88
+586            android:directBootAware="false"
+586-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:112:13-44
+587            android:enabled="false"
+587-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:113:13-36
+588            android:exported="false" >
+588-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:114:13-37
+589            <intent-filter>
+589-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:116:13-120:29
+590                <action android:name="android.intent.action.BOOT_COMPLETED" />
+590-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:109:17-79
+590-->/Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:109:25-76
+591                <action android:name="android.intent.action.TIME_SET" />
+591-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:118:17-73
+591-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:118:25-70
+592                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+592-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:119:17-81
+592-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:119:25-78
+593            </intent-filter>
+594        </receiver>
+595        <receiver
+595-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:122:9-131:20
+596            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+596-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:123:13-99
+597            android:directBootAware="false"
+597-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:124:13-44
+598            android:enabled="@bool/enable_system_alarm_service_default"
+598-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:125:13-72
+599            android:exported="false" >
+599-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:126:13-37
+600            <intent-filter>
+600-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:128:13-130:29
+601                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+601-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:129:17-98
+601-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:129:25-95
+602            </intent-filter>
+603        </receiver>
+604        <receiver
+604-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:132:9-142:20
+605            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+605-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:133:13-78
+606            android:directBootAware="false"
+606-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:134:13-44
+607            android:enabled="true"
+607-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:135:13-35
+608            android:exported="true"
+608-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:136:13-36
+609            android:permission="android.permission.DUMP" >
+609-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:137:13-57
+610            <intent-filter>
+610-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:139:13-141:29
+611                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+611-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:140:17-88
+611-->[androidx.work:work-runtime:2.7.0-alpha05] /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:140:25-85
+612            </intent-filter>
+613        </receiver>
+614
+615        <service
+615-->[com.google.android.datatransport:transport-backend-cct:2.3.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/cec4d99cd77389b494b8a538d6668f43/transformed/jetified-transport-backend-cct-2.3.0/AndroidManifest.xml:29:9-35:19
+616            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+616-->[com.google.android.datatransport:transport-backend-cct:2.3.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/cec4d99cd77389b494b8a538d6668f43/transformed/jetified-transport-backend-cct-2.3.0/AndroidManifest.xml:30:13-103
+617            android:exported="false" >
+617-->[com.google.android.datatransport:transport-backend-cct:2.3.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/cec4d99cd77389b494b8a538d6668f43/transformed/jetified-transport-backend-cct-2.3.0/AndroidManifest.xml:31:13-37
+618            <meta-data
+618-->[com.google.android.datatransport:transport-backend-cct:2.3.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/cec4d99cd77389b494b8a538d6668f43/transformed/jetified-transport-backend-cct-2.3.0/AndroidManifest.xml:32:13-34:39
+619                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+619-->[com.google.android.datatransport:transport-backend-cct:2.3.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/cec4d99cd77389b494b8a538d6668f43/transformed/jetified-transport-backend-cct-2.3.0/AndroidManifest.xml:33:17-94
+620                android:value="cct" />
+620-->[com.google.android.datatransport:transport-backend-cct:2.3.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/cec4d99cd77389b494b8a538d6668f43/transformed/jetified-transport-backend-cct-2.3.0/AndroidManifest.xml:34:17-36
+621        </service>
+622        <service
+622-->[com.google.android.datatransport:transport-runtime:2.2.3] /Users/dhvanibhanderi/.gradle/caches/transforms-3/b34542a52e186f3bd19d0a694cea83b8/transformed/jetified-transport-runtime-2.2.3/AndroidManifest.xml:26:9-30:19
+623            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+623-->[com.google.android.datatransport:transport-runtime:2.2.3] /Users/dhvanibhanderi/.gradle/caches/transforms-3/b34542a52e186f3bd19d0a694cea83b8/transformed/jetified-transport-runtime-2.2.3/AndroidManifest.xml:27:13-117
+624            android:exported="false"
+624-->[com.google.android.datatransport:transport-runtime:2.2.3] /Users/dhvanibhanderi/.gradle/caches/transforms-3/b34542a52e186f3bd19d0a694cea83b8/transformed/jetified-transport-runtime-2.2.3/AndroidManifest.xml:28:13-37
+625            android:permission="android.permission.BIND_JOB_SERVICE" >
+625-->[com.google.android.datatransport:transport-runtime:2.2.3] /Users/dhvanibhanderi/.gradle/caches/transforms-3/b34542a52e186f3bd19d0a694cea83b8/transformed/jetified-transport-runtime-2.2.3/AndroidManifest.xml:29:13-69
+626        </service>
+627
+628        <receiver
+628-->[com.google.android.datatransport:transport-runtime:2.2.3] /Users/dhvanibhanderi/.gradle/caches/transforms-3/b34542a52e186f3bd19d0a694cea83b8/transformed/jetified-transport-runtime-2.2.3/AndroidManifest.xml:32:9-34:40
+629            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+629-->[com.google.android.datatransport:transport-runtime:2.2.3] /Users/dhvanibhanderi/.gradle/caches/transforms-3/b34542a52e186f3bd19d0a694cea83b8/transformed/jetified-transport-runtime-2.2.3/AndroidManifest.xml:33:13-132
+630            android:exported="false" />
+630-->[com.google.android.datatransport:transport-runtime:2.2.3] /Users/dhvanibhanderi/.gradle/caches/transforms-3/b34542a52e186f3bd19d0a694cea83b8/transformed/jetified-transport-runtime-2.2.3/AndroidManifest.xml:34:13-37
+631
+632        <service
+632-->[androidx.room:room-runtime:2.2.6] /Users/dhvanibhanderi/.gradle/caches/transforms-3/f99623d32efb5848439ca98f84524bc8/transformed/room-runtime-2.2.6/AndroidManifest.xml:25:9-28:40
+633            android:name="androidx.room.MultiInstanceInvalidationService"
+633-->[androidx.room:room-runtime:2.2.6] /Users/dhvanibhanderi/.gradle/caches/transforms-3/f99623d32efb5848439ca98f84524bc8/transformed/room-runtime-2.2.6/AndroidManifest.xml:26:13-74
+634            android:directBootAware="true"
+634-->[androidx.room:room-runtime:2.2.6] /Users/dhvanibhanderi/.gradle/caches/transforms-3/f99623d32efb5848439ca98f84524bc8/transformed/room-runtime-2.2.6/AndroidManifest.xml:27:13-43
+635            android:exported="false" />
+635-->[androidx.room:room-runtime:2.2.6] /Users/dhvanibhanderi/.gradle/caches/transforms-3/f99623d32efb5848439ca98f84524bc8/transformed/room-runtime-2.2.6/AndroidManifest.xml:28:13-37
+636
+637        <provider
+637-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3ab69657f616f21a1e763100f007266d/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:17:9-21:39
+638            android:name="com.cardinalcommerce.a.setShadowLayer"
+638-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3ab69657f616f21a1e763100f007266d/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:18:13-65
+639            android:authorities="com.i2donate.CCInitProvider"
+639-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3ab69657f616f21a1e763100f007266d/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:19:13-66
+640            android:enabled="true"
+640-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3ab69657f616f21a1e763100f007266d/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:20:13-35
+641            android:exported="true" />
+641-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3ab69657f616f21a1e763100f007266d/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:21:13-36
+642
+643        <activity
+643-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3ab69657f616f21a1e763100f007266d/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:23:9-26:65
+644            android:name="com.cardinalcommerce.a.setTextLocale"
+644-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3ab69657f616f21a1e763100f007266d/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:24:13-64
+645            android:exported="false"
+645-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3ab69657f616f21a1e763100f007266d/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:25:13-37
+646            android:theme="@style/CardinalSDKTheme.ActionBar" />
+646-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3ab69657f616f21a1e763100f007266d/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:26:13-62
+647        <activity
+647-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3ab69657f616f21a1e763100f007266d/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:27:9-31:76
+648            android:name="com.cardinalcommerce.a.setTextLocales"
+648-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3ab69657f616f21a1e763100f007266d/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:28:13-65
+649            android:exported="false"
+649-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3ab69657f616f21a1e763100f007266d/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:29:13-37
+650            android:theme="@style/CardinalSDKTheme.ActionBar"
+650-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3ab69657f616f21a1e763100f007266d/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:30:13-62
+651            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+651-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3ab69657f616f21a1e763100f007266d/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:31:13-73
+652    </application>
+653
+654</manifest>

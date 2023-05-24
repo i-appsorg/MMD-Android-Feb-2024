@@ -1,0 +1,64 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.i2donate.app-mergeDebugResources-59:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/Users/dhvanibhanderi/.gradle/caches/transforms-3/8bd15c0005e40a9d324d3f3fb799eabc/transformed/appcompat-1.5.1/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "166",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "334"
+                    }
+                },
+                {
+                    "source": "/Users/dhvanibhanderi/.gradle/caches/transforms-3/63f1873bc52196e5b3e511184612a6cc/transformed/jetified-drop-in-6.9.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2,6,15",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "100,295,788",
+                        "endLines": "5,14,25",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "290,783,1388"
+                    },
+                    "to": {
+                        "startLines": "7,11,20",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "339,534,1027",
+                        "endLines": "10,19,30",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "529,1022,1627"
+                    }
+                },
+                {
+                    "source": "/Users/dhvanibhanderi/.gradle/caches/transforms-3/1d6984a21c9b376709d4727d25d10d0c/transformed/core-1.8.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "100",
+                        "endColumns": "65",
+                        "endOffsets": "161"
+                    }
+                }
+            ]
+        }
+    ]
+}

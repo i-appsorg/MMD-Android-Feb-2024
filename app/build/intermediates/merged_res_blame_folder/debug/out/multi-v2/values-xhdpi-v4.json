@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.i2donate.app-mergeDebugResources-59:/values-xhdpi-v4/values-xhdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/dhvanibhanderi/.gradle/caches/transforms-3/9b03e4b5877bd8e9eae754b2feb72eda/transformed/jetified-twitter-core-3.1.1/res/values-xhdpi-v4/values-xhdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "54",
+                        "endOffsets": "105"
+                    }
+                }
+            ]
+        }
+    ]
+}

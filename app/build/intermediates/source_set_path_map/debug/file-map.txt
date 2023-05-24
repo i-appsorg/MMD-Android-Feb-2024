@@ -1,0 +1,64 @@
+com.i2donate.app-jetified-viewpager2-1.0.0-0 /Users/dhvanibhanderi/.gradle/caches/transforms-3/01fbade2833f7873ed1bd0c88da5f43a/transformed/jetified-viewpager2-1.0.0/res
+com.i2donate.app-jetified-play-services-wallet-19.1.0-1 /Users/dhvanibhanderi/.gradle/caches/transforms-3/03c2e366014387240260ea232e11b9e2/transformed/jetified-play-services-wallet-19.1.0/res
+com.i2donate.app-lifecycle-livedata-core-2.5.1-2 /Users/dhvanibhanderi/.gradle/caches/transforms-3/083c540230f6491c09596744b42f9f3c/transformed/lifecycle-livedata-core-2.5.1/res
+com.i2donate.app-jetified-lifecycle-runtime-ktx-2.4.1-3 /Users/dhvanibhanderi/.gradle/caches/transforms-3/0b12ecf74500c67c67035cf926ca364e/transformed/jetified-lifecycle-runtime-ktx-2.4.1/res
+com.i2donate.app-jetified-startup-runtime-1.1.1-4 /Users/dhvanibhanderi/.gradle/caches/transforms-3/0e37074810c81ed5832e2d7e9f5f864f/transformed/jetified-startup-runtime-1.1.1/res
+com.i2donate.app-jetified-play-services-auth-20.3.0-5 /Users/dhvanibhanderi/.gradle/caches/transforms-3/0e9f0bdb64f5e2240feb6d5f927c9c48/transformed/jetified-play-services-auth-20.3.0/res
+com.i2donate.app-jetified-play-services-basement-18.1.0-6 /Users/dhvanibhanderi/.gradle/caches/transforms-3/135832c5f60c6c9c4dce0ca0e7063060/transformed/jetified-play-services-basement-18.1.0/res
+com.i2donate.app-jetified-appcompat-resources-1.5.1-7 /Users/dhvanibhanderi/.gradle/caches/transforms-3/1671a5ee8c43c28381246c6d020f25e0/transformed/jetified-appcompat-resources-1.5.1/res
+com.i2donate.app-core-1.8.0-8 /Users/dhvanibhanderi/.gradle/caches/transforms-3/1d6984a21c9b376709d4727d25d10d0c/transformed/core-1.8.0/res
+com.i2donate.app-work-runtime-2.7.0-alpha05-9 /Users/dhvanibhanderi/.gradle/caches/transforms-3/24f78230f848eb1d15da961382a156a1/transformed/work-runtime-2.7.0-alpha05/res
+com.i2donate.app-coordinatorlayout-1.1.0-10 /Users/dhvanibhanderi/.gradle/caches/transforms-3/2f4cb1ab5cf7ef56307f6cca29685f81/transformed/coordinatorlayout-1.1.0/res
+com.i2donate.app-jetified-core-ktx-1.8.0-11 /Users/dhvanibhanderi/.gradle/caches/transforms-3/35d25cfe5524d5d06218fb6c2123e491/transformed/jetified-core-ktx-1.8.0/res
+com.i2donate.app-jetified-emoji2-1.2.0-12 /Users/dhvanibhanderi/.gradle/caches/transforms-3/3665b05fc61988070bb2efae7a215e30/transformed/jetified-emoji2-1.2.0/res
+com.i2donate.app-jetified-cardinalmobilesdk-2.2.7-2-13 /Users/dhvanibhanderi/.gradle/caches/transforms-3/3ab69657f616f21a1e763100f007266d/transformed/jetified-cardinalmobilesdk-2.2.7-2/res
+com.i2donate.app-jetified-facebook-common-16.0.1-14 /Users/dhvanibhanderi/.gradle/caches/transforms-3/40c767da5aa3983bd2b36169b9378e56/transformed/jetified-facebook-common-16.0.1/res
+com.i2donate.app-jetified-facebook-login-16.0.1-15 /Users/dhvanibhanderi/.gradle/caches/transforms-3/43c7137761ba3fd06d98eea878d6f5bb/transformed/jetified-facebook-login-16.0.1/res
+com.i2donate.app-fragment-1.4.1-16 /Users/dhvanibhanderi/.gradle/caches/transforms-3/5855beaa8a302192981ef078760d553b/transformed/fragment-1.4.1/res
+com.i2donate.app-jetified-play-services-places-17.0.0-17 /Users/dhvanibhanderi/.gradle/caches/transforms-3/61da1484283c4257bf7a515e4c605c5e/transformed/jetified-play-services-places-17.0.0/res
+com.i2donate.app-jetified-drop-in-6.9.0-18 /Users/dhvanibhanderi/.gradle/caches/transforms-3/63f1873bc52196e5b3e511184612a6cc/transformed/jetified-drop-in-6.9.0/res
+com.i2donate.app-jetified-card-form-5.4.0-19 /Users/dhvanibhanderi/.gradle/caches/transforms-3/6706cfb93e308532b9b8b2bd9b99bf1b/transformed/jetified-card-form-5.4.0/res
+com.i2donate.app-drawerlayout-1.1.1-20 /Users/dhvanibhanderi/.gradle/caches/transforms-3/6d88ba3357c5e4c797bcc1f763f88890/transformed/drawerlayout-1.1.1/res
+com.i2donate.app-jetified-play-services-base-18.0.1-21 /Users/dhvanibhanderi/.gradle/caches/transforms-3/6e3971dfd7af90b8f08b579d1a77a0ec/transformed/jetified-play-services-base-18.0.1/res
+com.i2donate.app-jetified-flexbox-3.0.0-22 /Users/dhvanibhanderi/.gradle/caches/transforms-3/706abd55156579d6a8bb5a5ef4d843de/transformed/jetified-flexbox-3.0.0/res
+com.i2donate.app-jetified-dexter-5.0.0-23 /Users/dhvanibhanderi/.gradle/caches/transforms-3/7d13c14e14b2215db082d95d5cb21f22/transformed/jetified-dexter-5.0.0/res
+com.i2donate.app-jetified-annotation-experimental-1.1.0-24 /Users/dhvanibhanderi/.gradle/caches/transforms-3/88a31af5d3bb6a94eb0d1ce3a366105b/transformed/jetified-annotation-experimental-1.1.0/res
+com.i2donate.app-appcompat-1.5.1-25 /Users/dhvanibhanderi/.gradle/caches/transforms-3/8bd15c0005e40a9d324d3f3fb799eabc/transformed/appcompat-1.5.1/res
+com.i2donate.app-jetified-tweet-composer-3.1.1-26 /Users/dhvanibhanderi/.gradle/caches/transforms-3/8c57d2d13054e7c0ab163381e28abf81/transformed/jetified-tweet-composer-3.1.1/res
+com.i2donate.app-jetified-lifecycle-viewmodel-savedstate-2.5.1-27 /Users/dhvanibhanderi/.gradle/caches/transforms-3/90c1691d676b6ccee3d65595bc50a8e7/transformed/jetified-lifecycle-viewmodel-savedstate-2.5.1/res
+com.i2donate.app-jetified-facebook-share-16.0.1-28 /Users/dhvanibhanderi/.gradle/caches/transforms-3/9747a821fd5aad179962aee35cad5f47/transformed/jetified-facebook-share-16.0.1/res
+com.i2donate.app-jetified-twitter-core-3.1.1-29 /Users/dhvanibhanderi/.gradle/caches/transforms-3/9b03e4b5877bd8e9eae754b2feb72eda/transformed/jetified-twitter-core-3.1.1/res
+com.i2donate.app-cardview-1.0.0-30 /Users/dhvanibhanderi/.gradle/caches/transforms-3/9b2b23bfa7b9f93836a71d0cd98f8991/transformed/cardview-1.0.0/res
+com.i2donate.app-jetified-emoji2-views-helper-1.2.0-31 /Users/dhvanibhanderi/.gradle/caches/transforms-3/9b83b6ea8022e8d0420c38ba094af24c/transformed/jetified-emoji2-views-helper-1.2.0/res
+com.i2donate.app-jetified-braintree-core-4.27.0-32 /Users/dhvanibhanderi/.gradle/caches/transforms-3/9c5a811515591ceacb555ff17aa65be0/transformed/jetified-braintree-core-4.27.0/res
+com.i2donate.app-lifecycle-runtime-2.5.1-33 /Users/dhvanibhanderi/.gradle/caches/transforms-3/a027c90f4ca8f7cd237101c3c48f17f6/transformed/lifecycle-runtime-2.5.1/res
+com.i2donate.app-browser-1.0.0-34 /Users/dhvanibhanderi/.gradle/caches/transforms-3/a102b46f12c0fd964adde47ab5ada2f9/transformed/browser-1.0.0/res
+com.i2donate.app-jetified-firebase-common-20.1.2-35 /Users/dhvanibhanderi/.gradle/caches/transforms-3/a2139578e4fb06c1578f1a8577eac9be/transformed/jetified-firebase-common-20.1.2/res
+com.i2donate.app-jetified-firebase-messaging-20.2.1-36 /Users/dhvanibhanderi/.gradle/caches/transforms-3/aff7acbd3976744cf13e8cfe18dc5873/transformed/jetified-firebase-messaging-20.2.1/res
+com.i2donate.app-jetified-places-2.6.0-37 /Users/dhvanibhanderi/.gradle/caches/transforms-3/baf55be16a092e4414622aeeef439495/transformed/jetified-places-2.6.0/res
+com.i2donate.app-constraintlayout-2.1.4-38 /Users/dhvanibhanderi/.gradle/caches/transforms-3/c14cd9c968d0350b0c6667f7acb88582/transformed/constraintlayout-2.1.4/res
+com.i2donate.app-jetified-google-pay-4.27.0-39 /Users/dhvanibhanderi/.gradle/caches/transforms-3/c24b2fc09ee0e3ffd59e5e402ee23692/transformed/jetified-google-pay-4.27.0/res
+com.i2donate.app-jetified-circleimageview-2.0.0-40 /Users/dhvanibhanderi/.gradle/caches/transforms-3/ca30afaa7a0f589f4f2513081b6fd113/transformed/jetified-circleimageview-2.0.0/res
+com.i2donate.app-media-1.0.0-41 /Users/dhvanibhanderi/.gradle/caches/transforms-3/d191648869d42a9cdf367b18d5598446/transformed/media-1.0.0/res
+com.i2donate.app-material-1.6.1-42 /Users/dhvanibhanderi/.gradle/caches/transforms-3/d6da2ade3a128903c091931cb9048f8c/transformed/material-1.6.1/res
+com.i2donate.app-jetified-sdp-android-1.0.5-43 /Users/dhvanibhanderi/.gradle/caches/transforms-3/d9ad6751c1e131fc797cd4be5626b9c2/transformed/jetified-sdp-android-1.0.5/res
+com.i2donate.app-transition-1.2.0-44 /Users/dhvanibhanderi/.gradle/caches/transforms-3/dc164c96df1f60429b1bd8c0df45d0a5/transformed/transition-1.2.0/res
+com.i2donate.app-jetified-lifecycle-process-2.4.1-45 /Users/dhvanibhanderi/.gradle/caches/transforms-3/df594bffbba276864bce47bb3085a219/transformed/jetified-lifecycle-process-2.4.1/res
+com.i2donate.app-jetified-crashreporter-1.1.0-46 /Users/dhvanibhanderi/.gradle/caches/transforms-3/e248510c28ba4a835a4c9d4df74409a4/transformed/jetified-crashreporter-1.1.0/res
+com.i2donate.app-recyclerview-1.2.1-47 /Users/dhvanibhanderi/.gradle/caches/transforms-3/e2e41976a003378d35d00817f9307fbc/transformed/recyclerview-1.2.1/res
+com.i2donate.app-lifecycle-viewmodel-2.5.1-48 /Users/dhvanibhanderi/.gradle/caches/transforms-3/e4083fefdb00a94e9a6bd27f3bc0ff9b/transformed/lifecycle-viewmodel-2.5.1/res
+com.i2donate.app-jetified-browser-switch-2.3.2-49 /Users/dhvanibhanderi/.gradle/caches/transforms-3/e7e4e383d25455df48ec94c4c10ff3f2/transformed/jetified-browser-switch-2.3.2/res
+com.i2donate.app-jetified-savedstate-1.2.0-50 /Users/dhvanibhanderi/.gradle/caches/transforms-3/ea75b679b8adccc6d845d6c27e04987d/transformed/jetified-savedstate-1.2.0/res
+com.i2donate.app-jetified-tweet-ui-3.1.1-51 /Users/dhvanibhanderi/.gradle/caches/transforms-3/eaaa1a23da319d5c4605861a3fae1b65/transformed/jetified-tweet-ui-3.1.1/res
+com.i2donate.app-jetified-activity-1.5.1-52 /Users/dhvanibhanderi/.gradle/caches/transforms-3/f3c7415343996720329afb163b91537e/transformed/jetified-activity-1.5.1/res
+com.i2donate.app-jetified-facebook-messenger-16.0.1-53 /Users/dhvanibhanderi/.gradle/caches/transforms-3/f58534ae8354a4fc30e1a28493893b1e/transformed/jetified-facebook-messenger-16.0.1/res
+com.i2donate.app-jetified-play-services-maps-18.1.0-54 /Users/dhvanibhanderi/.gradle/caches/transforms-3/fe7a0183c67c23801359a0321a2823e6/transformed/jetified-play-services-maps-18.1.0/res
+com.i2donate.app-google-services-55 /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/build/generated/res/google-services/debug
+com.i2donate.app-pngs-56 /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/build/generated/res/pngs/debug
+com.i2donate.app-resValues-57 /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/build/generated/res/resValues/debug
+com.i2donate.app-rs-58 /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/build/generated/res/rs/debug
+com.i2donate.app-mergeDebugResources-59 /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir
+com.i2donate.app-mergeDebugResources-60 /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir
+com.i2donate.app-merged_res-61 /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/build/intermediates/merged_res/debug
+com.i2donate.app-debug-62 /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/debug/res
+com.i2donate.app-main-63 /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/res

@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.i2donate.app-mergeDebugResources-59:/values-w700dp-v13/values-w700dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/dhvanibhanderi/.gradle/caches/transforms-3/63f1873bc52196e5b3e511184612a6cc/transformed/jetified-drop-in-6.9.0/res/values-w700dp-v13/values-w700dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "45",
+                        "endOffsets": "96"
+                    }
+                }
+            ]
+        }
+    ]
+}
