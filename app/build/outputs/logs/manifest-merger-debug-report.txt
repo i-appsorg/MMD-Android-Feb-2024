@@ -1,14 +1,14 @@
 -- Merging decision tree log ---
 data
-INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:85:17-69
+INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:88:17-69
 	android:scheme
 		INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:85:23-66
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:88:23-66
 manifest
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:2:1-261:12
-INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:2:1-261:12
-INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:2:1-261:12
-INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:2:1-261:12
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:2:1-264:12
+INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:2:1-264:12
+INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:2:1-264:12
+INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:2:1-264:12
 MERGED from [com.karumi:dexter:5.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7d13c14e14b2215db082d95d5cb21f22/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:17:1-32:12
 MERGED from [com.braintreepayments.api:drop-in:6.9.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/63f1873bc52196e5b3e511184612a6cc/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:2:1-32:12
 MERGED from [com.balsikandar.android:crashreporter:1.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e248510c28ba4a835a4c9d4df74409a4/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:2:1-29:12
@@ -44,7 +44,6 @@ MERGED from [com.twitter.sdk.android:tweet-ui:3.1.1] /Users/dhvanibhanderi/.grad
 MERGED from [com.twitter.sdk.android:tweet-composer:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/8c57d2d13054e7c0ab163381e28abf81/transformed/jetified-tweet-composer-3.1.1/AndroidManifest.xml:18:1-39:12
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9b03e4b5877bd8e9eae754b2feb72eda/transformed/jetified-twitter-core-3.1.1/AndroidManifest.xml:18:1-35:12
 MERGED from [com.jakewharton:butterknife:8.8.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/53f7a92f5af7642a0f0fc6b27b1ca391/transformed/jetified-butterknife-8.8.1/AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.firebase:firebase-analytics:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/c11261a606bfbaab915d56c286a54f05/transformed/jetified-firebase-analytics-21.1.1/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-messaging:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/aff7acbd3976744cf13e8cfe18dc5873/transformed/jetified-firebase-messaging-20.2.1/AndroidManifest.xml:17:1-45:12
 MERGED from [com.google.android.gms:play-services-location:20.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/f3523785a29b81df7ee04c809696286e/transformed/jetified-play-services-location-20.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-places:17.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/61da1484283c4257bf7a515e4c605c5e/transformed/jetified-play-services-places-17.0.0/AndroidManifest.xml:17:1-24:12
@@ -62,15 +61,16 @@ MERGED from [com.google.android.gms:play-services-flags:17.0.0] /Users/dhvanibha
 MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/308eb3dec0b72ceb8d060fb518126ed3/transformed/jetified-play-services-phenotype-17.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-identity:18.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/8146f6264cf4045e52cab5ab07ad2d29/transformed/jetified-play-services-identity-18.0.1/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6e3971dfd7af90b8f08b579d1a77a0ec/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.firebase:firebase-analytics:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/c11261a606bfbaab915d56c286a54f05/transformed/jetified-firebase-analytics-21.1.1/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-measurement-api:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/be4111d33d04896afe28bd8fbc879529/transformed/jetified-play-services-measurement-api-21.1.1/AndroidManifest.xml:17:1-37:12
 MERGED from [com.google.firebase:firebase-datatransport:17.0.3] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6441f5e284a2887ec13e0e5d9bda4cf6/transformed/jetified-firebase-datatransport-17.0.3/AndroidManifest.xml:15:1-34:12
 MERGED from [com.google.firebase:firebase-installations:17.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a26736a379b2372c12ba888acc08dc24/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:2:1-24:12
 MERGED from [com.google.firebase:firebase-common:20.1.2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a2139578e4fb06c1578f1a8577eac9be/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:15:1-40:12
 MERGED from [com.google.firebase:firebase-installations-interop:17.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/557c223e800d424ea1c8d0f7a3323658/transformed/jetified-firebase-installations-interop-17.0.1/AndroidManifest.xml:15:1-23:12
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e3f969122ced1309371acecba5dfb373/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/268a606335fc777381fdf3de6323cae2/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:17:1-46:12
 MERGED from [com.google.android.gms:play-services-measurement-sdk:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/4a7d515970f99d5b55b6e696eaa96ce7/transformed/jetified-play-services-measurement-sdk-21.1.1/AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/268a606335fc777381fdf3de6323cae2/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a86820c84b21631e8c6bb2e0e2b310ba/transformed/jetified-play-services-measurement-impl-21.1.1/AndroidManifest.xml:17:1-32:12
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e5772bd73783c89de2f5f5f1695dbf1b/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3421393d6362fc2893e5c5e53d999945/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:17:1-27:12
@@ -126,11 +126,11 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/dhvanibhan
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/275b3d3889bd5645e53f9a6818bd92f5/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-encoders-json:16.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/252661603263ccddee030cbac8987b03/transformed/jetified-firebase-encoders-json-16.1.0/AndroidManifest.xml:15:1-23:12
 MERGED from [com.braintreepayments.api:shared-utils:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/0e1d6d3ab2c6cdbe89168d990c234223/transformed/jetified-shared-utils-4.27.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-components:17.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/8b9b6699b66eb6b094ea51cc7bcc6946/transformed/jetified-firebase-components-17.0.1/AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6e632ef0c685615bdde36f5ab029b4cf/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/021853a0b0a9a5c025890b0f38c4df41/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/c99730041967790b17cf0af65d9ce2d1/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/55842d24332ca61923740fe426305bb0/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-components:17.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/8b9b6699b66eb6b094ea51cc7bcc6946/transformed/jetified-firebase-components-17.0.1/AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3a35e8b19038f4e27bf3853899815260/transformed/sqlite-framework-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.sqlite:sqlite:2.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/652c97cebe9d7cce7fedf76a8e82c739/transformed/sqlite-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.flexbox:flexbox:3.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/706abd55156579d6a8bb5a5ef4d843de/transformed/jetified-flexbox-3.0.0/AndroidManifest.xml:17:1-24:12
@@ -139,22 +139,22 @@ MERGED from [com.android.volley:volley:1.2.1] /Users/dhvanibhanderi/.gradle/cach
 MERGED from [com.google.android.datatransport:transport-api:2.2.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/b59fa8782298cbf98bacdaadd510a74e/transformed/jetified-transport-api-2.2.0/AndroidManifest.xml:15:1-22:12
 MERGED from [com.android.installreferrer:installreferrer:1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/83ca30f9c7f4bfb4055e6e211f864900/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:2:1-13:12
 MERGED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3ab69657f616f21a1e763100f007266d/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:3:1-34:12
-INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:2:1-261:12
-INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:2:1-261:12
-INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:2:1-261:12
+INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:2:1-264:12
+INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:2:1-264:12
+INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:2:1-264:12
 	package
 		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:4:5-27
 		INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:2:1-261:12
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:2:1-264:12
 		INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:2:1-261:12
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:2:1-264:12
 		INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:2:11-69
@@ -316,20 +316,31 @@ uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:33:5-81
 	android:name
 		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:33:22-78
+uses-permission#com.google.android.gms.permission.AD_ID
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:35:5-37:31
+REJECTED from [com.google.android.gms:play-services-measurement-api:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/be4111d33d04896afe28bd8fbc879529/transformed/jetified-play-services-measurement-api-21.1.1/AndroidManifest.xml:25:5-79
+REJECTED from [com.google.android.gms:play-services-measurement-impl:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a86820c84b21631e8c6bb2e0e2b310ba/transformed/jetified-play-services-measurement-impl-21.1.1/AndroidManifest.xml:27:5-79
+REJECTED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3421393d6362fc2893e5c5e53d999945/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:23:5-79
+REJECTED from [com.google.android.gms:play-services-measurement-sdk-api:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/40d627ec56ff8d340d77184164537d21/transformed/jetified-play-services-measurement-sdk-api-21.1.1/AndroidManifest.xml:26:5-79
+REJECTED from [com.facebook.android:facebook-core:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7ec115b6fffb8c10913e122a829fa87b/transformed/jetified-facebook-core-16.0.1/AndroidManifest.xml:16:5-79
+	tools:node
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:37:9-28
+	android:name
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:36:9-63
 uses-feature#android.hardware.camera.any
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:36:5-38:35
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:39:5-41:35
 	android:required
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:38:9-32
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:41:9-32
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:37:9-51
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:40:9-51
 uses-feature#android.hardware.camera.autofocus
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:39:5-41:36
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:42:5-44:36
 	android:required
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:41:9-33
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:44:9-33
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:40:9-57
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:43:9-57
 application
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:43:5-259:19
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:46:5-262:19
 MERGED from [com.karumi:dexter:5.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7d13c14e14b2215db082d95d5cb21f22/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:26:5-30:19
 MERGED from [com.karumi:dexter:5.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7d13c14e14b2215db082d95d5cb21f22/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:26:5-30:19
 MERGED from [com.braintreepayments.api:drop-in:6.9.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/63f1873bc52196e5b3e511184612a6cc/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:13:5-30:19
@@ -372,8 +383,6 @@ MERGED from [com.twitter.sdk.android:tweet-composer:3.1.1] /Users/dhvanibhanderi
 MERGED from [com.twitter.sdk.android:tweet-composer:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/8c57d2d13054e7c0ab163381e28abf81/transformed/jetified-tweet-composer-3.1.1/AndroidManifest.xml:27:5-37:19
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9b03e4b5877bd8e9eae754b2feb72eda/transformed/jetified-twitter-core-3.1.1/AndroidManifest.xml:27:5-33:19
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9b03e4b5877bd8e9eae754b2feb72eda/transformed/jetified-twitter-core-3.1.1/AndroidManifest.xml:27:5-33:19
-MERGED from [com.google.firebase:firebase-analytics:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/c11261a606bfbaab915d56c286a54f05/transformed/jetified-firebase-analytics-21.1.1/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-analytics:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/c11261a606bfbaab915d56c286a54f05/transformed/jetified-firebase-analytics-21.1.1/AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-messaging:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/aff7acbd3976744cf13e8cfe18dc5873/transformed/jetified-firebase-messaging-20.2.1/AndroidManifest.xml:22:5-43:19
 MERGED from [com.google.firebase:firebase-messaging:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/aff7acbd3976744cf13e8cfe18dc5873/transformed/jetified-firebase-messaging-20.2.1/AndroidManifest.xml:22:5-43:19
 MERGED from [com.google.android.gms:play-services-location:20.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/f3523785a29b81df7ee04c809696286e/transformed/jetified-play-services-location-20.0.0/AndroidManifest.xml:7:5-20
@@ -398,6 +407,8 @@ MERGED from [com.google.android.gms:play-services-identity:18.0.1] /Users/dhvani
 MERGED from [com.google.android.gms:play-services-identity:18.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/8146f6264cf4045e52cab5ab07ad2d29/transformed/jetified-play-services-identity-18.0.1/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6e3971dfd7af90b8f08b579d1a77a0ec/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6e3971dfd7af90b8f08b579d1a77a0ec/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.firebase:firebase-analytics:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/c11261a606bfbaab915d56c286a54f05/transformed/jetified-firebase-analytics-21.1.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/c11261a606bfbaab915d56c286a54f05/transformed/jetified-firebase-analytics-21.1.1/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-measurement-api:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/be4111d33d04896afe28bd8fbc879529/transformed/jetified-play-services-measurement-api-21.1.1/AndroidManifest.xml:27:5-35:19
 MERGED from [com.google.android.gms:play-services-measurement-api:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/be4111d33d04896afe28bd8fbc879529/transformed/jetified-play-services-measurement-api-21.1.1/AndroidManifest.xml:27:5-35:19
 MERGED from [com.google.firebase:firebase-datatransport:17.0.3] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6441f5e284a2887ec13e0e5d9bda4cf6/transformed/jetified-firebase-datatransport-17.0.3/AndroidManifest.xml:24:5-32:19
@@ -408,12 +419,12 @@ MERGED from [com.google.firebase:firebase-common:20.1.2] /Users/dhvanibhanderi/.
 MERGED from [com.google.firebase:firebase-common:20.1.2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a2139578e4fb06c1578f1a8577eac9be/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:25:5-38:19
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e3f969122ced1309371acecba5dfb373/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e3f969122ced1309371acecba5dfb373/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/268a606335fc777381fdf3de6323cae2/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/268a606335fc777381fdf3de6323cae2/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:28:5-44:19
 MERGED from [com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:28:5-44:19
 MERGED from [com.google.android.gms:play-services-measurement-sdk:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/4a7d515970f99d5b55b6e696eaa96ce7/transformed/jetified-play-services-measurement-sdk-21.1.1/AndroidManifest.xml:22:5-23:19
 MERGED from [com.google.android.gms:play-services-measurement-sdk:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/4a7d515970f99d5b55b6e696eaa96ce7/transformed/jetified-play-services-measurement-sdk-21.1.1/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/268a606335fc777381fdf3de6323cae2/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/268a606335fc777381fdf3de6323cae2/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a86820c84b21631e8c6bb2e0e2b310ba/transformed/jetified-play-services-measurement-impl-21.1.1/AndroidManifest.xml:29:5-30:19
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a86820c84b21631e8c6bb2e0e2b310ba/transformed/jetified-play-services-measurement-impl-21.1.1/AndroidManifest.xml:29:5-30:19
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e5772bd73783c89de2f5f5f1695dbf1b/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:7:5-20
@@ -457,401 +468,401 @@ MERGED from [com.android.installreferrer:installreferrer:1.0] /Users/dhvanibhand
 MERGED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3ab69657f616f21a1e763100f007266d/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:14:5-32:19
 MERGED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3ab69657f616f21a1e763100f007266d/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:14:5-32:19
 	android:requestLegacyExternalStorage
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:53:9-52
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:56:9-52
 	android:grantUriPermissions
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:48:9-43
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:51:9-43
 	android:windowSoftInputMode
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:58:9-69
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:61:9-69
 	android:exported
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:46:9-33
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:49:9-33
 	tools:ignore
 		ADDED from [com.braintreepayments.api:drop-in:6.9.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/63f1873bc52196e5b3e511184612a6cc/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:15:9-39
 	android:roundIcon
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:54:9-48
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:57:9-48
 	android:largeHeap
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:52:9-33
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:55:9-33
 	android:icon
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:50:9-38
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:53:9-38
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.8.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/1d6984a21c9b376709d4727d25d10d0c/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:55:9-35
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:58:9-35
 	android:label
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:51:9-41
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:54:9-41
 	android:hardwareAccelerated
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:49:9-44
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:52:9-44
 	android:fullBackupContent
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:47:9-42
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:50:9-42
 	android:allowBackup
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:45:9-35
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:48:9-35
 	android:theme
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:56:9-46
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:59:9-46
 	tools:replace
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:59:9-71
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:62:9-71
 	android:usesCleartextTraffic
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:57:9-44
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:60:9-44
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:44:9-48
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:47:9-48
 activity#com.i2donate.Activity.NamePlaceSerachActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:60:9-66:20
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:63:9-69:20
 	android:exported
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:62:13-37
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:65:13-37
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:61:13-61
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:64:13-61
 meta-data#android.app.lib_name
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:63:13-65:36
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:66:13-68:36
 	android:value
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:65:17-33
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:68:17-33
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:64:17-52
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:67:17-52
 activity#com.i2donate.Activity.TypeSerchActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:67:9-73:20
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:70:9-76:20
 	android:exported
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:69:13-37
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:72:13-37
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:68:13-55
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:71:13-55
 activity#com.i2donate.Activity.PrivactPolicyActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:74:9-68
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:77:9-68
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:74:19-65
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:77:19-65
 activity#com.braintreepayments.api.BraintreeBrowserSwitchActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:75:9-87:20
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:78:9-90:20
 	android:launchMode
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:78:13-44
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:81:13-44
 	android:exported
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:77:13-36
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:80:13-36
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:76:13-84
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:79:13-84
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:com.i2donate.braintree
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:79:13-86:29
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:82:13-89:29
 action#android.intent.action.VIEW
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:80:17-69
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:83:17-69
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:80:25-66
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:83:25-66
 category#android.intent.category.DEFAULT
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:82:17-76
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:85:17-76
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:82:27-73
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:85:27-73
 category#android.intent.category.BROWSABLE
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:83:17-78
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:86:17-78
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:83:27-75
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:86:27-75
 activity#com.i2donate.Activity.BrainTreePaymentActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:88:9-71
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:91:9-71
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:88:19-68
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:91:19-68
 activity#com.i2donate.Activity.PrivacyPolicyActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:89:9-68
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:92:9-68
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:89:19-65
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:92:19-65
 activity#com.i2donate.Activity.TermsAndConditionActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:90:9-72
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:93:9-72
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:90:19-69
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:93:19-69
 activity#com.i2donate.Activity.NewtypesActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:91:9-63
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:94:9-63
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:91:19-60
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:94:19-60
 meta-data#firebase_crashlytics_collection_enabled
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:93:9-95:37
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:96:9-98:37
 	android:value
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:95:13-34
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:98:13-34
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:94:13-67
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:97:13-67
 service#com.i2donate.Notification.fcm.MyFirebaseMessagingService
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:97:9-103:19
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:100:9-106:19
 	android:exported
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:99:13-37
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:102:13-37
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:98:13-72
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:101:13-72
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:100:13-102:29
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:103:13-105:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:101:17-78
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:104:17-78
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:101:25-75
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:104:25-75
 receiver#com.i2donate.Notification.fcm.OnBootBroadcastReceiver
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:105:9-111:20
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:108:9-114:20
 	android:exported
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:107:13-37
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:110:13-37
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:106:13-69
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:109:13-69
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:108:13-110:29
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:111:13-113:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:109:17-79
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:112:17-79
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:109:25-76
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:112:25-76
 activity#com.i2donate.Activity.ConfirmationActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:113:9-67
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:116:9-67
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:113:19-64
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:116:19-64
 activity#com.i2donate.Activity.AnnualRevenueActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:114:9-68
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:117:9-68
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:114:19-65
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:117:19-65
 activity#com.i2donate.Activity.TitleSubTitleActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:115:9-68
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:118:9-68
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:115:19-65
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:118:19-65
 activity#com.i2donate.Activity.SubCategoryActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:116:9-66
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:119:9-66
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:116:19-63
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:119:19-63
 activity#com.i2donate.Activity.AdvanceCompletedActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:117:9-71
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:120:9-71
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:117:19-68
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:120:19-68
 activity#com.i2donate.Activity.PaymentSuccessActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:118:9-69
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:121:9-69
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:118:19-66
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:121:19-66
 activity#com.i2donate.Activity.SelectPaymentActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:119:9-68
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:122:9-68
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:119:19-65
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:122:19-65
 activity#com.i2donate.Activity.ChangePasswordActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:120:9-69
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:123:9-69
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:120:19-66
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:123:19-66
 activity#com.i2donate.Activity.OtpActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:121:9-123:76
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:124:9-126:76
 	android:windowSoftInputMode
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:123:13-73
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:126:13-73
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:122:13-49
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:125:13-49
 activity#com.i2donate.Activity.ForgotActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:124:9-61
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:127:9-61
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:124:19-58
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:127:19-58
 activity#com.i2donate.Activity.AdvanceSearchActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:125:9-68
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:128:9-68
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:125:19-65
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:128:19-65
 activity#com.i2donate.Activity.AdavanceSearchUIDesign
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:126:9-128:53
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:129:9-131:53
 	android:theme
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:128:13-50
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:131:13-50
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:127:13-60
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:130:13-60
 activity#com.i2donate.Activity.AdavanceSearch_new
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:129:9-65
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:132:9-65
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:129:19-62
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:132:19-62
 activity#com.i2donate.Activity.HelpSupportActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:130:9-66
-	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:130:19-63
-activity#com.i2donate.Activity.AboutActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:131:9-60
-	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:131:19-57
-activity#com.i2donate.Activity.InternationalCharitiesActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:132:9-77
-	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:132:19-74
-activity#com.i2donate.Activity.PlaceSearchActivity
 ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:133:9-66
 	android:name
 		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:133:19-63
+activity#com.i2donate.Activity.AboutActivity
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:134:9-60
+	android:name
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:134:19-57
+activity#com.i2donate.Activity.InternationalCharitiesActivity
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:135:9-77
+	android:name
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:135:19-74
+activity#com.i2donate.Activity.PlaceSearchActivity
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:136:9-66
+	android:name
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:136:19-63
 activity#com.i2donate.Activity.AutosearchActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:134:9-65
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:137:9-65
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:134:19-62
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:137:19-62
 activity#com.i2donate.Activity.UpdateActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:148:9-61
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:151:9-61
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:148:19-58
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:151:19-58
 activity#com.i2donate.Activity.AdvanceSearch1Activity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:149:9-69
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:152:9-69
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:149:19-66
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:152:19-66
 activity#com.i2donate.Activity.WelcomeActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:150:9-159:20
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:153:9-162:20
 	android:exported
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:152:13-36
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:155:13-36
 	android:theme
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:153:13-55
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:156:13-55
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:151:13-53
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:154:13-53
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:154:13-158:29
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:157:13-161:29
 action#android.intent.action.MAIN
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:155:17-69
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:158:17-69
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:155:25-66
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:158:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:157:17-77
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:160:17-77
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:157:27-74
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:160:27-74
 activity#com.i2donate.Activity.UnitedStateDetailsActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:160:9-162:76
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:163:9-165:76
 	android:windowSoftInputMode
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:162:13-73
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:165:13-73
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:161:13-64
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:164:13-64
 activity#com.i2donate.Activity.SettingActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:163:9-165:48
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:166:9-168:48
 	android:theme
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:165:13-45
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:168:13-45
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:164:13-53
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:167:13-53
 activity#com.i2donate.Activity.NotificationActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:166:9-67
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:169:9-67
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:166:19-64
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:169:19-64
 activity#com.i2donate.Activity.FollowingActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:167:9-64
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:170:9-64
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:167:19-61
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:170:19-61
 activity#com.i2donate.Activity.TypesActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:168:9-60
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:171:9-60
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:168:19-57
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:171:19-57
 activity#com.i2donate.Activity.NameSearchActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:169:9-172:76
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:172:9-175:76
 	android:windowSoftInputMode
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:172:13-73
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:175:13-73
 	android:theme
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:171:13-50
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:174:13-50
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:170:13-56
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:173:13-56
 activity#com.i2donate.Activity.UnitedStateActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:173:9-175:67
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:176:9-178:67
 	android:windowSoftInputMode
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:175:13-64
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:178:13-64
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:174:13-57
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:177:13-57
 activity#com.i2donate.CommonActivity.CommonBackActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:176:9-179:76
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:179:9-182:76
 	android:windowSoftInputMode
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:179:13-73
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:182:13-73
 	android:theme
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:178:13-50
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:181:13-50
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:177:13-62
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:180:13-62
 activity#com.i2donate.Activity.RegisterActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:180:9-63
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:183:9-63
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:180:19-60
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:183:19-60
 activity#com.facebook.FacebookActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:181:9-184:48
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:184:9-187:48
 MERGED from [com.facebook.android:facebook-common:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/40c767da5aa3983bd2b36169b9378e56/transformed/jetified-facebook-common-16.0.1/AndroidManifest.xml:22:9-25:66
 MERGED from [com.facebook.android:facebook-common:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/40c767da5aa3983bd2b36169b9378e56/transformed/jetified-facebook-common-16.0.1/AndroidManifest.xml:22:9-25:66
 	android:label
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:184:13-45
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:187:13-45
 	android:configChanges
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:183:13-96
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:186:13-96
 	android:theme
 		ADDED from [com.facebook.android:facebook-common:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/40c767da5aa3983bd2b36169b9378e56/transformed/jetified-facebook-common-16.0.1/AndroidManifest.xml:25:13-63
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:182:13-57
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:185:13-57
 activity#com.facebook.CustomTabActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:185:9-196:20
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:188:9-199:20
 MERGED from [com.facebook.android:facebook-common:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/40c767da5aa3983bd2b36169b9378e56/transformed/jetified-facebook-common-16.0.1/AndroidManifest.xml:27:9-41:20
 MERGED from [com.facebook.android:facebook-common:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/40c767da5aa3983bd2b36169b9378e56/transformed/jetified-facebook-common-16.0.1/AndroidManifest.xml:27:9-41:20
 	tools:node
 		ADDED from [com.facebook.android:facebook-common:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/40c767da5aa3983bd2b36169b9378e56/transformed/jetified-facebook-common-16.0.1/AndroidManifest.xml:30:13-31
 	android:exported
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:187:13-36
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:190:13-36
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:186:13-58
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:189:13-58
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:@string/fb_login_protocol_scheme
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:188:13-195:29
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:191:13-198:29
 activity#com.i2donate.Activity.LoginActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:197:9-200:76
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:200:9-203:76
 	android:windowSoftInputMode
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:200:13-73
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:203:13-73
 	android:theme
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:199:13-50
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:202:13-50
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:198:13-51
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:201:13-51
 activity#com.i2donate.Activity.SplashScreenActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:201:9-212:20
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:204:9-215:20
 	android:exported
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:203:13-36
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:206:13-36
 	android:theme
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:204:13-55
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:207:13-55
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:202:13-58
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:205:13-58
 activity#com.i2donate.Activity.MyspaceActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:213:9-62
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:216:9-62
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:213:19-59
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:216:19-59
 activity#com.i2donate.CommonActivity.CommonMenuActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:214:9-71
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:217:9-71
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:214:19-68
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:217:19-68
 activity#com.i2donate.Activity.BrowseActivity
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:215:9-217:58
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:218:9-220:58
 	android:windowSoftInputMode
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:217:13-55
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:220:13-55
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:216:13-52
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:219:13-52
 meta-data#com.google.android.geo.API_KEY
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:219:9-221:71
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:222:9-224:71
 	android:value
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:221:13-68
-	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:220:13-58
-meta-data#com.google.android.gms.version
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:222:9-224:69
-MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/135832c5f60c6c9c4dce0ca0e7063060/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/135832c5f60c6c9c4dce0ca0e7063060/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
-	android:value
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:224:13-66
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:224:13-68
 	android:name
 		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:223:13-58
+meta-data#com.google.android.gms.version
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:225:9-227:69
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/135832c5f60c6c9c4dce0ca0e7063060/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/135832c5f60c6c9c4dce0ca0e7063060/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:227:13-66
+	android:name
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:226:13-58
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:227:9-229:55
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:230:9-232:55
 	android:value
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:229:13-52
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:232:13-52
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:228:13-58
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:231:13-58
 meta-data#com.facebook.sdk.ClientToken
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:230:9-232:61
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:233:9-235:61
 	android:value
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:232:13-58
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:235:13-58
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:231:13-56
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:234:13-56
 receiver#com.i2donate.Interwork.ConnectivityReceiver
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:234:9-241:20
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:237:9-244:20
 	android:enabled
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:236:13-35
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:239:13-35
 	android:exported
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:237:13-37
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:240:13-37
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:235:13-59
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:238:13-59
 intent-filter#action:name:android.net.conn.CONNECTIVITY_CHANGE
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:238:13-240:29
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:241:13-243:29
 action#android.net.conn.CONNECTIVITY_CHANGE
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:239:17-79
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:242:17-79
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:239:25-76
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:242:25-76
 meta-data#com.google.firebase.messaging.default_notification_icon
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:243:9-245:57
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:246:9-248:57
 	android:resource
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:245:13-54
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:248:13-54
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:244:13-83
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:247:13-83
 meta-data#com.google.firebase.messaging.default_notification_color
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:250:9-252:53
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:253:9-255:53
 	android:resource
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:252:13-50
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:255:13-50
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:251:13-84
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:254:13-84
 meta-data#firebase_messaging_auto_init_enabled
-ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:253:9-255:37
-	android:value
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:255:13-34
-	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:254:13-64
-meta-data#firebase_analytics_collection_enabled
 ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:256:9-258:37
 	android:value
 		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:258:13-34
 	android:name
-		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:257:13-65
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:257:13-64
+meta-data#firebase_analytics_collection_enabled
+ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:259:9-261:37
+	android:value
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:261:13-34
+	android:name
+		ADDED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml:260:13-65
 uses-sdk
 INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/dhvanibhanderi/Android Projects/Client's Projects/I2 Donate/Android Codes/i2D-Prod/Android-Master/i2-Donate_Android/app/src/main/AndroidManifest.xml
@@ -926,8 +937,6 @@ MERGED from [com.twitter.sdk.android:twitter-core:3.1.1] /Users/dhvanibhanderi/.
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/9b03e4b5877bd8e9eae754b2feb72eda/transformed/jetified-twitter-core-3.1.1/AndroidManifest.xml:23:5-44
 MERGED from [com.jakewharton:butterknife:8.8.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/53f7a92f5af7642a0f0fc6b27b1ca391/transformed/jetified-butterknife-8.8.1/AndroidManifest.xml:5:5-43
 MERGED from [com.jakewharton:butterknife:8.8.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/53f7a92f5af7642a0f0fc6b27b1ca391/transformed/jetified-butterknife-8.8.1/AndroidManifest.xml:5:5-43
-MERGED from [com.google.firebase:firebase-analytics:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/c11261a606bfbaab915d56c286a54f05/transformed/jetified-firebase-analytics-21.1.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-analytics:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/c11261a606bfbaab915d56c286a54f05/transformed/jetified-firebase-analytics-21.1.1/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-messaging:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/aff7acbd3976744cf13e8cfe18dc5873/transformed/jetified-firebase-messaging-20.2.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-messaging:20.2.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/aff7acbd3976744cf13e8cfe18dc5873/transformed/jetified-firebase-messaging-20.2.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-location:20.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/f3523785a29b81df7ee04c809696286e/transformed/jetified-play-services-location-20.0.0/AndroidManifest.xml:5:5-44
@@ -962,6 +971,8 @@ MERGED from [com.google.android.gms:play-services-identity:18.0.1] /Users/dhvani
 MERGED from [com.google.android.gms:play-services-identity:18.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/8146f6264cf4045e52cab5ab07ad2d29/transformed/jetified-play-services-identity-18.0.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6e3971dfd7af90b8f08b579d1a77a0ec/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:18:5-43
 MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6e3971dfd7af90b8f08b579d1a77a0ec/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-analytics:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/c11261a606bfbaab915d56c286a54f05/transformed/jetified-firebase-analytics-21.1.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/c11261a606bfbaab915d56c286a54f05/transformed/jetified-firebase-analytics-21.1.1/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-measurement-api:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/be4111d33d04896afe28bd8fbc879529/transformed/jetified-play-services-measurement-api-21.1.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-api:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/be4111d33d04896afe28bd8fbc879529/transformed/jetified-play-services-measurement-api-21.1.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-datatransport:17.0.3] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6441f5e284a2887ec13e0e5d9bda4cf6/transformed/jetified-firebase-datatransport-17.0.3/AndroidManifest.xml:19:5-21:41
@@ -974,12 +985,12 @@ MERGED from [com.google.firebase:firebase-installations-interop:17.0.1] /Users/d
 MERGED from [com.google.firebase:firebase-installations-interop:17.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/557c223e800d424ea1c8d0f7a3323658/transformed/jetified-firebase-installations-interop-17.0.1/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e3f969122ced1309371acecba5dfb373/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e3f969122ced1309371acecba5dfb373/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/268a606335fc777381fdf3de6323cae2/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/268a606335fc777381fdf3de6323cae2/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/d968fdccb6b86b551968bc987a2016b2/transformed/jetified-play-services-measurement-21.1.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-sdk:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/4a7d515970f99d5b55b6e696eaa96ce7/transformed/jetified-play-services-measurement-sdk-21.1.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-sdk:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/4a7d515970f99d5b55b6e696eaa96ce7/transformed/jetified-play-services-measurement-sdk-21.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/268a606335fc777381fdf3de6323cae2/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/268a606335fc777381fdf3de6323cae2/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a86820c84b21631e8c6bb2e0e2b310ba/transformed/jetified-play-services-measurement-impl-21.1.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a86820c84b21631e8c6bb2e0e2b310ba/transformed/jetified-play-services-measurement-impl-21.1.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/dhvanibhanderi/.gradle/caches/transforms-3/e5772bd73783c89de2f5f5f1695dbf1b/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:5:5-44
@@ -1090,8 +1101,6 @@ MERGED from [com.google.firebase:firebase-encoders-json:16.1.0] /Users/dhvanibha
 MERGED from [com.google.firebase:firebase-encoders-json:16.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/252661603263ccddee030cbac8987b03/transformed/jetified-firebase-encoders-json-16.1.0/AndroidManifest.xml:19:5-21:41
 MERGED from [com.braintreepayments.api:shared-utils:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/0e1d6d3ab2c6cdbe89168d990c234223/transformed/jetified-shared-utils-4.27.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.braintreepayments.api:shared-utils:4.27.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/0e1d6d3ab2c6cdbe89168d990c234223/transformed/jetified-shared-utils-4.27.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-components:17.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/8b9b6699b66eb6b094ea51cc7bcc6946/transformed/jetified-firebase-components-17.0.1/AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-components:17.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/8b9b6699b66eb6b094ea51cc7bcc6946/transformed/jetified-firebase-components-17.0.1/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6e632ef0c685615bdde36f5ab029b4cf/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6e632ef0c685615bdde36f5ab029b4cf/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/021853a0b0a9a5c025890b0f38c4df41/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
@@ -1100,6 +1109,8 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/c99730041967790b17cf0af65d9ce2d1/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/55842d24332ca61923740fe426305bb0/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/55842d24332ca61923740fe426305bb0/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-components:17.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/8b9b6699b66eb6b094ea51cc7bcc6946/transformed/jetified-firebase-components-17.0.1/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:17.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/8b9b6699b66eb6b094ea51cc7bcc6946/transformed/jetified-firebase-components-17.0.1/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3a35e8b19038f4e27bf3853899815260/transformed/sqlite-framework-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3a35e8b19038f4e27bf3853899815260/transformed/sqlite-framework-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.sqlite:sqlite:2.1.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/652c97cebe9d7cce7fedf76a8e82c739/transformed/sqlite-2.1.0/AndroidManifest.xml:20:5-22:41
@@ -1390,18 +1401,6 @@ ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/dhvanibhand
 		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6e3971dfd7af90b8f08b579d1a77a0ec/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
 	android:name
 		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/6e3971dfd7af90b8f08b579d1a77a0ec/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
-uses-permission#com.google.android.gms.permission.AD_ID
-ADDED from [com.google.android.gms:play-services-measurement-api:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/be4111d33d04896afe28bd8fbc879529/transformed/jetified-play-services-measurement-api-21.1.1/AndroidManifest.xml:25:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a86820c84b21631e8c6bb2e0e2b310ba/transformed/jetified-play-services-measurement-impl-21.1.1/AndroidManifest.xml:27:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/a86820c84b21631e8c6bb2e0e2b310ba/transformed/jetified-play-services-measurement-impl-21.1.1/AndroidManifest.xml:27:5-79
-MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3421393d6362fc2893e5c5e53d999945/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/dhvanibhanderi/.gradle/caches/transforms-3/3421393d6362fc2893e5c5e53d999945/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/40d627ec56ff8d340d77184164537d21/transformed/jetified-play-services-measurement-sdk-api-21.1.1/AndroidManifest.xml:26:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/40d627ec56ff8d340d77184164537d21/transformed/jetified-play-services-measurement-sdk-api-21.1.1/AndroidManifest.xml:26:5-79
-MERGED from [com.facebook.android:facebook-core:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7ec115b6fffb8c10913e122a829fa87b/transformed/jetified-facebook-core-16.0.1/AndroidManifest.xml:16:5-79
-MERGED from [com.facebook.android:facebook-core:16.0.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/7ec115b6fffb8c10913e122a829fa87b/transformed/jetified-facebook-core-16.0.1/AndroidManifest.xml:16:5-79
-	android:name
-		ADDED from [com.google.android.gms:play-services-measurement-api:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/be4111d33d04896afe28bd8fbc879529/transformed/jetified-play-services-measurement-api-21.1.1/AndroidManifest.xml:25:22-76
 meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
 ADDED from [com.google.android.gms:play-services-measurement-api:21.1.1] /Users/dhvanibhanderi/.gradle/caches/transforms-3/be4111d33d04896afe28bd8fbc879529/transformed/jetified-play-services-measurement-api-21.1.1/AndroidManifest.xml:31:13-33:85
 	android:value
