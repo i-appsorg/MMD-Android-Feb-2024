@@ -6,6 +6,7 @@ import static com.i2donate.RetrofitAPI.ApiClient.Privacy_URL;
 import static com.i2donate.RetrofitAPI.ApiClient.Server_URL;
 import static com.i2donate.RetrofitAPI.ApiClient.TC_URL;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
@@ -67,7 +68,7 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
         Log.e("demochecking", "demochecking");
         init();
-        listioner();
+        listener();
     }
 
     private void init() {
@@ -149,20 +150,23 @@ public class WelcomeActivity extends AppCompatActivity {
         // Making notification bar transparent
 
 //        launchHomeScreen();
-
-
     }
 
-    private void listioner() {
+    private void listener() {
 
-        btnNext.setOnClickListener(new View.OnClickListener() {
+        btnNext.setOnClickListener(new View.OnClickListener() { // A 240523
             @Override
             public void onClick(View v) {
                 if (isOnline()) {
+                    final ProgressDialog progressDialog = new ProgressDialog(WelcomeActivity.this);
+                    progressDialog.setMessage("Loading...");
+                    progressDialog.show();
+
 //                    String sheetID = "1wGP8IHJGOCT-K0t2eXAh_lmaGYRHgmWmgAIrUJ4ASQo";
                     String sheetID = "1O-8LD2wcWDqBiKw9I3QDI0JuwWCVrenyN_IzVHVMd4E";
 //                    String apiKEY = "AIzaSyBMkCWoTqmo_qdjL675bfgP5zbh1zboKCk";
                     String apiKEY = "AIzaSyDQzTsnTRgYvCDfEUm1ac0rQgHZbiiB_ew";
+//                    String sheetTabName = "i2D-Dev";
                     String sheetTabName = "i2D-Prod";
                     String urls = "https://sheets.googleapis.com/v4/spreadsheets/" + sheetID + "/values/" + sheetTabName + "?key=" + apiKEY;
 
@@ -171,6 +175,7 @@ public class WelcomeActivity extends AppCompatActivity {
                     JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, urls, null, new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
+                            progressDialog.dismiss();
                             try {
                                 jsonArrayValues = response.getJSONArray("values");
 
@@ -219,13 +224,15 @@ public class WelcomeActivity extends AppCompatActivity {
                     }, new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-                            Log.e(TAG, " error - " + error.getMessage());
+                            progressDialog.dismiss();
+                            Log.e(TAG, " error - " + error.getLocalizedMessage());
                         }
                     });
                     queue.add(jsonObjectRequest);
                 } else {
                     Toast.makeText(WelcomeActivity.this, "Please check Internet connection", Toast.LENGTH_SHORT).show();
                 }
+
 
 //                index1 = 1;
 //                launchHomeScreen1();
@@ -253,8 +260,6 @@ public class WelcomeActivity extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 
     private boolean isOnline() {

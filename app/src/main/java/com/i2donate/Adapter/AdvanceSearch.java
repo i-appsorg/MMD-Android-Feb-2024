@@ -1,8 +1,5 @@
 package com.i2donate.Adapter;
 
-import java.util.HashMap;
-import java.util.List;
-
 import android.content.Context;
 import android.graphics.Typeface;
 import android.util.Log;
@@ -13,6 +10,9 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
 import com.i2donate.R;
+
+import java.util.HashMap;
+import java.util.List;
 
 public class AdvanceSearch extends BaseExpandableListAdapter {
 

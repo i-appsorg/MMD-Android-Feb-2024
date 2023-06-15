@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.braintreepayments.api:drop-in:6.9.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/63f1873bc52196e5b3e511184612a6cc/transformed/jetified-drop-in-6.9.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/63f1873bc52196e5b3e511184612a6cc/transformed/jetified-drop-in-6.9.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/63f1873bc52196e5b3e511184612a6cc/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.braintreepayments.api/drop-in/6.9.0/5b6df64400e01d49eff329b992e1dfaf34ae86e4/drop-in-6.9.0-javadoc.jar!/" />

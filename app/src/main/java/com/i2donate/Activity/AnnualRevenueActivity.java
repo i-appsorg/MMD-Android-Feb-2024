@@ -32,21 +32,21 @@ public class AnnualRevenueActivity extends AppCompatActivity {
         setContentView(R.layout.activity_annual_revenue);
         iDonateSharedPreference = new IDonateSharedPreference();
         back = (ImageView) findViewById(R.id.back_icon_revenue_img);
-        reset=(Button)findViewById(R.id.annual_reset_button);
-        apply=(Button)findViewById(R.id.annual_apply_button);
+        reset = (Button) findViewById(R.id.annual_reset_button);
+        apply = (Button) findViewById(R.id.annual_apply_button);
         bottomLayout = (LinearLayout) findViewById(R.id.annual_bottom_layout);
         nintyTextView = (TextView) findViewById(R.id.ninty_tv);
         greaternintyTextView = (TextView) findViewById(R.id.greaterninty_deselect_tv);
         twohundredTextview = (TextView) findViewById(R.id.twohund_tv_deselect);
         fivehundredTextView = (TextView) findViewById(R.id.fivehund_deselect_tv);
-        greaterthousandTextView = (TextView)findViewById(R.id.greaterthousand_deselect_tv);
+        greaterthousandTextView = (TextView) findViewById(R.id.greaterthousand_deselect_tv);
         builder = new AlertDialog.Builder(this);
 
         nintyTextView.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View v) {
-                iDonateSharedPreference.setRevenue(getApplicationContext(),"90");
+                iDonateSharedPreference.setRevenue(getApplicationContext(), "90");
                 nintyTextView.setBackgroundResource(R.drawable.advanced_border_layout_color);
                 greaternintyTextView.setBackgroundResource(R.drawable.advanced_border_layout);
                 twohundredTextview.setBackgroundResource(R.drawable.advanced_border_layout);
@@ -64,7 +64,7 @@ public class AnnualRevenueActivity extends AppCompatActivity {
         greaternintyTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iDonateSharedPreference.setRevenue(getApplicationContext(),"200");
+                iDonateSharedPreference.setRevenue(getApplicationContext(), "200");
                 nintyTextView.setBackgroundResource(R.drawable.advanced_border_layout);
                 greaternintyTextView.setBackgroundResource(R.drawable.advanced_border_layout_color);
                 twohundredTextview.setBackgroundResource(R.drawable.advanced_border_layout);
@@ -82,7 +82,7 @@ public class AnnualRevenueActivity extends AppCompatActivity {
         twohundredTextview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iDonateSharedPreference.setRevenue(getApplicationContext(),"500");
+                iDonateSharedPreference.setRevenue(getApplicationContext(), "500");
                 nintyTextView.setBackgroundResource(R.drawable.advanced_border_layout);
                 greaternintyTextView.setBackgroundResource(R.drawable.advanced_border_layout);
                 twohundredTextview.setBackgroundResource(R.drawable.advanced_border_layout_color);
@@ -100,7 +100,7 @@ public class AnnualRevenueActivity extends AppCompatActivity {
         fivehundredTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iDonateSharedPreference.setRevenue(getApplicationContext(),"1000");
+                iDonateSharedPreference.setRevenue(getApplicationContext(), "1000");
                 nintyTextView.setBackgroundResource(R.drawable.advanced_border_layout);
                 greaternintyTextView.setBackgroundResource(R.drawable.advanced_border_layout);
                 twohundredTextview.setBackgroundResource(R.drawable.advanced_border_layout);
@@ -118,7 +118,7 @@ public class AnnualRevenueActivity extends AppCompatActivity {
         greaterthousandTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iDonateSharedPreference.setRevenue(getApplicationContext(),"2000");
+                iDonateSharedPreference.setRevenue(getApplicationContext(), "2000");
                 nintyTextView.setBackgroundResource(R.drawable.advanced_border_layout);
                 greaternintyTextView.setBackgroundResource(R.drawable.advanced_border_layout);
                 twohundredTextview.setBackgroundResource(R.drawable.advanced_border_layout);
@@ -136,22 +136,22 @@ public class AnnualRevenueActivity extends AppCompatActivity {
         apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (iDonateSharedPreference.getAdvancepage(getApplicationContext()).equalsIgnoreCase("unitedstate")){
+                if (iDonateSharedPreference.getAdvancepage(getApplicationContext()).equalsIgnoreCase("unitedstate")) {
                     Intent intent = new Intent(AnnualRevenueActivity.this, UnitedStateActivity.class);
-                    iDonateSharedPreference.setadvance(getApplicationContext(),"1");
-                    intent.putExtra("data","1");
+                    iDonateSharedPreference.setadvance(getApplicationContext(), "1");
+                    intent.putExtra("data", "1");
                     startActivity(intent);
                     finishAffinity();
-                }else if (iDonateSharedPreference.getAdvancepage(getApplicationContext()).equalsIgnoreCase("international")){
+                } else if (iDonateSharedPreference.getAdvancepage(getApplicationContext()).equalsIgnoreCase("international")) {
                     Intent intent = new Intent(AnnualRevenueActivity.this, InternationalCharitiesActivity.class);
-                    iDonateSharedPreference.setadvance(getApplicationContext(),"1");
-                    intent.putExtra("data","1");
+                    iDonateSharedPreference.setadvance(getApplicationContext(), "1");
+                    intent.putExtra("data", "1");
                     startActivity(intent);
                     finishAffinity();
-                }else {
+                } else {
                     Intent intent = new Intent(AnnualRevenueActivity.this, NameSearchActivity.class);
-                    iDonateSharedPreference.setadvance(getApplicationContext(),"1");
-                    intent.putExtra("data","1");
+                    iDonateSharedPreference.setadvance(getApplicationContext(), "1");
+                    intent.putExtra("data", "1");
                     startActivity(intent);
                     finishAffinity();
                 }
@@ -171,7 +171,7 @@ public class AnnualRevenueActivity extends AppCompatActivity {
                 twohundredTextview.setBackgroundResource(R.drawable.advanced_border_layout);
                 fivehundredTextView.setBackgroundResource(R.drawable.advanced_border_layout);
                 greaterthousandTextView.setBackgroundResource(R.drawable.advanced_border_layout);
-                iDonateSharedPreference.setRevenue(getApplicationContext(),"");
+                iDonateSharedPreference.setRevenue(getApplicationContext(), "");
                 bottomLayout.setVisibility(View.GONE);
             }
         });
@@ -221,7 +221,7 @@ public class AnnualRevenueActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         String selected = iDonateSharedPreference.getRevenue(getApplicationContext());
-        if(selected.equalsIgnoreCase("90")){
+        if (selected.equalsIgnoreCase("90")) {
             nintyTextView.setBackgroundResource(R.drawable.advanced_border_layout_color);
             greaternintyTextView.setBackgroundResource(R.drawable.advanced_border_layout);
             twohundredTextview.setBackgroundResource(R.drawable.advanced_border_layout);
@@ -232,7 +232,7 @@ public class AnnualRevenueActivity extends AppCompatActivity {
             twohundredTextview.setTextColor(getResources().getColor(R.color.textInside));
             fivehundredTextView.setTextColor(getResources().getColor(R.color.textInside));
             greaterthousandTextView.setTextColor(getResources().getColor(R.color.textInside));
-        } else if(selected.equalsIgnoreCase("200")){
+        } else if (selected.equalsIgnoreCase("200")) {
             nintyTextView.setBackgroundResource(R.drawable.advanced_border_layout);
             greaternintyTextView.setBackgroundResource(R.drawable.advanced_border_layout_color);
             twohundredTextview.setBackgroundResource(R.drawable.advanced_border_layout);
@@ -243,7 +243,7 @@ public class AnnualRevenueActivity extends AppCompatActivity {
             twohundredTextview.setTextColor(getResources().getColor(R.color.textInside));
             fivehundredTextView.setTextColor(getResources().getColor(R.color.textInside));
             greaterthousandTextView.setTextColor(getResources().getColor(R.color.textInside));
-        } else if(selected.equalsIgnoreCase("500")){
+        } else if (selected.equalsIgnoreCase("500")) {
             nintyTextView.setBackgroundResource(R.drawable.advanced_border_layout);
             greaternintyTextView.setBackgroundResource(R.drawable.advanced_border_layout);
             twohundredTextview.setBackgroundResource(R.drawable.advanced_border_layout_color);
@@ -254,7 +254,7 @@ public class AnnualRevenueActivity extends AppCompatActivity {
             greaternintyTextView.setTextColor(getResources().getColor(R.color.textInside));
             fivehundredTextView.setTextColor(getResources().getColor(R.color.textInside));
             greaterthousandTextView.setTextColor(getResources().getColor(R.color.textInside));
-        } else if(selected.equalsIgnoreCase("1000")){
+        } else if (selected.equalsIgnoreCase("1000")) {
             nintyTextView.setBackgroundResource(R.drawable.advanced_border_layout);
             greaternintyTextView.setBackgroundResource(R.drawable.advanced_border_layout);
             twohundredTextview.setBackgroundResource(R.drawable.advanced_border_layout);
@@ -266,7 +266,7 @@ public class AnnualRevenueActivity extends AppCompatActivity {
             greaternintyTextView.setTextColor(getResources().getColor(R.color.textInside));
             greaterthousandTextView.setTextColor(getResources().getColor(R.color.textInside));
 
-        } else if(selected.equalsIgnoreCase("2000")) {
+        } else if (selected.equalsIgnoreCase("2000")) {
             nintyTextView.setBackgroundResource(R.drawable.advanced_border_layout);
             greaternintyTextView.setBackgroundResource(R.drawable.advanced_border_layout);
             twohundredTextview.setBackgroundResource(R.drawable.advanced_border_layout);
@@ -279,7 +279,7 @@ public class AnnualRevenueActivity extends AppCompatActivity {
             fivehundredTextView.setTextColor(getResources().getColor(R.color.textInside));
         }
 
-        if(selected.equalsIgnoreCase("")){
+        if (selected.equalsIgnoreCase("")) {
             bottomLayout.setVisibility(View.GONE);
         } else bottomLayout.setVisibility(View.VISIBLE);
     }

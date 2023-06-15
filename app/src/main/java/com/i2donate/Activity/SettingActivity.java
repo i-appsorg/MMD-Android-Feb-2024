@@ -45,7 +45,7 @@ public class SettingActivity extends CommonMenuActivity {
         super.onCreate(savedInstanceState);
         setView(R.layout.activity_setting,TAG);
         init();
-        listioner();
+        listener();
         setTitle("");
         toolbar = findViewById(R.id.commonMenuActivityToolbar);
     }
@@ -84,7 +84,7 @@ public class SettingActivity extends CommonMenuActivity {
 
     }
 
-    private void listioner() {
+    private void listener() {
         relative_layout_changepassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

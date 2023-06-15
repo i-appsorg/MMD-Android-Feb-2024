@@ -161,7 +161,7 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
                     // finish();
                     ;
                 } else {
-                    LoginDailogue();
+                    LoginDialog();
                     //ChangeActivity.changeActivity(CommonMenuActivity.this, LoginActivity.class);
                     //  finish();
                     ;
@@ -225,7 +225,7 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
                                     ChangeActivity.changeActivity(CommonMenuActivity.this, NotificationActivity.class);
                                     finish();
                                 } else {
-                                    LoginDailogue();
+                                    LoginDialog();
                                     // ChangeActivity.changeActivity(CommonMenuActivity.this, LoginActivity.class);
                                 }
                                 break;
@@ -273,7 +273,7 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
                                     } else if (iDonateSharedPreference.getsocialMedia(getApplicationContext()).equalsIgnoreCase("facebook")) {
                                         FacebookSdk.sdkInitialize(getApplicationContext());
                                         LoginManager.getInstance().logOut();
-                                        LoginDailogue();
+                                        LoginDialog();
                                         //ChangeActivity.changeActivity(CommonMenuActivity.this, LoginActivity.class);
                                         // finish();
                                     } else {
@@ -293,7 +293,7 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
                                     } else if (iDonateSharedPreference.getsocialMedia(getApplicationContext()).equalsIgnoreCase("facebook")) {
                                         FacebookSdk.sdkInitialize(getApplicationContext());
                                         LoginManager.getInstance().logOut();
-                                        //LoginDailogue();
+                                        //LoginDialog();
                                         ChangeActivity.changeActivity(CommonMenuActivity.this, LoginActivity.class);
                                         //  finish();
                                     } else if (iDonateSharedPreference.getsocialMedia(getApplicationContext()).equalsIgnoreCase("twitter")) {
@@ -311,7 +311,7 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
                                 } else {
                                     Log.e("email", "" + iDonateSharedPreference.getsocialMedia(getApplicationContext()));
                                     signOut1();
-                                    //LoginDailogue();
+                                    //LoginDialog();
                                     ChangeActivity.changeActivity(CommonMenuActivity.this, LoginActivity.class);
                                     //  finish();
                                    /* if (iDonateSharedPreference.getsocialMedia(getApplicationContext()).equalsIgnoreCase("email")) {
@@ -338,7 +338,7 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
 
     }
 
-    private void LoginDailogue() {
+    private void LoginDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(CommonMenuActivity.this);
         builder.setTitle("");
         builder.setMessage("For Advance Features Please Log-in/Register");
@@ -505,7 +505,7 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
                         myspace_img.setColorFilter(getApplicationContext().getResources().getColor(R.color.quantum_white_text));
                         finish();
                     } else {
-                        LoginDailogue();
+                        LoginDialog();
                         // ChangeActivity.changeActivity(CommonMenuActivity.this, LoginActivity.class);
                         //finish();
                     }

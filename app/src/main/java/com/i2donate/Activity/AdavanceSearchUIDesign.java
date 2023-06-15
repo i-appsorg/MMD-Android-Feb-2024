@@ -37,13 +37,14 @@ public class AdavanceSearchUIDesign extends AppCompatActivity {
     ThreeLevelListAdapter advanceSearchnew;
     LinearLayout linear1,linear2;
     RelativeLayout expandable_relative;
+    String TAG = AdavanceSearchUIDesign.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adavance_search_uidesign);
         init();
-        listioner();
+        listener();
     }
 
 
@@ -61,7 +62,7 @@ public class AdavanceSearchUIDesign extends AppCompatActivity {
 
     }
 
-    private void listioner() {
+    private void listener() {
         exempt_tv_deselect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -1630,7 +1631,7 @@ public class AdavanceSearchUIDesign extends AppCompatActivity {
         try {
 
             JSONObject jsonObject = new JSONObject(reponse);
-            Log.e("jsonObject", "" + jsonObject);
+            Log.e(TAG, " jsonObject - " + jsonObject);
             String status = jsonObject.getString("status");
             String message = jsonObject.getString("message");
             String data = jsonObject.getString("data");

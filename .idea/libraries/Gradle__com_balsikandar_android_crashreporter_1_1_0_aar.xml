@@ -10,9 +10,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/87f143459c8b5457ca20d59a9a954863/transformed/jetified-crashreporter-1.1.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/87f143459c8b5457ca20d59a9a954863/transformed/jetified-crashreporter-1.1.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/87f143459c8b5457ca20d59a9a954863/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e248510c28ba4a835a4c9d4df74409a4/transformed/jetified-crashreporter-1.1.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e248510c28ba4a835a4c9d4df74409a4/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/e248510c28ba4a835a4c9d4df74409a4/transformed/jetified-crashreporter-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/754fa622484fb63a80160fed39ff7258/transformed/jetified-crashreporter-1.1.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/754fa622484fb63a80160fed39ff7258/transformed/jetified-crashreporter-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/754fa622484fb63a80160fed39ff7258/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.balsikandar.android/crashreporter/1.1.0/f86f5929d9cc49fbb9df2d9d8baf8483925f3117/crashreporter-1.1.0-javadoc.jar!/" />

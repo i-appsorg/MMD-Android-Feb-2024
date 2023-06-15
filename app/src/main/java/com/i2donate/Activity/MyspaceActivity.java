@@ -76,7 +76,7 @@ public class MyspaceActivity extends CommonMenuActivity {
         toolbar = findViewById(R.id.commonMenuActivityToolbar);
         setSelected(Selected.Myspace);
         init();
-        listioner();
+        listener();
     }
 
     private void init() {
@@ -334,7 +334,7 @@ public class MyspaceActivity extends CommonMenuActivity {
     }
 
 
-    private void listioner() {
+    private void listener() {
 
         myspace_recyclerview_list.getViewTreeObserver().addOnPreDrawListener(
                 new ViewTreeObserver.OnPreDrawListener() {

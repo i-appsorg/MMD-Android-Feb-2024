@@ -26,8 +26,8 @@ import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.places.AutocompleteFilter;
 import com.google.android.gms.location.places.AutocompletePrediction;
 import com.google.android.gms.location.places.AutocompletePredictionBuffer;
-import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.location.places.Places;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.i2donate.R;
 
 import java.util.ArrayList;

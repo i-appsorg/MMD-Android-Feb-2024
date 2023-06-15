@@ -51,5 +51,6 @@
     <color name="black">#000000</color>
     <color name="green_color">#0BAA1B</color>
     <color name="edittextline_color">#9C7192</color>
+    <color name="file_choose_color">#0075ff</color>
 
 </resources>

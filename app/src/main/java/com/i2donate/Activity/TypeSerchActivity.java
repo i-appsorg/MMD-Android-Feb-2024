@@ -26,7 +26,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,7 +33,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.material.appbar.AppBarLayout;
-import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.i2donate.Adapter.CategorylistAdapter;
@@ -56,7 +54,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -65,24 +62,23 @@ import retrofit2.Response;
 public class TypeSerchActivity extends CommonBackActivity {
 
 
-    private static String TAG = "TypeSerchActivity";
-    Toolbar toolbar;
+    private static String TAG = TypeSerchActivity.class.getSimpleName();
     TextView title_tv1, advance_search_text, advance_search_text1, titleTextView;
-    ImageView close_img, filter_show_img, back_icon_img, back_icon_img1, search_icon, search_icon1, close_img1;
+    ImageView close_img, filter_show_img, back_icon_img, back_icon_img1, search_icon, search_icon_loc, close_img_loc;
     static ApiInterface apiService;
     RelativeLayout relative_before_toolbar, relative_toolbar, search_relativelayout;
     static RecyclerView united_state_recyclerview;
     static ShimmerFrameLayout shimmer_view_container;
     static ArrayList<String> listOfdate = new ArrayList<>();
     private static LinearLayoutManager layoutManager;
-    static EditText search_et, search_name_et1, search_na_et1;
-    private CollapsingToolbarLayout collapsingtoolbar_layout;
+    static EditText search_us_et;
     LinearLayout name_search_layout, locationtitle_search_layout, locationtitle_search_layout1, namesearchLayout;
     LinearLayout type_linear_layout;
     static LinearLayout no_data_linear;
+    static TextView no_data_tv;
     LinearLayout linear_search1;
     LinearLayout linear_tool_test;
-    LinearLayout type_linear_layout1, name_search_layout1, search_location_layout, name_search_head_layout, location_search_layout;
+    LinearLayout type_linear_layout1, name_search_layout1, search_location_layout;
     static LoadMoreUnitesStateLocationDetailsAdapterList unitesStateLocationDetailsAdapterList;
     static SessionManager session;
     private AppBarLayout appbar_layout;
@@ -107,7 +103,7 @@ public class TypeSerchActivity extends CommonBackActivity {
     static int arrayListsize = 0;
     static String page = "1";
     static int pageno = 1, name_loc = 0;
-    static EditText search_name_et;
+    static EditText search_name_et1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,10 +113,8 @@ public class TypeSerchActivity extends CommonBackActivity {
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         setTitle("Search By Type");
-//        toolbar = findViewById(R.id.commonMenuActivityToolbar);
-//        toolbar.setVisibility(View.GONE);
         init();
-        listioner();
+        listener();
     }
 
     private void init() {
@@ -130,7 +124,6 @@ public class TypeSerchActivity extends CommonBackActivity {
         slideUp = AnimationUtils.loadAnimation(this, R.anim.visiblity_animation);
         back_icon_img = (ImageView) findViewById(R.id.back_icon_name_img);
         back_icon_img1 = (ImageView) findViewById(R.id.back_icon_img1);
-        collapsingtoolbar_layout = (CollapsingToolbarLayout) findViewById(R.id.collapsingtoolbar_layout);
         appbar_layout = (AppBarLayout) findViewById(R.id.appbar_layout);
         relative_before_toolbar = (RelativeLayout) findViewById(R.id.relative_before_toolbar);
         relative_toolbar = (RelativeLayout) findViewById(R.id.relative_toolbar);
@@ -140,8 +133,6 @@ public class TypeSerchActivity extends CommonBackActivity {
         titleTextView = (TextView) findViewById(R.id.titleTextView);
         name_search_layout1 = (LinearLayout) findViewById(R.id.name_search_layout1);
         search_location_layout = (LinearLayout) findViewById(R.id.search_location_layout);
-        name_search_head_layout = (LinearLayout) findViewById(R.id.name_search_head_layout);
-        location_search_layout = (LinearLayout) findViewById(R.id.location_search_layout);
         search_relativelayout = (RelativeLayout) findViewById(R.id.search_relativelayout);
         linear_search1 = (LinearLayout) findViewById(R.id.linear_search1);
         name_search_layout = (LinearLayout) findViewById(R.id.name_search_layout);
@@ -149,18 +140,16 @@ public class TypeSerchActivity extends CommonBackActivity {
         locationtitle_search_layout1 = (LinearLayout) findViewById(R.id.locationtitle_search_layout1);
         namesearchLayout = (LinearLayout) findViewById(R.id.namesearchLayout);
         united_state_recyclerview = (RecyclerView) findViewById(R.id.united_state_recyclerview);
-        search_et = (EditText) findViewById(R.id.search_us_et);
-        search_name_et = (EditText) findViewById(R.id.search_name_et1);
-        search_et.setFocusable(true);
-        search_name_et1 = (EditText) findViewById(R.id.search_us_et1);
-        search_na_et1 = (EditText) findViewById(R.id.search_na_et1);
-        search_name_et1.setFocusable(false);
+        search_us_et = (EditText) findViewById(R.id.search_us_et);
+        search_name_et1 = (EditText) findViewById(R.id.search_name_et1);
+        search_us_et.setFocusable(true);
         search_icon = (ImageView) findViewById(R.id.search_icon);
-        search_icon1 = (ImageView) findViewById(R.id.search_icon1);
+        search_icon_loc = (ImageView) findViewById(R.id.search_icon_loc);
+        close_img_loc = (ImageView) findViewById(R.id.close_img_loc);
         advance_search_text = (TextView) findViewById(R.id.advance_search_text);
         advance_search_text1 = (TextView) findViewById(R.id.advance_search_text1);
-        close_img1 = (ImageView) findViewById(R.id.close_img1);
         no_data_linear = (LinearLayout) findViewById(R.id.no_data_linear);
+        no_data_tv = findViewById(R.id.no_data_tv);
         type_linear_layout = (LinearLayout) findViewById(R.id.type_linear_layout);
         type_linear_layout1 = (LinearLayout) findViewById(R.id.type_linear_layout1);
         close_img = (ImageView) findViewById(R.id.close_img);
@@ -178,22 +167,12 @@ public class TypeSerchActivity extends CommonBackActivity {
             CharityAPI(page, "none");
         }
 
-
-//        unitesStateLocationDetailsAdapterList = new LoadMoreUnitesStateLocationDetailsAdapterList((TypeSerchActivity) context, charitylist1);
-//        united_state_recyclerview.setAdapter(unitesStateLocationDetailsAdapterList);
         if (session.isLoggedIn()) {
             title_tv1.setVisibility(View.VISIBLE);
         } else {
             title_tv1.setVisibility(View.GONE);
         }
-        if (isOnline()) {
-            if (flag == 0) {
-//                 CharityAPI();
-                Log.e("notcallapi", "yes");
-            } else {
-                Log.e("notcallapi", "not");
-            }
-        } else {
+        if (!isOnline()) {
             Toast.makeText(this, "Please check Internet connection", Toast.LENGTH_SHORT).show();
         }
     }
@@ -204,7 +183,7 @@ public class TypeSerchActivity extends CommonBackActivity {
         return device_unique_id;
     }
 
-    private void listioner() {
+    private void listener() {
         nestedscrollview.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
             @Override
             public void onScrollChange(NestedScrollView v, int i, int i1, int i2, int i3) {
@@ -216,9 +195,9 @@ public class TypeSerchActivity extends CommonBackActivity {
                         visibleItemCount = layoutManager.getChildCount();
                         totalItemCount = layoutManager.getItemCount();
                         pastVisibleItems = layoutManager.findFirstVisibleItemPosition();
-                        Log.e(TAG, "visibleItemCount: "+visibleItemCount );
-                        Log.e(TAG, "totalItemCount: "+totalItemCount );
-                        Log.e(TAG, "pastVisibleItems: "+pastVisibleItems );
+                        Log.e(TAG, "visibleItemCount: " + visibleItemCount);
+                        Log.e(TAG, "totalItemCount: " + totalItemCount);
+                        Log.e(TAG, "pastVisibleItems: " + pastVisibleItems);
                         if (!loading) {
                             if ((visibleItemCount + pastVisibleItems) >= totalItemCount) {
                                 loading = true;
@@ -227,17 +206,13 @@ public class TypeSerchActivity extends CommonBackActivity {
                                 // getUserList();
 //                        Load Your Data
                                 Log.e(TAG, "onScrollChange: ");
-                            } else {
-                                Log.e("dont", "dont");
                             }
-                        } else {
-                            Log.e("dont1", "dont");
                         }
                     }
                 }
             }
         });
-        search_et.setOnClickListener(new View.OnClickListener() {
+        search_us_et.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
                /* ChangeActivity.changeActivity(TypeSerchActivity.this, MapsActivity.class);
@@ -286,11 +261,9 @@ public class TypeSerchActivity extends CommonBackActivity {
             public void onClick(View v) {
                 namesearchLayout.setVisibility(View.GONE);
                 locationtitle_search_layout.setVisibility(View.GONE);
-                location_search_layout.setVisibility(View.GONE);
                 locationtitle_search_layout1.setVisibility(View.GONE);
                 name_search_layout.setVisibility(View.VISIBLE);
                 name_search_layout1.setVisibility(View.VISIBLE);
-                name_search_head_layout.setVisibility(View.VISIBLE);
                 search_location_layout.setVisibility(View.VISIBLE);
                 name_loc = 0;
             }
@@ -305,32 +278,13 @@ public class TypeSerchActivity extends CommonBackActivity {
                 namesearchLayout.setVisibility(View.VISIBLE);
                 locationtitle_search_layout.setVisibility(View.VISIBLE);
                 name_loc = 1;
-                /*if(search_et.getText().length()>0 || search_name_et1.getText().length()>0) {
-                    if (data.equalsIgnoreCase("1")){
-                        iDonateSharedPreference.setcountrycode(getApplicationContext(),"INTsearch");
-                        ChangeActivity.changeActivityData(InternationalCharitiesActivity.this, NameSearchActivity.class, "1");
-                    }else {
-                        iDonateSharedPreference.setcountrycode(getApplicationContext(),"normalsearch");
-                        ChangeActivity.changeActivityData(InternationalCharitiesActivity.this, NameSearchActivity.class, "1");
-                    }
-
-                } else {
-                    if (data.equalsIgnoreCase("1")) {
-                        iDonateSharedPreference.setcountrycode(getApplicationContext(), "INTsearch");
-                        ChangeActivity.changeActivityData(InternationalCharitiesActivity.this, NameSearchActivity.class, "0");
-                    }else {
-                        iDonateSharedPreference.setcountrycode(getApplicationContext(), "normalsearch");
-                        ChangeActivity.changeActivityData(InternationalCharitiesActivity.this, NameSearchActivity.class, "0");
-                    }
-                }*/
-                // finish();
             }
         });
-        search_name_et.setOnTouchListener(new View.OnTouchListener() {
+        search_name_et1.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(final View v, MotionEvent event) {
 
-                search_name_et.setFocusableInTouchMode(true);
+                search_name_et1.setFocusableInTouchMode(true);
                 v.getViewTreeObserver().addOnGlobalLayoutListener(
                         new ViewTreeObserver.OnGlobalLayoutListener() {
                             @Override
@@ -360,264 +314,15 @@ public class TypeSerchActivity extends CommonBackActivity {
                 return false;
             }
         });
-        search_name_et.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(final View v) {
-
-                v.getViewTreeObserver().addOnGlobalLayoutListener(
-                        new ViewTreeObserver.OnGlobalLayoutListener() {
-                            @Override
-                            public void onGlobalLayout() {
-
-
-                                Rect r = new Rect();
-                                v.getWindowVisibleDisplayFrame(r);
-                                int screenHeight = v.getRootView().getHeight();
-
-                                // r.bottom is the position above soft keypad or device button.
-                                // if keypad is shown, the r.bottom is smaller than that before.
-                                int keypadHeight = screenHeight - r.bottom;
-
-                                Log.e(TAG, "keypadHeight = " + keypadHeight);
-
-                                if (keypadHeight > screenHeight * 0.15) { // 0.15 ratio is perhaps enough to determine keypad height.
-                                    // keyboard is opened
-
-                                    CommonBackActivity.hide();
-                                } else {
-                                    // keyboard is closed
-                                    CommonBackActivity.show();
-                                }
-                            }
-                        });
-            }
-        });
-        search_name_et.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                search_icon.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                String text = search_name_et.getText().toString();
-//                filterByName(s.toString());
-//
-//                if (text.length() > 0) {
-//                    //
-//                    search_icon.setVisibility(View.GONE);
-//                    close_img.setVisibility(View.VISIBLE);
-//                    if (text.length() > 2) {
-//                        page = "1";
-//                        backflag = 1;
-//                        filterByName(s.toString());
-//                        CharityAPI(page, "none");
-//                    } else {
-////                        unitesStateLocationAdapterList.notifyDataSetChanged();
-//                        //  charitylist1.clear();
-//                        //charitylist.clear();
-//                       /* search_name_et.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-//                            @Override
-//                            public void onFocusChange(View v, boolean hasFocus) {
-//
-//                                if (hasFocus) {*/
-//                        // Here's the key code
-//                        Log.e("focusing", "focusing");
-//                        page = "1";
-//                        filterByName(s.toString());
-//                        CharityAPI(page, "none");
-//                        backflag = 0;
-//                               /* }
-//                            }
-//                        });*/
-//
-//
-////                        arrayList.clear();
-////                        adapter.notifyDataSetChanged();
-//                    }
-//                } else {
-//
-//                    search_icon.setVisibility(View.VISIBLE);
-//                    close_img.setVisibility(View.GONE);
-////                    unitesStateLocationAdapterList.notifyDataSetChanged();
-//                    // charitylist1.clear();
-//                    charitylist.clear();
-//                    search_name_et.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-//                        @Override
-//                        public void onFocusChange(View v, boolean hasFocus) {
-//
-//                            if (hasFocus) {
-//                                // Here's the key code
-//                                page = "1";
-//                                CharityAPI(page, "none");
-//                            }
-//                        }
-//                    });
-//                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-                if (name_loc == 1) {
-                    Log.e(TAG, "name----dhruvisha: ");
-                    filterByName(s.toString());
-                }
-//
-                /*if (indexsearch == 0) {
-
-                    Log.e("name", "name" + indexsearch);
-                    String text = search_name_et.getText().toString().toLowerCase(Locale.getDefault());
-                    unitesStateLocationAdapterList.filter(text);
-                    Log.e("name", "name");
-
-
-                }*/
-
-            }
-        });
-        search_na_et1.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                search_icon1.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                String text = search_na_et1.getText().toString();
-                if (text.length() > 0) {
-                    search_icon1.setVisibility(View.GONE);
-                    close_img1.setVisibility(View.VISIBLE);
-                    if (text.length() > 2) {
-//                        callWebservice(text);
-                        page = "1";
-                        backflag = 1;
-//                        CharityAPI(page, "none");
-                    } else {
-                        charitylist.clear();
-                        // charitylist1.clear();
-//                        unitesStateLocationAdapterList.notifyDataSetChanged();
-                      /*  search_name_et1.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                            @Override
-                            public void onFocusChange(View v, boolean hasFocus) {
-
-                                if (hasFocus) {*/
-                        // Here's the key code
-                        page = "1";
-                        backflag = 0;
-//                        CharityAPI(page, "none");
-                              /*  }
-                            }
-                        });*/
-                       /* arrayList.clear();
-                        adapter.notifyDataSetChanged();*/
-                    }
-                } else {
-                    search_icon1.setVisibility(View.VISIBLE);
-                    close_img1.setVisibility(View.GONE);
-                    charitylist.clear();
-                    //  charitylist1.clear();
-//                    unitesStateLocationAdapterList.notifyDataSetChanged();
-                    search_name_et1.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                        @Override
-                        public void onFocusChange(View v, boolean hasFocus) {
-
-                            if (hasFocus) {
-                                // Here's the key code
-                                page = "1";
-                                CharityAPI(page, "none");
-                            }
-                        }
-                    });
-                }
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                if (charitylist.size() != 0) {
-                   /* if (indexsearch == 0) {
-
-                        Log.e("name", "name" + indexsearch);
-                        String text = search_name_et1.getText().toString().toLowerCase(Locale.getDefault());
-                        unitesStateLocationAdapterList.filter(text);
-                        Log.e("name", "name");
-                    }*/
-
-                }
-
-            }
-        });
-        close_img.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                search_na_et1.setText("");
-                search_name_et.setText("");
-                page = "1";
-                backflag = 0;
-                CharityAPI(page, "none");
-            }
-        });
-        close_img1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                search_na_et1.setText("");
-                search_name_et.setText("");
-                page = "1";
-                backflag = 0;
-                CharityAPI(page, "none");
-            }
-        });
-/*
-        search_name_et1.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(final View v, MotionEvent event) {
-                search_name_et1.setFocusableInTouchMode(true);
-                Log.e(TAG, "sample = " + "test");
-                v.getViewTreeObserver().addOnGlobalLayoutListener(
-                        new ViewTreeObserver.OnGlobalLayoutListener() {
-                            @Override
-                            public void onGlobalLayout() {
-                                Log.e(TAG, "sample = " + "test");
-
-                                Rect r = new Rect();
-                                v.getWindowVisibleDisplayFrame(r);
-                                int screenHeight = v.getRootView().getHeight();
-
-                                // r.bottom is the position above soft keypad or device button.
-                                // if keypad is shown, the r.bottom is smaller than that before.
-                                int keypadHeight = screenHeight - r.bottom;
-
-                                Log.e(TAG, "keypadHeight = " + keypadHeight);
-
-                                if (keypadHeight > screenHeight * 0.15) { // 0.15 ratio is perhaps enough to determine keypad height.
-                                    // keyboard is opened
-                                    Log.e(TAG, "open = " + keypadHeight);
-                                    CommonBackActivity.hide();
-                                } else {
-                                    // keyboard is closed
-                                    Log.e(TAG, "close = " + keypadHeight);
-                                    CommonBackActivity.show();
-                                }
-                            }
-                        });
-                return false;
-            }
-        });
-
-
         search_name_et1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
 
-                Log.e(TAG, "sample111 = " + "test");
-                CommonBackActivity.hide();
                 v.getViewTreeObserver().addOnGlobalLayoutListener(
                         new ViewTreeObserver.OnGlobalLayoutListener() {
                             @Override
                             public void onGlobalLayout() {
 
-                                Log.e(TAG, "sample = " + "test");
 
                                 Rect r = new Rect();
                                 v.getWindowVisibleDisplayFrame(r);
@@ -631,11 +336,10 @@ public class TypeSerchActivity extends CommonBackActivity {
 
                                 if (keypadHeight > screenHeight * 0.15) { // 0.15 ratio is perhaps enough to determine keypad height.
                                     // keyboard is opened
-                                    Log.e(TAG, "open = " + keypadHeight);
+
                                     CommonBackActivity.hide();
                                 } else {
                                     // keyboard is closed
-                                    Log.e(TAG, "close = " + keypadHeight);
                                     CommonBackActivity.show();
                                 }
                             }
@@ -645,75 +349,39 @@ public class TypeSerchActivity extends CommonBackActivity {
         search_name_et1.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                search_icon1.setVisibility(View.GONE);
+
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 String text = search_name_et1.getText().toString();
                 if (text.length() > 0) {
-                    search_icon1.setVisibility(View.GONE);
-                    close_img1.setVisibility(View.VISIBLE);
-                    if (text.length() > 2) {
-//                        callWebservice(text);
-                        page="1";
-                        backflag=1;
-                        CharityAPI(page);
-                    } else {
-                        charitylist.clear();
-                        // charitylist1.clear();
-//                        unitesStateLocationAdapterList.notifyDataSetChanged();
-                      *//*  search_name_et1.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                            @Override
-                            public void onFocusChange(View v, boolean hasFocus) {
-
-                                if (hasFocus) {*//*
-                        // Here's the key code
-                        page="1";
-                        backflag=0;
-                        CharityAPI(page);
-                              *//*  }
-                            }
-                        });*//*
-         *//* arrayList.clear();
-                        adapter.notifyDataSetChanged();*//*
-                    }
+                    search_icon.setVisibility(View.GONE);
+                    close_img.setVisibility(View.VISIBLE);
+                    backflag = 1;
                 } else {
-                    search_icon1.setVisibility(View.VISIBLE);
-                    close_img1.setVisibility(View.GONE);
-                    charitylist.clear();
-                    //  charitylist1.clear();
-//                    unitesStateLocationAdapterList.notifyDataSetChanged();
-                    search_name_et1.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                        @Override
-                        public void onFocusChange(View v, boolean hasFocus) {
-
-                            if (hasFocus) {
-                                // Here's the key code
-                                page="1";
-                                CharityAPI(page);
-                            }
-                        }
-                    });
+                    search_icon.setVisibility(View.VISIBLE);
+                    close_img.setVisibility(View.GONE);
+                    backflag = 0;
                 }
 
+                page = "1";
+                CharityAPI(page, "none");
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (charitylist.size() != 0) {
-                   *//* if (indexsearch == 0) {
-
-                        Log.e("name", "name" + indexsearch);
-                        String text = search_name_et1.getText().toString().toLowerCase(Locale.getDefault());
-                        unitesStateLocationAdapterList.filter(text);
-                        Log.e("name", "name");
-                    }*//*
-
-                }
 
             }
-        });*/
+        });
+
+        close_img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                search_name_et1.setText("");
+            }
+        });
+
         name_search_layout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -721,53 +389,14 @@ public class TypeSerchActivity extends CommonBackActivity {
                 name_search_layout.setVisibility(View.GONE);
                 name_search_layout1.setVisibility(View.GONE);
                 search_location_layout.setVisibility(View.GONE);
-                location_search_layout.setVisibility(View.GONE);
                 namesearchLayout.setVisibility(View.VISIBLE);
-                name_search_head_layout.setVisibility(View.VISIBLE);
                 locationtitle_search_layout.setVisibility(View.VISIBLE);
                 locationtitle_search_layout1.setVisibility(View.VISIBLE);
                 name_loc = 1;
-                /*if(search_et.getText().length()>0 || search_name_et1.getText().length()>0) {
-                    if (data.equalsIgnoreCase("1")){
-                        iDonateSharedPreference.setcountrycode(getApplicationContext(),"INTsearch");
-                        ChangeActivity.changeActivityData(InternationalCharitiesActivity.this, NameSearchActivity.class, "1");
-                    }else {
-                        iDonateSharedPreference.setcountrycode(getApplicationContext(),"normalsearch");
-                        ChangeActivity.changeActivityData(InternationalCharitiesActivity.this, NameSearchActivity.class, "1");
-                    }
-                } else {
-                    if (data.equalsIgnoreCase("1")) {
-                        iDonateSharedPreference.setcountrycode(getApplicationContext(), "INTsearch");
-                        ChangeActivity.changeActivityData(InternationalCharitiesActivity.this, NameSearchActivity.class, "0");
-                    }else {
-                        iDonateSharedPreference.setcountrycode(getApplicationContext(), "normalsearch");
-                        ChangeActivity.changeActivityData(InternationalCharitiesActivity.this, NameSearchActivity.class, "0");
-                    }
-                }*/
-                //   finish();
             }
         });
 
-//        search_et.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-////                ChangeActivity.changeActivity(TypeSerchActivity.this, AutosearchActivity.class);
-//                flag = 1;
-//                ChangeActivity.changeActivityData(TypeSerchActivity.this, PlaceSearchActivity.class, "1");
-//                finish();
-//            }
-//        });
-//
-//        search_name_et1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                flag = 1;
-//                ChangeActivity.changeActivityData(TypeSerchActivity.this, PlaceSearchActivity.class, "1");
-//                finish();
-//            }
-//        });
-
-        search_et.addTextChangedListener(new TextWatcher() {
+        search_us_et.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -775,112 +404,38 @@ public class TypeSerchActivity extends CommonBackActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                String text = search_et.getText().toString();
+                String text = search_us_et.getText().toString();
                 if (text.length() > 0) {
-                    //
-                    search_icon.setVisibility(View.GONE);
-                    close_img.setVisibility(View.VISIBLE);
-                    if (text.length() > 2) {
-                        page = "1";
-                        backflag = 1;
-//                        CharityAPI(page, "none");
-                    } else {
-//                        unitesStateLocationAdapterList.notifyDataSetChanged();
-                        //  charitylist1.clear();
-                        charitylist.clear();
-                       /* search_name_et.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                            @Override
-                            public void onFocusChange(View v, boolean hasFocus) {
-
-                                if (hasFocus) {*/
-                        // Here's the key code
-                        Log.e("focusing", "focusing");
-                        page = "1";
-//                        CharityAPI(page, "none");
-                        backflag = 0;
-                               /* }
-                            }
-                        });*/
-
-
-//                        arrayList.clear();
-//                        adapter.notifyDataSetChanged();
-                    }
+                    search_icon_loc.setVisibility(View.GONE);
+                    close_img_loc.setVisibility(View.VISIBLE);
+                    backflag = 1;
                 } else {
-
-                    search_icon.setVisibility(View.VISIBLE);
-                    close_img.setVisibility(View.GONE);
-//                    unitesStateLocationAdapterList.notifyDataSetChanged();
-                    // charitylist1.clear();
-                    charitylist.clear();
-                    search_et.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                        @Override
-                        public void onFocusChange(View v, boolean hasFocus) {
-
-                            if (hasFocus) {
-                                // Here's the key code
-                                page = "1";
-                                filter(s.toString());
-                                CharityAPI(page, "none");
-                            }
-                        }
-                    });
+                    search_icon_loc.setVisibility(View.VISIBLE);
+                    close_img_loc.setVisibility(View.GONE);
+                    backflag = 0;
                 }
+
+                page = "1";
+                CharityAPI(page, "none");
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-                Log.e(TAG, "afterTextChanged:------------- " + charitylist1.size());
-                if (charitylist1.size() != 0) {
-                    if (name_loc == 0) {
-                        Log.e(TAG, "afterTextChanged:123 " + name_loc);
-                        filter(s.toString());
-                    }
-                } else {
-                    if (s.toString().length() == 0) {
-                        page = "1";
-                        CharityAPI(page, "none");
-                    }
 
-                }
             }
         });
 
-      /*  name_search_layout.setOnClickListener(new View.OnClickListener() {
+        close_img_loc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-               *//* if(search_et.getText().length()>0 || search_name_et1.getText().length()>0) {
-                    iDonateSharedPreference.setcountrycode(getApplicationContext(),"USsearch");
-                    ChangeActivity.changeActivityData(TypeSerchActivity.this, NameSearchActivity.class, "1");
-                } else{
-                    iDonateSharedPreference.setcountrycode(getApplicationContext(),"USsearch");
-                    ChangeActivity.changeActivityData(TypeSerchActivity.this, NameSearchActivity.class, "0");
-                }*//*
-                // finish();
+                search_us_et.setText("");
             }
         });
-        name_search_layout1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-
-               *//* if(search_et.getText().length()>0 || search_name_et1.getText().length()>0) {
-                    iDonateSharedPreference.setcountrycode(getApplicationContext(),"USsearch");
-                    ChangeActivity.changeActivityData(TypeSerchActivity.this, NameSearchActivity.class, "1");
-                } else {
-                    iDonateSharedPreference.setcountrycode(getApplicationContext(),"USsearch");
-                    ChangeActivity.changeActivityData(TypeSerchActivity.this, NameSearchActivity.class, "0");
-                }*//*
-                // finish();
-            }
-        });*/
         type_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // if(session.isLoggedIn()){
-
-                if (search_et.getText().length() > 0 || search_name_et1.getText().length() > 0) {
+                if (search_us_et.getText().length() > 0) {
                     iDonateSharedPreference.setAdvancepage(getApplicationContext(), "unitedstate");
                     iDonateSharedPreference.setcountrycode(getApplicationContext(), "USsearch");
                     ChangeActivity.changeActivityData(TypeSerchActivity.this, NewtypesActivity.class, "1");
@@ -891,19 +446,12 @@ public class TypeSerchActivity extends CommonBackActivity {
                     ChangeActivity.changeActivityData(TypeSerchActivity.this, NewtypesActivity.class, "0");
                     finish();
                 }
-               /* }else {
-                    ChangeActivity.changeActivity(TypeSerchActivity.this, LoginActivity.class);
-                    //  finish();
-                }*/
             }
         });
         type_linear_layout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //  if(session.isLoggedIn()){
-//                    ChangeActivity.changeActivityData(TypeSerchActivity.this, TypesActivity.class,"1");
-                //finish();
-                if (search_et.getText().length() > 0 || search_name_et1.getText().length() > 0) {
+                if (search_us_et.getText().length() > 0) {
                     iDonateSharedPreference.setcountrycode(getApplicationContext(), "USsearch");
                     iDonateSharedPreference.setAdvancepage(getApplicationContext(), "unitedstate");
                     ChangeActivity.changeActivityData(TypeSerchActivity.this, NewtypesActivity.class, "1");
@@ -912,11 +460,6 @@ public class TypeSerchActivity extends CommonBackActivity {
                     iDonateSharedPreference.setAdvancepage(getApplicationContext(), "unitedstate");
                     ChangeActivity.changeActivityData(TypeSerchActivity.this, NewtypesActivity.class, "0");
                 }
-               /* }else {
-                    ChangeActivity.changeActivity(TypeSerchActivity.this, LoginActivity.class);
-                    //  finish();
-                }*/
-
             }
         });
         advance_search_text.setOnClickListener(new View.OnClickListener() {
@@ -931,13 +474,9 @@ public class TypeSerchActivity extends CommonBackActivity {
                 if (session.isLoggedIn()) {
                     iDonateSharedPreference.setAdvancepage(getApplicationContext(), "unitedstate");
                     ChangeActivity.changeActivity(TypeSerchActivity.this, AdvanceCompletedActivity.class);
-                    //  finish();
                 } else {
-                    LoginDailogue();
-                    // ChangeActivity.changeActivity(TypeSerchActivity.this, LoginActivity.class);
-                    // finish();
+                    LoginDialog();
                 }
-
             }
         });
 
@@ -953,13 +492,9 @@ public class TypeSerchActivity extends CommonBackActivity {
                 if (session.isLoggedIn()) {
                     iDonateSharedPreference.setAdvancepage(getApplicationContext(), "unitedstate");
                     ChangeActivity.changeActivity(TypeSerchActivity.this, AdvanceCompletedActivity.class);
-                    // finish();
                 } else {
-                    LoginDailogue();
-                    //ChangeActivity.changeActivity(TypeSerchActivity.this, LoginActivity.class);
-                    // finish();
+                    LoginDialog();
                 }
-
             }
         });
         filter_show_img.setOnClickListener(new View.OnClickListener() {
@@ -972,9 +507,7 @@ public class TypeSerchActivity extends CommonBackActivity {
         back_icon_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e("test", "test");
                 onBackPressed();
-
             }
         });
         back_icon_img1.setOnClickListener(new View.OnClickListener() {
@@ -984,57 +517,23 @@ public class TypeSerchActivity extends CommonBackActivity {
             }
         });
 
-
         appbar_layout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
 
                 boolean isShow = true;
-                int scrollRange = -1;
-                if (scrollRange == -1) {
 
-                    scrollRange = appBarLayout.getTotalScrollRange();
-
-                }
                 String text = String.valueOf(verticalOffset);
                 int newNumber = Integer.parseInt(text.replace("-", ""));
-                Log.e("demo112", "" + verticalOffset);
-                if (newNumber >= 170) {
 
-                } else {
-                }
                 if (newNumber >= 270) {
 
                     if (index == 0) {
                         index = 1;
-                        Log.e("demo112", "" + verticalOffset);
                         relative_before_toolbar.setVisibility(View.GONE);
                         relative_toolbar.setVisibility(View.VISIBLE);
                         relative_toolbar.startAnimation(slideUp);
                         linear_tool_test.setVisibility(View.GONE);
-                        if (name_loc == 1) {
-                            location_search_layout.setVisibility(View.GONE);
-                            name_search_head_layout.setVisibility(View.VISIBLE);
-                            if (!search_name_et.getText().toString().isEmpty()) {
-                                search_na_et1.setText(search_name_et.getText().toString());
-                            } else {
-                                search_na_et1.setText("");
-                            }
-                        } else {
-                            location_search_layout.setVisibility(View.VISIBLE);
-                            name_search_head_layout.setVisibility(View.GONE);
-                            /*namesearchLayout.setVisibility(View.GONE);
-                            search_location_layout.setVisibility(View.VISIBLE);*/
-                            if (!search_na_et1.getText().toString().isEmpty()) {
-                                search_name_et.setText(search_na_et1.getText().toString().trim(), TextView.BufferType.EDITABLE);
-                            } else {
-                                search_name_et.setText("");
-                            }
-                        }
-                        //title_tv1.setVisibility(View.GONE);
-                        //  title_tv1.setText("");
-
-
                     }
 
                     isShow = true;
@@ -1046,124 +545,14 @@ public class TypeSerchActivity extends CommonBackActivity {
                     linear_search1.setVisibility(View.GONE);
                     relative_toolbar.setVisibility(View.GONE);
                     linear_tool_test.setVisibility(View.GONE);
-                    // title_tv1.setVisibility(View.VISIBLE);
-                    //  title_tv1.setText("Nonprofits,Charities near you");
-                    //if (relative_toolbar.getVisibility()==View.GONE){
-
-
-                    // profile_layout.startAnimation(slideUp);
                     isShow = false;
                 }
-
-                if (scrollRange + verticalOffset == 0) {
-                    Log.e("ifScroll", "ifscroll");
-                    // if (relative_toolbar.getVisibility()==View.GONE){
-                  /*  relative_before_toolbar.setVisibility(View.GONE);
-                    relative_toolbar.setVisibility(View.VISIBLE);
-                //    relative_toolbar.startAnimation(slideUp);
-                    linear_tool_test.setVisibility(View.GONE);
-                    //title_tv1.setVisibility(View.GONE);
-                    title_tv1.setText("");
-                    if (!search_name_et.getText().toString().trim().isEmpty()){
-                        search_name_et1.setText(search_name_et.getText().toString().trim(), TextView.BufferType.EDITABLE);
-                    }else {
-                        //search_name_et1.setText("");
-                    }*/
-                    // relative_toolbar.startAnimation(slideUp);
-                  /*  ViewGroup.LayoutParams params = linear_tool_test.getLayoutParams();
-                    params.height = 100;
-                    linear_tool_test.setLayoutParams(params);*/
-                    // search_relativelayout.setVisibility(View.GONE);
-                    // }
-
-                    isShow = true;
-
-                } else if (isShow) {
-                    if (name_loc == 1) {
-                        if (!search_na_et1.getText().toString().isEmpty()) {
-                            search_name_et.setText(search_na_et1.getText().toString().trim(), TextView.BufferType.EDITABLE);
-                        } else {
-                            search_name_et.setText("");
-                        }
-                    }
-                    Log.e("elsescroll", "elsescroll");//careful there should a space between double quote otherwise it wont work
-
-
-                    // linearLayout.setVisibility(View.GONE);
-                   /* search_relativelayout.setVisibility(View.VISIBLE);
-                    relative_before_toolbar.setVisibility(View.VISIBLE);
-                    linear_search1.setVisibility(View.GONE);
-                    relative_toolbar.setVisibility(View.GONE);
-                    linear_tool_test.setVisibility(View.GONE);
-                    title_tv1.setVisibility(View.VISIBLE);
-                    title_tv1.setText("Nonprofits,Charities near you");
-                    //if (relative_toolbar.getVisibility()==View.GONE){
-                    if (!search_name_et1.getText().toString().trim().isEmpty()){
-                        search_name_et.setText(search_name_et1.getText().toString().trim(), TextView.BufferType.EDITABLE);
-                    }else {
-                       // search_name_et.setText("");
-                    }*/
-
-                    //   }
-                    isShow = false;
-                }
-
             }
         });
-
-    }
-
-    void filter(String text) {
-        ArrayList<Charitylist> temp = new ArrayList();
-        for (Charitylist d : charitylist1) {
-            //or use .equal(text) with you want equal match
-            //use .toLowerCase() for better matches
-            if (text != null) {
-                if (d.getCity().toLowerCase(Locale.getDefault()).contains(text)) {
-                    temp.add(d);
-                } else if (d.getStreet().toLowerCase(Locale.getDefault()).contains(text)) {
-                    temp.add(d);
-                } else if (d.getState().toLowerCase(Locale.getDefault()).contains(text)) {
-                    temp.add(d);
-                }
-            }
-        }
-
-        //update recyclerview
-        unitesStateLocationDetailsAdapterList.updateList(temp);
-
-        if (charitylist1.size() == 0) {
-            TypeSerchActivity.nodata(0);
-        } else {
-            TypeSerchActivity.nodata(1);
-        }
-    }
-
-    void filterByName(String text) {
-        ArrayList<Charitylist> temp = new ArrayList();
-        for (Charitylist d : charitylist1) {
-            //or use .equal(text) with you want equal match
-            //use .toLowerCase() for better matches
-            if (text != null) {
-                if (d.getName().toLowerCase(Locale.getDefault()).contains(text)) {
-                    temp.add(d);
-                }
-            }
-
-        }
-//
-//
-        unitesStateLocationDetailsAdapterList.updateList(temp);
-
-        if (charitylist1.size() == 0) {
-            TypeSerchActivity.nodata(0);
-        } else {
-            TypeSerchActivity.nodata(1);
-        }
     }
 
 
-    private void LoginDailogue() {
+    private void LoginDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(TypeSerchActivity.this);
         builder.setTitle("");
         builder.setMessage("For Advance Features Please Log-in/Register");
@@ -1191,17 +580,14 @@ public class TypeSerchActivity extends CommonBackActivity {
 
     private static void CharityAPI(final String page, String type) {
         userDetails = session.getUserDetails();
-        Log.e("userDetails", "" + userDetails);
-        Log.e("KEY_UID", "" + userDetails.get(SessionManager.KEY_UID));
+        Log.e(TAG, "userDetails - " + userDetails);
+        Log.e(TAG, "KEY_UID - " + userDetails.get(SessionManager.KEY_UID));
         String user_id = "";
 
         if (session.isLoggedIn()) {
             user_id = userDetails.get(SessionManager.KEY_UID);
         }
-      /*  if (userDetails.get(SessionManager.KEY_UID).equalsIgnoreCase("null")){
-            Log.e("KEY_UID", "user_idnull");
-            user_id="";
-        }*/
+
         String lat = "";
         String lng = "";
         String location = iDonateSharedPreference.getLocation(context);
@@ -1219,29 +605,24 @@ public class TypeSerchActivity extends CommonBackActivity {
         String from_income = "";
         String to_income = "";
         String searchDeductible = "";
+        String searchCity = "";
 
         JsonArray category_Array = new JsonArray();
         JsonArray subCategory_Array = new JsonArray();
         JsonArray childCategory_Array = new JsonArray();
-//        if (search_na_et1.getText().length() > 0) {
-//            searchName = search_na_et1.getText().toString().trim();
-//        } else
-        if (search_name_et.getText().length() > 0) {
-            searchName = search_name_et.getText().toString().trim();
+
+        if (search_name_et1.getText().length() > 0) {
+            searchName = search_name_et1.getText().toString().trim();
         } else {
             searchName = iDonateSharedPreference.getSearchName(context);
         }
+
+        if (search_us_et.getText().toString().trim().length() > 2) {
+            searchCity = search_us_et.getText().toString();
+        }
+
         if (data.equalsIgnoreCase("1")) {
 
-//            if (search_na_et1.getText().length() > 0) {
-//                searchName = search_na_et1.getText().toString().trim();
-//            } else
-            if (search_name_et.getText().length() > 0) {
-                searchName = search_name_et.getText().toString().trim();
-            } else {
-                searchName = iDonateSharedPreference.getSearchName(context);
-            }
-            Log.e("searchName", "" + searchName);
             String searchRevenue = iDonateSharedPreference.getRevenue(context);
             searchDeductible = iDonateSharedPreference.getDeductible(context);
             if (searchRevenue.equalsIgnoreCase("")) {
@@ -1266,7 +647,6 @@ public class TypeSerchActivity extends CommonBackActivity {
 
             for (int i = 0; i < listOfdate.size(); i++) {
                 category_Array.add(listOfdate.get(i));
-
             }
 
             for (int j = 0; j < listofsubCategory.size(); j++) {
@@ -1279,7 +659,13 @@ public class TypeSerchActivity extends CommonBackActivity {
         }
         String device_id = getDeviceUniqueID(context);
         JsonObject jsonObject1 = new JsonObject();
-        jsonObject1.addProperty("name", searchName);
+        if (name_loc == 1) {
+            jsonObject1.addProperty("name", searchName);
+            jsonObject1.addProperty("city", "");
+        } else {
+            jsonObject1.addProperty("name", "");
+            jsonObject1.addProperty("city", searchCity);
+        }
         jsonObject1.addProperty("latitude", lat);
         jsonObject1.addProperty("longitude", lng);
         jsonObject1.addProperty("page", page);
@@ -1293,7 +679,7 @@ public class TypeSerchActivity extends CommonBackActivity {
         jsonObject1.add("sub_category_code", subCategory_Array);
         jsonObject1.add("child_category_code", childCategory_Array);
         jsonObject1.addProperty("user_id", user_id);
-        Log.e("jsonObject1", "" + jsonObject1);
+        Log.e(TAG, "jsonObject1 - " + jsonObject1);
         apiService =
                 ApiClient.getClient().create(ApiInterface.class);
 
@@ -1320,7 +706,7 @@ public class TypeSerchActivity extends CommonBackActivity {
                             String data = jsonObject.getString("data");
                             Log.e(TAG, "Array Data" + data);
                             jsonArray = new JSONArray(data);
-                            Log.e("jsonArray.lengthus", "" + jsonArray);
+                            Log.e(TAG, "jsonArray.lengthus - " + jsonArray);
 
                             int maxvalue = 10;
                             if (jsonArray.length() >= 10) {
@@ -1331,12 +717,10 @@ public class TypeSerchActivity extends CommonBackActivity {
                             arrayListsize = arrayListsize + jsonArray.length();
                             if (page.equalsIgnoreCase("1")) {
                                 jsonArray1 = new JSONArray();
-                            } else {
-                                //jsonArray2=jsonArray;
                             }
 
                             jsonArray2 = concatArray(jsonArray2, jsonArray);
-                            Log.e("jsonArray2length", "" + jsonArray2.length());
+                            Log.e(TAG, "jsonArray2length - " + jsonArray2.length());
                             for (int i = 0; i < maxvalue; i++) {
 
                                 HashMap<String, String> map = new HashMap<>();
@@ -1351,14 +735,10 @@ public class TypeSerchActivity extends CommonBackActivity {
                                 charitylistm.setState(object.getString("state"));
                                 charitylistm.setZip_code(object.getString("zip_code"));
                                 charitylistm.setLogo(object.getString("logo"));
-                                //  charitylistm.setBanner(object.getString("banner"));
-                                // charitylistm.setLatitude(object.getString("latitude"));
-                                //  charitylistm.setLongitude(object.getString("longitude"));
-                                //charitylistm.setDistance(object.getString("distance"));
+
                                 charitylistm.setLiked(object.getString("liked"));
                                 charitylistm.setFollowed(object.getString("followed"));
                                 charitylistm.setLike_count(object.getString("like_count"));
-                                // charitylistm.setDescription(object.getString("description"));
                                 charitylistm.setCountry(object.getString("country"));
                                 map.put("id", object.getString("id"));
                                 map.put("name", object.getString("name"));
@@ -1367,36 +747,14 @@ public class TypeSerchActivity extends CommonBackActivity {
                                 map.put("state", object.getString("state"));
                                 map.put("zip_code", object.getString("zip_code"));
                                 map.put("logo", object.getString("logo"));
-                                //map.put("banner", object.getString("banner"));
-                                // map.put("latitude", object.getString("latitude"));
-                                // map.put("longitude", object.getString("longitude"));
-                                // map.put("distance", object.getString("distance"));
                                 map.put("liked", object.getString("liked"));
                                 map.put("followed", object.getString("followed"));
                                 map.put("like_count", object.getString("like_count"));
-                                //map.put("description", object.getString("description"));
                                 map.put("country", object.getString("country"));
                                 charitylist.add(map);
                                 charitylist1.add(charitylistm);
-                                Log.e("charity12", "charity");
                             }
-                         /*   if (page.equalsIgnoreCase("1")){
-                                if (latlanvalue.equalsIgnoreCase(null)||latlanvalue.equalsIgnoreCase("")){
-                                    Collections.sort(charitylist1, new Comparator<Charitylist>() {
-                                        @Override
-                                        public int compare(Charitylist s1, Charitylist s2) {
-                                            return s1.getName().compareTo(s2.getName());
-                                        }
-                                    });
-                                }
-                            }*/
 
-
-                       /* layoutManager = new LinearLayoutManager(TypeSerchActivity.this);
-                        united_state_recyclerview.setLayoutManager(layoutManager);
-                        united_state_recyclerview.setItemAnimator(new DefaultItemAnimator());
-                        unitesStateLocationDetailsAdapterList = new UnitesStateLocationDetailsAdapterList(TypeSerchActivity.this,charitylist);
-                        united_state_recyclerview.setAdapter(unitesStateLocationDetailsAdapterList);*/
                             if (charitylist.size() != 0) {
                                 united_state_recyclerview.setVisibility(View.VISIBLE);
                                 layoutManager = new LinearLayoutManager(context);
@@ -1405,21 +763,18 @@ public class TypeSerchActivity extends CommonBackActivity {
                                 united_state_recyclerview.setNestedScrollingEnabled(true);
                                 unitesStateLocationDetailsAdapterList.notifyDataSetChanged();
                                 united_state_recyclerview.setNestedScrollingEnabled(true);
-//                            united_state_recyclerview.setItemAnimator(new DefaultItemAnimator());
                                 unitesStateLocationDetailsAdapterList = new LoadMoreUnitesStateLocationDetailsAdapterList((TypeSerchActivity) context, charitylist1);
                                 united_state_recyclerview.setAdapter(unitesStateLocationDetailsAdapterList);
 
                             } else {
-                                //   if (page.equalsIgnoreCase("1")) {
                                 no_data_linear.setVisibility(View.VISIBLE);
+                                no_data_tv.setText(message);
                                 united_state_recyclerview.setVisibility(View.GONE);
-                                // }
-
                             }
                         } else {
-
                             if (page.equalsIgnoreCase("1")) {
                                 no_data_linear.setVisibility(View.VISIBLE);
+                                no_data_tv.setText(message);
                                 united_state_recyclerview.setVisibility(View.GONE);
                             }
                         }
@@ -1439,9 +794,7 @@ public class TypeSerchActivity extends CommonBackActivity {
                 shimmer_view_container.setVisibility(View.GONE);
                 no_data_linear.setVisibility(View.VISIBLE);
                 united_state_recyclerview.setVisibility(View.GONE);
-                Log.e(TAG, t.toString());
-                // shimmer_view_container.stopShimmerAnimation();
-                // shimmer_view_container.setVisibility(View.GONE);
+                Log.e(TAG, " onFailure - " + t.toString());
             }
         });
     }
@@ -1461,7 +814,7 @@ public class TypeSerchActivity extends CommonBackActivity {
     private void loadMore() {
         charitylist1.add(null);
         unitesStateLocationDetailsAdapterList.notifyItemInserted(charitylist1.size() - 1);
-        Log.e("currentSize1", "" + charitylist1.size());
+        Log.e(TAG, "currentSize1 - " + charitylist1.size());
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -1471,16 +824,11 @@ public class TypeSerchActivity extends CommonBackActivity {
                 int scrollPosition = charitylist1.size();
                 unitesStateLocationDetailsAdapterList.notifyItemRemoved(scrollPosition);
                 int currentSize = scrollPosition;
-                Log.e("currentSize", "" + currentSize);
+                Log.e(TAG, "currentSize - " + currentSize);
                 int nextLimit = currentSize + 20;
-                Log.e("nextLimit", "" + nextLimit);
-               /* while (currentSize - 1 < nextLimit) {
-                    rowsArrayList.add("Item " + currentSize);
-                    currentSize++;
-                    Log.e("currentSize1",""+currentSize);
-                }*/
-                Log.e(TAG, "dhruvi: " + arrayListsize);
-                Log.e(TAG, "dhruvisha: " + nextLimit);
+                Log.e(TAG, "nextLimit - " + nextLimit);
+
+                Log.e(TAG, "arrayListsize: " + arrayListsize);
                 if (nextLimit >= arrayListsize) {
                     pageno++;
                     page = String.valueOf(pageno);
@@ -1501,14 +849,9 @@ public class TypeSerchActivity extends CommonBackActivity {
                         charitylistm.setState(object.getString("state"));
                         charitylistm.setZip_code(object.getString("zip_code"));
                         charitylistm.setLogo(object.getString("logo"));
-                        // charitylistm.setBanner(object.getString("banner"));
-                        //    charitylistm.setLatitude(object.getString("latitude"));
-                        //  charitylistm.setLongitude(object.getString("longitude"));
-                        //   charitylistm.setDistance(object.getString("distance"));
                         charitylistm.setLiked(object.getString("liked"));
                         charitylistm.setFollowed(object.getString("followed"));
                         charitylistm.setLike_count(object.getString("like_count"));
-                        //  charitylistm.setDescription(object.getString("description"));
                         charitylistm.setCountry(object.getString("country"));
                         map.put("id", object.getString("id"));
                         map.put("name", object.getString("name"));
@@ -1517,28 +860,16 @@ public class TypeSerchActivity extends CommonBackActivity {
                         map.put("state", object.getString("state"));
                         map.put("zip_code", object.getString("zip_code"));
                         map.put("logo", object.getString("logo"));
-                        // map.put("banner", object.getString("banner"));
-                        //  map.put("latitude", object.getString("latitude"));
-                        //  map.put("longitude", object.getString("longitude"));
-                        // map.put("distance", object.getString("distance"));
                         map.put("liked", object.getString("liked"));
                         map.put("followed", object.getString("followed"));
                         map.put("like_count", object.getString("like_count"));
-                        //  map.put("description", object.getString("description"));
                         map.put("country", object.getString("country"));
                         charitylist.add(map);
                         charitylist1.add(charitylistm);
                         loading = false;
 
                     }
-                   /* if (latlanvalue.equalsIgnoreCase(null)||latlanvalue.equalsIgnoreCase("")){
-                        Collections.sort(charitylist1, new Comparator<Charitylist>() {
-                            @Override
-                            public int compare(Charitylist s1, Charitylist s2) {
-                                return s1.getName().compareTo(s2.getName());
-                            }
-                        });
-                    }*/
+
                     layoutManager = new LinearLayoutManager(context);
                     united_state_recyclerview.setLayoutManager(layoutManager);
                     united_state_recyclerview.setHasFixedSize(true);
@@ -1558,8 +889,6 @@ public class TypeSerchActivity extends CommonBackActivity {
 
             }
         }, 2000);
-
-
     }
 
     @Override
@@ -1567,7 +896,6 @@ public class TypeSerchActivity extends CommonBackActivity {
         super.onResume();
         page = "1";
         pageno = 1;
-//        data = getIntent().getStringExtra("data");
         listOfdate = iDonateSharedPreference.getselectedtypedata(getApplicationContext());
         listofsubCategory = iDonateSharedPreference.getselectedsubcategorydata(getApplicationContext());
         listofchilCategory = iDonateSharedPreference.getselectedchildcategorydata(getApplicationContext());
@@ -1576,59 +904,40 @@ public class TypeSerchActivity extends CommonBackActivity {
         if (listOfdate.size() > 0) {
             CharityAPI(page, "none");
         }
-        Log.e(TAG, data);
-        Log.e("data12", "" + data);
+        Log.e(TAG, "data12 - " + data);
         if (data.equalsIgnoreCase("1")) {
             backflag = 1;
             flag = 1;
-            Log.e("data121", "" + data);
+            Log.e(TAG, "data121 - " + data);
             // titleTextView.setText("Search by location");
         } else if (data.equalsIgnoreCase("0")) {
-            Log.e("data123", "" + data);
+            Log.e(TAG, "data123 - " + data);
             backflag = 0;
             flag = 0;
         }
 
         if (flag == 1) {
             Log.e(TAG, "Places Search");
-            search_et.setText(iDonateSharedPreference.getLocation(context));
-            search_name_et1.setText(iDonateSharedPreference.getLocation(context));
             CharityAPI(page, "none");
         } else {
             if (flag == 0) {
                 CharityAPI(page, "none");
-            } else {
-                unitesStateLocationDetailsAdapterList = new LoadMoreUnitesStateLocationDetailsAdapterList((TypeSerchActivity) context, charitylist1);
-                united_state_recyclerview.setAdapter(unitesStateLocationDetailsAdapterList);
             }
         }
         unitesStateLocationDetailsAdapterList = new LoadMoreUnitesStateLocationDetailsAdapterList((TypeSerchActivity) context, charitylist1);
         united_state_recyclerview.setAdapter(unitesStateLocationDetailsAdapterList);
-        //shimmer_view_container.stopShimmerAnimation();
-        //  mShimmerViewContainer.startShimmerAnimation();
-    }
-
-    @Override
-    public void onPause() {
-        // shimmer_view_container.stopShimmerAnimation();
-        super.onPause();
-       /* unitesStateLocationDetailsAdapterList = new UnitesStateLocationDetailsAdapterList((TypeSerchActivity) context, charitylist1);
-        united_state_recyclerview.setAdapter(unitesStateLocationDetailsAdapterList);*/
     }
 
     public static void nodata(int i) {
         if (i == 0) {
             no_data_linear.setVisibility(View.VISIBLE);
             united_state_recyclerview.setVisibility(View.GONE);
-            Log.e("yes", "yes");
+            Log.e(TAG, "yes - yes");
         } else if (i == 1) {
             no_data_linear.setVisibility(View.GONE);
             united_state_recyclerview.setVisibility(View.VISIBLE);
-            Log.e("no", "no");
-
+            Log.e(TAG, "no - no");
         }
-
-
     }
 
     @Override
@@ -1636,12 +945,9 @@ public class TypeSerchActivity extends CommonBackActivity {
         if (backflag == 1) {
             page = "1";
             pageno = 1;
-            search_et.setText("");
+            search_us_et.setText("");
             search_name_et1.setText("");
-            search_na_et1.setText("");
-            search_name_et.setText("");
             listOfdate.clear();
-//        listOfdate.add("Nonprofits, Charities near you");
             iDonateSharedPreference.setselectedtypedata(getApplicationContext(), listOfdate);
             iDonateSharedPreference.setselectedcategorydata(getApplicationContext(), listOfdate);
             iDonateSharedPreference.setselectedsubcategorydata(getApplicationContext(), listOfdate);
@@ -1656,18 +962,15 @@ public class TypeSerchActivity extends CommonBackActivity {
             CharityAPI(page, "none");
             backflag = 0;
         } else {
-            if (search_name_et.getText().toString().isEmpty() && search_na_et1.getText().toString().isEmpty()) {
+            if (search_name_et1.getText().toString().isEmpty()) {
                 ChangeActivity.changeActivity(TypeSerchActivity.this, BrowseActivity.class);
                 finishAffinity();
             } else {
                 page = "1";
                 pageno = 1;
-                search_et.setText("");
+                search_us_et.setText("");
                 search_name_et1.setText("");
-                search_na_et1.setText("");
-                search_name_et.setText("");
                 listOfdate.clear();
-//        listOfdate.add("Nonprofits, Charities near you");
                 iDonateSharedPreference.setselectedtypedata(getApplicationContext(), listOfdate);
                 iDonateSharedPreference.setselectedcategorydata(getApplicationContext(), listOfdate);
                 iDonateSharedPreference.setselectedsubcategorydata(getApplicationContext(), listOfdate);
@@ -1683,7 +986,6 @@ public class TypeSerchActivity extends CommonBackActivity {
                 backflag = 0;
             }
         }
-
     }
 
     @Override

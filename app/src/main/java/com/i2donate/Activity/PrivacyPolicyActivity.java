@@ -16,15 +16,17 @@ import com.i2donate.R;
 public class PrivacyPolicyActivity extends AppCompatActivity {
     WebView webView;
     ImageView back_icon_img;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_privacy_policy);
         init();
-        listioner();
+        listener();
     }
+
     private void init() {
-        webView=(WebView)findViewById(R.id.webView);
+        webView = (WebView) findViewById(R.id.webView);
         webView.setBackgroundColor(Color.TRANSPARENT);
         WebSettings webSettings = webView.getSettings();
         webSettings.setTextZoom(webSettings.getTextZoom() - 40);
@@ -46,7 +48,8 @@ public class PrivacyPolicyActivity extends AppCompatActivity {
 
 
     }
-    private void listioner() {
+
+    private void listener() {
         back_icon_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +57,7 @@ public class PrivacyPolicyActivity extends AppCompatActivity {
             }
         });
     }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();

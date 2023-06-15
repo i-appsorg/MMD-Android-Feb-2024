@@ -73,7 +73,7 @@ public class NewtypesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newtypes);
         init();
-        listioner();
+        listener();
     }
 
     private void init() {
@@ -100,7 +100,7 @@ public class NewtypesActivity extends AppCompatActivity {
 
     }
 
-    private void listioner() {
+    private void listener() {
         back_icon_login_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

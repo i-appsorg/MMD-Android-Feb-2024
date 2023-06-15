@@ -25,14 +25,17 @@ import com.i2donate.Model.SubCategory;
 import com.i2donate.R;
 import com.i2donate.RetrofitAPI.ApiClient;
 import com.i2donate.RetrofitAPI.ApiInterface;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -66,7 +69,7 @@ public class AdvanceSearch1Activity extends AppCompatActivity {
         parentItems = new ArrayList<>();
         childItems = new ArrayList<>();
         init();
-        listioner();
+        listener();
         AdvanceCatAPI();
 
     }
@@ -81,7 +84,7 @@ public class AdvanceSearch1Activity extends AppCompatActivity {
         jsonObject1.addProperty("user_id", "29");
         jsonObject1.addProperty("token", "bbc992d8a42968de21b97d1051adb4e8");
 
-        Log.e("jsonObject1", "" + jsonObject1);
+        Log.e(TAG, " jsonObject1 - " + jsonObject1);
 
 
         apiService = ApiClient.getClient().create(ApiInterface.class);
@@ -103,9 +106,9 @@ public class AdvanceSearch1Activity extends AppCompatActivity {
                         Log.e(TAG, "" + message);
                         if (jsonObject.getString("status").equals("1")) {
                             String data = jsonObject.getString("data");
-                            Log.e("data232", "" + data);
+                            Log.e(TAG, "data232 - " + data);
                             JSONArray jsonArray = new JSONArray(data);
-                            Log.e("jsonarray", "" + jsonArray.length());
+                            Log.e(TAG, "jsonarray - " + jsonArray.length());
 
                             for (int i = 0; i <= jsonArray.length(); i++) {
                                 if (jsonArray.length() == i) {
@@ -203,16 +206,13 @@ public class AdvanceSearch1Activity extends AppCompatActivity {
                 @Override
                 public void onFailure(Call<JsonObject> call, Throwable t) {
                     progressDialog.dismiss();
-                    Log.e(TAG, t.toString());
+                    Log.e(TAG, "onFailure - " + t.toString());
                 }
             });
         } catch (Exception e) {
-
+            Log.e(TAG, "Exception - " + e);
             e.printStackTrace();
-            Log.e("Exception", "" + e);
         }
-
-
     }
 
     private void checkbox() {
@@ -273,7 +273,7 @@ public class AdvanceSearch1Activity extends AppCompatActivity {
 
     }
 
-    private void listioner() {
+    private void listener() {
 
         back_icon_login_img.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -285,7 +285,7 @@ public class AdvanceSearch1Activity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-       // ChangeActivity.changeActivity(AdvanceSearch1Activity.this, UnitedStateActivity.class);
+        // ChangeActivity.changeActivity(AdvanceSearch1Activity.this, UnitedStateActivity.class);
         finish();
         super.onBackPressed();
     }

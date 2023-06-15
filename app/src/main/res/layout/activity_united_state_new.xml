@@ -43,21 +43,21 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/titleTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_10sdp"
-                        android:id="@+id/titleTextView"
                         android:padding="@dimen/_5sdp"
                         android:text="@string/browse_united_state"
                         android:textAllCaps="true"
-                        android:textSize="@dimen/_20sdp"
                         android:textColor="@color/title_color"
+                        android:textSize="@dimen/_20sdp"
                         android:textStyle="bold" />
 
                     <LinearLayout
+                        android:id="@+id/search_location_layout"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/search_location_layout"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_7sdp"
                         android:layout_marginRight="@dimen/_10sdp"
@@ -66,6 +66,7 @@
                         android:padding="@dimen/_7sdp">
 
                         <ImageView
+                            android:id="@+id/search_icon_loc"
                             android:layout_width="0dp"
                             android:layout_height="@dimen/_10sdp"
                             android:layout_gravity="center_vertical"
@@ -87,6 +88,7 @@
                             android:textColorHint="@color/colorPrimary" />
 
                         <ImageView
+                            android:id="@+id/close_img_loc"
                             android:layout_width="0dp"
                             android:layout_height="@dimen/_15sdp"
                             android:layout_gravity="center_vertical"
@@ -95,17 +97,18 @@
                             android:src="@drawable/close"
                             android:visibility="gone" />
                     </LinearLayout>
+
                     <LinearLayout
+                        android:id="@+id/namesearchLayout"
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/_35sdp"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_7sdp"
                         android:layout_marginRight="@dimen/_10sdp"
-                        android:id="@+id/namesearchLayout"
-                        android:visibility="gone"
                         android:background="@drawable/search_border"
                         android:orientation="horizontal"
-                        android:padding="@dimen/_7sdp">
+                        android:padding="@dimen/_7sdp"
+                        android:visibility="gone">
 
                         <ImageView
                             android:id="@+id/search_icon"
@@ -122,12 +125,12 @@
                             android:layout_gravity="center_vertical"
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:layout_weight="1"
-                            android:singleLine="true"
-                            android:imeOptions="actionDone"
                             android:background="@null"
                             android:editable="true"
                             android:gravity="center_vertical"
                             android:hint="@string/united_state_search_name"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
                             android:textColor="@color/trans_black"
                             android:textColorHint="@color/colorPrimary" />
 
@@ -141,25 +144,27 @@
                             android:src="@drawable/close"
                             android:visibility="gone" />
                     </LinearLayout>
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_12sdp"
-                        android:layout_marginRight="@dimen/_12sdp"
                         android:layout_marginTop="10dp"
-                        android:textSize="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
                         android:text="Type at least 3 letters to search."
+                        android:textSize="@dimen/_10sdp"
 
                         />
+
                     <LinearLayout
                         android:id="@+id/filter_linear_layout1"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:gravity="center_horizontal"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_8sdp"
                         android:layout_marginRight="@dimen/_10sdp"
+                        android:gravity="center_horizontal"
                         android:orientation="horizontal">
 
                         <TextView
@@ -189,13 +194,14 @@
 
                             <TextView
                                 android:layout_width="0dp"
-                                android:layout_weight=".3"
-                                android:textSize="@dimen/_10sdp"
-                                android:layout_marginLeft="@dimen/_2sdp"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_weight=".3"
                                 android:text="@string/united_state_name"
-                                android:textColor="@color/colorAccent"/>
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
+
                         <LinearLayout
                             android:id="@+id/locationtitle_search_layout"
                             android:layout_width="0dp"
@@ -223,6 +229,7 @@
                                 android:textColor="@color/colorAccent"
                                 android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
+
                         <LinearLayout
                             android:id="@+id/type_linear_layout"
                             android:layout_width="0dp"
@@ -274,8 +281,8 @@
                         android:layout_marginTop="@dimen/_15sdp"
                         android:layout_marginRight="@dimen/_10sdp"
                         android:text="@string/united_state_nonprofit"
-                       android:textSize="@dimen/_14sdp"
-                        android:textColor="@color/title_color"/>
+                        android:textColor="@color/title_color"
+                        android:textSize="@dimen/_14sdp" />
 
                     <LinearLayout
                         android:id="@+id/linear_tool_test"
@@ -296,8 +303,8 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:contentInsetStart="0dp"
                 android:background="@drawable/toolbarbg"
+                android:contentInsetStart="0dp"
                 android:contentInsetLeft="0dp"
                 android:contentInsetEnd="0dp"
                 android:contentInsetRight="0dp"
@@ -366,113 +373,17 @@
                             android:padding="8dp"
                             android:src="@drawable/back_icon" />
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:id="@+id/location_search_layout"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp"
-                            android:layout_toRightOf="@+id/back_icon_img1"
-                            android:layout_weight="1"
-                            android:background="@drawable/search_border"
-                            android:gravity="center"
-                            android:orientation="horizontal"
-                            android:padding="@dimen/_7sdp">
-
-                            <ImageView
-                                android:layout_width="0dp"
-                                android:layout_height="@dimen/_10sdp"
-                                android:layout_weight=".1"
-                                android:src="@drawable/search_icon" />
-
-                            <EditText
-                                android:id="@+id/search_us_et1"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:layout_marginLeft="@dimen/_2sdp"
-                                android:layout_weight="1"
-                                android:background="@null"
-                                android:editable="true"
-                                android:gravity="center_vertical"
-                                android:hint="@string/united_state_location"
-                                android:textColor="@color/trans_black"
-                                android:textColorHint="@color/colorPrimary" />
-
-
-                            <ImageView
-                                android:layout_width="0dp"
-                                android:layout_height="@dimen/_15sdp"
-                                android:layout_marginLeft="@dimen/_2sdp"
-                                android:layout_weight=".15"
-                                android:src="@drawable/close"
-                                android:visibility="gone" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:id="@+id/name_search_head_layout"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_5sdp"
-                            android:visibility="gone"
-                            android:layout_marginBottom="@dimen/_5sdp"
-                            android:layout_toRightOf="@+id/back_icon_img1"
-                            android:layout_weight="1"
-                            android:background="@drawable/search_border"
-                            android:gravity="center"
-                            android:orientation="horizontal"
-                            android:padding="@dimen/_7sdp">
-
-                            <ImageView
-                                android:id="@+id/search_icon1"
-                                android:layout_width="0dp"
-                                android:layout_height="@dimen/_10sdp"
-                                android:layout_weight=".1"
-                                android:src="@drawable/search_icon" />
-
-                            <EditText
-                                android:id="@+id/search_na_et1"
-                                android:layout_width="0dp"
-                                android:layout_height="@dimen/_20sdp"
-                                android:layout_gravity="center_vertical"
-                                android:layout_marginLeft="@dimen/_5sdp"
-                                android:layout_weight="1"
-                                android:background="@null"
-                                android:imeOptions="actionDone"
-                                android:editable="true"
-                                android:singleLine="true"
-                                android:gravity="center_vertical"
-                                android:hint="@string/united_state_search_name"
-                                android:textColor="@color/trans_black"
-                                android:textColorHint="@color/colorPrimary" />
-
-
-                            <ImageView
-                                android:id="@+id/close_img1"
-                                android:layout_width="0dp"
-                                android:layout_height="@dimen/_15sdp"
-                                android:layout_marginLeft="@dimen/_2sdp"
-                                android:layout_weight=".15"
-                                android:src="@drawable/close"
-                                android:visibility="gone" />
-                        </LinearLayout>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/_12sdp"
-                            android:layout_marginRight="@dimen/_12sdp"
                             android:layout_marginTop="10dp"
-                            android:textSize="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_12sdp"
                             android:text="Type at least 3 letters to search."
+                            android:textSize="@dimen/_10sdp"
 
                             />
+
                         <ImageView
                             android:id="@+id/filter_show_img"
                             android:layout_width="0dp"
@@ -511,6 +422,7 @@
                 android:text="@string/united_state_filter"
                 android:textColor="@color/title_color"
                 android:textSize="@dimen/_10sdp" />
+
             <LinearLayout
                 android:id="@+id/name_search_layout1"
                 android:layout_width="0dp"
@@ -531,13 +443,14 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_weight=".3"
-                    android:textSize="@dimen/_10sdp"
-                    android:layout_marginLeft="@dimen/_2sdp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:layout_weight=".3"
                     android:text="@string/united_state_name"
-                    android:textColor="@color/colorAccent"/>
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_10sdp" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/locationtitle_search_layout1"
                 android:layout_width="0dp"
@@ -565,6 +478,7 @@
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/_10sdp" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/type_linear_layout1"
                 android:layout_width="0dp"
@@ -656,6 +570,7 @@
                 android:layoutAnimation="@anim/layout_animation_fall_down"
                 android:nestedScrollingEnabled="false"
                 android:visibility="gone" />
+
             <LinearLayout
                 android:id="@+id/no_data_linear"
                 android:layout_width="match_parent"
@@ -678,8 +593,8 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:gravity="center"
-                    android:textColor="@color/colorPrimary"
                     android:text="@string/name_search_noresult"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/_12sdp" />
             </LinearLayout>
 

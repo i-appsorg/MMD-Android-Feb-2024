@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+
 import androidx.appcompat.widget.Toolbar;
 
 import com.i2donate.CommonActivity.CommonMenuActivity;

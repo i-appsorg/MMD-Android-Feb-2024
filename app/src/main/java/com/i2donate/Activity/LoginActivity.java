@@ -141,7 +141,7 @@ public class LoginActivity extends AppCompatActivity implements
         sessionManager = new SessionManager(getApplicationContext());
 
         init();
-        listioner();
+        listener();
         /*generateHashkey();facebook_login*/
 
       /*  if (ContextCompat.checkSelfPermission(LoginActivity.this,
@@ -391,7 +391,7 @@ public class LoginActivity extends AppCompatActivity implements
 
     }
 
-    private void listioner() {
+    private void listener() {
 
         login_username.addTextChangedListener(new TextWatcher() {
             @Override

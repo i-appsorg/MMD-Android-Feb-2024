@@ -57,7 +57,7 @@ public class ForgotActivity extends AppCompatActivity {
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         init();
-        listioner();
+        listener();
 
     }
 
@@ -71,7 +71,7 @@ public class ForgotActivity extends AppCompatActivity {
         forgot_tv=(TextView)findViewById(R.id.forgot_tv);
         builder = new AlertDialog.Builder(this);
     }
-    private void listioner() {
+    private void listener() {
         mail_send_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

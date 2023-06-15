@@ -57,10 +57,10 @@ public class BrainTreePaymentActivity extends AppCompatActivity {
 //        dropInRequest.isPayPalEnabled();
 //        dropInRequest.collectDeviceData(true);
 //        startActivityForResult(dropInRequest.getIntent(BrainTreePaymentActivity.this), REQUEST_CODE);
-        DropInRequest dropInRequest = new DropInRequest(); // A 170523
-        dropInClient = new DropInClient(this, "sandbox_38p29vxg_m7bfbztpgz6yfyk7"); // A 170523
-        dropInClient.launchDropIn(dropInRequest); // A 170523
-        dropInClient.setListener(new DropInListener() { // A 170523
+        DropInRequest dropInRequest = new DropInRequest(); // A 240523
+        dropInClient = new DropInClient(this, "sandbox_38p29vxg_m7bfbztpgz6yfyk7"); // A 240523
+        dropInClient.launchDropIn(dropInRequest); // A 240523
+        dropInClient.setListener(new DropInListener() { // A 240523
             @Override
             public void onDropInSuccess(@NonNull DropInResult dropInResult) {
                 String stringNonce = Objects.requireNonNull(dropInResult.getPaymentMethodNonce()).toString();
@@ -75,8 +75,8 @@ public class BrainTreePaymentActivity extends AppCompatActivity {
     }
 
     private void callWebservice() {
-        progressDialog = new ProgressDialog(BrainTreePaymentActivity.this); // A 170523
-        progressDialog.show(); // A 170523
+        progressDialog = new ProgressDialog(BrainTreePaymentActivity.this); // A 240523
+        progressDialog.show(); // A 240523
 
         apiService = ApiClient.getClient().create(ApiInterface.class);
 
@@ -84,12 +84,12 @@ public class BrainTreePaymentActivity extends AppCompatActivity {
         call.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
-                progressDialog.dismiss(); // A 170523
+                progressDialog.dismiss(); // A 240523
                 try {
                     Log.e("Response_payment1", response.body().toString());
                     String token = response.body().toString();
 
-                    setupBraintreeAndStartExpressCheckout(token); // A 170523
+                    setupBraintreeAndStartExpressCheckout(token); // A 240523
                 } catch (Exception e) {
                     e.getMessage();
                 }
@@ -97,7 +97,7 @@ public class BrainTreePaymentActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<String> call, Throwable t) {
-                progressDialog.dismiss(); // A 170523
+                progressDialog.dismiss(); // A 240523
                 Log.e("Response_error", t.toString());
             }
         });
@@ -110,13 +110,13 @@ public class BrainTreePaymentActivity extends AppCompatActivity {
 //
 //        PayPal.requestOneTimePayment(mBraintreeFragment, request);
 
-        BraintreeClient braintreeClient = new BraintreeClient(this, token);// A 170523
-        PayPalClient payPalClient = new PayPalClient(this, braintreeClient);// A 170523
-        PayPalCheckoutRequest request = new PayPalCheckoutRequest("1.00");// A 170523
-        request.setCurrencyCode("USD");// A 170523
-        request.setIntent(PayPalPaymentIntent.AUTHORIZE);// A 170523
-        payPalClient.tokenizePayPalAccount(this, request);// A 170523
-        payPalClient.setListener(new PayPalListener() {// A 170523
+        BraintreeClient braintreeClient = new BraintreeClient(this, token);// A 240523
+        PayPalClient payPalClient = new PayPalClient(this, braintreeClient);// A 240523
+        PayPalCheckoutRequest request = new PayPalCheckoutRequest("1.00");// A 240523
+        request.setCurrencyCode("USD");// A 240523
+        request.setIntent(PayPalPaymentIntent.AUTHORIZE);// A 240523
+        payPalClient.tokenizePayPalAccount(this, request);// A 240523
+        payPalClient.setListener(new PayPalListener() {// A 240523
             @Override
             public void onPayPalSuccess(@NonNull PayPalAccountNonce payPalAccountNonce) {
                 Log.e(TAG, " onPayPalSuccess - " + payPalAccountNonce.getAuthenticateUrl());

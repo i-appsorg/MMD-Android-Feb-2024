@@ -45,17 +45,10 @@ public class DonatedlistAdapterList extends RecyclerView.Adapter<DonatedlistAdap
     private Handler handler = new Handler();
     IDonateSharedPreference iDonateSharedPreference;
 
-//    public DonatedlistAdapterList(Activity mContext, List<HashMap<String, String>> charitylist) {
-//        this.mContext = mContext;
-//        this.charitylist = charitylist;
-//        Log.e("charitylist", "" + charitylist);
-//    }
-
     public DonatedlistAdapterList(FollowingActivity mContext, ArrayList<DonatedCharityList> DonatedCharityList1) {
         this.mContext = mContext;
         this.charitylist1 = DonatedCharityList1;
         this.names = new ArrayList<Charitylist>();
-       // this.names.addAll(charitylist1);
         Log.e("charitylist", "" + charitylist1);
         session = new SessionManager(mContext);
         userDetails = session.getUserDetails();
@@ -79,11 +72,6 @@ public class DonatedlistAdapterList extends RecyclerView.Adapter<DonatedlistAdap
         holder.paymentmode_tv.setText(charitylist1.get(position).getPayment_type());
         holder.amount_tv.setText(charitylist1.get(position).getAmount());
         holder.date_tv.setText(charitylist1.get(position).getDate());
-//        holder.location_name_tv.setText(charitylist1.get(position).getCharity_name() + " " + charitylist1.get(position).getStreet());
-//        holder.like_count_tv.setText(charitylist1.get(position).getLike_count() + " " + "Likes");
-//        holder.unlike_count_tv.setText(charitylist1.get(position).getLike_count() + " " + "Likes");
-//
-
     }
 
     @Override
@@ -105,16 +93,6 @@ public class DonatedlistAdapterList extends RecyclerView.Adapter<DonatedlistAdap
             paymentmode_tv = (TextView) view.findViewById(R.id.paymentmode_tv);
             date_tv = (TextView) view.findViewById(R.id.date_tv);
             amount_tv = (TextView) view.findViewById(R.id.amount_tv);
-//            logo_img = (CustomImageView) view.findViewById(R.id.logo_img);
-//            like_count_tv = (TextView) view.findViewById(R.id.like_count_tv);
-//            unlike_count_tv = (TextView) view.findViewById(R.id.unlike_count_tv);
-//            like_icon_img = (ImageView) view.findViewById(R.id.like_icon_img);
-//            follow_count_tv = (TextView) view.findViewById(R.id.follow_count_tv);
-//            unfollow_count_tv = (TextView) view.findViewById(R.id.unfollow_count_tv);
-//            like_linear_layout = (LinearLayout) view.findViewById(R.id.like_linear_layout);
-//            unlike_linear_layout = (LinearLayout) view.findViewById(R.id.unlike_linear_layout);
-//            follow_linear_layout = (LinearLayout) view.findViewById(R.id.follow_linear_layout);
-//            unfollow_linear_layout = (LinearLayout) view.findViewById(R.id.unfollow_linear_layout);
         }
     }
 

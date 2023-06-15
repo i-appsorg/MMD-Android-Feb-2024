@@ -3,6 +3,7 @@ package com.i2donate.Activity;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -32,7 +33,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.gson.JsonObject;
@@ -55,7 +55,6 @@ import retrofit2.Response;
 
 public class UnitedStateDetailsActivity extends AppCompatActivity {
     private String TAG = "TypesActivity";
-    Toolbar toolbar;
     TextView name_tv, location_tv, like_count_tv, unlike_count_tv, follow_count_tv, unfollow_count_tv, description_tv;
     ImageView back_icon_login_img, logo_img;
     static HashMap<String, String> userDetails;
@@ -75,7 +74,7 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         init();
-        listioner();
+        listener();
     }
 
     private void init() {
@@ -110,10 +109,10 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
         unfollow_linear_layout = (LinearLayout) findViewById(R.id.unfollow_linear_layout);
         donate_linear_layout = (LinearLayout) findViewById(R.id.donate_linear_layout);
         name_tv.setText(name);
-        location_tv.setText( city+ " " +street);
+        location_tv.setText(city + " " + street);
         like_count_tv.setText(likecount + " " + "Likes");
         unlike_count_tv.setText(likecount + " " + "Likes");
-        if (!description.equalsIgnoreCase("null")){
+        if (!description.equalsIgnoreCase("null")) {
             description_tv.setText(description);
         }
 
@@ -143,14 +142,15 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
-    public static String getDeviceUniqueID(Activity activity){
+
+    public static String getDeviceUniqueID(Activity activity) {
         String device_unique_id = Settings.Secure.getString(activity.getContentResolver(),
                 Settings.Secure.ANDROID_ID);
         return device_unique_id;
     }
-    private void listioner() {
+
+    private void listener() {
         back_icon_login_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -161,18 +161,14 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (session.isLoggedIn()) {
-
                     String like = "1";
                     String user_id = userDetails.get(SessionManager.KEY_UID);
                     Log.e("blike", "" + like);
                     String token_id = userDetails.get(SessionManager.KEY_token);
                     likeAPI(id, like, user_id, token_id);
                 } else {
-                    LoginDailogue();
-                    //ChangeActivity.changeActivity(UnitedStateDetailsActivity.this, LoginActivity.class);
-                    //finish();
+                    LoginDialog();
                 }
-
             }
         });
         unlike_linear_layout.setOnClickListener(new View.OnClickListener() {
@@ -185,11 +181,8 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
                     String token_id = userDetails.get(SessionManager.KEY_token);
                     likeAPI(id, like, user_id, token_id);
                 } else {
-                    LoginDailogue();
-                    //ChangeActivity.changeActivity(UnitedStateDetailsActivity.this, LoginActivity.class);
-                    // finish();
+                    LoginDialog();
                 }
-
             }
         });
 
@@ -198,7 +191,6 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (session.isLoggedIn()) {
-
                     String like = "0";
                     String user_id = userDetails.get(SessionManager.KEY_UID);
                     Log.e("blike", "" + like);
@@ -209,11 +201,8 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
                     follow_count_tv.setText("Follow");
                     unfollow_count_tv.setText("Follow");
                 } else {
-                    LoginDailogue();
-                    //ChangeActivity.changeActivity(UnitedStateDetailsActivity.this, LoginActivity.class);
-                    // finish();
+                    LoginDialog();
                 }
-
             }
         });
 
@@ -233,11 +222,8 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
                     follow_count_tv.setText("Following");
                     unfollow_count_tv.setText("Following");
                 } else {
-                    LoginDailogue();
-                    //ChangeActivity.changeActivity(UnitedStateDetailsActivity.this, LoginActivity.class);
-                    //finish();
+                    LoginDialog();
                 }
-
             }
         });
 
@@ -247,14 +233,13 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
                 if (session.isLoggedIn()) {
                     paymentdailogue();
                 } else {
-                    LoginDailogue();
-                    //ChangeActivity.changeActivity(UnitedStateDetailsActivity.this, LoginActivity.class);
-                    //finish();
+                    LoginDialog();
                 }
             }
         });
     }
-    private void LoginDailogue() {
+
+    private void LoginDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(UnitedStateDetailsActivity.this);
         builder.setTitle("");
         builder.setMessage("For Advance Features Please Log-in/Register");
@@ -273,6 +258,7 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
         builder.setCancelable(false);
         builder.show();
     }
+
     @SuppressLint("ResourceAsColor")
     private void paymentdailogue() {
 
@@ -290,7 +276,7 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
             public Drawable getDrawable(String arg0) {
                 int id = 0;
 
-                if(arg0.equals("addbutton.png")){
+                if (arg0.equals("addbutton.png")) {
                     id = R.drawable.ic_info;
                 }
                 LevelListDrawable d = new LevelListDrawable();
@@ -299,11 +285,9 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
                 d.setBounds(0, 0, empty.getIntrinsicWidth(), empty.getIntrinsicHeight());
 
                 return d;
-
             }
         }, null);
         textview_percentage.setText(spanned);
-       // payment_et.append("10.00");
         d.getWindow().setBackgroundDrawable(new ColorDrawable(R.color.trans_black));
         payment_et.addTextChangedListener(new TextWatcher() {
             @Override
@@ -316,13 +300,7 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
                 if (charSequence.toString().startsWith(".")) {
                     payment_et.setText("");
                     Toast.makeText(getApplicationContext(), "Dot Not allowed", Toast.LENGTH_LONG).show();
-                    //disableButton(...)
-                } else {
-
-                    //Toast.makeText(getApplicationContext(), " allowed", Toast.LENGTH_LONG).show();
-                    //enableButton(...)
                 }
-
             }
 
             @Override
@@ -343,35 +321,33 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
         textview_percentage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(UnitedStateDetailsActivity.this,R.style.CustomAlertDialog);
-// ...Irrelevant code for customizing the buttons and title
+                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(UnitedStateDetailsActivity.this, R.style.CustomAlertDialog);
                 LayoutInflater inflater = getLayoutInflater();
 
                 View dialogView = inflater.inflate(R.layout.percentage_detail_layout, null);
                 dialogBuilder.setView(dialogView);
                 final AlertDialog alertDialog = dialogBuilder.create();
-                String payment_amt=payment_et.getText().toString().trim();
+                String payment_amt = payment_et.getText().toString().trim();
                 TextView donationamt_tv = (TextView) dialogView.findViewById(R.id.donationamt_tv);
                 ImageView close_img = (ImageView) dialogView.findViewById(R.id.close_img);
-                if (!payment_amt.isEmpty()){
-                    donationamt_tv.setText("$ "+payment_amt);;
-                }else {
-                    donationamt_tv.setText("$ "+"10");;
-                    payment_amt="10";
+                if (!payment_amt.isEmpty()) {
+                    donationamt_tv.setText("$ " + payment_amt);
+                } else {
+                    donationamt_tv.setText("$ " + "10");
+                    payment_amt = "10";
                 }
-                Double amount= Double.valueOf(payment_amt);
+                Double amount = Double.valueOf(payment_amt);
                 double processing_fee = ((amount / 100.0f) * 1);
-                double total_amt=processing_fee+amount;
-                double percentage = ((total_amt / 100.0f) * 2.9)+0.30;
+                double total_amt = processing_fee + amount;
+                double percentage = ((total_amt / 100.0f) * 2.9) + 0.30;
 
-                Double payment_amt_total= amount + percentage+processing_fee;
+                Double payment_amt_total = amount + percentage + processing_fee;
                 TextView merchantcharges_tv = (TextView) dialogView.findViewById(R.id.merchantcharges_tv);
-                merchantcharges_tv.setText("$ "+String.format(" %.2f", percentage));
+                merchantcharges_tv.setText("$ " + String.format(" %.2f", percentage));
                 TextView processing_tv = (TextView) dialogView.findViewById(R.id.processing_tv);
-                processing_tv.setText("$ "+String.valueOf(processing_fee));;
+                processing_tv.setText("$ " + String.valueOf(processing_fee));
                 TextView totalamt_tv = (TextView) dialogView.findViewById(R.id.totalamt_tv);
-                totalamt_tv.setText("$ "+String.format("%.2f", payment_amt_total));
-                //editText.setText("test label");
+                totalamt_tv.setText("$ " + String.format("%.2f", payment_amt_total));
                 close_img.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -386,32 +362,55 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String payment = payment_et.getText().toString().trim();
-                if (!payment.isEmpty()){
-                    float fpay= Float.parseFloat(payment);
-                    int pay= (int)fpay;
-                    if (pay>=1){
-                    Intent intent = new Intent(UnitedStateDetailsActivity.this, SelectPaymentActivity.class);
-                    Bundle bundle = new Bundle();
+                if (!payment.isEmpty()) {
+                    float fpay = Float.parseFloat(payment);
+                    int pay = (int) fpay;
+                    if (pay >= 1) {
 
-                    iDonateSharedPreference.setdailogueamt(UnitedStateDetailsActivity.this, payment);
-                    bundle.putString("payment_amt", payment);
-                    bundle.putString("charity_name", name_tv.getText().toString());
-                    bundle.putString("charity_id", id);
-                    iDonateSharedPreference.setcharity_id(getApplicationContext(),name_tv.getText().toString());
-                    iDonateSharedPreference.setcharity_name(getApplicationContext(),id);
-                    intent.putExtras(bundle);
-                    startActivity(intent);
-                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                    d.dismiss();
-                }else {
-                    Toast.makeText(UnitedStateDetailsActivity.this, "Please enter the amount greater than Zero", Toast.LENGTH_SHORT).show();
+                        ProgressDialog progressDialog = ProgressDialog.show(UnitedStateDetailsActivity.this, "", "Please wait.", true);
+                        progressDialog.show();
+                        apiService = ApiClient.getClient().create(ApiInterface.class);
 
-                }
-                }else {
+                        Call<String> call = apiService.getbraintree();
+                        call.enqueue(new Callback<String>() {
+                            @Override
+                            public void onResponse(Call<String> call, Response<String> response) {
+                                progressDialog.dismiss();
+                                if (response.isSuccessful()) {
+                                    try {
+                                        Log.e("Response_payment1", response.body().toString());
+                                        Intent intent = new Intent(UnitedStateDetailsActivity.this, SelectPaymentActivity.class);
+                                        Bundle bundle = new Bundle();
+
+                                        iDonateSharedPreference.setdailogueamt(UnitedStateDetailsActivity.this, payment);
+                                        bundle.putString("payment_amt", payment);
+                                        bundle.putString("charity_name", name_tv.getText().toString());
+                                        bundle.putString("charity_id", id);
+                                        bundle.putString("cToken", response.body());
+                                        iDonateSharedPreference.setcharity_id(getApplicationContext(), name_tv.getText().toString());
+                                        iDonateSharedPreference.setcharity_name(getApplicationContext(), id);
+                                        intent.putExtras(bundle);
+                                        startActivity(intent);
+                                        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                                        d.dismiss();
+                                    } catch (Exception e) {
+                                        e.getMessage();
+                                    }
+                                }
+                            }
+
+                            @Override
+                            public void onFailure(Call<String> call, Throwable t) {
+                                progressDialog.dismiss();
+                                Log.e("Response_error", t.toString());
+                            }
+                        });
+                    } else {
+                        Toast.makeText(UnitedStateDetailsActivity.this, "Please enter the amount greater than Zero", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
                     Toast.makeText(UnitedStateDetailsActivity.this, "Please enter the amount", Toast.LENGTH_SHORT).show();
-
                 }
-
             }
         });
         cancel_tv.setOnClickListener(new View.OnClickListener() {
@@ -423,11 +422,9 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
         });
         d.setCancelable(true);
         d.show();
-
     }
 
     private void followAPI(String id, final String like, String user_id, String token_id) {
-
 
         JsonObject jsonObject1 = new JsonObject();
         jsonObject1.addProperty("user_id", user_id);
@@ -458,44 +455,21 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
                         } else if (searchname.equalsIgnoreCase("international")) {
                             InternationalCharitiesActivity.like();
                         }
-
-                        String data = jsonObject.getString("data");
-                        JSONObject jsonObject2 = new JSONObject(data);
-
-                        if (like.equalsIgnoreCase("1")) {
-
-
-                           /* follow_linear_layout.setVisibility(View.VISIBLE);
-                            unfollow_linear_layout.setVisibility(View.GONE);*/
-                            //  notifyDataSetChanged();
-                        } else {
-                            Log.e("dislike", "" + like);
-                           /* follow_linear_layout.setVisibility(View.GONE);
-                            unfollow_linear_layout.setVisibility(View.VISIBLE);*/
-                            //notifyDataSetChanged();
-                        }
-
-
                     }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
             }
 
             @Override
             public void onFailure(Call<JsonObject> call, Throwable t) {
-
                 Log.e("unitedstate", t.toString());
-
             }
         });
-
     }
 
     private void likeAPI(String id, final String like, String user_id, String token_id) {
-
 
         JsonObject jsonObject1 = new JsonObject();
         jsonObject1.addProperty("user_id", user_id);
@@ -541,24 +515,18 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
                             unlike_linear_layout.setVisibility(View.GONE);
                             like_linear_layout.setVisibility(View.VISIBLE);
                         }
-
-
                     }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
             }
 
             @Override
             public void onFailure(Call<JsonObject> call, Throwable t) {
-
                 Log.e("unitedstate", t.toString());
-
             }
         });
-
     }
 
     @Override
@@ -584,7 +552,6 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        //  ChangeActivity.changeActivity(UnitedStateDetailsActivity.this, UnitedStateActivity.class);
         finish();
         super.onBackPressed();
     }

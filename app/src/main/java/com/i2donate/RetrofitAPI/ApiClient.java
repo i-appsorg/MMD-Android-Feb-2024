@@ -19,6 +19,7 @@ public class ApiClient {
     public static String Help_URL = "";
     public static String About_URL = "";
 
+
     private static Retrofit retrofit = null;
     private static OkHttpClient.Builder httpClient = new OkHttpClient.Builder()
             .connectTimeout(20, TimeUnit.SECONDS)
@@ -46,5 +47,4 @@ public class ApiClient {
         }
         return retrofit;
     }
-
 }

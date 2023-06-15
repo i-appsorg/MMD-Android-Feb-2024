@@ -80,6 +80,13 @@
     <string name="register_orthers">Other</string>
     <string name="register_yes">Business</string>
     <string name="register_no">Individual</string>
+    <string name="register_incorporation_documents">Incorporation documents*</string>
+    <string name="register_tax_id_allocation_certificate">Tax Id allocation certificate*</string>
+    <string name="register_business_certificate_of_good_standing">Business Certificate of Good Standing</string>
+    <string name="register_other_document">Other document</string>
+    <string name="register_other_document_small">(Optional - documents such as DBA filing etc)</string>
+    <string name="upload">Upload</string>
+    <string name="no_file_choosen">No file choosen</string>
     <string name="register_business_name">Business Name</string>
     <string name="register_individual">Register as </string>
     <string name="updated_individual">Registered as </string>

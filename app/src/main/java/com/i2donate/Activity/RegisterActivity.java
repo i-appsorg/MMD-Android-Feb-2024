@@ -1,15 +1,20 @@
 package com.i2donate.Activity;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Base64;
+import android.util.Base64OutputStream;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -26,6 +31,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
@@ -61,6 +67,8 @@ import com.i2donate.RetrofitAPI.ApiInterface;
 import com.i2donate.Session.IDonateSharedPreference;
 import com.i2donate.Session.SessionManager;
 import com.i2donate.Validation.Validation;
+import com.i2donate.databinding.ActivityRegisterBinding;
+import com.i2donate.utility.FileUtils;
 import com.twitter.sdk.android.core.Result;
 import com.twitter.sdk.android.core.TwitterApiClient;
 import com.twitter.sdk.android.core.TwitterCore;
@@ -74,6 +82,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -119,7 +133,7 @@ public class RegisterActivity extends AppCompatActivity implements
     private GoogleApiClient mGoogleApiClient;
     CallbackManager callbackManager;
     private final String PACKAGE = "com.i2donate";
-    RadioButton radio_btn_male, radio_btn_female, radio_btn_orthers, radio_btn_yes, radio_btn_no;
+    RadioButton radio_btn_male, radio_btn_female, radio_btn_orthers, radio_btn_individual, radio_btn_business;
     String radi_gender = "";
     String radi_business = "";
     CheckBox checkbox_btn;
@@ -134,18 +148,26 @@ public class RegisterActivity extends AppCompatActivity implements
     String device_token;
     LinearLayout terms_layout;
     int user_id;
+    ActivityRegisterBinding binding;
+    private static final int MY_REQUEST_CODE_PERMISSION = 1000;
+    private static final int MY_RESULT_CODE_FILECHOOSER = 2000;
+    String pathIncorpDoc = "", pathAllocDoc = "", pathStandDoc = "", pathOtherDoc = "";
+    String base64PathIncorpDoc = "", base64PathAllocDoc = "", base64PathStandDoc = "", base64PathOtherDoc = "";
+    boolean btnIncorpDocClicked = false, btnAllocDocClicked = false, btnStandDocClicked = false, btnOtherDocClicked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        binding = ActivityRegisterBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);
         // getWindow().setBackgroundDrawableResource(R.drawable.dashbord_background);
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         CountryAPI();
         init();
         getToken();
-        listioner();
+        listener();
     }
 
     private void CountryAPI() {
@@ -158,7 +180,7 @@ public class RegisterActivity extends AppCompatActivity implements
                 ApiClient.getClient().create(ApiInterface.class);
 
         Call<JsonObject> call = apiService.countryAPI(jsonObject1);
-        Log.e(TAG, "CountryAPI: "+apiService );
+        Log.e(TAG, "CountryAPI: " + apiService);
         call.enqueue(new Callback<JsonObject>() {
             @Override
             public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
@@ -238,8 +260,8 @@ public class RegisterActivity extends AppCompatActivity implements
         checkbox_btn = (CheckBox) findViewById(R.id.checkbox_btn);
         business_reg_name_et = (EditText) findViewById(R.id.business_reg_name_et);
         business_name_input_layout = (TextInputLayout) findViewById(R.id.business_name_input_layout);
-        radio_btn_yes = (RadioButton) findViewById(R.id.radio_btn_yes);
-        radio_btn_no = (RadioButton) findViewById(R.id.radio_btn_no);
+        radio_btn_individual = (RadioButton) findViewById(R.id.radio_btn_individual);
+        radio_btn_business = (RadioButton) findViewById(R.id.radio_btn_business);
         google_sign_btn = (ImageView) findViewById(R.id.google_sign_btn);
         facebook_login = (ImageView) findViewById(R.id.facebook_login);
         twitter_login = (ImageView) findViewById(R.id.twitter_login);
@@ -336,10 +358,23 @@ public class RegisterActivity extends AppCompatActivity implements
                 // App code
             }
         });
-
     }
 
-    private void listioner() {
+    private void ManageVisibilityOfDocs(Boolean isHide) {
+        if (isHide) {
+            binding.layIncorpDoc.setVisibility(View.GONE);
+            binding.layAllocDoc.setVisibility(View.GONE);
+            binding.layStandDoc.setVisibility(View.GONE);
+            binding.layOtherDoc.setVisibility(View.GONE);
+        } else {
+            binding.layIncorpDoc.setVisibility(View.VISIBLE);
+            binding.layAllocDoc.setVisibility(View.VISIBLE);
+            binding.layStandDoc.setVisibility(View.VISIBLE);
+            binding.layOtherDoc.setVisibility(View.VISIBLE);
+        }
+    }
+
+    private void listener() {
         twitter_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -368,16 +403,17 @@ public class RegisterActivity extends AppCompatActivity implements
                 finish();
             }
         });
-        radio_btn_no.setOnClickListener(new View.OnClickListener() {
+        radio_btn_business.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (radio_btn_no.isChecked()) {
+                if (radio_btn_business.isChecked()) {
                     radi_business = "yes";
                     type = "business";
                     register_gender_layout.setVisibility(View.GONE);
                     radi_gender = "";
                     business_name = business_reg_name_et.getText().toString();
                     business_name_input_layout.setVisibility(View.VISIBLE);
+                    ManageVisibilityOfDocs(false);
                 } else {
                     register_gender_layout.setVisibility(View.VISIBLE);
                     business_reg_name_et.setText("");
@@ -389,17 +425,17 @@ public class RegisterActivity extends AppCompatActivity implements
                     } else if (radio_btn_orthers.isChecked()) {
                         radi_gender = "O";
                     } else {
-
                         radi_gender = "";
                     }
                     business_name_input_layout.setVisibility(View.GONE);
+                    ManageVisibilityOfDocs(true);
                 }
             }
         });
-        radio_btn_yes.setOnClickListener(new View.OnClickListener() {
+        radio_btn_individual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (radio_btn_yes.isChecked()) {
+                if (radio_btn_individual.isChecked()) {
                     radi_business = "no";
                     type = "Individual";
                     business_reg_name_et.setText("");
@@ -412,15 +448,16 @@ public class RegisterActivity extends AppCompatActivity implements
                     } else if (radio_btn_orthers.isChecked()) {
                         radi_gender = "O";
                     } else {
-
                         radi_gender = "";
                     }
+                    ManageVisibilityOfDocs(true);
                 } else {
                     type = "business";
                     radi_gender = "";
                     business_name = business_reg_name_et.getText().toString();
                     register_gender_layout.setVisibility(View.GONE);
                     business_name_input_layout.setVisibility(View.VISIBLE);
+                    ManageVisibilityOfDocs(false);
                 }
             }
         });
@@ -488,7 +525,6 @@ public class RegisterActivity extends AppCompatActivity implements
                     reg_email_et.setText("");
                     Toast.makeText(getApplicationContext(), "Space Not allowed", Toast.LENGTH_LONG).show();
                     email_input_layout.setError("Required email");
-                    //disableButton(...)
                 } else {
                     email_input_layout.setError("");
                     if (reg_name_et.getText().toString().trim().length() <= 0) {
@@ -503,12 +539,8 @@ public class RegisterActivity extends AppCompatActivity implements
                             } else {
                                 email_input_layout.setError("Required email");
                             }
-
                         }
                     }
-
-                    //Toast.makeText(getApplicationContext(), " allowed", Toast.LENGTH_LONG).show();
-                    //enableButton(...)
                 }
             }
 
@@ -540,8 +572,6 @@ public class RegisterActivity extends AppCompatActivity implements
                 if (charSequence.toString().startsWith(" ")) {
                     reg_mobile_et.setText("");
                     Toast.makeText(getApplicationContext(), "Space Not allowed", Toast.LENGTH_LONG).show();
-                    // mobile_input_layout.setError("Required mobile number");
-                    //disableButton(...)
                 } else {
 
                     if (reg_email_et.getText().toString().trim().length() <= 0) {
@@ -549,19 +579,10 @@ public class RegisterActivity extends AppCompatActivity implements
                     } else {
                         if (reg_email_et.getText().toString().trim().matches(Validation.emailPattern)) {
                             email_input_layout.setError("");
-                          /*  if (reg_mobile_et.getText().toString().trim().length() <= 0) {
-                              //  mobile_input_layout.setError("Required mobile number");
-                            } else {
-                               // mobile_input_layout.setError("");
-
-                            }*/
                         } else {
                             email_input_layout.setError("Required email");
                         }
-
                     }
-                    //Toast.makeText(getApplicationContext(), " allowed", Toast.LENGTH_LONG).show();
-                    //enableButton(...)
                 }
             }
 
@@ -598,54 +619,27 @@ public class RegisterActivity extends AppCompatActivity implements
                     reg_password_et.setText("");
                     Toast.makeText(getApplicationContext(), "Space Not allowed", Toast.LENGTH_LONG).show();
                     password_input_layout.setError("Required password");
-                    //disableButton(...)
                 } else {
                     if (reg_password_et.getText().toString().trim().length() <= 0) {
                         password_input_layout.setError("Required password");
                     } else {
                         password_input_layout.setError("");
-
                     }
-                   /* if (reg_mobile_et.getText().toString().trim().length() <= 0) {
-                        mobile_input_layout.setError("Required email");
-                    } else {
-                        mobile_input_layout.setError("");
-                        if (reg_password_et.getText().toString().trim().length() <= 0) {
-                            password_input_layout.setError("Required mobile number");
-                        } else {
-                            password_input_layout.setError("");
-
-                        }
-                    }*/
-                    //Toast.makeText(getApplicationContext(), " allowed", Toast.LENGTH_LONG).show();
-                    //enableButton(...)
                 }
             }
 
             @Override
             public void afterTextChanged(Editable s) {
                 String passwordvalidation = s.toString();
-                if (passwordvalidation.length() >= 8 && passwordvalidation.matches(Validation.PASSWORD_PATTERN)) {
+
+                if (passwordvalidation.length() >= 8 && Validation.CheckPasswordPattern(passwordvalidation)) {
                     password_input_layout.setError("");
                 } else {
                     password_input_layout.setError("Password is invalid");
                 }
-
             }
         });
 
-       /* reg_password_et.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (reg_mobile_et.getText().toString().trim().length() <= 0) {
-                    mobile_input_layout.setError("Required mobile number");
-                } else {
-                    mobile_input_layout.setError("");
-
-                }
-                return false;
-            }
-        });*/
         reg_confirm_password_et.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -658,9 +652,7 @@ public class RegisterActivity extends AppCompatActivity implements
                     reg_confirm_password_et.setText("");
                     Toast.makeText(getApplicationContext(), "Space Not allowed", Toast.LENGTH_LONG).show();
                     confirm_input_layout.setError("Required password");
-                    //disableButton(...)
                 } else {
-
                     if (reg_password_et.getText().toString().trim().length() <= 0) {
                         password_input_layout.setError("Required email");
                     } else {
@@ -669,7 +661,6 @@ public class RegisterActivity extends AppCompatActivity implements
                             confirm_input_layout.setError("Required password");
                         } else {
                             confirm_input_layout.setError("");
-
                         }
                     }
                 }
@@ -682,7 +673,6 @@ public class RegisterActivity extends AppCompatActivity implements
                 } else {
                     confirm_input_layout.setError("Required correct password");
                 }
-
             }
         });
         reg_confirm_password_et.setOnTouchListener(new View.OnTouchListener() {
@@ -719,23 +709,28 @@ public class RegisterActivity extends AppCompatActivity implements
 
                 if (!reg_name_et.getText().toString().trim().isEmpty() && !reg_email_et.getText().toString().trim().isEmpty() && !reg_mobile_et.getText().toString().trim().isEmpty() && !reg_password_et.getText().toString().trim().isEmpty()) {
                     if (reg_email_et.getText().toString().trim().matches(Validation.emailPattern)) {
-                        // if (reg_password_et.getText().toString().trim().equals(reg_confirm_password_et.getText().toString().trim())) {
-                        if (reg_password_et.getText().toString().trim().matches(Validation.PASSWORD_PATTERN) && reg_password_et.getText().toString().trim().length() >= 8) {
+                        if (Validation.CheckPasswordPattern(reg_password_et.getText().toString())) {
 
                             radiofn();
                             radiobussi();
-                            /// if (!radi_gender.isEmpty()) {
                             if (!radi_business.isEmpty()) {
                                 if (checkbox_btn.isChecked()) {
                                     if (radi_business.equals("no")) {
                                         if (!country_symbol.isEmpty()) {
 
+                                            if (pathIncorpDoc.length() == 0) {
+                                                Toast.makeText(RegisterActivity.this, " Please choose Incorporation documents", Toast.LENGTH_SHORT).show();
+                                                return;
+                                            }
+
+                                            if (pathAllocDoc.length() == 0) {
+                                                Toast.makeText(RegisterActivity.this, " Please choose Tax Id allocation certificate", Toast.LENGTH_SHORT).show();
+                                                return;
+                                            }
+
                                             if (isOnline()) {
-
                                                 RegisterAPI();
-
                                             } else {
-                                                //Toast.makeText(LoginActivity.this, "Please check internet connection", Toast.LENGTH_SHORT).show();
                                                 ConstantFunctions.showSnakBar("Please check internet connection", v);
                                             }
                                         } else {
@@ -746,11 +741,8 @@ public class RegisterActivity extends AppCompatActivity implements
                                             if (!country_symbol.isEmpty()) {
 
                                                 if (isOnline()) {
-
                                                     RegisterAPI();
-
                                                 } else {
-                                                    //Toast.makeText(LoginActivity.this, "Please check internet connection", Toast.LENGTH_SHORT).show();
                                                     ConstantFunctions.showSnakBar("Please check internet connection", v);
                                                 }
                                             } else {
@@ -760,27 +752,16 @@ public class RegisterActivity extends AppCompatActivity implements
                                             Toast.makeText(RegisterActivity.this, "Name format is invalid", Toast.LENGTH_SHORT).show();
                                         }
                                     }
-
                                 } else {
                                     Toast.makeText(RegisterActivity.this, "Please accept our Terms and Conditions", Toast.LENGTH_SHORT).show();
                                 }
-
                             } else {
                                 Toast.makeText(RegisterActivity.this, "Please select Register as Individual / Business", Toast.LENGTH_SHORT).show();
                             }
-
-                           /* } else {
-                                Toast.makeText(RegisterActivity.this, "Please select gender", Toast.LENGTH_SHORT).show();
-                            }*/
                         } else {
                             password_input_layout.setError("Password format is invalid");
                             Toast.makeText(RegisterActivity.this, "Password format is invalid", Toast.LENGTH_SHORT).show();
                         }
-                       /* } else {
-                            Toast.makeText(RegisterActivity.this, "Verify password", Toast.LENGTH_SHORT).show();
-                        }*/
-
-
                     } else {
                         Toast.makeText(RegisterActivity.this, "Enter Correct Mail ID", Toast.LENGTH_SHORT).show();
                     }
@@ -797,7 +778,6 @@ public class RegisterActivity extends AppCompatActivity implements
                 imm.hideSoftInputFromWindow(country_spinner.getWindowToken(),
                         InputMethodManager.RESULT_UNCHANGED_SHOWN);
                 for (int i1 = 0; i1 < jsonArray.length(); i1++) {
-
                     JSONObject countryobject = null;
                     try {
                         countryobject = jsonArray.getJSONObject(i1);
@@ -806,30 +786,19 @@ public class RegisterActivity extends AppCompatActivity implements
                             Log.e(TAG, country_symbol);
                         }
                     } catch (JSONException e) {
-
-
                     }
-
-
                 }
-
-
             }
         });
-
 
         google_sign_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (isOnline()) {
-
                     signIn();
-
                 } else {
-                    //Toast.makeText(LoginActivity.this, "Please check internet connection", Toast.LENGTH_SHORT).show();
                     ConstantFunctions.showSnakBar("Please check internet connection", v);
                 }
-
             }
         });
 
@@ -837,18 +806,98 @@ public class RegisterActivity extends AppCompatActivity implements
             @Override
             public void onClick(View v) {
                 if (isOnline()) {
-
                     facebook_login_btn.performClick();
                     Log.e("click", "click243");
-
                 } else {
-                    //Toast.makeText(LoginActivity.this, "Please check internet connection", Toast.LENGTH_SHORT).show();
                     ConstantFunctions.showSnakBar("Please check internet connection", v);
                 }
-
             }
         });
 
+        binding.uploadBtnIncorpDoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnIncorpDocClicked = true;
+                btnAllocDocClicked = false;
+                btnStandDocClicked = false;
+                btnOtherDocClicked = false;
+                askPermissionAndBrowseFile();
+            }
+        });
+
+        binding.uploadBtnAllocDoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnIncorpDocClicked = false;
+                btnAllocDocClicked = true;
+                btnStandDocClicked = false;
+                btnOtherDocClicked = false;
+                askPermissionAndBrowseFile();
+            }
+        });
+
+        binding.uploadBtnStandDoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnIncorpDocClicked = false;
+                btnAllocDocClicked = false;
+                btnStandDocClicked = true;
+                btnOtherDocClicked = false;
+                askPermissionAndBrowseFile();
+            }
+        });
+
+        binding.uploadBtnOtherDoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnIncorpDocClicked = false;
+                btnAllocDocClicked = false;
+                btnStandDocClicked = false;
+                btnOtherDocClicked = true;
+                askPermissionAndBrowseFile();
+            }
+        });
+    }
+
+    private void askPermissionAndBrowseFile() {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) { // Level 23
+
+            // Check if we have Call permission
+            int permisson = ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
+
+            if (permisson != PackageManager.PERMISSION_GRANTED) {
+                // If don't have permission so prompt the user.
+                this.requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, MY_REQUEST_CODE_PERMISSION);
+                return;
+            }
+        }
+        doBrowseFile();
+    }
+
+    private void doBrowseFile() {
+        Intent chooseFileIntent = new Intent(Intent.ACTION_GET_CONTENT);
+        chooseFileIntent.setType("*/*");
+        // Only return URIs that can be opened with ContentResolver
+        chooseFileIntent.addCategory(Intent.CATEGORY_OPENABLE);
+
+        chooseFileIntent = Intent.createChooser(chooseFileIntent, "Choose a file");
+        startActivityForResult(chooseFileIntent, MY_RESULT_CODE_FILECHOOSER);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case MY_REQUEST_CODE_PERMISSION: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(this, "Permission granted!", Toast.LENGTH_SHORT).show();
+                    this.doBrowseFile();
+                } else {
+                    Toast.makeText(this, "Permission denied!", Toast.LENGTH_SHORT).show();
+                }
+                break;
+            }
+        }
     }
 
     private TwitterSession getTwitterSession() {
@@ -916,7 +965,7 @@ public class RegisterActivity extends AppCompatActivity implements
                 ApiClient.getClient().create(ApiInterface.class);
         try {
             Call<JsonObject> call = apiService.device_update(jsonObject1);
-            call.enqueue(new retrofit2.Callback<JsonObject>() {
+            call.enqueue(new Callback<JsonObject>() {
                 @Override
                 public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
                     Log.e(TAG, "" + response.body());
@@ -934,15 +983,12 @@ public class RegisterActivity extends AppCompatActivity implements
                             } else {
                                 finish();
                             }
-
-
                         } else {
                             // ConstantFunctions.showSnackbar(reg_email_et,message,ForgotActivity.this);
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-
                 }
 
                 @Override
@@ -1047,7 +1093,6 @@ public class RegisterActivity extends AppCompatActivity implements
     private void signIn() {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
-
     }
 
     private void handleSignInResult(GoogleSignInResult result) {
@@ -1064,28 +1109,19 @@ public class RegisterActivity extends AppCompatActivity implements
                     personPhotoUrl = acct.getPhotoUrl().toString();
                 } catch (Exception e) {
                     e.printStackTrace();
-
                 }
 
                 String email = acct.getEmail();
 
-
-                Log.e(TAG, "Name: " + personName + ", email: " + email
-                        + ", Image: " + "" + personPhotoUrl);
+                Log.e(TAG, "Name: " + personName + ", email: " + email + ", Image: " + "" + personPhotoUrl);
                 String socialmedia = "email";
                 gmailfacebookloginAPI(personName, email, socialmedia, personPhotoUrl);
 
-
             } catch (Exception e) {
-
                 e.printStackTrace();
             }
-
-
         } else {
-
             // Signed out, show unauthenticated UI.
-
         }
     }
 
@@ -1152,13 +1188,9 @@ public class RegisterActivity extends AppCompatActivity implements
                                 LoginManager.getInstance().logOut();
 
                             }
-
                         }
                     } catch (JSONException e) {
-
-
                     }
-
                 }
 
                 @Override
@@ -1197,6 +1229,57 @@ public class RegisterActivity extends AppCompatActivity implements
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+            case MY_RESULT_CODE_FILECHOOSER:
+                if (resultCode == Activity.RESULT_OK) {
+                    if (data != null) {
+                        Uri fileUri = data.getData();
+                        Log.e(TAG, "Uri: " + fileUri);
+
+                        String filePath = null;
+                        try {
+                            filePath = FileUtils.getPath(this, fileUri);
+                        } catch (Exception e) {
+                            Log.e(TAG, "Error: " + e);
+                            Toast.makeText(this, "Error: " + e, Toast.LENGTH_SHORT).show();
+                        }
+
+                        assert filePath != null;
+                        File file = new File(filePath);
+                        long fileSizeInBytes = file.length(); // Get length of file in bytes
+                        long fileSizeInKB = fileSizeInBytes / 1024; // Convert the bytes to Kilobytes (1 KB = 1024 Bytes)
+                        long fileSizeInMB = fileSizeInKB / 1024; // Convert the KB to MegaBytes (1 MB = 1024 KBytes)
+                        if (fileSizeInMB <= 1) {
+                            String filename = filePath.substring(filePath.lastIndexOf("/") + 1);
+                            Log.e(TAG, " filename - " + filename);
+                            if (btnIncorpDocClicked) {
+                                binding.txtIncorpDocName.setText(filename);
+                                binding.txtIncorpDocName.setTextColor(getResources().getColor(R.color.file_choose_color));
+                                pathIncorpDoc = filePath;
+                                base64PathIncorpDoc = getStringFile(file);
+                            } else if (btnAllocDocClicked) {
+                                binding.txtAllocDocName.setText(filename);
+                                binding.txtAllocDocName.setTextColor(getResources().getColor(R.color.file_choose_color));
+                                pathAllocDoc = filePath;
+                                base64PathAllocDoc = getStringFile(file);
+                            } else if (btnStandDocClicked) {
+                                binding.txtStandDocName.setText(filename);
+                                binding.txtStandDocName.setTextColor(getResources().getColor(R.color.file_choose_color));
+                                pathStandDoc = filePath;
+                                base64PathStandDoc = getStringFile(file);
+                            } else if (btnOtherDocClicked) {
+                                binding.txtOtherDocName.setText(filename);
+                                binding.txtOtherDocName.setTextColor(getResources().getColor(R.color.file_choose_color));
+                                pathOtherDoc = filePath;
+                                base64PathOtherDoc = getStringFile(file);
+                            }
+                        } else {
+                            Toast.makeText(this, "Please choose file size less than 1mb", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+                break;
+        }
         super.onActivityResult(requestCode, resultCode, data);
 
         callbackManager.onActivityResult(requestCode, resultCode, data);
@@ -1211,6 +1294,32 @@ public class RegisterActivity extends AppCompatActivity implements
 
         // Pass the activity result to the login button.
         twitter_login_btn.onActivityResult(requestCode, resultCode, data);
+    }
+
+    // Converting File to Base64.encode String type using Method
+    private String getStringFile(File f) {
+        InputStream inputStream = null;
+        String encodedFile = "", lastVal;
+        try {
+            inputStream = new FileInputStream(f.getAbsolutePath());
+
+            byte[] buffer = new byte[10240];//specify the size to allow
+            int bytesRead;
+            ByteArrayOutputStream output = new ByteArrayOutputStream();
+            Base64OutputStream output64 = new Base64OutputStream(output, Base64.DEFAULT);
+
+            while ((bytesRead = inputStream.read(buffer)) != -1) {
+                output64.write(buffer, 0, bytesRead);
+            }
+            output64.close();
+            encodedFile = output.toString();
+        } catch (FileNotFoundException e1) {
+            e1.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        lastVal = encodedFile;
+        return lastVal;
     }
 
     private void getUserProfile(AccessToken currentAccessToken) {
@@ -1230,14 +1339,9 @@ public class RegisterActivity extends AppCompatActivity implements
                             String socialname = "facebook";
                             gmailfacebookloginAPI(personName, email, socialname, image_url);
 
-                            //   txtUsername.setText("First Name: " + first_name + "\nLast Name: " + last_name);
-                            //  txtEmail.setText(email);
-                            // Picasso.with(MainActivity.this).load(image_url).into(imageView);
-
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-
                     }
                 });
 
@@ -1245,7 +1349,6 @@ public class RegisterActivity extends AppCompatActivity implements
         parameters.putString("fields", "first_name,last_name,email,id");
         request.setParameters(parameters);
         request.executeAsync();
-
     }
 
     @Override
@@ -1256,12 +1359,11 @@ public class RegisterActivity extends AppCompatActivity implements
     }
 
     private void radiobussi() {
-        if (radio_btn_yes.isChecked()) {
+        if (radio_btn_individual.isChecked()) {
             radi_business = "yes";
-        } else if (radio_btn_no.isChecked()) {
+        } else if (radio_btn_business.isChecked()) {
             radi_business = "no";
         } else {
-
             radi_business = "";
         }
     }
@@ -1297,6 +1399,21 @@ public class RegisterActivity extends AppCompatActivity implements
         jsonObject1.addProperty("business_name", business_name);
         jsonObject1.addProperty("type", type);
         jsonObject1.addProperty("terms", "Yes");
+        if (type.equalsIgnoreCase("business")) {
+            jsonObject1.addProperty("incorp_doc", base64PathIncorpDoc);
+            jsonObject1.addProperty("tax_id_doc", base64PathAllocDoc);
+            jsonObject1.addProperty("good_standing_doc", base64PathStandDoc);
+            jsonObject1.addProperty("oth_doc", base64PathOtherDoc);
+
+            jsonObject1.addProperty("incorp_doc_type", pathIncorpDoc.substring(pathIncorpDoc.lastIndexOf(".")));
+            jsonObject1.addProperty("tax_id_doc_type", pathAllocDoc.substring(pathAllocDoc.lastIndexOf(".")));
+            if (pathStandDoc.length() > 0) {
+                jsonObject1.addProperty("good_standing_doc_type", pathStandDoc.substring(pathStandDoc.lastIndexOf(".")));
+            }
+            if (pathOtherDoc.length() > 0) {
+                jsonObject1.addProperty("oth_doc_type", pathOtherDoc.substring(pathOtherDoc.lastIndexOf(".")));
+            }
+        }
         Log.e("jsonObject1", "" + jsonObject1);
         /*   ApiInterface jsonPostService = ApiClient.createService(ApiInterface.class, "http://project975.website/i2-donate/api/");*/
         final String image_url = "";

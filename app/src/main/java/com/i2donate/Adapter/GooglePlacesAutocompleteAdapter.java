@@ -75,15 +75,15 @@ public class GooglePlacesAutocompleteAdapter extends RecyclerView.Adapter<Google
     }
 
     @Override
-    public GooglePlacesAutocompleteAdapter.PredictionHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public PredictionHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         LayoutInflater layoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View convertView = layoutInflater.inflate(layout, viewGroup, false);
-        GooglePlacesAutocompleteAdapter.PredictionHolder mPredictionHolder = new GooglePlacesAutocompleteAdapter.PredictionHolder(convertView);
+        PredictionHolder mPredictionHolder = new PredictionHolder(convertView);
         return mPredictionHolder;
     }
 
     @Override
-    public void onBindViewHolder(GooglePlacesAutocompleteAdapter.PredictionHolder mPredictionHolder, final int i) {
+    public void onBindViewHolder(PredictionHolder mPredictionHolder, final int i) {
         mPredictionHolder.mPrediction.setText((CharSequence) resultList.get(i));
         /*mPredictionHolder.mRow.setOnClickListener(new View.OnClickListener() {
             @Override

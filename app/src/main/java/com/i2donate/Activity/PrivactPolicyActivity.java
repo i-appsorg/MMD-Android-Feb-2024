@@ -1,8 +1,8 @@
 package com.i2donate.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.i2donate.R;
 

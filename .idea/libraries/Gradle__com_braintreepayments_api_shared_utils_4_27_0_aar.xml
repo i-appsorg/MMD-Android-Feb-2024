@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.braintreepayments.api:shared-utils:4.27.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/0e1d6d3ab2c6cdbe89168d990c234223/transformed/jetified-shared-utils-4.27.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1d6cafdaff2c7e394c115f91f30691f0/transformed/jetified-shared-utils-4.27.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/0e1d6d3ab2c6cdbe89168d990c234223/transformed/jetified-shared-utils-4.27.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0e1d6d3ab2c6cdbe89168d990c234223/transformed/jetified-shared-utils-4.27.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1d6cafdaff2c7e394c115f91f30691f0/transformed/jetified-shared-utils-4.27.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1d6cafdaff2c7e394c115f91f30691f0/transformed/jetified-shared-utils-4.27.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

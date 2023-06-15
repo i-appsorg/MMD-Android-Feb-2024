@@ -62,7 +62,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         init();
-        listioner();
+        listener();
     }
 
 
@@ -77,7 +77,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
         builder = new AlertDialog.Builder(this);
     }
 
-    private void listioner() {
+    private void listener() {
         submit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

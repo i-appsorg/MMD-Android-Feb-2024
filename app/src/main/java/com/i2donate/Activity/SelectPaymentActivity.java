@@ -8,6 +8,7 @@ import android.content.pm.ActivityInfo;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -59,8 +60,9 @@ public class SelectPaymentActivity extends AppCompatActivity implements DropInLi
     Button payment_to_btn;
     String clientToken = "";
     ProgressDialog progressDialog;
-
+    DropInRequest dropInRequest;
     private DropInClient dropInClient;
+    String cToken = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,9 +70,7 @@ public class SelectPaymentActivity extends AppCompatActivity implements DropInLi
         setContentView(R.layout.activity_select_payment);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         init();
-        listioner();
-
-
+        listener();
     }
 
     private void init() {
@@ -83,9 +83,7 @@ public class SelectPaymentActivity extends AppCompatActivity implements DropInLi
         cvv_et = (EditText) findViewById(R.id.cvv_et);
         Bundle bundle = getIntent().getExtras();
         payment_amount = bundle.getString("payment_amt");
-        //  Double amount= Double.valueOf(payment_amount);
-        // double percentage = (amount / 100.0f) * 3.99;
-        //  Double payment_amt_total= amount + percentage;
+        cToken = bundle.getString("cToken");
         Double amount = Double.valueOf(payment_amount);
         double processing_fee = ((amount / 100.0f) * 1);
         double total_amt = processing_fee + amount;
@@ -95,11 +93,11 @@ public class SelectPaymentActivity extends AppCompatActivity implements DropInLi
 
 
         payment_amt = String.format("%.2f", payment_amt_total);
-        //payment_amt= String.valueOf(payment_amt_total);
         Log.e("amount", "" + amount);
         Log.e("processing_fee", "" + processing_fee);
         Log.e("total_amt", "" + total_amt);
         Log.e("payment_amt", payment_amt);
+        Log.e("cToken", cToken);
 
 
         charityName = bundle.getString("charity_name");
@@ -109,23 +107,25 @@ public class SelectPaymentActivity extends AppCompatActivity implements DropInLi
         Log.e("Select_charityId", charityName);
         Log.e("Select_charityId", charityId);
         selected_payment_et.setText(String.format(" %.2f", payment_amt_total));
-        callWebservice();
+//        callWebservice();
 
-        DropInRequest dropInRequest = new DropInRequest();
-        dropInClient = new DropInClient(this, "sandbox_38p29vxg_m7bfbztpgz6yfyk7"); // A 170523
-        dropInClient.launchDropIn(dropInRequest); // A 170523
+
+        dropInClient = new DropInClient(this, cToken); // A 240523
         dropInClient.setListener(this);
-      /*  Intent intent = new Intent(this, PayPalService.class);
+        dropInRequest = new DropInRequest();
 
-        intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, config);
-
-        startService(intent);*/
-
-        // getPayment();
-
+        progressDialog = ProgressDialog.show(this, "", "Please wait.", true);
+        progressDialog.show();
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                progressDialog.dismiss();
+                dropInClient.launchDropIn(dropInRequest); // A 240523
+            }
+        }, 2000);
     }
 
-    private void listioner() {
+    private void listener() {
         payment_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -148,13 +148,6 @@ public class SelectPaymentActivity extends AppCompatActivity implements DropInLi
             @Override
             public void onClick(View v) {
                 onBraintreeSubmit(clientToken);
-              /*  Intent intent = new Intent(SelectPaymentActivity.this, PayPalService.class);
-
-                intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, config);
-
-                startService(intent);
-
-                getPayment();*/
             }
         });
 
@@ -287,7 +280,7 @@ public class SelectPaymentActivity extends AppCompatActivity implements DropInLi
 
     public void onBraintreeSubmit(String clientToken) {
 
-        dropInClient.launchDropIn();
+        dropInClient.launchDropIn(dropInRequest);
 
 
       /*  DropInRequest dropInRequest = new DropInRequest().clientToken(clientToken);

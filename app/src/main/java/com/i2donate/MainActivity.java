@@ -33,9 +33,9 @@ public class MainActivity extends AppCompatActivity {
     //    private static final String PATH_TO_SERVER = "https://admin.i2-donate.com/webservice/braintree_client_token";
     private static final String PATH_TO_SERVER = "https://imaginetventures.org/i2donate/webservice/braintree_client_token";
     static ApiInterface apiService;
-    private String clientToken = ""; // A 170523
+    private String clientToken = ""; // A 240523
     private static final int BRAINTREE_REQUEST_CODE = 4949;
-    DropInClient dropInClient; // A 170523
+    DropInClient dropInClient; // A 240523
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +47,10 @@ public class MainActivity extends AppCompatActivity {
         buyNowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (clientToken.length() > 0) // A 170523
+                if (clientToken.length() > 0) // A 240523
                     onBraintreeSubmit(clientToken);
-                else // A 170523
-                    Toast.makeText(MainActivity.this, "No Token to make payments", Toast.LENGTH_LONG).show(); // A 170523
+                else // A 240523
+                    Toast.makeText(MainActivity.this, "No Token to make payments", Toast.LENGTH_LONG).show(); // A 240523
             }
         });
     }
@@ -83,10 +83,10 @@ public class MainActivity extends AppCompatActivity {
 //        DropInRequest dropInRequest = new DropInRequest().clientToken(clientToken);
         //        startActivityForResult(dropInRequest.getIntent(this), BRAINTREE_REQUEST_CODE);
 
-        DropInRequest dropInRequest = new DropInRequest(); // A 170523
-        dropInClient = new DropInClient(this, "sandbox_38p29vxg_m7bfbztpgz6yfyk7"); // A 170523
-        dropInClient.launchDropIn(dropInRequest); // A 170523
-        dropInClient.setListener(new DropInListener() { // A 170523
+        DropInRequest dropInRequest = new DropInRequest(); // A 240523
+        dropInClient = new DropInClient(this, "sandbox_38p29vxg_m7bfbztpgz6yfyk7"); // A 240523
+        dropInClient.launchDropIn(dropInRequest); // A 240523
+        dropInClient.setListener(new DropInListener() { // A 240523
             @Override
             public void onDropInSuccess(@NonNull DropInResult dropInResult) {
                 String paymentNonce = Objects.requireNonNull(dropInResult.getPaymentMethodNonce()).toString();

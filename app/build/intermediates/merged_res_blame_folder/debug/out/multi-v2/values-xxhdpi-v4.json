@@ -4,7 +4,7 @@
             "outputFile": "com.i2donate.app-mergeDebugResources-59:/values-xxhdpi-v4/values-xxhdpi-v4.xml",
             "map": [
                 {
-                    "source": "/Users/dhvanibhanderi/.gradle/caches/transforms-3/9b03e4b5877bd8e9eae754b2feb72eda/transformed/jetified-twitter-core-3.1.1/res/values-xxhdpi-v4/values-xxhdpi-v4.xml",
+                    "source": "/Users/dhvanibhanderi/.gradle/caches/transforms-3/8c503b68fd0bb195ed8f7d637d102da3/transformed/jetified-twitter-core-3.1.1/res/values-xxhdpi-v4/values-xxhdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

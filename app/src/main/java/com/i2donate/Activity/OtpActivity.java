@@ -55,15 +55,16 @@ public class OtpActivity extends AppCompatActivity implements View.OnFocusChange
     TextInputLayout new_password_layout_input, confirm_password_layout_input;
     ApiInterface apiService;
     private EditText mPinFirstDigitEditText, mPinSecondDigitEditText, mPinThirdDigitEditText, mPinForthDigitEditText, mPinHiddenEditText;
-    int index=0;
+    int index = 0;
     AlertDialog.Builder builder;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(new MainLayout(this, null));
         init();
         setPINListeners();
-        listioner();
+        listener();
     }
 
 
@@ -92,24 +93,8 @@ public class OtpActivity extends AppCompatActivity implements View.OnFocusChange
 
     }
 
-    private void listioner() {
+    private void listener() {
 
-        confirm_password.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-
-                if (new_password.getText().toString().trim().length() <= 0) {
-                    new_password_layout_input.setError("Required password");
-                } else {
-                    if (new_password.getText().toString().trim().matches(Validation.PASSWORD_PATTERN)) {
-                        new_password_layout_input.setError("");
-                    } else {
-                        new_password_layout_input.setError("Required valid password");
-                    }
-                }
-                return false;
-            }
-        });
         new_password.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -122,25 +107,26 @@ public class OtpActivity extends AppCompatActivity implements View.OnFocusChange
                     new_password.setText("");
                     Toast.makeText(getApplicationContext(), "Space Not allowed", Toast.LENGTH_LONG).show();
                     new_password_layout_input.setError("Required password");
-
                 } else {
-                    new_password_layout_input.setError("");
-
-
+                    if (new_password.getText().toString().trim().length() <= 0) {
+                        new_password_layout_input.setError("Required password");
+                    } else {
+                        new_password_layout_input.setError("");
+                    }
                 }
             }
 
             @Override
             public void afterTextChanged(Editable s) {
                 String passwordvalidation = s.toString();
-                if (passwordvalidation.length()>=8 && passwordvalidation.matches(Validation.PASSWORD_PATTERN)){
+
+                if (passwordvalidation.length() >= 8 && Validation.CheckPasswordPattern(passwordvalidation)) {
                     new_password_layout_input.setError("");
-                }else {
+                } else {
                     new_password_layout_input.setError("Password is invalid");
                 }
             }
         });
-
 
         confirm_password.addTextChangedListener(new TextWatcher() {
             @Override
@@ -166,40 +152,38 @@ public class OtpActivity extends AppCompatActivity implements View.OnFocusChange
                             new_password_layout_input.setError("Required password");
                         }
                     }
-
                 }
             }
 
             @Override
             public void afterTextChanged(Editable s) {
                 String passwordvalidation = s.toString();
-                if (passwordvalidation.length()>=8 && passwordvalidation.matches(Validation.PASSWORD_PATTERN)){
+                if (passwordvalidation.length() >= 8 && Validation.CheckPasswordPattern(passwordvalidation)) {
                     confirm_password_layout_input.setError("");
-                    if (new_password.getText().toString().trim().equals(confirm_password.getText().toString().trim())){
+                    if (new_password.getText().toString().trim().equals(confirm_password.getText().toString().trim())) {
                         confirm_password_layout_input.setError("");
-                    }else {
+                    } else {
                         confirm_password_layout_input.setError("Password doesn't match");
                     }
-                }else {
+                } else {
                     confirm_password_layout_input.setError("Password doesn't match");
                 }
             }
         });
+
         update_submit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (new_password.getText().toString().trim().equals(confirm_password.getText().toString().trim())) {
-                    if (!confirm_password.getText().toString().trim().isEmpty() && confirm_password.getText().toString().trim().matches(Validation.PASSWORD_PATTERN) && confirm_password.getText().toString().trim().length()>=8) {
-
-                        UpadtePasswordAPI();
-
-                    } else {
-                        Toast.makeText(OtpActivity.this, "Enter password", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    Toast.makeText(OtpActivity.this, "Enter Correct Password", Toast.LENGTH_SHORT).show();
+                if (!Validation.CheckPasswordPattern(new_password.getText().toString())) {
+                    new_password_layout_input.setError("Password is invalid");
+                    return;
+                }
+                if (!Validation.CheckPasswordPattern(confirm_password.getText().toString()) || new_password.getText().toString().trim().equals(confirm_password.getText().toString().trim())) {
+                    confirm_password_layout_input.setError("Password doesn't match");
+                    return;
                 }
 
+                UpadtePasswordAPI();
             }
         });
     }
@@ -420,7 +404,7 @@ public class OtpActivity extends AppCompatActivity implements View.OnFocusChange
                             otp_linear.setVisibility(View.GONE);
                             updatepassword_linear.setVisibility(View.VISIBLE);
                             back_icon_otp_img.setVisibility(View.VISIBLE);
-                            index=1;
+                            index = 1;
                             Toast.makeText(OtpActivity.this, message, Toast.LENGTH_SHORT).show();
                         } else {
                             ConstantFunctions.showSnackbar(mPinFirstDigitEditText, message, OtpActivity.this);
@@ -569,7 +553,7 @@ public class OtpActivity extends AppCompatActivity implements View.OnFocusChange
 
                         if (status.equalsIgnoreCase("1")) {
                             JSONObject jsonObject2 = new JSONObject(data);
-                         Toast.makeText(OtpActivity.this, "OTP sent successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(OtpActivity.this, "OTP sent successfully", Toast.LENGTH_SHORT).show();
                            /* builder.setMessage(message)
                                     .setCancelable(false)
                                     .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
@@ -678,7 +662,7 @@ public class OtpActivity extends AppCompatActivity implements View.OnFocusChange
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
-        if (index==1){
+        if (index == 1) {
             updatekey(event);
         }
 

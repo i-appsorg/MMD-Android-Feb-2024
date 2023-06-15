@@ -1,16 +1,11 @@
 package com.i2donate.CommonActivity;
 
+import static com.i2donate.Model.ChangeActivity.showSnackbar;
+
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
-
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +14,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.i2donate.Activity.BrowseActivity;
 import com.i2donate.Activity.LoginActivity;
@@ -31,8 +32,6 @@ import com.i2donate.R;
 import com.i2donate.Session.SessionManager;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-
-import static com.i2donate.Model.ChangeActivity.showSnackbar;
 
 
 /**
@@ -194,7 +193,7 @@ public class CommonBackActivity extends AppCompatActivity implements Connectivit
                         myspace_img.setColorFilter(getApplicationContext().getResources().getColor(R.color.quantum_white_text));
                         finish();
                     } else {
-                        LoginDailogue();
+                        LoginDialog();
                        // ChangeActivity.changeActivityback(CommonBackActivity.this, LoginActivity.class);
                         //finish();
                     }
@@ -211,7 +210,7 @@ public class CommonBackActivity extends AppCompatActivity implements Connectivit
 
 
     }
-    private void LoginDailogue() {
+    private void LoginDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(CommonBackActivity.this);
         builder.setTitle("");
         builder.setMessage("For Advance Features Please Log-in/Register");

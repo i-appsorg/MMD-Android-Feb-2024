@@ -40,7 +40,7 @@ import retrofit2.Response;
 
 public class AdvanceSearchActivity extends AppCompatActivity {
 
-    private static final String TAG = AdavanceSearch_new.class.getSimpleName();
+    private static final String TAG = AdvanceSearchActivity.class.getSimpleName();
     ExpandableListView recyclerView_ad;
     ApiInterface apiService;
     ImageView backButton;
@@ -48,7 +48,7 @@ public class AdvanceSearchActivity extends AppCompatActivity {
     static SessionManager session;
     static HashMap<String, String> userDetails;
     TextView exempt_tv_deselect, exempt_tv_select, non_exempt_deselect_tv, non_exempt_select_tv;
-    private String[] grandItems = new String[]{"Arts, culture & humanities", "Education", "Environment","Animal-related","Health care","Mental health & crisis intervention","Diseases, disorders & medical disciplines"};
+    private String[] grandItems = new String[]{"Arts, culture & humanities", "Education", "Environment", "Animal-related", "Health care", "Mental health & crisis intervention", "Diseases, disorders & medical disciplines"};
 
     private String[] parentItem1 = new String[]{"Alliances & advocacy", "Management & technical assistance", "Professional societies & associations", "Research institutes & public policy analysis", "Single organization support", "Arts & culture"};
     private String[] parentItem2 = new String[]{"Alliances & advocacy", "Management & technical assistance", "Professional societies & associations", "Research institutes & public policy analysis", "Single organization support", "Arts & culture"};
@@ -72,17 +72,18 @@ public class AdvanceSearchActivity extends AppCompatActivity {
     List<String[]> secondLevel = new ArrayList<>();
     List<LinkedHashMap<String, String[]>> data = new ArrayList<>();
     static LinearLayout bottom_layout;
-    static Button reset_button,apply_button;
+    static Button reset_button, apply_button;
     SeekBar seekbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_advance_search);
         init();
-        listioner();
+        listener();
     }
 
-    private void listioner() {
+    private void listener() {
 
         exempt_tv_deselect.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,7 +121,7 @@ public class AdvanceSearchActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ThreeLevelViewAdapter threeLevelListAdapterAdapter = new ThreeLevelViewAdapter(AdvanceSearchActivity.this, grandItems, secondLevel, data);
-                recyclerView_ad.setAdapter( threeLevelListAdapterAdapter );
+                recyclerView_ad.setAdapter(threeLevelListAdapterAdapter);
                 bottom_layout.setVisibility(View.GONE);
             }
         });
@@ -146,53 +147,53 @@ public class AdvanceSearchActivity extends AppCompatActivity {
         secondLevel.add(parentItem7);
 
 
-        thirdLevelparentItem1.put(parentItem1[0],emptyItems);
-        thirdLevelparentItem1.put(parentItem1[1],emptyItems);
-        thirdLevelparentItem1.put(parentItem1[2],emptyItems);
-        thirdLevelparentItem1.put(parentItem1[3],emptyItems);
-        thirdLevelparentItem1.put(parentItem1[4],emptyItems);
+        thirdLevelparentItem1.put(parentItem1[0], emptyItems);
+        thirdLevelparentItem1.put(parentItem1[1], emptyItems);
+        thirdLevelparentItem1.put(parentItem1[2], emptyItems);
+        thirdLevelparentItem1.put(parentItem1[3], emptyItems);
+        thirdLevelparentItem1.put(parentItem1[4], emptyItems);
         thirdLevelparentItem1.put(parentItem1[5], childItems);
 
-        thirdLevelparentItem2.put(parentItem1[0],emptyItems);
-        thirdLevelparentItem2.put(parentItem1[1],emptyItems);
-        thirdLevelparentItem2.put(parentItem1[2],emptyItems);
-        thirdLevelparentItem2.put(parentItem1[3],emptyItems);
-        thirdLevelparentItem2.put(parentItem1[4],emptyItems);
+        thirdLevelparentItem2.put(parentItem1[0], emptyItems);
+        thirdLevelparentItem2.put(parentItem1[1], emptyItems);
+        thirdLevelparentItem2.put(parentItem1[2], emptyItems);
+        thirdLevelparentItem2.put(parentItem1[3], emptyItems);
+        thirdLevelparentItem2.put(parentItem1[4], emptyItems);
         thirdLevelparentItem2.put(parentItem2[5], childItems);
 
-        thirdLevelparentItem3.put(parentItem1[0],emptyItems);
-        thirdLevelparentItem3.put(parentItem1[1],emptyItems);
-        thirdLevelparentItem3.put(parentItem1[2],emptyItems);
-        thirdLevelparentItem3.put(parentItem1[3],emptyItems);
-        thirdLevelparentItem3.put(parentItem1[4],emptyItems);
+        thirdLevelparentItem3.put(parentItem1[0], emptyItems);
+        thirdLevelparentItem3.put(parentItem1[1], emptyItems);
+        thirdLevelparentItem3.put(parentItem1[2], emptyItems);
+        thirdLevelparentItem3.put(parentItem1[3], emptyItems);
+        thirdLevelparentItem3.put(parentItem1[4], emptyItems);
         thirdLevelparentItem3.put(parentItem3[5], childItems);
 
-        thirdLevelparentItem4.put(parentItem1[0],emptyItems);
-        thirdLevelparentItem4.put(parentItem1[1],emptyItems);
-        thirdLevelparentItem4.put(parentItem1[2],emptyItems);
-        thirdLevelparentItem4.put(parentItem1[3],emptyItems);
-        thirdLevelparentItem4.put(parentItem1[4],emptyItems);
+        thirdLevelparentItem4.put(parentItem1[0], emptyItems);
+        thirdLevelparentItem4.put(parentItem1[1], emptyItems);
+        thirdLevelparentItem4.put(parentItem1[2], emptyItems);
+        thirdLevelparentItem4.put(parentItem1[3], emptyItems);
+        thirdLevelparentItem4.put(parentItem1[4], emptyItems);
         thirdLevelparentItem4.put(parentItem4[5], childItems);
 
-        thirdLevelparentItem5.put(parentItem1[0],emptyItems);
-        thirdLevelparentItem5.put(parentItem1[1],emptyItems);
-        thirdLevelparentItem5.put(parentItem1[2],emptyItems);
-        thirdLevelparentItem5.put(parentItem1[3],emptyItems);
-        thirdLevelparentItem5.put(parentItem1[4],emptyItems);
+        thirdLevelparentItem5.put(parentItem1[0], emptyItems);
+        thirdLevelparentItem5.put(parentItem1[1], emptyItems);
+        thirdLevelparentItem5.put(parentItem1[2], emptyItems);
+        thirdLevelparentItem5.put(parentItem1[3], emptyItems);
+        thirdLevelparentItem5.put(parentItem1[4], emptyItems);
         thirdLevelparentItem5.put(parentItem5[5], childItems);
 
-        thirdLevelparentItem6.put(parentItem1[0],emptyItems);
-        thirdLevelparentItem6.put(parentItem1[1],emptyItems);
-        thirdLevelparentItem6.put(parentItem1[2],emptyItems);
-        thirdLevelparentItem6.put(parentItem1[3],emptyItems);
-        thirdLevelparentItem6.put(parentItem1[4],emptyItems);
+        thirdLevelparentItem6.put(parentItem1[0], emptyItems);
+        thirdLevelparentItem6.put(parentItem1[1], emptyItems);
+        thirdLevelparentItem6.put(parentItem1[2], emptyItems);
+        thirdLevelparentItem6.put(parentItem1[3], emptyItems);
+        thirdLevelparentItem6.put(parentItem1[4], emptyItems);
         thirdLevelparentItem6.put(parentItem6[5], childItems);
 
-        thirdLevelparentItem7.put(parentItem1[0],emptyItems);
-        thirdLevelparentItem7.put(parentItem1[1],emptyItems);
-        thirdLevelparentItem7.put(parentItem1[2],emptyItems);
-        thirdLevelparentItem7.put(parentItem1[3],emptyItems);
-        thirdLevelparentItem7.put(parentItem1[4],emptyItems);
+        thirdLevelparentItem7.put(parentItem1[0], emptyItems);
+        thirdLevelparentItem7.put(parentItem1[1], emptyItems);
+        thirdLevelparentItem7.put(parentItem1[2], emptyItems);
+        thirdLevelparentItem7.put(parentItem1[3], emptyItems);
+        thirdLevelparentItem7.put(parentItem1[4], emptyItems);
         thirdLevelparentItem7.put(parentItem7[5], childItems);
 
         data.add(thirdLevelparentItem1);
@@ -210,12 +211,12 @@ public class AdvanceSearchActivity extends AppCompatActivity {
         non_exempt_deselect_tv = (TextView) findViewById(R.id.non_exempt_deselect_tv);
         non_exempt_select_tv = (TextView) findViewById(R.id.non_exempt_select_tv);
         recyclerView_ad = (ExpandableListView) findViewById(R.id.expandable_listview);
-        reset_button=(Button)findViewById(R.id.reset_button);
-        apply_button=(Button)findViewById(R.id.apply_button);
-        recyclerView_ad.setAdapter( threeLevelListAdapterAdapter );
+        reset_button = (Button) findViewById(R.id.reset_button);
+        apply_button = (Button) findViewById(R.id.apply_button);
+        recyclerView_ad.setAdapter(threeLevelListAdapterAdapter);
         backButton = (ImageView) findViewById(R.id.back_icon_login_img);
-        bottom_layout=(LinearLayout) findViewById(R.id.bottom_layout);
-        seekbar=(SeekBar)findViewById(R.id.seekbar);
+        bottom_layout = (LinearLayout) findViewById(R.id.bottom_layout);
+        seekbar = (SeekBar) findViewById(R.id.seekbar);
         seekbar.setMax(5);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -248,8 +249,8 @@ public class AdvanceSearchActivity extends AppCompatActivity {
         progressDialog.show();
 
         userDetails = session.getUserDetails();
-        Log.e("userDetails", "" + userDetails);
-        Log.e("KEY_UID", "" + userDetails.get(SessionManager.KEY_UID));
+        Log.e(TAG, "userDetails - " + userDetails);
+        Log.e(TAG, "KEY_UID - " + userDetails.get(SessionManager.KEY_UID));
         String user_id = "";
         String token = "";
 
@@ -262,7 +263,7 @@ public class AdvanceSearchActivity extends AppCompatActivity {
         jsonObject1.addProperty("user_id", user_id);
         jsonObject1.addProperty("token", token);
 
-        Log.e("jsonObject1", "" + jsonObject1);
+        Log.e(TAG, "jsonObject1 - " + jsonObject1);
 
 
         apiService = ApiClient.getClient().create(ApiInterface.class);
@@ -278,7 +279,7 @@ public class AdvanceSearchActivity extends AppCompatActivity {
                     Log.e(TAG, "" + response.body());
                     try {
                         JSONObject jsonObject = new JSONObject(String.valueOf(response.body()));
-                        Log.e("jsonObject", "" + jsonObject);
+                        Log.e(TAG, "jsonObject - " + jsonObject);
                         String status = jsonObject.getString("status");
                         String tokenStatus = jsonObject.getString("token_status");
                         String message = jsonObject.getString("message");
@@ -286,7 +287,7 @@ public class AdvanceSearchActivity extends AppCompatActivity {
                         if (status.equalsIgnoreCase("1")) {
                             if (tokenStatus.equalsIgnoreCase("1")) {
                                 JSONArray jsonArray = new JSONArray(data);
-                                Log.e("1232", "" + jsonArray.length());
+                                Log.e(TAG, "1232 - " + jsonArray.length());
                                 if (!data.equalsIgnoreCase("")) {
 
                                 } else ConstantFunctions.showSnakBar("Empty Data", backButton);
@@ -302,13 +303,13 @@ public class AdvanceSearchActivity extends AppCompatActivity {
                 @Override
                 public void onFailure(Call<JsonObject> call, Throwable t) {
                     progressDialog.dismiss();
-                    Log.e(TAG, t.toString());
+                    Log.e(TAG, " onFailure - " + t.toString());
                 }
             });
         } catch (Exception e) {
-
+            Log.e(TAG, "Exception - " + e);
             e.printStackTrace();
-            Log.e("Exception", "" + e);
+
         }
 
 
@@ -317,7 +318,7 @@ public class AdvanceSearchActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-       finish();
+        finish();
     }
 
     @Override

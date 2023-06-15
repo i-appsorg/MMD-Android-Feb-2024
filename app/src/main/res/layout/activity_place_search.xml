@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/commonMenuActivityToolbar"
@@ -16,6 +16,7 @@
         android:elevation="5dp"
         app:contentInsetEnd="0dp"
         app:contentInsetStart="0dp">
+
         <ImageView
             android:id="@+id/back_icon_autoplace_img"
             android:layout_width="45dp"
@@ -23,12 +24,12 @@
             android:layout_gravity="start|left"
             android:padding="8dp"
             android:src="@drawable/back_icon" />
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="@dimen/_30sdp"
-            android:src="@drawable/idonate_logo"
             android:layout_centerVertical="true"
-            />
+            android:src="@drawable/idonate_logo" />
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
@@ -50,49 +51,116 @@
             android:src="@drawable/search_icon" />
 
 
-    <EditText
-        android:id="@+id/autocomplete_places"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="@dimen/_2sdp"
-        android:layout_weight="1"
-        android:background="@null"
-        android:editable="true"
-        android:singleLine="true"
-        android:imeOptions="actionDone"
-        android:gravity="center_vertical"
-        android:hint="@string/autocomplete_hint"
-        android:textColor="@color/trans_black"
-        android:textColorHint="@color/colorPrimary" />
+        <EditText
+            android:id="@+id/autocomplete_places"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:editable="true"
+            android:gravity="center_vertical"
+            android:hint="@string/united_state_location"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textColor="@color/trans_black"
+            android:textColorHint="@color/colorPrimary" />
 
-    <ImageView
-        android:id="@+id/cross"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="26dp"
-        android:visibility="gone"
-        android:layout_marginRight="20dp"
-        android:src="@drawable/cross"/>
+        <ImageView
+            android:id="@+id/close_img"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_weight=".1"
+            android:src="@drawable/close"
+            android:visibility="gone" />
     </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_12sdp"
-        android:layout_marginRight="@dimen/_12sdp"
         android:layout_marginTop="10dp"
-        android:textSize="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_12sdp"
         android:text="Type at least 3 letters to search."
+        android:textSize="@dimen/_10sdp"
 
         />
-<!-- android:text="Add space after enter city or country codes to get locations."-->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:scrollbars="vertical"
-        android:layout_margin="10dp"
-        android:layout_below="@+id/autocomplete_places"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- Adding 3 rows of placeholders -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/recipe_placeholder_item" />
+
+                    <include layout="@layout/recipe_placeholder_item" />
+
+                    <include layout="@layout/recipe_placeholder_item" />
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/autocomplete_places"
+                android:layout_margin="10dp"
+                android:scrollbars="vertical" />
+
+            <LinearLayout
+                android:id="@+id/no_data_linear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_75sdp"
+                    android:src="@drawable/ic_noresult" />
+
+                <TextView
+                    android:id="@+id/no_data_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="@string/name_search_noresult"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_12sdp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 </LinearLayout>

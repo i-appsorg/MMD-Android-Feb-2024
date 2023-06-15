@@ -67,7 +67,6 @@ public class FollowingActivity extends CommonMenuActivity {
         setTitle("My space");
         toolbar = findViewById(R.id.commonMenuActivityToolbar);
         init();
-        listioner();
     }
 
     private void init() {
@@ -75,11 +74,8 @@ public class FollowingActivity extends CommonMenuActivity {
         iDonateSharedPreference = new IDonateSharedPreference();
         iDonateSharedPreference.setdailoguepage(getApplicationContext(), "0");
         Bundle bundle = getIntent().getExtras();
-        // List<HashMap<String, String>> like_charity_Arraylist =( ArrayList<HashMap<String, String>>)getIntent().getSerializableExtra("mylist");
 
-//        Log.e("follow_charitylist1de", "" + follow_charitylist1);
         type = bundle.getString("type");
-//        Log.e("typetype", "" + type);
         if (type.equalsIgnoreCase("donate")) {
             DonatedCharityList1 = (ArrayList) getIntent().getSerializableExtra("mylist");
         } else {
@@ -143,10 +139,7 @@ public class FollowingActivity extends CommonMenuActivity {
                     no_data_linear.setVisibility(View.VISIBLE);
                 }
             }
-
         }
-
-
     }
 
     private void FollowLikedonationAPI() {
@@ -170,9 +163,6 @@ public class FollowingActivity extends CommonMenuActivity {
         call.enqueue(new Callback<JsonObject>() {
             @Override
             public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
-//                like_charitylist1.clear();
-//                follow_charitylist1.clear();
-//                donate_charitylist1.clear();
                 if (response.isSuccessful()) {
                     try {
                         JSONObject jsonObject = new JSONObject(response.body().toString());
@@ -203,13 +193,9 @@ public class FollowingActivity extends CommonMenuActivity {
                                 charitylistm.setState(object.getString("state"));
                                 charitylistm.setZip_code(object.getString("zip_code"));
                                 charitylistm.setLogo(object.getString("logo"));
-                                //charitylistm.setBanner(object.getString("banner"));
-                                // charitylistm.setLatitude(object.getString("latitude"));
-                                // charitylistm.setLongitude(object.getString("longitude"));
                                 charitylistm.setLiked(object.getString("liked"));
                                 charitylistm.setFollowed(object.getString("followed"));
                                 charitylistm.setLike_count(object.getString("like_count"));
-                                // charitylistm.setDescription(object.getString("description"));
                                 charitylistm.setCountry(object.getString("country"));
                                 map.put("id", object.getString("id"));
                                 map.put("name", object.getString("name"));
@@ -218,18 +204,11 @@ public class FollowingActivity extends CommonMenuActivity {
                                 map.put("state", object.getString("state"));
                                 map.put("zip_code", object.getString("zip_code"));
                                 map.put("logo", object.getString("logo"));
-                                // map.put("banner", object.getString("banner"));
-                                // map.put("latitude", object.getString("latitude"));
-                                // map.put("longitude", object.getString("longitude"));
                                 map.put("liked", object.getString("liked"));
                                 map.put("followed", object.getString("followed"));
                                 map.put("like_count", object.getString("like_count"));
-                                // map.put("description", object.getString("description"));
                                 map.put("country", object.getString("country"));
-                                // like_charity_Arraylist.add(map);
                                 like_charitylist1.add(charitylistm);
-                                // Log.e("like_charity_Arraylist",""+like_charity_Arraylist);
-
                             }
 
                             JSONArray jsonArrayfollow = new JSONArray(following_charity_list);
@@ -246,13 +225,9 @@ public class FollowingActivity extends CommonMenuActivity {
                                 charitylistf.setState(object.getString("state"));
                                 charitylistf.setZip_code(object.getString("zip_code"));
                                 charitylistf.setLogo(object.getString("logo"));
-                                // charitylistf.setBanner(object.getString("banner"));
-                                // charitylistf.setLatitude(object.getString("latitude"));
-                                //  charitylistf.setLongitude(object.getString("longitude"));
                                 charitylistf.setLiked(object.getString("liked"));
                                 charitylistf.setFollowed(object.getString("followed"));
                                 charitylistf.setLike_count(object.getString("like_count"));
-                                //   charitylistf.setDescription(object.getString("description"));
                                 charitylistf.setCountry(object.getString("country"));
                                 map.put("id", object.getString("id"));
                                 map.put("name", object.getString("name"));
@@ -261,18 +236,11 @@ public class FollowingActivity extends CommonMenuActivity {
                                 map.put("state", object.getString("state"));
                                 map.put("zip_code", object.getString("zip_code"));
                                 map.put("logo", object.getString("logo"));
-                                // map.put("banner", object.getString("banner"));
-                                // map.put("latitude", object.getString("latitude"));
-                                // map.put("longitude", object.getString("longitude"));
                                 map.put("liked", object.getString("liked"));
                                 map.put("followed", object.getString("followed"));
                                 map.put("like_count", object.getString("like_count"));
-                                //  map.put("description", object.getString("description"));
                                 map.put("country", object.getString("country"));
-                                //follow_charity_Arraylist.add(map);
                                 follow_charitylist1.add(charitylistf);
-                                // Log.e("follow_Arraylist",""+follow_charity_Arraylist);
-
                             }
 
                             JSONArray jsonArraypayment = new JSONArray(payment_history_list);
@@ -289,13 +257,9 @@ public class FollowingActivity extends CommonMenuActivity {
                                 charitylistf.setState(object.getString("state"));
                                 charitylistf.setZip_code(object.getString("zip_code"));
                                 charitylistf.setLogo(object.getString("logo"));
-                                //  charitylistf.setBanner(object.getString("banner"));
-                                //charitylistf.setLatitude(object.getString("latitude"));
-                                //charitylistf.setLongitude(object.getString("longitude"));
                                 charitylistf.setLiked(object.getString("liked"));
                                 charitylistf.setFollowed(object.getString("followed"));
                                 charitylistf.setLike_count(object.getString("like_count"));
-                                // charitylistf.setDescription(object.getString("description"));
                                 charitylistf.setCountry(object.getString("country"));
                                 map.put("id", object.getString("id"));
                                 map.put("name", object.getString("name"));
@@ -304,17 +268,11 @@ public class FollowingActivity extends CommonMenuActivity {
                                 map.put("state", object.getString("state"));
                                 map.put("zip_code", object.getString("zip_code"));
                                 map.put("logo", object.getString("logo"));
-                                //map.put("banner", object.getString("banner"));
-                                // map.put("latitude", object.getString("latitude"));
-                                // map.put("longitude", object.getString("longitude"));
                                 map.put("liked", object.getString("liked"));
                                 map.put("followed", object.getString("followed"));
                                 map.put("like_count", object.getString("like_count"));
-                                //map.put("description", object.getString("description"));
                                 map.put("country", object.getString("country"));
-                                //payment_charity_Arraylist.add(map);
                                 donate_charitylist1.add(charitylistf);
-                                //  Log.e("follow_Arraylist",""+payment_charity_Arraylist);
 
                             }
                             if (type.equalsIgnoreCase("likes")) {
@@ -348,8 +306,6 @@ public class FollowingActivity extends CommonMenuActivity {
                         e.printStackTrace();
                     }
                 }
-
-
             }
 
             @Override
@@ -358,18 +314,6 @@ public class FollowingActivity extends CommonMenuActivity {
                 Log.e("ER", "error2");
             }
         });
-    }
-
-    private void listioner() {
-
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        ///FollowLikedonationAPI();
-
-
     }
 
     @Override

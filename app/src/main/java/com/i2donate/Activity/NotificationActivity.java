@@ -54,7 +54,7 @@ public class NotificationActivity extends CommonMenuActivity {
         setView(R.layout.activity_notification,TAG);
         toolbar = findViewById(R.id.commonMenuActivityToolbar);
         init();
-        listioner();
+        listener();
     }
 
     private void init() {
@@ -194,7 +194,7 @@ public class NotificationActivity extends CommonMenuActivity {
 
     }
 
-    private void listioner() {
+    private void listener() {
 
 
     }

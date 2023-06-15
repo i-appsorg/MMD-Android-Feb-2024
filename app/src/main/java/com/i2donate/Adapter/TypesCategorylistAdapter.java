@@ -44,7 +44,7 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
 
     private Activity mContext;
     public static ArrayList<Category_new> categorylis;
-    static ArrayList<String> arraychecked_item=new ArrayList<>();
+    static ArrayList<String> arraychecked_item = new ArrayList<>();
     public static ArrayList<String> categoty_item = new ArrayList<>();
     private ArrayList<HashMap<String, String>> parentItems;
     private ArrayList<ArrayList<HashMap<String, String>>> childItems;
@@ -54,10 +54,11 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
     static ArrayList<String> listOfcategory = new ArrayList<>();
     static ArrayList<String> listofItems = new ArrayList<>();
     public static ArrayList<String> listOfAItem = new ArrayList<>();
-    public static ArrayList<String>listofsubcategory = new ArrayList<>();
-    public static ArrayList<String>listofchildcategory = new ArrayList<>();
+    public static ArrayList<String> listofsubcategory = new ArrayList<>();
+    public static ArrayList<String> listofchildcategory = new ArrayList<>();
     public boolean selected, checked;
     SessionManager session;
+    String TAG = TypesCategorylistAdapter.class.getSimpleName();
 
     public TypesCategorylistAdapter(AdvanceCompletedActivity advanceCompletedActivity, ArrayList<Category_new> categorylis) {
         this.mContext = advanceCompletedActivity;
@@ -65,7 +66,7 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
         parentItems = new ArrayList<>();
         childItems = new ArrayList<>();
         iDonateSharedPreference = new IDonateSharedPreference();
-        Log.e("listOfdate", "" + categorylis.size());
+        Log.e(TAG, "listOfdate - " + categorylis.size());
     }
 
     public TypesCategorylistAdapter(NewtypesActivity newtypesActivity, ArrayList<Category_new> category_newArrayList) {
@@ -76,7 +77,7 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
         childItems = new ArrayList<>();
         iDonateSharedPreference = new IDonateSharedPreference();
         session = new SessionManager(mContext);
-        Log.e("listOfdate", "" + categorylis.size());
+        Log.e(TAG, "listOfdate - " + categorylis.size());
     }
 
 
@@ -95,10 +96,10 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
 //        Log.e("selected_da",""+categorylis.get(position).getSlected());
         if (session.isLoggedIn()) {
             holder.listview_tv_subitem.setText("Filter by sub-types");
-        }else {
+        } else {
             holder.listview_tv_subitem.setText("Filter by sub-types (Requires Login)");
         }
-        if ( categorylis.get(position).isSelected()){
+        if (categorylis.get(position).isSelected()) {
             holder.linear2.setVisibility(View.VISIBLE);
             holder.sublinear.setVisibility(View.VISIBLE);
             holder.linear1.setVisibility(View.GONE);
@@ -106,37 +107,34 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
             holder.box1.setChecked(true);
             //  category_Array.add(category_newArrayList.get(position).getCategory_name());
             //    Log.e("linkedList",""+category_Array);
-            NewtypesActivity.selecteddata(categoty_item,"select");
-        }else {
+            NewtypesActivity.selecteddata(categoty_item, "select");
+        } else {
             holder.sublinear.setVisibility(View.GONE);
             holder.box2.setChecked(false);
             holder.box1.setChecked(false);
             //listOfdate.add(category_newArrayList.get(position).getCategory_code());
             holder.linear2.setVisibility(View.GONE);
             holder.linear1.setVisibility(View.VISIBLE);
-            Log.e("listOfdate", "" + categoty_item);
-            NewtypesActivity.selecteddata(categoty_item,"select");
+            Log.e(TAG, "listOfdate - " + categoty_item);
+            NewtypesActivity.selecteddata(categoty_item, "select");
         }
-        if(iDonateSharedPreference.getselectedcategorydata(mContext)!=null) {
-            Log.e("Testing","Selected list "+ iDonateSharedPreference.getselectedcategorydata(mContext));
-            Log.e("Testing", "Values "+categorylis.get(position).getCategory_id());
+        if (iDonateSharedPreference.getselectedcategorydata(mContext) != null) {
+            Log.e(TAG, "Selected list " + iDonateSharedPreference.getselectedcategorydata(mContext));
+            Log.e(TAG,  "Values " + categorylis.get(position).getCategory_id());
             selected = iDonateSharedPreference.getselectedcategorydata(mContext).contains(categorylis.get(position).getCategory_id());
             if (selected) {
-                Log.e("Testing", "true");
                 holder.linear1.setVisibility(View.GONE);
                 holder.linear2.setVisibility(View.VISIBLE);
                 holder.box2.setChecked(true);
-                NewtypesActivity.selecteddata(categoty_item,"select");
+                NewtypesActivity.selecteddata(categoty_item, "select");
                 holder.sublinear.setVisibility(View.VISIBLE);
             } else {
                 holder.linear1.setVisibility(View.VISIBLE);
                 holder.linear2.setVisibility(View.GONE);
-                Log.e("Testing", "false");
             }
         } else {
             holder.linear1.setVisibility(View.VISIBLE);
             holder.linear2.setVisibility(View.GONE);
-            Log.e("Testing", "false");
         }
             /*if (categorylis.get(position).getSlected().equalsIgnoreCase("true")) {
                 Log.e("Testing", "true");
@@ -149,7 +147,7 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
                     categorylis.get(position).setSlected("false");
                 } else categorylis.get(position).setSlected("true");
             }*//*
-            *//*holder.linear1.setVisibility(View.GONE);
+         *//*holder.linear1.setVisibility(View.GONE);
             holder.linear2.setVisibility(View.VISIBLE);
             holder.box2.setChecked(true);
             holder.sublinear.setVisibility(View.VISIBLE);*//*
@@ -168,12 +166,12 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
         holder.box1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(holder.box1.isChecked()){
+                if (holder.box1.isChecked()) {
                     categorylis.get(position).setSelected(true);
                     arraychecked_item.add(categorylis.get(position).getCategory_id());
                     categoty_item.add(categorylis.get(position).getCategory_code());
-                   // categoty_item.remove(categorylis.get(position).getCategory_code());
-                    NewtypesActivity.selecteddata(categoty_item,"select");
+                    // categoty_item.remove(categorylis.get(position).getCategory_code());
+                    NewtypesActivity.selecteddata(categoty_item, "select");
 //                    TitleSubTitleActivity.checkeddata();
                     holder.box2.setChecked(true);
                     holder.linear1.setVisibility(View.GONE);
@@ -185,7 +183,7 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
                     arraychecked_item.remove(categorylis.get(position).getCategory_id());
                     categoty_item.remove(categorylis.get(position).getCategory_code());
 //                    TitleSubTitleActivity.checkeddata();
-                    NewtypesActivity.selecteddata(categoty_item,"remove");
+                    NewtypesActivity.selecteddata(categoty_item, "remove");
                     holder.box2.setChecked(false);
                     holder.sublinear.setVisibility(View.GONE);
 
@@ -196,22 +194,21 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
         holder.box2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(holder.box2.isChecked()){
+                if (holder.box2.isChecked()) {
                     categorylis.get(position).setSelected(true);
                     /*arraychecked_item.add(categorylis.get(position).getCategory_id());
 //                    TitleSubTitleActivity.checkeddata();
                     TitleSubTitleActivity.selecteddata(arraychecked_item);*/
                     holder.box1.setChecked(true);
                     holder.sublinear.setVisibility(View.VISIBLE);
-                } else
-                {
+                } else {
                     categorylis.get(position).setSelected(false);
                     /*arraychecked_item.remove(categorylis.get(position).getCategory_id());
 //                    TitleSubTitleActivity.checkeddata();
                     TitleSubTitleActivity.selecteddata(arraychecked_item);*/
                     arraychecked_item.remove(categorylis.get(position).getCategory_id());
                     categoty_item.remove(categorylis.get(position).getCategory_code());
-                    NewtypesActivity.selecteddata(categoty_item,"remove");
+                    NewtypesActivity.selecteddata(categoty_item, "remove");
                     holder.box1.setChecked(false);
                     holder.linear1.setVisibility(View.VISIBLE);
                     holder.linear2.setVisibility(View.GONE);
@@ -227,7 +224,7 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
                 if (session.isLoggedIn()) {
                     listofchildcategory = iDonateSharedPreference.getselectedchildcategorydata(mContext);
                     listofItems = iDonateSharedPreference.getSelectedItems(mContext);
-                    Log.e("ListOfItems", "Items are " + listofItems);
+                    Log.e(TAG, "ListOfItems - Items are " + listofItems);
                     categorylis.get(position).setSelected(true);
                     child_category_newArrayList.clear();
                     sub_category_newArrayList.clear();
@@ -239,9 +236,9 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
                         listOfAItem.add(listofItems.get(i));
                     }
                 }*/
-                    Log.e("ListOfAItem", "" + listOfAItem);
+                    Log.e(TAG, "ListOfAItem - " + listOfAItem);
 
-                    Log.e("position12", "" + categorylis.get(position).getSubcategory().length());
+                    Log.e(TAG, "position12 - " + categorylis.get(position).getSubcategory().length());
 
                     try {
                         for (int i = 0; i < categorylis.get(position).getSubcategory().length(); i++) {
@@ -257,7 +254,7 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
                                 if (childcatarrray.length() == 0) {
                                     subcategorynew.setDatafind("no");
                                 }
-                                Log.e("childcatarrray", "" + childcatarrray.length());
+                                Log.e(TAG, "childcatarrray - " + childcatarrray.length());
                                 for (int j = 0; j < childcatarrray.length(); j++) {
                                     JSONObject childObject = childcatarrray.getJSONObject(j);
                                     child_categorynew child_categorynew = new child_categorynew();
@@ -281,8 +278,8 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
 //                                child_categorynew.setIsChecked(ConstantManager.CHECK_BOX_CHECKED_FALSE);
 //                                child_categorynew.setIsChecked(ConstantManager.CHECK_BOX_CHECKED_TRUE);
                                     child_category_newArrayList.add(child_categorynew);
-                                    Log.e("child_category", "" + child_category_newArrayList);
-                                    Log.e("child_categorysize", "" + child_category_newArrayList.size());
+                                    Log.e(TAG, "child_category - " + child_category_newArrayList);
+                                    Log.e(TAG, "child_categorysize - " + child_category_newArrayList.size());
 
                                 }
                                 subcategorynew.setChild_category_news(child_category_newArrayList);
@@ -290,8 +287,8 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
                             }
                             sub_category_newArrayList.add(subcategorynew);
 
-                            Log.e("sub_category", "" + sub_category_newArrayList);
-                            Log.e("sub_categorysize", "" + sub_category_newArrayList.size());
+                            Log.e(TAG, "sub_category - " + sub_category_newArrayList);
+                            Log.e(TAG, "sub_categorysize - " + sub_category_newArrayList.size());
 
 
                         }
@@ -303,18 +300,16 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
                         e.printStackTrace();
                     }
 
-                    Log.e("", "" + categorylis.get(position));
-
-
-                }else {
-                    LoginDailogue();
-                   // ChangeActivity.changeActivity(mContext, LoginActivity.class);
+                } else {
+                    LoginDialog();
+                    // ChangeActivity.changeActivity(mContext, LoginActivity.class);
                 }
             }
         });
 
     }
-    private void LoginDailogue() {
+
+    private void LoginDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
         builder.setTitle("");
         builder.setMessage("For Advance Features Please Log-in/Register");
@@ -333,8 +328,9 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
         builder.setCancelable(false);
         builder.show();
     }
+
     private void expandablemethod(ArrayList<subcategorynew> subcategory, String category_name) {
-        Log.e("subcategory", "" + subcategory);
+        Log.e(TAG, "subcategory - " + subcategory);
         childItems.clear();
         parentItems.clear();
         listofsubcategory = iDonateSharedPreference.getselectedsubcategorydata(mContext);
@@ -348,23 +344,23 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
             mapParent.put(ConstantManager.Parameter.SUB_CATEGORY_NAME, subcategorynew.getSub_category_name());
             mapParent.put(ConstantManager.Parameter.SUB_CATEGORY_CODE, subcategorynew.getSub_category_code());
             mapParent.put(ConstantManager.Parameter.NO_CHILD, subcategorynew.getDatafind());
-            Log.e("getSub_child",""+subcategorynew.getChild_category_news());
+            Log.e(TAG, "getSub_child - " + subcategorynew.getChild_category_news());
             int countIsChecked = 0;
 
-                for (child_categorynew child_categorynew : subcategorynew.getChild_category_news()) {
-                    HashMap<String, String> mapChild = new HashMap<String, String>();
-                    mapChild.put(ConstantManager.Parameter.CHILD_CATEGORY_NAME, child_categorynew.getChild_category_name());
-                    mapChild.put(ConstantManager.Parameter.CHILD_CATEGORY_CODE, child_categorynew.getChild_category_code());
-                    mapChild.put(ConstantManager.Parameter.CHILD_ID, child_categorynew.getChild_category_id());
-                    mapChild.put(ConstantManager.Parameter.IS_CHECKED, child_categorynew.getIsChecked());
+            for (child_categorynew child_categorynew : subcategorynew.getChild_category_news()) {
+                HashMap<String, String> mapChild = new HashMap<String, String>();
+                mapChild.put(ConstantManager.Parameter.CHILD_CATEGORY_NAME, child_categorynew.getChild_category_name());
+                mapChild.put(ConstantManager.Parameter.CHILD_CATEGORY_CODE, child_categorynew.getChild_category_code());
+                mapChild.put(ConstantManager.Parameter.CHILD_ID, child_categorynew.getChild_category_id());
+                mapChild.put(ConstantManager.Parameter.IS_CHECKED, child_categorynew.getIsChecked());
 
-                    if (child_categorynew.getIsChecked().equalsIgnoreCase(ConstantManager.CHECK_BOX_CHECKED_TRUE)) {
+                if (child_categorynew.getIsChecked().equalsIgnoreCase(ConstantManager.CHECK_BOX_CHECKED_TRUE)) {
 
-                        countIsChecked++;
-                    }
-                    childArrayList.add(mapChild);
-
+                    countIsChecked++;
                 }
+                childArrayList.add(mapChild);
+
+            }
 
             if (countIsChecked == subcategorynew.getChild_category_news().size()) {
 
@@ -375,7 +371,7 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
                    } else subcategorynew.setIsChecked(ConstantManager.CHECK_BOX_CHECKED_FALSE);
                 } subcategorynew.setIsChecked(ConstantManager.CHECK_BOX_CHECKED_TRUE);*/
 
-                if(listofItems.contains(subcategorynew.getSub_category_code())){
+                if (listofItems.contains(subcategorynew.getSub_category_code())) {
                     subcategorynew.setIsChecked(ConstantManager.CHECK_BOX_CHECKED_FALSE);
                 } else subcategorynew.setIsChecked(ConstantManager.CHECK_BOX_CHECKED_FALSE);
 
@@ -389,7 +385,7 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
                     } else subcategorynew.setIsChecked(ConstantManager.CHECK_BOX_CHECKED_FALSE);
                 } subcategorynew.setIsChecked(ConstantManager.CHECK_BOX_CHECKED_TRUE);*/
 
-                if(listofItems.contains(subcategorynew.getSub_category_code())){
+                if (listofItems.contains(subcategorynew.getSub_category_code())) {
                     subcategorynew.setIsChecked(ConstantManager.CHECK_BOX_CHECKED_FALSE);
                 } else subcategorynew.setIsChecked(ConstantManager.CHECK_BOX_CHECKED_FALSE);
             }
@@ -398,8 +394,8 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
             parentItems.add(mapParent);
 
         }
-        Log.e("childItems", "" + childItems);
-        Log.e("parentItems", "" + parentItems);
+        Log.e(TAG, "childItems - " + childItems);
+        Log.e(TAG, "parentItems - " + parentItems);
         ConstantManager.parentItems1 = parentItems;
         ConstantManager.childItems = childItems;
 
@@ -422,19 +418,19 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView listview_tv_item1,listview_tv_item2,listview_tv_subitem;
-        LinearLayout linear2,linear1;
+        public TextView listview_tv_item1, listview_tv_item2, listview_tv_subitem;
+        LinearLayout linear2, linear1;
         RelativeLayout sublinear;
         CheckBox box1, box2;
 
         public MyViewHolder(View view) {
             super(view);
             listview_tv_item1 = (TextView) view.findViewById(R.id.listview_tv_item1);
-            listview_tv_item2=(TextView)view.findViewById(R.id.listview_tv_item2);
-            listview_tv_subitem=(TextView)view.findViewById(R.id.listview_tv_subitem);
-            linear2=(LinearLayout)view.findViewById(R.id.linear2);
-            linear1=(LinearLayout)view.findViewById(R.id.linear1);
-            sublinear = (RelativeLayout)view.findViewById(R.id.sublinearLayout);
+            listview_tv_item2 = (TextView) view.findViewById(R.id.listview_tv_item2);
+            listview_tv_subitem = (TextView) view.findViewById(R.id.listview_tv_subitem);
+            linear2 = (LinearLayout) view.findViewById(R.id.linear2);
+            linear1 = (LinearLayout) view.findViewById(R.id.linear1);
+            sublinear = (RelativeLayout) view.findViewById(R.id.sublinearLayout);
             box1 = (CheckBox) view.findViewById(R.id.cbMainCategory1);
             box2 = (CheckBox) view.findViewById(R.id.cbMainCategory2);
 

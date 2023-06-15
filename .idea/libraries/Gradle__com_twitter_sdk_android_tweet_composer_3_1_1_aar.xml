@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.twitter.sdk.android:tweet-composer:3.1.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8c57d2d13054e7c0ab163381e28abf81/transformed/jetified-tweet-composer-3.1.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8c57d2d13054e7c0ab163381e28abf81/transformed/jetified-tweet-composer-3.1.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8c57d2d13054e7c0ab163381e28abf81/transformed/jetified-tweet-composer-3.1.1/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/17023430bb4f1345c3602b9f734cd8a5/transformed/jetified-tweet-composer-3.1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/17023430bb4f1345c3602b9f734cd8a5/transformed/jetified-tweet-composer-3.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/17023430bb4f1345c3602b9f734cd8a5/transformed/jetified-tweet-composer-3.1.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.twitter.sdk.android/tweet-composer/3.1.1/e8f58f8e177d76e6f7cf21ec592a7426389cd9d4/tweet-composer-3.1.1-javadoc.jar!/" />

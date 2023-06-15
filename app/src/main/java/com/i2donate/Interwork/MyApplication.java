@@ -9,6 +9,7 @@ import com.facebook.appevents.AppEventsLogger;
 public class MyApplication extends Application {
 
     private static MyApplication mInstance;
+    static String TAG = MyApplication.class.getSimpleName();
 
     @Override
     public void onCreate() {
@@ -20,10 +21,10 @@ public class MyApplication extends Application {
     }
 
     public static synchronized MyApplication getInstance() {
-        if (mInstance==null){
-            Log.e("mInstance","null");
-        }else {
-            Log.e("mInstance",""+mInstance);
+        if (mInstance == null) {
+            Log.e(TAG, "mInstance null");
+        } else {
+            Log.e(TAG, "mInstance - " + mInstance);
         }
         return mInstance;
     }

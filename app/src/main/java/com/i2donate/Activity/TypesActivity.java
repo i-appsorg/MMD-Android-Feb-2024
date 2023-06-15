@@ -83,7 +83,7 @@ public class TypesActivity extends AppCompatActivity {
 
 
         init();
-        listioner();
+        listener();
     }
 
     private void init() {
@@ -115,7 +115,7 @@ public class TypesActivity extends AppCompatActivity {
 
     }
 
-    private void listioner() {
+    private void listener() {
 
         reset_button.setOnClickListener(new View.OnClickListener() {
             @Override

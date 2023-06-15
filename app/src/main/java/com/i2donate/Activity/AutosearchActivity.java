@@ -20,9 +20,9 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
 import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.places.PlaceBuffer;
 import com.google.android.gms.location.places.Places;
-import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.i2donate.Adapter.PlacesAutoCompleteAdapter;
@@ -47,7 +47,7 @@ public class AutosearchActivity extends AppCompatActivity implements GoogleApiCl
         buildGoogleApiClient();
         setContentView(R.layout.activity_autosearch);
         init();
-        listioner();
+        listener();
 
     }
 
@@ -66,7 +66,7 @@ public class AutosearchActivity extends AppCompatActivity implements GoogleApiCl
 
     }
 
-    private void listioner() {
+    private void listener() {
 
         delete.setOnClickListener(new View.OnClickListener() {
             @Override

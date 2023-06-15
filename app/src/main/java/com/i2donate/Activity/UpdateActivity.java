@@ -23,6 +23,7 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Base64;
+import android.util.Base64OutputStream;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -53,6 +54,8 @@ import com.i2donate.RetrofitAPI.ApiClient;
 import com.i2donate.RetrofitAPI.ApiInterface;
 import com.i2donate.Session.IDonateSharedPreference;
 import com.i2donate.Session.SessionManager;
+import com.i2donate.databinding.ActivityUpdateBinding;
+import com.i2donate.utility.FileUtils;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
@@ -70,8 +73,11 @@ import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -103,7 +109,7 @@ public class UpdateActivity extends AppCompatActivity {
     SearchableSpinner country_spinner;
     private final static String API_KEY = "";
     String country_symbol = "";
-    RadioButton radio_btn_male, radio_btn_female, radio_btn_orthers, radio_btn_yes, radio_btn_no;
+    RadioButton radio_btn_male, radio_btn_female, radio_btn_orthers, radio_btn_individual, radio_btn_business;
     int index = 0;
     SessionManager sessionManager;
     @BindView(R.id.business_name_input_layout)
@@ -118,22 +124,29 @@ public class UpdateActivity extends AppCompatActivity {
     String business_name = "";
     String type = "";
     String permission = "";
+    ActivityUpdateBinding binding;
+    String pathIncorpDoc = "", pathAllocDoc = "", pathStandDoc = "", pathOtherDoc = "";
+    String base64PathIncorpDoc = "", base64PathAllocDoc = "", base64PathStandDoc = "", base64PathOtherDoc = "";
+    boolean btnIncorpDocClicked = false, btnAllocDocClicked = false, btnStandDocClicked = false, btnOtherDocClicked = false;
+    private static final int MY_REQUEST_CODE_PERMISSION = 1000;
+    private static final int MY_RESULT_CODE_FILECHOOSER = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update);
+        binding = ActivityUpdateBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);
         getWindow().setBackgroundDrawableResource(R.drawable.dashbord_background);
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         sessionManager = new SessionManager(getApplicationContext());
         reload();
-
     }
 
     private void reload() {
         init();
-        listioner();
+        listener();
     }
 
     private void CountryAPI(final String country) {
@@ -145,7 +158,7 @@ public class UpdateActivity extends AppCompatActivity {
         jsonObject1.addProperty("email", API_KEY);
         apiService =
                 ApiClient.getClient().create(ApiInterface.class);
-        Log.e(TAG, "CountryAPI: "+apiService );
+        Log.e(TAG, "CountryAPI: " + apiService);
         Call<JsonObject> call = apiService.countryAPI(jsonObject1);
         call.enqueue(new Callback<JsonObject>() {
             @Override
@@ -235,8 +248,8 @@ public class UpdateActivity extends AppCompatActivity {
         country_spinner = (SearchableSpinner) findViewById(R.id.spin_country);
         business_reg_name_et = (EditText) findViewById(R.id.business_reg_name_et);
         business_name_input_layout = (TextInputLayout) findViewById(R.id.business_name_input_layout);
-        radio_btn_yes = (RadioButton) findViewById(R.id.radio_btn_yes);
-        radio_btn_no = (RadioButton) findViewById(R.id.radio_btn_no);
+        radio_btn_individual = (RadioButton) findViewById(R.id.radio_btn_individual);
+        radio_btn_business = (RadioButton) findViewById(R.id.radio_btn_business);
         gender_layout = (LinearLayout) findViewById(R.id.gender_layout);
         terms_layout = (LinearLayout) findViewById(R.id.terms_layout);
         checkbox_btn = (CheckBox) findViewById(R.id.checkbox_btn);
@@ -388,11 +401,23 @@ public class UpdateActivity extends AppCompatActivity {
             back_icon_img.setVisibility(View.GONE);
             ic_edit_icon.setVisibility(View.GONE);
         }
-
-
     }
 
-    private void listioner() {
+    private void ManageVisibilityOfDocs(Boolean isHide) {
+        if (isHide) {
+            binding.layIncorpDoc.setVisibility(View.GONE);
+            binding.layAllocDoc.setVisibility(View.GONE);
+            binding.layStandDoc.setVisibility(View.GONE);
+            binding.layOtherDoc.setVisibility(View.GONE);
+        } else {
+            binding.layIncorpDoc.setVisibility(View.VISIBLE);
+            binding.layAllocDoc.setVisibility(View.VISIBLE);
+            binding.layStandDoc.setVisibility(View.VISIBLE);
+            binding.layOtherDoc.setVisibility(View.VISIBLE);
+        }
+    }
+
+    private void listener() {
         checkbox_btn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -439,46 +464,46 @@ public class UpdateActivity extends AppCompatActivity {
             }
         });
 
-        radio_btn_no.setOnClickListener(new View.OnClickListener() {
+        radio_btn_business.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (radio_btn_no.isChecked()) {
+                if (radio_btn_business.isChecked()) {
                     business_name_input_layout.setVisibility(View.VISIBLE);
                     business_name = business_reg_name_et.getText().toString();
                     gender_layout.setVisibility(View.GONE);
                     type = "business";
+                    ManageVisibilityOfDocs(false);
                 } else {
                     gender_layout.setVisibility(View.VISIBLE);
                     business_reg_name_et.setText("");
                     type = "individual";
                     business_name_input_layout.setVisibility(View.GONE);
+                    ManageVisibilityOfDocs(true);
                 }
             }
         });
-        radio_btn_yes.setOnClickListener(new View.OnClickListener() {
+        radio_btn_individual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (radio_btn_yes.isChecked()) {
+                if (radio_btn_individual.isChecked()) {
                     business_reg_name_et.setText("");
                     type = "individual";
                     business_name_input_layout.setVisibility(View.GONE);
                     gender_layout.setVisibility(View.VISIBLE);
+                    ManageVisibilityOfDocs(true);
                 } else {
                     type = "business";
                     gender_layout.setVisibility(View.GONE);
                     business_name = business_reg_name_et.getText().toString();
                     business_name_input_layout.setVisibility(View.VISIBLE);
+                    ManageVisibilityOfDocs(false);
                 }
             }
         });
         skip_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /* ChangeActivity.changeActivity(UpdateActivity.this, BrowseActivity.class);
-                finish();*/
                 finish();
-
-
             }
         });
         back_icon_img.setOnClickListener(new View.OnClickListener() {
@@ -497,24 +522,11 @@ public class UpdateActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 update_btn.setVisibility(View.VISIBLE);
-//                String[] perms = {Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE};
-//                for (int i = 0; i < perms.length; i++) {
-//                    if (ContextCompat.checkSelfPermission(UpdateActivity.this, perms[i]) != PackageManager.PERMISSION_GRANTED) {
-//                        ActivityCompat.requestPermissions(UpdateActivity.this, perms, 101);
-//                        return;
-//                    }
-//                }
                 if (isPermissionGranted()) {
                     getGallery();
                 } else {
                     isPermissionGranted();
                 }
-
-//                getGallery();
-
-                // selectFile();
-
-                // selectFile();
             }
         });
 
@@ -537,13 +549,8 @@ public class UpdateActivity extends AppCompatActivity {
                         }
                     } catch (JSONException e) {
 
-
                     }
-
-
                 }
-
-
             }
         });
         update_name_et.addTextChangedListener(new TextWatcher() {
@@ -558,7 +565,6 @@ public class UpdateActivity extends AppCompatActivity {
                     update_name_et.setText("");
                     Toast.makeText(getApplicationContext(), "Space Not allowed", Toast.LENGTH_LONG).show();
                     name_input_layout_update.setError("Required name");
-                    //disableButton(...)
                 } else {
                     if (update_name_et.getText().toString().trim().length() <= 0) {
                         name_input_layout_update.setError("Required name");
@@ -566,10 +572,7 @@ public class UpdateActivity extends AppCompatActivity {
                         name_input_layout_update.setError("");
 
                     }
-                    //Toast.makeText(getApplicationContext(), " allowed", Toast.LENGTH_LONG).show();
-                    //enableButton(...)
                 }
-
             }
 
             @Override
@@ -588,22 +591,84 @@ public class UpdateActivity extends AppCompatActivity {
                         } else {
                             Toast.makeText(UpdateActivity.this, "Please accept our Terms and Conditions", Toast.LENGTH_SHORT).show();
                         }
-
-
                     } else {
-                        // Toast.makeText(UpdateActivity.this, "Please check internet connection", Toast.LENGTH_SHORT).show();
                         ConstantFunctions.showSnackbar(update_name_et, "Please check internet connection", UpdateActivity.this);
-                        //ConstantFunctions.showSnakBar("Please check internet connection", v);
                     }
-
                 } else {
                     Toast.makeText(UpdateActivity.this, "Enter name", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
 
+        binding.uploadBtnIncorpDoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnIncorpDocClicked = true;
+                btnAllocDocClicked = false;
+                btnStandDocClicked = false;
+                btnOtherDocClicked = false;
+                askPermissionAndBrowseFile();
+            }
+        });
+
+        binding.uploadBtnAllocDoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnIncorpDocClicked = false;
+                btnAllocDocClicked = true;
+                btnStandDocClicked = false;
+                btnOtherDocClicked = false;
+                askPermissionAndBrowseFile();
+            }
+        });
+
+        binding.uploadBtnStandDoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnIncorpDocClicked = false;
+                btnAllocDocClicked = false;
+                btnStandDocClicked = true;
+                btnOtherDocClicked = false;
+                askPermissionAndBrowseFile();
+            }
+        });
+
+        binding.uploadBtnOtherDoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnIncorpDocClicked = false;
+                btnAllocDocClicked = false;
+                btnStandDocClicked = false;
+                btnOtherDocClicked = true;
+                askPermissionAndBrowseFile();
             }
         });
     }
 
+    private void askPermissionAndBrowseFile() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) { // Level 23
+
+            // Check if we have Call permission
+            int permisson = ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
+
+            if (permisson != PackageManager.PERMISSION_GRANTED) {
+                // If don't have permission so prompt the user.
+                this.requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, MY_REQUEST_CODE_PERMISSION);
+                return;
+            }
+        }
+        doBrowseFile();
+    }
+
+    private void doBrowseFile() {
+        Intent chooseFileIntent = new Intent(Intent.ACTION_GET_CONTENT);
+        chooseFileIntent.setType("*/*");
+        // Only return URIs that can be opened with ContentResolver
+        chooseFileIntent.addCategory(Intent.CATEGORY_OPENABLE);
+
+        chooseFileIntent = Intent.createChooser(chooseFileIntent, "Choose a file");
+        startActivityForResult(chooseFileIntent, MY_RESULT_CODE_FILECHOOSER);
+    }
 
     public boolean isPermissionGranted() {
         if (Build.VERSION.SDK_INT >= 23) {
@@ -614,15 +679,12 @@ public class UpdateActivity extends AppCompatActivity {
                 Log.e("TAG", "Permission is granted *********");
                 return true;
             } else {
-
                 Log.e("TAG", "Permission is not present * * * * ** *");
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 99);
                 return false;
             }
         }
-
         return true;
-
     }
 
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
@@ -681,8 +743,27 @@ public class UpdateActivity extends AppCompatActivity {
         jsonObject1.addProperty("business_name", business_name);
         jsonObject1.addProperty("type", type);
         jsonObject1.addProperty("terms", "Yes");
-        Log.e("jsonObject1", "" + jsonObject1);
 
+        if (type.equalsIgnoreCase("business")) {
+            if (pathIncorpDoc.length() > 0) {
+                jsonObject1.addProperty("incorp_doc", base64PathIncorpDoc);
+                jsonObject1.addProperty("incorp_doc_type", pathIncorpDoc.substring(pathIncorpDoc.lastIndexOf(".")));
+            }
+            if (pathAllocDoc.length() > 0) {
+                jsonObject1.addProperty("tax_id_doc", base64PathAllocDoc);
+                jsonObject1.addProperty("tax_id_doc_type", pathAllocDoc.substring(pathAllocDoc.lastIndexOf(".")));
+            }
+            if (pathStandDoc.length() > 0) {
+                jsonObject1.addProperty("good_standing_doc", base64PathStandDoc);
+                jsonObject1.addProperty("good_standing_doc_type", pathStandDoc.substring(pathStandDoc.lastIndexOf(".")));
+            }
+            if (pathOtherDoc.length() > 0) {
+                jsonObject1.addProperty("oth_doc", base64PathOtherDoc);
+                jsonObject1.addProperty("oth_doc_type", pathOtherDoc.substring(pathOtherDoc.lastIndexOf(".")));
+            }
+        }
+
+        Log.e("jsonObject1", "" + jsonObject1);
 
         apiService =
                 ApiClient.getClient().create(ApiInterface.class);
@@ -700,33 +781,24 @@ public class UpdateActivity extends AppCompatActivity {
                         Log.e(TAG, "" + message);
                         if (jsonObject.getString("status").equals("1")) {
                             String data = jsonObject.getString("data");
-                            Log.e("data232", "" + data);
                             JSONObject jsonObject1 = new JSONObject(data);
-                            Log.e("data232", "" + jsonObject1);
                             sessionManager.createLoginSession(jsonObject1.getString("user_id"), jsonObject1.getString("email"), jsonObject1.getString("name"), jsonObject1.getString("phone_number"), jsonObject1.getString("photo"), jsonObject1.getString("token"), jsonObject1.getString("business_name"), jsonObject1.getString("country"), jsonObject1.getString("gender"), jsonObject1.getString("type"));
                             iDonateSharedPreference.setprofiledata(getApplicationContext(), data);
-                            Log.e("updatedata", "" + iDonateSharedPreference.getprofiledata(getApplicationContext()));
                             iDonateSharedPreference.setSocialProfileimg(getApplicationContext(), image_url);
                             if (iDonateSharedPreference.geteditprofile(getApplicationContext()).equalsIgnoreCase("1")) {
                                 iDonateSharedPreference.seteditprofile(getApplicationContext(), "1");
                                 reload();
                                 update_btn.setVisibility(View.GONE);
                             } else {
-
-                                // ChangeActivity.clearAllPreviousActivity(UpdateActivity.this, BrowseActivity.class);
                                 finish();
                             }
-
-                            //  iDonateSharedPreference.seteditprofile(getApplicationContext(), "0");
                             Toast.makeText(UpdateActivity.this, message, Toast.LENGTH_SHORT).show();
                         } else if (jsonObject.getString("status").equals("0")) {
-                            // Toast.makeText(UpdateActivity.this, message, Toast.LENGTH_SHORT).show();
                             ConstantFunctions.showSnackbar(update_name_et, message, UpdateActivity.this);
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-
                 }
 
                 @Override
@@ -739,7 +811,6 @@ public class UpdateActivity extends AppCompatActivity {
             e.printStackTrace();
             Log.e("Exception", "" + e);
         }
-
     }
 
     private void selectFile() {
@@ -751,7 +822,7 @@ public class UpdateActivity extends AppCompatActivity {
             builder.setPositiveButton("OK",
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            requestPermissions(new String[]{android.Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_READ_PERMISSION);
+                            requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_READ_PERMISSION);
                         }
                     });
             builder.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
@@ -766,7 +837,6 @@ public class UpdateActivity extends AppCompatActivity {
         } else {
             getGallery();
         }
-
     }
 
 
@@ -802,18 +872,67 @@ public class UpdateActivity extends AppCompatActivity {
 
     public void choosePhotoFromGallary() {
         Intent galleryIntent = new Intent(Intent.ACTION_PICK,
-                android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 
         startActivityForResult(galleryIntent, GALLERY);
     }
 
     private void takePhotoFromCamera() {
-        Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent, CAMERA);
     }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+            case MY_RESULT_CODE_FILECHOOSER:
+                if (resultCode == Activity.RESULT_OK) {
+                    if (data != null) {
+                        Uri fileUri = data.getData();
+
+                        String filePath = null;
+                        try {
+                            filePath = FileUtils.getPath(this, fileUri);
+                        } catch (Exception e) {
+                            Log.e(TAG, "Error: " + e);
+                            Toast.makeText(this, "Error: " + e, Toast.LENGTH_SHORT).show();
+                        }
+
+                        assert filePath != null;
+                        File file = new File(filePath);
+                        long fileSizeInBytes = file.length(); // Get length of file in bytes
+                        long fileSizeInKB = fileSizeInBytes / 1024; // Convert the bytes to Kilobytes (1 KB = 1024 Bytes)
+                        long fileSizeInMB = fileSizeInKB / 1024; // Convert the KB to MegaBytes (1 MB = 1024 KBytes)
+                        if (fileSizeInMB <= 1) {
+                            String filename = filePath.substring(filePath.lastIndexOf("/") + 1);
+                            if (btnIncorpDocClicked) {
+                                binding.txtIncorpDocName.setText(filename);
+                                binding.txtIncorpDocName.setTextColor(getResources().getColor(R.color.file_choose_color));
+                                pathIncorpDoc = filePath;
+                                base64PathIncorpDoc = getStringFile(file);
+                            } else if (btnAllocDocClicked) {
+                                binding.txtAllocDocName.setText(filename);
+                                binding.txtAllocDocName.setTextColor(getResources().getColor(R.color.file_choose_color));
+                                pathAllocDoc = filePath;
+                                base64PathAllocDoc = getStringFile(file);
+                            } else if (btnStandDocClicked) {
+                                binding.txtStandDocName.setText(filename);
+                                binding.txtStandDocName.setTextColor(getResources().getColor(R.color.file_choose_color));
+                                pathStandDoc = filePath;
+                                base64PathStandDoc = getStringFile(file);
+                            } else if (btnOtherDocClicked) {
+                                binding.txtOtherDocName.setText(filename);
+                                binding.txtOtherDocName.setTextColor(getResources().getColor(R.color.file_choose_color));
+                                pathOtherDoc = filePath;
+                                base64PathOtherDoc = getStringFile(file);
+                            }
+                        } else {
+                            Toast.makeText(this, "Please choose file size less than 1mb", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+                break;
+        }
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == this.RESULT_CANCELED) {
             return;
@@ -856,6 +975,32 @@ public class UpdateActivity extends AppCompatActivity {
             Log.e("base64", "" + base64img);
             Toast.makeText(UpdateActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    // Converting File to Base64.encode String type using Method
+    private String getStringFile(File f) {
+        InputStream inputStream = null;
+        String encodedFile = "", lastVal;
+        try {
+            inputStream = new FileInputStream(f.getAbsolutePath());
+
+            byte[] buffer = new byte[10240];//specify the size to allow
+            int bytesRead;
+            ByteArrayOutputStream output = new ByteArrayOutputStream();
+            Base64OutputStream output64 = new Base64OutputStream(output, Base64.DEFAULT);
+
+            while ((bytesRead = inputStream.read(buffer)) != -1) {
+                output64.write(buffer, 0, bytesRead);
+            }
+            output64.close();
+            encodedFile = output.toString();
+        } catch (FileNotFoundException e1) {
+            e1.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        lastVal = encodedFile;
+        return lastVal;
     }
 
     public String saveImageCam(Bitmap myBitmap, Context applicationContext, String imageDirectory) {

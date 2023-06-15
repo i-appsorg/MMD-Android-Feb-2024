@@ -3,6 +3,7 @@ package com.i2donate.Adapter;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -42,7 +43,6 @@ import com.i2donate.Activity.SelectPaymentActivity;
 import com.i2donate.Activity.UnitedStateDetailsActivity;
 import com.i2donate.Model.ChangeActivity;
 import com.i2donate.Model.Charitylist;
-import com.i2donate.Model.CurrencyBean;
 import com.i2donate.Model.CustomImageView;
 import com.i2donate.R;
 import com.i2donate.RetrofitAPI.ApiClient;
@@ -57,21 +57,16 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-
-/**
- * Created by Gowrishankar on 14/05/19.
- */
 public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private Activity mContext;
     List<HashMap<String, String>> charitylist;
-     ArrayList<Charitylist> charitylist1;
+    ArrayList<Charitylist> charitylist1;
     ArrayList<Charitylist> locationlist;
     List<Charitylist> names;
     List<Charitylist> location;
@@ -86,13 +81,6 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
     private final int VIEW_TYPE_ITEM = 0;
     private final int VIEW_TYPE_LOADING = 1;
 
-
-    public LoadMoreUnitesStateLocationAdapterList(Activity mContext, List<HashMap<String, String>> charitylist) {
-        this.mContext = mContext;
-        this.charitylist = charitylist;
-        Log.e("charitylist", "" + charitylist);
-    }
-
     public LoadMoreUnitesStateLocationAdapterList(Activity mContext, ArrayList<Charitylist> charitylist1) {
         this.mContext = mContext;
         this.charitylist1 = charitylist1;
@@ -104,17 +92,9 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
         session = new SessionManager(mContext);
         userDetails = session.getUserDetails();
         iDonateSharedPreference = new IDonateSharedPreference();
-        String page = iDonateSharedPreference.getdailoguepage(mContext);
-        if (page.equalsIgnoreCase("1")) {
-            Log.e("pageback", "page");
-            dailogue();
-        }
 
         session = new SessionManager(mContext);
         userDetails = session.getUserDetails();
-
-
-
 
     }
 
@@ -131,8 +111,6 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
     }
 
 
-
-
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
 
@@ -142,212 +120,10 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
         } else if (viewHolder instanceof LoadingViewHolder) {
             showLoadingView((LoadingViewHolder) viewHolder, position);
         }
-
     }
 
     public interface IMethodCaller {
         void yourDesiredMethod();
-    }
-
-    @SuppressLint("ResourceAsColor")
-    private void dailogue() {
-       /* d = new BottomSheetDialog(mContext, R.style.payment_dailog);
-        d.setContentView(R.layout.payment_alert_dailog);
-        LinearLayout payment_dailog_linear = (LinearLayout) d.findViewById(R.id.payment_dailog_linear);
-        final EditText payment_et = (EditText) d.findViewById(R.id.payment_et);
-        TextView cancel_tv = (TextView) d.findViewById(R.id.cancel_tv);
-        Button payment_continue_btn = (Button) d.findViewById(R.id.payment_continue_btn);
-        String amount = iDonateSharedPreference.getdailogueamt(mContext);
-        payment_et.append(amount);
-        d.getWindow().setBackgroundDrawable(new ColorDrawable(R.color.trans_black));
-        payment_dailog_linear.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(payment_et.getWindowToken(),
-                        InputMethodManager.RESULT_UNCHANGED_SHOWN);
-
-                return false;
-            }
-        });
-        payment_continue_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mContext, SelectPaymentActivity.class);
-                Bundle bundle = new Bundle();
-                final String payment = payment_et.getText().toString().trim();
-                iDonateSharedPreference.setdailogueamt(mContext, payment);
-                bundle.putString("payment_amt", payment);
-                intent.putExtras(bundle);
-                mContext.startActivity(intent);
-                mContext.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        d.dismiss();
-                    }
-                }, 1000);
-
-            }
-        });
-        cancel_tv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                iDonateSharedPreference.setdailoguepage(getApplicationContext(), "0");
-                d.dismiss();
-            }
-        });
-        d.setCancelable(true);
-        d.show();*/
-
-        d = new BottomSheetDialog(mContext, R.style.payment_dailog);
-        d.setContentView(R.layout.payment_alert_dailog);
-        LinearLayout payment_dailog_linear = (LinearLayout) d.findViewById(R.id.payment_dailog_linear);
-        final EditText payment_et = (EditText) d.findViewById(R.id.payment_et);
-        TextView cancel_tv = (TextView) d.findViewById(R.id.cancel_tv);
-
-        Button payment_continue_btn = (Button) d.findViewById(R.id.payment_continue_btn);
-        TextView textview_percentage = (TextView) d.findViewById(R.id.textview_percentage);
-        String code = "Merchant charges and processing fee will be added to whatever donation amount is entered. <img src ='addbutton.png'>";
-
-        Spanned spanned = Html.fromHtml(code, new Html.ImageGetter() {
-            @Override
-            public Drawable getDrawable(String arg0) {
-                int id = 0;
-
-                if (arg0.equals("addbutton.png")) {
-                    id = R.drawable.ic_info;
-                }
-                LevelListDrawable d = new LevelListDrawable();
-                Drawable empty = mContext.getResources().getDrawable(id);
-                d.addLevel(0, 0, empty);
-                d.setBounds(0, 0, empty.getIntrinsicWidth(), empty.getIntrinsicHeight());
-
-                return d;
-
-            }
-        }, null);
-        textview_percentage.setText(spanned);
-//        String amount=iDonateSharedPreference.getdailogueamt(mContext);
-//        payment_et.append(amount);
-        d.getWindow().setBackgroundDrawable(new ColorDrawable(R.color.trans_black));
-        payment_et.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-                if (charSequence.toString().startsWith(".")) {
-                    payment_et.setText("");
-                    Toast.makeText(mContext, "Dot Not allowed", Toast.LENGTH_LONG).show();
-                    //disableButton(...)
-                } else {
-
-                    //Toast.makeText(getApplicationContext(), " allowed", Toast.LENGTH_LONG).show();
-                    //enableButton(...)
-                }
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-        payment_dailog_linear.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(payment_et.getWindowToken(),
-                        InputMethodManager.RESULT_UNCHANGED_SHOWN);
-                return false;
-            }
-        });
-        textview_percentage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(mContext, R.style.CustomAlertDialog);
-// ...Irrelevant code for customizing the buttons and title
-                LayoutInflater inflater = mContext.getLayoutInflater();
-
-                View dialogView = inflater.inflate(R.layout.percentage_detail_layout, null);
-                dialogBuilder.setView(dialogView);
-                final AlertDialog alertDialog = dialogBuilder.create();
-                String payment_amt = payment_et.getText().toString().trim();
-                TextView donationamt_tv = (TextView) dialogView.findViewById(R.id.donationamt_tv);
-                ImageView close_img = (ImageView) dialogView.findViewById(R.id.close_img);
-                if (!payment_amt.isEmpty()) {
-                    donationamt_tv.setText("$ " + payment_amt);
-                    ;
-                } else {
-                    donationamt_tv.setText("$ " + "10");
-                    ;
-                    payment_amt = "10";
-                }
-                Double amount = Double.valueOf(payment_amt);
-                double processing_fee = ((amount / 100.0f) * 1);
-                double total_amt = processing_fee + amount;
-                double percentage = ((total_amt / 100.0f) * 2.9) + 0.30;
-
-                Double payment_amt_total = amount + percentage + processing_fee;
-                TextView merchantcharges_tv = (TextView) dialogView.findViewById(R.id.merchantcharges_tv);
-                merchantcharges_tv.setText("$ " + String.format(" %.2f", percentage));
-                TextView processing_tv = (TextView) dialogView.findViewById(R.id.processing_tv);
-                processing_tv.setText("$ " + String.valueOf(processing_fee));
-                ;
-                TextView totalamt_tv = (TextView) dialogView.findViewById(R.id.totalamt_tv);
-                totalamt_tv.setText("$ " + String.format("%.2f", payment_amt_total));
-                //editText.setText("test label");
-                close_img.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        alertDialog.dismiss();
-                    }
-                });
-
-                alertDialog.show();
-            }
-        });
-        payment_continue_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final String payment = payment_et.getText().toString().trim();
-                if (!payment.isEmpty()) {
-                    float fpay = Float.parseFloat(payment);
-                    int pay = (int) fpay;
-                    if (pay >= 1) {
-                        Intent intent = new Intent(mContext, SelectPaymentActivity.class);
-                        Bundle bundle = new Bundle();
-                        iDonateSharedPreference.setdailogueamt(mContext, payment);
-                        iDonateSharedPreference.setdailogueamt(mContext, payment);
-                        bundle.putString("payment_amt", payment);
-                        intent.putExtras(bundle);
-                        mContext.startActivity(intent);
-                        mContext.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                        d.dismiss();
-                    } else {
-                        Toast.makeText(mContext, "Please enter the amount greater than Zero", Toast.LENGTH_SHORT).show();
-
-                    }
-                } else {
-                    Toast.makeText(mContext, "Please enter the amount", Toast.LENGTH_SHORT).show();
-
-                }
-
-
-            }
-        });
-        cancel_tv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                d.dismiss();
-            }
-        });
-        d.setCancelable(true);
-        d.show();
     }
 
     public static String getDeviceUniqueID(Activity activity) {
@@ -383,37 +159,18 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                         NameSearchActivity.like();
                         String data = jsonObject.getString("data");
                         JSONObject jsonObject2 = new JSONObject(data);
-
-                        if (like.equalsIgnoreCase("1")) {
-
-
-                          /*  holder.follow_linear_layout.setVisibility(View.VISIBLE);
-                            holder.unfollow_linear_layout.setVisibility(View.GONE);*/
-                            //  notifyDataSetChanged();
-                        } else {
-                            Log.e("dislike", "" + like);
-                           /* holder.follow_linear_layout.setVisibility(View.GONE);
-                            holder.unfollow_linear_layout.setVisibility(View.VISIBLE);*/
-                            //notifyDataSetChanged();
-                        }
-
-
                     }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
             }
 
             @Override
             public void onFailure(Call<JsonObject> call, Throwable t) {
-
                 Log.e("unitedstate", t.toString());
-
             }
         });
-
     }
 
     private void likeAPI(String id, final String like, String user_id, String token_id, final MyViewHolder holder) {
@@ -455,21 +212,15 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                             holder.unlike_linear_layout.setVisibility(View.GONE);
                             holder.like_linear_layout.setVisibility(View.VISIBLE);
                         }
-
-
                     }
-
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
             }
 
             @Override
             public void onFailure(Call<JsonObject> call, Throwable t) {
-
                 Log.e("unitedstate", t.toString());
-
             }
         });
 
@@ -529,8 +280,6 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
     private void populateItemRows(final MyViewHolder holder, final int position) {
 
 
-
-
         holder.name_tv.setText(charitylist1.get(position).getName());
         holder.location_name_tv.setText(charitylist1.get(position).getStreet() + ", " + charitylist1.get(position).getCity() + ", " + charitylist1.get(position).getCountry());
         holder.like_count_tv.setText(charitylist1.get(position).getLike_count() + " " + "Likes");
@@ -571,12 +320,8 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                     holder.follow_count_tv.setText("Follow");
                     holder.unfollow_count_tv.setText("Follow");
                 } else {
-                    LoginDailogue();
-                    //ChangeActivity.changeActivity(mContext, LoginActivity.class);
-                    //  mContext.finish();
+                    LoginDialog();
                 }
-
-
             }
         });
         holder.unfollow_linear_layout.setOnClickListener(new View.OnClickListener() {
@@ -596,11 +341,8 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                     holder.follow_count_tv.setText("Following");
                     holder.unfollow_count_tv.setText("Following");
                 } else {
-                    LoginDailogue();
-                    //ChangeActivity.changeActivity(mContext, LoginActivity.class);
-                    // mContext.finish();
+                    LoginDialog();
                 }
-
             }
         });
         holder.like_linear_layout.setOnClickListener(new View.OnClickListener() {
@@ -616,9 +358,7 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                     String token_id = userDetails.get(SessionManager.KEY_token);
                     likeAPI(charitylist1.get(position).getId(), like, user_id, token_id, holder);
                 } else {
-                    LoginDailogue();
-                    // ChangeActivity.changeActivity(mContext, LoginActivity.class);
-                    // mContext.finish();
+                    LoginDialog();
                 }
             }
         });
@@ -636,9 +376,7 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                     String token_id = userDetails.get(SessionManager.KEY_token);
                     likeAPI(charitylist1.get(position).getId(), like, user_id, token_id, holder);
                 } else {
-                    LoginDailogue();
-                    //ChangeActivity.changeActivity(mContext, LoginActivity.class);
-                    // mContext.finish();
+                    LoginDialog();
                 }
             }
         });
@@ -653,8 +391,6 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                     e.printStackTrace();
                 }
             }
-
-
         }
         holder.united_item_layout.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ResourceAsColor")
@@ -669,7 +405,6 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                 bundle.putString("city", charitylist1.get(position).getCity());
                 bundle.putString("likecount", charitylist1.get(position).getLike_count());
                 bundle.putString("description", "");
-                //  bundle.putString("description", charitylist1.get(position).getDescription());
                 bundle.putString("id", charitylist1.get(position).getId());
                 bundle.putString("followed", charitylist1.get(position).getFollowed());
                 bundle.putString("liked", charitylist1.get(position).getLiked());
@@ -677,8 +412,6 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                 intent.putExtras(bundle);
                 mContext.startActivity(intent);
                 mContext.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-
-
             }
         });
         holder.donate_linear_layout.setOnClickListener(new View.OnClickListener() {
@@ -708,13 +441,10 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                             Drawable empty = mContext.getResources().getDrawable(id);
                             d.addLevel(0, 0, empty);
                             d.setBounds(0, 0, empty.getIntrinsicWidth(), empty.getIntrinsicHeight());
-
                             return d;
-
                         }
                     }, null);
                     textview_percentage.setText(spanned);
-                    // payment_et.append("10.00");
                     d.getWindow().setBackgroundDrawable(new ColorDrawable(R.color.trans_black));
                     payment_et.addTextChangedListener(new TextWatcher() {
                         @Override
@@ -727,13 +457,7 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                             if (charSequence.toString().startsWith(".")) {
                                 payment_et.setText("");
                                 Toast.makeText(mContext, "Dot Not allowed", Toast.LENGTH_LONG).show();
-                                //disableButton(...)
-                            } else {
-
-                                //Toast.makeText(getApplicationContext(), " allowed", Toast.LENGTH_LONG).show();
-                                //enableButton(...)
                             }
-
                         }
 
                         @Override
@@ -754,7 +478,6 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                         @Override
                         public void onClick(View v) {
                             AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(mContext, R.style.CustomAlertDialog);
-// ...Irrelevant code for customizing the buttons and title
                             LayoutInflater inflater = mContext.getLayoutInflater();
 
                             View dialogView = inflater.inflate(R.layout.percentage_detail_layout, null);
@@ -765,10 +488,8 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                             ImageView close_img = (ImageView) dialogView.findViewById(R.id.close_img);
                             if (!payment_amt.isEmpty()) {
                                 donationamt_tv.setText("$ " + payment_amt);
-                                ;
                             } else {
                                 donationamt_tv.setText("$ " + "10");
-                                ;
                                 payment_amt = "10";
                             }
                             Double amount = Double.valueOf(payment_amt);
@@ -781,10 +502,8 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                             merchantcharges_tv.setText("$ " + String.format(" %.2f", percentage));
                             TextView processing_tv = (TextView) dialogView.findViewById(R.id.processing_tv);
                             processing_tv.setText("$ " + String.valueOf(processing_fee));
-                            ;
                             TextView totalamt_tv = (TextView) dialogView.findViewById(R.id.totalamt_tv);
                             totalamt_tv.setText("$ " + String.format("%.2f", payment_amt_total));
-                            //editText.setText("test label");
                             close_img.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
@@ -803,28 +522,52 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                                 float fpay = Float.parseFloat(payment);
                                 int pay = (int) fpay;
                                 if (pay >= 1) {
-                                    Intent intent = new Intent(mContext, SelectPaymentActivity.class);
-                                    Bundle bundle = new Bundle();
-                                    iDonateSharedPreference.setdailogueamt(mContext, payment);
-                                    bundle.putString("payment_amt", payment);
-                                    bundle.putString("charity_name", charitylist1.get(position).getName());
-                                    bundle.putString("charity_id", charitylist1.get(position).getId());
-                                    iDonateSharedPreference.setcharity_id(mContext, charitylist1.get(position).getId());
-                                    iDonateSharedPreference.setcharity_name(mContext, charitylist1.get(position).getName());
-                                    intent.putExtras(bundle);
-                                    mContext.startActivity(intent);
-                                    mContext.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                                    d.dismiss();
+
+                                    ProgressDialog progressDialog = ProgressDialog.show(mContext, "", "Please wait.", true);
+                                    progressDialog.show();
+                                    apiService =
+                                            ApiClient.getClient().create(ApiInterface.class);
+
+                                    Call<String> call = apiService.getbraintree();
+                                    call.enqueue(new Callback<String>() {
+                                        @Override
+                                        public void onResponse(Call<String> call, Response<String> response) {
+                                            progressDialog.dismiss();
+                                            if (response.isSuccessful()) {
+                                                try {
+                                                    Log.e("Response_payment1", response.body().toString());
+
+                                                    Intent intent = new Intent(mContext, SelectPaymentActivity.class);
+                                                    Bundle bundle = new Bundle();
+                                                    iDonateSharedPreference.setdailogueamt(mContext, payment);
+                                                    bundle.putString("payment_amt", payment);
+                                                    bundle.putString("charity_name", charitylist1.get(position).getName());
+                                                    bundle.putString("charity_id", charitylist1.get(position).getId());
+                                                    bundle.putString("cToken", response.body());
+                                                    iDonateSharedPreference.setcharity_id(mContext, charitylist1.get(position).getId());
+                                                    iDonateSharedPreference.setcharity_name(mContext, charitylist1.get(position).getName());
+                                                    intent.putExtras(bundle);
+                                                    mContext.startActivity(intent);
+                                                    mContext.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                                                    d.dismiss();
+                                                } catch (Exception e) {
+                                                    e.getMessage();
+                                                }
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onFailure(Call<String> call, Throwable t) {
+                                            progressDialog.dismiss();
+                                            Log.e("Response_error", t.toString());
+                                        }
+                                    });
                                 } else {
                                     Toast.makeText(mContext, "Please enter the amount greater than Zero", Toast.LENGTH_SHORT).show();
-
                                 }
                             } else {
                                 Toast.makeText(mContext, "Please enter the amount", Toast.LENGTH_SHORT).show();
-
                             }
-
-
                         }
                     });
                     cancel_tv.setOnClickListener(new View.OnClickListener() {
@@ -837,7 +580,7 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                     d.setCancelable(true);
                     d.show();
                 } else {
-                    LoginDailogue();
+                    LoginDialog();
                     //  ChangeActivity.changeActivity(mContext, LoginActivity.class);
                     //  mContext.finish();
                 }
@@ -855,7 +598,7 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
         notifyDataSetChanged();
     }
 
-    private void LoginDailogue() {
+    private void LoginDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
         builder.setTitle("");
         builder.setMessage("For Advance Features Please Log-in/Register");

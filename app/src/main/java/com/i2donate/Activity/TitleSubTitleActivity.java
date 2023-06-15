@@ -71,7 +71,7 @@ public class TitleSubTitleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_title_sub_title);
         init();
-        listioner();
+        listener();
     }
     private void init() {
         iDonateSharedPreference = new IDonateSharedPreference();
@@ -97,7 +97,7 @@ public class TitleSubTitleActivity extends AppCompatActivity {
 
     }
 
-    private void listioner() {
+    private void listener() {
         back_icon_login_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
