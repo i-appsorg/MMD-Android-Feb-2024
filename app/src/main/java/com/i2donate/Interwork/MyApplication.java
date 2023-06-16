@@ -10,6 +10,11 @@ public class MyApplication extends Application {
 
     private static MyApplication mInstance;
     static String TAG = MyApplication.class.getSimpleName();
+    static {
+        System.loadLibrary("native-lib");
+    }
+    public static native String getSheetApiKey();
+    public static native String getSheetId();
 
     @Override
     public void onCreate() {

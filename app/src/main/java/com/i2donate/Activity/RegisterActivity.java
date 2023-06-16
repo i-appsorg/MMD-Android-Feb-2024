@@ -1,14 +1,11 @@
 package com.i2donate.Activity;
 
-import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.Editable;
@@ -31,7 +28,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
@@ -68,7 +64,6 @@ import com.i2donate.Session.IDonateSharedPreference;
 import com.i2donate.Session.SessionManager;
 import com.i2donate.Validation.Validation;
 import com.i2donate.databinding.ActivityRegisterBinding;
-import com.i2donate.utility.FileUtils;
 import com.twitter.sdk.android.core.Result;
 import com.twitter.sdk.android.core.TwitterApiClient;
 import com.twitter.sdk.android.core.TwitterCore;
@@ -149,11 +144,11 @@ public class RegisterActivity extends AppCompatActivity implements
     LinearLayout terms_layout;
     int user_id;
     ActivityRegisterBinding binding;
-    private static final int MY_REQUEST_CODE_PERMISSION = 1000;
-    private static final int MY_RESULT_CODE_FILECHOOSER = 2000;
-    String pathIncorpDoc = "", pathAllocDoc = "", pathStandDoc = "", pathOtherDoc = "";
-    String base64PathIncorpDoc = "", base64PathAllocDoc = "", base64PathStandDoc = "", base64PathOtherDoc = "";
-    boolean btnIncorpDocClicked = false, btnAllocDocClicked = false, btnStandDocClicked = false, btnOtherDocClicked = false;
+//    private static final int MY_REQUEST_CODE_PERMISSION = 1000;
+//    private static final int MY_RESULT_CODE_FILECHOOSER = 2000;
+//    String pathIncorpDoc = "", pathAllocDoc = "", pathStandDoc = "", pathOtherDoc = "";
+//    String base64PathIncorpDoc = "", base64PathAllocDoc = "", base64PathStandDoc = "", base64PathOtherDoc = "";
+//    boolean btnIncorpDocClicked = false, btnAllocDocClicked = false, btnStandDocClicked = false, btnOtherDocClicked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -212,20 +207,12 @@ public class RegisterActivity extends AppCompatActivity implements
                                 country_spinner.setDefaultText(countryobject.getString("name"));
                                 country_symbol = countryobject.getString("sortname");
                             }
-                            //  country_name_list.add(countryobject.getString("sortname"));
-
                         }
-                       /* ArrayAdapter<String> from_names_adapter = new ArrayAdapter<String>(RegisterActivity.this, android.R.layout.simple_spinner_item, country);
-                        from_names_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                        country_spinner.setAdapter(from_names_adapter);*/
                         country_spinner.setData(country);
-
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
-
             }
 
             @Override
@@ -269,19 +256,6 @@ public class RegisterActivity extends AppCompatActivity implements
         register_gender_layout = (LinearLayout) findViewById(R.id.register_gender_layout);
         terms_layout = (LinearLayout) findViewById(R.id.terms_layout);
         iagree_tv = (TextView) findViewById(R.id.iagree_tv);
-      /*  try {
-            Field popup = Spinner.class.getDeclaredField("mPopup");
-            popup.setAccessible(true);
-
-            // Get private mPopup member variable and try cast to ListPopupWindow
-            android.widget.ListPopupWindow popupWindow = (android.widget.ListPopupWindow) popup.get(country_spinner);
-
-            // Set popupWindow height to 500px
-            popupWindow.setHeight(80);
-        }
-        catch (NoClassDefFoundError | ClassCastException | NoSuchFieldException | IllegalAccessException e) {
-            // silently fail...
-        }*/
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -360,19 +334,19 @@ public class RegisterActivity extends AppCompatActivity implements
         });
     }
 
-    private void ManageVisibilityOfDocs(Boolean isHide) {
-        if (isHide) {
-            binding.layIncorpDoc.setVisibility(View.GONE);
-            binding.layAllocDoc.setVisibility(View.GONE);
-            binding.layStandDoc.setVisibility(View.GONE);
-            binding.layOtherDoc.setVisibility(View.GONE);
-        } else {
-            binding.layIncorpDoc.setVisibility(View.VISIBLE);
-            binding.layAllocDoc.setVisibility(View.VISIBLE);
-            binding.layStandDoc.setVisibility(View.VISIBLE);
-            binding.layOtherDoc.setVisibility(View.VISIBLE);
-        }
-    }
+//    private void ManageVisibilityOfDocs(Boolean isHide) {
+//        if (isHide) {
+//            binding.layIncorpDoc.setVisibility(View.GONE);
+//            binding.layAllocDoc.setVisibility(View.GONE);
+//            binding.layStandDoc.setVisibility(View.GONE);
+//            binding.layOtherDoc.setVisibility(View.GONE);
+//        } else {
+//            binding.layIncorpDoc.setVisibility(View.VISIBLE);
+//            binding.layAllocDoc.setVisibility(View.VISIBLE);
+//            binding.layStandDoc.setVisibility(View.VISIBLE);
+//            binding.layOtherDoc.setVisibility(View.VISIBLE);
+//        }
+//    }
 
     private void listener() {
         twitter_login.setOnClickListener(new View.OnClickListener() {
@@ -413,7 +387,7 @@ public class RegisterActivity extends AppCompatActivity implements
                     radi_gender = "";
                     business_name = business_reg_name_et.getText().toString();
                     business_name_input_layout.setVisibility(View.VISIBLE);
-                    ManageVisibilityOfDocs(false);
+//                    ManageVisibilityOfDocs(false);
                 } else {
                     register_gender_layout.setVisibility(View.VISIBLE);
                     business_reg_name_et.setText("");
@@ -428,7 +402,7 @@ public class RegisterActivity extends AppCompatActivity implements
                         radi_gender = "";
                     }
                     business_name_input_layout.setVisibility(View.GONE);
-                    ManageVisibilityOfDocs(true);
+//                    ManageVisibilityOfDocs(true);
                 }
             }
         });
@@ -450,14 +424,14 @@ public class RegisterActivity extends AppCompatActivity implements
                     } else {
                         radi_gender = "";
                     }
-                    ManageVisibilityOfDocs(true);
+//                    ManageVisibilityOfDocs(true);
                 } else {
                     type = "business";
                     radi_gender = "";
                     business_name = business_reg_name_et.getText().toString();
                     register_gender_layout.setVisibility(View.GONE);
                     business_name_input_layout.setVisibility(View.VISIBLE);
-                    ManageVisibilityOfDocs(false);
+//                    ManageVisibilityOfDocs(false);
                 }
             }
         });
@@ -718,15 +692,15 @@ public class RegisterActivity extends AppCompatActivity implements
                                     if (radi_business.equals("no")) {
                                         if (!country_symbol.isEmpty()) {
 
-                                            if (pathIncorpDoc.length() == 0) {
-                                                Toast.makeText(RegisterActivity.this, " Please choose Incorporation documents", Toast.LENGTH_SHORT).show();
-                                                return;
-                                            }
-
-                                            if (pathAllocDoc.length() == 0) {
-                                                Toast.makeText(RegisterActivity.this, " Please choose Tax Id allocation certificate", Toast.LENGTH_SHORT).show();
-                                                return;
-                                            }
+//                                            if (pathIncorpDoc.length() == 0) {
+//                                                Toast.makeText(RegisterActivity.this, " Please choose Incorporation documents", Toast.LENGTH_SHORT).show();
+//                                                return;
+//                                            }
+//
+//                                            if (pathAllocDoc.length() == 0) {
+//                                                Toast.makeText(RegisterActivity.this, " Please choose Tax Id allocation certificate", Toast.LENGTH_SHORT).show();
+//                                                return;
+//                                            }
 
                                             if (isOnline()) {
                                                 RegisterAPI();
@@ -814,91 +788,91 @@ public class RegisterActivity extends AppCompatActivity implements
             }
         });
 
-        binding.uploadBtnIncorpDoc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btnIncorpDocClicked = true;
-                btnAllocDocClicked = false;
-                btnStandDocClicked = false;
-                btnOtherDocClicked = false;
-                askPermissionAndBrowseFile();
-            }
-        });
+//        binding.uploadBtnIncorpDoc.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                btnIncorpDocClicked = true;
+//                btnAllocDocClicked = false;
+//                btnStandDocClicked = false;
+//                btnOtherDocClicked = false;
+//                askPermissionAndBrowseFile();
+//            }
+//        });
 
-        binding.uploadBtnAllocDoc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btnIncorpDocClicked = false;
-                btnAllocDocClicked = true;
-                btnStandDocClicked = false;
-                btnOtherDocClicked = false;
-                askPermissionAndBrowseFile();
-            }
-        });
+//        binding.uploadBtnAllocDoc.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                btnIncorpDocClicked = false;
+//                btnAllocDocClicked = true;
+//                btnStandDocClicked = false;
+//                btnOtherDocClicked = false;
+//                askPermissionAndBrowseFile();
+//            }
+//        });
 
-        binding.uploadBtnStandDoc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btnIncorpDocClicked = false;
-                btnAllocDocClicked = false;
-                btnStandDocClicked = true;
-                btnOtherDocClicked = false;
-                askPermissionAndBrowseFile();
-            }
-        });
+//        binding.uploadBtnStandDoc.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                btnIncorpDocClicked = false;
+//                btnAllocDocClicked = false;
+//                btnStandDocClicked = true;
+//                btnOtherDocClicked = false;
+//                askPermissionAndBrowseFile();
+//            }
+//        });
 
-        binding.uploadBtnOtherDoc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btnIncorpDocClicked = false;
-                btnAllocDocClicked = false;
-                btnStandDocClicked = false;
-                btnOtherDocClicked = true;
-                askPermissionAndBrowseFile();
-            }
-        });
+//        binding.uploadBtnOtherDoc.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                btnIncorpDocClicked = false;
+//                btnAllocDocClicked = false;
+//                btnStandDocClicked = false;
+//                btnOtherDocClicked = true;
+//                askPermissionAndBrowseFile();
+//            }
+//        });
     }
 
-    private void askPermissionAndBrowseFile() {
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) { // Level 23
+//    private void askPermissionAndBrowseFile() {
+//        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) { // Level 23
+//
+//            // Check if we have Call permission
+//            int permisson = ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
+//
+//            if (permisson != PackageManager.PERMISSION_GRANTED) {
+//                // If don't have permission so prompt the user.
+//                this.requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, MY_REQUEST_CODE_PERMISSION);
+//                return;
+//            }
+//        }
+//        doBrowseFile();
+//    }
 
-            // Check if we have Call permission
-            int permisson = ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
+//    private void doBrowseFile() {
+//        Intent chooseFileIntent = new Intent(Intent.ACTION_GET_CONTENT);
+//        chooseFileIntent.setType("*/*");
+//        // Only return URIs that can be opened with ContentResolver
+//        chooseFileIntent.addCategory(Intent.CATEGORY_OPENABLE);
+//
+//        chooseFileIntent = Intent.createChooser(chooseFileIntent, "Choose a file");
+//        startActivityForResult(chooseFileIntent, MY_RESULT_CODE_FILECHOOSER);
+//    }
 
-            if (permisson != PackageManager.PERMISSION_GRANTED) {
-                // If don't have permission so prompt the user.
-                this.requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, MY_REQUEST_CODE_PERMISSION);
-                return;
-            }
-        }
-        doBrowseFile();
-    }
-
-    private void doBrowseFile() {
-        Intent chooseFileIntent = new Intent(Intent.ACTION_GET_CONTENT);
-        chooseFileIntent.setType("*/*");
-        // Only return URIs that can be opened with ContentResolver
-        chooseFileIntent.addCategory(Intent.CATEGORY_OPENABLE);
-
-        chooseFileIntent = Intent.createChooser(chooseFileIntent, "Choose a file");
-        startActivityForResult(chooseFileIntent, MY_RESULT_CODE_FILECHOOSER);
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        switch (requestCode) {
-            case MY_REQUEST_CODE_PERMISSION: {
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(this, "Permission granted!", Toast.LENGTH_SHORT).show();
-                    this.doBrowseFile();
-                } else {
-                    Toast.makeText(this, "Permission denied!", Toast.LENGTH_SHORT).show();
-                }
-                break;
-            }
-        }
-    }
+//    @Override
+//    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+//        switch (requestCode) {
+//            case MY_REQUEST_CODE_PERMISSION: {
+//                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+//                    Toast.makeText(this, "Permission granted!", Toast.LENGTH_SHORT).show();
+//                    this.doBrowseFile();
+//                } else {
+//                    Toast.makeText(this, "Permission denied!", Toast.LENGTH_SHORT).show();
+//                }
+//                break;
+//            }
+//        }
+//    }
 
     private TwitterSession getTwitterSession() {
         TwitterSession session = TwitterCore.getInstance().getSessionManager().getActiveSession();
@@ -1229,57 +1203,57 @@ public class RegisterActivity extends AppCompatActivity implements
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        switch (requestCode) {
-            case MY_RESULT_CODE_FILECHOOSER:
-                if (resultCode == Activity.RESULT_OK) {
-                    if (data != null) {
-                        Uri fileUri = data.getData();
-                        Log.e(TAG, "Uri: " + fileUri);
-
-                        String filePath = null;
-                        try {
-                            filePath = FileUtils.getPath(this, fileUri);
-                        } catch (Exception e) {
-                            Log.e(TAG, "Error: " + e);
-                            Toast.makeText(this, "Error: " + e, Toast.LENGTH_SHORT).show();
-                        }
-
-                        assert filePath != null;
-                        File file = new File(filePath);
-                        long fileSizeInBytes = file.length(); // Get length of file in bytes
-                        long fileSizeInKB = fileSizeInBytes / 1024; // Convert the bytes to Kilobytes (1 KB = 1024 Bytes)
-                        long fileSizeInMB = fileSizeInKB / 1024; // Convert the KB to MegaBytes (1 MB = 1024 KBytes)
-                        if (fileSizeInMB <= 1) {
-                            String filename = filePath.substring(filePath.lastIndexOf("/") + 1);
-                            Log.e(TAG, " filename - " + filename);
-                            if (btnIncorpDocClicked) {
-                                binding.txtIncorpDocName.setText(filename);
-                                binding.txtIncorpDocName.setTextColor(getResources().getColor(R.color.file_choose_color));
-                                pathIncorpDoc = filePath;
-                                base64PathIncorpDoc = getStringFile(file);
-                            } else if (btnAllocDocClicked) {
-                                binding.txtAllocDocName.setText(filename);
-                                binding.txtAllocDocName.setTextColor(getResources().getColor(R.color.file_choose_color));
-                                pathAllocDoc = filePath;
-                                base64PathAllocDoc = getStringFile(file);
-                            } else if (btnStandDocClicked) {
-                                binding.txtStandDocName.setText(filename);
-                                binding.txtStandDocName.setTextColor(getResources().getColor(R.color.file_choose_color));
-                                pathStandDoc = filePath;
-                                base64PathStandDoc = getStringFile(file);
-                            } else if (btnOtherDocClicked) {
-                                binding.txtOtherDocName.setText(filename);
-                                binding.txtOtherDocName.setTextColor(getResources().getColor(R.color.file_choose_color));
-                                pathOtherDoc = filePath;
-                                base64PathOtherDoc = getStringFile(file);
-                            }
-                        } else {
-                            Toast.makeText(this, "Please choose file size less than 1mb", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                }
-                break;
-        }
+//        switch (requestCode) {
+//            case MY_RESULT_CODE_FILECHOOSER:
+//                if (resultCode == Activity.RESULT_OK) {
+//                    if (data != null) {
+//                        Uri fileUri = data.getData();
+//                        Log.e(TAG, "Uri: " + fileUri);
+//
+//                        String filePath = null;
+//                        try {
+//                            filePath = FileUtils.getPath(this, fileUri);
+//                        } catch (Exception e) {
+//                            Log.e(TAG, "Error: " + e);
+//                            Toast.makeText(this, "Error: " + e, Toast.LENGTH_SHORT).show();
+//                        }
+//
+//                        assert filePath != null;
+//                        File file = new File(filePath);
+//                        long fileSizeInBytes = file.length(); // Get length of file in bytes
+//                        long fileSizeInKB = fileSizeInBytes / 1024; // Convert the bytes to Kilobytes (1 KB = 1024 Bytes)
+//                        long fileSizeInMB = fileSizeInKB / 1024; // Convert the KB to MegaBytes (1 MB = 1024 KBytes)
+//                        if (fileSizeInMB <= 1) {
+//                            String filename = filePath.substring(filePath.lastIndexOf("/") + 1);
+//                            Log.e(TAG, " filename - " + filename);
+//                            if (btnIncorpDocClicked) {
+//                                binding.txtIncorpDocName.setText(filename);
+//                                binding.txtIncorpDocName.setTextColor(getResources().getColor(R.color.file_choose_color));
+//                                pathIncorpDoc = filePath;
+//                                base64PathIncorpDoc = getStringFile(file);
+//                            } else if (btnAllocDocClicked) {
+//                                binding.txtAllocDocName.setText(filename);
+//                                binding.txtAllocDocName.setTextColor(getResources().getColor(R.color.file_choose_color));
+//                                pathAllocDoc = filePath;
+//                                base64PathAllocDoc = getStringFile(file);
+//                            } else if (btnStandDocClicked) {
+//                                binding.txtStandDocName.setText(filename);
+//                                binding.txtStandDocName.setTextColor(getResources().getColor(R.color.file_choose_color));
+//                                pathStandDoc = filePath;
+//                                base64PathStandDoc = getStringFile(file);
+//                            } else if (btnOtherDocClicked) {
+//                                binding.txtOtherDocName.setText(filename);
+//                                binding.txtOtherDocName.setTextColor(getResources().getColor(R.color.file_choose_color));
+//                                pathOtherDoc = filePath;
+//                                base64PathOtherDoc = getStringFile(file);
+//                            }
+//                        } else {
+//                            Toast.makeText(this, "Please choose file size less than 1mb", Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//                }
+//                break;
+//        }
         super.onActivityResult(requestCode, resultCode, data);
 
         callbackManager.onActivityResult(requestCode, resultCode, data);
@@ -1399,21 +1373,21 @@ public class RegisterActivity extends AppCompatActivity implements
         jsonObject1.addProperty("business_name", business_name);
         jsonObject1.addProperty("type", type);
         jsonObject1.addProperty("terms", "Yes");
-        if (type.equalsIgnoreCase("business")) {
-            jsonObject1.addProperty("incorp_doc", base64PathIncorpDoc);
-            jsonObject1.addProperty("tax_id_doc", base64PathAllocDoc);
-            jsonObject1.addProperty("good_standing_doc", base64PathStandDoc);
-            jsonObject1.addProperty("oth_doc", base64PathOtherDoc);
-
-            jsonObject1.addProperty("incorp_doc_type", pathIncorpDoc.substring(pathIncorpDoc.lastIndexOf(".")));
-            jsonObject1.addProperty("tax_id_doc_type", pathAllocDoc.substring(pathAllocDoc.lastIndexOf(".")));
-            if (pathStandDoc.length() > 0) {
-                jsonObject1.addProperty("good_standing_doc_type", pathStandDoc.substring(pathStandDoc.lastIndexOf(".")));
-            }
-            if (pathOtherDoc.length() > 0) {
-                jsonObject1.addProperty("oth_doc_type", pathOtherDoc.substring(pathOtherDoc.lastIndexOf(".")));
-            }
-        }
+//        if (type.equalsIgnoreCase("business")) {
+//            jsonObject1.addProperty("incorp_doc", base64PathIncorpDoc);
+//            jsonObject1.addProperty("tax_id_doc", base64PathAllocDoc);
+//            jsonObject1.addProperty("good_standing_doc", base64PathStandDoc);
+//            jsonObject1.addProperty("oth_doc", base64PathOtherDoc);
+//
+//            jsonObject1.addProperty("incorp_doc_type", pathIncorpDoc.substring(pathIncorpDoc.lastIndexOf(".")));
+//            jsonObject1.addProperty("tax_id_doc_type", pathAllocDoc.substring(pathAllocDoc.lastIndexOf(".")));
+//            if (pathStandDoc.length() > 0) {
+//                jsonObject1.addProperty("good_standing_doc_type", pathStandDoc.substring(pathStandDoc.lastIndexOf(".")));
+//            }
+//            if (pathOtherDoc.length() > 0) {
+//                jsonObject1.addProperty("oth_doc_type", pathOtherDoc.substring(pathOtherDoc.lastIndexOf(".")));
+//            }
+//        }
         Log.e("jsonObject1", "" + jsonObject1);
         /*   ApiInterface jsonPostService = ApiClient.createService(ApiInterface.class, "http://project975.website/i2-donate/api/");*/
         final String image_url = "";

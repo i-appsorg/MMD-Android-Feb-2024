@@ -36,6 +36,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.i2donate.Interwork.MyApplication;
 import com.i2donate.Model.ChangeActivity;
 import com.i2donate.R;
 import com.i2donate.Session.PrefManager;
@@ -153,7 +154,6 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void listener() {
-
         btnNext.setOnClickListener(new View.OnClickListener() { // A 240523
             @Override
             public void onClick(View v) {
@@ -162,10 +162,8 @@ public class WelcomeActivity extends AppCompatActivity {
                     progressDialog.setMessage("Loading...");
                     progressDialog.show();
 
-//                    String sheetID = "1wGP8IHJGOCT-K0t2eXAh_lmaGYRHgmWmgAIrUJ4ASQo";
-                    String sheetID = "1O-8LD2wcWDqBiKw9I3QDI0JuwWCVrenyN_IzVHVMd4E";
-//                    String apiKEY = "AIzaSyBMkCWoTqmo_qdjL675bfgP5zbh1zboKCk";
-                    String apiKEY = "AIzaSyDQzTsnTRgYvCDfEUm1ac0rQgHZbiiB_ew";
+                    String sheetID = MyApplication.getSheetId();
+                    String apiKEY = MyApplication.getSheetApiKey();
 //                    String sheetTabName = "i2D-Dev";
                     String sheetTabName = "i2D-Prod";
                     String urls = "https://sheets.googleapis.com/v4/spreadsheets/" + sheetID + "/values/" + sheetTabName + "?key=" + apiKEY;

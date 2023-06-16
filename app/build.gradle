@@ -7,12 +7,21 @@ android {
         applicationId "com.i2donate"
         minSdkVersion 21
         targetSdkVersion 33
-        versionCode 30
-        versionName "1.0.30"
+        versionCode 32
+        versionName "1.0.32"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
+        externalNativeBuild{
+            cmake {
+                cppFlags ""
+            }
+        }
     }
-
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
     signingConfigs {
         /*release {
             storeFile file('D:\\dhruvi\\I2_Donate\\I2_Donate_Android\\Android-Master\\i2-Donate_Android\\i2~donate.jks')
