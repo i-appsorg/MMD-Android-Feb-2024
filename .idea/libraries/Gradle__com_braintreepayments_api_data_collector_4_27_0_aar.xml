@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.braintreepayments.api:data-collector:4.27.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1b1b6a8653e50ce02cf8682515853eba/transformed/jetified-data-collector-4.27.0/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1b1b6a8653e50ce02cf8682515853eba/transformed/jetified-data-collector-4.27.0/jars/classes.jar!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1b1b6a8653e50ce02cf8682515853eba/transformed/jetified-data-collector-4.27.0/jars/libs/kount-data-collector-3.2.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1b1b6a8653e50ce02cf8682515853eba/transformed/jetified-data-collector-4.27.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

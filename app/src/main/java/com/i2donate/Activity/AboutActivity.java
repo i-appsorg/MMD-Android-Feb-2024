@@ -29,7 +29,6 @@ public class AboutActivity extends CommonMenuActivity {
     @SuppressLint("JavascriptInterface")
     private void init() {
         webView = (WebView) findViewById(R.id.webView);
-//        webView.loadUrl("https://test.i2-donate.com/i2D-Publish-Docs/i2D-App-About.html");
         webView.loadUrl(About_URL);
         webView.setBackgroundColor(Color.TRANSPARENT);
         WebSettings webSettings = webView.getSettings();

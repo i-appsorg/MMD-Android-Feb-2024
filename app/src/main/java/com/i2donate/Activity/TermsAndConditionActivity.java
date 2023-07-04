@@ -32,7 +32,6 @@ public class TermsAndConditionActivity extends AppCompatActivity {
         webView.setBackgroundColor(Color.TRANSPARENT);
         WebSettings webSettings = webView.getSettings();
         webSettings.setTextZoom(webSettings.getTextZoom() - 40);
-//        webView.loadUrl("https://test.i2-donate.com/i2D-Publish-Docs/i2-Donate%20Privacy%20Policy.html");
         webView.loadUrl(TC_URL);
 
 
@@ -41,7 +40,6 @@ public class TermsAndConditionActivity extends AppCompatActivity {
         webView.setBackgroundColor(Color.TRANSPARENT);
         webView.setScrollbarFadingEnabled(true);
         WebSettings webSettings = webView.getSettings();
-        webView.loadUrl("https://test.i2-donate.com/i2D-Publish-Docs/i2-Donate%20Terms%20and%20Conditions.html");
         webSettings.setTextZoom(webSettings.getTextZoom() - 40);*/
     }
 

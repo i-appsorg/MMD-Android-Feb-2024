@@ -1,15 +1,6 @@
 <component name="libraryTable">
   <library name="Gradle: com.karumi:dexter:5.0.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/28576874dcd213c3183abd39b225fb47/transformed/jetified-dexter-5.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/28576874dcd213c3183abd39b225fb47/transformed/jetified-dexter-5.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/28576874dcd213c3183abd39b225fb47/transformed/jetified-dexter-5.0.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d68130a3c2e48d4d9c1c26507fd9b3e6/transformed/jetified-dexter-5.0.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d68130a3c2e48d4d9c1c26507fd9b3e6/transformed/jetified-dexter-5.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d68130a3c2e48d4d9c1c26507fd9b3e6/transformed/jetified-dexter-5.0.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8f938477b648ffcf5b7fe63150fcbb19/transformed/jetified-dexter-5.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8f938477b648ffcf5b7fe63150fcbb19/transformed/jetified-dexter-5.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8f938477b648ffcf5b7fe63150fcbb19/transformed/jetified-dexter-5.0.0/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/a6a503aed5542b4c5a1b8af0579dc74b/transformed/jetified-dexter-5.0.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a6a503aed5542b4c5a1b8af0579dc74b/transformed/jetified-dexter-5.0.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a6a503aed5542b4c5a1b8af0579dc74b/transformed/jetified-dexter-5.0.0/AndroidManifest.xml" />

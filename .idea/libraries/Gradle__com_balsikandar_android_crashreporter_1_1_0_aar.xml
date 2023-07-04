@@ -1,17 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.balsikandar.android:crashreporter:1.1.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f1b913e41c2c3bb5727f96a2bb262835/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f1b913e41c2c3bb5727f96a2bb262835/transformed/jetified-crashreporter-1.1.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f1b913e41c2c3bb5727f96a2bb262835/transformed/jetified-crashreporter-1.1.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3b49a7d4e1337218c1dbb51c73cda5da/transformed/jetified-crashreporter-1.1.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/3b49a7d4e1337218c1dbb51c73cda5da/transformed/jetified-crashreporter-1.1.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3b49a7d4e1337218c1dbb51c73cda5da/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/87f143459c8b5457ca20d59a9a954863/transformed/jetified-crashreporter-1.1.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/87f143459c8b5457ca20d59a9a954863/transformed/jetified-crashreporter-1.1.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/87f143459c8b5457ca20d59a9a954863/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/754fa622484fb63a80160fed39ff7258/transformed/jetified-crashreporter-1.1.0/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/754fa622484fb63a80160fed39ff7258/transformed/jetified-crashreporter-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/754fa622484fb63a80160fed39ff7258/transformed/jetified-crashreporter-1.1.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/754fa622484fb63a80160fed39ff7258/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>

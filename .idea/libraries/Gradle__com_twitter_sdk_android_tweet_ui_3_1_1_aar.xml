@@ -1,15 +1,6 @@
 <component name="libraryTable">
   <library name="Gradle: com.twitter.sdk.android:tweet-ui:3.1.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/40a760dd4d9f8bb76de2a2c11fcaac1c/transformed/jetified-tweet-ui-3.1.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/40a760dd4d9f8bb76de2a2c11fcaac1c/transformed/jetified-tweet-ui-3.1.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/40a760dd4d9f8bb76de2a2c11fcaac1c/transformed/jetified-tweet-ui-3.1.1/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/effd67002a6025518627706b74076331/transformed/jetified-tweet-ui-3.1.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/effd67002a6025518627706b74076331/transformed/jetified-tweet-ui-3.1.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/effd67002a6025518627706b74076331/transformed/jetified-tweet-ui-3.1.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/847f05e2b14239eea9fa27434b895842/transformed/jetified-tweet-ui-3.1.1/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/847f05e2b14239eea9fa27434b895842/transformed/jetified-tweet-ui-3.1.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/847f05e2b14239eea9fa27434b895842/transformed/jetified-tweet-ui-3.1.1/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/3d696119227348bc97f1a59da8aabfff/transformed/jetified-tweet-ui-3.1.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3d696119227348bc97f1a59da8aabfff/transformed/jetified-tweet-ui-3.1.1/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3d696119227348bc97f1a59da8aabfff/transformed/jetified-tweet-ui-3.1.1/AndroidManifest.xml" />

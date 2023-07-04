@@ -30,7 +30,6 @@ public class PrivacyPolicyActivity extends AppCompatActivity {
         webView.setBackgroundColor(Color.TRANSPARENT);
         WebSettings webSettings = webView.getSettings();
         webSettings.setTextZoom(webSettings.getTextZoom() - 40);
-//        webView.loadUrl("https://test.i2-donate.com/i2D-Publish-Docs/i2-Donate%20Privacy%20Policy.html");
         webView.loadUrl(Privacy_URL);
 
 
@@ -43,7 +42,6 @@ public class PrivacyPolicyActivity extends AppCompatActivity {
         WebSettings webSettings = webView.getSettings();
         // webSettings.setTextSize(WebSettings.TextSize.SMALLEST);
         // webView.loadUrl("https://admin.i2-donate.com/terms_conditions.html");
-        webView.loadUrl("https://test.i2-donate.com/i2D-Publish-Docs/i2-Donate%20Privacy%20Policy.html");
         webSettings.setTextZoom(webSettings.getTextZoom() - 40);*/
 
 

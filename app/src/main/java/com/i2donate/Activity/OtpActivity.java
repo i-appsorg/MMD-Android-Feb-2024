@@ -178,7 +178,7 @@ public class OtpActivity extends AppCompatActivity implements View.OnFocusChange
                     new_password_layout_input.setError("Password is invalid");
                     return;
                 }
-                if (!Validation.CheckPasswordPattern(confirm_password.getText().toString()) || new_password.getText().toString().trim().equals(confirm_password.getText().toString().trim())) {
+                if (!Validation.CheckPasswordPattern(confirm_password.getText().toString()) || !new_password.getText().toString().trim().equals(confirm_password.getText().toString().trim())) {
                     confirm_password_layout_input.setError("Password doesn't match");
                     return;
                 }

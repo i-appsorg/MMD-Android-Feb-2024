@@ -10,15 +10,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
 
-    //public static final String BASE_URL = "https://prod.i2-donate.com/webservice/";
-    public static final String BASE_URL = "https://test.i2-donate.com/webservice/";
-
     public static String Server_URL = "";
     public static String TC_URL = "";
     public static String Privacy_URL = "";
     public static String Help_URL = "";
     public static String About_URL = "";
-
 
     private static Retrofit retrofit = null;
     private static OkHttpClient.Builder httpClient = new OkHttpClient.Builder()

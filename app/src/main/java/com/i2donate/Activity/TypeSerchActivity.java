@@ -668,7 +668,7 @@ public class TypeSerchActivity extends CommonBackActivity {
         }
         jsonObject1.addProperty("latitude", lat);
         jsonObject1.addProperty("longitude", lng);
-        jsonObject1.addProperty("page", page);
+//        jsonObject1.addProperty("page", page);
         jsonObject1.addProperty("device_id", device_id);
         jsonObject1.addProperty("address", location);
         jsonObject1.add("category_code", category_Array);
