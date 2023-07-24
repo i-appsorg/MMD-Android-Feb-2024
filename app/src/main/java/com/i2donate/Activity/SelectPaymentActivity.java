@@ -62,7 +62,7 @@ public class SelectPaymentActivity extends AppCompatActivity implements DropInLi
     ProgressDialog progressDialog;
     DropInRequest dropInRequest;
     private DropInClient dropInClient;
-    String cToken = "";
+    String TAG = SelectPaymentActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +83,7 @@ public class SelectPaymentActivity extends AppCompatActivity implements DropInLi
         cvv_et = (EditText) findViewById(R.id.cvv_et);
         Bundle bundle = getIntent().getExtras();
         payment_amount = bundle.getString("payment_amt");
-        cToken = bundle.getString("cToken");
+        clientToken = bundle.getString("cToken");
         Double amount = Double.valueOf(payment_amount);
         double processing_fee = ((amount / 100.0f) * 1);
         double total_amt = processing_fee + amount;
@@ -93,11 +93,11 @@ public class SelectPaymentActivity extends AppCompatActivity implements DropInLi
 
 
         payment_amt = String.format("%.2f", payment_amt_total);
-        Log.e("amount", "" + amount);
-        Log.e("processing_fee", "" + processing_fee);
-        Log.e("total_amt", "" + total_amt);
-        Log.e("payment_amt", payment_amt);
-        Log.e("cToken", cToken);
+        Log.e(TAG, "amount - " + amount);
+        Log.e(TAG, "processing_fee - " + processing_fee);
+        Log.e(TAG, "total_amt - " + total_amt);
+        Log.e(TAG, "payment_amt - " + payment_amt);
+        Log.e(TAG, "cToken - " + clientToken);
 
 
         charityName = bundle.getString("charity_name");
@@ -110,7 +110,7 @@ public class SelectPaymentActivity extends AppCompatActivity implements DropInLi
 //        callWebservice();
 
 
-        dropInClient = new DropInClient(this, cToken); // A 240523
+        dropInClient = new DropInClient(this, clientToken); // A 240523
         dropInClient.setListener(this);
         dropInRequest = new DropInRequest();
 
@@ -147,7 +147,7 @@ public class SelectPaymentActivity extends AppCompatActivity implements DropInLi
         payment_to_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBraintreeSubmit(clientToken);
+                onBraintreeSubmit();
             }
         });
 
@@ -179,7 +179,7 @@ public class SelectPaymentActivity extends AppCompatActivity implements DropInLi
                         Log.e("Response_payment1", response.body().toString());
                         clientToken = response.body().toString();
                         Log.e("TAG", "clientToken: " + clientToken);
-                        onBraintreeSubmit(clientToken);
+                        onBraintreeSubmit();
                     } catch (Exception e) {
                         e.getMessage();
                     }
@@ -242,7 +242,7 @@ public class SelectPaymentActivity extends AppCompatActivity implements DropInLi
         jsonObject1.addProperty("processing_fee", String.format("%.2f", processing_fee));
 
 
-        Log.e("jsonObject1", "" + jsonObject1);
+        Log.e(TAG, "jsonObject1 -- > " + jsonObject1);
         Call<JsonObject> call = apiService.sentamountbraintreeAPI(jsonObject1);
         call.enqueue(new Callback<JsonObject>() {
             @Override
@@ -278,7 +278,7 @@ public class SelectPaymentActivity extends AppCompatActivity implements DropInLi
 
     }
 
-    public void onBraintreeSubmit(String clientToken) {
+    public void onBraintreeSubmit() {
 
         dropInClient.launchDropIn(dropInRequest);
 
@@ -419,6 +419,7 @@ public class SelectPaymentActivity extends AppCompatActivity implements DropInLi
     public void onDropInSuccess(@NonNull DropInResult dropInResult) {
         String paymentMethodNonce = dropInResult.getPaymentMethodNonce().getString();
         paybypaypal(paymentMethodNonce, payment_amt + "");
+        Log.e(TAG, " paymentMethodNonce -> " + paymentMethodNonce);
         sendPaymentNonceToServer(paymentMethodNonce);
     }
 

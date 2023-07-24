@@ -275,7 +275,7 @@ public class LoadmoreInternationlocationAdapterList extends RecyclerView.Adapter
 
     private void populateItemRows(final MyViewHolder holder, final int position) {
 
-        Log.e("TAG", "populateItemRows: " + charitylist1.get(position).getName());
+//        Log.e("TAG", "populateItemRows: " + charitylist1.get(position).getName());
         holder.name_tv.setText(charitylist1.get(position).getName());
         holder.location_name_tv.setText(charitylist1.get(position).getStreet() + " , " + charitylist1.get(position).getCity() + ", " + charitylist1.get(position).getCountry());
         holder.like_count_tv.setText(charitylist1.get(position).getLike_count() + " " + "Likes");
