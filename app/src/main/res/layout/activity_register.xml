@@ -127,9 +127,18 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Small" />
                     </com.google.android.material.textfield.TextInputLayout>
 
+                    <TextView
+                        android:id="@+id/bus_name_layout"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="@string/bus_name_hint"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"/>
+
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/name_input_layout"
                         android:layout_width="match_parent"
+                        android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small">
@@ -143,6 +152,49 @@
                             android:singleLine="true"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small" />
                     </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bus_name_input_layout"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:id="@+id/bus_first_name_layout"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small">
+
+                            <EditText
+                                android:id="@+id/bus_reg_name_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/edittextline_color"
+                                android:hint="@string/register_name"
+                                android:singleLine="true"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/last_name_input_layout"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small">
+
+                            <EditText
+                                android:id="@+id/reg_last_name_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/edittextline_color"
+                                android:hint="@string/register_lastname"
+                                android:singleLine="true"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/email_input_layout"
@@ -279,6 +331,128 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/bus_more_info"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+                        <TextView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/bus_address_hint"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"/>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/business_street_input_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:visibility="visible">
+
+                            <EditText
+                                android:id="@+id/business_street_one"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/edittextline_color"
+                                android:hint="@string/bus_street_required"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/business_street_optional_input_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:visibility="visible">
+
+                            <EditText
+                                android:id="@+id/business_street_optional"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/edittextline_color"
+                                android:hint="@string/bus_street_optional"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:weightSum="2"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/state_input_layout"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small">
+
+                                <EditText
+                                    android:id="@+id/bus_state"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/edittextline_color"
+                                    android:hint="@string/bus_state"
+                                    android:singleLine="true"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/city_input_layout"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small">
+
+                                <EditText
+                                    android:id="@+id/bus_city"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/edittextline_color"
+                                    android:hint="@string/bus_city"
+                                    android:singleLine="true"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/zipcode_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:visibility="visible">
+
+                            <EditText
+                                android:id="@+id/business_zipcode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/edittextline_color"
+                                android:hint="@string/bus_zipcode"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tax_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:visibility="visible">
+
+                            <EditText
+                                android:id="@+id/business_taxid"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/edittextline_color"
+                                android:hint="@string/bus_taxid"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -315,6 +489,7 @@
                     </LinearLayout>
 
                     <View
+                        android:id="@+id/separtor"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:background="@color/bottom_text_color" />

@@ -255,6 +255,7 @@ public class UpdateActivity extends AppCompatActivity {
                 if (!business_name.isEmpty()) {
                     business_reg_name_et.setText(business_name.substring(0, 1).toUpperCase() + business_name.substring(1));
                 }
+                radio_btn_business.setVisibility(View.GONE);
             } else if (type.equalsIgnoreCase("individual")) {
                 business_name_input_layout.setVisibility(View.GONE);
                 gender_layout.setVisibility(View.VISIBLE);

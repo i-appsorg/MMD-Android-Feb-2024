@@ -1115,12 +1115,14 @@ public class LoginActivity extends AppCompatActivity implements
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
         callbackManager.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == RC_SIGN_IN) {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             handleSignInResult(result);
+
+            Toast.makeText(LoginActivity.this,"D" +  result.getStatus().toString(),Toast.LENGTH_SHORT).show();
+
             Log.e("1055", "" + result);
             Log.e(TAG, "Got cached sign-in1");
         }

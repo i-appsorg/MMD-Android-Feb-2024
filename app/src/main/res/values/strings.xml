@@ -308,4 +308,21 @@
     <!--menu_items-->
     <string name="navigation_drawer_open">drawer open</string>
     <string name="navigation_drawer_close">drawer close</string>
+    <string name="bus_name_hint">Business Contact person name*</string>
+    <string name="register_lastname">Last name*</string>
+    <string name="bus_address_hint">Enter your United States address*</string>
+    <string name="bus_street_required">Street 1*</string>
+    <string name="bus_street_optional">Street 2(optional)</string>
+    <string name="bus_state">State*</string>
+    <string name="bus_city">City*</string>
+    <string name="bus_zipcode">Zipcode*</string>
+    <string name="bus_taxid">Enter Tax-Id (EIN/TIN - no spaces or hyphen)</string>
+    <string name="bus_name_required">Enter Business Name</string>
+    <string name="bus_last_name_required">Last name is required</string>
+    <string name="bus_first_name_required">First name is required</string>
+    <string name="bus_street_name_required">Street name is required</string>
+    <string name="bus_state_name_required">State is required</string>
+    <string name="bus_city_name_required">City is required</string>
+    <string name="bus_zipcode_name_required">Zipcode is required</string>
+    <string name="bus_taxid_name_required">Tax-Id is required</string>
 </resources>

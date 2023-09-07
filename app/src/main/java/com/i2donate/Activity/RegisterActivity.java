@@ -12,6 +12,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Base64;
 import android.util.Base64OutputStream;
@@ -159,6 +160,7 @@ public class RegisterActivity extends AppCompatActivity implements
         binding = ActivityRegisterBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+        enableBusinessView(false);
         // getWindow().setBackgroundDrawableResource(R.drawable.dashbord_background);
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
@@ -335,6 +337,22 @@ public class RegisterActivity extends AppCompatActivity implements
         });
     }
 
+    private void enableBusinessView(Boolean enable){
+        if (enable){
+            binding.nameInputLayout.setVisibility(View.GONE);
+            binding.busNameLayout.setVisibility(View.VISIBLE);
+            binding.busMoreInfo.setVisibility(View.VISIBLE);
+            binding.busNameInputLayout.setVisibility(View.VISIBLE);
+            binding.separtor.setVisibility(View.GONE);
+
+        }else{
+            binding.nameInputLayout.setVisibility(View.VISIBLE);
+            binding.busNameLayout.setVisibility(View.GONE);
+            binding.busMoreInfo.setVisibility(View.GONE);
+            binding.busNameInputLayout.setVisibility(View.GONE);
+        }
+
+    }
     private void ManageVisibilityOfDocs(Boolean isHide) {
         if (isHide) {
             binding.layIncorpDoc.setVisibility(View.GONE);
@@ -349,7 +367,244 @@ public class RegisterActivity extends AppCompatActivity implements
         }
     }
 
+    TextWatcher busNamevalidationWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            if (charSequence.toString().length() > 0) {
+                binding.businessNameInputLayout.setError("");
+            }else{
+                binding.businessNameInputLayout.setError(getString(R.string.bus_name_required));
+            }
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+            if (editable.toString().length() > 0) {
+                binding.businessNameInputLayout.setError("");
+            }else{
+                binding.businessNameInputLayout.setError(getString(R.string.bus_name_required));
+            }
+        }
+    };
+
+    TextWatcher busfNamevalidationWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            if (charSequence.toString().length() > 0) {
+                binding.busFirstNameLayout.setError("");
+            }else{
+                binding.busFirstNameLayout.setError(getString(R.string.bus_first_name_required));
+            }
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+            if (editable.toString().length() > 0) {
+                binding.busFirstNameLayout.setError("");
+            }else{
+                binding.busFirstNameLayout.setError(getString(R.string.bus_first_name_required));
+            }
+        }
+    };
+
+    TextWatcher busLNamevalidationWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            if (charSequence.toString().length() > 0) {
+                binding.lastNameInputLayout.setError("");
+            }else{
+                binding.lastNameInputLayout.setError(getString(R.string.bus_last_name_required));
+            }
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+            if (editable.toString().length() > 0) {
+                binding.lastNameInputLayout.setError("");
+            }else{
+                binding.lastNameInputLayout.setError(getString(R.string.bus_last_name_required));
+            }
+        }
+    };
+
+    TextWatcher busStreetvalidationWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            if (charSequence.toString().length() > 0) {
+                binding.businessStreetInputLayout.setError("");
+            }else{
+                binding.businessStreetInputLayout.setError(getString(R.string.bus_street_name_required));
+            }
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+            if (editable.toString().length() > 0) {
+                binding.lastNameInputLayout.setError("");
+            }else{
+                binding.lastNameInputLayout.setError(getString(R.string.bus_street_name_required));
+            }
+        }
+    };
+
+    TextWatcher busStatevalidationWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            if (charSequence.toString().length() > 0) {
+                binding.stateInputLayout.setError("");
+            }else{
+                binding.stateInputLayout.setError(getString(R.string.bus_state_name_required));
+            }
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+            if (editable.toString().length() > 0) {
+                binding.stateInputLayout.setError("");
+            }else{
+                binding.stateInputLayout.setError(getString(R.string.bus_state_name_required));
+            }
+        }
+    };
+
+    TextWatcher buscityvalidationWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            if (charSequence.toString().length() > 0) {
+                binding.cityInputLayout.setError("");
+            }else{
+                binding.cityInputLayout.setError(getString(R.string.bus_city_name_required));
+            }
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+            if (editable.toString().length() > 0) {
+                binding.cityInputLayout.setError("");
+            }else{
+                binding.cityInputLayout.setError(getString(R.string.bus_city_name_required));
+            }
+        }
+    };
+
+    TextWatcher buszipCodevalidationWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            if (charSequence.toString().length() > 0) {
+                binding.zipcodeLayout.setError("");
+            }else{
+                binding.zipcodeLayout.setError(getString(R.string.bus_zipcode_name_required));
+            }
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+            if (editable.toString().length() > 0) {
+                binding.zipcodeLayout.setError("");
+            }else{
+                binding.zipcodeLayout.setError(getString(R.string.bus_zipcode_name_required));
+            }
+        }
+    };
+
+    TextWatcher busTaxvalidationWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            if (charSequence.toString().length() > 0) {
+                binding.taxLayout.setError("");
+            }else{
+                binding.taxLayout.setError(getString(R.string.bus_taxid_name_required));
+            }
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+            if (editable.toString().length() > 0) {
+                binding.taxLayout.setError("");
+            }else{
+                binding.taxLayout.setError(getString(R.string.bus_taxid_name_required));
+            }
+        }
+    };
+    private Boolean isBusValid() {
+
+        if (TextUtils.isEmpty(binding.businessRegNameEt.getText().toString())
+                ||TextUtils.isEmpty(binding.busRegNameEt.getText().toString())
+                ||TextUtils.isEmpty(binding.regLastNameEt.getText().toString())
+                ||TextUtils.isEmpty(binding.businessStreetOne.getText().toString())
+                ||TextUtils.isEmpty(binding.busState.getText().toString())
+                ||TextUtils.isEmpty(binding.busCity.getText().toString())
+                ||TextUtils.isEmpty(binding.businessZipcode.getText().toString())
+                ||TextUtils.isEmpty(binding.businessTaxid.getText().toString())) {
+            return false;
+        }
+        if (!reg_email_et.getText().toString().trim().matches(Validation.emailPattern)) {
+            binding.emailInputLayout.setError("Email is invalid");
+            return false;
+        }
+
+        if (binding.regPasswordEt.getText().toString().length() < 8 ||
+                !Validation.CheckPasswordPattern(binding.regPasswordEt.getText().toString())) {
+            binding.emailInputLayout.setError("Password is invalid");
+            return false;
+        }
+        if(base64PathIncorpDoc.isEmpty() || base64PathAllocDoc.isEmpty()){
+            return false;
+        }
+
+            return true;
+    }
     private void listener() {
+
+        binding.businessRegNameEt.addTextChangedListener(busNamevalidationWatcher);
+        binding.busRegNameEt.addTextChangedListener(busfNamevalidationWatcher);
+        binding.regLastNameEt.addTextChangedListener(busLNamevalidationWatcher);
+        binding.businessStreetOne.addTextChangedListener(busStreetvalidationWatcher);
+        binding.busState.addTextChangedListener(busStatevalidationWatcher);
+        binding.busCity.addTextChangedListener(buscityvalidationWatcher);
+        binding.businessZipcode.addTextChangedListener(buszipCodevalidationWatcher);
+        binding.businessTaxid.addTextChangedListener(busTaxvalidationWatcher);
+
         twitter_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -388,7 +643,9 @@ public class RegisterActivity extends AppCompatActivity implements
                     business_name = business_reg_name_et.getText().toString();
                     business_name_input_layout.setVisibility(View.VISIBLE);
                     ManageVisibilityOfDocs(false);
+                    enableBusinessView(true);
                 } else {
+                    enableBusinessView(false);
                     register_gender_layout.setVisibility(View.VISIBLE);
                     business_reg_name_et.setText("");
                     type = "Individual";
@@ -672,7 +929,7 @@ public class RegisterActivity extends AppCompatActivity implements
         register_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!reg_name_et.getText().toString().trim().isEmpty() && !reg_email_et.getText().toString().trim().isEmpty() && !reg_mobile_et.getText().toString().trim().isEmpty() && !reg_password_et.getText().toString().trim().isEmpty()) {
+                if (type.equalsIgnoreCase("business") || !reg_name_et.getText().toString().trim().isEmpty() && !reg_email_et.getText().toString().trim().isEmpty() && !reg_mobile_et.getText().toString().trim().isEmpty() && !reg_password_et.getText().toString().trim().isEmpty()) {
                     if (reg_email_et.getText().toString().trim().matches(Validation.emailPattern)) {
                         if (Validation.CheckPasswordPattern(reg_password_et.getText().toString())) {
 
@@ -702,7 +959,17 @@ public class RegisterActivity extends AppCompatActivity implements
                                             Toast.makeText(RegisterActivity.this, "Select country", Toast.LENGTH_SHORT).show();
                                         }
                                     } else {
-                                        if (reg_name_et.getText().toString().toString().trim().matches(Validation.NAME_PATTERN)) {
+                                        if (isBusValid()) {
+                                            if (isOnline()) {
+                                                RegisterAPI();
+                                            } else {
+                                                ConstantFunctions.showSnakBar("Please check internet connection", v);
+                                            }
+                                        }else{
+                                            Toast.makeText(RegisterActivity.this, "Plese enter all required fields", Toast.LENGTH_SHORT).show();
+
+                                        }
+                                        /*if (reg_name_et.getText().toString().toString().trim().matches(Validation.NAME_PATTERN)) {
                                             if (!country_symbol.isEmpty()) {
 
                                                 if (isOnline()) {
@@ -715,7 +982,7 @@ public class RegisterActivity extends AppCompatActivity implements
                                             }
                                         } else {
                                             Toast.makeText(RegisterActivity.this, "Name format is invalid", Toast.LENGTH_SHORT).show();
-                                        }
+                                        } */
                                     }
                                 } else {
                                     Toast.makeText(RegisterActivity.this, "Please accept our Terms and Conditions", Toast.LENGTH_SHORT).show();
@@ -1362,6 +1629,15 @@ public class RegisterActivity extends AppCompatActivity implements
         jsonObject1.addProperty("type", type);
         jsonObject1.addProperty("terms", "Yes");
         if (type.equalsIgnoreCase("business")) {
+            jsonObject1.addProperty("ein", binding.businessTaxid.getText().toString());
+            jsonObject1.addProperty("name", binding.businessRegNameEt.getText().toString() + " " + binding.regLastNameEt.getText().toString());
+            jsonObject1.addProperty("address1", binding.businessRegNameEt.getText().toString());
+            jsonObject1.addProperty("address2", binding.businessStreetOptional.getText().toString());
+            jsonObject1.addProperty("city", binding.busCity.getText().toString());
+            jsonObject1.addProperty("state", binding.busState.getText().toString());
+            jsonObject1.addProperty("zip", binding.businessZipcode.getText().toString());
+            jsonObject1.addProperty("country",  "US");
+
             jsonObject1.addProperty("incorp_doc", base64PathIncorpDoc);
             jsonObject1.addProperty("tax_id_doc", base64PathAllocDoc);
             jsonObject1.addProperty("good_standing_doc", base64PathStandDoc);

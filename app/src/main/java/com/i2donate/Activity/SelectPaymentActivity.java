@@ -106,7 +106,7 @@ public class SelectPaymentActivity extends AppCompatActivity implements DropInLi
         charityId = iDonateSharedPreference.getcharity_id(getApplicationContext());
         Log.e("Select_charityId", charityName);
         Log.e("Select_charityId", charityId);
-        selected_payment_et.setText(String.format(" %.2f", payment_amt_total));
+        selected_payment_et.setText(String.format(" %.2f", amount));
 //        callWebservice();
 
 
