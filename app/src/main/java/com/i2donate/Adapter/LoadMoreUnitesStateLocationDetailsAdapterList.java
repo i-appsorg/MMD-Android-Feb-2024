@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.text.Editable;
 import android.text.Html;
+import android.text.InputFilter;
 import android.text.Spanned;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -48,6 +49,8 @@ import com.i2donate.RetrofitAPI.ApiClient;
 import com.i2donate.RetrofitAPI.ApiInterface;
 import com.i2donate.Session.IDonateSharedPreference;
 import com.i2donate.Session.SessionManager;
+import com.i2donate.utility.DecimalDigitsInputFilter;
+import com.i2donate.utility.MoneyValueFilter;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
@@ -257,6 +260,30 @@ public class LoadMoreUnitesStateLocationDetailsAdapterList extends RecyclerView.
 
     }
 
+    InputFilter filter = new InputFilter() {
+        final int maxDigitsBeforeDecimalPoint=4;
+        final int maxDigitsAfterDecimalPoint=2;
+
+        @Override
+        public CharSequence filter(CharSequence source, int start, int end,
+                                   Spanned dest, int dstart, int dend) {
+            StringBuilder builder = new StringBuilder(dest);
+            builder.replace(dstart, dend, source
+                    .subSequence(start, end).toString());
+            if (!builder.toString().matches(
+                    "(([1-9]{1})([0-9]{0,"+(maxDigitsBeforeDecimalPoint-1)+"})?)?(\\.[0-9]{0,"+maxDigitsAfterDecimalPoint+"})?"
+
+            )) {
+                if(source.length()==0)
+                    return dest.subSequence(dstart, dend);
+                return "";
+            }
+
+            return null;
+
+        }
+    };
+
     private void populateItemRows(final MyViewHolder holder, final int position) {
         holder.name_tv.setText(charitylist1.get(position).getName());
         holder.location_name_tv.setText(charitylist1.get(position).getStreet() + " , " + charitylist1.get(position).getCity() + ", " + charitylist1.get(position).getState());
@@ -393,6 +420,7 @@ public class LoadMoreUnitesStateLocationDetailsAdapterList extends RecyclerView.
                     d.setContentView(R.layout.payment_alert_dailog);
                     LinearLayout payment_dailog_linear = (LinearLayout) d.findViewById(R.id.payment_dailog_linear);
                     final EditText payment_et = (EditText) d.findViewById(R.id.payment_et);
+                    payment_et.setFilters(new InputFilter[] {filter});
                     TextView cancel_tv = (TextView) d.findViewById(R.id.cancel_tv);
 
                     Button payment_continue_btn = (Button) d.findViewById(R.id.payment_continue_btn);

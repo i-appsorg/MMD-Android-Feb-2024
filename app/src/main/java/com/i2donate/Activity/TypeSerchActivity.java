@@ -671,13 +671,17 @@ public class TypeSerchActivity extends CommonBackActivity {
 //        jsonObject1.addProperty("page", page);
         jsonObject1.addProperty("device_id", device_id);
         jsonObject1.addProperty("address", location);
-        jsonObject1.add("category_code", category_Array);
         jsonObject1.addProperty("deductible", searchDeductible);
         jsonObject1.addProperty("income_from", from_income);
         jsonObject1.addProperty("income_to", to_income);
         jsonObject1.addProperty("country_code", "US");
-        jsonObject1.add("sub_category_code", subCategory_Array);
-        jsonObject1.add("child_category_code", childCategory_Array);
+
+
+        jsonObject1.addProperty("sub_category_code", Constants.convertCommaString(subCategory_Array));
+        jsonObject1.addProperty("child_category_code" ,Constants.convertCommaString(childCategory_Array));
+        jsonObject1.addProperty("category_code",Constants.convertCommaString(category_Array));
+
+
         jsonObject1.addProperty("user_id", user_id);
         Log.e(TAG, "jsonObject1 - " + jsonObject1);
         apiService =
@@ -811,6 +815,17 @@ public class TypeSerchActivity extends CommonBackActivity {
         return result;
     }
 
+    public Boolean isItemExists(String id){
+        for (int i=0;i < charitylist1.size();i++){
+            Charitylist items = charitylist1.get(i);
+            String itemID = items.getId();
+            if (itemID.equals(id)){
+                return true;
+            }
+        }
+
+        return false;
+    }
     private void loadMore() {
         charitylist1.add(null);
         unitesStateLocationDetailsAdapterList.notifyItemInserted(charitylist1.size() - 1);
@@ -864,8 +879,11 @@ public class TypeSerchActivity extends CommonBackActivity {
                         map.put("followed", object.getString("followed"));
                         map.put("like_count", object.getString("like_count"));
                         map.put("country", object.getString("country"));
-                        charitylist.add(map);
-                        charitylist1.add(charitylistm);
+                        if(!isItemExists(charitylistm.getId())){
+                            charitylist.add(map);
+                            charitylist1.add(charitylistm);
+                        }
+
                         loading = false;
 
                     }

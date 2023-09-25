@@ -231,8 +231,13 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
                                 break;
                             case "my settings":
                                 Log.e("settings", "settings");
-                                ChangeActivity.changeActivity(CommonMenuActivity.this, SettingActivity.class);
-                                finish();
+                                if (session.isLoggedIn()) {
+                                    ChangeActivity.changeActivity(CommonMenuActivity.this, SettingActivity.class);
+                                    finish();
+                                }else{
+                                    LoginDialog();
+                                }
+
                                 break;
                             case "about i2-donate":
                                 Log.e("settings", "settings");

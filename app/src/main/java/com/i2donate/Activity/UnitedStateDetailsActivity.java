@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.text.Editable;
 import android.text.Html;
+import android.text.InputFilter;
 import android.text.Spanned;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -42,6 +43,7 @@ import com.i2donate.RetrofitAPI.ApiClient;
 import com.i2donate.RetrofitAPI.ApiInterface;
 import com.i2donate.Session.IDonateSharedPreference;
 import com.i2donate.Session.SessionManager;
+import com.i2donate.utility.DecimalDigitsInputFilter;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -261,11 +263,12 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
 
     @SuppressLint("ResourceAsColor")
     private void paymentdailogue() {
-
         d = new BottomSheetDialog(UnitedStateDetailsActivity.this, R.style.payment_dailog);
         d.setContentView(R.layout.payment_alert_dailog);
         LinearLayout payment_dailog_linear = (LinearLayout) d.findViewById(R.id.payment_dailog_linear);
         final EditText payment_et = (EditText) d.findViewById(R.id.payment_et);
+        payment_et.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(4,2)});
+
         TextView cancel_tv = (TextView) d.findViewById(R.id.cancel_tv);
         Button payment_continue_btn = (Button) d.findViewById(R.id.payment_continue_btn);
         TextView textview_percentage = (TextView) d.findViewById(R.id.textview_percentage);

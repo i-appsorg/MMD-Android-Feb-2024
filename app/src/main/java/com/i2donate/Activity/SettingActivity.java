@@ -1,6 +1,7 @@
 package com.i2donate.Activity;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.gson.JsonObject;
@@ -83,11 +85,36 @@ public class SettingActivity extends CommonMenuActivity {
         }
 
     }
+    private void LoginDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(SettingActivity.this);
+        builder.setTitle("");
+        builder.setMessage("For Advance Features Please Log-in/Register");
+        builder.setPositiveButton("OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
 
+                        ChangeActivity.changeActivity(SettingActivity.this, LoginActivity.class);
+                    }
+                });
+        builder.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        builder.setCancelable(false);
+        builder.show();
+    }
     private void listener() {
         relative_layout_changepassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (sessionManager.isLoggedIn()) {
+                    ChangeActivity.changeActivity(SettingActivity.this, NotificationActivity.class);
+                    finish();
+                } else {
+                    LoginDialog();
+                    // ChangeActivity.changeActivity(CommonMenuActivity.this, LoginActivity.class);
+                }
                 ChangeActivity.changeActivity(SettingActivity.this, ChangePasswordActivity.class);
 
             }

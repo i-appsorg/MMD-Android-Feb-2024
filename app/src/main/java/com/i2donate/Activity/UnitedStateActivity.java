@@ -35,7 +35,9 @@ import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.google.zxing.common.StringUtils;
 import com.i2donate.Adapter.CategorylistAdapter;
 import com.i2donate.Adapter.LoadMoreUnitesStateLocationDetailsAdapterList;
 import com.i2donate.CommonActivity.CommonBackActivity;
@@ -53,6 +55,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 import retrofit2.Call;
@@ -533,6 +536,7 @@ public class UnitedStateActivity extends CommonBackActivity {
     }
 
 
+
     private static void CharityAPI(final int page, String type) {
         userDetails = session.getUserDetails();
         Log.e("userDetails", "" + userDetails);
@@ -625,13 +629,14 @@ public class UnitedStateActivity extends CommonBackActivity {
 //        jsonObject1.addProperty("page", page + "");
         jsonObject1.addProperty("device_id", device_id);
         jsonObject1.addProperty("address", location);
-        jsonObject1.add("category_code", category_Array);
+
+        jsonObject1.addProperty("category_code",Constants.convertCommaString(category_Array));
         jsonObject1.addProperty("deductible", searchDeductible);
         jsonObject1.addProperty("income_from", from_income);
         jsonObject1.addProperty("income_to", to_income);
         jsonObject1.addProperty("country_code", "US");
-        jsonObject1.add("sub_category_code", subCategory_Array);
-        jsonObject1.add("child_category_code", childCategory_Array);
+        jsonObject1.addProperty("sub_category_code", Constants.convertCommaString(subCategory_Array));
+        jsonObject1.addProperty("child_category_code" ,Constants.convertCommaString(childCategory_Array));
         jsonObject1.addProperty("user_id", user_id);
 
         Log.e("jsonObject1", "" + jsonObject1);
@@ -761,6 +766,18 @@ public class UnitedStateActivity extends CommonBackActivity {
         return result;
     }
 
+    public Boolean isItemExists(String id){
+        for (int i=0;i < charitylist1.size();i++){
+            Charitylist items = charitylist1.get(i);
+            String itemID = items.getId();
+            if (itemID.equals(id)){
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     private void loadMore() {
         charitylist1.add(null);
         unitesStateLocationDetailsAdapterList.notifyItemInserted(charitylist1.size() - 1);
@@ -816,7 +833,13 @@ public class UnitedStateActivity extends CommonBackActivity {
                         map.put("like_count", object.getString("like_count"));
 
                         map.put("country", object.getString("country"));
-                        charitylist1.add(charitylistm);
+                        if (!isItemExists(charitylistm.getId())){
+                            charitylist1.add(charitylistm);
+                        }else{
+                            Log.d("charitylistm added","false");
+
+                        }
+
                         loading = false;
                     }
 

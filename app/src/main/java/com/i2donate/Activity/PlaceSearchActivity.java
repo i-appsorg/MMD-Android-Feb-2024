@@ -126,6 +126,11 @@ public class PlaceSearchActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+        String charityname = getIntent().getStringExtra("charityname");
+        if (charityname.equals("International")) {
+            autocomplete_places.setHint(getString(R.string.united_state_internationlocation));
+        }
+
 
         autocomplete_places.addTextChangedListener(new TextWatcher() {
             @Override
@@ -190,6 +195,7 @@ public class PlaceSearchActivity extends AppCompatActivity {
         });
     }
 
+
     private void loadMore() {
         charitylist1.add(null);
         internationlocationAdapterList.notifyItemInserted(charitylist1.size() - 1);
@@ -244,6 +250,7 @@ public class PlaceSearchActivity extends AppCompatActivity {
                         map.put("like_count", object.getString("like_count"));
 
                         map.put("country", object.getString("country"));
+
                         charitylist.add(map);
                         charitylist1.add(charitylistm);
                         loading = false;

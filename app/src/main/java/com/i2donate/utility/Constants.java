@@ -6,7 +6,9 @@ import android.location.Geocoder;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.vision.barcode.Barcode;
+import com.google.gson.JsonArray;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -35,5 +37,32 @@ public class Constants {
 
         }
         return loc;
+    }
+
+    public static String convertCommaString(JsonArray category_Array){
+
+        ArrayList<String> listdata = new ArrayList<String>();
+        for (int i=0;i<category_Array.size();i++){
+
+            listdata.add(category_Array.get(i).getAsString());
+        }
+
+        StringBuilder sbString = new StringBuilder("");
+
+        //iterate through ArrayList
+        for(String language : listdata){
+
+            //append ArrayList element followed by comma
+            sbString.append(language).append(",");
+        }
+
+        //convert StringBuffer to String
+        String strList = sbString.toString();
+
+        //remove last comma from String if you want
+        if( strList.length() > 0 )
+            strList = strList.substring(0, strList.length() - 1);
+
+        return strList; //.replaceAll("\\\\", "");
     }
 }
