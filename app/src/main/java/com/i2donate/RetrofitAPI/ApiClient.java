@@ -15,6 +15,8 @@ public class ApiClient {
     public static String Privacy_URL = "";
     public static String Help_URL = "";
     public static String About_URL = "";
+    public static String UPLOAD_URL = "";
+
 
     private static Retrofit retrofit = null;
     private static OkHttpClient.Builder httpClient = new OkHttpClient.Builder()

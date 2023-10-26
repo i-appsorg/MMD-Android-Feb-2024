@@ -49,6 +49,7 @@ import com.i2donate.RetrofitAPI.ApiInterface;
 import com.i2donate.Session.IDonateSharedPreference;
 import com.i2donate.Session.SessionManager;
 import com.i2donate.utility.Constants;
+import com.i2donate.utility.FilterHelper;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -116,6 +117,26 @@ public class UnitedStateActivity extends CommonBackActivity {
         toolbar.setVisibility(View.GONE);
         init();
         listener();
+        if(!FilterHelper.getInstance().nameSearchKey.isEmpty()) {
+            nameFilterSelected();
+            search_name_et1.setText(FilterHelper.getInstance().nameSearchKey);
+        }
+        if (!FilterHelper.getInstance().locationSearchKey.isEmpty()){
+            search_us_et.setText(FilterHelper.getInstance().locationSearchKey);
+        }
+    }
+
+    public void clearAllTypes(){
+        Log.d("US:clearAllTypes","...");
+        FilterHelper.getInstance().nameSearchKey = "";
+        FilterHelper.getInstance().locationSearchKey = "";
+        listOfdate.clear();
+        listofsubCategory.clear();
+        listofchilCategory.clear();
+        iDonateSharedPreference.setselectedtypedata(getApplicationContext(), listOfdate);
+        iDonateSharedPreference.setselectedsubcategorydata(getApplicationContext(),listofsubCategory);
+        iDonateSharedPreference.setselectedchildcategorydata(getApplicationContext(),listofchilCategory);
+
     }
 
     private void init() {
@@ -183,6 +204,17 @@ public class UnitedStateActivity extends CommonBackActivity {
                 Settings.Secure.ANDROID_ID);
     }
 
+    private void nameFilterSelected(){
+        name_search_layout.setVisibility(View.GONE);
+        name_search_layout1.setVisibility(View.GONE);
+        search_location_layout.setVisibility(View.GONE);
+        locationtitle_search_layout1.setVisibility(View.VISIBLE);
+        namesearchLayout.setVisibility(View.VISIBLE);
+        locationtitle_search_layout.setVisibility(View.VISIBLE);
+        name_loc = 1;
+        FilterHelper.getInstance().locationSearchKey = "";
+    }
+
     private void listener() {
         nestedscrollview.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
             @Override
@@ -241,6 +273,12 @@ public class UnitedStateActivity extends CommonBackActivity {
         locationtitle_search_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("locationtitle_layout","Clicked");
+                // location clicked
+                Log.d("locationtitle_layout","Clicked" + " loc " + search_us_et.getText().toString() + " name "+ search_name_et1.getText().toString());
+
+                FilterHelper.getInstance().nameSearchKey = "";
+                FilterHelper.getInstance().locationSearchKey = "";
                 namesearchLayout.setVisibility(View.GONE);
                 locationtitle_search_layout.setVisibility(View.GONE);
                 locationtitle_search_layout1.setVisibility(View.GONE);
@@ -250,9 +288,11 @@ public class UnitedStateActivity extends CommonBackActivity {
                 name_loc = 0;
             }
         });
+
         locationtitle_search_layout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("location_layout1","Clicked");
                 namesearchLayout.setVisibility(View.GONE);
                 locationtitle_search_layout.setVisibility(View.GONE);
                 locationtitle_search_layout1.setVisibility(View.GONE);
@@ -265,13 +305,14 @@ public class UnitedStateActivity extends CommonBackActivity {
         name_search_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name_search_layout.setVisibility(View.GONE);
-                name_search_layout1.setVisibility(View.GONE);
-                search_location_layout.setVisibility(View.GONE);
-                locationtitle_search_layout1.setVisibility(View.VISIBLE);
-                namesearchLayout.setVisibility(View.VISIBLE);
-                locationtitle_search_layout.setVisibility(View.VISIBLE);
-                name_loc = 1;
+                // Name clicked
+                Log.d("name_search_layout","Clicked" + " loc " + search_us_et.getText().toString() + " name "+ search_name_et1.getText().toString());
+
+                FilterHelper.getInstance().nameSearchKey = "";
+                FilterHelper.getInstance().locationSearchKey = "";
+
+                //FilterHelper.getInstance().locationSearchKey = search_us_et.getText().toString();
+                nameFilterSelected();
             }
         });
 
@@ -320,25 +361,29 @@ public class UnitedStateActivity extends CommonBackActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+                Log.d("afterTextChanged us",""+s.toString());
+                Log.d("isNameFlagClicked",""+ name_loc);
                 String text = search_name_et1.getText().toString();
-                if (text.length() > 0) {
+                if (text.length() >= 3) {
                     search_icon.setVisibility(View.GONE);
                     close_img.setVisibility(View.VISIBLE);
                     backflag = 1;
+                    pageno = 1;
+                    CharityAPI(pageno, "none");
                 } else {
                     search_icon.setVisibility(View.VISIBLE);
                     close_img.setVisibility(View.GONE);
                     backflag = 0;
                 }
 
-                pageno = 1;
-                CharityAPI(pageno, "none");
+
             }
         });
 
         close_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clearAllTypes();
                 search_name_et1.setText("");
                 pageno = 1;
                 backflag = 0;
@@ -349,6 +394,7 @@ public class UnitedStateActivity extends CommonBackActivity {
         close_img_loc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clearAllTypes();
                 search_us_et.setText("");
                 backflag = 0;
                 pageno = 1;
@@ -359,7 +405,7 @@ public class UnitedStateActivity extends CommonBackActivity {
         name_search_layout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                clearAllTypes();
                 name_search_layout.setVisibility(View.GONE);
                 name_search_layout1.setVisibility(View.GONE);
                 search_location_layout.setVisibility(View.GONE);
@@ -384,19 +430,26 @@ public class UnitedStateActivity extends CommonBackActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+                Log.d("afterTextChanged","US" + name_loc);
                 String text = search_us_et.getText().toString();
-                if (text.length() > 0) {
+                if (text.length() >= 3) {
                     search_icon_loc.setVisibility(View.GONE);
                     close_img_loc.setVisibility(View.VISIBLE);
                     backflag = 1;
+                    pageno = 1;
+                    CharityAPI(pageno, "none");
                 } else {
                     search_icon_loc.setVisibility(View.VISIBLE);
                     close_img_loc.setVisibility(View.GONE);
                     backflag = 0;
                 }
 
-                pageno = 1;
-                CharityAPI(pageno, "none");
+                if (text.length() == 0){
+                    pageno = 1;
+                    CharityAPI(pageno, "none");
+                }
+
+
             }
         });
 
@@ -404,6 +457,15 @@ public class UnitedStateActivity extends CommonBackActivity {
         type_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(name_loc == 0){
+                    FilterHelper.getInstance().nameSearchKey = "";
+                    FilterHelper.getInstance().locationSearchKey = search_us_et.getText().toString();
+                }else{
+                    FilterHelper.getInstance().nameSearchKey = search_name_et1.getText().toString();
+                    FilterHelper.getInstance().locationSearchKey = "";
+                }
+
                 if (search_us_et.getText().length() > 0) {
                     iDonateSharedPreference.setAdvancepage(getApplicationContext(), "unitedstate");
                     iDonateSharedPreference.setcountrycode(getApplicationContext(), "USsearch");
@@ -538,6 +600,10 @@ public class UnitedStateActivity extends CommonBackActivity {
 
 
     private static void CharityAPI(final int page, String type) {
+
+        String locationKey = iDonateSharedPreference.getLocation(context);
+        Log.d("locationKey",FilterHelper.getInstance().locationSearchKey);
+        Log.d("nameSearchKey",FilterHelper.getInstance().nameSearchKey);
         userDetails = session.getUserDetails();
         Log.e("userDetails", "" + userDetails);
         Log.e("KEY_UID", "" + userDetails.get(SessionManager.KEY_UID));
@@ -575,11 +641,17 @@ public class UnitedStateActivity extends CommonBackActivity {
         } else {
             searchName = iDonateSharedPreference.getSearchName(context);
         }
+        if(name_loc == 1 && !FilterHelper.getInstance().nameSearchKey.isEmpty()) {
+            searchName = FilterHelper.getInstance().nameSearchKey;
+        }
 
         if (search_us_et.getText().toString().trim().length() > 2) {
             searchCity = search_us_et.getText().toString();
         }
 
+        if (!FilterHelper.getInstance().locationSearchKey.isEmpty()){
+            searchCity = FilterHelper.getInstance().locationSearchKey;
+        }
         if (data.equalsIgnoreCase("1")) {
 
             String searchRevenue = iDonateSharedPreference.getRevenue(context);
@@ -614,14 +686,15 @@ public class UnitedStateActivity extends CommonBackActivity {
                 childCategory_Array.add(listofchilCategory.get(k));
             }
         }
-
+        Log.d("searchName ?? ",searchName);
+        Log.d("searchCity ?? ",searchCity);
         String device_id = getDeviceUniqueID(context);
         JsonObject jsonObject1 = new JsonObject();
         if (name_loc == 1) {
             jsonObject1.addProperty("name", searchName);
-            jsonObject1.addProperty("city", "");
+            jsonObject1.addProperty("city", searchCity);
         } else {
-            jsonObject1.addProperty("name", "");
+            jsonObject1.addProperty("name", searchName);
             jsonObject1.addProperty("city", searchCity);
         }
         jsonObject1.addProperty("latitude", lat);
@@ -883,15 +956,22 @@ public class UnitedStateActivity extends CommonBackActivity {
             backflag = 0;
             flag = 0;
         }
-
-        if (flag == 1) {
-            search_us_et.setText(iDonateSharedPreference.getLocation(context));
-            CharityAPI(pageno, "none");
-        } else {
-            if (flag == 0) {
+        String locationKey = iDonateSharedPreference.getLocation(context);
+        Log.d("locationKey",locationKey);
+        if(FilterHelper.getInstance().nameSearchKey.isEmpty()) {
+            if (flag == 1) {
+                search_us_et.setText(iDonateSharedPreference.getLocation(context));
                 CharityAPI(pageno, "none");
+            } else {
+                if (flag == 0) {
+                    CharityAPI(pageno, "none");
+                }
             }
         }
+        if (!FilterHelper.getInstance().locationSearchKey.isEmpty()){
+            search_us_et.setText(FilterHelper.getInstance().locationSearchKey);
+        }
+
         unitesStateLocationDetailsAdapterList = new LoadMoreUnitesStateLocationDetailsAdapterList((UnitedStateActivity) context, charitylist1);
         united_state_recyclerview.setAdapter(unitesStateLocationDetailsAdapterList);
     }
@@ -908,6 +988,8 @@ public class UnitedStateActivity extends CommonBackActivity {
 
     @Override
     public void onBackPressed() {
+        Log.d("onBackPressed","US");
+        clearAllTypes();
         if (backflag == 1) {
             pageno = 1;
             search_us_et.setText("");

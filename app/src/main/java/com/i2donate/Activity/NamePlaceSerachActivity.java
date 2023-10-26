@@ -152,22 +152,29 @@ public class NamePlaceSerachActivity extends AppCompatActivity {
             @Override
 
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Log.d("onTextChanged ","Name place");
+
+
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
                 String text = autocomplete_places.getText().toString();
-                if (text.length() > 0) {
+                if (text.length() >= 3) {
                     search_icon.setVisibility(View.GONE);
                     close_img.setVisibility(View.VISIBLE);
+                    pageno = 1;
+                    CharityAPI(pageno);
                 } else {
                     search_icon.setVisibility(View.VISIBLE);
                     close_img.setVisibility(View.GONE);
                 }
 
-                pageno = 1;
-                CharityAPI(pageno);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
+                if(text.length() == 0){
+                    pageno = 1;
+                    CharityAPI(pageno);
+                }
             }
         });
 
@@ -299,6 +306,7 @@ public class NamePlaceSerachActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        Log.d("onBackPressed","NamePlaceSearch");
         if (data.equalsIgnoreCase("1")) {
             ChangeActivity.changeActivityData(NamePlaceSerachActivity.this, UnitedStateActivity.class, "1");
             finish();
@@ -397,15 +405,21 @@ public class NamePlaceSerachActivity extends AppCompatActivity {
         jsonObject1.addProperty("longitude", lng);
         jsonObject1.addProperty("address", location);
         jsonObject1.addProperty("device_id", device_id);
-        jsonObject1.add("category_code", category_Array);
         jsonObject1.addProperty("deductible", searchDeductible);
         jsonObject1.addProperty("income_from", from_income);
         jsonObject1.addProperty("income_to", to_income);
         jsonObject1.addProperty("country_code", "US");
-        jsonObject1.add("sub_category_code", subCategory_Array);
-        jsonObject1.add("child_category_code", childCategory_Array);
+//        jsonObject1.add("sub_category_code", subCategory_Array);
+//        jsonObject1.add("child_category_code", childCategory_Array);
+//        jsonObject1.add("category_code", category_Array);
+
+        jsonObject1.addProperty("sub_category_code", Constants.convertCommaString(subCategory_Array));
+        jsonObject1.addProperty("child_category_code" ,Constants.convertCommaString(childCategory_Array));
+        jsonObject1.addProperty("category_code",Constants.convertCommaString(category_Array));
+
+
         jsonObject1.addProperty("user_id", user_id);
-        Log.e("jsonObject1", "" + jsonObject1);
+        Log.e("NAME:PLACE:SEARCH", "" + jsonObject1);
         apiService = ApiClient.getClient().create(ApiInterface.class);
 
         Call<JsonObject> call = apiService.Charitylist(jsonObject1);

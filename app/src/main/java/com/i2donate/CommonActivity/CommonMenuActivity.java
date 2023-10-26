@@ -1,6 +1,7 @@
 package com.i2donate.CommonActivity;
 
 import static com.i2donate.Model.ChangeActivity.showSnackbar;
+import static com.i2donate.RetrofitAPI.ApiClient.UPLOAD_URL;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -178,8 +179,8 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
             Log.e("KEY_profile----", "" + userDetails.get(SessionManager.KEY_PIC));
             //  Log.e("KEY_username", "" + userDetails.get(SessionManager.KEY_PIC));
             try {
-                String image = userDetails.get(SessionManager.KEY_PIC);
-                Log.e("img", image);
+                String image = UPLOAD_URL + userDetails.get(SessionManager.KEY_PIC);
+
                 Picasso.with(this).load(image).placeholder(R.drawable.ic_profile_holder).memoryPolicy(MemoryPolicy.NO_CACHE).networkPolicy(NetworkPolicy.NO_CACHE).error(R.drawable.ic_profile_holder).into(myprofile_img);
 
 //                if (!image.isEmpty()) {

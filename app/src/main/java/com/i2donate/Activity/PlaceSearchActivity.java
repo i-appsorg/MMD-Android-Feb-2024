@@ -400,10 +400,16 @@ public class PlaceSearchActivity extends AppCompatActivity {
         jsonObject1.addProperty("income_from", from_income);
         jsonObject1.addProperty("income_to", to_income);
         jsonObject1.addProperty("country_code", countrycode);
-        jsonObject1.add("sub_category_code", subCategory_Array);
-        jsonObject1.add("child_category_code", childCategory_Array);
+//        jsonObject1.add("sub_category_code", subCategory_Array);
+//        jsonObject1.add("child_category_code", childCategory_Array);
+
+        jsonObject1.addProperty("sub_category_code", Constants.convertCommaString(subCategory_Array));
+        jsonObject1.addProperty("child_category_code" ,Constants.convertCommaString(childCategory_Array));
+        jsonObject1.addProperty("category_code",Constants.convertCommaString(category_Array));
+
+
         jsonObject1.addProperty("user_id", user_id);
-        Log.e("jsonObject1", "" + jsonObject1);
+        Log.e("PLACE SEARCH PARAM", "" + jsonObject1);
         apiService =
                 ApiClient.getClient().create(ApiInterface.class);
 

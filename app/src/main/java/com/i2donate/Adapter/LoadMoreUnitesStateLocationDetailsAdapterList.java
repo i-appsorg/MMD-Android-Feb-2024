@@ -261,7 +261,7 @@ public class LoadMoreUnitesStateLocationDetailsAdapterList extends RecyclerView.
     }
 
     InputFilter filter = new InputFilter() {
-        final int maxDigitsBeforeDecimalPoint=4;
+        final int maxDigitsBeforeDecimalPoint=5;
         final int maxDigitsAfterDecimalPoint=2;
 
         @Override

@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
@@ -47,6 +48,7 @@ import com.i2donate.RetrofitAPI.ApiInterface;
 import com.i2donate.Session.IDonateSharedPreference;
 import com.i2donate.Session.SessionManager;
 import com.i2donate.utility.Constants;
+import com.i2donate.utility.FilterHelper;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -56,6 +58,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -193,6 +196,7 @@ public class NameSearchActivity extends CommonBackActivity {
         type_linear_layout_white = (LinearLayout) findViewById(R.id.type_linear_layout_white);
         type_linear_layout1_white = (LinearLayout) findViewById(R.id.type_linear_layout1_white);
         search_name_et.setFocusable(false);
+
         search_icon = (ImageView) findViewById(R.id.search_icon);
         advance_search_text = (TextView) findViewById(R.id.advance_search_text);
         advance_search_text_white = (TextView) findViewById(R.id.advance_search_text_white);
@@ -253,6 +257,7 @@ public class NameSearchActivity extends CommonBackActivity {
         location_search_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                clearAllTypes();
                 filter = 1;
                 search_name_et.setText("");
                 search_name_et.setHint("Enter nonprofit/charity name");
@@ -264,7 +269,8 @@ public class NameSearchActivity extends CommonBackActivity {
         name_search_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Log.d("name_search_layout ? ","clicked");
+                clearAllTypes();
                 flag = 1;
                 String getText = "";
                 if (search_name_et.getText().length() > 0) {
@@ -302,7 +308,8 @@ public class NameSearchActivity extends CommonBackActivity {
         name_search_layout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Log.d("name_search_layout1","clicked");
+                clearAllTypes();
                 flag = 1;
 
                 advance_search_text.setVisibility(View.VISIBLE);
@@ -379,23 +386,38 @@ public class NameSearchActivity extends CommonBackActivity {
             @Override
 
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+
+
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
                 String text = search_name_et.getText().toString();
-                if (text.length() > 0) {
+                if(!FilterHelper.getInstance().nameSearchKey.equals(text)) {
+                    FilterHelper.getInstance().nameSearchKey = "";
+                }
+                Log.d("onTextChanged","" + FilterHelper.getInstance().nameSearchKey);
+
+                if (text.length() >= 3) {
                     search_icon.setVisibility(View.GONE);
                     close_img.setVisibility(View.VISIBLE);
                     backflag = 1;
+                    pageno = 1;
+                    CharityAPI(pageno);
                 } else {
                     search_icon.setVisibility(View.VISIBLE);
                     close_img.setVisibility(View.GONE);
                     backflag = 0;
                 }
 
-                pageno = 1;
-                CharityAPI(pageno);
-            }
+                if(text.length() == 0){
+                    pageno = 1;
+                    CharityAPI(pageno);
+                }
 
-            @Override
-            public void afterTextChanged(Editable s) {
             }
         });
 
@@ -403,8 +425,8 @@ public class NameSearchActivity extends CommonBackActivity {
         close_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clearAllTypes();
                 search_name_et.setText("");
-
                 pageno = 1;
                 backflag = 0;
                 CharityAPI(pageno);
@@ -420,6 +442,9 @@ public class NameSearchActivity extends CommonBackActivity {
                 advance_search_text1.setVisibility(View.VISIBLE);
                 advance_search_text1_white.setVisibility(View.GONE);
                 iDonateSharedPreference.setadvance(getApplicationContext(), "0");
+
+                FilterHelper.getInstance().nameSearchKey = search_name_et.getText().toString();
+
                 if (data.equalsIgnoreCase("1")) {
                     iDonateSharedPreference.setAdvancepage(getApplicationContext(), "namesearch");
                     iDonateSharedPreference.setcountrycode(getApplicationContext(), "normalsearch");
@@ -709,6 +734,11 @@ public class NameSearchActivity extends CommonBackActivity {
         if (search_name_et.getText().toString().length() > 0) {
             getText = search_name_et.getText().toString().trim();
         }
+        if (!TextUtils.isEmpty(FilterHelper.getInstance().nameSearchKey)){
+            getText  = FilterHelper.getInstance().nameSearchKey;
+
+        }
+        Log.d("nameSearchKey is ? ",FilterHelper.getInstance().nameSearchKey);
         Log.e("Text------", getText);
         String lat = "", lng = "";
         String location = iDonateSharedPreference.getLocation(context);
@@ -914,6 +944,7 @@ public class NameSearchActivity extends CommonBackActivity {
 
                     if (nextLimit >= arrayListsize) {
                         pageno++;
+                        Log.d("LOAD MORE CALLED","");
                         CharityAPI(pageno);
                         loading = false;
                     }
@@ -980,14 +1011,29 @@ public class NameSearchActivity extends CommonBackActivity {
         }
     }
 
+    public void clearAllTypes(){
+        listofchilCategory.clear();
+        listofsubCategory.clear();
+        listOfdate.clear();
+        FilterHelper.getInstance().nameSearchKey = "";
+        iDonateSharedPreference.setselectedtypedata(getApplicationContext(), listOfdate);
+        iDonateSharedPreference.setselectedsubcategorydata(getApplicationContext(),listofsubCategory);
+        iDonateSharedPreference.setselectedchildcategorydata(getApplicationContext(),listofchilCategory);
+
+    }
     @Override
     protected void onResume() {
         super.onResume();
+
+        if(!TextUtils.isEmpty(FilterHelper.getInstance().nameSearchKey)){
+            search_name_et.setText(FilterHelper.getInstance().nameSearchKey);
+        }
 
         listOfdate = iDonateSharedPreference.getselectedtypedata(getApplicationContext());
         listofsubCategory = iDonateSharedPreference.getselectedsubcategorydata(getApplicationContext());
         listofchilCategory = iDonateSharedPreference.getselectedchildcategorydata(getApplicationContext());
         pageno = 1;
+        Log.d("listOfdate","" + listOfdate.size());
         if (listOfdate.size() > 0) {
             backflag = 1;
             CharityAPI(pageno);
@@ -1011,19 +1057,21 @@ public class NameSearchActivity extends CommonBackActivity {
             flag = 0;
         }
 
-        if (flag == 1) {
-            search_name_et.setText(iDonateSharedPreference.getLocation(context));
-
-            CharityAPI(pageno);
-        } else {
-            if (flag == 0) {
+        if(FilterHelper.getInstance().nameSearchKey.isEmpty()) {
+            if (flag == 1) {
+                search_name_et.setText(iDonateSharedPreference.getLocation(context));
                 CharityAPI(pageno);
             } else {
-                unitesStateLocationAdapterList = new LoadMoreUnitesStateLocationAdapterList((NameSearchActivity) context, charitylist1);
-                united_state_name_recyclerview.setAdapter(unitesStateLocationAdapterList);
-            }
+                if (flag == 0) {
+                    CharityAPI(pageno);
+                } else {
+                    unitesStateLocationAdapterList = new LoadMoreUnitesStateLocationAdapterList((NameSearchActivity) context, charitylist1);
+                    united_state_name_recyclerview.setAdapter(unitesStateLocationAdapterList);
+                }
 
+            }
         }
+
         show_type = iDonateSharedPreference.gettype(getApplicationContext());
 
         show_advance = iDonateSharedPreference.getadvance(getApplicationContext());
@@ -1045,6 +1093,7 @@ public class NameSearchActivity extends CommonBackActivity {
     @Override
     public void onBackPressed() {
         if (backflag == 1) {
+            clearAllTypes();
             pageno = 1;
             listOfdate.clear();
             search_name_et.setText("");

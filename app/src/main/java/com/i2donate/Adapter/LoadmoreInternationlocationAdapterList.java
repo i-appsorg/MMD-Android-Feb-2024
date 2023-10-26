@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.text.Editable;
 import android.text.Html;
+import android.text.InputFilter;
 import android.text.Spanned;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -232,6 +233,29 @@ public class LoadmoreInternationlocationAdapterList extends RecyclerView.Adapter
         return charitylist1.get(position) == null ? VIEW_TYPE_LOADING : VIEW_TYPE_ITEM;
     }
 
+    InputFilter filter = new InputFilter() {
+        final int maxDigitsBeforeDecimalPoint=5;
+        final int maxDigitsAfterDecimalPoint=2;
+
+        @Override
+        public CharSequence filter(CharSequence source, int start, int end,
+                                   Spanned dest, int dstart, int dend) {
+            StringBuilder builder = new StringBuilder(dest);
+            builder.replace(dstart, dend, source
+                    .subSequence(start, end).toString());
+            if (!builder.toString().matches(
+                    "(([1-9]{1})([0-9]{0,"+(maxDigitsBeforeDecimalPoint-1)+"})?)?(\\.[0-9]{0,"+maxDigitsAfterDecimalPoint+"})?"
+
+            )) {
+                if(source.length()==0)
+                    return dest.subSequence(dstart, dend);
+                return "";
+            }
+
+            return null;
+
+        }
+    };
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView txtxCountry, name_tv, location_name_tv, like_count_tv, unlike_count_tv, follow_count_tv, unfollow_count_tv;
         public CustomImageView logo_img;
@@ -412,7 +436,7 @@ public class LoadmoreInternationlocationAdapterList extends RecyclerView.Adapter
                     LinearLayout payment_dailog_linear = (LinearLayout) d.findViewById(R.id.payment_dailog_linear);
                     final EditText payment_et = (EditText) d.findViewById(R.id.payment_et);
                     TextView cancel_tv = (TextView) d.findViewById(R.id.cancel_tv);
-
+                    payment_et.setFilters(new InputFilter[]{filter});
                     Button payment_continue_btn = (Button) d.findViewById(R.id.payment_continue_btn);
                     TextView textview_percentage = (TextView) d.findViewById(R.id.textview_percentage);
                     String code = "Merchant charges and processing fee will be added to whatever donation amount is entered. <img src ='addbutton.png'>";

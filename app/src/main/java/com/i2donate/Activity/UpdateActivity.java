@@ -1,5 +1,7 @@
 package com.i2donate.Activity;
 
+import static com.i2donate.RetrofitAPI.ApiClient.UPLOAD_URL;
+
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -286,7 +288,9 @@ public class UpdateActivity extends AppCompatActivity {
             terms = jsonObject1.getString("terms");
 
             try {
-                String image = jsonObject1.getString("photo");
+//                String image = jsonObject1.getString("photo");
+                String image = UPLOAD_URL + jsonObject1.getString("photo");
+
                 if (image.isEmpty()) {
                     Picasso.with(this).load(R.drawable.ic_profile_holder).placeholder(R.drawable.ic_profile_holder).memoryPolicy(MemoryPolicy.NO_CACHE).networkPolicy(NetworkPolicy.NO_CACHE).error(R.drawable.ic_profile_holder).into(myprofile_edit_img);
                 } else {

@@ -39,6 +39,7 @@ import com.android.volley.toolbox.Volley;
 import com.i2donate.Interwork.MyApplication;
 import com.i2donate.Model.ChangeActivity;
 import com.i2donate.R;
+import com.i2donate.RetrofitAPI.ApiClient;
 import com.i2donate.Session.PrefManager;
 
 import org.json.JSONArray;
@@ -164,8 +165,8 @@ public class WelcomeActivity extends AppCompatActivity {
 
                     String sheetID = MyApplication.getSheetId();
                     String apiKEY = MyApplication.getSheetApiKey();
-                    String sheetTabName = "i2D-Dev";
-//                    String sheetTabName = "i2D-Prod";
+//                    String sheetTabName = "i2D-Dev";
+                    String sheetTabName = "i2D-Prod";
                     String urls = "https://sheets.googleapis.com/v4/spreadsheets/" + sheetID + "/values/" + sheetTabName + "?key=" + apiKEY;
 
                     RequestQueue queue = Volley.newRequestQueue(WelcomeActivity.this);
@@ -183,6 +184,8 @@ public class WelcomeActivity extends AppCompatActivity {
                                         if (jsonArrayPos.get(j).toString().contains("Server_URL")) {
                                             Log.e(TAG, " Server_URL - " + jsonArrayPos.get(j + 1).toString());
                                             Server_URL = jsonArrayPos.get(j + 1).toString() + "/";
+                                            String imgUrl = Server_URL.replace("/i2d_mob/webservice","");
+                                            ApiClient.UPLOAD_URL = imgUrl;
                                         }
 
                                         if (jsonArrayPos.get(j).toString().contains("TC_URL")) {

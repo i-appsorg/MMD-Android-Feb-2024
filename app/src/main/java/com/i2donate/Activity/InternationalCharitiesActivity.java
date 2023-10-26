@@ -389,24 +389,30 @@ public class InternationalCharitiesActivity extends CommonBackActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
                 String text = search_name_et1.getText().toString();
-                if (text.length() > 0) {
+                if (text.length() >= 3) {
                     search_icon.setVisibility(View.GONE);
                     close_img.setVisibility(View.VISIBLE);
                     backflag = 1;
+                    page = "1";
+                    CharityAPI(page);
                 } else {
                     search_icon.setVisibility(View.VISIBLE);
                     close_img.setVisibility(View.GONE);
                     backflag = 0;
                 }
 
-                page = "1";
-                CharityAPI(page);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
+                if (text.length() == 0) {
+                    page = "1";
+                    CharityAPI(page);
+                }
             }
         });
 
@@ -708,7 +714,7 @@ public class InternationalCharitiesActivity extends CommonBackActivity {
 
 
         jsonObject1.addProperty("user_id", user_id);
-        Log.e("jsonObject1-----", "" + jsonObject1);
+        Log.e("INT:PARAM-----", "" + jsonObject1);
         apiService = ApiClient.getClient().create(ApiInterface.class);
 
         Call<JsonObject> call = apiService.Charitylist(jsonObject1);
