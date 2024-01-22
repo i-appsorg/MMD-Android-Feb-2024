@@ -1,0 +1,167 @@
+{
+  "abi": "ARMEABI_V7A",
+  "info": {
+    "abi": "ARMEABI_V7A",
+    "bitness": 32,
+    "deprecated": false,
+    "default": true
+  },
+  "cxxBuildFolder": "/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/.cxx/Debug/123o542v/armeabi-v7a",
+  "soFolder": "/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/build/intermediates/cxx/Debug/123o542v/obj/armeabi-v7a",
+  "soRepublishFolder": "/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/build/intermediates/cmake/debug/obj/armeabi-v7a",
+  "abiPlatformVersion": 21,
+  "cmake": {
+    "effectiveConfiguration": {
+      "inheritEnvironments": [],
+      "variables": []
+    }
+  },
+  "variant": {
+    "buildSystemArgumentList": [],
+    "cFlagsList": [],
+    "cppFlagsList": [
+      ""
+    ],
+    "variantName": "debug",
+    "isDebuggableEnabled": true,
+    "validAbiList": [
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64"
+    ],
+    "buildTargetSet": [],
+    "implicitBuildTargetSet": [],
+    "cmakeSettingsConfiguration": "android-gradle-plugin-predetermined-name",
+    "module": {
+      "cxxFolder": "/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/.cxx",
+      "intermediatesBaseFolder": "/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/build/intermediates",
+      "intermediatesFolder": "/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/build/intermediates/cxx",
+      "gradleModulePathName": ":app",
+      "moduleRootFolder": "/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app",
+      "moduleBuildFile": "/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/build.gradle",
+      "makeFile": "/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/CMakeLists.txt",
+      "buildSystem": "CMAKE",
+      "ndkFolder": "/Users/emile/Library/Android/sdk/ndk/23.1.7779620",
+      "ndkVersion": "23.1.7779620",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultStl": "LIBCXX_STATIC",
+      "ndkMetaPlatforms": {
+        "min": 16,
+        "max": 31,
+        "aliases": {
+          "20": 19,
+          "25": 24,
+          "J": 16,
+          "J-MR1": 17,
+          "J-MR2": 18,
+          "K": 19,
+          "L": 21,
+          "L-MR1": 22,
+          "M": 23,
+          "N": 24,
+          "N-MR1": 24,
+          "O": 26,
+          "O-MR1": 27,
+          "P": 28,
+          "Q": 29,
+          "R": 30,
+          "S": 31
+        }
+      },
+      "ndkMetaAbiList": [
+        {
+          "abi": "ARMEABI_V7A",
+          "bitness": 32,
+          "deprecated": false,
+          "default": true
+        },
+        {
+          "abi": "ARM64_V8A",
+          "bitness": 64,
+          "deprecated": false,
+          "default": true
+        },
+        {
+          "abi": "X86",
+          "bitness": 32,
+          "deprecated": false,
+          "default": true
+        },
+        {
+          "abi": "X86_64",
+          "bitness": 64,
+          "deprecated": false,
+          "default": true
+        }
+      ],
+      "cmakeToolchainFile": "/Users/emile/Library/Android/sdk/ndk/23.1.7779620/build/cmake/android.toolchain.cmake",
+      "cmake": {
+        "isValidCmakeAvailable": true,
+        "cmakeExe": "/Users/emile/Library/Android/sdk/cmake/3.18.1/bin/cmake",
+        "minimumCmakeVersion": "3.18.1"
+      },
+      "stlSharedObjectMap": {
+        "LIBCXX_SHARED": {
+          "ARMEABI_V7A": "/Users/emile/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/libc++_shared.so",
+          "ARM64_V8A": "/Users/emile/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/libc++_shared.so",
+          "X86": "/Users/emile/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/i686-linux-android/libc++_shared.so",
+          "X86_64": "/Users/emile/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/x86_64-linux-android/libc++_shared.so"
+        },
+        "LIBCXX_STATIC": {},
+        "NONE": {},
+        "SYSTEM": {}
+      },
+      "project": {
+        "rootBuildGradleFolder": "/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android",
+        "sdkFolder": "/Users/emile/Library/Android/sdk",
+        "isBuildOnlyTargetAbiEnabled": true,
+        "isCmakeBuildCohabitationEnabled": false,
+        "isPrefabEnabled": false
+      },
+      "outputOptions": [],
+      "ninjaExe": "/Users/emile/Library/Android/sdk/cmake/3.18.1/bin/ninja"
+    },
+    "prefabClassPaths": [],
+    "prefabPackages": [],
+    "prefabPackageConfigurations": [],
+    "stlType": "c++_static",
+    "optimizationTag": "Debug"
+  },
+  "buildSettings": {
+    "environmentVariables": []
+  },
+  "prefabFolder": "/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/.cxx/Debug/123o542v/prefab/armeabi-v7a",
+  "isActiveAbi": true,
+  "fullConfigurationHash": "123o542v593or3s5222b5d2j5a2g3x401z612n4y692e4u2y3116xz1z4mr",
+  "configurationArguments": [
+    "-H/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app",
+    "-DCMAKE_SYSTEM_NAME\u003dAndroid",
+    "-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON",
+    "-DCMAKE_SYSTEM_VERSION\u003d21",
+    "-DANDROID_PLATFORM\u003dandroid-21",
+    "-DANDROID_ABI\u003darmeabi-v7a",
+    "-DCMAKE_ANDROID_ARCH_ABI\u003darmeabi-v7a",
+    "-DANDROID_NDK\u003d/Users/emile/Library/Android/sdk/ndk/23.1.7779620",
+    "-DCMAKE_ANDROID_NDK\u003d/Users/emile/Library/Android/sdk/ndk/23.1.7779620",
+    "-DCMAKE_TOOLCHAIN_FILE\u003d/Users/emile/Library/Android/sdk/ndk/23.1.7779620/build/cmake/android.toolchain.cmake",
+    "-DCMAKE_MAKE_PROGRAM\u003d/Users/emile/Library/Android/sdk/cmake/3.18.1/bin/ninja",
+    "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/build/intermediates/cxx/Debug/123o542v/obj/armeabi-v7a",
+    "-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003d/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/build/intermediates/cxx/Debug/123o542v/obj/armeabi-v7a",
+    "-DCMAKE_BUILD_TYPE\u003dDebug",
+    "-B/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/.cxx/Debug/123o542v/armeabi-v7a",
+    "-GNinja"
+  ],
+  "intermediatesParentFolder": "/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/build/intermediates/cxx/Debug/123o542v"
+}

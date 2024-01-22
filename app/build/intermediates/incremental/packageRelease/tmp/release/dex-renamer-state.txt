@@ -1,0 +1,10 @@
+#Tue Dec 12 23:28:18 IST 2023
+base.0=/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+base.1=/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/build/intermediates/dex/release/mergeDexRelease/classes2.dex
+base.2=/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/build/intermediates/dex/release/mergeDexRelease/classes3.dex
+path.0=classes.dex
+path.1=classes2.dex
+path.2=classes3.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex

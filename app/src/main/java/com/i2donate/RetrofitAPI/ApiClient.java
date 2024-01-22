@@ -20,9 +20,9 @@ public class ApiClient {
 
     private static Retrofit retrofit = null;
     private static OkHttpClient.Builder httpClient = new OkHttpClient.Builder()
-            .connectTimeout(20, TimeUnit.SECONDS)
-            .readTimeout(30, TimeUnit.SECONDS)
-            .writeTimeout(30, TimeUnit.SECONDS);
+            .connectTimeout(40, TimeUnit.SECONDS)
+            .readTimeout(40, TimeUnit.SECONDS)
+            .writeTimeout(40, TimeUnit.SECONDS);
 
    /* public static <S> S createService(Class<S> serviceClass, String baseUrl) {
 

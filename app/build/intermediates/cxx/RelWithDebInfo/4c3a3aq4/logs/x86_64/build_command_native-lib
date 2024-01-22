@@ -1,0 +1,4 @@
+/Users/emile/Library/Android/sdk/cmake/3.18.1/bin/ninja \
+  -C \
+  /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/.cxx/RelWithDebInfo/4c3a3aq4/x86_64 \
+  native-lib

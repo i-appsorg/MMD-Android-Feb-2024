@@ -289,9 +289,12 @@ public class UpdateActivity extends AppCompatActivity {
 
             try {
 //                String image = jsonObject1.getString("photo");
+                String photoPath = jsonObject1.getString("photo");
                 String image = UPLOAD_URL + jsonObject1.getString("photo");
-
-                if (image.isEmpty()) {
+                if (photoPath.startsWith("http")) {
+                    Picasso.with(this).load(photoPath).placeholder(R.drawable.ic_profile_holder).memoryPolicy(MemoryPolicy.NO_CACHE).networkPolicy(NetworkPolicy.NO_CACHE).error(R.drawable.ic_profile_holder).into(myprofile_edit_img);
+                }
+               else if (image.isEmpty()) {
                     Picasso.with(this).load(R.drawable.ic_profile_holder).placeholder(R.drawable.ic_profile_holder).memoryPolicy(MemoryPolicy.NO_CACHE).networkPolicy(NetworkPolicy.NO_CACHE).error(R.drawable.ic_profile_holder).into(myprofile_edit_img);
                 } else {
                     Picasso.with(this).load(image).placeholder(R.drawable.ic_profile_holder).memoryPolicy(MemoryPolicy.NO_CACHE).networkPolicy(NetworkPolicy.NO_CACHE).error(R.drawable.ic_profile_holder).into(myprofile_edit_img);
@@ -646,9 +649,11 @@ public class UpdateActivity extends AppCompatActivity {
 
     public boolean isPermissionGranted() {
         if (Build.VERSION.SDK_INT >= 23) {
-            if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
-                    == PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                    == PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.CAMERA)
+            //checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+            //                    == PackageManager.PERMISSION_GRANTED &&
+            //checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            //                    == PackageManager.PERMISSION_GRANTED &&
+            if (checkSelfPermission(Manifest.permission.CAMERA)
                     == PackageManager.PERMISSION_GRANTED) {
                 Log.e("TAG", "Permission is granted *********");
                 return true;
@@ -917,17 +922,19 @@ public class UpdateActivity extends AppCompatActivity {
                 /*   String PdfPathHolder2 = modelclass.getPath(this, pickedImage);*/
                 try {
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), contentURI);
-                    String path = saveImage(bitmap);
-                    Log.e(TAG, "onActivityResult: ----------" + path);
-                    Toast.makeText(UpdateActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
-                    myprofile_edit_img.setImageBitmap(bitmap);
+
 
                     ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                     bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
                     byte[] byteArray = byteArrayOutputStream.toByteArray();
                     String encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
                     base64img = encoded;
-                    Log.e("base64", "" + base64img);
+//                    String path = saveImage(bitmap);
+//                    Log.e(TAG, "onActivityResult: ----------" + path);
+                   // Toast.makeText(UpdateActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
+                    myprofile_edit_img.setImageBitmap(bitmap);
+
+                   // Log.e("base64", "" + base64img);
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -939,14 +946,14 @@ public class UpdateActivity extends AppCompatActivity {
             Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
             myprofile_edit_img.setImageBitmap(thumbnail);
             saveImage(thumbnail);
-            String path = saveImageCam(thumbnail, getApplicationContext(), IMAGE_DIRECTORY);
+            //String path = saveImageCam(thumbnail, getApplicationContext(), IMAGE_DIRECTORY);
 //            base64img = convertToString(path);
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             thumbnail.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
             byte[] byteArray = byteArrayOutputStream.toByteArray();
             String encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
             base64img = encoded;
-            Log.e("base64", "" + base64img);
+//            Log.e("base64", "" + base64img);
             Toast.makeText(UpdateActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
         }
     }

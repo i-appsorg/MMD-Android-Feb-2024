@@ -1,0 +1,326 @@
+[
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_common_back.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_common_back.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_terms_and_condition.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_terms_and_condition.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_setting.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_setting.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/row_first.xml",
+        "source": "com.i2donate.app-main-64:/layout/row_first.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/tutorial_slide1.xml",
+        "source": "com.i2donate.app-main-64:/layout/tutorial_slide1.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_united_state.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_united_state.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/adavanced_search_listitem1.xml",
+        "source": "com.i2donate.app-main-64:/layout/adavanced_search_listitem1.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/recipe_placeholder_item.xml",
+        "source": "com.i2donate.app-main-64:/layout/recipe_placeholder_item.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_change.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_change.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/notification_adapter_item.xml",
+        "source": "com.i2donate.app-main-64:/layout/notification_adapter_item.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_common_navigation_heading.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_common_navigation_heading.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_confirmation.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_confirmation.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_payment_success.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_payment_success.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_types.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_types.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_login.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_international_charities.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_international_charities.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/percentage_detail_layout.xml",
+        "source": "com.i2donate.app-main-64:/layout/percentage_detail_layout.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_update.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_update.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/row_third.xml",
+        "source": "com.i2donate.app-main-64:/layout/row_third.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_adavance_search_uidesign.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_adavance_search_uidesign.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_splash_screen.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_splash_screen.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_autosearch.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_autosearch.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/child_list_layout_choose_category.xml",
+        "source": "com.i2donate.app-main-64:/layout/child_list_layout_choose_category.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/group_list_layout_my_categories.xml",
+        "source": "com.i2donate.app-main-64:/layout/group_list_layout_my_categories.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_brain_tree_payment.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_brain_tree_payment.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/adavance_search_layout.xml",
+        "source": "com.i2donate.app-main-64:/layout/adavance_search_layout.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_common_menu.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_common_menu.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_newtypes.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_newtypes.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_title_sub_title.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_title_sub_title.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_name_search_new.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_name_search_new.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/united_stated_item.xml",
+        "source": "com.i2donate.app-main-64:/layout/united_stated_item.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_notification.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_notification.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/view_search_list.xml",
+        "source": "com.i2donate.app-main-64:/layout/view_search_list.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_name_search.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_name_search.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/adavanced_search_non_choose_listitem3.xml",
+        "source": "com.i2donate.app-main-64:/layout/adavanced_search_non_choose_listitem3.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_advance_search.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_advance_search.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/common_navigation_item.xml",
+        "source": "com.i2donate.app-main-64:/layout/common_navigation_item.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/item_loading.xml",
+        "source": "com.i2donate.app-main-64:/layout/item_loading.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_select_payment.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_select_payment.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/tutorial_slide2.xml",
+        "source": "com.i2donate.app-main-64:/layout/tutorial_slide2.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/advance_item_new.xml",
+        "source": "com.i2donate.app-main-64:/layout/advance_item_new.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_following.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_following.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/side_menu_layout.xml",
+        "source": "com.i2donate.app-main-64:/layout/side_menu_layout.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/expandable_layout.xml",
+        "source": "com.i2donate.app-main-64:/layout/expandable_layout.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/type_search_adapter.xml",
+        "source": "com.i2donate.app-main-64:/layout/type_search_adapter.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/pom.xml",
+        "source": "com.i2donate.app-main-64:/layout/pom.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/group_list_layout_choose_categories.xml",
+        "source": "com.i2donate.app-main-64:/layout/group_list_layout_choose_categories.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/searchview_adapter.xml",
+        "source": "com.i2donate.app-main-64:/layout/searchview_adapter.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_united_state_details.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_united_state_details.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_advance_search1.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_advance_search1.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_bowse.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_bowse.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/search_row_list.xml",
+        "source": "com.i2donate.app-main-64:/layout/search_row_list.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_welcome.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_welcome.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_privact_policy.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_privact_policy.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_adavance_search_new.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_adavance_search_new.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_myspace.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_myspace.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/row_second.xml",
+        "source": "com.i2donate.app-main-64:/layout/row_second.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_main.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_annual_revenue.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_annual_revenue.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_twitter_login_web_view.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_twitter_login_web_view.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/adavanced_search_choose_listitem2.xml",
+        "source": "com.i2donate.app-main-64:/layout/adavanced_search_choose_listitem2.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_type_serch.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_type_serch.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_name_place_serach.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_name_place_serach.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/payment_alert_dailog.xml",
+        "source": "com.i2donate.app-main-64:/layout/payment_alert_dailog.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_maps.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_maps.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_about.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_about.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_otp.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_otp.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/adavanced_search_choose_listitem3.xml",
+        "source": "com.i2donate.app-main-64:/layout/adavanced_search_choose_listitem3.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_place_search.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_place_search.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/united_state_adapter_item.xml",
+        "source": "com.i2donate.app-main-64:/layout/united_state_adapter_item.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/united_state_adapter1_item.xml",
+        "source": "com.i2donate.app-main-64:/layout/united_state_adapter1_item.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_help_support.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_help_support.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_united_state_new.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_united_state_new.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_privacy_policy.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_privacy_policy.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_sub_category.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_sub_category.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/adavanced_search_non_choose_listitem2.xml",
+        "source": "com.i2donate.app-main-64:/layout/adavanced_search_non_choose_listitem2.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_forgot.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_forgot.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/myspace_adapter_item.xml",
+        "source": "com.i2donate.app-main-64:/layout/myspace_adapter_item.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/type_data_adapter.xml",
+        "source": "com.i2donate.app-main-64:/layout/type_data_adapter.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_advance_completed.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_advance_completed.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout/activity_register.xml",
+        "source": "com.i2donate.app-main-64:/layout/activity_register.xml"
+    }
+]

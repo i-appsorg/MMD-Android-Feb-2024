@@ -9,7 +9,8 @@
     <!--  <string name="facebook_app_id">815575865578946</string>
     <string name="fb_login_protocol_scheme">fb815575865578946</string>-->
     <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
-    <string name="web_client_id" translatable="false">720548689360-3pbpu4h85j4pon0q10de1em1jthkolkf.apps.googleusercontent.com"</string>
+    <string name="web_client_id" translatable="false">720548689360-3pbpu4h85j4pon0q10de1em1jthkolkf.apps.googleusercontent.com</string>
+    <!--    <string name="web_client_id" translatable="false">720548689360-o28i9p2d8rgqqegpbfa6um152old48rt.apps.googleusercontent.com</string>-->
     <!--    <string name="facebook_app_id">458781686289561</string>-->
     <!--    <string name="fb_login_protocol_scheme">0ec39795f3b778911f32b9006bb811fc</string>-->
 
@@ -325,4 +326,7 @@
     <string name="bus_city_name_required">City is required</string>
     <string name="bus_zipcode_name_required">Zipcode is required</string>
     <string name="bus_taxid_name_required">Tax-Id is required</string>
+    <string name="twitter_API_key">pBjkBJoBpsMl1QHWsE1UjbAo2</string>
+    <string name="twitter_secret_key">RqkDXS2E84loXIursJlHeI8kh9fnVufaWLo4a8fN3XkrZiGl2D</string>
+    <string name="twitter_callback">twittersdk://</string>
 </resources>

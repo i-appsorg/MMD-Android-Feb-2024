@@ -1,0 +1,3 @@
+/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/.cxx/Debug/123o542v/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/.cxx/Debug/123o542v/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/.cxx/Debug/123o542v/armeabi-v7a/CMakeFiles/native-lib.dir

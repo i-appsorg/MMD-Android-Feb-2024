@@ -9,6 +9,7 @@ import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.Editable;
@@ -30,6 +31,10 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -53,9 +58,9 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
+
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.JsonObject;
 import com.i2donate.Commonmethod.ConstantFunctions;
@@ -70,14 +75,7 @@ import com.i2donate.Session.SessionManager;
 import com.i2donate.Validation.Validation;
 import com.i2donate.databinding.ActivityRegisterBinding;
 import com.i2donate.utility.FileUtils;
-import com.twitter.sdk.android.core.Result;
-import com.twitter.sdk.android.core.TwitterApiClient;
-import com.twitter.sdk.android.core.TwitterCore;
-import com.twitter.sdk.android.core.TwitterException;
-import com.twitter.sdk.android.core.TwitterSession;
-import com.twitter.sdk.android.core.identity.TwitterAuthClient;
-import com.twitter.sdk.android.core.identity.TwitterLoginButton;
-import com.twitter.sdk.android.core.models.User;
+
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -98,6 +96,11 @@ import butterknife.BindView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import twitter4j.OAuthAuthorization;
+import twitter4j.RequestToken;
+import twitter4j.Twitter;
+import twitter4j.TwitterException;
+import twitter4j.v1.User;
 
 public class RegisterActivity extends AppCompatActivity implements
         GoogleApiClient.OnConnectionFailedListener {
@@ -142,8 +145,7 @@ public class RegisterActivity extends AppCompatActivity implements
     private LinearLayout register_gender_layout;
     String type = "";
     String business_name = "";
-    TwitterLoginButton twitter_login_btn;
-    private TwitterAuthClient client;
+    Button twitter_login_btn;
     String device_token;
     LinearLayout terms_layout;
     int user_id;
@@ -153,6 +155,7 @@ public class RegisterActivity extends AppCompatActivity implements
     String pathIncorpDoc = "", pathAllocDoc = "", pathStandDoc = "", pathOtherDoc = "";
     String base64PathIncorpDoc = "", base64PathAllocDoc = "", base64PathStandDoc = "", base64PathOtherDoc = "";
     boolean btnIncorpDocClicked = false, btnAllocDocClicked = false, btnStandDocClicked = false, btnOtherDocClicked = false;
+    private OAuthAuthorization oAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -244,7 +247,7 @@ public class RegisterActivity extends AppCompatActivity implements
         country_spinner = (SearchableSpinner) findViewById(R.id.spin_country);
         register_btn = (Button) findViewById(R.id.register_btn);
         radio_btn_male = (RadioButton) findViewById(R.id.radio_btn_male);
-        twitter_login_btn = (TwitterLoginButton) findViewById(R.id.twitter_login_btn);
+        twitter_login_btn = (Button) findViewById(R.id.twitter_login_btn);
         radio_btn_female = (RadioButton) findViewById(R.id.radio_btn_female);
         radio_btn_orthers = (RadioButton) findViewById(R.id.radio_btn_orthers);
         checkbox_btn = (CheckBox) findViewById(R.id.checkbox_btn);
@@ -286,7 +289,6 @@ public class RegisterActivity extends AppCompatActivity implements
 */
         facebook_login_btn.setReadPermissions(Arrays.asList("email", "public_profile"));
         callbackManager = CallbackManager.Factory.create();
-        client = new TwitterAuthClient();
        /* facebook_login_btn.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
@@ -610,7 +612,13 @@ public class RegisterActivity extends AppCompatActivity implements
             public void onClick(View v) {
                 if (isOnline()) {
                     if (type.length() > 0) {
-                        defaultLoginTwitter();
+                        AsyncTask.execute(new Runnable() {
+                            @Override
+                            public void run() {
+                                loginWithTwiiter();
+
+                            }
+                        });
                     } else {
                         ConstantFunctions.showSnakBar("Please select register type, Individual or Business", v);
                     }
@@ -1140,53 +1148,57 @@ public class RegisterActivity extends AppCompatActivity implements
         }
     }
 
-    private TwitterSession getTwitterSession() {
-        TwitterSession session = TwitterCore.getInstance().getSessionManager().getActiveSession();
-        //NOTE : if you want to get token and secret too use uncomment the below code
-        /*TwitterAuthToken authToken = session.getAuthToken();
-        String token = authToken.token;
-        String secret = authToken.secret;*/
 
-        return session;
-    }
-
-    public void fetchTwitterEmail(final TwitterSession twitterSession) {
-        client.requestEmail(twitterSession, new com.twitter.sdk.android.core.Callback<String>() {
-            @Override
-            public void success(Result<String> result) {
-                //here it will give u only email and rest of other information u can get from TwitterSession
-//                Log.e(TAG, result.data);
-                /*Toast.makeText(LoginActivity.this, "User Id : " + twitterSession.getUserId() + "\nScreen Name : " + twitterSession.getUserName() + "\nEmail Id : " + result.data, Toast.LENGTH_SHORT).show();
-                Log.e(TAG,"User Id : " + twitterSession.getUserId()+ "\nUser Name : " + twitterSession.getUserName() + "\nEmail Id : " +  result.data);*/
-                fetchTwitterImage();
-            }
-
-            @Override
-            public void failure(TwitterException exception) {
-                Toast.makeText(RegisterActivity.this, "Failed to authenticate. Please try again.", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
+//    public void fetchTwitterEmail(final TwitterSession twitterSession) {
+//        client.requestEmail(twitterSession, new com.twitter.sdk.android.core.Callback<String>() {
+//            @Override
+//            public void success(Result<String> result) {
+//                //here it will give u only email and rest of other information u can get from TwitterSession
+////                Log.e(TAG, result.data);
+//                /*Toast.makeText(LoginActivity.this, "User Id : " + twitterSession.getUserId() + "\nScreen Name : " + twitterSession.getUserName() + "\nEmail Id : " + result.data, Toast.LENGTH_SHORT).show();
+//                Log.e(TAG,"User Id : " + twitterSession.getUserId()+ "\nUser Name : " + twitterSession.getUserName() + "\nEmail Id : " +  result.data);*/
+//                fetchTwitterImage();
+//            }
+//
+//            @Override
+//            public void failure(TwitterException exception) {
+//                Toast.makeText(RegisterActivity.this, "Failed to authenticate. Please try again.", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//    }
 
     private void getToken() {
 
         FirebaseMessaging.getInstance().setAutoInitEnabled(true);
-
-        FirebaseInstanceId.getInstance().getInstanceId()
-                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(new OnCompleteListener<String>() {
                     @Override
-                    public void onComplete(@NonNull com.google.android.gms.tasks.Task<InstanceIdResult> task) {
+                    public void onComplete(@NonNull Task<String> task) {
                         if (!task.isSuccessful()) {
-                            Log.e("token", "getInstanceId failed", task.getException());
+                            Log.w(TAG, "Fetching FCM registration token failed", task.getException());
                             return;
                         }
 
-                        // Get new Instance ID token
-                        device_token = task.getResult().getToken();
-
-                        Log.e("device_token", "" + device_token);
+                        // Get new FCM registration token
+                        device_token = task.getResult();
                     }
                 });
+
+//        FirebaseInstanceId.getInstance().getInstanceId()
+//                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull com.google.android.gms.tasks.Task<InstanceIdResult> task) {
+//                        if (!task.isSuccessful()) {
+//                            Log.e("token", "getInstanceId failed", task.getException());
+//                            return;
+//                        }
+//
+//                        // Get new Instance ID token
+//                        device_token = task.getResult().getToken();
+//
+//                        Log.e("device_token", "" + device_token);
+//                    }
+//                });
     }
 
     private void sentdevicetoken(final String type) {
@@ -1238,87 +1250,87 @@ public class RegisterActivity extends AppCompatActivity implements
         }
     }
 
-    public void fetchTwitterImage() {
-        //check if user is already authenticated or not
-        if (getTwitterSession() != null) {
+//    public void fetchTwitterImage() {
+//        //check if user is already authenticated or not
+//        if (getTwitterSession() != null) {
+//
+//            //fetch twitter image with other information if user is already authenticated
+//
+//            //initialize twitter api client
+//            TwitterApiClient twitterApiClient = TwitterCore.getInstance().getApiClient();
+//
+//            //Link for Help : https://developer.twitter.com/en/docs/accounts-and-users/manage-account-settings/api-reference/get-account-verify_credentials
+//
+//            //pass includeEmail : true if you want to fetch Email as well
+//            Call<User> call = twitterApiClient.getAccountService().verifyCredentials(true, false, true);
+//            call.enqueue(new com.twitter.sdk.android.core.Callback<User>() {
+//                @Override
+//                public void success(Result<User> result) {
+//                    User user = result.data;
+//                    Log.e(TAG, "User Id : " + user.id + "\nUser Name : " + user.name + "\nEmail Id : " + user.email + "\nScreen Name : " + user.screenName);
+//
+//                    String imageProfileUrl = user.profileImageUrl;
+//                    Log.e(TAG, "Data : " + imageProfileUrl);
+//                    if (user.email == null) {
+//                        gmailfacebookloginAPI(user.name, "", "twitter", user.profileImageUrl);
+//                    } else
+//                        gmailfacebookloginAPI(user.name, user.email, "twitter", user.profileImageUrl);
+//                    //NOTE : User profile provided by twitter is very small in size i.e 48*48
+//                    //Link : https://developer.twitter.com/en/docs/accounts-and-users/user-profile-images-and-banners
+//                    //so if you want to get bigger size image then do the following:
+//                    imageProfileUrl = imageProfileUrl.replace("_normal", "");
+//
+//                    ///load image using Picasso
+//                   /* Picasso.with(MainActivity.this)
+//                            .load(imageProfileUrl)
+//                            .placeholder(R.mipmap.ic_launcher_round)
+//                            .into(userProfileImageView);*/
+//                }
+//
+//                @Override
+//                public void failure(TwitterException exception) {
+//                    Toast.makeText(RegisterActivity.this, "Failed to authenticate. Please try again.", Toast.LENGTH_SHORT).show();
+//                }
+//            });
+//        } else {
+//            //if user is not authenticated first ask user to do authentication
+//            Toast.makeText(this, "First to Twitter auth to Verify Credentials.", Toast.LENGTH_SHORT).show();
+//        }
+//    }
 
-            //fetch twitter image with other information if user is already authenticated
-
-            //initialize twitter api client
-            TwitterApiClient twitterApiClient = TwitterCore.getInstance().getApiClient();
-
-            //Link for Help : https://developer.twitter.com/en/docs/accounts-and-users/manage-account-settings/api-reference/get-account-verify_credentials
-
-            //pass includeEmail : true if you want to fetch Email as well
-            Call<User> call = twitterApiClient.getAccountService().verifyCredentials(true, false, true);
-            call.enqueue(new com.twitter.sdk.android.core.Callback<User>() {
-                @Override
-                public void success(Result<User> result) {
-                    User user = result.data;
-                    Log.e(TAG, "User Id : " + user.id + "\nUser Name : " + user.name + "\nEmail Id : " + user.email + "\nScreen Name : " + user.screenName);
-
-                    String imageProfileUrl = user.profileImageUrl;
-                    Log.e(TAG, "Data : " + imageProfileUrl);
-                    if (user.email == null) {
-                        gmailfacebookloginAPI(user.name, "", "twitter", user.profileImageUrl);
-                    } else
-                        gmailfacebookloginAPI(user.name, user.email, "twitter", user.profileImageUrl);
-                    //NOTE : User profile provided by twitter is very small in size i.e 48*48
-                    //Link : https://developer.twitter.com/en/docs/accounts-and-users/user-profile-images-and-banners
-                    //so if you want to get bigger size image then do the following:
-                    imageProfileUrl = imageProfileUrl.replace("_normal", "");
-
-                    ///load image using Picasso
-                   /* Picasso.with(MainActivity.this)
-                            .load(imageProfileUrl)
-                            .placeholder(R.mipmap.ic_launcher_round)
-                            .into(userProfileImageView);*/
-                }
-
-                @Override
-                public void failure(TwitterException exception) {
-                    Toast.makeText(RegisterActivity.this, "Failed to authenticate. Please try again.", Toast.LENGTH_SHORT).show();
-                }
-            });
-        } else {
-            //if user is not authenticated first ask user to do authentication
-            Toast.makeText(this, "First to Twitter auth to Verify Credentials.", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private void defaultLoginTwitter() {
-        //check if user is already authenticated or not
-        if (getTwitterSession() == null) {
-
-            Log.e(TAG, "getTwitterSession is null");
-
-            //if user is not authenticated start authenticating
-            twitter_login_btn.setCallback(new com.twitter.sdk.android.core.Callback<TwitterSession>() {
-
-                @Override
-                public void success(Result<TwitterSession> result) {
-                    // Do something with result, which provides a TwitterSession for making API calls
-                    TwitterSession twitterSession = result.data;
-
-                    Log.e(TAG, "Success : " + result.data);
-
-                    //call fetch email only when permission is granted
-                    fetchTwitterEmail(twitterSession);
-                }
-
-                @Override
-                public void failure(TwitterException exception) {
-                    // Do something on failure
-                    Toast.makeText(RegisterActivity.this, "Failed to authenticate. Please try again.", Toast.LENGTH_SHORT).show();
-                }
-            });
-            twitter_login_btn.performClick();
-        } else {
-            //if user is already authenticated direct call fetch twitter email api
-//            Toast.makeText(this, "User already authenticated", Toast.LENGTH_SHORT).show();
-            fetchTwitterEmail(getTwitterSession());
-        }
-    }
+//    private void defaultLoginTwitter() {
+//        //check if user is already authenticated or not
+//        if (getTwitterSession() == null) {
+//
+//            Log.e(TAG, "getTwitterSession is null");
+//
+//            //if user is not authenticated start authenticating
+//            twitter_login_btn.setCallback(new com.twitter.sdk.android.core.Callback<TwitterSession>() {
+//
+//                @Override
+//                public void success(Result<TwitterSession> result) {
+//                    // Do something with result, which provides a TwitterSession for making API calls
+//                    TwitterSession twitterSession = result.data;
+//
+//                    Log.e(TAG, "Success : " + result.data);
+//
+//                    //call fetch email only when permission is granted
+//                    fetchTwitterEmail(twitterSession);
+//                }
+//
+//                @Override
+//                public void failure(TwitterException exception) {
+//                    // Do something on failure
+//                    Toast.makeText(RegisterActivity.this, "Failed to authenticate. Please try again.", Toast.LENGTH_SHORT).show();
+//                }
+//            });
+//            twitter_login_btn.performClick();
+//        } else {
+//            //if user is already authenticated direct call fetch twitter email api
+////            Toast.makeText(this, "User already authenticated", Toast.LENGTH_SHORT).show();
+//            fetchTwitterEmail(getTwitterSession());
+//        }
+//    }
 
     private void signIn() {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
@@ -1352,7 +1364,86 @@ public class RegisterActivity extends AppCompatActivity implements
             // Signed out, show unauthenticated UI.
         }
     }
+    ActivityResultLauncher<Intent> twitterLoginCallback = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    if (result.getResultCode() == Activity.RESULT_OK) {
+                        // Here, no request code
+                        Intent data = result.getData();
+                        String verifier = data.getStringExtra("data");
+                        AsyncTask.execute(new Runnable() {
+                            @Override
+                            public void run() {
+                                try {
+                                    twitter4j.AccessToken accessToken = oAuth.getOAuthAccessToken(verifier);
+                                    long userId = accessToken.getUserId();
+                                    Twitter twitter = Twitter.newBuilder().oAuthConsumer(getString(R.string.com_twitter_sdk_android_CONSUMER_KEY), getString(R.string.com_twitter_sdk_android_CONSUMER_SECRET))
+                                            .oAuthAccessToken(accessToken).build();
+                                    String screenname = twitter.v1().users().getAccountSettings().getScreenName();
+                                    Log.d("screenname",""+screenname);
+                                    User user = twitter.v1().users().verifyCredentials();
+                                    Log.d("user:email",""+user.getEmail());
 
+                                    String imgurl = "";
+                                    String email = "";
+                                    if (user.getProfileImageURL() != null){
+                                        imgurl = user.getProfileImageURL();
+                                    }
+                                    if (user.getEmail() != null){
+                                        email = user.getEmail();
+                                    }
+//
+                                    String finalEmail = email;
+                                    String finalImgurl = imgurl;
+                                    runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            gmailfacebookloginAPI(user.getName(), finalEmail, "twitter", finalImgurl);
+                                        }
+                                    });
+
+                                } catch (TwitterException e) {
+                                    throw new RuntimeException(e);
+                                }
+                            }
+                        });
+
+                    }
+                }
+            });
+
+    private void loginWithTwiiter() {
+
+        String consumerKey = getString(R.string.twitter_API_key);
+        String consumerSecret = getString(R.string.twitter_secret_key);
+        String callBackUrl = getString(R.string.twitter_callback);
+
+        oAuth = OAuthAuthorization.newBuilder()
+                .oAuthConsumer(consumerKey, consumerSecret).build();
+        RequestToken requestToken = null;
+
+
+        try {
+            requestToken = oAuth.getOAuthRequestToken(callBackUrl);
+            Log.d("scanner:requestToken","" + requestToken);
+
+            String twitterUrl = requestToken.getAuthenticationURL();//"https://api.twitter.com/oauth/authenticate?oauth_token=" + requestToken.getToken();
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Intent browserIntent = new Intent(RegisterActivity.this,TwitterLoginWebView.class);
+                    browserIntent.putExtra("url",twitterUrl);
+                    twitterLoginCallback.launch(browserIntent);
+                }
+            });
+
+        } catch (TwitterException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
     private void gmailfacebookloginAPI(final String name, final String personName, final String socialmedia, final String image_url) {
         Log.e("socialmedia", "" + image_url);
         final ProgressDialog progressDialog = new ProgressDialog(this);
@@ -1516,11 +1607,11 @@ public class RegisterActivity extends AppCompatActivity implements
             handleSignInResult(result);
             Log.e(TAG, "Got cached sign-in1");
         }
-        if (client != null)
-            client.onActivityResult(requestCode, resultCode, data);
-
-        // Pass the activity result to the login button.
-        twitter_login_btn.onActivityResult(requestCode, resultCode, data);
+//        if (client != null)
+//            client.onActivityResult(requestCode, resultCode, data);
+//
+//        // Pass the activity result to the login button.
+//        twitter_login_btn.onActivityResult(requestCode, resultCode, data);
     }
 
     // Converting File to Base64.encode String type using Method

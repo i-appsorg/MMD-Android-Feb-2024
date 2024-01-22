@@ -5,6 +5,9 @@ import android.util.Log;
 
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
+import com.google.firebase.FirebaseApp;
+import com.i2donate.R;
+import twitter4j.*;
 
 public class MyApplication extends Application {
 
@@ -19,10 +22,12 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
         mInstance = this;
+        FirebaseApp.initializeApp(this);
+
+
     }
 
     public static synchronized MyApplication getInstance() {

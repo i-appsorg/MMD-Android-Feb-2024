@@ -1,0 +1,9 @@
+com.i2donate.test.app-jetified-core-1.5.0-0 /Users/emile/.gradle/caches/transforms-3/7f841cd2217295255532dc2aa91fd725/transformed/jetified-core-1.5.0/res
+com.i2donate.test.app-jetified-annotation-experimental-1.3.0-1 /Users/emile/.gradle/caches/transforms-3/e36368e4dca0e1a93188e7db002e6b0a/transformed/jetified-annotation-experimental-1.3.0/res
+com.i2donate.test.app-androidTest-2 /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/build/generated/res/resValues/androidTest/debug
+com.i2donate.test.app-androidTest-3 /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/build/generated/res/rs/androidTest/debug
+com.i2donate.test.app-mergeDebugAndroidTestResources-4 /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.i2donate.test.app-mergeDebugAndroidTestResources-5 /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.i2donate.test.app-merged_res-6 /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/build/intermediates/merged_res/debugAndroidTest
+com.i2donate.test.app-androidTest-7 /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/androidTest/res
+com.i2donate.test.app-androidTestDebug-8 /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/androidTestDebug/res

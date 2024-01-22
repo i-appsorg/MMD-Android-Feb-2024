@@ -7,8 +7,8 @@ android {
         applicationId "com.i2donate"
         minSdkVersion 21
         targetSdkVersion 33
-        versionCode 36
-        versionName "1.0.36"
+        versionCode 38
+        versionName "1.0.38"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
         externalNativeBuild{
@@ -52,6 +52,7 @@ android {
             //signingConfig signingConfigs.release
         }
     }
+    android { packagingOptions { resources.excludes.add("META-INF/*") } }
     sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
     buildFeatures {
         viewBinding true
@@ -78,12 +79,12 @@ dependencies {
     implementation 'com.facebook.android:facebook-android-sdk:latest.release'
     implementation 'com.facebook.android:facebook-login:latest.release'
 
-    implementation 'com.twitter.sdk.android:twitter:3.1.1'
+//    implementation 'com.twitter.sdk.android:twitter:3.1.1'
     implementation 'com.twitter.sdk.android:twitter-core:3.1.1'
-    implementation 'com.twitter.sdk.android:tweet-ui:3.1.1'
+//    implementation 'com.twitter.sdk.android:tweet-ui:3.1.1'
     //implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
 //    implementation 'com.squareup.okhttp3:logging-interceptor:3.5.0'
-    implementation 'javax.json:javax.json-api:1.0'
+//    implementation 'javax.json:javax.json-api:1.0'
     // implementation 'com.google.android.libraries.places:places:1.0.0'
 
     implementation 'com.google.android.libraries.places:places:2.6.0'
@@ -123,6 +124,14 @@ dependencies {
         force = true //API 19 support
     }
     implementation 'com.squareup.okhttp3:logging-interceptor:3.12.12'
+
+    // Import the BoM for the Firebase platform
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+    implementation 'org.twitter4j:twitter4j-core:4.1.1'
+
+    // Add the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+//    implementation "com.twitter:twitter-api-java-sdk:2.0.3"
 }
 apply plugin: 'com.google.gms.google-services'
 //apply plugin: 'com.google.firebase.crashlytics'

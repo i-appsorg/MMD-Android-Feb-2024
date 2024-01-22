@@ -54,8 +54,7 @@ import com.i2donate.Session.SessionManager;
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
-import com.twitter.sdk.android.core.TwitterCore;
-import com.twitter.sdk.android.core.TwitterSession;
+
 
 import java.util.HashMap;
 
@@ -303,13 +302,13 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
                                         ChangeActivity.changeActivity(CommonMenuActivity.this, LoginActivity.class);
                                         //  finish();
                                     } else if (iDonateSharedPreference.getsocialMedia(getApplicationContext()).equalsIgnoreCase("twitter")) {
-                                        TwitterSession twitterSession = TwitterCore.getInstance().getSessionManager().getActiveSession();
-                                        if (twitterSession != null) {
-                                            CookieSyncManager.createInstance(getApplicationContext());
-                                            CookieManager cookieManager = CookieManager.getInstance();
-                                            cookieManager.removeSessionCookie();
-                                            TwitterCore.getInstance().getSessionManager().clearActiveSession();
-                                        }
+//                                        TwitterSession twitterSession = TwitterCore.getInstance().getSessionManager().getActiveSession();
+//                                        if (twitterSession != null) {
+//                                            CookieSyncManager.createInstance(getApplicationContext());
+//                                            CookieManager cookieManager = CookieManager.getInstance();
+//                                            cookieManager.removeSessionCookie();
+//                                            TwitterCore.getInstance().getSessionManager().clearActiveSession();
+//                                        }
                                     } else {
                                         session.logoutUser();
                                     }

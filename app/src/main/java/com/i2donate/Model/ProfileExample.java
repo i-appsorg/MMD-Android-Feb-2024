@@ -7,9 +7,6 @@ import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.net.URL;
 
-import javax.json.Json;
-import javax.json.JsonObject;
-import javax.json.JsonReader;
 import javax.net.ssl.HttpsURLConnection;
 
 public class ProfileExample {
@@ -28,7 +25,7 @@ public class ProfileExample {
         }
     }*/
 
-    public static JsonObject sendGetRequest(String urlString, String accessToken) throws Exception {
+   /* public static JsonObject sendGetRequest(String urlString, String accessToken) throws Exception {
         URL url = new URL(urlString);
         HttpsURLConnection con = (HttpsURLConnection)url.openConnection();
 
@@ -51,5 +48,5 @@ public class ProfileExample {
         JsonReader jsonReader = Json.createReader(new StringReader(jsonString.toString()));
         JsonObject jsonObject = jsonReader.readObject();
         return jsonObject;
-    }
+    } */
 }

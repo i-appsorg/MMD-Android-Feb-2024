@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/emile/Library/Android/sdk/cmake/3.18.1/bin/ninja",
+      "-C",
+      "/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/.cxx/RelWithDebInfo/4c3a3aq4/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/emile/Library/Android/sdk/cmake/3.18.1/bin/ninja",
+    "-C",
+    "/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/.cxx/RelWithDebInfo/4c3a3aq4/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "native-lib::@6890427a1f51a3e7e1df": {
+      "artifactName": "native-lib",
+      "abi": "arm64-v8a",
+      "output": "/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/build/intermediates/cxx/RelWithDebInfo/4c3a3aq4/obj/arm64-v8a/libnative-lib.so",
+      "runtimeFiles": []
+    }
+  }
+}

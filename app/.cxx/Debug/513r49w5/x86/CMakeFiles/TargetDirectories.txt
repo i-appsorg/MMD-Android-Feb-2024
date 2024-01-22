@@ -1,0 +1,3 @@
+/Users/emilemilot/works/i2D-2023-May-Android/app/.cxx/Debug/513r49w5/x86/CMakeFiles/rebuild_cache.dir
+/Users/emilemilot/works/i2D-2023-May-Android/app/.cxx/Debug/513r49w5/x86/CMakeFiles/edit_cache.dir
+/Users/emilemilot/works/i2D-2023-May-Android/app/.cxx/Debug/513r49w5/x86/CMakeFiles/native-lib.dir

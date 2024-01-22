@@ -1,0 +1,2 @@
+ninja: Entering directory `/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/.cxx/Debug/123o542v/armeabi-v7a'
+ninja: no work to do.

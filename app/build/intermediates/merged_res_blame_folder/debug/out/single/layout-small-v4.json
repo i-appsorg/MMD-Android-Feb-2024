@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-61:/layout-small-v4/activity_bowse.xml",
+        "source": "com.i2donate.app-main-64:/layout-small/activity_bowse.xml"
+    }
+]
