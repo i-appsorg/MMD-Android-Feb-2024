@@ -595,6 +595,22 @@ PLandroidx/appcompat/widget/Toolbar;->onDetachedFromWindow()V
 PLandroidx/appcompat/widget/ToolbarWidgetWrapper;->dismissPopupMenus()V
 PLandroidx/appcompat/widget/ToolbarWidgetWrapper;->hasExpandedActionView()Z
 
+# Baseline profiles for Lifecycle ViewModel
+
+HSPLandroidx/lifecycle/ViewModel;-><init>()V
+HSPLandroidx/lifecycle/ViewModelLazy;-><init>(Lkotlin/reflect/KClass;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)V
+HSPLandroidx/lifecycle/ViewModelLazy;->getValue()Landroidx/lifecycle/ViewModel;
+HSPLandroidx/lifecycle/ViewModelLazy;->getValue()Ljava/lang/Object;
+HSPLandroidx/lifecycle/ViewModelProvider;-><init>(Landroidx/lifecycle/ViewModelStore;Landroidx/lifecycle/ViewModelProvider$Factory;)V
+HSPLandroidx/lifecycle/ViewModelProvider;->get(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
+HSPLandroidx/lifecycle/ViewModelProvider;->get(Ljava/lang/String;Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
+HSPLandroidx/lifecycle/ViewModelStore;-><init>()V
+HSPLandroidx/lifecycle/ViewModelStore;->get(Ljava/lang/String;)Landroidx/lifecycle/ViewModel;
+HSPLandroidx/lifecycle/ViewModelStore;->put(Ljava/lang/String;Landroidx/lifecycle/ViewModel;)V
+PLandroidx/lifecycle/ViewModel;->clear()V
+PLandroidx/lifecycle/ViewModel;->onCleared()V
+PLandroidx/lifecycle/ViewModelStore;->clear()V
+
 # Baseline profiles for androidx.fragment
 
 HSPLandroidx/fragment/R$styleable;-><clinit>()V
@@ -1159,22 +1175,6 @@ PLandroidx/activity/OnBackPressedDispatcher;->onBackPressed()V
 PLandroidx/activity/contextaware/ContextAwareHelper;->clearAvailableContext()V
 PLandroidx/activity/result/ActivityResultRegistry$3;->unregister()V
 PLandroidx/activity/result/ActivityResultRegistry;->unregister(Ljava/lang/String;)V
-
-# Baseline profiles for Lifecycle ViewModel
-
-HSPLandroidx/lifecycle/ViewModel;-><init>()V
-HSPLandroidx/lifecycle/ViewModelLazy;-><init>(Lkotlin/reflect/KClass;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)V
-HSPLandroidx/lifecycle/ViewModelLazy;->getValue()Landroidx/lifecycle/ViewModel;
-HSPLandroidx/lifecycle/ViewModelLazy;->getValue()Ljava/lang/Object;
-HSPLandroidx/lifecycle/ViewModelProvider;-><init>(Landroidx/lifecycle/ViewModelStore;Landroidx/lifecycle/ViewModelProvider$Factory;)V
-HSPLandroidx/lifecycle/ViewModelProvider;->get(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
-HSPLandroidx/lifecycle/ViewModelProvider;->get(Ljava/lang/String;Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
-HSPLandroidx/lifecycle/ViewModelStore;-><init>()V
-HSPLandroidx/lifecycle/ViewModelStore;->get(Ljava/lang/String;)Landroidx/lifecycle/ViewModel;
-HSPLandroidx/lifecycle/ViewModelStore;->put(Ljava/lang/String;Landroidx/lifecycle/ViewModel;)V
-PLandroidx/lifecycle/ViewModel;->clear()V
-PLandroidx/lifecycle/ViewModel;->onCleared()V
-PLandroidx/lifecycle/ViewModelStore;->clear()V
 
 # Baseline Profile rules for lifecycle-runtime
 

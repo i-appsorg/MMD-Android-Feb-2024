@@ -31,6 +31,7 @@
     <string name="bt_edit_button_description">编辑已保存的付款方式</string>
     <string name="bt_mobile_number_invalid">手机号码无效</string>
     <string name="bt_next">下一步</string>
+    <string name="bt_notice_of_collection">使用我的卡付款即表示我同意PayPal隐私声明。</string>
     <string name="bt_other">其他</string>
     <string name="bt_postal_code_invalid">邮政编码无效</string>
     <string name="bt_recent">最近</string>

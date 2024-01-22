@@ -31,6 +31,7 @@
     <string name="bt_edit_button_description">Editar formas de pago guardadas</string>
     <string name="bt_mobile_number_invalid">El número de celular no es válido</string>
     <string name="bt_next">Siguiente</string>
+    <string name="bt_notice_of_collection">Al pagar con mi tarjeta, acepto el Aviso de Privacidad de PayPal.</string>
     <string name="bt_other">Otro</string>
     <string name="bt_postal_code_invalid">El código postal no es válido</string>
     <string name="bt_recent">Reciente</string>

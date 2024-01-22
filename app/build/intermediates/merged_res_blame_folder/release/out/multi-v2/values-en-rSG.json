@@ -4,20 +4,20 @@
             "outputFile": "com.i2donate.app-mergeReleaseResources-60:/values-en-rSG/values-en-rSG.xml",
             "map": [
                 {
-                    "source": "/Users/emile/.gradle/caches/transforms-3/19486c83ea7070b3e76d0cc2b4a9ee79/transformed/jetified-play-services-wallet-19.1.0/res/values-en-rSG/values.xml",
+                    "source": "/Users/emile/.gradle/caches/transforms-3/aa49daa06d43ef979087d5da3629c8b5/transformed/jetified-play-services-wallet-19.2.1/res/values-en-rSG/values.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "206",
-                        "endColumns": "70",
-                        "endOffsets": "276"
+                        "startLines": "4,5",
+                        "startColumns": "0,0",
+                        "startOffsets": "206,263",
+                        "endColumns": "56,70",
+                        "endOffsets": "262,333"
                     },
                     "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "74",
-                        "endOffsets": "125"
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,116",
+                        "endColumns": "60,74",
+                        "endOffsets": "111,186"
                     }
                 }
             ]

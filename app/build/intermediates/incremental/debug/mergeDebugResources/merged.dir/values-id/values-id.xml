@@ -31,6 +31,7 @@
     <string name="bt_edit_button_description">Edit metode pembayaran tersimpan</string>
     <string name="bt_mobile_number_invalid">Nomor telepon seluler tidak valid</string>
     <string name="bt_next">Berikutnya</string>
+    <string name="bt_notice_of_collection">Dengan membayar menggunakan kartu, saya menyetujui Pernyataan Privasi PayPal.</string>
     <string name="bt_other">Lainnya</string>
     <string name="bt_postal_code_invalid">Kode pos tidak valid</string>
     <string name="bt_recent">Terkini</string>
@@ -68,5 +69,6 @@
     <string name="com_facebook_smart_login_confirmation_cancel">Bukan Anda?</string>
     <string name="com_facebook_smart_login_confirmation_title">Konfirmasikan Masuk</string>
     <string name="com_facebook_tooltip_default">Anda memegang kendali - pilih info yang ingin Anda bagikan dengan aplikasi.</string>
+    <string name="gpay_logo_description">Google Pay</string>
     <string name="wallet_buy_button_place_holder">Beli dengan Google</string>
 </resources>

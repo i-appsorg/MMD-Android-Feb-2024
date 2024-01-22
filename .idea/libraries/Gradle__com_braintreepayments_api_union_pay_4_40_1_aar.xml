@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.braintreepayments.api:union-pay:4.40.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/527efa8f3c8abe004e2210bb61e5001f/transformed/jetified-union-pay-4.40.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/527efa8f3c8abe004e2210bb61e5001f/transformed/jetified-union-pay-4.40.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.braintreepayments.api/union-pay/4.40.1/22d4c6ec83788886ef264e48db9faa8e1bf14d14/union-pay-4.40.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.braintreepayments.api/union-pay/4.40.1/3aecc8d157d88ba709ab05924d68c087b23aa67b/union-pay-4.40.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

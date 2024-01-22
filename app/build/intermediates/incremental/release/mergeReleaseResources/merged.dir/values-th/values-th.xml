@@ -88,6 +88,7 @@
     <string name="bt_mobile_number_required">ต้องระบุหมายเลขโทรศัพท์มือถือ</string>
     <string name="bt_month">เดือน</string>
     <string name="bt_next">ถัดไป</string>
+    <string name="bt_notice_of_collection">การชําระเงินด้วยบัตรนี้ถือว่าข้าพเจ้ายอมรับนโยบายความเป็นส่วนตัวของ PayPal</string>
     <string name="bt_other">อื่นๆ</string>
     <string name="bt_postal_code_invalid">รหัสไปรษณีย์ไม่ถูกต้อง</string>
     <string name="bt_postal_code_required">ต้องระบุรหัสไปรษณีย์</string>
@@ -150,8 +151,13 @@
     <string name="common_open_on_phone">เปิดบนโทรศัพท์</string>
     <string name="common_signin_button_text">ลงชื่อเข้าใช้</string>
     <string name="common_signin_button_text_long">ลงชื่อเข้าใช้ด้วย Google</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"คัดลอกลิงก์ไปยังคลิปบอร์ดแล้ว"</string>
     <string name="error_icon_content_description">ข้อผิดพลาด</string>
     <string name="exposed_dropdown_menu_content_description">แสดงเมนูแบบเลื่อนลง</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"คัดลอกลิงก์"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"เปิดในเบราว์เซอร์"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"แชร์ลิงก์"</string>
+    <string name="gpay_logo_description">Google Pay</string>
     <string name="icon_content_description">ไอคอนกล่องโต้ตอบ</string>
     <string name="item_view_role_description">แท็บ</string>
     <string name="material_clock_toggle_content_description">เลือก AM หรือ PM</string>

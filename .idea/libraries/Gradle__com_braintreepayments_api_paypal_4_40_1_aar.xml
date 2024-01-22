@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.braintreepayments.api:paypal:4.40.1@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/008ff4916bf3faa8b3ef5d4d84c08405/transformed/jetified-paypal-4.40.1/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/008ff4916bf3faa8b3ef5d4d84c08405/transformed/jetified-paypal-4.40.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/008ff4916bf3faa8b3ef5d4d84c08405/transformed/jetified-paypal-4.40.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.braintreepayments.api/paypal/4.40.1/a2dd6acb1578579224b6f542f65851a3833bb8a3/paypal-4.40.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.braintreepayments.api/paypal/4.40.1/b25b5db8fdc40d5454e3c614ddbf2e449631c1d7/paypal-4.40.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

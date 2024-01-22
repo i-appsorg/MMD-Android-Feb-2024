@@ -88,6 +88,7 @@
     <string name="bt_mobile_number_required">携帯電話番号が必要です</string>
     <string name="bt_month">月</string>
     <string name="bt_next">次へ</string>
+    <string name="bt_notice_of_collection">カードで支払うことにより、PayPalプライバシーステートメントに同意したものとみなされます。</string>
     <string name="bt_other">その他</string>
     <string name="bt_postal_code_invalid">郵便番号が正しくありません</string>
     <string name="bt_postal_code_required">郵便番号が必要です</string>
@@ -150,8 +151,13 @@
     <string name="common_open_on_phone">スマートフォンで開く</string>
     <string name="common_signin_button_text">ログイン</string>
     <string name="common_signin_button_text_long">Googleにログイン</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"リンクをクリップボードにコピーしました"</string>
     <string name="error_icon_content_description">エラー</string>
     <string name="exposed_dropdown_menu_content_description">プルダウン メニューを表示</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"リンクをコピー"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"ブラウザで開く"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"リンクの共有"</string>
+    <string name="gpay_logo_description">Google Pay</string>
     <string name="icon_content_description">ダイアログ アイコン</string>
     <string name="item_view_role_description">タブ</string>
     <string name="material_clock_toggle_content_description">午前または午後を選択</string>

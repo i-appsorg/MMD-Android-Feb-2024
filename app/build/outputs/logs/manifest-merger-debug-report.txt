@@ -11,7 +11,7 @@ INJECTED from /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app
 INJECTED from /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml:2:1-279:12
 MERGED from [androidx.databinding:viewbinding:7.3.1] /Users/emile/.gradle/caches/transforms-3/469d1374e5ed4a974d6850a810e4546c/transformed/jetified-viewbinding-7.3.1/AndroidManifest.xml:2:1-9:12
 MERGED from [com.karumi:dexter:5.0.0] /Users/emile/.gradle/caches/transforms-3/a6a503aed5542b4c5a1b8af0579dc74b/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:17:1-32:12
-MERGED from [com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:2:1-32:12
+MERGED from [com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:2:1-32:12
 MERGED from [com.balsikandar.android:crashreporter:1.1.0] /Users/emile/.gradle/caches/transforms-3/754fa622484fb63a80160fed39ff7258/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:2:1-29:12
 MERGED from [com.braintreepayments:card-form:5.4.0] /Users/emile/.gradle/caches/transforms-3/2f3974059ce10bbcc7d8805043273cbd/transformed/jetified-card-form-5.4.0/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.material:material:1.9.0] /Users/emile/.gradle/caches/transforms-3/48452db3b8ed34a07d0a0ba5d5f3a438/transformed/material-1.9.0/AndroidManifest.xml:17:1-26:12
@@ -23,16 +23,16 @@ MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/emile/.gradle/
 MERGED from [com.facebook.android:facebook-gamingservices:16.3.0] /Users/emile/.gradle/caches/transforms-3/60362eb1d8213cae7c37905eb7b833c3/transformed/jetified-facebook-gamingservices-16.3.0/AndroidManifest.xml:9:1-19:12
 MERGED from [com.facebook.android:facebook-share:16.3.0] /Users/emile/.gradle/caches/transforms-3/665a4d75e797d0dbb6815ab707931e8d/transformed/jetified-facebook-share-16.3.0/AndroidManifest.xml:9:1-19:12
 MERGED from [com.facebook.android:facebook-common:16.3.0] /Users/emile/.gradle/caches/transforms-3/ce99978c6b7b72bb58b55ef8190a3d39/transformed/jetified-facebook-common-16.3.0/AndroidManifest.xml:9:1-44:12
-MERGED from [com.braintreepayments.api:three-d-secure:4.27.0] /Users/emile/.gradle/caches/transforms-3/e8169233365e8cccda7455120e66e640/transformed/jetified-three-d-secure-4.27.0/AndroidManifest.xml:2:1-15:12
-MERGED from [com.braintreepayments.api:google-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/e39704d75b214572c56a080587dacd4a/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:2:1-19:12
-MERGED from [com.braintreepayments.api:paypal:4.27.0] /Users/emile/.gradle/caches/transforms-3/e268fcc82816e07ccd07531a6f48a861/transformed/jetified-paypal-4.27.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.braintreepayments.api:venmo:4.27.0] /Users/emile/.gradle/caches/transforms-3/493995530ff607c0eb281607e874fea2/transformed/jetified-venmo-4.27.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.braintreepayments.api:union-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/b1b77c3e26ae2dddbba390249e89e8e5/transformed/jetified-union-pay-4.27.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.braintreepayments.api:card:4.27.0] /Users/emile/.gradle/caches/transforms-3/98d941fe534f5cfe09a2c94682115f30/transformed/jetified-card-4.27.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.braintreepayments.api:data-collector:4.27.0] /Users/emile/.gradle/caches/transforms-3/1b1b6a8653e50ce02cf8682515853eba/transformed/jetified-data-collector-4.27.0/AndroidManifest.xml:2:1-12:12
-MERGED from [com.braintreepayments.api:paypal-data-collector:4.27.0] /Users/emile/.gradle/caches/transforms-3/f7415295f8733b9e987eb082fdcb4a2b/transformed/jetified-paypal-data-collector-4.27.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:2:1-35:12
-MERGED from [com.braintreepayments.api:browser-switch:2.3.2] /Users/emile/.gradle/caches/transforms-3/5702947e19cd4b77290d805fb60de019/transformed/jetified-browser-switch-2.3.2/AndroidManifest.xml:2:1-22:12
+MERGED from [com.braintreepayments.api:three-d-secure:4.40.1] /Users/emile/.gradle/caches/transforms-3/cb401c6df1c711cc8ee804ccf7d2b323/transformed/jetified-three-d-secure-4.40.1/AndroidManifest.xml:2:1-13:12
+MERGED from [com.braintreepayments.api:google-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/9262eaa8627316846ac348dd7d635788/transformed/jetified-google-pay-4.40.1/AndroidManifest.xml:2:1-17:12
+MERGED from [com.braintreepayments.api:paypal:4.40.1] /Users/emile/.gradle/caches/transforms-3/008ff4916bf3faa8b3ef5d4d84c08405/transformed/jetified-paypal-4.40.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.braintreepayments.api:venmo:4.40.1] /Users/emile/.gradle/caches/transforms-3/df2b8a8a22ce12f5da95ba98e8967e72/transformed/jetified-venmo-4.40.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.braintreepayments.api:union-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/527efa8f3c8abe004e2210bb61e5001f/transformed/jetified-union-pay-4.40.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.braintreepayments.api:card:4.40.1] /Users/emile/.gradle/caches/transforms-3/73655ca05ce0f3bca9e8b2e1e43f29fa/transformed/jetified-card-4.40.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.braintreepayments.api:data-collector:4.40.1] /Users/emile/.gradle/caches/transforms-3/3ae09116b30703c1e3c3bcdd65a6c573/transformed/jetified-data-collector-4.40.1/AndroidManifest.xml:2:1-10:12
+MERGED from [com.braintreepayments.api:paypal-data-collector:4.40.1] /Users/emile/.gradle/caches/transforms-3/831da5ae2e09829209214d19f3dff532/transformed/jetified-paypal-data-collector-4.40.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:2:1-34:12
+MERGED from [com.braintreepayments.api:browser-switch:2.6.1] /Users/emile/.gradle/caches/transforms-3/e9ec70f293c963583b983115817f6188/transformed/jetified-browser-switch-2.6.1/AndroidManifest.xml:2:1-20:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/emile/.gradle/caches/transforms-3/e102db9ac5f392a41c24d53de041be36/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/emile/.gradle/caches/transforms-3/a094b2c3a4f5bc787d467a35bb857f60/transformed/jetified-circleimageview-3.1.0/AndroidManifest.xml:2:1-11:12
 MERGED from [com.intuit.sdp:sdp-android:1.1.0] /Users/emile/.gradle/caches/transforms-3/4e502e0f121404d068d7faa4a6cf2fce/transformed/jetified-sdp-android-1.1.0/AndroidManifest.xml:2:1-11:12
@@ -46,7 +46,7 @@ MERGED from [com.google.firebase:firebase-analytics:21.5.0] /Users/emile/.gradle
 MERGED from [com.google.firebase:firebase-messaging:23.4.0] /Users/emile/.gradle/caches/transforms-3/fa18092a0619e4f65716397f6771eb79/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:17:1-66:12
 MERGED from [com.google.android.gms:play-services-location:20.0.0] /Users/emile/.gradle/caches/transforms-3/4a6bc39154c007953d0f8962d8767937/transformed/jetified-play-services-location-20.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-places:17.0.0] /Users/emile/.gradle/caches/transforms-3/03f044876a8c8087f367d6913f6ecdf9/transformed/jetified-play-services-places-17.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-wallet:19.1.0] /Users/emile/.gradle/caches/transforms-3/19486c83ea7070b3e76d0cc2b4a9ee79/transformed/jetified-play-services-wallet-19.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-wallet:19.2.1] /Users/emile/.gradle/caches/transforms-3/aa49daa06d43ef979087d5da3629c8b5/transformed/jetified-play-services-wallet-19.2.1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] /Users/emile/.gradle/caches/transforms-3/b3c4344177b38ea71edb68c798098462/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:17:1-44:12
 MERGED from [com.google.android.gms:play-services-vision:20.1.3] /Users/emile/.gradle/caches/transforms-3/efdedf37aadace390c0584a22680b784/transformed/jetified-play-services-vision-20.1.3/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/emile/.gradle/caches/transforms-3/554763409cd31b752652cc5ed427bc65/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:15:1-33:12
@@ -87,7 +87,6 @@ MERGED from [com.facebook.android:facebook-applinks:16.3.0] /Users/emile/.gradle
 MERGED from [com.facebook.android:facebook-messenger:16.3.0] /Users/emile/.gradle/caches/transforms-3/1564546590164fe0e49f8a335dc8a9fb/transformed/jetified-facebook-messenger-16.3.0/AndroidManifest.xml:9:1-19:12
 MERGED from [com.facebook.android:facebook-core:16.3.0] /Users/emile/.gradle/caches/transforms-3/1a9f1379d108b54529c7678da03a8cef/transformed/jetified-facebook-core-16.3.0/AndroidManifest.xml:9:1-50:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/emile/.gradle/caches/transforms-3/4eeaed30e2791f61df3f1fb22bdeef3e/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.browser:browser:1.0.0] /Users/emile/.gradle/caches/transforms-3/b5d359abb44dae89bd07031c87981404/transformed/browser-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/emile/.gradle/caches/transforms-3/88c686958d81d3620cf1c08d7c0d22e5/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/emile/.gradle/caches/transforms-3/413954f2bbc4ab1911aec8533c4af063/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] /Users/emile/.gradle/caches/transforms-3/1d2c582b7133b12343a95fb69d6b046d/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -112,6 +111,7 @@ MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/emile/.g
 MERGED from [androidx.customview:customview:1.1.0] /Users/emile/.gradle/caches/transforms-3/923f81548c87f26c50548822041cd24f/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.work:work-runtime:2.7.0-alpha05] /Users/emile/.gradle/caches/transforms-3/4d4cfc877d82f90072726e31ba268592/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:17:1-145:12
 MERGED from [androidx.media:media:1.0.0] /Users/emile/.gradle/caches/transforms-3/e021664a883dd9016836fcdf01f0431e/transformed/media-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.browser:browser:1.5.0] /Users/emile/.gradle/caches/transforms-3/a1550f319854f8abe8482922f15e060a/transformed/browser-1.5.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/emile/.gradle/caches/transforms-3/206ffc38e8500fb2dbc304d661e6d038/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/emile/.gradle/caches/transforms-3/4eca70bb7353e38f63f9bc633a891033/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.9.0] /Users/emile/.gradle/caches/transforms-3/c4fc61631775e3f04ac2f67e24a3ae75/transformed/core-1.9.0/AndroidManifest.xml:17:1-30:12
@@ -128,7 +128,7 @@ MERGED from [androidx.room:room-runtime:2.2.6] /Users/emile/.gradle/caches/trans
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] /Users/emile/.gradle/caches/transforms-3/64bf638eef0d3b0467ecae41b3508f6c/transformed/lifecycle-livedata-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/emile/.gradle/caches/transforms-3/b62673ece755617109cc25e870d08a69/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/emile/.gradle/caches/transforms-3/84cebe6fe92a1ecef2da6c858369baeb/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.braintreepayments.api:shared-utils:4.27.0] /Users/emile/.gradle/caches/transforms-3/1d6cafdaff2c7e394c115f91f30691f0/transformed/jetified-shared-utils-4.27.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.braintreepayments.api:shared-utils:4.40.1] /Users/emile/.gradle/caches/transforms-3/d8f3bd23044d5bb8ff57bad830570d6d/transformed/jetified-shared-utils-4.40.1/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:firebase-components:17.1.5] /Users/emile/.gradle/caches/transforms-3/d0d9d620760b999c493a03c8f2be6fd6/transformed/jetified-firebase-components-17.1.5/AndroidManifest.xml:15:1-20:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/emile/.gradle/caches/transforms-3/0b59976ca61fec2f91d38b2cc7eae02d/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/emile/.gradle/caches/transforms-3/19b19b0f800f2866e3363c111884b8de/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -140,7 +140,7 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/emile/.gr
 MERGED from [com.google.android.flexbox:flexbox:3.0.0] /Users/emile/.gradle/caches/transforms-3/2e06599c52efe3489191a53c1ece3ab2/transformed/jetified-flexbox-3.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.volley:volley:1.2.1] /Users/emile/.gradle/caches/transforms-3/24a70e10510b7ffb70b10c1bb5c2904c/transformed/jetified-volley-1.2.1/AndroidManifest.xml:2:1-7:12
 MERGED from [com.android.installreferrer:installreferrer:1.0] /Users/emile/.gradle/caches/transforms-3/0683842944ca571736a843cada2f6124/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:2:1-13:12
-MERGED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:3:1-34:12
+MERGED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:3:1-32:12
 INJECTED from /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml:2:1-279:12
 INJECTED from /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml:2:1-279:12
 INJECTED from /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml:2:1-279:12
@@ -224,14 +224,14 @@ MERGED from [com.google.android.libraries.places:places:2.6.0] /Users/emile/.gra
 		ADDED from /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml:23:22-76
 uses-permission#android.permission.INTERNET
 ADDED from /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml:24:5-67
-MERGED from [com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:11:5-67
-MERGED from [com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:11:5-67
+MERGED from [com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:11:5-67
+MERGED from [com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:11:5-67
 MERGED from [com.google.android.libraries.places:places:2.6.0] /Users/emile/.gradle/caches/transforms-3/1a7c10fe659f650dbfc2d0f3131d5615/transformed/jetified-places-2.6.0/AndroidManifest.xml:11:5-67
 MERGED from [com.google.android.libraries.places:places:2.6.0] /Users/emile/.gradle/caches/transforms-3/1a7c10fe659f650dbfc2d0f3131d5615/transformed/jetified-places-2.6.0/AndroidManifest.xml:11:5-67
-MERGED from [com.braintreepayments.api:data-collector:4.27.0] /Users/emile/.gradle/caches/transforms-3/1b1b6a8653e50ce02cf8682515853eba/transformed/jetified-data-collector-4.27.0/AndroidManifest.xml:9:5-67
-MERGED from [com.braintreepayments.api:data-collector:4.27.0] /Users/emile/.gradle/caches/transforms-3/1b1b6a8653e50ce02cf8682515853eba/transformed/jetified-data-collector-4.27.0/AndroidManifest.xml:9:5-67
-MERGED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:12:5-67
-MERGED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:12:5-67
+MERGED from [com.braintreepayments.api:data-collector:4.40.1] /Users/emile/.gradle/caches/transforms-3/3ae09116b30703c1e3c3bcdd65a6c573/transformed/jetified-data-collector-4.40.1/AndroidManifest.xml:7:5-67
+MERGED from [com.braintreepayments.api:data-collector:4.40.1] /Users/emile/.gradle/caches/transforms-3/3ae09116b30703c1e3c3bcdd65a6c573/transformed/jetified-data-collector-4.40.1/AndroidManifest.xml:7:5-67
+MERGED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:11:5-67
+MERGED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:11:5-67
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.1] /Users/emile/.gradle/caches/transforms-3/8c503b68fd0bb195ed8f7d637d102da3/transformed/jetified-twitter-core-3.1.1/AndroidManifest.xml:25:5-67
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.1] /Users/emile/.gradle/caches/transforms-3/8c503b68fd0bb195ed8f7d637d102da3/transformed/jetified-twitter-core-3.1.1/AndroidManifest.xml:25:5-67
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] /Users/emile/.gradle/caches/transforms-3/b3c4344177b38ea71edb68c798098462/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:24:5-67
@@ -250,18 +250,18 @@ MERGED from [com.google.android.gms:play-services-measurement-impl:21.5.0] /User
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.5.0] /Users/emile/.gradle/caches/transforms-3/bc3bb2baaab1ba47a9c4310c32ad50b8/transformed/jetified-play-services-measurement-impl-21.5.0/AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.5.0] /Users/emile/.gradle/caches/transforms-3/4ef3bb91372a68de7607bbf953012d3c/transformed/jetified-play-services-measurement-sdk-api-21.5.0/AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.5.0] /Users/emile/.gradle/caches/transforms-3/4ef3bb91372a68de7607bbf953012d3c/transformed/jetified-play-services-measurement-sdk-api-21.5.0/AndroidManifest.xml:23:5-67
-MERGED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:12:5-67
-MERGED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:12:5-67
+MERGED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:10:5-67
+MERGED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:10:5-67
 	android:name
 		ADDED from /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml:24:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml:25:5-79
-MERGED from [com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:10:5-79
-MERGED from [com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:10:5-79
-MERGED from [com.braintreepayments.api:data-collector:4.27.0] /Users/emile/.gradle/caches/transforms-3/1b1b6a8653e50ce02cf8682515853eba/transformed/jetified-data-collector-4.27.0/AndroidManifest.xml:10:5-79
-MERGED from [com.braintreepayments.api:data-collector:4.27.0] /Users/emile/.gradle/caches/transforms-3/1b1b6a8653e50ce02cf8682515853eba/transformed/jetified-data-collector-4.27.0/AndroidManifest.xml:10:5-79
-MERGED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:11:5-79
-MERGED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:11:5-79
+MERGED from [com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:10:5-79
+MERGED from [com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:10:5-79
+MERGED from [com.braintreepayments.api:data-collector:4.40.1] /Users/emile/.gradle/caches/transforms-3/3ae09116b30703c1e3c3bcdd65a6c573/transformed/jetified-data-collector-4.40.1/AndroidManifest.xml:8:5-79
+MERGED from [com.braintreepayments.api:data-collector:4.40.1] /Users/emile/.gradle/caches/transforms-3/3ae09116b30703c1e3c3bcdd65a6c573/transformed/jetified-data-collector-4.40.1/AndroidManifest.xml:8:5-79
+MERGED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:10:5-79
+MERGED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:10:5-79
 MERGED from [com.google.firebase:firebase-messaging:23.4.0] /Users/emile/.gradle/caches/transforms-3/fa18092a0619e4f65716397f6771eb79/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:22:5-79
 MERGED from [com.google.firebase:firebase-messaging:23.4.0] /Users/emile/.gradle/caches/transforms-3/fa18092a0619e4f65716397f6771eb79/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:22:5-79
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] /Users/emile/.gradle/caches/transforms-3/b3c4344177b38ea71edb68c798098462/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:23:5-79
@@ -347,8 +347,8 @@ application
 ADDED from /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml:46:5-277:19
 MERGED from [com.karumi:dexter:5.0.0] /Users/emile/.gradle/caches/transforms-3/a6a503aed5542b4c5a1b8af0579dc74b/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:26:5-30:19
 MERGED from [com.karumi:dexter:5.0.0] /Users/emile/.gradle/caches/transforms-3/a6a503aed5542b4c5a1b8af0579dc74b/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:26:5-30:19
-MERGED from [com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:13:5-30:19
-MERGED from [com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:13:5-30:19
+MERGED from [com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:13:5-30:19
+MERGED from [com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:13:5-30:19
 MERGED from [com.balsikandar.android:crashreporter:1.1.0] /Users/emile/.gradle/caches/transforms-3/754fa622484fb63a80160fed39ff7258/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:11:5-27:19
 MERGED from [com.balsikandar.android:crashreporter:1.1.0] /Users/emile/.gradle/caches/transforms-3/754fa622484fb63a80160fed39ff7258/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:11:5-27:19
 MERGED from [com.google.android.material:material:1.9.0] /Users/emile/.gradle/caches/transforms-3/48452db3b8ed34a07d0a0ba5d5f3a438/transformed/material-1.9.0/AndroidManifest.xml:24:5-20
@@ -367,12 +367,12 @@ MERGED from [com.facebook.android:facebook-share:16.3.0] /Users/emile/.gradle/ca
 MERGED from [com.facebook.android:facebook-share:16.3.0] /Users/emile/.gradle/caches/transforms-3/665a4d75e797d0dbb6815ab707931e8d/transformed/jetified-facebook-share-16.3.0/AndroidManifest.xml:16:5-17:19
 MERGED from [com.facebook.android:facebook-common:16.3.0] /Users/emile/.gradle/caches/transforms-3/ce99978c6b7b72bb58b55ef8190a3d39/transformed/jetified-facebook-common-16.3.0/AndroidManifest.xml:21:5-42:19
 MERGED from [com.facebook.android:facebook-common:16.3.0] /Users/emile/.gradle/caches/transforms-3/ce99978c6b7b72bb58b55ef8190a3d39/transformed/jetified-facebook-common-16.3.0/AndroidManifest.xml:21:5-42:19
-MERGED from [com.braintreepayments.api:three-d-secure:4.27.0] /Users/emile/.gradle/caches/transforms-3/e8169233365e8cccda7455120e66e640/transformed/jetified-three-d-secure-4.27.0/AndroidManifest.xml:9:5-13:19
-MERGED from [com.braintreepayments.api:three-d-secure:4.27.0] /Users/emile/.gradle/caches/transforms-3/e8169233365e8cccda7455120e66e640/transformed/jetified-three-d-secure-4.27.0/AndroidManifest.xml:9:5-13:19
-MERGED from [com.braintreepayments.api:google-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/e39704d75b214572c56a080587dacd4a/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:9:5-17:19
-MERGED from [com.braintreepayments.api:google-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/e39704d75b214572c56a080587dacd4a/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:9:5-17:19
-MERGED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:19:5-33:19
-MERGED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:19:5-33:19
+MERGED from [com.braintreepayments.api:three-d-secure:4.40.1] /Users/emile/.gradle/caches/transforms-3/cb401c6df1c711cc8ee804ccf7d2b323/transformed/jetified-three-d-secure-4.40.1/AndroidManifest.xml:7:5-11:19
+MERGED from [com.braintreepayments.api:three-d-secure:4.40.1] /Users/emile/.gradle/caches/transforms-3/cb401c6df1c711cc8ee804ccf7d2b323/transformed/jetified-three-d-secure-4.40.1/AndroidManifest.xml:7:5-11:19
+MERGED from [com.braintreepayments.api:google-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/9262eaa8627316846ac348dd7d635788/transformed/jetified-google-pay-4.40.1/AndroidManifest.xml:7:5-15:19
+MERGED from [com.braintreepayments.api:google-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/9262eaa8627316846ac348dd7d635788/transformed/jetified-google-pay-4.40.1/AndroidManifest.xml:7:5-15:19
+MERGED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:18:5-32:19
+MERGED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:18:5-32:19
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/emile/.gradle/caches/transforms-3/a094b2c3a4f5bc787d467a35bb857f60/transformed/jetified-circleimageview-3.1.0/AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/emile/.gradle/caches/transforms-3/a094b2c3a4f5bc787d467a35bb857f60/transformed/jetified-circleimageview-3.1.0/AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-core:21.1.1] /Users/emile/.gradle/caches/transforms-3/e08d74b67d6beecb6807ed353d98a8e1/transformed/jetified-firebase-core-21.1.1/AndroidManifest.xml:7:5-20
@@ -467,8 +467,8 @@ MERGED from [androidx.room:room-runtime:2.2.6] /Users/emile/.gradle/caches/trans
 MERGED from [androidx.room:room-runtime:2.2.6] /Users/emile/.gradle/caches/transforms-3/b0db48d4e9dd4995d3b26964f2f270bd/transformed/room-runtime-2.2.6/AndroidManifest.xml:24:5-29:19
 MERGED from [com.android.installreferrer:installreferrer:1.0] /Users/emile/.gradle/caches/transforms-3/0683842944ca571736a843cada2f6124/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:11:5-20
 MERGED from [com.android.installreferrer:installreferrer:1.0] /Users/emile/.gradle/caches/transforms-3/0683842944ca571736a843cada2f6124/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:11:5-20
-MERGED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:14:5-32:19
-MERGED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:14:5-32:19
+MERGED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:12:5-30:19
+MERGED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:12:5-30:19
 	android:requestLegacyExternalStorage
 		ADDED from /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml:56:9-52
 	android:grantUriPermissions
@@ -478,7 +478,7 @@ MERGED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users
 	android:exported
 		ADDED from /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml:49:9-33
 	tools:ignore
-		ADDED from [com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:15:9-39
+		ADDED from [com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:15:9-39
 	android:roundIcon
 		ADDED from /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml:57:9-48
 	android:largeHeap
@@ -855,8 +855,8 @@ MERGED from [androidx.databinding:viewbinding:7.3.1] /Users/emile/.gradle/caches
 MERGED from [androidx.databinding:viewbinding:7.3.1] /Users/emile/.gradle/caches/transforms-3/469d1374e5ed4a974d6850a810e4546c/transformed/jetified-viewbinding-7.3.1/AndroidManifest.xml:5:5-7:41
 MERGED from [com.karumi:dexter:5.0.0] /Users/emile/.gradle/caches/transforms-3/a6a503aed5542b4c5a1b8af0579dc74b/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:22:5-24:41
 MERGED from [com.karumi:dexter:5.0.0] /Users/emile/.gradle/caches/transforms-3/a6a503aed5542b4c5a1b8af0579dc74b/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:22:5-24:41
-MERGED from [com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:6:5-8:41
-MERGED from [com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:6:5-8:41
 MERGED from [com.balsikandar.android:crashreporter:1.1.0] /Users/emile/.gradle/caches/transforms-3/754fa622484fb63a80160fed39ff7258/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.balsikandar.android:crashreporter:1.1.0] /Users/emile/.gradle/caches/transforms-3/754fa622484fb63a80160fed39ff7258/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.braintreepayments:card-form:5.4.0] /Users/emile/.gradle/caches/transforms-3/2f3974059ce10bbcc7d8805043273cbd/transformed/jetified-card-form-5.4.0/AndroidManifest.xml:7:5-9:41
@@ -879,26 +879,26 @@ MERGED from [com.facebook.android:facebook-share:16.3.0] /Users/emile/.gradle/ca
 MERGED from [com.facebook.android:facebook-share:16.3.0] /Users/emile/.gradle/caches/transforms-3/665a4d75e797d0dbb6815ab707931e8d/transformed/jetified-facebook-share-16.3.0/AndroidManifest.xml:12:5-14:41
 MERGED from [com.facebook.android:facebook-common:16.3.0] /Users/emile/.gradle/caches/transforms-3/ce99978c6b7b72bb58b55ef8190a3d39/transformed/jetified-facebook-common-16.3.0/AndroidManifest.xml:13:5-15:41
 MERGED from [com.facebook.android:facebook-common:16.3.0] /Users/emile/.gradle/caches/transforms-3/ce99978c6b7b72bb58b55ef8190a3d39/transformed/jetified-facebook-common-16.3.0/AndroidManifest.xml:13:5-15:41
-MERGED from [com.braintreepayments.api:three-d-secure:4.27.0] /Users/emile/.gradle/caches/transforms-3/e8169233365e8cccda7455120e66e640/transformed/jetified-three-d-secure-4.27.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.braintreepayments.api:three-d-secure:4.27.0] /Users/emile/.gradle/caches/transforms-3/e8169233365e8cccda7455120e66e640/transformed/jetified-three-d-secure-4.27.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.braintreepayments.api:google-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/e39704d75b214572c56a080587dacd4a/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.braintreepayments.api:google-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/e39704d75b214572c56a080587dacd4a/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.braintreepayments.api:paypal:4.27.0] /Users/emile/.gradle/caches/transforms-3/e268fcc82816e07ccd07531a6f48a861/transformed/jetified-paypal-4.27.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.braintreepayments.api:paypal:4.27.0] /Users/emile/.gradle/caches/transforms-3/e268fcc82816e07ccd07531a6f48a861/transformed/jetified-paypal-4.27.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.braintreepayments.api:venmo:4.27.0] /Users/emile/.gradle/caches/transforms-3/493995530ff607c0eb281607e874fea2/transformed/jetified-venmo-4.27.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.braintreepayments.api:venmo:4.27.0] /Users/emile/.gradle/caches/transforms-3/493995530ff607c0eb281607e874fea2/transformed/jetified-venmo-4.27.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.braintreepayments.api:union-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/b1b77c3e26ae2dddbba390249e89e8e5/transformed/jetified-union-pay-4.27.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.braintreepayments.api:union-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/b1b77c3e26ae2dddbba390249e89e8e5/transformed/jetified-union-pay-4.27.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.braintreepayments.api:card:4.27.0] /Users/emile/.gradle/caches/transforms-3/98d941fe534f5cfe09a2c94682115f30/transformed/jetified-card-4.27.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.braintreepayments.api:card:4.27.0] /Users/emile/.gradle/caches/transforms-3/98d941fe534f5cfe09a2c94682115f30/transformed/jetified-card-4.27.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.braintreepayments.api:data-collector:4.27.0] /Users/emile/.gradle/caches/transforms-3/1b1b6a8653e50ce02cf8682515853eba/transformed/jetified-data-collector-4.27.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.braintreepayments.api:data-collector:4.27.0] /Users/emile/.gradle/caches/transforms-3/1b1b6a8653e50ce02cf8682515853eba/transformed/jetified-data-collector-4.27.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.braintreepayments.api:paypal-data-collector:4.27.0] /Users/emile/.gradle/caches/transforms-3/f7415295f8733b9e987eb082fdcb4a2b/transformed/jetified-paypal-data-collector-4.27.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.braintreepayments.api:paypal-data-collector:4.27.0] /Users/emile/.gradle/caches/transforms-3/f7415295f8733b9e987eb082fdcb4a2b/transformed/jetified-paypal-data-collector-4.27.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:6:5-9:74
-MERGED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:6:5-9:74
-MERGED from [com.braintreepayments.api:browser-switch:2.3.2] /Users/emile/.gradle/caches/transforms-3/5702947e19cd4b77290d805fb60de019/transformed/jetified-browser-switch-2.3.2/AndroidManifest.xml:5:5-7:41
-MERGED from [com.braintreepayments.api:browser-switch:2.3.2] /Users/emile/.gradle/caches/transforms-3/5702947e19cd4b77290d805fb60de019/transformed/jetified-browser-switch-2.3.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.braintreepayments.api:three-d-secure:4.40.1] /Users/emile/.gradle/caches/transforms-3/cb401c6df1c711cc8ee804ccf7d2b323/transformed/jetified-three-d-secure-4.40.1/AndroidManifest.xml:5:5-44
+MERGED from [com.braintreepayments.api:three-d-secure:4.40.1] /Users/emile/.gradle/caches/transforms-3/cb401c6df1c711cc8ee804ccf7d2b323/transformed/jetified-three-d-secure-4.40.1/AndroidManifest.xml:5:5-44
+MERGED from [com.braintreepayments.api:google-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/9262eaa8627316846ac348dd7d635788/transformed/jetified-google-pay-4.40.1/AndroidManifest.xml:5:5-44
+MERGED from [com.braintreepayments.api:google-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/9262eaa8627316846ac348dd7d635788/transformed/jetified-google-pay-4.40.1/AndroidManifest.xml:5:5-44
+MERGED from [com.braintreepayments.api:paypal:4.40.1] /Users/emile/.gradle/caches/transforms-3/008ff4916bf3faa8b3ef5d4d84c08405/transformed/jetified-paypal-4.40.1/AndroidManifest.xml:5:5-44
+MERGED from [com.braintreepayments.api:paypal:4.40.1] /Users/emile/.gradle/caches/transforms-3/008ff4916bf3faa8b3ef5d4d84c08405/transformed/jetified-paypal-4.40.1/AndroidManifest.xml:5:5-44
+MERGED from [com.braintreepayments.api:venmo:4.40.1] /Users/emile/.gradle/caches/transforms-3/df2b8a8a22ce12f5da95ba98e8967e72/transformed/jetified-venmo-4.40.1/AndroidManifest.xml:5:5-44
+MERGED from [com.braintreepayments.api:venmo:4.40.1] /Users/emile/.gradle/caches/transforms-3/df2b8a8a22ce12f5da95ba98e8967e72/transformed/jetified-venmo-4.40.1/AndroidManifest.xml:5:5-44
+MERGED from [com.braintreepayments.api:union-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/527efa8f3c8abe004e2210bb61e5001f/transformed/jetified-union-pay-4.40.1/AndroidManifest.xml:5:5-44
+MERGED from [com.braintreepayments.api:union-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/527efa8f3c8abe004e2210bb61e5001f/transformed/jetified-union-pay-4.40.1/AndroidManifest.xml:5:5-44
+MERGED from [com.braintreepayments.api:card:4.40.1] /Users/emile/.gradle/caches/transforms-3/73655ca05ce0f3bca9e8b2e1e43f29fa/transformed/jetified-card-4.40.1/AndroidManifest.xml:5:5-44
+MERGED from [com.braintreepayments.api:card:4.40.1] /Users/emile/.gradle/caches/transforms-3/73655ca05ce0f3bca9e8b2e1e43f29fa/transformed/jetified-card-4.40.1/AndroidManifest.xml:5:5-44
+MERGED from [com.braintreepayments.api:data-collector:4.40.1] /Users/emile/.gradle/caches/transforms-3/3ae09116b30703c1e3c3bcdd65a6c573/transformed/jetified-data-collector-4.40.1/AndroidManifest.xml:5:5-44
+MERGED from [com.braintreepayments.api:data-collector:4.40.1] /Users/emile/.gradle/caches/transforms-3/3ae09116b30703c1e3c3bcdd65a6c573/transformed/jetified-data-collector-4.40.1/AndroidManifest.xml:5:5-44
+MERGED from [com.braintreepayments.api:paypal-data-collector:4.40.1] /Users/emile/.gradle/caches/transforms-3/831da5ae2e09829209214d19f3dff532/transformed/jetified-paypal-data-collector-4.40.1/AndroidManifest.xml:5:5-44
+MERGED from [com.braintreepayments.api:paypal-data-collector:4.40.1] /Users/emile/.gradle/caches/transforms-3/831da5ae2e09829209214d19f3dff532/transformed/jetified-paypal-data-collector-4.40.1/AndroidManifest.xml:5:5-44
+MERGED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:6:5-8:74
+MERGED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:6:5-8:74
+MERGED from [com.braintreepayments.api:browser-switch:2.6.1] /Users/emile/.gradle/caches/transforms-3/e9ec70f293c963583b983115817f6188/transformed/jetified-browser-switch-2.6.1/AndroidManifest.xml:5:5-44
+MERGED from [com.braintreepayments.api:browser-switch:2.6.1] /Users/emile/.gradle/caches/transforms-3/e9ec70f293c963583b983115817f6188/transformed/jetified-browser-switch-2.6.1/AndroidManifest.xml:5:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/emile/.gradle/caches/transforms-3/e102db9ac5f392a41c24d53de041be36/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/emile/.gradle/caches/transforms-3/e102db9ac5f392a41c24d53de041be36/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/emile/.gradle/caches/transforms-3/a094b2c3a4f5bc787d467a35bb857f60/transformed/jetified-circleimageview-3.1.0/AndroidManifest.xml:5:5-7:41
@@ -925,8 +925,8 @@ MERGED from [com.google.android.gms:play-services-location:20.0.0] /Users/emile/
 MERGED from [com.google.android.gms:play-services-location:20.0.0] /Users/emile/.gradle/caches/transforms-3/4a6bc39154c007953d0f8962d8767937/transformed/jetified-play-services-location-20.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-places:17.0.0] /Users/emile/.gradle/caches/transforms-3/03f044876a8c8087f367d6913f6ecdf9/transformed/jetified-play-services-places-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-places:17.0.0] /Users/emile/.gradle/caches/transforms-3/03f044876a8c8087f367d6913f6ecdf9/transformed/jetified-play-services-places-17.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-wallet:19.1.0] /Users/emile/.gradle/caches/transforms-3/19486c83ea7070b3e76d0cc2b4a9ee79/transformed/jetified-play-services-wallet-19.1.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-wallet:19.1.0] /Users/emile/.gradle/caches/transforms-3/19486c83ea7070b3e76d0cc2b4a9ee79/transformed/jetified-play-services-wallet-19.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-wallet:19.2.1] /Users/emile/.gradle/caches/transforms-3/aa49daa06d43ef979087d5da3629c8b5/transformed/jetified-play-services-wallet-19.2.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-wallet:19.2.1] /Users/emile/.gradle/caches/transforms-3/aa49daa06d43ef979087d5da3629c8b5/transformed/jetified-play-services-wallet-19.2.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] /Users/emile/.gradle/caches/transforms-3/b3c4344177b38ea71edb68c798098462/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] /Users/emile/.gradle/caches/transforms-3/b3c4344177b38ea71edb68c798098462/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-vision:20.1.3] /Users/emile/.gradle/caches/transforms-3/efdedf37aadace390c0584a22680b784/transformed/jetified-play-services-vision-20.1.3/AndroidManifest.xml:5:5-44
@@ -1007,8 +1007,6 @@ MERGED from [com.facebook.android:facebook-core:16.3.0] /Users/emile/.gradle/cac
 MERGED from [com.facebook.android:facebook-core:16.3.0] /Users/emile/.gradle/caches/transforms-3/1a9f1379d108b54529c7678da03a8cef/transformed/jetified-facebook-core-16.3.0/AndroidManifest.xml:12:5-14:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/emile/.gradle/caches/transforms-3/4eeaed30e2791f61df3f1fb22bdeef3e/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/emile/.gradle/caches/transforms-3/4eeaed30e2791f61df3f1fb22bdeef3e/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.browser:browser:1.0.0] /Users/emile/.gradle/caches/transforms-3/b5d359abb44dae89bd07031c87981404/transformed/browser-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.browser:browser:1.0.0] /Users/emile/.gradle/caches/transforms-3/b5d359abb44dae89bd07031c87981404/transformed/browser-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/emile/.gradle/caches/transforms-3/88c686958d81d3620cf1c08d7c0d22e5/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/emile/.gradle/caches/transforms-3/88c686958d81d3620cf1c08d7c0d22e5/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/emile/.gradle/caches/transforms-3/413954f2bbc4ab1911aec8533c4af063/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
@@ -1057,6 +1055,8 @@ MERGED from [androidx.work:work-runtime:2.7.0-alpha05] /Users/emile/.gradle/cach
 MERGED from [androidx.work:work-runtime:2.7.0-alpha05] /Users/emile/.gradle/caches/transforms-3/4d4cfc877d82f90072726e31ba268592/transformed/work-runtime-2.7.0-alpha05/AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.media:media:1.0.0] /Users/emile/.gradle/caches/transforms-3/e021664a883dd9016836fcdf01f0431e/transformed/media-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0] /Users/emile/.gradle/caches/transforms-3/e021664a883dd9016836fcdf01f0431e/transformed/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.5.0] /Users/emile/.gradle/caches/transforms-3/a1550f319854f8abe8482922f15e060a/transformed/browser-1.5.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.5.0] /Users/emile/.gradle/caches/transforms-3/a1550f319854f8abe8482922f15e060a/transformed/browser-1.5.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/emile/.gradle/caches/transforms-3/206ffc38e8500fb2dbc304d661e6d038/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/emile/.gradle/caches/transforms-3/206ffc38e8500fb2dbc304d661e6d038/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/emile/.gradle/caches/transforms-3/4eca70bb7353e38f63f9bc633a891033/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
@@ -1089,8 +1089,8 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/emile/.gra
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/emile/.gradle/caches/transforms-3/b62673ece755617109cc25e870d08a69/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/emile/.gradle/caches/transforms-3/84cebe6fe92a1ecef2da6c858369baeb/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/emile/.gradle/caches/transforms-3/84cebe6fe92a1ecef2da6c858369baeb/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [com.braintreepayments.api:shared-utils:4.27.0] /Users/emile/.gradle/caches/transforms-3/1d6cafdaff2c7e394c115f91f30691f0/transformed/jetified-shared-utils-4.27.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.braintreepayments.api:shared-utils:4.27.0] /Users/emile/.gradle/caches/transforms-3/1d6cafdaff2c7e394c115f91f30691f0/transformed/jetified-shared-utils-4.27.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.braintreepayments.api:shared-utils:4.40.1] /Users/emile/.gradle/caches/transforms-3/d8f3bd23044d5bb8ff57bad830570d6d/transformed/jetified-shared-utils-4.40.1/AndroidManifest.xml:5:5-44
+MERGED from [com.braintreepayments.api:shared-utils:4.40.1] /Users/emile/.gradle/caches/transforms-3/d8f3bd23044d5bb8ff57bad830570d6d/transformed/jetified-shared-utils-4.40.1/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-components:17.1.5] /Users/emile/.gradle/caches/transforms-3/d0d9d620760b999c493a03c8f2be6fd6/transformed/jetified-firebase-components-17.1.5/AndroidManifest.xml:18:5-44
 MERGED from [com.google.firebase:firebase-components:17.1.5] /Users/emile/.gradle/caches/transforms-3/d0d9d620760b999c493a03c8f2be6fd6/transformed/jetified-firebase-components-17.1.5/AndroidManifest.xml:18:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/emile/.gradle/caches/transforms-3/0b59976ca61fec2f91d38b2cc7eae02d/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
@@ -1113,12 +1113,12 @@ MERGED from [com.android.volley:volley:1.2.1] /Users/emile/.gradle/caches/transf
 MERGED from [com.android.volley:volley:1.2.1] /Users/emile/.gradle/caches/transforms-3/24a70e10510b7ffb70b10c1bb5c2904c/transformed/jetified-volley-1.2.1/AndroidManifest.xml:5:5-43
 MERGED from [com.android.installreferrer:installreferrer:1.0] /Users/emile/.gradle/caches/transforms-3/0683842944ca571736a843cada2f6124/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.installreferrer:installreferrer:1.0] /Users/emile/.gradle/caches/transforms-3/0683842944ca571736a843cada2f6124/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:5:5-7:41
-MERGED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:8:5-10:41
-MERGED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:8:5-10:41
+MERGED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:6:5-8:41
+MERGED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:6:5-8:41
 INJECTED from /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:9:9-71
+		ADDED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:8:9-71
 	android:targetSdkVersion
 		INJECTED from /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml
 		ADDED from /Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml
@@ -1134,17 +1134,17 @@ ADDED from [com.karumi:dexter:5.0.0] /Users/emile/.gradle/caches/transforms-3/a6
 	android:name
 		ADDED from [com.karumi:dexter:5.0.0] /Users/emile/.gradle/caches/transforms-3/a6a503aed5542b4c5a1b8af0579dc74b/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:28:13-60
 activity#com.braintreepayments.api.DropInActivity
-ADDED from [com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:16:9-29:20
+ADDED from [com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:16:9-29:20
 	android:launchMode
-		ADDED from [com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:19:13-44
+		ADDED from [com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:19:13-44
 	android:exported
-		ADDED from [com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:18:13-36
+		ADDED from [com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:18:13-36
 	android:theme
-		ADDED from [com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:20:13-61
+		ADDED from [com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:20:13-61
 	android:name
-		ADDED from [com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:17:13-68
+		ADDED from [com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:17:13-68
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:${applicationId}.braintree
-ADDED from [com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:21:13-28:29
+ADDED from [com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:21:13-28:29
 provider#com.balsikandar.crashreporter.CrashReporterInitProvider
 ADDED from [com.balsikandar.android:crashreporter:1.1.0] /Users/emile/.gradle/caches/transforms-3/754fa622484fb63a80160fed39ff7258/transformed/jetified-crashreporter-1.1.0/AndroidManifest.xml:12:9-16:40
 	android:enabled
@@ -1187,10 +1187,10 @@ ADDED from [com.google.android.libraries.places:places:2.6.0] /Users/emile/.grad
 		ADDED from [com.google.android.libraries.places:places:2.6.0] /Users/emile/.gradle/caches/transforms-3/1a7c10fe659f650dbfc2d0f3131d5615/transformed/jetified-places-2.6.0/AndroidManifest.xml:15:13-91
 queries
 ADDED from [com.facebook.android:facebook-common:16.3.0] /Users/emile/.gradle/caches/transforms-3/ce99978c6b7b72bb58b55ef8190a3d39/transformed/jetified-facebook-common-16.3.0/AndroidManifest.xml:17:5-19:15
-MERGED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:14:5-17:15
-MERGED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:14:5-17:15
-MERGED from [com.braintreepayments.api:browser-switch:2.3.2] /Users/emile/.gradle/caches/transforms-3/5702947e19cd4b77290d805fb60de019/transformed/jetified-browser-switch-2.3.2/AndroidManifest.xml:9:5-20:15
-MERGED from [com.braintreepayments.api:browser-switch:2.3.2] /Users/emile/.gradle/caches/transforms-3/5702947e19cd4b77290d805fb60de019/transformed/jetified-browser-switch-2.3.2/AndroidManifest.xml:9:5-20:15
+MERGED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:13:5-16:15
+MERGED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:13:5-16:15
+MERGED from [com.braintreepayments.api:browser-switch:2.6.1] /Users/emile/.gradle/caches/transforms-3/e9ec70f293c963583b983115817f6188/transformed/jetified-browser-switch-2.6.1/AndroidManifest.xml:7:5-18:15
+MERGED from [com.braintreepayments.api:browser-switch:2.6.1] /Users/emile/.gradle/caches/transforms-3/e9ec70f293c963583b983115817f6188/transformed/jetified-browser-switch-2.6.1/AndroidManifest.xml:7:5-18:15
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] /Users/emile/.gradle/caches/transforms-3/b3c4344177b38ea71edb68c798098462/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:30:5-34:15
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] /Users/emile/.gradle/caches/transforms-3/b3c4344177b38ea71edb68c798098462/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:30:5-34:15
 package#com.facebook.katana
@@ -1206,51 +1206,51 @@ ADDED from [com.facebook.android:facebook-common:16.3.0] /Users/emile/.gradle/ca
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:cct.com.i2donate+data:scheme:fbconnect
 ADDED from [com.facebook.android:facebook-common:16.3.0] /Users/emile/.gradle/caches/transforms-3/ce99978c6b7b72bb58b55ef8190a3d39/transformed/jetified-facebook-common-16.3.0/AndroidManifest.xml:31:13-40:29
 activity#com.braintreepayments.api.ThreeDSecureActivity
-ADDED from [com.braintreepayments.api:three-d-secure:4.27.0] /Users/emile/.gradle/caches/transforms-3/e8169233365e8cccda7455120e66e640/transformed/jetified-three-d-secure-4.27.0/AndroidManifest.xml:10:9-12:54
+ADDED from [com.braintreepayments.api:three-d-secure:4.40.1] /Users/emile/.gradle/caches/transforms-3/cb401c6df1c711cc8ee804ccf7d2b323/transformed/jetified-three-d-secure-4.40.1/AndroidManifest.xml:8:9-10:54
 	android:theme
-		ADDED from [com.braintreepayments.api:three-d-secure:4.27.0] /Users/emile/.gradle/caches/transforms-3/e8169233365e8cccda7455120e66e640/transformed/jetified-three-d-secure-4.27.0/AndroidManifest.xml:12:13-51
+		ADDED from [com.braintreepayments.api:three-d-secure:4.40.1] /Users/emile/.gradle/caches/transforms-3/cb401c6df1c711cc8ee804ccf7d2b323/transformed/jetified-three-d-secure-4.40.1/AndroidManifest.xml:10:13-51
 	android:name
-		ADDED from [com.braintreepayments.api:three-d-secure:4.27.0] /Users/emile/.gradle/caches/transforms-3/e8169233365e8cccda7455120e66e640/transformed/jetified-three-d-secure-4.27.0/AndroidManifest.xml:11:13-74
+		ADDED from [com.braintreepayments.api:three-d-secure:4.40.1] /Users/emile/.gradle/caches/transforms-3/cb401c6df1c711cc8ee804ccf7d2b323/transformed/jetified-three-d-secure-4.40.1/AndroidManifest.xml:9:13-74
 meta-data#com.google.android.gms.wallet.api.enabled
-ADDED from [com.braintreepayments.api:google-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/e39704d75b214572c56a080587dacd4a/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:10:9-12:36
+ADDED from [com.braintreepayments.api:google-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/9262eaa8627316846ac348dd7d635788/transformed/jetified-google-pay-4.40.1/AndroidManifest.xml:8:9-10:36
 	android:value
-		ADDED from [com.braintreepayments.api:google-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/e39704d75b214572c56a080587dacd4a/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:12:13-33
+		ADDED from [com.braintreepayments.api:google-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/9262eaa8627316846ac348dd7d635788/transformed/jetified-google-pay-4.40.1/AndroidManifest.xml:10:13-33
 	android:name
-		ADDED from [com.braintreepayments.api:google-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/e39704d75b214572c56a080587dacd4a/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:11:13-69
+		ADDED from [com.braintreepayments.api:google-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/9262eaa8627316846ac348dd7d635788/transformed/jetified-google-pay-4.40.1/AndroidManifest.xml:9:13-69
 activity#com.braintreepayments.api.GooglePayActivity
-ADDED from [com.braintreepayments.api:google-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/e39704d75b214572c56a080587dacd4a/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:14:9-16:62
+ADDED from [com.braintreepayments.api:google-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/9262eaa8627316846ac348dd7d635788/transformed/jetified-google-pay-4.40.1/AndroidManifest.xml:12:9-14:62
 	android:theme
-		ADDED from [com.braintreepayments.api:google-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/e39704d75b214572c56a080587dacd4a/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:16:13-59
+		ADDED from [com.braintreepayments.api:google-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/9262eaa8627316846ac348dd7d635788/transformed/jetified-google-pay-4.40.1/AndroidManifest.xml:14:13-59
 	android:name
-		ADDED from [com.braintreepayments.api:google-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/e39704d75b214572c56a080587dacd4a/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:15:13-71
+		ADDED from [com.braintreepayments.api:google-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/9262eaa8627316846ac348dd7d635788/transformed/jetified-google-pay-4.40.1/AndroidManifest.xml:13:13-71
 package#com.venmo
-ADDED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:15:9-45
+ADDED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:14:9-45
 	android:name
-		ADDED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:15:18-42
+		ADDED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:14:18-42
 package#com.paypal.android.p2pmobile
-ADDED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:16:9-64
+ADDED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:15:9-64
 	android:name
-		ADDED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:16:18-61
+		ADDED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:15:18-61
 activity#com.braintreepayments.api.BraintreeDeepLinkActivity
-ADDED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:20:9-32:20
+ADDED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:19:9-31:20
 	android:launchMode
-		ADDED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:23:13-44
+		ADDED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:22:13-44
 	android:exported
-		ADDED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:22:13-36
+		ADDED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:21:13-36
 	android:name
-		ADDED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:21:13-79
+		ADDED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:20:13-79
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:${applicationId}.braintree.deeplinkhandler
-ADDED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:24:13-31:29
+ADDED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:23:13-30:29
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:com.i2donate.braintree.deeplinkhandler
-ADDED from [com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:24:13-31:29
+ADDED from [com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:23:13-30:29
 intent#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+data:scheme:https
-ADDED from [com.braintreepayments.api:browser-switch:2.3.2] /Users/emile/.gradle/caches/transforms-3/5702947e19cd4b77290d805fb60de019/transformed/jetified-browser-switch-2.3.2/AndroidManifest.xml:10:9-16:18
+ADDED from [com.braintreepayments.api:browser-switch:2.6.1] /Users/emile/.gradle/caches/transforms-3/e9ec70f293c963583b983115817f6188/transformed/jetified-browser-switch-2.6.1/AndroidManifest.xml:8:9-14:18
 intent#action:name:android.support.customtabs.action.CustomTabsService
-ADDED from [com.braintreepayments.api:browser-switch:2.3.2] /Users/emile/.gradle/caches/transforms-3/5702947e19cd4b77290d805fb60de019/transformed/jetified-browser-switch-2.3.2/AndroidManifest.xml:17:9-19:18
+ADDED from [com.braintreepayments.api:browser-switch:2.6.1] /Users/emile/.gradle/caches/transforms-3/e9ec70f293c963583b983115817f6188/transformed/jetified-browser-switch-2.6.1/AndroidManifest.xml:15:9-17:18
 action#android.support.customtabs.action.CustomTabsService
-ADDED from [com.braintreepayments.api:browser-switch:2.3.2] /Users/emile/.gradle/caches/transforms-3/5702947e19cd4b77290d805fb60de019/transformed/jetified-browser-switch-2.3.2/AndroidManifest.xml:18:13-90
+ADDED from [com.braintreepayments.api:browser-switch:2.6.1] /Users/emile/.gradle/caches/transforms-3/e9ec70f293c963583b983115817f6188/transformed/jetified-browser-switch-2.6.1/AndroidManifest.xml:16:13-90
 	android:name
-		ADDED from [com.braintreepayments.api:browser-switch:2.3.2] /Users/emile/.gradle/caches/transforms-3/5702947e19cd4b77290d805fb60de019/transformed/jetified-browser-switch-2.3.2/AndroidManifest.xml:18:21-87
+		ADDED from [com.braintreepayments.api:browser-switch:2.6.1] /Users/emile/.gradle/caches/transforms-3/e9ec70f293c963583b983115817f6188/transformed/jetified-browser-switch-2.6.1/AndroidManifest.xml:16:21-87
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
 ADDED from [com.google.android.gms:play-services-auth:20.5.0] /Users/emile/.gradle/caches/transforms-3/6189f0c8196123e2cddfa66b8c8ba88b/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:23:9-27:75
 	android:excludeFromRecents
@@ -1805,31 +1805,31 @@ ADDED from [androidx.room:room-runtime:2.2.6] /Users/emile/.gradle/caches/transf
 		ADDED from [androidx.room:room-runtime:2.2.6] /Users/emile/.gradle/caches/transforms-3/b0db48d4e9dd4995d3b26964f2f270bd/transformed/room-runtime-2.2.6/AndroidManifest.xml:27:13-43
 	android:name
 		ADDED from [androidx.room:room-runtime:2.2.6] /Users/emile/.gradle/caches/transforms-3/b0db48d4e9dd4995d3b26964f2f270bd/transformed/room-runtime-2.2.6/AndroidManifest.xml:26:13-74
-provider#com.cardinalcommerce.a.setShadowLayer
-ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:17:9-21:39
+provider#com.cardinalcommerce.a.setOutlineSpotShadowColor
+ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:15:9-19:40
 	android:enabled
-		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:20:13-35
+		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:18:13-35
 	android:authorities
-		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:19:13-66
+		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:17:13-66
 	android:exported
-		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:21:13-36
+		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:19:13-37
 	android:name
-		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:18:13-65
-activity#com.cardinalcommerce.a.setTextLocale
-ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:23:9-26:65
+		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:16:13-76
+activity#com.cardinalcommerce.shared.cs.userinterfaces.ChallengeHTMLView
+ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:21:9-24:65
 	android:exported
-		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:25:13-37
+		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:23:13-37
 	android:theme
-		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:26:13-62
+		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:24:13-62
 	android:name
-		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:24:13-64
-activity#com.cardinalcommerce.a.setTextLocales
-ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:27:9-31:76
+		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:22:13-91
+activity#com.cardinalcommerce.shared.cs.userinterfaces.ChallengeNativeView
+ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:25:9-29:76
 	android:windowSoftInputMode
-		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:31:13-73
+		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:29:13-73
 	android:exported
-		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:29:13-37
+		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:27:13-37
 	android:theme
-		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:30:13-62
+		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:28:13-62
 	android:name
-		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:28:13-65
+		ADDED from [org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:26:13-93

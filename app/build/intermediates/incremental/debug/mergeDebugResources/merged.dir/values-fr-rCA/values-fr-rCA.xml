@@ -88,6 +88,7 @@
     <string name="bt_mobile_number_required">Le numéro de téléphone mobile est obligatoire</string>
     <string name="bt_month">Mois</string>
     <string name="bt_next">Suivant</string>
+    <string name="bt_notice_of_collection">En payant avec ma carte, j’accepte la Politique de confidentialité de PayPal.</string>
     <string name="bt_other">Autre</string>
     <string name="bt_postal_code_invalid">Le code postal n\'est pas valide.</string>
     <string name="bt_postal_code_required">Le code postal est obligatoire</string>
@@ -150,8 +151,13 @@
     <string name="common_open_on_phone">Ouvrir sur le téléphone</string>
     <string name="common_signin_button_text">Connexion</string>
     <string name="common_signin_button_text_long">Se connecter avec Google</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Lien copié dans le presse-papiers"</string>
     <string name="error_icon_content_description">Erreur</string>
     <string name="exposed_dropdown_menu_content_description">Afficher le menu déroulant</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Copier le lien"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Ouvrir dans le navigateur"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Partager le lien"</string>
+    <string name="gpay_logo_description">Google Pay</string>
     <string name="icon_content_description">Icône de boîte de dialogue</string>
     <string name="item_view_role_description">Onglet</string>
     <string name="material_clock_toggle_content_description">Sélectionner AM ou PM</string>

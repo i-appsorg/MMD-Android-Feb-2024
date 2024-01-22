@@ -31,6 +31,7 @@
     <string name="bt_edit_button_description">Modifier les modes de paiement enregistrés</string>
     <string name="bt_mobile_number_invalid">Le numéro de mobile est incorrect</string>
     <string name="bt_next">Suiv</string>
+    <string name="bt_notice_of_collection">En payant avec ma carte, j\'accepte la Politique de confidentialité de PayPal.</string>
     <string name="bt_other">Autre</string>
     <string name="bt_postal_code_invalid">Le code postal est incorrect</string>
     <string name="bt_recent">Récent</string>

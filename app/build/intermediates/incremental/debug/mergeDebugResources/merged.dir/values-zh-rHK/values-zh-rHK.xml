@@ -88,6 +88,7 @@
     <string name="bt_mobile_number_required">必須填寫手機號碼</string>
     <string name="bt_month">月</string>
     <string name="bt_next">下一頁</string>
+    <string name="bt_notice_of_collection">一經使用信用卡付款，即表示我同意 PayPal 的《私隱權聲明》。</string>
     <string name="bt_other">其他</string>
     <string name="bt_postal_code_invalid">郵遞區號無效</string>
     <string name="bt_postal_code_required">必須填寫郵遞區號</string>
@@ -150,8 +151,13 @@
     <string name="common_open_on_phone">在手機開啟</string>
     <string name="common_signin_button_text">登入</string>
     <string name="common_signin_button_text_long">透過 Google 登入</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"連結已複製到剪貼簿"</string>
     <string name="error_icon_content_description">錯誤</string>
     <string name="exposed_dropdown_menu_content_description">顯示下拉式選單</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"複製連結"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"在瀏覽器中開啟"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"分享連結"</string>
+    <string name="gpay_logo_description">Google Pay</string>
     <string name="icon_content_description">對話框圖示</string>
     <string name="item_view_role_description">分頁</string>
     <string name="material_clock_toggle_content_description">選擇上午或下午</string>

@@ -58,8 +58,13 @@
     <string name="common_open_on_phone">Otvori na telefonu</string>
     <string name="common_signin_button_text">Prijava</string>
     <string name="common_signin_button_text_long">Prijavi se pomoću Googlea</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Link je kopiran u međumemoriju"</string>
     <string name="error_icon_content_description">Greška</string>
     <string name="exposed_dropdown_menu_content_description">Prikaži padajući meni</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Kopiraj link"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Otvori u pregledniku"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Dijeli link"</string>
+    <string name="gpay_logo_description">Google Pay</string>
     <string name="icon_content_description">ikona dijaloškog okvira</string>
     <string name="item_view_role_description">Kartica</string>
     <string name="material_clock_toggle_content_description">Odaberite prijepodne ili poslijepodne</string>
@@ -124,5 +129,5 @@
     <string name="places_try_again">Pokušaj ponovo</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Pretražite"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
-    <string name="wallet_buy_button_place_holder">Kupi putem Googlea</string>
+    <string name="wallet_buy_button_place_holder">Kupite putem Googlea</string>
 </resources>

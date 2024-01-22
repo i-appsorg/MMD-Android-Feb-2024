@@ -88,6 +88,7 @@
     <string name="bt_mobile_number_required">Mobilnummer er obligatorisk</string>
     <string name="bt_month">Måned</string>
     <string name="bt_next">Neste</string>
+    <string name="bt_notice_of_collection">Ved å betale med kortet godtar jeg PayPals personvernerklæring.</string>
     <string name="bt_other">Annet</string>
     <string name="bt_postal_code_invalid">Postnummeret er ugyldig</string>
     <string name="bt_postal_code_required">Postnummer er obligatorisk</string>
@@ -149,8 +150,13 @@
     <string name="common_open_on_phone">Åpne på telefonen</string>
     <string name="common_signin_button_text">Logg på</string>
     <string name="common_signin_button_text_long">Logg på med Google</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Linken er kopiert til utklippstavlen"</string>
     <string name="error_icon_content_description">Feil</string>
     <string name="exposed_dropdown_menu_content_description">Vis rullegardinmenyen</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Kopiér linken"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Åpne i nettleseren"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Del link"</string>
+    <string name="gpay_logo_description">Google Pay</string>
     <string name="icon_content_description">Dialogboksikon</string>
     <string name="item_view_role_description">Fane</string>
     <string name="material_clock_toggle_content_description">Velg AM eller PM</string>

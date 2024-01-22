@@ -256,6 +256,7 @@ attr buttonPanelSideLayout
 attr buttonSize
 attr buttonStyle
 attr buttonStyleSmall
+attr buttonTheme
 attr buttonTint
 attr buttonTintMode
 attr buyButtonAppearance
@@ -1045,6 +1046,10 @@ attr passwordToggleTint
 attr passwordToggleTintMode
 attr pathMotionArc
 attr path_percent
+attr payButtonGenericBackground
+attr payButtonGenericLogoImage
+attr payButtonGenericRippleColor
+attr payButtonGenericRippleMask
 attr percentHeight
 attr percentWidth
 attr percentX
@@ -2242,6 +2247,12 @@ color navigation_color
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
+color pay_button_generic_background_color_dark
+color pay_button_generic_background_color_light
+color pay_button_generic_background_outline_color_dark
+color pay_button_generic_background_outline_color_light
+color pay_button_generic_ripple_color_dark
+color pay_button_generic_ripple_color_light
 color place_autocomplete_prediction_primary_text
 color place_autocomplete_prediction_primary_text_highlight
 color place_autocomplete_prediction_secondary_text
@@ -4173,6 +4184,10 @@ dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
 dimen padding_10
+dimen pay_button_generic_min_height
+dimen pay_button_generic_min_width
+dimen pay_image_generic_height
+dimen pay_image_generic_width
 dimen place_autocomplete_button_padding
 dimen place_autocomplete_powered_by_google_height
 dimen place_autocomplete_powered_by_google_start
@@ -4435,6 +4450,8 @@ drawable goal_icon
 drawable google_icon
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable gpay_logo_generic_dark
+drawable gpay_logo_generic_light
 drawable heart_like_icon
 drawable help_support
 drawable ic_all_location
@@ -4576,6 +4593,10 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable pay_button_generic_background_dark
+drawable pay_button_generic_background_light
+drawable pay_button_generic_background_mask_dark
+drawable pay_button_generic_background_mask_light
 drawable payment_alert_border_layout
 drawable payment_alertdailogue
 drawable payment_checked_icon
@@ -4797,6 +4818,7 @@ id bt_payment_method_divider
 id bt_payment_method_icon
 id bt_payment_method_title
 id bt_payment_method_type
+id bt_privacy_policy
 id bt_select_payment_method_loader
 id bt_select_payment_method_loader_wrapper
 id bt_sms_code
@@ -5330,6 +5352,8 @@ id path
 id pathRelative
 id payIdTextView
 id payStatusTextView
+id pay_button_logo
+id pay_button_view
 id paymentAmount
 id paymentId
 id paymentStatus
@@ -6022,6 +6046,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout paybutton_generic
 layout payment_alert_dailog
 layout percentage_detail_layout
 layout place_autocomplete_fragment
@@ -6189,6 +6214,7 @@ string bt_mobile_number_invalid
 string bt_mobile_number_required
 string bt_month
 string bt_next
+string bt_notice_of_collection
 string bt_other
 string bt_postal_code_invalid
 string bt_postal_code_required
@@ -6282,6 +6308,7 @@ string common_signin_button_text
 string common_signin_button_text_long
 string confirm_password
 string continueText
+string copy_toast_msg
 string crash_reporter
 string crashes
 string default_notification_channel_id
@@ -6307,6 +6334,9 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string facebook_app_id
 string facebook_client_token
+string fallback_menu_item_copy_link
+string fallback_menu_item_open_in_browser
+string fallback_menu_item_share_link
 string fb_login_protocol_scheme
 string fcm_fallback_notification_channel_label
 string following_nonproft
@@ -6320,6 +6350,7 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_maps_key
 string google_storage_bucket
+string gpay_logo_description
 string help_Consectetur
 string help_Lorem
 string help_adipiscing
@@ -6946,6 +6977,8 @@ style MessengerButtonText_Blue_Small
 style MessengerButtonText_White
 style MessengerButtonText_White_Large
 style MessengerButtonText_White_Small
+style PayButtonGenericDarkTheme
+style PayButtonGenericLightTheme
 style PlacesAutocompleteBase
 style PlacesAutocompleteErrorButtonText
 style PlacesAutocompleteErrorMessageText
@@ -7924,6 +7957,7 @@ styleable NavigationRailView headerLayout itemMinHeight menuGravity paddingBotto
 styleable NavigationView android_layout_gravity android_background android_fitsSystemWindows android_maxWidth bottomInsetScrimEnabled dividerInsetEnd dividerInsetStart drawerLayoutCornerSize elevation headerLayout itemBackground itemHorizontalPadding itemIconPadding itemIconSize itemIconTint itemMaxLines itemRippleColor itemShapeAppearance itemShapeAppearanceOverlay itemShapeFillColor itemShapeInsetBottom itemShapeInsetEnd itemShapeInsetStart itemShapeInsetTop itemTextAppearance itemTextColor itemVerticalPadding menu shapeAppearance shapeAppearanceOverlay subheaderColor subheaderInsetEnd subheaderInsetStart subheaderTextAppearance topInsetScrimEnabled
 styleable OnClick clickAction targetId
 styleable OnSwipe autoCompleteMode dragDirection dragScale dragThreshold limitBoundsTo maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp rotationCenterId springBoundary springDamping springMass springStiffness springStopThreshold touchAnchorId touchAnchorSide touchRegionId
+styleable PayButtonAttributes buttonTheme cornerRadius
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
 styleable PropertySet android_visibility android_alpha layout_constraintTag motionProgress visibilityMode
@@ -7976,3 +8010,4 @@ styleable com_facebook_login_view com_facebook_confirm_logout com_facebook_login
 styleable com_facebook_profile_picture_view com_facebook_is_cropped com_facebook_preset_size
 styleable include constraintSet
 xml ga_ad_services_config
+xml image_share_filepaths

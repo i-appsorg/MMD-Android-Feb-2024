@@ -31,6 +31,7 @@
     <string name="bt_edit_button_description">עריכת שיטות תשלום שמורות</string>
     <string name="bt_mobile_number_invalid">מספר הטלפון הנייד אינו חוקי</string>
     <string name="bt_next">הבא</string>
+    <string name="bt_notice_of_collection">בכך שאני משלם/ת באמצעות כרטיס האשראי שלי, אני מסכים/ה להצהרת הפרטיות של PayPal.</string>
     <string name="bt_other">אחר</string>
     <string name="bt_postal_code_invalid">המיקוד אינו חוקי</string>
     <string name="bt_recent">מיקומים אחרונים</string>

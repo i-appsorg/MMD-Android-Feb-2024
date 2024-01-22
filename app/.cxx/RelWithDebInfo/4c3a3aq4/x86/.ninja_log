@@ -4,3 +4,5 @@
 0	13	0	clean	3b44aed347b3d555
 1	332	1697036237	CMakeFiles/native-lib.dir/src/main/jni/native-lib.cpp.o	57bf83662514a175
 332	420	1697036237	../../../../build/intermediates/cxx/RelWithDebInfo/4c3a3aq4/obj/x86/libnative-lib.so	71b7aa684c099125
+0	398	1705946322	CMakeFiles/native-lib.dir/src/main/jni/native-lib.cpp.o	57bf83662514a175
+399	506	1705946322	../../../../build/intermediates/cxx/RelWithDebInfo/4c3a3aq4/obj/x86/libnative-lib.so	71b7aa684c099125

@@ -88,6 +88,7 @@
     <string name="bt_mobile_number_required">Mobiel nummer is verplicht</string>
     <string name="bt_month">Maand</string>
     <string name="bt_next">Volgende</string>
+    <string name="bt_notice_of_collection">Door met mijn kaart te betalen, ga ik akkoord met de PayPal Privacyverklaring.</string>
     <string name="bt_other">Overige</string>
     <string name="bt_postal_code_invalid">Postcode is ongeldig</string>
     <string name="bt_postal_code_required">Postcode is verplicht</string>
@@ -150,8 +151,13 @@
     <string name="common_open_on_phone">Openen op telefoon</string>
     <string name="common_signin_button_text">Inloggen</string>
     <string name="common_signin_button_text_long">Inloggen met Google</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Link naar klembord gekopieerd"</string>
     <string name="error_icon_content_description">Fout</string>
     <string name="exposed_dropdown_menu_content_description">Dropdownmenu tonen</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Link kopiëren"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Openen in browser"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Link delen"</string>
+    <string name="gpay_logo_description">Google Pay</string>
     <string name="icon_content_description">Icoon voor dialoogvenster</string>
     <string name="item_view_role_description">Tabblad</string>
     <string name="material_clock_toggle_content_description">Selecteer a.m. of p.m.</string>

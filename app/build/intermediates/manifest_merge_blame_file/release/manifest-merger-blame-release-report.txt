@@ -1,8 +1,8 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.i2donate"
-4    android:versionCode="38"
-5    android:versionName="1.0.38" >
+4    android:versionCode="39"
+5    android:versionName="1.0.39" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
@@ -102,14 +102,14 @@
 49-->[com.facebook.android:facebook-common:16.3.0] /Users/emile/.gradle/caches/transforms-3/ce99978c6b7b72bb58b55ef8190a3d39/transformed/jetified-facebook-common-16.3.0/AndroidManifest.xml:18:9-55
 49-->[com.facebook.android:facebook-common:16.3.0] /Users/emile/.gradle/caches/transforms-3/ce99978c6b7b72bb58b55ef8190a3d39/transformed/jetified-facebook-common-16.3.0/AndroidManifest.xml:18:18-52
 50        <package android:name="com.venmo" />
-50-->[com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:15:9-45
-50-->[com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:15:18-42
+50-->[com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:14:9-45
+50-->[com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:14:18-42
 51        <package android:name="com.paypal.android.p2pmobile" />
-51-->[com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:16:9-64
-51-->[com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:16:18-61
+51-->[com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:15:9-64
+51-->[com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:15:18-61
 52
 53        <intent>
-53-->[com.braintreepayments.api:browser-switch:2.3.2] /Users/emile/.gradle/caches/transforms-3/5702947e19cd4b77290d805fb60de019/transformed/jetified-browser-switch-2.3.2/AndroidManifest.xml:10:9-16:18
+53-->[com.braintreepayments.api:browser-switch:2.6.1] /Users/emile/.gradle/caches/transforms-3/e9ec70f293c963583b983115817f6188/transformed/jetified-browser-switch-2.6.1/AndroidManifest.xml:8:9-14:18
 54            <action android:name="android.intent.action.VIEW" />
 54-->/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml:86:17-69
 54-->/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml:86:25-66
@@ -122,10 +122,10 @@
 58-->/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml:91:23-66
 59        </intent>
 60        <intent>
-60-->[com.braintreepayments.api:browser-switch:2.3.2] /Users/emile/.gradle/caches/transforms-3/5702947e19cd4b77290d805fb60de019/transformed/jetified-browser-switch-2.3.2/AndroidManifest.xml:17:9-19:18
+60-->[com.braintreepayments.api:browser-switch:2.6.1] /Users/emile/.gradle/caches/transforms-3/e9ec70f293c963583b983115817f6188/transformed/jetified-browser-switch-2.6.1/AndroidManifest.xml:15:9-17:18
 61            <action android:name="android.support.customtabs.action.CustomTabsService" />
-61-->[com.braintreepayments.api:browser-switch:2.3.2] /Users/emile/.gradle/caches/transforms-3/5702947e19cd4b77290d805fb60de019/transformed/jetified-browser-switch-2.3.2/AndroidManifest.xml:18:13-90
-61-->[com.braintreepayments.api:browser-switch:2.3.2] /Users/emile/.gradle/caches/transforms-3/5702947e19cd4b77290d805fb60de019/transformed/jetified-browser-switch-2.3.2/AndroidManifest.xml:18:21-87
+61-->[com.braintreepayments.api:browser-switch:2.6.1] /Users/emile/.gradle/caches/transforms-3/e9ec70f293c963583b983115817f6188/transformed/jetified-browser-switch-2.6.1/AndroidManifest.xml:16:13-90
+61-->[com.braintreepayments.api:browser-switch:2.6.1] /Users/emile/.gradle/caches/transforms-3/e9ec70f293c963583b983115817f6188/transformed/jetified-browser-switch-2.6.1/AndroidManifest.xml:16:21-87
 62        </intent> <!-- Needs to be explicitly declared on Android R+ -->
 63        <package android:name="com.google.android.apps.maps" />
 63-->[com.google.android.gms:play-services-maps:18.1.0] /Users/emile/.gradle/caches/transforms-3/b3c4344177b38ea71edb68c798098462/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:33:9-64
@@ -623,15 +623,15 @@
 329            android:theme="@style/Dexter.Internal.Theme.Transparent" />
 329-->[com.karumi:dexter:5.0.0] /Users/emile/.gradle/caches/transforms-3/a6a503aed5542b4c5a1b8af0579dc74b/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:29:13-69
 330        <activity
-330-->[com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:16:9-29:20
+330-->[com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:16:9-29:20
 331            android:name="com.braintreepayments.api.DropInActivity"
-331-->[com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:17:13-68
+331-->[com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:17:13-68
 332            android:exported="true"
-332-->[com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:18:13-36
+332-->[com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:18:13-36
 333            android:launchMode="singleTask"
-333-->[com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:19:13-44
+333-->[com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:19:13-44
 334            android:theme="@style/bt_drop_in_activity_theme" >
-334-->[com.braintreepayments.api:drop-in:6.9.0] /Users/emile/.gradle/caches/transforms-3/6684db2e4ea2039a47f3d91337b4feda/transformed/jetified-drop-in-6.9.0/AndroidManifest.xml:20:13-61
+334-->[com.braintreepayments.api:drop-in:6.14.0] /Users/emile/.gradle/caches/transforms-3/b122a0235bf96f0e6316920060171c38/transformed/jetified-drop-in-6.14.0/AndroidManifest.xml:20:13-61
 335            <intent-filter>
 335-->/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml:85:13-92:29
 336                <action android:name="android.intent.action.VIEW" />
@@ -696,35 +696,35 @@
 367-->[com.facebook.android:facebook-common:16.3.0] /Users/emile/.gradle/caches/transforms-3/ce99978c6b7b72bb58b55ef8190a3d39/transformed/jetified-facebook-common-16.3.0/AndroidManifest.xml:26:9-71
 367-->[com.facebook.android:facebook-common:16.3.0] /Users/emile/.gradle/caches/transforms-3/ce99978c6b7b72bb58b55ef8190a3d39/transformed/jetified-facebook-common-16.3.0/AndroidManifest.xml:26:19-68
 368        <activity
-368-->[com.braintreepayments.api:three-d-secure:4.27.0] /Users/emile/.gradle/caches/transforms-3/e8169233365e8cccda7455120e66e640/transformed/jetified-three-d-secure-4.27.0/AndroidManifest.xml:10:9-12:54
+368-->[com.braintreepayments.api:three-d-secure:4.40.1] /Users/emile/.gradle/caches/transforms-3/cb401c6df1c711cc8ee804ccf7d2b323/transformed/jetified-three-d-secure-4.40.1/AndroidManifest.xml:8:9-10:54
 369            android:name="com.braintreepayments.api.ThreeDSecureActivity"
-369-->[com.braintreepayments.api:three-d-secure:4.27.0] /Users/emile/.gradle/caches/transforms-3/e8169233365e8cccda7455120e66e640/transformed/jetified-three-d-secure-4.27.0/AndroidManifest.xml:11:13-74
+369-->[com.braintreepayments.api:three-d-secure:4.40.1] /Users/emile/.gradle/caches/transforms-3/cb401c6df1c711cc8ee804ccf7d2b323/transformed/jetified-three-d-secure-4.40.1/AndroidManifest.xml:9:13-74
 370            android:theme="@style/Theme.AppCompat" />
-370-->[com.braintreepayments.api:three-d-secure:4.27.0] /Users/emile/.gradle/caches/transforms-3/e8169233365e8cccda7455120e66e640/transformed/jetified-three-d-secure-4.27.0/AndroidManifest.xml:12:13-51
+370-->[com.braintreepayments.api:three-d-secure:4.40.1] /Users/emile/.gradle/caches/transforms-3/cb401c6df1c711cc8ee804ccf7d2b323/transformed/jetified-three-d-secure-4.40.1/AndroidManifest.xml:10:13-51
 371
 372        <meta-data
-372-->[com.braintreepayments.api:google-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/e39704d75b214572c56a080587dacd4a/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:10:9-12:36
+372-->[com.braintreepayments.api:google-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/9262eaa8627316846ac348dd7d635788/transformed/jetified-google-pay-4.40.1/AndroidManifest.xml:8:9-10:36
 373            android:name="com.google.android.gms.wallet.api.enabled"
-373-->[com.braintreepayments.api:google-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/e39704d75b214572c56a080587dacd4a/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:11:13-69
+373-->[com.braintreepayments.api:google-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/9262eaa8627316846ac348dd7d635788/transformed/jetified-google-pay-4.40.1/AndroidManifest.xml:9:13-69
 374            android:value="true" />
-374-->[com.braintreepayments.api:google-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/e39704d75b214572c56a080587dacd4a/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:12:13-33
+374-->[com.braintreepayments.api:google-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/9262eaa8627316846ac348dd7d635788/transformed/jetified-google-pay-4.40.1/AndroidManifest.xml:10:13-33
 375
 376        <activity
-376-->[com.braintreepayments.api:google-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/e39704d75b214572c56a080587dacd4a/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:14:9-16:62
+376-->[com.braintreepayments.api:google-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/9262eaa8627316846ac348dd7d635788/transformed/jetified-google-pay-4.40.1/AndroidManifest.xml:12:9-14:62
 377            android:name="com.braintreepayments.api.GooglePayActivity"
-377-->[com.braintreepayments.api:google-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/e39704d75b214572c56a080587dacd4a/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:15:13-71
+377-->[com.braintreepayments.api:google-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/9262eaa8627316846ac348dd7d635788/transformed/jetified-google-pay-4.40.1/AndroidManifest.xml:13:13-71
 378            android:theme="@style/bt_transparent_activity" />
-378-->[com.braintreepayments.api:google-pay:4.27.0] /Users/emile/.gradle/caches/transforms-3/e39704d75b214572c56a080587dacd4a/transformed/jetified-google-pay-4.27.0/AndroidManifest.xml:16:13-59
+378-->[com.braintreepayments.api:google-pay:4.40.1] /Users/emile/.gradle/caches/transforms-3/9262eaa8627316846ac348dd7d635788/transformed/jetified-google-pay-4.40.1/AndroidManifest.xml:14:13-59
 379        <activity
-379-->[com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:20:9-32:20
+379-->[com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:19:9-31:20
 380            android:name="com.braintreepayments.api.BraintreeDeepLinkActivity"
-380-->[com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:21:13-79
+380-->[com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:20:13-79
 381            android:exported="true"
-381-->[com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:22:13-36
+381-->[com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:21:13-36
 382            android:launchMode="singleTask" >
-382-->[com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:23:13-44
+382-->[com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:22:13-44
 383            <intent-filter>
-383-->[com.braintreepayments.api:braintree-core:4.27.0] /Users/emile/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/AndroidManifest.xml:24:13-31:29
+383-->[com.braintreepayments.api:braintree-core:4.40.1] /Users/emile/.gradle/caches/transforms-3/4b8f981a9e1cf518b95dff3adf2b3861/transformed/jetified-braintree-core-4.40.1/AndroidManifest.xml:23:13-30:29
 384                <action android:name="android.intent.action.VIEW" />
 384-->/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml:86:17-69
 384-->/Users/emile/works/FREELANCING/I2D-Client/i2D-2023-May-Android/app/src/main/AndroidManifest.xml:86:25-66
@@ -1239,34 +1239,34 @@
 661-->[androidx.room:room-runtime:2.2.6] /Users/emile/.gradle/caches/transforms-3/b0db48d4e9dd4995d3b26964f2f270bd/transformed/room-runtime-2.2.6/AndroidManifest.xml:28:13-37
 662
 663        <provider
-663-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:17:9-21:39
-664            android:name="com.cardinalcommerce.a.setShadowLayer"
-664-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:18:13-65
+663-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:15:9-19:40
+664            android:name="com.cardinalcommerce.a.setOutlineSpotShadowColor"
+664-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:16:13-76
 665            android:authorities="com.i2donate.CCInitProvider"
-665-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:19:13-66
+665-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:17:13-66
 666            android:enabled="true"
-666-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:20:13-35
-667            android:exported="true" />
-667-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:21:13-36
+666-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:18:13-35
+667            android:exported="false" />
+667-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:19:13-37
 668
 669        <activity
-669-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:23:9-26:65
-670            android:name="com.cardinalcommerce.a.setTextLocale"
-670-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:24:13-64
+669-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:21:9-24:65
+670            android:name="com.cardinalcommerce.shared.cs.userinterfaces.ChallengeHTMLView"
+670-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:22:13-91
 671            android:exported="false"
-671-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:25:13-37
+671-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:23:13-37
 672            android:theme="@style/CardinalSDKTheme.ActionBar" />
-672-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:26:13-62
+672-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:24:13-62
 673        <activity
-673-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:27:9-31:76
-674            android:name="com.cardinalcommerce.a.setTextLocales"
-674-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:28:13-65
+673-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:25:9-29:76
+674            android:name="com.cardinalcommerce.shared.cs.userinterfaces.ChallengeNativeView"
+674-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:26:13-93
 675            android:exported="false"
-675-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:29:13-37
+675-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:27:13-37
 676            android:theme="@style/CardinalSDKTheme.ActionBar"
-676-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:30:13-62
+676-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:28:13-62
 677            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
-677-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-2] /Users/emile/.gradle/caches/transforms-3/bc197e9ed47eac821e3f4afde65a569b/transformed/jetified-cardinalmobilesdk-2.2.7-2/AndroidManifest.xml:31:13-73
+677-->[org.jfrog.cardinalcommerce.gradle:cardinalmobilesdk:2.2.7-5] /Users/emile/.gradle/caches/transforms-3/8ce8d230f5924166098adeac7718b29f/transformed/jetified-cardinalmobilesdk-2.2.7-5/AndroidManifest.xml:29:13-73
 678    </application>
 679
 680</manifest>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.i2donate"
-    android:versionCode="38"
-    android:versionName="1.0.38" >
+    android:versionCode="39"
+    android:versionName="1.0.39" >
 
     <uses-sdk
         android:minSdkVersion="21"
@@ -661,17 +661,17 @@
             android:exported="false" />
 
         <provider
-            android:name="com.cardinalcommerce.a.setShadowLayer"
+            android:name="com.cardinalcommerce.a.setOutlineSpotShadowColor"
             android:authorities="com.i2donate.CCInitProvider"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="false" />
 
         <activity
-            android:name="com.cardinalcommerce.a.setTextLocale"
+            android:name="com.cardinalcommerce.shared.cs.userinterfaces.ChallengeHTMLView"
             android:exported="false"
             android:theme="@style/CardinalSDKTheme.ActionBar" />
         <activity
-            android:name="com.cardinalcommerce.a.setTextLocales"
+            android:name="com.cardinalcommerce.shared.cs.userinterfaces.ChallengeNativeView"
             android:exported="false"
             android:theme="@style/CardinalSDKTheme.ActionBar"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />

@@ -67,6 +67,7 @@
     <string name="bt_edit_button_description">Επεξεργασία αποθηκευμένων μεθόδων πληρωμής</string>
     <string name="bt_mobile_number_invalid">Ο αριθμός κινητού τηλεφώνου δεν είναι έγκυρος</string>
     <string name="bt_next">Επόμενο</string>
+    <string name="bt_notice_of_collection">Πληρώνοντας με την κάρτα μου, αποδέχομαι τη Δήλωση απορρήτου της PayPal.</string>
     <string name="bt_other">Άλλο</string>
     <string name="bt_postal_code_invalid">Ο ταχυδρομικός κώδικας δεν είναι έγκυρος</string>
     <string name="bt_recent">Πρόσφατα</string>
@@ -126,8 +127,13 @@
     <string name="common_open_on_phone">Άνοιγμα σε τηλέφωνο</string>
     <string name="common_signin_button_text">Σύνδεση</string>
     <string name="common_signin_button_text_long">Συνδεθείτε με το Google</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Ο σύνδεσμος αντιγράφηκε στο πρόχειρο"</string>
     <string name="error_icon_content_description">Σφάλμα</string>
     <string name="exposed_dropdown_menu_content_description">Εμφάνιση αναπτυσσόμενου μενού</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Αντιγραφή συνδέσμου"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Άνοιγμα σε πρόγραμμα περιήγησης"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Κοινοποίηση συνδέσμου"</string>
+    <string name="gpay_logo_description">Google Pay</string>
     <string name="icon_content_description">Εικονίδιο παραθύρου διαλόγου</string>
     <string name="item_view_role_description">Καρτέλα</string>
     <string name="material_clock_toggle_content_description">Επιλέξτε π.μ. ή μ.μ.</string>
