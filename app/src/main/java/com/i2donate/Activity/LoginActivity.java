@@ -619,34 +619,33 @@ public class LoginActivity extends AppCompatActivity implements
                             public void run() {
                                 try {
                                     twitter4j.AccessToken accessToken = oAuth.getOAuthAccessToken(verifier);
-                                    long userId = accessToken.getUserId();
-                                    Twitter twitter = Twitter.newBuilder().oAuthConsumer(getString(R.string.com_twitter_sdk_android_CONSUMER_KEY), getString(R.string.com_twitter_sdk_android_CONSUMER_SECRET))
-                                            .oAuthAccessToken(accessToken).build();
-                                    String screenname = twitter.v1().users().getAccountSettings().getScreenName();
-                                    Log.d("screenname",""+screenname);
-                                    User user = twitter.v1().users().verifyCredentials();
-                                    Log.d("user:email",""+user.getEmail());
-
-                                    String imgurl = "";
-                                    String email = "";
-                                    if (user.getProfileImageURL() != null){
-                                        imgurl = user.getProfileImageURL();
-                                    }
-                                    if (user.getEmail() != null){
-                                        email = user.getEmail();
-                                    }
-//
-                                    String finalEmail = email;
-                                    String finalImgurl = imgurl;
-                                    runOnUiThread(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            gmailfacebookloginAPI(user.getName(), finalEmail, "twitter", finalImgurl);
+                                    if(accessToken != null){
+                                        Twitter twitter = Twitter.newBuilder().oAuthConsumer(getString(R.string.com_twitter_sdk_android_CONSUMER_KEY), getString(R.string.com_twitter_sdk_android_CONSUMER_SECRET))
+                                                .oAuthAccessToken(accessToken).build();
+                                        User user = twitter.v1().users().verifyCredentials();
+                                        String imgurl = "";
+                                        String email = "";
+                                        if (user.getProfileImageURL() != null){
+                                            imgurl = user.getProfileImageURL();
                                         }
-                                    });
-
+                                        if (user.getEmail() != null){
+                                            email = user.getEmail();
+                                        }
+//
+                                        String finalEmail = email;
+                                        String finalImgurl = imgurl;
+                                        runOnUiThread(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                gmailfacebookloginAPI(user.getName(), finalEmail, "twitter", finalImgurl);
+                                            }
+                                        });
+                                    }
                                 } catch (TwitterException e) {
-                                    throw new RuntimeException(e);
+                                    e.printStackTrace();
+                                }
+                                catch (NullPointerException nullPointerException){
+                                    nullPointerException.printStackTrace();
                                 }
                             }
                         });
@@ -658,31 +657,32 @@ public class LoginActivity extends AppCompatActivity implements
 
     private void loginWithTwiiter() {
 
-        String consumerKey = getString(R.string.twitter_API_key);
-        String consumerSecret = getString(R.string.twitter_secret_key);
-        String callBackUrl = getString(R.string.twitter_callback);
-
-         oAuth = OAuthAuthorization.newBuilder()
-                .oAuthConsumer(consumerKey, consumerSecret).build();
-        RequestToken requestToken = null;
-
-
         try {
-            requestToken = oAuth.getOAuthRequestToken(callBackUrl);
-            Log.d("scanner:requestToken","" + requestToken);
+            String consumerKey = getString(R.string.twitter_API_key);
+            String consumerSecret = getString(R.string.twitter_secret_key);
+            String callBackUrl = getString(R.string.twitter_callback);
 
-            String twitterUrl = requestToken.getAuthenticationURL();//"https://api.twitter.com/oauth/authenticate?oauth_token=" + requestToken.getToken();
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    Intent browserIntent = new Intent(LoginActivity.this,TwitterLoginWebView.class);
-                    browserIntent.putExtra("url",twitterUrl);
-                    twitterLoginCallback.launch(browserIntent);
-                }
-            });
+            oAuth = OAuthAuthorization.newBuilder()
+                    .oAuthConsumer(consumerKey, consumerSecret).build();
+            RequestToken requestToken = null;
+            requestToken = oAuth.getOAuthRequestToken(callBackUrl);
+            if (requestToken != null){
+                String twitterUrl = requestToken.getAuthenticationURL();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent browserIntent = new Intent(LoginActivity.this,TwitterLoginWebView.class);
+                        browserIntent.putExtra("url",twitterUrl);
+                        twitterLoginCallback.launch(browserIntent);
+                    }
+                });
+            }
 
         } catch (TwitterException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+        }
+        catch (NullPointerException nullPointerException){
+            nullPointerException.printStackTrace();
         }
 
     }
