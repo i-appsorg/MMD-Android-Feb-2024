@@ -112,7 +112,7 @@ public class UpdateActivity extends AppCompatActivity {
     RadioButton radio_btn_male, radio_btn_female, radio_btn_orthers, radio_btn_individual, radio_btn_business;
     int index = 0;
     SessionManager sessionManager;
-    @BindView(R.id.business_name_input_layout)
+//    @BindView(R.id.business_name_input_layout)
     TextInputLayout business_name_input_layout;
     String gender, name, user_id, token, email, password, phone, country = "", base64img = "", terms = "";
     private LinearLayout gender_layout, terms_layout;
@@ -287,9 +287,9 @@ public class UpdateActivity extends AppCompatActivity {
             try {
                 String image = jsonObject1.getString("photo");
                 if (image.isEmpty()) {
-                    Picasso.with(this).load(R.drawable.ic_profile_holder).placeholder(R.drawable.ic_profile_holder).memoryPolicy(MemoryPolicy.NO_CACHE).networkPolicy(NetworkPolicy.NO_CACHE).error(R.drawable.ic_profile_holder).into(myprofile_edit_img);
+                    Picasso.get().load(R.drawable.ic_profile_holder).placeholder(R.drawable.ic_profile_holder).memoryPolicy(MemoryPolicy.NO_CACHE).networkPolicy(NetworkPolicy.NO_CACHE).error(R.drawable.ic_profile_holder).into(myprofile_edit_img);
                 } else {
-                    Picasso.with(this).load(image).placeholder(R.drawable.ic_profile_holder).memoryPolicy(MemoryPolicy.NO_CACHE).networkPolicy(NetworkPolicy.NO_CACHE).error(R.drawable.ic_profile_holder).into(myprofile_edit_img);
+                    Picasso.get().load(image).placeholder(R.drawable.ic_profile_holder).memoryPolicy(MemoryPolicy.NO_CACHE).networkPolicy(NetworkPolicy.NO_CACHE).error(R.drawable.ic_profile_holder).into(myprofile_edit_img);
                 }
             } catch (Exception e) {
                 e.printStackTrace();

@@ -44,9 +44,9 @@ import retrofit2.Response;
 
 public class ChangePasswordActivity extends AppCompatActivity {
     private static final String TAG = ChangePasswordActivity.class.getSimpleName();
-    @BindView(R.id.old_password_layout_input)
+//    @BindView(R.id.old_password_layout_input)
     TextInputLayout old_password_layout_input;
-    @BindView(R.id.new_password_layout_input)
+//    @BindView(R.id.new_password_layout_input)
     TextInputLayout new_password_layout_input;
     EditText old_password,new_password;
     Button submit_btn;

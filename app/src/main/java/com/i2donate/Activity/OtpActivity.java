@@ -263,37 +263,26 @@ public class OtpActivity extends AppCompatActivity implements View.OnFocusChange
     @Override
     public void onFocusChange(View v, boolean hasFocus) {
         final int id = v.getId();
-        switch (id) {
-            case R.id.pin_first_edittext:
-                if (hasFocus) {
-                    setFocus(mPinHiddenEditText);
-                    showSoftKeyboard(mPinHiddenEditText);
-                }
-                break;
-
-            case R.id.pin_second_edittext:
-                if (hasFocus) {
-                    setFocus(mPinHiddenEditText);
-                    showSoftKeyboard(mPinHiddenEditText);
-                }
-                break;
-
-            case R.id.pin_third_edittext:
-                if (hasFocus) {
-                    setFocus(mPinHiddenEditText);
-                    showSoftKeyboard(mPinHiddenEditText);
-                }
-                break;
-
-            case R.id.pin_forth_edittext:
-                if (hasFocus) {
-                    setFocus(mPinHiddenEditText);
-                    showSoftKeyboard(mPinHiddenEditText);
-                }
-                break;
-
-            default:
-                break;
+        if (id == R.id.pin_first_edittext) {
+            if (hasFocus) {
+                setFocus(mPinHiddenEditText);
+                showSoftKeyboard(mPinHiddenEditText);
+            }
+        } else if (id == R.id.pin_second_edittext) {
+            if (hasFocus) {
+                setFocus(mPinHiddenEditText);
+                showSoftKeyboard(mPinHiddenEditText);
+            }
+        } else if (id == R.id.pin_third_edittext) {
+            if (hasFocus) {
+                setFocus(mPinHiddenEditText);
+                showSoftKeyboard(mPinHiddenEditText);
+            }
+        } else if (id == R.id.pin_forth_edittext) {
+            if (hasFocus) {
+                setFocus(mPinHiddenEditText);
+                showSoftKeyboard(mPinHiddenEditText);
+            }
         }
     }
 
@@ -301,28 +290,24 @@ public class OtpActivity extends AppCompatActivity implements View.OnFocusChange
     public boolean onKey(View v, int keyCode, KeyEvent event) {
         if (event.getAction() == KeyEvent.ACTION_DOWN) {
             final int id = v.getId();
-            switch (id) {
-                case R.id.pin_hidden_edittext:
-                    if (keyCode == KeyEvent.KEYCODE_DEL) {
-                        if (mPinHiddenEditText.getText().length() == 4)
-                            mPinForthDigitEditText.setText("");
-                        else if (mPinHiddenEditText.getText().length() == 3)
-                            mPinThirdDigitEditText.setText("");
-                        else if (mPinHiddenEditText.getText().length() == 2)
-                            mPinSecondDigitEditText.setText("");
-                        else if (mPinHiddenEditText.getText().length() == 1)
-                            mPinFirstDigitEditText.setText("");
+            if (id == R.id.pin_hidden_edittext) {
+                if (keyCode == KeyEvent.KEYCODE_DEL) {
+                    if (mPinHiddenEditText.getText().length() == 4)
+                        mPinForthDigitEditText.setText("");
+                    else if (mPinHiddenEditText.getText().length() == 3)
+                        mPinThirdDigitEditText.setText("");
+                    else if (mPinHiddenEditText.getText().length() == 2)
+                        mPinSecondDigitEditText.setText("");
+                    else if (mPinHiddenEditText.getText().length() == 1)
+                        mPinFirstDigitEditText.setText("");
 
-                        if (mPinHiddenEditText.length() > 0)
-                            mPinHiddenEditText.setText(mPinHiddenEditText.getText().subSequence(0, mPinHiddenEditText.length() - 1));
+                    if (mPinHiddenEditText.length() > 0)
+                        mPinHiddenEditText.setText(mPinHiddenEditText.getText().subSequence(0, mPinHiddenEditText.length() - 1));
 
-                        return true;
-                    }
-
-                    break;
-
-                default:
-                    return false;
+                    return true;
+                }
+            } else {
+                return false;
             }
         }
 
@@ -725,6 +710,7 @@ public class OtpActivity extends AppCompatActivity implements View.OnFocusChange
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
         dailogue();
     }
 

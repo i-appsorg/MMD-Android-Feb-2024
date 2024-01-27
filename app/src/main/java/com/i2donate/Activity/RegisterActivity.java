@@ -104,17 +104,17 @@ public class RegisterActivity extends AppCompatActivity implements
     private static final int RC_SIGN_IN = 007;
     ImageView back_icon_img;
     TextView login_btn_tv;
-    @BindView(R.id.name_input_layout)
+//    @BindView(R.id.name_input_layout)
     TextInputLayout name_input_layout;
-    @BindView(R.id.email_input_layout)
+//    @BindView(R.id.email_input_layout)
     TextInputLayout email_input_layout;
-    @BindView(R.id.mobile_input_layout)
+//    @BindView(R.id.mobile_input_layout)
     TextInputLayout mobile_input_layout;
-    @BindView(R.id.password_input_layout)
+//    @BindView(R.id.password_input_layout)
     TextInputLayout password_input_layout;
-    @BindView(R.id.confirm_input_layout)
+//    @BindView(R.id.confirm_input_layout)
     TextInputLayout confirm_input_layout;
-    @BindView(R.id.business_name_input_layout)
+//    @BindView(R.id.business_name_input_layout)
     TextInputLayout business_name_input_layout;
     EditText reg_name_et, reg_email_et, reg_mobile_et, reg_password_et, reg_confirm_password_et, business_reg_name_et;
     SearchableSpinner country_spinner;

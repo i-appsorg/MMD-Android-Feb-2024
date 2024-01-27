@@ -302,7 +302,7 @@ public class PlaceSearchActivity extends AppCompatActivity {
     }
 
     private void CharityAPI(final String page) {
-        shimmer_view_container.startShimmerAnimation();
+        shimmer_view_container.startShimmer();
         shimmer_view_container.setVisibility(View.VISIBLE);
 
         userDetails = session.getUserDetails();
@@ -404,7 +404,7 @@ public class PlaceSearchActivity extends AppCompatActivity {
         call.enqueue(new Callback<JsonObject>() {
             @Override
             public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
-                shimmer_view_container.stopShimmerAnimation();
+                shimmer_view_container.stopShimmer();
                 shimmer_view_container.setVisibility(View.GONE);
                 no_data_linear.setVisibility(View.GONE);
                 if (page.equalsIgnoreCase("1")) {

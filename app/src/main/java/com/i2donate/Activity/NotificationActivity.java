@@ -62,7 +62,7 @@ public class NotificationActivity extends CommonMenuActivity {
         shimmer_view_container = (ShimmerFrameLayout) findViewById(R.id.shimmer_view_container);
         no_data_linear = (LinearLayout) findViewById(R.id.no_data_linear);
         shimmer_view_container.setVisibility(View.VISIBLE);
-        shimmer_view_container.startShimmerAnimation();
+        shimmer_view_container.startShimmer();
         notification_recyclerview=(RecyclerView)findViewById(R.id.notification_recyclerview);
 
         NotificationAPI();
@@ -139,7 +139,7 @@ public class NotificationActivity extends CommonMenuActivity {
         call.enqueue(new Callback<JsonObject>() {
             @Override
             public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
-                shimmer_view_container.stopShimmerAnimation();
+                shimmer_view_container.stopShimmer();
                 shimmer_view_container.setVisibility(View.GONE);
                 no_data_linear.setVisibility(View.GONE);
                 notification_recyclerview.setVisibility(View.VISIBLE);
@@ -185,7 +185,7 @@ public class NotificationActivity extends CommonMenuActivity {
             @Override
             public void onFailure(Call<JsonObject> call, Throwable t) {
                 Log.e(TAG, t.toString());
-                shimmer_view_container.stopShimmerAnimation();
+                shimmer_view_container.stopShimmer();
                 shimmer_view_container.setVisibility(View.GONE);
                 no_data_linear.setVisibility(View.VISIBLE);
                 notification_recyclerview.setVisibility(View.GONE);

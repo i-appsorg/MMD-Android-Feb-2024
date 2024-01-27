@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MMD-Android-Jan-2024.iml" filepath="$PROJECT_DIR$/.idea/modules/MMD-Android-Jan-2024.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MMD-Android-Jan-2024.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MMD-Android-Jan-2024.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MMD-Android-Jan-2024.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MMD-Android-Jan-2024.app.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MMD-Android-Jan-2024.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MMD-Android-Jan-2024.app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MMD-Android-Jan-2024.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MMD-Android-Jan-2024.app.unitTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/linkedin-sdk/MMD-Android-Jan-2024.linkedin-sdk.iml" filepath="$PROJECT_DIR$/.idea/modules/linkedin-sdk/MMD-Android-Jan-2024.linkedin-sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mama_Devalayam_New.iml" filepath="$PROJECT_DIR$/.idea/modules/Mama_Devalayam_New.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Mama_Devalayam_New.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Mama_Devalayam_New.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Mama_Devalayam_New.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Mama_Devalayam_New.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Mama_Devalayam_New.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Mama_Devalayam_New.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Mama_Devalayam_New.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Mama_Devalayam_New.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/linkedin-sdk/Mama_Devalayam_New.linkedin-sdk.iml" filepath="$PROJECT_DIR$/.idea/modules/linkedin-sdk/Mama_Devalayam_New.linkedin-sdk.iml" />
     </modules>
   </component>
 </project>
