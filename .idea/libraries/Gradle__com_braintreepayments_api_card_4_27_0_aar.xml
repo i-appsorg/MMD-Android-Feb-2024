@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.braintreepayments.api:card:4.27.0@aar" external-system-id="GRADLE">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/98d941fe534f5cfe09a2c94682115f30/transformed/jetified-card-4.27.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/3c83b69e5b1f1e1393b929a05d2e5cd3/transformed/jetified-card-4.27.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/98d941fe534f5cfe09a2c94682115f30/transformed/jetified-card-4.27.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/98d941fe534f5cfe09a2c94682115f30/transformed/jetified-card-4.27.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/3c83b69e5b1f1e1393b929a05d2e5cd3/transformed/jetified-card-4.27.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3c83b69e5b1f1e1393b929a05d2e5cd3/transformed/jetified-card-4.27.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

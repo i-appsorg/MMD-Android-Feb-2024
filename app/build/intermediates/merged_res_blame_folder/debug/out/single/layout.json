@@ -1,0 +1,326 @@
+[
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_notification.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_notification.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_myspace.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_myspace.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_united_state_details.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_united_state_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\expandable_layout.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\expandable_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_payment_success.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_payment_success.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\searchview_adapter.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\searchview_adapter.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_otp.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_otp.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_common_navigation_heading.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_common_navigation_heading.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\common_navigation_item.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\common_navigation_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\side_menu_layout.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\side_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\child_list_layout_choose_category.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\child_list_layout_choose_category.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_name_search.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_name_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_change.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_change.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\group_list_layout_my_categories.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\group_list_layout_my_categories.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_types.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_types.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\row_second.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\row_second.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_brain_tree_payment.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_brain_tree_payment.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\percentage_detail_layout.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\percentage_detail_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\payment_alert_dailog.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\payment_alert_dailog.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_splash_screen.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_splash_screen.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-65:/layout/activity_bowse.xml",
+        "source": "com.i2donate.app-main-68:/layout/activity_bowse.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\tutorial_slide2.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\tutorial_slide2.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_about.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_about.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_autosearch.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_autosearch.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_international_charities.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_international_charities.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_forgot.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_forgot.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\view_search_list.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\view_search_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\advance_item_new.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\advance_item_new.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\united_stated_item.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\united_stated_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\item_loading.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\item_loading.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_adavance_search_new.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_adavance_search_new.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_newtypes.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_newtypes.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_terms_and_condition.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_terms_and_condition.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_update.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_update.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_united_state_new.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_united_state_new.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_common_menu.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_common_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_following.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_following.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_united_state.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_united_state.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\row_first.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\row_first.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\pom.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\pom.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\adavanced_search_choose_listitem2.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\adavanced_search_choose_listitem2.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\adavanced_search_non_choose_listitem3.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\adavanced_search_non_choose_listitem3.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_select_payment.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_select_payment.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_place_search.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_place_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_advance_search.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_advance_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\recipe_placeholder_item.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\recipe_placeholder_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\adavanced_search_non_choose_listitem2.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\adavanced_search_non_choose_listitem2.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_advance_completed.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_advance_completed.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_confirmation.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_confirmation.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_type_serch.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_type_serch.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_setting.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_name_search_new.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_name_search_new.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\united_state_adapter_item.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\united_state_adapter_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_bowse.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_bowse.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\adavanced_search_choose_listitem3.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\adavanced_search_choose_listitem3.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\adavanced_search_listitem1.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\adavanced_search_listitem1.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_common_back.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_common_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\search_row_list.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\search_row_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_annual_revenue.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_annual_revenue.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\united_state_adapter1_item.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\united_state_adapter1_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_sub_category.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_sub_category.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\tutorial_slide1.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\tutorial_slide1.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\notification_adapter_item.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\notification_adapter_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_adavance_search_uidesign.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_adavance_search_uidesign.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_name_place_serach.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_name_place_serach.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\row_third.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\row_third.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_privacy_policy.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_privacy_policy.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_advance_search1.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_advance_search1.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\adavance_search_layout.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\adavance_search_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_help_support.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_help_support.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\myspace_adapter_item.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\myspace_adapter_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_maps.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_maps.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_privact_policy.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_privact_policy.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_title_sub_title.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_title_sub_title.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\type_search_adapter.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\type_search_adapter.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_register.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\activity_welcome.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_welcome.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\type_data_adapter.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\type_data_adapter.xml"
+    },
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout\\group_list_layout_choose_categories.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\group_list_layout_choose_categories.xml"
+    }
+]

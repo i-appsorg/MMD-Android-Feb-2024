@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-
-    compileSdkVersion 33
+    namespace 'com.i2donate'
+    compileSdkVersion 34
     defaultConfig {
         applicationId "com.i2donate"
         minSdkVersion 21
-        targetSdkVersion 33
+        targetSdkVersion 34
         versionCode 33
         versionName "1.0.33"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -63,7 +63,7 @@ dependencies {
 //    implementation 'com.squareup.okhttp3:okhttp:4.1.0'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'com.google.android.material:material:1.11.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     
@@ -93,18 +93,18 @@ dependencies {
     implementation 'javax.json:javax.json-api:1.0'
     // implementation 'com.google.android.libraries.places:places:1.0.0'
 
-    implementation 'com.google.android.libraries.places:places:2.6.0'
-    implementation 'com.facebook.shimmer:shimmer:0.1.0'
+    implementation 'com.google.android.libraries.places:places:3.3.0'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
     // retrofit, gson
-    implementation 'com.google.code.gson:gson:2.9.1'
+    implementation 'com.google.code.gson:gson:2.10.1'
 //    /* implementation 'com.squareup.retrofit2:retrofit:2.0.2'
 //    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'*/
     implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation 'com.jakewharton:butterknife:8.8.1'
-    implementation 'com.squareup.picasso:picasso:2.5.2'
-    implementation 'com.karumi:dexter:5.0.0'
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.karumi:dexter:6.2.3'
     //BrainTree
     //  implementation 'com.braintreepayments.api:drop-in:3.7.1'
 //     implementation 'com.braintreepayments.api:drop-in:4.5.0'
@@ -126,10 +126,11 @@ dependencies {
 
     implementation 'com.balsikandar.android:crashreporter:1.1.0'
 
-    implementation ("com.squareup.okhttp3:okhttp:3.12.12"){
-        force = true //API 19 support
-    }
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.12'
+    implementation ("com.squareup.okhttp3:okhttp:4.11.0")
+//            {
+//        force = true //API 19 support
+//    }
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
 }
 apply plugin: 'com.google.gms.google-services'
 //apply plugin: 'com.google.firebase.crashlytics'

@@ -154,7 +154,7 @@ public class UnitedStateActivity extends CommonBackActivity {
         nestedscrollview = (NestedScrollView) findViewById(R.id.nestedscrollview);
         shimmer_view_container = (ShimmerFrameLayout) findViewById(R.id.shimmer_view_container);
         shimmer_view_container.setVisibility(View.VISIBLE);
-        shimmer_view_container.startShimmerAnimation();
+        shimmer_view_container.startShimmer();
         context = UnitedStateActivity.this;
         data = getIntent().getStringExtra("data");
         listOfdate = iDonateSharedPreference.getselectedtypedata(getApplicationContext());
@@ -641,7 +641,7 @@ public class UnitedStateActivity extends CommonBackActivity {
         call.enqueue(new Callback<JsonObject>() {
             @Override
             public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
-                shimmer_view_container.stopShimmerAnimation();
+                shimmer_view_container.stopShimmer();
                 shimmer_view_container.setVisibility(View.GONE);
                 no_data_linear.setVisibility(View.GONE);
                 if (String.valueOf(page).equalsIgnoreCase("1")) {
@@ -740,7 +740,7 @@ public class UnitedStateActivity extends CommonBackActivity {
 
             @Override
             public void onFailure(Call<JsonObject> call, Throwable t) {
-                shimmer_view_container.stopShimmerAnimation();
+                shimmer_view_container.stopShimmer();
                 shimmer_view_container.setVisibility(View.GONE);
                 no_data_linear.setVisibility(View.VISIBLE);
                 united_state_recyclerview.setVisibility(View.GONE);

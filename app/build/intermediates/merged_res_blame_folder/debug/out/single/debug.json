@@ -1,1266 +1,1094 @@
 [
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xhdpi_ic_liked.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xhdpi/ic_liked.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_logout.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\logout.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_google_icon.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/google_icon.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxxhdpi_ic_all_location.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable-xxxhdpi\\ic_all_location.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_advanced_border.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/advanced_border.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_following.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_following.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xhdpi_ic_profile_holder.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xhdpi/ic_profile_holder.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_common_back.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_common_back.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-hdpi_ic_temple_by_location.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-hdpi/ic_temple_by_location.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-hdpi_ic_usa_location_white.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-hdpi\\ic_usa_location_white.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_maps.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_maps.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-hdpi_ic_profile_holder.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-hdpi\\ic_profile_holder.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-ldpi_dashbord_background.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-ldpi/dashbord_background.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_tutorial_slide2.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\tutorial_slide2.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_bottombar_gradient.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/bottombar_gradient.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-anydpi-v24_ic_profile_holder.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-anydpi-v24\\ic_profile_holder.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_name_icon.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/name_icon.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xhdpi_ic_drop_down.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xhdpi\\ic_drop_down.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_side_menu_layout.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/side_menu_layout.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-hdpi_dashbord_background.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-hdpi/dashbord_background.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_type_data_adapter.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\type_data_adapter.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_notification_adapter_item.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/notification_adapter_item.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\anim_layout_animation_fall_down.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\anim\\layout_animation_fall_down.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_name_search.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_name_search.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_finance_icon.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\finance_icon.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-anydpi-v24_ic_liked.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-anydpi-v24/ic_liked.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxhdpi_ic_profile_holder.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxhdpi\\ic_profile_holder.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_donate_icon.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/donate_icon.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_recipe_placeholder_item.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\recipe_placeholder_item.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-mdpi_toplogo.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-mdpi/toplogo.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_splash_bg.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\splash_bg.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxhdpi_myspace.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxhdpi/myspace.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_add_icon.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\add_icon.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxhdpi_menu.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxhdpi/menu.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_type_adapter_item.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\type_adapter_item.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_browse.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/browse.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_select_payment.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_select_payment.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_annual_revenue.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_annual_revenue.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-mdpi_ic_liked.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-mdpi\\ic_liked.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xhdpi_dashbord_background.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xhdpi/dashbord_background.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_settings.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\settings.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_logo.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/logo.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_settings.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/settings.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_login_botton_border.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\login_botton_border.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_adavanced_search_non_choose_listitem2.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/adavanced_search_non_choose_listitem2.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxxhdpi_splash_background.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable-xxxhdpi\\splash_background.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_cross.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/cross.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_advance_completed.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_advance_completed.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_info.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_info.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_thump_like_icon.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\thump_like_icon.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_usa_icon.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/usa_icon.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_ic_border.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\ic_border.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_change.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_change.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_adavanced_search_listitem1.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\adavanced_search_listitem1.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_update.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_update.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxxhdpi_toolbarbg.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable-xxxhdpi\\toolbarbg.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/mipmap-hdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_name_search.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_name_search.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_team_icon.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/team_icon.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xhdpi_ic_liked.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xhdpi\\ic_liked.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/menu_navigation.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/menu/navigation.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-anydpi-v24_ic_drop_down.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-anydpi-v24\\ic_drop_down.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxhdpi_ic_drop_down.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxhdpi/ic_drop_down.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_united_state_details.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_united_state_details.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxxhdpi_ic_followed.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxxhdpi/ic_followed.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_brain_tree_payment.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_brain_tree_payment.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_united_state_adapter1_item.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/united_state_adapter1_item.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxxhdpi_dashbord_background.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxxhdpi\\dashbord_background.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-anydpi-v24_ic_temple_by_location.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-anydpi-v24/ic_temple_by_location.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xhdpi_ic_profile_holder.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xhdpi\\ic_profile_holder.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-anydpi-v24_ic_drop_down.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-anydpi-v24/ic_drop_down.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_ic_right_arrow.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\ic_right_arrow.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xhdpi_ic_temple_by_location.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xhdpi/ic_temple_by_location.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\anim_slide_down.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\anim\\slide_down.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxhdpi_ic_liked.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxhdpi/ic_liked.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_advance_search1.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_advance_search1.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_right_arrow.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_right_arrow.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_common_menu.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_common_menu.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-ldpi_menu.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-ldpi/menu.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_cross.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\cross.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_about.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/about.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-hdpi_toplogo.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-hdpi\\toplogo.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxxhdpi_myspace.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxxhdpi/myspace.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-hdpi_menu.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-hdpi\\menu.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_settings.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/settings.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_bowse.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_bowse.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_following.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_following.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_percentage_detail_layout.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\percentage_detail_layout.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_twitter.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/twitter.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_charity_icon.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\charity_icon.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_cross.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/cross.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-ldpi_ic_temple_by_location.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-ldpi\\ic_temple_by_location.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-hdpi_ic_drop_down.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-hdpi/ic_drop_down.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_searchview_adapter.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\searchview_adapter.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout-small_activity_bowse.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout-small/activity_bowse.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxhdpi_ic_liked.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxhdpi\\ic_liked.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_privact_policy.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_privact_policy.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_search.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\search.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_noresult.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_noresult.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\mipmap-hdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/mipmap-xhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\menu_navigation.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\menu\\navigation.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxxhdpi_splash_background.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable-xxxhdpi/splash_background.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_united_state_new.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_united_state_new.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_remove_icon.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/remove_icon.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_types.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_types.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_browse_search_border.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/browse_search_border.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_row_second.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\row_second.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_goal_icon.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/goal_icon.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout-small_activity_bowse.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout-small\\activity_bowse.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxxhdpi_ic_temple_by_location.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxxhdpi/ic_temple_by_location.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-hdpi_ic_followed.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-hdpi\\ic_followed.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxxhdpi_ic_drop_down.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxxhdpi/ic_drop_down.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_mastercard.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\mastercard.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_donate_icon.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/donate_icon.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_type_icon.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\type_icon.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_notification_bell.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/notification_bell.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_ic_info.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\ic_info.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xhdpi_ic_drop_down.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xhdpi/ic_drop_down.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxxhdpi_ic_temple_by_location.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxxhdpi\\ic_temple_by_location.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_linkedin_icon.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/linkedin_icon.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_adavanced_search_non_choose_listitem2.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\adavanced_search_non_choose_listitem2.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_adavanced_search_choose_listitem3.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/adavanced_search_choose_listitem3.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_side_menu_layout.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\side_menu_layout.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xhdpi_menu.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xhdpi/menu.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_tutorial_slide1.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\tutorial_slide1.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\font_snellroundhandboldscript.ttf.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\font\\snellroundhandboldscript.ttf"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_acs.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/acs.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_donate_border.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\donate_border.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_common_menu.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_common_menu.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxxhdpi_menu.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxxhdpi\\menu.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_toolbarbg.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/toolbarbg.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_main.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_search_row_list.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/search_row_list.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_united_stated_item.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\united_stated_item.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_thump_like_icon.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/thump_like_icon.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_remove_icon.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\remove_icon.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_image_border.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/image_border.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_forgot.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_forgot.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_camera_edit_icon.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_camera_edit_icon.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_row_first.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\row_first.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_edit_icon.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_edit_icon.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-anydpi-v24_ic_liked.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-anydpi-v24\\ic_liked.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxxhdpi_ic_liked.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxxhdpi/ic_liked.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_privacy_policy.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_privacy_policy.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_in_global_icon.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/in_global_icon.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxxhdpi_myspace.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxxhdpi\\myspace.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_adavanced_search_non_choose_listitem3.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/adavanced_search_non_choose_listitem3.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_about.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_about.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-ldpi_toplogo.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-ldpi/toplogo.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-anydpi-v24_ic_temple_by_location.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-anydpi-v24\\ic_temple_by_location.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-mdpi_ic_liked.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-mdpi/ic_liked.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\anim_slide_in.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\anim\\slide_in.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_white_border.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/white_border.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_login.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxxhdpi_toolbarbg.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable-xxxhdpi/toolbarbg.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxhdpi_ic_usa_location_white.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxhdpi\\ic_usa_location_white.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_advanced_border_layout.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/advanced_border_layout.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-mdpi_ic_profile_holder.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-mdpi\\ic_profile_holder.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_icon_checked.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/icon_checked.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxxhdpi_advanced_border_layout_color.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable-xxxhdpi\\advanced_border_layout_color.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_help_support.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/help_support.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_privacy_policy.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_privacy_policy.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_ic_location.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\ic_location.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-ldpi_myspace.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-ldpi/myspace.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxxhdpi_splash_bg.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable-xxxhdpi\\splash_bg.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_payment_alert_border_layout.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/payment_alert_border_layout.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_payment_checked_icon.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\payment_checked_icon.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_rightarrow.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_rightarrow.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_reset_button_border.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\reset_button_border.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxxhdpi_ic_profile_holder.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxxhdpi\\ic_profile_holder.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxxhdpi_ic_usa_location_white.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxxhdpi/ic_usa_location_white.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxxhdpi_ic_search_temples_by_country.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable-xxxhdpi\\ic_search_temples_by_country.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-hdpi_toplogo.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-hdpi/toplogo.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_help_support.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_help_support.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_advance_search.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_advance_search.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\font_lemonjellypersonaluse.ttf.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\font\\lemonjellypersonaluse.ttf"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xhdpi_ic_usa_location_white.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xhdpi/ic_usa_location_white.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-mdpi_ic_followed.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-mdpi\\ic_followed.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_tutorial_slide2.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/tutorial_slide2.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_ic_wifi.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\ic_wifi.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_white_background.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/white_background.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-ldpi_toplogo.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-ldpi\\toplogo.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_idonate_logo.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/idonate_logo.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_contact_icon.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\contact_icon.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_united_state_new.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_united_state_new.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_payment_success.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_payment_success.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-anydpi-v24_dashbord_background.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-anydpi-v24/dashbord_background.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xhdpi_ic_usa_location_white.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xhdpi\\ic_usa_location_white.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_remove_icon.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/remove_icon.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_launcher_background.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_adavance_search_uidesign.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_adavance_search_uidesign.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_otp.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_otp.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_donate_border.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/donate_border.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_notification_bell.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\notification_bell.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxhdpi_myspace.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxhdpi\\myspace.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/anim_fade_in.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/anim/fade_in.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_idonate_welcome_logo.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/idonate_welcome_logo.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_twitter.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\twitter.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_types_click_change.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/types_click_change.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-hdpi_ic_temple_by_location.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-hdpi\\ic_temple_by_location.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/font_snellroundhandboldscript.ttf.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/font/snellroundhandboldscript.ttf"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_ic_camera_edit_icon.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\ic_camera_edit_icon.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_temple_by_deity.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_temple_by_deity.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxhdpi_ic_followed.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxhdpi\\ic_followed.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-mdpi_ic_temple_by_location.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-mdpi/ic_temple_by_location.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_myspace_adapter_item.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\myspace_adapter_item.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_splash_background.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/splash_background.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_search_row_list.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\search_row_list.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_title_sub_title.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_title_sub_title.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-ldpi_ic_profile_holder.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-ldpi\\ic_profile_holder.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/anim_item_animation_fall_down.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/anim/item_animation_fall_down.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-mdpi_ic_usa_location_white.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-mdpi\\ic_usa_location_white.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xhdpi_ic_followed.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xhdpi/ic_followed.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_team_icon.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\team_icon.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxxhdpi_menu.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxxhdpi/menu.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_help_support.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\help_support.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_payment_alert_dailog.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/payment_alert_dailog.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_tutorial_slide1.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/tutorial_slide1.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_value_icon.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\value_icon.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/font_commercialscriptbt.ttf.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/font/commercialscriptbt.ttf"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-anydpi-v24_ic_followed.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-anydpi-v24\\ic_followed.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-hdpi_ic_usa_location_white.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-hdpi/ic_usa_location_white.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_advanced_border.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\advanced_border.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxxhdpi_ic_all_location.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable-xxxhdpi/ic_all_location.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_filter.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_filter.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_ic_close_alert.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\ic_close_alert.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_close_alert.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_close_alert.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\anim_item_animation_fall_down.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\anim\\item_animation_fall_down.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_name_place_serach.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_name_place_serach.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_donate_icon.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\donate_icon.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/anim_slide_in.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/anim/slide_in.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xhdpi_toplogo.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xhdpi\\toplogo.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_help_support.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/help_support.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_type_serch.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_type_serch.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_type_serch.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_type_serch.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_notification_adapter_item.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\notification_adapter_item.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_menu.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/menu.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_ic_check_box_empty.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\ic_check_box_empty.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_thump_like_icon.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/thump_like_icon.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_terms_and_condition.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_terms_and_condition.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxxhdpi_splash_bg.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable-xxxhdpi/splash_bg.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_adavanced_search_choose_listitem3.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\adavanced_search_choose_listitem3.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxhdpi_dashbord_background.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxhdpi/dashbord_background.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_type_search_adapter.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\type_search_adapter.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_search.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/search.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxxhdpi_ic_drop_down.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxxhdpi\\ic_drop_down.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/mipmap-hdpi/ic_launcher.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xhdpi_ic_temple_by_location.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xhdpi\\ic_temple_by_location.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_common_back.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_common_back.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_acs.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\acs.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_add_icon.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/add_icon.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\anim_slide_out.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\anim\\slide_out.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_about.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_about.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_annual_revenue.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_annual_revenue.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_splashlogo.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/splashlogo.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-v24_ic_search_temples_by_country.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable-v24\\ic_search_temples_by_country.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-hdpi_ic_followed.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-hdpi/ic_followed.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_autosearch.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_autosearch.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-hdpi_menu.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-hdpi/menu.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_browse_search_border.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\browse_search_border.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_finance_icon.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/finance_icon.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xhdpi_ic_followed.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xhdpi\\ic_followed.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_browse_layout_border.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/browse_layout_border.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_ic_rightarrow.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\ic_rightarrow.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-anydpi-v24_ic_profile_holder.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-anydpi-v24/ic_profile_holder.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-ldpi_ic_drop_down.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-ldpi\\ic_drop_down.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/anim_layout_animation_fall_down.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/anim/layout_animation_fall_down.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxxhdpi_toplogo.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxxhdpi\\toplogo.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_name_search_new.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_name_search_new.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_item_loading.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/item_loading.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\anim_fade_in.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\anim\\fade_in.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_tick_check_box.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_tick_check_box.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_browse_layout_border.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\browse_layout_border.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_login.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_login.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_name_place_serach.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_name_place_serach.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_logout.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/logout.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-hdpi_dashbord_background.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-hdpi\\dashbord_background.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_type_data_adapter.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/type_data_adapter.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxhdpi_toplogo.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxhdpi\\toplogo.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_adavanced_search_choose_listitem2.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/adavanced_search_choose_listitem2.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_browse.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\browse.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxxhdpi_ic_search_temples_by_country.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable-xxxhdpi/ic_search_temples_by_country.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\font_commercialscriptbt.ttf.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\font\\commercialscriptbt.ttf"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_united_stated_item.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/united_stated_item.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-ldpi_dashbord_background.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-ldpi\\dashbord_background.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_idonate_welcome_logo.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/idonate_welcome_logo.png"
+        "merged": "com.i2donate.app-merged_res-66:/layout_activity_bowse.xml.flat",
+        "source": "com.i2donate.app-main-68:/layout/activity_bowse.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_charity_icon.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/charity_icon.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_ic_tick_check_box.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\ic_tick_check_box.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_type_search_adapter.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/type_search_adapter.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_ic_camera_icon.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\ic_camera_icon.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/mipmap-xxxhdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_facebook_icon.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\facebook_icon.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_united_state_adapter_item.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/united_state_adapter_item.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_maps.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_maps.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxhdpi_ic_temple_by_location.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxhdpi/ic_temple_by_location.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_toolbarbg.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\toolbarbg.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_payment_checked_icon.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/payment_checked_icon.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-ldpi_ic_followed.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-ldpi\\ic_followed.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_idonate_logo.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/idonate_logo.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\anim_visiblity_animation.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\anim\\visiblity_animation.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/mipmap-xhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_linkedin_icon.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\linkedin_icon.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_contact_icon.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/contact_icon.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_heart_like_icon.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\heart_like_icon.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_camera_icon.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_camera_icon.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_group_list_layout_my_categories.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\group_list_layout_my_categories.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_card_view_radius.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/card_view_radius.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxhdpi_menu.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxhdpi\\menu.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_forgot.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_forgot.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-hdpi_myspace.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-hdpi\\myspace.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/mipmap-mdpi_ic_launcher_foreground.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/mipmap-mdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-anydpi-v24_dashbord_background.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-anydpi-v24\\dashbord_background.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_location_pointer.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/location_pointer.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_card_view_radius.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\card_view_radius.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-mdpi_dashbord_background.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-mdpi/dashbord_background.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_group_list_layout_choose_categories.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\group_list_layout_choose_categories.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_select_payment.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_select_payment.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-ldpi_ic_liked.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-ldpi\\ic_liked.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_common_navigation_heading.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_common_navigation_heading.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\anim_fade_out.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\anim\\fade_out.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_notification.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_notification.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-mdpi_menu.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-mdpi\\menu.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_value_icon.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/value_icon.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_title_sub_title.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_title_sub_title.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/mipmap-xhdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxhdpi_ic_drop_down.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxhdpi\\ic_drop_down.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-mdpi_ic_drop_down.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-mdpi/ic_drop_down.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-ldpi_myspace.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-ldpi\\myspace.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-hdpi_ic_profile_holder.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-hdpi/ic_profile_holder.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-anydpi-v24_menu.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-anydpi-v24\\menu.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_main.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_main.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_child_list_layout_choose_category.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\child_list_layout_choose_category.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_help_support.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_help_support.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-anydpi-v24_myspace.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-anydpi-v24\\myspace.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_help_support.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/help_support.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_united_state_details.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_united_state_details.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_ic_search_temples_by_country.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\ic_search_temples_by_country.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/mipmap-xxhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_myspace.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_myspace.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_linkedin_icon.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/linkedin_icon.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_splashlogo.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\splashlogo.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_payment_alertdailogue.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/payment_alertdailogue.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-mdpi_toplogo.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-mdpi\\toplogo.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_bowse2.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_bowse2.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\anim_slide_from_right.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\anim\\slide_from_right.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_back_icon.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/back_icon.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_edit_text_style.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\edit_text_style.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_international_charities.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_international_charities.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_pom.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\pom.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/anim_slide_out.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/anim/slide_out.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_privact_policy.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_privact_policy.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_logo.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/logo.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_idonate_welcome_logo.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\idonate_welcome_logo.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_logout.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/logout.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-anydpi-v24_toplogo.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-anydpi-v24\\toplogo.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_expandable_layout.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/expandable_layout.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_advanced_white_border.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\advanced_white_border.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-anydpi-v24_menu.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-anydpi-v24/menu.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_expandable_layout.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\expandable_layout.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_recipe_placeholder_item.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/recipe_placeholder_item.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_goal_icon.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\goal_icon.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_icon_checked.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/icon_checked.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_types.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_types.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_adavanced_search_choose_listitem2.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\adavanced_search_choose_listitem2.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_logout.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/logout.webp"
+        "merged": "com.i2donate.app-merged_res-66:/layout-small_activity_bowse.xml.flat",
+        "source": "com.i2donate.app-main-68:/layout-small/activity_bowse.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xhdpi_myspace.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xhdpi/myspace.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_google_icon.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\google_icon.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_newtypes.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_newtypes.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_splash_background.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\splash_background.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-v24_ic_search_temples_by_country.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable-v24/ic_search_temples_by_country.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxhdpi_ic_temple_by_location.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxhdpi\\ic_temple_by_location.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxxhdpi_dashbord_background.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxxhdpi/dashbord_background.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_usa_icon.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\usa_icon.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_about.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/about.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_in_global_icon.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\in_global_icon.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_heart_like_icon.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/heart_like_icon.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_united_state_adapter1_item.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\united_state_adapter1_item.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_group_list_layout_choose_categories.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/group_list_layout_choose_categories.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-mdpi_myspace.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-mdpi\\myspace.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_adavance_search_new.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_adavance_search_new.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_payment_alert_dailog.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\payment_alert_dailog.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-hdpi_ic_liked.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-hdpi/ic_liked.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_row_third.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\row_third.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_pom.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/pom.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_search_border.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\search_border.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_row_third.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/row_third.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-ldpi_ic_usa_location_white.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-ldpi\\ic_usa_location_white.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxhdpi_ic_profile_holder.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxhdpi/ic_profile_holder.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_ic_temple_by_deity.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\ic_temple_by_deity.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_payment_checked_icon.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/payment_checked_icon.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_international_charities.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_international_charities.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-ldpi_ic_followed.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-ldpi/ic_followed.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_view_search_list.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\view_search_list.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_custom_checkbox_theme.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/custom_checkbox_theme.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_icon_checked.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\icon_checked.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxhdpi_toplogo.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxhdpi/toplogo.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-mdpi_ic_drop_down.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-mdpi\\ic_drop_down.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_mastercard.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/mastercard.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-hdpi_ic_liked.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-hdpi\\ic_liked.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_about.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/about.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_advance_search.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_advance_search.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-ldpi_ic_usa_location_white.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-ldpi/ic_usa_location_white.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_ic_checked_pament.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\ic_checked_pament.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_view_search_list.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/view_search_list.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_idonate_logo.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\idonate_logo.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_advance_completed.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_advance_completed.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_group_list_layout_my_categories.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/group_list_layout_my_categories.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_search_icon.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\search_icon.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_adavanced_search_listitem1.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/adavanced_search_listitem1.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_united_state_adapter_item.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\united_state_adapter_item.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_reset_button_border.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/reset_button_border.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_white_background.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\white_background.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_type_icon.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/type_icon.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_name_icon.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\name_icon.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/anim_slide_from_left.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/anim/slide_from_left.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_location_pointer.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\location_pointer.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_percentage_detail_layout.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/percentage_detail_layout.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\mipmap-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/font_lemonjellypersonaluse.ttf.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/font/lemonjellypersonaluse.ttf"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_item_loading.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\item_loading.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-anydpi-v24_myspace.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-anydpi-v24/myspace.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_change.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_change.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_team_icon.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/team_icon.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_common_navigation_item.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\common_navigation_item.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_notification_bell.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/notification_bell.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_name_search_new.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_name_search_new.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_close.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/close.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_notification.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_notification.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_myspace.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_myspace.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_common_navigation_heading.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_common_navigation_heading.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_add_icon.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/add_icon.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_united_state.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_united_state.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_splash_screen.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_splash_screen.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_search_temples_by_country.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_search_temples_by_country.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_advanced_border_layout.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\advanced_border_layout.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/anim_up_from_bottom.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/anim/up_from_bottom.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_united_state.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_united_state.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_name_icon.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/name_icon.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xhdpi_menu.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xhdpi\\menu.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_advance_search1.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_advance_search1.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxxhdpi_ic_usa_location_white.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxxhdpi\\ic_usa_location_white.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-ldpi_ic_drop_down.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-ldpi/ic_drop_down.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_adavance_search_uidesign.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_adavance_search_uidesign.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-anydpi-v24_toplogo.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-anydpi-v24/toplogo.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_custom_checkbox_theme.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\custom_checkbox_theme.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_check_box_empty.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_check_box_empty.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_image_border.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\image_border.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_notification_bell.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/notification_bell.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-hdpi_ic_drop_down.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-hdpi\\ic_drop_down.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_setting.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_setting.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_sub_category.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_sub_category.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_adavance_search_layout.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/adavance_search_layout.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_icon_unchecked.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\icon_unchecked.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/mipmap-mdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_ic_temple_by_name.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\ic_temple_by_name.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-mdpi_ic_profile_holder.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-mdpi/ic_profile_holder.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_white_border.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\white_border.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_search_icon.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/search_icon.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_confirmation.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_confirmation.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/anim_visiblity_animation.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/anim/visiblity_animation.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\anim_slide_from_left.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\anim\\slide_from_left.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-mdpi_ic_followed.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-mdpi/ic_followed.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_logo.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\logo.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_icon_unchecked.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/icon_unchecked.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_welcome.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_welcome.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_value_icon.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/value_icon.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_adavance_search_layout.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\adavance_search_layout.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_autosearch.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_autosearch.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_adavanced_search_non_choose_listitem3.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\adavanced_search_non_choose_listitem3.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-ldpi_ic_temple_by_location.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-ldpi/ic_temple_by_location.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_ic_edit_icon.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\ic_edit_icon.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_row_second.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/row_second.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_ic_filter.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\ic_filter.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_login_botton_border.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/login_botton_border.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-ldpi_menu.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-ldpi\\menu.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/anim_slide_from_right.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/anim/slide_from_right.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_register.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_border.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_border.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_place_search.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_place_search.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_bowse.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_bowse.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_newtypes.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_newtypes.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_settings.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/settings.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_payment_alert_border_layout.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\payment_alert_border_layout.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/anim_slide_down.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/anim/slide_down.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-mdpi_dashbord_background.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-mdpi\\dashbord_background.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_child_list_layout_choose_category.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/child_list_layout_choose_category.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_setting.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_setting.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_charity_icon.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/charity_icon.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_about.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\about.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxhdpi_ic_usa_location_white.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxhdpi/ic_usa_location_white.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_update.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_update.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_brain_tree_payment.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_brain_tree_payment.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\anim_up_from_bottom.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\anim\\up_from_bottom.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_search.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/search.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_ic_noresult.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\ic_noresult.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_payment_success.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_payment_success.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_back_icon.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\back_icon.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_place_search.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_place_search.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xhdpi_myspace.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xhdpi\\myspace.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_terms_and_condition.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_terms_and_condition.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_payment_alertdailogue.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\payment_alertdailogue.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_heart_like_icon.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/heart_like_icon.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_register.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_register.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_bottombar_gradient.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\bottombar_gradient.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxxhdpi_toplogo.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxxhdpi/toplogo.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_close.webp.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\close.webp"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/anim_fade_out.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/anim/fade_out.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_advance_item_new.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\advance_item_new.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_splash_bg.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/splash_bg.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxhdpi_dashbord_background.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxhdpi\\dashbord_background.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_finance_icon.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/finance_icon.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxxhdpi_ic_followed.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxxhdpi\\ic_followed.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_splashlogo.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/splashlogo.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xxxhdpi_ic_liked.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xxxhdpi\\ic_liked.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-mdpi_myspace.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-mdpi/myspace.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\layout_activity_adavance_search_new.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout\\activity_adavance_search_new.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xhdpi_toplogo.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xhdpi/toplogo.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-mdpi_ic_temple_by_location.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-mdpi\\ic_temple_by_location.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-mdpi_menu.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-mdpi/menu.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable_types_click_change.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\drawable\\types_click_change.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_usa_icon.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/usa_icon.webp"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_otp.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_otp.xml"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-anydpi-v24_ic_usa_location_white.xml.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-anydpi-v24\\ic_usa_location_white.xml"
     },
     {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/mipmap-xxxhdpi/ic_launcher.png"
-    },
-    {
-        "merged": "com.i2donate.app-merged_res-62:/layout_common_navigation_item.xml.flat",
-        "source": "com.i2donate.app-main-64:/layout/common_navigation_item.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_row_first.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/row_first.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_close.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/close.webp"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxxhdpi_ic_profile_holder.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxxhdpi/ic_profile_holder.png"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_in_global_icon.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/in_global_icon.webp"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_searchview_adapter.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/searchview_adapter.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-anydpi-v24_ic_followed.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-anydpi-v24/ic_followed.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/mipmap-hdpi_ic_launcher_foreground.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/mipmap-hdpi/ic_launcher_foreground.png"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_acs.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/acs.png"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-ldpi_ic_liked.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-ldpi/ic_liked.png"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_search_icon.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/search_icon.webp"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/mipmap-xxhdpi/ic_launcher_round.png"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_browse.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/browse.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_search_border.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/search_border.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_location.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_location.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_common_navigation_item.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/common_navigation_item.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_sub_category.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_sub_category.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_advance_item_new.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/advance_item_new.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-ldpi_ic_profile_holder.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-ldpi/ic_profile_holder.png"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_advanced_white_border.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/advanced_white_border.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_splash_screen.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_splash_screen.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_type_adapter_item.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/type_adapter_item.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_contact_icon.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/contact_icon.png"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_myspace.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/myspace.png"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_drop_down.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_drop_down.png"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_facebook_icon.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/facebook_icon.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_location_pointer.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/location_pointer.png"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_welcome.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_welcome.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_activity_confirmation.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/activity_confirmation.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_goal_icon.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/goal_icon.webp"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_edit_text_style.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/edit_text_style.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-mdpi_ic_usa_location_white.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-mdpi/ic_usa_location_white.png"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-anydpi-v24_ic_usa_location_white.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-anydpi-v24/ic_usa_location_white.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_wifi.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_wifi.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/mipmap-mdpi/ic_launcher.png"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_checked_pament.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_checked_pament.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_mastercard.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/mastercard.webp"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxhdpi_ic_followed.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-xxhdpi/ic_followed.png"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/layout_myspace_adapter_item.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/layout/myspace_adapter_item.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_type_icon.webp.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/type_icon.webp"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-xxxhdpi_advanced_border_layout_color.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable-xxxhdpi/advanced_border_layout_color.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable_ic_temple_by_name.xml.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-main-64:/drawable/ic_temple_by_name.xml"
-    },
-    {
-        "merged": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-merged_res-62:/drawable-hdpi_myspace.png.flat",
-        "source": "/Users/imac/.gradle/daemon/7.4/com.i2donate.app-pngs-57:/drawable-hdpi/myspace.png"
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-merged_res-66:\\drawable-xhdpi_dashbord_background.png.flat",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-pngs-62:\\drawable-xhdpi\\dashbord_background.png"
     }
 ]

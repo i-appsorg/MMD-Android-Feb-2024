@@ -35,8 +35,8 @@ public class BrowseActivity extends CommonMenuActivity {
     Toolbar toolbar;
     TextView /*better_tv,*/ advance_search_tv;
     SessionManager session;
-//    RelativeLayout name_relative_layout, united_state_location_relative, type_relative_layout, international_layout;
-    ImageView name_relative_layout, united_state_location_relative, type_relative_layout, international_layout;
+    RelativeLayout name_relative_layout, united_state_location_relative, type_relative_layout, international_layout;
+//    ImageView name_relative_layout, united_state_location_relative, type_relative_layout, international_layout;
     IDonateSharedPreference iDonateSharedPreference;
     static ArrayList<String> listOfdate = new ArrayList<>();
     static ArrayList<String> arraychecked_item = new ArrayList<>();

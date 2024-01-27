@@ -60,7 +60,7 @@ public class ConstantFunctions {
         Snackbar snackbar = Snackbar.make(view, message, Snackbar.LENGTH_LONG);
         View sbView = snackbar.getView();
         sbView.setBackgroundColor(Color.parseColor("#CC000000"));
-        TextView textView = sbView.findViewById(R.id.snackbar_text);
+        TextView textView = sbView.findViewById(android.R.id.content);
         textView.setTextColor(Color.WHITE);
         snackbar.show();
     }

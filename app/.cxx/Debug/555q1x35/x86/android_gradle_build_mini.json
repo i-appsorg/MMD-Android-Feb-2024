@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "D:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "E:\\android-sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "D:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app\\.cxx\\Debug\\555q1x35\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "E:\\android-sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "D:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app\\.cxx\\Debug\\555q1x35\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "native-lib::@6890427a1f51a3e7e1df": {
+      "artifactName": "native-lib",
+      "abi": "x86",
+      "output": "D:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app\\build\\intermediates\\cxx\\Debug\\555q1x35\\obj\\x86\\libnative-lib.so",
+      "runtimeFiles": []
+    }
+  }
+}

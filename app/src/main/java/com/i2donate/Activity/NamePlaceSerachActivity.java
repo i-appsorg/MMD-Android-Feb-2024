@@ -128,7 +128,7 @@ public class NamePlaceSerachActivity extends AppCompatActivity {
         no_data_tv = findViewById(R.id.no_data_tv);
         shimmer_view_container = (ShimmerFrameLayout) findViewById(R.id.shimmer_view_container);
         shimmer_view_container.setVisibility(View.VISIBLE);
-        shimmer_view_container.startShimmerAnimation();
+        shimmer_view_container.startShimmer();
 
         data = getIntent().getStringExtra("data");
 
@@ -412,7 +412,7 @@ public class NamePlaceSerachActivity extends AppCompatActivity {
         call.enqueue(new Callback<JsonObject>() {
             @Override
             public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
-                shimmer_view_container.stopShimmerAnimation();
+                shimmer_view_container.stopShimmer();
                 shimmer_view_container.setVisibility(View.GONE);
                 no_data_linear.setVisibility(View.GONE);
                 if (String.valueOf(page).equalsIgnoreCase("1")) {
@@ -508,7 +508,7 @@ public class NamePlaceSerachActivity extends AppCompatActivity {
                     }
                 } else {
                     placesRecyclerView.setVisibility(View.GONE);
-                    shimmer_view_container.stopShimmerAnimation();
+                    shimmer_view_container.stopShimmer();
                     shimmer_view_container.setVisibility(View.GONE);
                     no_data_linear.setVisibility(View.VISIBLE);
                 }
@@ -517,7 +517,7 @@ public class NamePlaceSerachActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<JsonObject> call, Throwable t) {
                 placesRecyclerView.setVisibility(View.GONE);
-                shimmer_view_container.stopShimmerAnimation();
+                shimmer_view_container.stopShimmer();
                 shimmer_view_container.setVisibility(View.GONE);
                 no_data_linear.setVisibility(View.VISIBLE);
             }

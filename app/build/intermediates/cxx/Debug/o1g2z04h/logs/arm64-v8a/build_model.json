@@ -1,0 +1,165 @@
+{
+  "abi": "ARM64_V8A",
+  "info": {
+    "abi": "ARM64_V8A",
+    "bitness": 64,
+    "deprecated": false,
+    "default": true
+  },
+  "cxxBuildFolder": "D:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app\\.cxx\\Debug\\o1g2z04h\\arm64-v8a",
+  "soFolder": "D:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app\\build\\intermediates\\cxx\\Debug\\o1g2z04h\\obj\\arm64-v8a",
+  "soRepublishFolder": "D:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a",
+  "abiPlatformVersion": 21,
+  "cmake": {
+    "effectiveConfiguration": {
+      "inheritEnvironments": [],
+      "variables": []
+    }
+  },
+  "variant": {
+    "buildSystemArgumentList": [],
+    "cFlagsList": [],
+    "cppFlagsList": [
+      ""
+    ],
+    "variantName": "debug",
+    "isDebuggableEnabled": true,
+    "validAbiList": [
+      "ARM64_V8A"
+    ],
+    "buildTargetSet": [],
+    "implicitBuildTargetSet": [],
+    "cmakeSettingsConfiguration": "android-gradle-plugin-predetermined-name",
+    "module": {
+      "cxxFolder": "D:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app\\.cxx",
+      "intermediatesBaseFolder": "D:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app\\build\\intermediates",
+      "intermediatesFolder": "D:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app\\build\\intermediates\\cxx",
+      "gradleModulePathName": ":app",
+      "moduleRootFolder": "D:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app",
+      "moduleBuildFile": "D:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app\\build.gradle",
+      "makeFile": "D:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app\\CMakeLists.txt",
+      "buildSystem": "CMAKE",
+      "ndkFolder": "E:\\android-sdk\\ndk\\23.1.7779620",
+      "ndkVersion": "23.1.7779620",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultStl": "LIBCXX_STATIC",
+      "ndkMetaPlatforms": {
+        "min": 16,
+        "max": 31,
+        "aliases": {
+          "20": 19,
+          "25": 24,
+          "J": 16,
+          "J-MR1": 17,
+          "J-MR2": 18,
+          "K": 19,
+          "L": 21,
+          "L-MR1": 22,
+          "M": 23,
+          "N": 24,
+          "N-MR1": 24,
+          "O": 26,
+          "O-MR1": 27,
+          "P": 28,
+          "Q": 29,
+          "R": 30,
+          "S": 31
+        }
+      },
+      "ndkMetaAbiList": [
+        {
+          "abi": "ARMEABI_V7A",
+          "bitness": 32,
+          "deprecated": false,
+          "default": true
+        },
+        {
+          "abi": "ARM64_V8A",
+          "bitness": 64,
+          "deprecated": false,
+          "default": true
+        },
+        {
+          "abi": "X86",
+          "bitness": 32,
+          "deprecated": false,
+          "default": true
+        },
+        {
+          "abi": "X86_64",
+          "bitness": 64,
+          "deprecated": false,
+          "default": true
+        }
+      ],
+      "cmakeToolchainFile": "E:\\android-sdk\\ndk\\23.1.7779620\\build\\cmake\\android.toolchain.cmake",
+      "cmake": {
+        "isValidCmakeAvailable": true,
+        "cmakeExe": "E:\\android-sdk\\cmake\\3.18.1\\bin\\cmake.exe",
+        "minimumCmakeVersion": "3.18.1"
+      },
+      "stlSharedObjectMap": {
+        "LIBCXX_SHARED": {
+          "ARMEABI_V7A": "E:\\android-sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\arm-linux-androideabi\\libc++_shared.so",
+          "ARM64_V8A": "E:\\android-sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\aarch64-linux-android\\libc++_shared.so",
+          "X86": "E:\\android-sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\i686-linux-android\\libc++_shared.so",
+          "X86_64": "E:\\android-sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\x86_64-linux-android\\libc++_shared.so"
+        },
+        "LIBCXX_STATIC": {},
+        "NONE": {},
+        "SYSTEM": {}
+      },
+      "project": {
+        "rootBuildGradleFolder": "D:\\Dhruta\\Mama Devalayam\\Mama Devalayam New",
+        "sdkFolder": "E:\\android-sdk",
+        "isBuildOnlyTargetAbiEnabled": true,
+        "ideBuildTargetAbi": "arm64-v8a,armeabi-v7a,armeabi",
+        "isCmakeBuildCohabitationEnabled": false,
+        "isPrefabEnabled": false
+      },
+      "outputOptions": [],
+      "ninjaExe": "E:\\android-sdk\\cmake\\3.18.1\\bin\\ninja.exe"
+    },
+    "prefabClassPaths": [],
+    "prefabPackages": [],
+    "prefabPackageConfigurations": [],
+    "stlType": "c++_static",
+    "optimizationTag": "Debug"
+  },
+  "buildSettings": {
+    "environmentVariables": []
+  },
+  "prefabFolder": "D:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app\\.cxx\\Debug\\o1g2z04h\\prefab\\arm64-v8a",
+  "isActiveAbi": true,
+  "fullConfigurationHash": "o1g2z04h233c522i1j5g4s4l2c253c3p4w3uk5i5b73w5u5srlkt5u6l",
+  "configurationArguments": [
+    "-HD:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app",
+    "-DCMAKE_SYSTEM_NAME\u003dAndroid",
+    "-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON",
+    "-DCMAKE_SYSTEM_VERSION\u003d21",
+    "-DANDROID_PLATFORM\u003dandroid-21",
+    "-DANDROID_ABI\u003darm64-v8a",
+    "-DCMAKE_ANDROID_ARCH_ABI\u003darm64-v8a",
+    "-DANDROID_NDK\u003dE:\\android-sdk\\ndk\\23.1.7779620",
+    "-DCMAKE_ANDROID_NDK\u003dE:\\android-sdk\\ndk\\23.1.7779620",
+    "-DCMAKE_TOOLCHAIN_FILE\u003dE:\\android-sdk\\ndk\\23.1.7779620\\build\\cmake\\android.toolchain.cmake",
+    "-DCMAKE_MAKE_PROGRAM\u003dE:\\android-sdk\\cmake\\3.18.1\\bin\\ninja.exe",
+    "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dD:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app\\build\\intermediates\\cxx\\Debug\\o1g2z04h\\obj\\arm64-v8a",
+    "-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003dD:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app\\build\\intermediates\\cxx\\Debug\\o1g2z04h\\obj\\arm64-v8a",
+    "-DCMAKE_BUILD_TYPE\u003dDebug",
+    "-BD:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app\\.cxx\\Debug\\o1g2z04h\\arm64-v8a",
+    "-GNinja"
+  ],
+  "intermediatesParentFolder": "D:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app\\build\\intermediates\\cxx\\Debug\\o1g2z04h"
+}

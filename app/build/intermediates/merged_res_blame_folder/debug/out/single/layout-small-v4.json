@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-mergeDebugResources-65:\\layout-small-v4\\activity_bowse.xml",
+        "source": "C:\\Users\\user1\\.gradle\\daemon\\8.2\\com.i2donate.app-main-68:\\layout-small\\activity_bowse.xml"
+    },
+    {
+        "merged": "com.i2donate.app-mergeDebugResources-65:/layout-small-v4/activity_bowse.xml",
+        "source": "com.i2donate.app-main-68:/layout-small/activity_bowse.xml"
+    }
+]

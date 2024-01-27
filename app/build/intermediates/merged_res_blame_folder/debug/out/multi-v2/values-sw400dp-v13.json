@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.i2donate.app-mergeDebugResources-60:/values-sw400dp-v13/values-sw400dp-v13.xml",
+            "outputFile": "com.i2donate.app-mergeDebugResources-64:/values-sw400dp-v13/values-sw400dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/imac/.gradle/caches/transforms-3/2f3974059ce10bbcc7d8805043273cbd/transformed/jetified-card-form-5.4.0/res/values-sw400dp-v13/values-sw400dp-v13.xml",
+                    "source": "C:\\Users\\user1\\.gradle\\caches\\transforms-3\\9ef3ed00b40a489d042198f1ee1126ed\\transformed\\jetified-card-form-5.4.0\\res\\values-sw400dp-v13\\values-sw400dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

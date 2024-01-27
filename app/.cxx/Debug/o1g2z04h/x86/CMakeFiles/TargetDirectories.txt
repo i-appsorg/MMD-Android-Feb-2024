@@ -1,0 +1,3 @@
+D:/Dhruta/Mama Devalayam/Mama Devalayam New/app/.cxx/Debug/o1g2z04h/x86/CMakeFiles/native-lib.dir
+D:/Dhruta/Mama Devalayam/Mama Devalayam New/app/.cxx/Debug/o1g2z04h/x86/CMakeFiles/edit_cache.dir
+D:/Dhruta/Mama Devalayam/Mama Devalayam New/app/.cxx/Debug/o1g2z04h/x86/CMakeFiles/rebuild_cache.dir

@@ -165,47 +165,41 @@ public class CommonBackActivity extends AppCompatActivity implements Connectivit
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-
-
-            case R.id.linear_browse:
-                if (Selected.Browse != select) {
-                    Log.e("Browse","Browse");
-                    ChangeActivity.changeActivityback(CommonBackActivity.this, BrowseActivity.class);
-                    browse_tv.setTextColor(getResources().getColor(R.color.quantum_white_text));
-                    // browse_img.setImageTintMode();
-                    browse_img.setColorFilter(getApplicationContext().getResources().getColor(R.color.quantum_white_text));
-                    finish();
-                } else{
-                    Log.e("Browse1","Browse2");
+        int id = v.getId();
+        if (id == R.id.linear_browse) {
+            if (Selected.Browse != select) {
+                Log.e("Browse", "Browse");
+                ChangeActivity.changeActivityback(CommonBackActivity.this, BrowseActivity.class);
+                browse_tv.setTextColor(getResources().getColor(R.color.quantum_white_text));
+                // browse_img.setImageTintMode();
+                browse_img.setColorFilter(getApplicationContext().getResources().getColor(R.color.quantum_white_text));
+                finish();
+            } else {
+                Log.e("Browse1", "Browse2");
                     /*ChangeActivity.changeActivity(CommonMenuActivity.this, MyspaceActivity.class);
                     myspace_tv.setTextColor(getResources().getColor(R.color.colorAccent));
                     finish();*/
+            }
+        } else if (id == R.id.linear_myspace) {
+            if (Selected.Myspace != select) {
+                if (session.isLoggedIn()) {
+                    Log.e("Myspace", "Myspace");
+                    ChangeActivity.changeActivityback(CommonBackActivity.this, MyspaceActivity.class);
+                    myspace_tv.setTextColor(getResources().getColor(R.color.quantum_white_text));
+                    myspace_img.setColorFilter(getApplicationContext().getResources().getColor(R.color.quantum_white_text));
+                    finish();
+                } else {
+                    LoginDialog();
+                    // ChangeActivity.changeActivityback(CommonBackActivity.this, LoginActivity.class);
+                    //finish();
                 }
 
-                break;
-            case R.id.linear_myspace:
-                if (Selected.Myspace != select) {
-                    if (session.isLoggedIn()) {
-                        Log.e("Myspace","Myspace");
-                        ChangeActivity.changeActivityback(CommonBackActivity.this, MyspaceActivity.class);
-                        myspace_tv.setTextColor(getResources().getColor(R.color.quantum_white_text));
-                        myspace_img.setColorFilter(getApplicationContext().getResources().getColor(R.color.quantum_white_text));
-                        finish();
-                    } else {
-                        LoginDialog();
-                       // ChangeActivity.changeActivityback(CommonBackActivity.this, LoginActivity.class);
-                        //finish();
-                    }
-
-                } else{
-                    Log.e("Myspace2","Myspace2");
+            } else {
+                Log.e("Myspace2", "Myspace2");
                    /* ChangeActivity.changeActivity(CommonMenuActivity.this, BrowseActivity.class);
                     browse_tv.setTextColor(getResources().getColor(R.color.colorAccent));
                     finish();*/
-                }
-                break;
-
+            }
         }
 
 

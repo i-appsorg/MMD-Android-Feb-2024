@@ -206,7 +206,7 @@ public class NameSearchActivity extends CommonBackActivity {
         shimmer_view_container = (ShimmerFrameLayout) findViewById(R.id.shimmer_view_container);
         namesearchLayout = findViewById(R.id.namesearchLayout);
         shimmer_view_container.setVisibility(View.VISIBLE);
-        shimmer_view_container.startShimmerAnimation();
+        shimmer_view_container.startShimmer();
         context = NameSearchActivity.this;
         data = getIntent().getStringExtra("data");
         listOfdate = iDonateSharedPreference.getselectedtypedata(getApplicationContext());
@@ -749,7 +749,7 @@ public class NameSearchActivity extends CommonBackActivity {
         call.enqueue(new Callback<JsonObject>() {
             @Override
             public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
-                shimmer_view_container.stopShimmerAnimation();
+                shimmer_view_container.stopShimmer();
                 shimmer_view_container.setVisibility(View.GONE);
                 no_data_linear.setVisibility(View.GONE);
                 if (String.valueOf(page).equalsIgnoreCase("1")) {
@@ -850,7 +850,7 @@ public class NameSearchActivity extends CommonBackActivity {
                         e.printStackTrace();
                     }
                 } else {
-                    shimmer_view_container.stopShimmerAnimation();
+                    shimmer_view_container.stopShimmer();
                     shimmer_view_container.setVisibility(View.GONE);
                     no_data_linear.setVisibility(View.VISIBLE);
                     united_state_name_recyclerview.setVisibility(View.GONE);
@@ -860,7 +860,7 @@ public class NameSearchActivity extends CommonBackActivity {
             @Override
             public void onFailure(Call<JsonObject> call, Throwable t) {
                 Log.e(TAG, t.toString());
-                shimmer_view_container.stopShimmerAnimation();
+                shimmer_view_container.stopShimmer();
                 shimmer_view_container.setVisibility(View.GONE);
                 no_data_linear.setVisibility(View.VISIBLE);
                 united_state_name_recyclerview.setVisibility(View.GONE);
@@ -1030,6 +1030,7 @@ public class NameSearchActivity extends CommonBackActivity {
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
         if (backflag == 1) {
             pageno = 1;
             listOfdate.clear();

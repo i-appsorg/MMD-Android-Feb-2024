@@ -1,21 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.i2donate.app-mergeDebugResources-60:/values-v11/values-v11.xml",
+            "outputFile": "com.i2donate.app-mergeDebugResources-64:/values-v11/values-v11.xml",
             "map": [
                 {
-                    "source": "/Users/imac/.gradle/caches/transforms-3/17023430bb4f1345c3602b9f734cd8a5/transformed/jetified-tweet-composer-3.1.1/res/values-v11/values-v11.xml",
-                    "from": {
-                        "startLines": "2,10",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,565",
-                        "endLines": "9,17",
-                        "endColumns": "12,12",
-                        "endOffsets": "560,1076"
-                    }
-                },
-                {
-                    "source": "/Users/imac/.gradle/caches/transforms-3/3d696119227348bc97f1a59da8aabfff/transformed/jetified-tweet-ui-3.1.1/res/values-v11/values-v11.xml",
+                    "source": "C:\\Users\\user1\\.gradle\\caches\\transforms-3\\2ef130346fbc6a38775d57f27d8ae7bf\\transformed\\jetified-tweet-ui-3.1.1\\res\\values-v11\\values-v11.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -31,6 +20,17 @@
                         "endLines": "22",
                         "endColumns": "12",
                         "endOffsets": "1341"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\user1\\.gradle\\caches\\transforms-3\\93e6107a089569d1fef10b811fc27f36\\transformed\\jetified-tweet-composer-3.1.1\\res\\values-v11\\values-v11.xml",
+                    "from": {
+                        "startLines": "2,10",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,565",
+                        "endLines": "9,17",
+                        "endColumns": "12,12",
+                        "endOffsets": "560,1076"
                     }
                 }
             ]

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.i2donate.app-mergeDebugResources-60:/values-xxhdpi-v4/values-xxhdpi-v4.xml",
+            "outputFile": "com.i2donate.app-mergeDebugResources-64:/values-xxhdpi-v4/values-xxhdpi-v4.xml",
             "map": [
                 {
-                    "source": "/Users/imac/.gradle/caches/transforms-3/8c503b68fd0bb195ed8f7d637d102da3/transformed/jetified-twitter-core-3.1.1/res/values-xxhdpi-v4/values-xxhdpi-v4.xml",
+                    "source": "C:\\Users\\user1\\.gradle\\caches\\transforms-3\\780dc1a6d83ff30b0d0c7e217fc0cc74\\transformed\\jetified-twitter-core-3.1.1\\res\\values-xxhdpi-v4\\values-xxhdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

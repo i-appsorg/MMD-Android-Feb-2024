@@ -385,7 +385,7 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
             if (!charitylist1.get(position).getLogo().equalsIgnoreCase("null")) {
                 try {
 
-                    Picasso.with(mContext).load(charitylistimg.getLogo()).into(holder.logo_img);
+                    Picasso.get().load(charitylistimg.getLogo()).into(holder.logo_img);
 
                 } catch (Exception e) {
                     e.printStackTrace();

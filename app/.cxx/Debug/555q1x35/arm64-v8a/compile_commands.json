@@ -1,0 +1,7 @@
+[
+{
+  "directory": "D:/Dhruta/Mama Devalayam/Mama Devalayam New/app/.cxx/Debug/555q1x35/arm64-v8a",
+  "command": "E:\\android-sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --sysroot=E:/android-sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dnative_lib_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles\\native-lib.dir\\src\\main\\jni\\native-lib.cpp.o -c \"D:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app\\src\\main\\jni\\native-lib.cpp\"",
+  "file": "D:\\Dhruta\\Mama Devalayam\\Mama Devalayam New\\app\\src\\main\\jni\\native-lib.cpp"
+}
+]
