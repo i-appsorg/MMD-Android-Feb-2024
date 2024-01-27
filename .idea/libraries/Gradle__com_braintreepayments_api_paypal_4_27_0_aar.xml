@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: com.braintreepayments.api:paypal:4.27.0@aar">
+  <library name="Gradle: com.braintreepayments.api:paypal:4.27.0@aar" external-system-id="GRADLE">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/e268fcc82816e07ccd07531a6f48a861/transformed/jetified-paypal-4.27.0/annotations.zip!/" />
     </ANNOTATIONS>

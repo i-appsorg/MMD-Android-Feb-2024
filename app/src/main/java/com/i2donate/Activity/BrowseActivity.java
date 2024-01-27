@@ -12,11 +12,13 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.i2donate.Adapter.CategorylistAdapter;
 import com.i2donate.CommonActivity.CommonMenuActivity;
@@ -31,9 +33,10 @@ import java.util.ArrayList;
 public class BrowseActivity extends CommonMenuActivity {
     private String TAG = "BrowseActivity";
     Toolbar toolbar;
-    TextView better_tv, advance_search_tv;
+    TextView /*better_tv,*/ advance_search_tv;
     SessionManager session;
-    RelativeLayout name_relative_layout, united_state_location_relative, type_relative_layout, international_layout;
+//    RelativeLayout name_relative_layout, united_state_location_relative, type_relative_layout, international_layout;
+    ImageView name_relative_layout, united_state_location_relative, type_relative_layout, international_layout;
     IDonateSharedPreference iDonateSharedPreference;
     static ArrayList<String> listOfdate = new ArrayList<>();
     static ArrayList<String> arraychecked_item = new ArrayList<>();
@@ -75,13 +78,13 @@ public class BrowseActivity extends CommonMenuActivity {
         iDonateSharedPreference = new IDonateSharedPreference();
         iDonateSharedPreference.setdailogueamt(getApplicationContext(), "");
         session = new SessionManager(getApplicationContext());
-        better_tv = (TextView) findViewById(R.id.better_tv);
-        name_relative_layout = (RelativeLayout) findViewById(R.id.name_relative_layout);
+//        better_tv = (TextView) findViewById(R.id.better_tv);
+        name_relative_layout = /*(RelativeLayout)*/ findViewById(R.id.name_relative_layout);
         advance_search_tv = (TextView) findViewById(R.id.advance_search_tv);
-        international_layout = (RelativeLayout) findViewById(R.id.international_layout);
-        united_state_location_relative = (RelativeLayout) findViewById(R.id.united_state_location_relative);
-        type_relative_layout = (RelativeLayout) findViewById(R.id.type_relative_layout);
-        better_tv.setTypeface(Typeface.createFromAsset(getAssets(), "commercial-script-bt.ttf"));
+        international_layout = /*(RelativeLayout)*/ findViewById(R.id.international_layout);
+        united_state_location_relative = /*(RelativeLayout)*/ findViewById(R.id.united_state_location_relative);
+        type_relative_layout = /*(RelativeLayout)*/ findViewById(R.id.type_relative_layout);
+//        better_tv.setTypeface(Typeface.createFromAsset(getAssets(), "commercial-script-bt.ttf"));
         listOfdate.clear();
         iDonateSharedPreference.settype(getApplicationContext(), "0");
         iDonateSharedPreference.setadvance(getApplicationContext(), "0");

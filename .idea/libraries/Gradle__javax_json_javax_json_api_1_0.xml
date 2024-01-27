@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: javax.json:javax.json-api:1.0">
+  <library name="Gradle: javax.json:javax.json-api:1.0" external-system-id="GRADLE">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.json/javax.json-api/1.0/a74939ecbf7294b40accb4048929577f5ddcee2/javax.json-api-1.0.jar!/" />
     </CLASSES>

@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: com.balsikandar.android:crashreporter:1.1.0@aar">
+  <library name="Gradle: com.balsikandar.android:crashreporter:1.1.0@aar" external-system-id="GRADLE">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/754fa622484fb63a80160fed39ff7258/transformed/jetified-crashreporter-1.1.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/754fa622484fb63a80160fed39ff7258/transformed/jetified-crashreporter-1.1.0/res" />

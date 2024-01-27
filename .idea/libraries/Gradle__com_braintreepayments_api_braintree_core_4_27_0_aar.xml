@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: com.braintreepayments.api:braintree-core:4.27.0@aar">
+  <library name="Gradle: com.braintreepayments.api:braintree-core:4.27.0@aar" external-system-id="GRADLE">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/2226cd2d70e377e9fabb22cacff2a128/transformed/jetified-braintree-core-4.27.0/annotations.zip!/" />
     </ANNOTATIONS>

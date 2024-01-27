@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: com.braintreepayments.api:venmo:4.27.0@aar">
+  <library name="Gradle: com.braintreepayments.api:venmo:4.27.0@aar" external-system-id="GRADLE">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/493995530ff607c0eb281607e874fea2/transformed/jetified-venmo-4.27.0/annotations.zip!/" />
     </ANNOTATIONS>

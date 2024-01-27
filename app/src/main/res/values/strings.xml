@@ -69,14 +69,16 @@
     <string name="update_mobile">Mobile</string>
     <string name="register_password">Password*</string>
     <string name="register_confirm_password">Confirm password*</string>
-    <string name="register_password_hint">Note: Password must be at least 8 char long and have a combination of Capital and Small letters, Number and Symbols</string>
+<!--    <string name="register_password_hint">Note: Password must be at least 8 char long and have a combination of Capital and Small letters, Number and Symbols</string>-->
+    <string name="register_password_hint">Note: Password must be at least 8 characters long \nand have a combination of letters, numbers and \nsymbols</string>
+
     <string name="register_gender">Gender</string>
     <string name="register_male">Male</string>
     <string name="register_female">Female</string>
-    <string name="register_agree">I agree to i-Donate\t </string>
+    <string name="register_agree">I agree to Mama Devalayam’s\t </string>
     <string name="register_terms">Terms &amp; Conditions</string>
     <string name="register_already">Already have an account?</string>
-    <string name="register_login">Login</string>
+    <string name="register_login">Log In</string>
     <string name="register_orthers">Other</string>
     <string name="register_yes">Business</string>
     <string name="register_no">Individual</string>
@@ -308,4 +310,5 @@
     <!--menu_items-->
     <string name="navigation_drawer_open">drawer open</string>
     <string name="navigation_drawer_close">drawer close</string>
+    <string name="register_login2">REGISTER/LOGIN</string>
 </resources>

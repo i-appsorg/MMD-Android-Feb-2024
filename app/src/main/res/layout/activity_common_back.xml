@@ -33,7 +33,7 @@
                     android:id="@+id/back_icon_img"
                     android:layout_width="45dp"
                     android:layout_height="@dimen/_30sdp"
-                    android:layout_gravity="start|left"
+                    android:layout_gravity="start"
                     android:padding="8dp"
                     android:src="@drawable/back_icon" />
                 <!-- <TextView
@@ -52,13 +52,13 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_30sdp"
-                    android:src="@drawable/idonate_logo"/>
+                    android:src="@drawable/idonate_logo" />
 
                 <ImageView
                     android:id="@+id/refreshMenu"
                     android:layout_width="45dp"
                     android:layout_height="match_parent"
-                    android:layout_gravity="end|right"
+                    android:layout_gravity="end"
                     android:padding="10dp"
                     android:paddingBottom="10dp"
                     android:visibility="gone" />
@@ -68,74 +68,79 @@
                 android:id="@+id/commonMenuActivityFrameLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/commonMenuActivityToolbar"
-                 android:layout_above="@+id/tabMode"/>
+                android:layout_above="@+id/tabMode"
+                android:layout_below="@+id/commonMenuActivityToolbar" />
 
             <LinearLayout
                 android:id="@+id/tabMode"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
+                android:background="@drawable/bottombar_gradient"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal"
-                android:background="@drawable/bottombar_gradient"
                 android:padding="5dp">
+<!--                android:background="@drawable/bottombar_gradient"-->
+
 
                 <LinearLayout
+                    android:id="@+id/linear_browse"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:id="@+id/linear_browse"
-                    android:gravity="center_horizontal"
                     android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="@dimen/_25sdp"
-                        android:layout_height="@dimen/_25sdp"
                         android:id="@+id/browse_img"
-                        android:tint="@color/colorAccent"
-                        android:src="@drawable/browse"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/browse"
+                        app:tint="@color/colorAccent" />
 
                     <TextView
+                        android:id="@+id/browse_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_3sdp"
-                        android:id="@+id/browse_tv"
-                        android:textSize="@dimen/_12sdp"
+                        android:text="Browse"
+                        android:visibility="gone"
                         android:textColor="@color/colorAccent"
-                        android:text="Browse" />
+                        android:textSize="@dimen/_12sdp" />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/linear_myspace"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:id="@+id/linear_myspace"
-                    android:gravity="center_horizontal"
                     android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="@dimen/_25sdp"
-                        android:layout_height="@dimen/_25sdp"
                         android:id="@+id/my_space_img"
-                        android:tint="@color/colorAccent"
-                        android:src="@drawable/myspace"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/myspace"
+                        app:tint="@color/colorAccent" />
 
                     <TextView
+                        android:id="@+id/my_space_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_3sdp"
-                        android:id="@+id/my_space_tv"
-                        android:textSize="@dimen/_12sdp"
+                        android:text="My Space"
+                        android:visibility="gone"
                         android:textColor="@color/colorAccent"
-                        android:text="My Space" />
+                        android:textSize="@dimen/_12sdp" />
                 </LinearLayout>
 
             </LinearLayout>
         </RelativeLayout>
-
 
 
     </androidx.drawerlayout.widget.DrawerLayout>

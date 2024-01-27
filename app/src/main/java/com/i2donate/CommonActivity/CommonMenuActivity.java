@@ -70,7 +70,8 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
     private FrameLayout frameLayout, menuActivityFrameLayout;
     private DrawerLayout drawerLayout;
     public ImageView menuImageView, sosImg, refreshMenu;
-    private CircleImageView myprofile_img;
+//    private CircleImageView myprofile_img;
+    private ImageView myprofile_img;
     private TextView myaccount_name_tv;
     private ListView menuListView;
     TextView browse_tv, myspace_tv;
@@ -441,7 +442,7 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
         MyApplication.getInstance().setConnectivityListener(this);
     }
 
-    private void referesh() {
+     private void referesh() {
         menuListView.setAdapter(new CommonActionBarListAdapter(this));
         if (session.isLoggedIn()) {
             userDetails = session.getUserDetails();

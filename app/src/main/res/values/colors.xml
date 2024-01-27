@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#9C7192</color>
+<!--    <color name="colorPrimary">#9C7192</color>-->
+    <color name="colorPrimary">#FF5936</color>
     <color name="colorPrimary_pink">#CCF9F0F7</color>
     <color name="colorPrimaryDark">#D097C4</color>
-    <color name="colorAccent">#532B05</color>
+<!--    <color name="colorAccent">#532B05</color>-->
+    <color name="colorAccent">#FF5936</color>
     <color name="start_color">#D097C4</color>
     <color name="end_color">#E3BFDB</color>
     <color name="navigation_color">#f9f2f8</color>
-    <color name="bottom_text_color">#ac7c8e</color>
+<!--    <color name="bottom_text_color">#ac7c8e</color>-->
+    <color name="bottom_text_color">#1F333333</color>
     <color name="title_text_color">#FCFCEF</color>
     <color name="terms_color">#6a7fb0</color>
     <color name="navi_text_color">#989598</color>
@@ -45,12 +48,20 @@
     <!--trans_black_dailog-->
     <color name="trans_black">#B3000000</color>
     <color name="dailog_cancel_color">#d0bacb</color>
-    <color name="title_color">#FCFCEF</color>
+<!--    <color name="title_color">#FCFCEF</color>-->
+    <color name="title_color">#333333</color>
+    <color name="tv_white">#FFFFFF</color>
+    <color name="tv_login">#29850A</color>
     <!--autosearch-->
     <color name="grey">#e3e3e3</color>
     <color name="black">#000000</color>
+    <color name="checkbox_btn">#FFA58C</color>
     <color name="green_color">#0BAA1B</color>
-    <color name="edittextline_color">#9C7192</color>
+<!--    <color name="edittextline_color">#9C7192</color>-->
+<!--    <color name="edittextline_color">#ADE0E0D5</color>-->
+    <color name="edittextline_color">#1F333333</color>
     <color name="file_choose_color">#0075ff</color>
+    <color name="quantum_white_text">#97958F</color>
+    <color name="bottom_nav">#FFF8DD</color>
 
 </resources>

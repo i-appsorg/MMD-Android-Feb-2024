@@ -22,10 +22,11 @@ public class CommonActionBarListAdapter extends BaseAdapter {
     private Context context;
     private int lastPosition = -1;
     SessionManager sessionManager;
-    private String[] idonate_listName = {"My Notifications",
+    private String[] idonate_listName = {
+            "My Notifications",
             "My Settings",
-            "About i2-Donate",
-            "Help/Support ",
+            "About Mama Devalayam’s",
+            "Help/Support",
             "Logout",};
 
     private int[] idonate_listImage = {
@@ -34,7 +35,6 @@ public class CommonActionBarListAdapter extends BaseAdapter {
             R.drawable.about,
             R.drawable.help_support,
             R.drawable.logout,
-
     };
     private LayoutInflater inflater;
 
@@ -46,17 +46,12 @@ public class CommonActionBarListAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-
         return idonate_listName.length;
-
     }
 
     @Override
     public Object getItem(int position) {
-
         return idonate_listName[position];
-
-
     }
 
     @Override
@@ -72,20 +67,20 @@ public class CommonActionBarListAdapter extends BaseAdapter {
         TextView nameTextView = (TextView) convertView.findViewById(R.id.commonNavigationItemTextView);
         ImageView imageView = (ImageView) convertView.findViewById(R.id.commonNavigationItemImageView);
 
-        if(sessionManager.isLoggedIn()){
-            Log.e("login","login");
+        if (sessionManager.isLoggedIn()) {
+            Log.e("login", "login");
             nameTextView.setText(idonate_listName[position]);
-            if (position==4){
-                Log.e("login","login");
+            if (position == 4) {
+                Log.e("login", "login");
                 nameTextView.setText("Logout");
             }
 
 
-        }else {
-            Log.e("login","login");
+        } else {
+            Log.e("login", "login");
             nameTextView.setText(idonate_listName[position]);
-           if (position==4){
-               Log.e("login","login");
+            if (position == 4) {
+                Log.e("login", "login");
                 nameTextView.setText("Login");
             }
         }

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.i2donate.app-mergeDebugResources-59:/values-v11/values-v11.xml",
+            "outputFile": "com.i2donate.app-mergeDebugResources-60:/values-v11/values-v11.xml",
             "map": [
                 {
-                    "source": "/Users/dhvanibhanderi/.gradle/caches/transforms-3/17023430bb4f1345c3602b9f734cd8a5/transformed/jetified-tweet-composer-3.1.1/res/values-v11/values-v11.xml",
+                    "source": "/Users/imac/.gradle/caches/transforms-3/17023430bb4f1345c3602b9f734cd8a5/transformed/jetified-tweet-composer-3.1.1/res/values-v11/values-v11.xml",
                     "from": {
                         "startLines": "2,10",
                         "startColumns": "4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "/Users/dhvanibhanderi/.gradle/caches/transforms-3/3d696119227348bc97f1a59da8aabfff/transformed/jetified-tweet-ui-3.1.1/res/values-v11/values-v11.xml",
+                    "source": "/Users/imac/.gradle/caches/transforms-3/3d696119227348bc97f1a59da8aabfff/transformed/jetified-tweet-ui-3.1.1/res/values-v11/values-v11.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

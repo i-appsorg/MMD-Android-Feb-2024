@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: com.braintreepayments.api:browser-switch:2.3.2@aar">
+  <library name="Gradle: com.braintreepayments.api:browser-switch:2.3.2@aar" external-system-id="GRADLE">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/5702947e19cd4b77290d805fb60de019/transformed/jetified-browser-switch-2.3.2/annotations.zip!/" />
     </ANNOTATIONS>
