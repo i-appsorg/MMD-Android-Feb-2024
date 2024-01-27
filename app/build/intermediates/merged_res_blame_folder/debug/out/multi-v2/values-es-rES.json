@@ -4,7 +4,7 @@
             "outputFile": "com.i2donate.app-mergeDebugResources-64:/values-es-rES/values-es-rES.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\user1\\.gradle\\caches\\transforms-3\\27fa7b7f202a4f4f678abdc1875125af\\transformed\\jetified-facebook-login-16.3.0\\res\\values-es-rES\\values-es-rES.xml",
+                    "source": "/Users/imac/.gradle/caches/transforms-3/27fa7b7f202a4f4f678abdc1875125af/transformed/jetified-facebook-login-16.3.0/res/values-es-rES/values-es-rES.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

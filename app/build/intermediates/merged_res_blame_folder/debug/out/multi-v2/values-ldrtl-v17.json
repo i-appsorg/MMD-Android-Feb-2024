@@ -4,7 +4,7 @@
             "outputFile": "com.i2donate.app-mergeDebugResources-64:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\user1\\.gradle\\caches\\transforms-3\\9b6367683814fdc1ae8afa0cc991fc2d\\transformed\\material-1.11.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "source": "/Users/imac/.gradle/caches/transforms-3/9b6367683814fdc1ae8afa0cc991fc2d/transformed/material-1.11.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

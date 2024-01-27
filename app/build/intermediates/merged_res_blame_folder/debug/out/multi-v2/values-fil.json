@@ -4,7 +4,7 @@
             "outputFile": "com.i2donate.app-mergeDebugResources-64:/values-fil/values-fil.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\user1\\.gradle\\caches\\transforms-3\\18b9424879372015d101a56f2a3ac50d\\transformed\\jetified-play-services-wallet-19.1.0\\res\\values-fil\\values.xml",
+                    "source": "/Users/imac/.gradle/caches/transforms-3/18b9424879372015d101a56f2a3ac50d/transformed/jetified-play-services-wallet-19.1.0/res/values-fil/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

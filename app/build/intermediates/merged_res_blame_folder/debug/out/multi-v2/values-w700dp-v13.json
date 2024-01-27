@@ -4,7 +4,7 @@
             "outputFile": "com.i2donate.app-mergeDebugResources-64:/values-w700dp-v13/values-w700dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\user1\\.gradle\\caches\\transforms-3\\0be89ee5738e04585c524344f804c3db\\transformed\\jetified-drop-in-6.9.0\\res\\values-w700dp-v13\\values-w700dp-v13.xml",
+                    "source": "/Users/imac/.gradle/caches/transforms-3/0be89ee5738e04585c524344f804c3db/transformed/jetified-drop-in-6.9.0/res/values-w700dp-v13/values-w700dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
