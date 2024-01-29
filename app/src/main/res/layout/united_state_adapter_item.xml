@@ -113,7 +113,7 @@
                     android:layout_marginLeft="@dimen/_2sdp"
                     android:layout_weight=".8"
                     android:text="@string/united_state_adapter_like"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/title_color"
                     android:textSize="@dimen/_10sdp" />
             </LinearLayout>
 
@@ -140,7 +140,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight=".8"
                     android:text="@string/united_state_adapter_like"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/title_color"
                     android:textSize="@dimen/_10sdp" />
             </LinearLayout>
 
@@ -167,7 +167,7 @@
                     android:layout_marginLeft="@dimen/_2sdp"
                     android:layout_weight=".8"
                     android:text="@string/united_state_adapter_following"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/title_color"
                     android:textSize="@dimen/_10sdp" />
 
                 <TextView
@@ -176,7 +176,7 @@
                     android:layout_marginLeft="@dimen/_2sdp"
                     android:layout_weight=".8"
                     android:text="@string/united_state_adapter_following"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/title_color"
                     android:textSize="@dimen/_10sdp"
                     android:visibility="gone" />
             </LinearLayout>
@@ -204,7 +204,7 @@
                     android:layout_marginLeft="@dimen/_2sdp"
                     android:layout_weight=".8"
                     android:text="@string/united_state_adapter_following"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/title_color"
                     android:textSize="@dimen/_12sdp" />
             </LinearLayout>
 
@@ -236,10 +236,8 @@
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/_12sdp" />
             </LinearLayout>
-
         </LinearLayout>
     </LinearLayout>
-
 </RelativeLayout>
 
     <!--

@@ -131,7 +131,7 @@
                             android:layout_width="@dimen/_30sdp"
                             android:layout_height="@dimen/_30sdp"
                             android:layout_centerInParent="true"
-                            android:src="@drawable/heart" />
+                            android:src="@drawable/heart_like_icon" />
                     </RelativeLayout>
 
                     <TextView
@@ -195,7 +195,7 @@
                             android:layout_width="@dimen/_30sdp"
                             android:layout_height="@dimen/_30sdp"
                             android:layout_centerInParent="true"
-                            android:src="@drawable/thumb" />
+                            android:src="@drawable/thump_like_icon" />
                     </RelativeLayout>
 
 

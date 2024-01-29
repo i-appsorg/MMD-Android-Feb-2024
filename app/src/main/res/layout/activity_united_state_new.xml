@@ -25,9 +25,8 @@
             android:fitsSystemWindows="true"
             app:contentScrim="@android:color/transparent"
             app:elevation="0dp"
-            app:expandedTitleTextAppearance="@android:color/transparent"
-            >
-<!--            app:layout_scrollFlags="scroll|exitUntilCollapsed"-->
+            app:expandedTitleTextAppearance="@android:color/transparent">
+            <!--            app:layout_scrollFlags="scroll|exitUntilCollapsed"-->
 
             <!-- <RelativeLayout
                  android:layout_width="match_parent"
@@ -66,7 +65,7 @@
                         android:background="@drawable/search_border"
                         android:orientation="horizontal"
                         android:padding="@dimen/_7sdp">
-<!--                        android:background="@drawable/bg_search"-->
+                        <!--                        android:background="@drawable/bg_search"-->
 
 
                         <ImageView
@@ -90,7 +89,7 @@
                             android:hint="@string/united_state_location"
                             android:textColor="@color/title_color"
                             android:textColorHint="@color/tv_search_hint" />
-<!--                        android:textColor="@color/trans_black"-->
+                        <!--                        android:textColor="@color/trans_black"-->
 
 
                         <ImageView
@@ -158,9 +157,8 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="@dimen/_12sdp"
                         android:text="Type at least 3 letters to search."
-                        android:textSize="@dimen/_10sdp"
-
-                        />
+                        android:textColor="@color/title_color"
+                        android:textSize="@dimen/_10sdp" />
 
                     <LinearLayout
                         android:id="@+id/filter_linear_layout1"
@@ -273,10 +271,10 @@
                             android:layout_weight="3.5"
                             android:background="@drawable/login_botton_border"
                             android:gravity="center"
-                            android:textStyle="bold"
                             android:text="@string/united_state_search"
                             android:textColor="@color/colorWhite"
-                            android:textSize="@dimen/_10sdp" />
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -319,7 +317,7 @@
                 app:contentInsetStart="0dp"
                 app:elevation="0dp"
                 app:layout_collapseMode="pin">
-<!--                android:background="@drawable/toolbarbg"-->
+                <!--                android:background="@drawable/toolbarbg"-->
 
 
                 <RelativeLayout
@@ -386,8 +384,8 @@
                             android:layout_marginLeft="@dimen/_12sdp"
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="@dimen/_12sdp"
-                            android:textColor="@color/title_color"
                             android:text="Type at least 3 letters to search."
+                            android:textColor="@color/title_color"
                             android:textSize="@dimen/_10sdp"
 
                             />
