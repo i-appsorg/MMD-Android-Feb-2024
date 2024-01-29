@@ -61,6 +61,9 @@
         android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
         tools:replace="android:icon,android:theme,android:allowBackup">
         <activity
+            android:name=".Activity.MakeTypeScreenActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.NamePlaceSerachActivity"
             android:exported="false">
             <meta-data
@@ -95,24 +98,20 @@
 
         <meta-data
             android:name="firebase_crashlytics_collection_enabled"
-            android:value="false" />
-
-        <!--        <service-->
-        <!--            android:name=".Notification.fcm.MyFirebaseMessagingService"-->
-        <!--            android:exported="false">-->
-        <!--            <intent-filter>-->
-        <!--                <action android:name="com.google.firebase.MESSAGING_EVENT" />-->
-        <!--            </intent-filter>-->
-        <!--        </service>-->
-
-        <!--        <receiver-->
-        <!--            android:name=".Notification.fcm.OnBootBroadcastReceiver"-->
-        <!--            android:exported="false">-->
-        <!--            <intent-filter>-->
-        <!--                <action android:name="android.intent.action.BOOT_COMPLETED" />-->
-        <!--            </intent-filter>-->
-        <!--        </receiver>-->
-
+            android:value="false" /> <!-- <service -->
+        <!-- android:name=".Notification.fcm.MyFirebaseMessagingService" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.MESSAGING_EVENT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <!-- <receiver -->
+        <!-- android:name=".Notification.fcm.OnBootBroadcastReceiver" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
         <activity android:name=".Activity.ConfirmationActivity" />
         <activity android:name=".Activity.AnnualRevenueActivity" />
         <activity android:name=".Activity.TitleSubTitleActivity" />

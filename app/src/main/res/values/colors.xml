@@ -57,6 +57,10 @@
     <color name="black">#000000</color>
     <color name="checkbox_btn">#FFA58C</color>
     <color name="green_color">#0BAA1B</color>
+    <color name="black_light">#33333366</color>
+    <color name="yellow_light">#FFF8DD</color>
+    <color name="orange">#FF5936</color>
+    <color name="gray">#666666</color>
 <!--    <color name="edittextline_color">#9C7192</color>-->
 <!--    <color name="edittextline_color">#ADE0E0D5</color>-->
     <color name="edittextline_color">#1F333333</color>

@@ -69,7 +69,7 @@
     <string name="update_mobile">Mobile</string>
     <string name="register_password">Password*</string>
     <string name="register_confirm_password">Confirm password*</string>
-<!--    <string name="register_password_hint">Note: Password must be at least 8 char long and have a combination of Capital and Small letters, Number and Symbols</string>-->
+    <!--    <string name="register_password_hint">Note: Password must be at least 8 char long and have a combination of Capital and Small letters, Number and Symbols</string>-->
     <string name="register_password_hint">Note: Password must be at least 8 characters long \nand have a combination of letters, numbers and \nsymbols</string>
 
     <string name="register_gender">Gender</string>
@@ -311,4 +311,17 @@
     <string name="navigation_drawer_open">drawer open</string>
     <string name="navigation_drawer_close">drawer close</string>
     <string name="register_login2">REGISTER/LOGIN</string>
+    <string name="go_to_home">GO TO HOME</string>
+    <string name="contact_id">+91-8772277777</string>
+    <string name="priest_contact">Priest Contact</string>
+    <string name="emailId">helpdesk@Vishnavodevi.org</string>
+    <string name="temple_email">Temple Email</string>
+    <string name="wesite_id">www.Vishnavodevi.org</string>
+    <string name="temple_website">Temple Website</string>
+    <string name="donate_msg">For making donations to the temple, sponsorship payment or payments for any service, please contact:</string>
+    <string name="thank_you_for_your_interest">Thank you for your interest!</string>
+    <string name="hundi">HUNDI</string>
+    <string name="programs">PROGRAMS</string>
+    <string name="puja">PUJA</string>
+    <string name="sponsorship">SPONSORSHIP</string>
 </resources>

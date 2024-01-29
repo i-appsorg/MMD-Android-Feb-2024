@@ -37,6 +37,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.gson.JsonObject;
 import com.i2donate.Activity.LoginActivity;
+import com.i2donate.Activity.MakeTypeScreenActivity;
 import com.i2donate.Activity.SelectPaymentActivity;
 import com.i2donate.Activity.UnitedStateActivity;
 import com.i2donate.Activity.UnitedStateDetailsActivity;
@@ -388,6 +389,8 @@ public class LoadMoreUnitesStateLocationDetailsAdapterList extends RecyclerView.
             @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View v) {
+//                Intent intent = new Intent(mContext, MakeTypeScreenActivity.class);
+//                mContext.startActivity(intent);
                 if (session.isLoggedIn()) {
                     d = new BottomSheetDialog(mContext, R.style.payment_dailog);
                     d.setContentView(R.layout.payment_alert_dailog);
@@ -509,7 +512,8 @@ public class LoadMoreUnitesStateLocationDetailsAdapterList extends RecyclerView.
                                                 try {
                                                     Log.e("Response_payment1", response.body());
 
-                                                    Intent intent = new Intent(mContext, SelectPaymentActivity.class);
+                                                    Intent intent = new Intent(mContext, MakeTypeScreenActivity.class);
+//                                                    Intent intent = new Intent(mContext, SelectPaymentActivity.class);
                                                     Bundle bundle = new Bundle();
                                                     iDonateSharedPreference.setdailogueamt(mContext, payment);
                                                     bundle.putString("payment_amt", payment);

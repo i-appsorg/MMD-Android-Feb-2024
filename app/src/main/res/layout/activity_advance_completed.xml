@@ -14,23 +14,35 @@
         android:contentInsetLeft="0dp"
         android:contentInsetEnd="0dp"
         android:contentInsetRight="0dp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:elevation="5dp"
         app:contentInsetEnd="0dp"
         app:contentInsetStart="0dp">
-
-        <ImageView
-            android:id="@+id/back_icon_login_img"
-            android:layout_width="@dimen/_40sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_gravity="start|left"
-            android:padding="8dp"
-            android:src="@drawable/back_icon" />
-
-        <ImageView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/toplogo" />
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back_icon_login_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|left"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/back_icon" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/toplogo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/back_icon_login_img"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
 
     <RelativeLayout
@@ -41,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/bottom_layout"
-            android:layout_marginTop="@dimen/_45sdp">
+            android:layout_marginTop="@dimen/_70sdp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -58,16 +70,16 @@
                     android:layout_marginTop="@dimen/_5sdp"
                     android:text="@string/advanced_search"
                     android:textAllCaps="true"
-                    android:textColor="@color/title_color"
+                    android:textColor="@color/tv_login"
                     android:textSize="@dimen/_20sdp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
                     android:text="@string/advanced_narrow"
-                    android:textColor="@color/title_text_color"
+                    android:textColor="@color/title_color"
                     android:textSize="@dimen/_12sdp" />
 
                 <TextView
@@ -75,12 +87,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_15sdp"
                     android:text="@string/advanced_tax"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/_14sdp"
                     android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="fill_parent"
+                    android:visibility="gone"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_15sdp">
 
@@ -156,8 +169,7 @@
                             android:gravity="center_vertical"
                             android:text="Search by Types and Sub-Types"
                            android:textSize="@dimen/_14sdp"
-                            android:textColor="@color/colorAccent"
-                            android:textStyle="bold" />
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -188,7 +200,7 @@
                     android:id="@+id/revenueRelativeLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_25sdp">
+                    android:layout_marginTop="@dimen/_10sdp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -200,15 +212,14 @@
                             android:layout_height="wrap_content"
                             android:text="@string/advance_year_in"
                             android:textSize="@dimen/_14sdp"
-                            android:textColor="@color/colorAccent"
-                            android:textStyle="bold" />
+                            android:textColor="@color/black" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
                             android:text="Filter by annual revenue"
-                            android:textSize="@dimen/_12sdp" />
+                            android:textSize="@dimen/_10sdp" />
                     </LinearLayout>
 
                     <ImageView
@@ -306,7 +317,7 @@
         <LinearLayout
             android:id="@+id/bottom_layout"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_35sdp"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"

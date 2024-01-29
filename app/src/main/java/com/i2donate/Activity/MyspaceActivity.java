@@ -98,8 +98,8 @@ public class MyspaceActivity extends CommonMenuActivity {
         Log.e("userDetails", "" + userDetails);
         Log.e("KEY_UID", "" + userDetails.get(SessionManager.KEY_UID));
         Log.e("KEY_username", "" + userDetails.get(SessionManager.KEY_NAME));
-        String upperString = userDetails.get(SessionManager.KEY_NAME).substring(0, 1).toUpperCase() + userDetails.get(SessionManager.KEY_NAME).substring(1);
-        myspace_title_tv.setText(upperString + "'s Space");
+//        String upperString = userDetails.get(SessionManager.KEY_NAME).substring(0, 1).toUpperCase() + userDetails.get(SessionManager.KEY_NAME).substring(1);
+//        myspace_title_tv.setText(upperString + "'s Space");
 
 
     }

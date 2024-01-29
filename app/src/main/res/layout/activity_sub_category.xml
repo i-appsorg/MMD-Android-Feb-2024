@@ -65,7 +65,7 @@
             android:layout_marginBottom="@dimen/_15sdp"/>
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_35sdp"
             android:id="@+id/bottom_layout"
             android:visibility="gone"
             android:layout_marginBottom="@dimen/_5sdp"

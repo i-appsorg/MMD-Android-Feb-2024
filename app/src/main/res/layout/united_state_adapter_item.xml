@@ -46,30 +46,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/united_state_adapter_american"
-                   android:textSize="@dimen/_14sdp"
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:id="@+id/location_name_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_5sdp"
-                        android:text="New York," />
+                        android:text="New York,"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
 
-<!--                    <TextView-->
-<!--                        android:layout_toRightOf="@id/location_name_tv"-->
-<!--                        android:id="@+id/country_name"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:textSize="@dimen/_10sdp"-->
-<!--                        android:layout_marginTop="@dimen/_5sdp"-->
-<!--                        android:text="United States" />-->
+                    <!--                    <TextView-->
+                    <!--                        android:layout_toRightOf="@id/location_name_tv"-->
+                    <!--                        android:id="@+id/country_name"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:textSize="@dimen/_10sdp"-->
+                    <!--                        android:layout_marginTop="@dimen/_5sdp"-->
+                    <!--                        android:text="United States" />-->
                 </RelativeLayout>
-
 
 
             </LinearLayout>
@@ -79,7 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_1sdp"
             android:layout_marginTop="@dimen/_5sdp"
-            android:background="@color/colorPrimaryDark" />
+            android:background="@color/orange" />
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -108,8 +110,8 @@
                     android:id="@+id/like_count_tv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".8"
                     android:layout_marginLeft="@dimen/_2sdp"
+                    android:layout_weight=".8"
                     android:text="@string/united_state_adapter_like"
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/_10sdp" />
@@ -162,9 +164,9 @@
                     android:id="@+id/follow_count_tv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_2sdp"
                     android:layout_weight=".8"
                     android:text="@string/united_state_adapter_following"
-                    android:layout_marginLeft="@dimen/_2sdp"
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/_10sdp" />
 
@@ -210,26 +212,27 @@
                 android:id="@+id/donate_linear_layout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_weight="1"
-                android:layout_gravity="center_horizontal"
                 android:background="@drawable/donate_border"
-                android:gravity="center_vertical"
+                android:gravity="center_vertical|center"
                 android:orientation="horizontal"
                 android:padding="@dimen/_5sdp">
 
                 <ImageView
-                    android:layout_width="@dimen/_15sdp"
-                    android:layout_height="@dimen/_15sdp"
-                    android:src="@drawable/donate_icon" />
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:src="@drawable/donate" />
 
                 <TextView
-android:id="@+id/txtxCountry"
-                    android:layout_width="wrap_content"
-                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:id="@+id/txtxCountry"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:gravity="center"
                     android:text="@string/united_state_adapter_donate"
-                    android:gravity="center_horizontal"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/_12sdp" />
             </LinearLayout>

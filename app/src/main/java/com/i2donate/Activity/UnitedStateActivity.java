@@ -471,9 +471,7 @@ public class UnitedStateActivity extends CommonBackActivity {
                 boolean isShow = true;
                 int scrollRange = -1;
                 if (scrollRange == -1) {
-
                     scrollRange = appBarLayout.getTotalScrollRange();
-
                 }
                 String text = String.valueOf(verticalOffset);
                 int newNumber = Integer.parseInt(text.replace("-", ""));
