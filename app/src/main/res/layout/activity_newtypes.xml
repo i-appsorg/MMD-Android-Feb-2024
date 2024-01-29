@@ -15,6 +15,7 @@
             android:layout_height="?android:actionBarSize"
             android:contentInsetStart="0dp"
             android:contentInsetLeft="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:contentInsetEnd="0dp"
             android:contentInsetRight="0dp"
             android:elevation="5dp"
@@ -47,18 +48,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_70sdp"
                 android:layout_above="@+id/bottom_layout"
                 android:layout_marginRight="@dimen/_10sdp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/title_tv"
-                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:gravity="center_vertical"
                     android:text="@string/search_by_type"
                     android:textAllCaps="true"
-                    android:textColor="@color/title_color"
+                    android:textColor="@color/tv_login"
                     android:textSize="@dimen/_20sdp"
                     android:textStyle="bold" />
 
@@ -104,7 +105,7 @@
         <LinearLayout
             android:id="@+id/bottom_layout"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_35sdp"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
@@ -137,6 +138,4 @@
                 android:textColor="@android:color/white" />
         </LinearLayout>
     </RelativeLayout>
-
-
 </RelativeLayout>

@@ -38,6 +38,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.gson.JsonObject;
 import com.i2donate.Activity.InternationalCharitiesActivity;
 import com.i2donate.Activity.LoginActivity;
+import com.i2donate.Activity.MakeTypeScreenActivity;
 import com.i2donate.Activity.SelectPaymentActivity;
 import com.i2donate.Activity.UnitedStateDetailsActivity;
 import com.i2donate.Model.ChangeActivity;
@@ -406,171 +407,173 @@ public class LoadmoreInternationlocationAdapterList extends RecyclerView.Adapter
             @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View v) {
-                if (session.isLoggedIn()) {
-                    d = new BottomSheetDialog(mContext, R.style.payment_dailog);
-                    d.setContentView(R.layout.payment_alert_dailog);
-                    LinearLayout payment_dailog_linear = (LinearLayout) d.findViewById(R.id.payment_dailog_linear);
-                    final EditText payment_et = (EditText) d.findViewById(R.id.payment_et);
-                    TextView cancel_tv = (TextView) d.findViewById(R.id.cancel_tv);
-
-                    Button payment_continue_btn = (Button) d.findViewById(R.id.payment_continue_btn);
-                    TextView textview_percentage = (TextView) d.findViewById(R.id.textview_percentage);
-                    String code = "Merchant charges and processing fee will be added to whatever donation amount is entered. <img src ='addbutton.png'>";
-
-                    Spanned spanned = Html.fromHtml(code, new Html.ImageGetter() {
-                        @Override
-                        public Drawable getDrawable(String arg0) {
-                            int id = 0;
-
-                            if (arg0.equals("addbutton.png")) {
-                                id = R.drawable.ic_info;
-                            }
-                            LevelListDrawable d = new LevelListDrawable();
-                            Drawable empty = mContext.getResources().getDrawable(id);
-                            d.addLevel(0, 0, empty);
-                            d.setBounds(0, 0, empty.getIntrinsicWidth(), empty.getIntrinsicHeight());
-
-                            return d;
-
-                        }
-                    }, null);
-                    textview_percentage.setText(spanned);
-                    d.getWindow().setBackgroundDrawable(new ColorDrawable(R.color.trans_black));
-                    payment_et.addTextChangedListener(new TextWatcher() {
-                        @Override
-                        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                        }
-
-                        @Override
-                        public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-                            if (charSequence.toString().startsWith(".")) {
-                                payment_et.setText("");
-                                Toast.makeText(mContext, "Dot Not allowed", Toast.LENGTH_LONG).show();
-                            }
-                        }
-
-                        @Override
-                        public void afterTextChanged(Editable s) {
-
-                        }
-                    });
-
-                    payment_dailog_linear.setOnTouchListener(new View.OnTouchListener() {
-                        @Override
-                        public boolean onTouch(View v, MotionEvent event) {
-                            InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Context.INPUT_METHOD_SERVICE);
-                            imm.hideSoftInputFromWindow(payment_et.getWindowToken(),
-                                    InputMethodManager.RESULT_UNCHANGED_SHOWN);
-                            return false;
-                        }
-                    });
-                    textview_percentage.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(mContext, R.style.CustomAlertDialog);
-                            LayoutInflater inflater = mContext.getLayoutInflater();
-
-                            View dialogView = inflater.inflate(R.layout.percentage_detail_layout, null);
-                            dialogBuilder.setView(dialogView);
-                            final AlertDialog alertDialog = dialogBuilder.create();
-                            String payment_amt = payment_et.getText().toString().trim();
-                            TextView donationamt_tv = (TextView) dialogView.findViewById(R.id.donationamt_tv);
-                            ImageView close_img = (ImageView) dialogView.findViewById(R.id.close_img);
-                            if (!payment_amt.isEmpty()) {
-                                donationamt_tv.setText("$ " + payment_amt);
-                            } else {
-                                donationamt_tv.setText("$ " + "10");
-                                payment_amt = "10";
-                            }
-                            Double amount = Double.valueOf(payment_amt);
-                            double processing_fee = ((amount / 100.0f) * 1);
-                            double total_amt = processing_fee + amount;
-                            double percentage = ((total_amt / 100.0f) * 2.9) + 0.30;
-
-                            Double payment_amt_total = amount + percentage + processing_fee;
-                            TextView merchantcharges_tv = (TextView) dialogView.findViewById(R.id.merchantcharges_tv);
-                            merchantcharges_tv.setText("$ " + String.format(" %.2f", percentage));
-                            TextView processing_tv = (TextView) dialogView.findViewById(R.id.processing_tv);
-                            processing_tv.setText("$ " + String.valueOf(processing_fee));
-                            TextView totalamt_tv = (TextView) dialogView.findViewById(R.id.totalamt_tv);
-                            totalamt_tv.setText("$ " + String.format("%.2f", payment_amt_total));
-                            close_img.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    alertDialog.dismiss();
-                                }
-                            });
-
-                            alertDialog.show();
-                        }
-                    });
-                    payment_continue_btn.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            final String payment = payment_et.getText().toString().trim();
-                            if (!payment.isEmpty()) {
-                                float fpay = Float.parseFloat(payment);
-                                int pay = (int) fpay;
-                                if (pay >= 1) {
-                                    ProgressDialog progressDialog = ProgressDialog.show(mContext, "", "Please wait.", true);
-                                    progressDialog.show();
-                                    apiService =
-                                            ApiClient.getClient().create(ApiInterface.class);
-
-                                    Call<String> call = apiService.getbraintree();
-                                    call.enqueue(new Callback<String>() {
-                                        @Override
-                                        public void onResponse(Call<String> call, Response<String> response) {
-                                            progressDialog.dismiss();
-                                            if (response.isSuccessful()) {
-                                                try {
-                                                    Log.e("Response_payment1", response.body().toString());
-
-                                                    Intent intent = new Intent(mContext, SelectPaymentActivity.class);
-                                                    Bundle bundle = new Bundle();
-                                                    iDonateSharedPreference.setdailogueamt(mContext, payment);
-                                                    bundle.putString("payment_amt", payment);
-                                                    bundle.putString("charity_name", charitylist1.get(position).getName());
-                                                    bundle.putString("charity_id", charitylist1.get(position).getId());
-                                                    bundle.putString("cToken", response.body());
-                                                    iDonateSharedPreference.setcharity_id(mContext, charitylist1.get(position).getId());
-                                                    iDonateSharedPreference.setcharity_name(mContext, charitylist1.get(position).getName());
-                                                    intent.putExtras(bundle);
-                                                    mContext.startActivity(intent);
-                                                    mContext.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                                                    d.dismiss();
-                                                } catch (Exception e) {
-                                                    e.getMessage();
-                                                }
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onFailure(Call<String> call, Throwable t) {
-                                            progressDialog.dismiss();
-                                            Log.e("Response_error", t.toString());
-                                        }
-                                    });
-                                } else {
-                                    Toast.makeText(mContext, "Please enter the amount greater than Zero", Toast.LENGTH_SHORT).show();
-                                }
-                            } else {
-                                Toast.makeText(mContext, "Please enter the amount", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
-                    cancel_tv.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            d.dismiss();
-                        }
-                    });
-                    d.setCancelable(true);
-                    d.show();
-                } else {
-                    LoginDialog();
-                }
+                Intent intent = new Intent(mContext, MakeTypeScreenActivity.class);
+                mContext.startActivity(intent);
+//                if (session.isLoggedIn()) {
+//                    d = new BottomSheetDialog(mContext, R.style.payment_dailog);
+//                    d.setContentView(R.layout.payment_alert_dailog);
+//                    LinearLayout payment_dailog_linear = (LinearLayout) d.findViewById(R.id.payment_dailog_linear);
+//                    final EditText payment_et = (EditText) d.findViewById(R.id.payment_et);
+//                    TextView cancel_tv = (TextView) d.findViewById(R.id.cancel_tv);
+//
+//                    Button payment_continue_btn = (Button) d.findViewById(R.id.payment_continue_btn);
+//                    TextView textview_percentage = (TextView) d.findViewById(R.id.textview_percentage);
+//                    String code = "Merchant charges and processing fee will be added to whatever donation amount is entered. <img src ='addbutton.png'>";
+//
+//                    Spanned spanned = Html.fromHtml(code, new Html.ImageGetter() {
+//                        @Override
+//                        public Drawable getDrawable(String arg0) {
+//                            int id = 0;
+//
+//                            if (arg0.equals("addbutton.png")) {
+//                                id = R.drawable.ic_info;
+//                            }
+//                            LevelListDrawable d = new LevelListDrawable();
+//                            Drawable empty = mContext.getResources().getDrawable(id);
+//                            d.addLevel(0, 0, empty);
+//                            d.setBounds(0, 0, empty.getIntrinsicWidth(), empty.getIntrinsicHeight());
+//
+//                            return d;
+//
+//                        }
+//                    }, null);
+//                    textview_percentage.setText(spanned);
+//                    d.getWindow().setBackgroundDrawable(new ColorDrawable(R.color.trans_black));
+//                    payment_et.addTextChangedListener(new TextWatcher() {
+//                        @Override
+//                        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//                        }
+//
+//                        @Override
+//                        public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
+//                            if (charSequence.toString().startsWith(".")) {
+//                                payment_et.setText("");
+//                                Toast.makeText(mContext, "Dot Not allowed", Toast.LENGTH_LONG).show();
+//                            }
+//                        }
+//
+//                        @Override
+//                        public void afterTextChanged(Editable s) {
+//
+//                        }
+//                    });
+//
+//                    payment_dailog_linear.setOnTouchListener(new View.OnTouchListener() {
+//                        @Override
+//                        public boolean onTouch(View v, MotionEvent event) {
+//                            InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Context.INPUT_METHOD_SERVICE);
+//                            imm.hideSoftInputFromWindow(payment_et.getWindowToken(),
+//                                    InputMethodManager.RESULT_UNCHANGED_SHOWN);
+//                            return false;
+//                        }
+//                    });
+//                    textview_percentage.setOnClickListener(new View.OnClickListener() {
+//                        @Override
+//                        public void onClick(View v) {
+//                            AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(mContext, R.style.CustomAlertDialog);
+//                            LayoutInflater inflater = mContext.getLayoutInflater();
+//
+//                            View dialogView = inflater.inflate(R.layout.percentage_detail_layout, null);
+//                            dialogBuilder.setView(dialogView);
+//                            final AlertDialog alertDialog = dialogBuilder.create();
+//                            String payment_amt = payment_et.getText().toString().trim();
+//                            TextView donationamt_tv = (TextView) dialogView.findViewById(R.id.donationamt_tv);
+//                            ImageView close_img = (ImageView) dialogView.findViewById(R.id.close_img);
+//                            if (!payment_amt.isEmpty()) {
+//                                donationamt_tv.setText("$ " + payment_amt);
+//                            } else {
+//                                donationamt_tv.setText("$ " + "10");
+//                                payment_amt = "10";
+//                            }
+//                            Double amount = Double.valueOf(payment_amt);
+//                            double processing_fee = ((amount / 100.0f) * 1);
+//                            double total_amt = processing_fee + amount;
+//                            double percentage = ((total_amt / 100.0f) * 2.9) + 0.30;
+//
+//                            Double payment_amt_total = amount + percentage + processing_fee;
+//                            TextView merchantcharges_tv = (TextView) dialogView.findViewById(R.id.merchantcharges_tv);
+//                            merchantcharges_tv.setText("$ " + String.format(" %.2f", percentage));
+//                            TextView processing_tv = (TextView) dialogView.findViewById(R.id.processing_tv);
+//                            processing_tv.setText("$ " + String.valueOf(processing_fee));
+//                            TextView totalamt_tv = (TextView) dialogView.findViewById(R.id.totalamt_tv);
+//                            totalamt_tv.setText("$ " + String.format("%.2f", payment_amt_total));
+//                            close_img.setOnClickListener(new View.OnClickListener() {
+//                                @Override
+//                                public void onClick(View v) {
+//                                    alertDialog.dismiss();
+//                                }
+//                            });
+//
+//                            alertDialog.show();
+//                        }
+//                    });
+//                    payment_continue_btn.setOnClickListener(new View.OnClickListener() {
+//                        @Override
+//                        public void onClick(View v) {
+//                            final String payment = payment_et.getText().toString().trim();
+//                            if (!payment.isEmpty()) {
+//                                float fpay = Float.parseFloat(payment);
+//                                int pay = (int) fpay;
+//                                if (pay >= 1) {
+//                                    ProgressDialog progressDialog = ProgressDialog.show(mContext, "", "Please wait.", true);
+//                                    progressDialog.show();
+//                                    apiService =
+//                                            ApiClient.getClient().create(ApiInterface.class);
+//
+//                                    Call<String> call = apiService.getbraintree();
+//                                    call.enqueue(new Callback<String>() {
+//                                        @Override
+//                                        public void onResponse(Call<String> call, Response<String> response) {
+//                                            progressDialog.dismiss();
+//                                            if (response.isSuccessful()) {
+//                                                try {
+//                                                    Log.e("Response_payment1", response.body().toString());
+//
+//                                                    Intent intent = new Intent(mContext, SelectPaymentActivity.class);
+//                                                    Bundle bundle = new Bundle();
+//                                                    iDonateSharedPreference.setdailogueamt(mContext, payment);
+//                                                    bundle.putString("payment_amt", payment);
+//                                                    bundle.putString("charity_name", charitylist1.get(position).getName());
+//                                                    bundle.putString("charity_id", charitylist1.get(position).getId());
+//                                                    bundle.putString("cToken", response.body());
+//                                                    iDonateSharedPreference.setcharity_id(mContext, charitylist1.get(position).getId());
+//                                                    iDonateSharedPreference.setcharity_name(mContext, charitylist1.get(position).getName());
+//                                                    intent.putExtras(bundle);
+//                                                    mContext.startActivity(intent);
+//                                                    mContext.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+//                                                    d.dismiss();
+//                                                } catch (Exception e) {
+//                                                    e.getMessage();
+//                                                }
+//                                            }
+//                                        }
+//
+//                                        @Override
+//                                        public void onFailure(Call<String> call, Throwable t) {
+//                                            progressDialog.dismiss();
+//                                            Log.e("Response_error", t.toString());
+//                                        }
+//                                    });
+//                                } else {
+//                                    Toast.makeText(mContext, "Please enter the amount greater than Zero", Toast.LENGTH_SHORT).show();
+//                                }
+//                            } else {
+//                                Toast.makeText(mContext, "Please enter the amount", Toast.LENGTH_SHORT).show();
+//                            }
+//                        }
+//                    });
+//                    cancel_tv.setOnClickListener(new View.OnClickListener() {
+//                        @Override
+//                        public void onClick(View v) {
+//                            d.dismiss();
+//                        }
+//                    });
+//                    d.setCancelable(true);
+//                    d.show();
+//                } else {
+//                    LoginDialog();
+//                }
             }
         });
 

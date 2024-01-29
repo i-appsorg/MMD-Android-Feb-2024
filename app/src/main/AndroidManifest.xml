@@ -64,6 +64,9 @@
             android:name=".Activity.BrowseActivityNew"
             android:exported="false" /> -->
         <activity
+            android:name=".Activity.MakeTypeScreenActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.NamePlaceSerachActivity"
             android:exported="false">
             <meta-data
