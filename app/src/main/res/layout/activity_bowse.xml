@@ -93,7 +93,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
-            android:src="@drawable/ic_temple_by_location"
+            android:src="@drawable/ic_temple_by_deity"
             app:layout_constraintBottom_toBottomOf="@+id/name_relative_layout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/name_relative_layout"

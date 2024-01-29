@@ -48,7 +48,7 @@
                         android:id="@+id/title_location_tv"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:padding="@dimen/_5sdp"
-                        android:text="@string/international"
+                        android:text="@string/temple_by_location"
                         android:textAllCaps="true"
                         android:textColor="@color/tv_login"
                         android:textSize="@dimen/_20sdp"
@@ -67,7 +67,7 @@
 
                         <ImageView
                             android:layout_width="0dp"
-                            android:layout_height="@dimen/_10sdp"
+                            android:layout_height="@dimen/_15sdp"
                             android:layout_gravity="center_vertical"
                             android:layout_weight=".1"
                             android:src="@drawable/search_icon" />

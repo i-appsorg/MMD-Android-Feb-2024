@@ -303,6 +303,7 @@ public class LoadmoreInternationlocationAdapterList extends RecyclerView.Adapter
         holder.follow_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
 
                     String like = "0";
@@ -322,6 +323,7 @@ public class LoadmoreInternationlocationAdapterList extends RecyclerView.Adapter
         holder.unfollow_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
 
                     String like = "1";
@@ -341,6 +343,7 @@ public class LoadmoreInternationlocationAdapterList extends RecyclerView.Adapter
         holder.like_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
 
                     String like = "1";
@@ -357,6 +360,7 @@ public class LoadmoreInternationlocationAdapterList extends RecyclerView.Adapter
         holder.unlike_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
 
                     String like = "0";

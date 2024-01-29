@@ -306,6 +306,7 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
         holder.follow_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
                     if (mContext instanceof IMethodCaller) {
                         ((IMethodCaller) mContext).yourDesiredMethod();
@@ -327,6 +328,7 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
         holder.unfollow_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
                     if (mContext instanceof IMethodCaller) {
                         ((IMethodCaller) mContext).yourDesiredMethod();
@@ -348,6 +350,7 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
         holder.like_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
                     if (mContext instanceof IMethodCaller) {
                         ((IMethodCaller) mContext).yourDesiredMethod();
@@ -366,6 +369,7 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
         holder.unlike_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
                     if (mContext instanceof IMethodCaller) {
                         ((IMethodCaller) mContext).yourDesiredMethod();
@@ -418,6 +422,7 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
             @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
                     d = new BottomSheetDialog(mContext, R.style.payment_dailog);
                     d.setContentView(R.layout.payment_alert_dailog);

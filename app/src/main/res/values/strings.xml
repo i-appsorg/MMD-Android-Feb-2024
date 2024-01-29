@@ -107,7 +107,7 @@
     <string name="browse_better">A better way to give</string>
     <string name="browse_sentence">Do a deed of simple kindness; though its end you may not see, it may reach like widening ripples down a long eternity.</string>
     <string name="browse_writter_name">- Joseph Norris</string>
-<!--    <string name="browse_united_state">united states</string>-->
+    <!--    <string name="browse_united_state">united states</string>-->
     <string name="browse_united_state">TEMPLES IN INDIA</string>
     <string name="browse_international">international \ncharites\n Registered in usa</string>
     <string name="browse_charites">charites</string>
@@ -132,9 +132,9 @@
     <string name="united_state_title_name">Search by Name</string>
     <string name="united_state_type">DEITY</string>
     <string name="united_state_search">Advanced Search</string>
-<!--    <string name="united_state_nonprofit">Nonprofits &amp; Charities near you...</string>-->
+    <!--    <string name="united_state_nonprofit">Nonprofits &amp; Charities near you...</string>-->
     <string name="united_state_nonprofit">Temples near you...</string>
-<!--    <string name="united_state_location">Search by city/state</string>-->
+    <!--    <string name="united_state_location">Search by city/state</string>-->
     <string name="united_state_location">Filter By Location</string>
     <string name="united_state_internationlocation">Search by country</string>
     <string name="united_state_search_name">Enter nonprofit/charity name</string>
@@ -213,12 +213,15 @@
     <string name="no_notifications">No Notifications</string>
     <!--Advanced Search-->
     <string name="advanced_search">advanced search</string>
-    <string name="advanced_narrow">Narrow down search results for complex searches by using the Advanced Search.</string>
-    <string name="advanced_tax">Tax Status</string>
+    <string name="advanced_narrow">Refine your search with greater granularity or interesting details</string>
+    <!--    <string name="advanced_narrow">Narrow down search results for complex searches by using the Advanced Search.</string>-->
+    <string name="advanced_tax">Refined Deity Search</string>
+    <!--    <string name="advanced_tax">Tax Status</string>-->
     <string name="advanced_exempt">Deductible</string>
     <string name="advanced_not_exempt">Not Deductible</string>
     <string name="advanced_sub_types">Types</string>
-    <string name="advance_year_in">Annual Revenue</string>
+    <string name="advance_year_in">Temple Classification</string>
+    <!--    <string name="advance_year_in">Annual Revenue</string>-->
 
     <!--Advance Search list-->
 
@@ -327,4 +330,6 @@
     <string name="programs">PROGRAMS</string>
     <string name="puja">PUJA</string>
     <string name="sponsorship">SPONSORSHIP</string>
+    <string name="temple_by_location">Temple By Location</string>
+    <string name="all_the_dhamas_are_related_to_four_yuga_s_epochs">All the \'dhamas\' are related to four Yuga\'s (epochs)</string>
 </resources>

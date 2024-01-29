@@ -160,6 +160,7 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
         like_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
                     String like = "1";
                     String user_id = userDetails.get(SessionManager.KEY_UID);
@@ -174,6 +175,7 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
         unlike_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
                     String like = "0";
                     String user_id = userDetails.get(SessionManager.KEY_UID);
@@ -189,7 +191,7 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
         follow_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+//todo login
                 if (session.isLoggedIn()) {
                     String like = "0";
                     String user_id = userDetails.get(SessionManager.KEY_UID);
@@ -209,7 +211,7 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
         unfollow_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+//todo login
                 if (session.isLoggedIn()) {
 
                     String like = "1";

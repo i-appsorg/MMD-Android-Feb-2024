@@ -209,6 +209,7 @@ public class SelectPaymentActivity extends AppCompatActivity implements DropInLi
         Log.e("userDetails", "" + userDetails);
         Log.e("KEY_UID", "" + userDetails.get(SessionManager.KEY_UID));
         String user_id = "";
+        //todo login
         if (session.isLoggedIn()) {
             user_id = userDetails.get(SessionManager.KEY_UID);
         }

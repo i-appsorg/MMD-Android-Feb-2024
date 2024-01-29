@@ -167,7 +167,7 @@ public class InternationalCharitiesActivity extends CommonBackActivity {
         } else if (iDonateSharedPreference.getSelectedtype(getApplicationContext()).equalsIgnoreCase("typesearch")) {
             title_location_tv.setText("Advanced Search");
         } else {
-            title_location_tv.setText("international charites Reg...");
+            title_location_tv.setText("Temple By Location");
         }
         iDonateSharedPreference.setdailoguepage(getApplicationContext(), "0");
         slideUp = AnimationUtils.loadAnimation(this, R.anim.visiblity_animation);
@@ -216,9 +216,10 @@ public class InternationalCharitiesActivity extends CommonBackActivity {
             } else if (iDonateSharedPreference.getSelectedtype(getApplicationContext()).equalsIgnoreCase("typesearch")) {
                 title_location_tv.setText("Advanced Search");
             } else {
-                title_location_tv.setText("international charites Reg...");
+                title_location_tv.setText("Temple By Location");
             }
         }
+        //todo login
         if (session.isLoggedIn()) {
             title_tv1.setVisibility(View.VISIBLE);
         } else {
@@ -487,17 +488,18 @@ public class InternationalCharitiesActivity extends CommonBackActivity {
                 iDonateSharedPreference.setselectedtypedata(getApplicationContext(), listOfdate);
                 iDonateSharedPreference.setselectedsubcategorydata(getApplicationContext(), listofsubCategory);
                 iDonateSharedPreference.setselectedchildcategorydata(getApplicationContext(), listofchilCategory);
-                if (session.isLoggedIn()) {
+                //todo login
+//                if (session.isLoggedIn()) {
                     if (data.equalsIgnoreCase("3")) {
                         iDonateSharedPreference.setAdvancepage(getApplicationContext(), "namesearch");
-                        ChangeActivity.changeActivity(InternationalCharitiesActivity.this, AdvanceCompletedActivity.class);
+                        ChangeActivity.changeActivity(InternationalCharitiesActivity.this, AdvanceCompletedNewActivity.class);
                     } else {
                         iDonateSharedPreference.setAdvancepage(getApplicationContext(), "international");
-                        ChangeActivity.changeActivity(InternationalCharitiesActivity.this, AdvanceCompletedActivity.class);
+                        ChangeActivity.changeActivity(InternationalCharitiesActivity.this, AdvanceCompletedNewActivity.class);
                     }
-                } else {
-                    LoginDialog();
-                }
+//                } else {
+//                    LoginDialog();
+//                }
             }
         });
 
@@ -510,13 +512,14 @@ public class InternationalCharitiesActivity extends CommonBackActivity {
                 iDonateSharedPreference.setselectedtypedata(getApplicationContext(), listOfdate);
                 iDonateSharedPreference.setselectedsubcategorydata(getApplicationContext(), listofsubCategory);
                 iDonateSharedPreference.setselectedchildcategorydata(getApplicationContext(), listofchilCategory);
+                //todo login
                 if (session.isLoggedIn()) {
                     if (data.equalsIgnoreCase("3")) {
                         iDonateSharedPreference.setAdvancepage(getApplicationContext(), "namesearch");
-                        ChangeActivity.changeActivity(InternationalCharitiesActivity.this, AdvanceCompletedActivity.class);
+                        ChangeActivity.changeActivity(InternationalCharitiesActivity.this, AdvanceCompletedNewActivity.class);
                     } else {
                         iDonateSharedPreference.setAdvancepage(getApplicationContext(), "international");
-                        ChangeActivity.changeActivity(InternationalCharitiesActivity.this, AdvanceCompletedActivity.class);
+                        ChangeActivity.changeActivity(InternationalCharitiesActivity.this, AdvanceCompletedNewActivity.class);
                     }
                 } else {
                     LoginDialog();
@@ -620,7 +623,7 @@ public class InternationalCharitiesActivity extends CommonBackActivity {
         Log.e("userDetails", "" + userDetails);
         Log.e("KEY_UID", "" + userDetails.get(SessionManager.KEY_UID));
         String user_id = "";
-
+//todo login
         if (session.isLoggedIn()) {
             user_id = userDetails.get(SessionManager.KEY_UID);
         }

@@ -15,6 +15,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.i2donate.Activity.AdvanceCompletedActivity;
+import com.i2donate.Activity.AdvanceCompletedNewActivity;
 import com.i2donate.Activity.SubCategoryActivity;
 import com.i2donate.Activity.TitleSubTitleActivity;
 import com.i2donate.Model.Category_new;
@@ -54,6 +55,15 @@ public class CategorylistAdapter extends RecyclerView.Adapter<CategorylistAdapte
     public boolean selected, checked;
 
     public CategorylistAdapter(AdvanceCompletedActivity advanceCompletedActivity, ArrayList<Category_new> categorylis) {
+        this.mContext = advanceCompletedActivity;
+        this.categorylis = categorylis;
+        parentItems = new ArrayList<>();
+        childItems = new ArrayList<>();
+        iDonateSharedPreference = new IDonateSharedPreference();
+        Log.e("listOfdate", "" + categorylis.size());
+    }
+
+    public CategorylistAdapter(AdvanceCompletedNewActivity advanceCompletedActivity, ArrayList<Category_new> categorylis) {
         this.mContext = advanceCompletedActivity;
         this.categorylis = categorylis;
         parentItems = new ArrayList<>();

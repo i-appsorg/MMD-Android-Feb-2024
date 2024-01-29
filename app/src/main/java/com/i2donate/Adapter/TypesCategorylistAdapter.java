@@ -94,6 +94,7 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
         holder.listview_tv_item1.setText(categorylis.get(position).getCategory_name());
         holder.listview_tv_item2.setText(categorylis.get(position).getCategory_name());
 //        Log.e("selected_da",""+categorylis.get(position).getSlected());
+        //todo login
         if (session.isLoggedIn()) {
             holder.listview_tv_subitem.setText("Filter by sub-types");
         } else {
@@ -221,6 +222,7 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
         holder.sublinear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
                     listofchildcategory = iDonateSharedPreference.getselectedchildcategorydata(mContext);
                     listofItems = iDonateSharedPreference.getSelectedItems(mContext);

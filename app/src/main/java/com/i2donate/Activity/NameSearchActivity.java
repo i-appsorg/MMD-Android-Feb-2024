@@ -472,7 +472,7 @@ public class NameSearchActivity extends CommonBackActivity {
         advance_search_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+//todo login
                 if (session.isLoggedIn()) {
                     listOfdate.clear();
                     listofsubCategory.clear();
@@ -482,7 +482,7 @@ public class NameSearchActivity extends CommonBackActivity {
                     iDonateSharedPreference.setselectedchildcategorydata(getApplicationContext(), listofchilCategory);
                     iDonateSharedPreference.settype(getApplicationContext(), "0");
                     iDonateSharedPreference.setAdvancepage(getApplicationContext(), "namesearch");
-                    ChangeActivity.changeActivity(NameSearchActivity.this, AdvanceCompletedActivity.class);
+                    ChangeActivity.changeActivity(NameSearchActivity.this, AdvanceCompletedNewActivity.class);
                     finish();
                 } else {
                     listOfdate.clear();
@@ -500,6 +500,7 @@ public class NameSearchActivity extends CommonBackActivity {
         advance_search_text_white.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
                     listOfdate.clear();
                     listofsubCategory.clear();
@@ -510,7 +511,7 @@ public class NameSearchActivity extends CommonBackActivity {
                     iDonateSharedPreference.setselectedchildcategorydata(getApplicationContext(), listofchilCategory);
                     iDonateSharedPreference.settype(getApplicationContext(), "0");
                     iDonateSharedPreference.setAdvancepage(getApplicationContext(), "namesearch");
-                    ChangeActivity.changeActivity(NameSearchActivity.this, AdvanceCompletedActivity.class);
+                    ChangeActivity.changeActivity(NameSearchActivity.this, AdvanceCompletedNewActivity.class);
 
                 } else {
                     listOfdate.clear();
@@ -529,7 +530,7 @@ public class NameSearchActivity extends CommonBackActivity {
         advance_search_text1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+//todo login
                 if (session.isLoggedIn()) {
                     listOfdate.clear();
                     listofsubCategory.clear();
@@ -540,7 +541,7 @@ public class NameSearchActivity extends CommonBackActivity {
                     iDonateSharedPreference.setselectedchildcategorydata(getApplicationContext(), listofchilCategory);
                     iDonateSharedPreference.settype(getApplicationContext(), "0");
                     iDonateSharedPreference.setAdvancepage(getApplicationContext(), "namesearch");
-                    ChangeActivity.changeActivity(NameSearchActivity.this, AdvanceCompletedActivity.class);
+                    ChangeActivity.changeActivity(NameSearchActivity.this, AdvanceCompletedNewActivity.class);
 
                 } else {
                     listOfdate.clear();
@@ -558,6 +559,7 @@ public class NameSearchActivity extends CommonBackActivity {
         advance_search_text1_white.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
                     listOfdate.clear();
                     listofsubCategory.clear();
@@ -568,7 +570,7 @@ public class NameSearchActivity extends CommonBackActivity {
                     iDonateSharedPreference.setselectedchildcategorydata(getApplicationContext(), listofchilCategory);
                     iDonateSharedPreference.settype(getApplicationContext(), "0");
                     iDonateSharedPreference.setAdvancepage(getApplicationContext(), "namesearch");
-                    ChangeActivity.changeActivity(NameSearchActivity.this, AdvanceCompletedActivity.class);
+                    ChangeActivity.changeActivity(NameSearchActivity.this, AdvanceCompletedNewActivity.class);
 
                 } else {
                     listOfdate.clear();

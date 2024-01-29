@@ -197,14 +197,15 @@ public class TypesActivity extends AppCompatActivity {
         advance_search_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (session.isLoggedIn()) {
-                    ChangeActivity.changeActivity(TypesActivity.this, AdvanceCompletedActivity.class);
+                //todo login
+//                if (session.isLoggedIn()) {
+                    ChangeActivity.changeActivity(TypesActivity.this, AdvanceCompletedNewActivity.class);
                     // finish();
-                } else {
-
-                    ChangeActivity.changeActivity(TypesActivity.this, LoginActivity.class);
-                    //  finish();
-                }
+//                } else {
+//
+//                    ChangeActivity.changeActivity(TypesActivity.this, LoginActivity.class);
+//                    //  finish();
+//                }
             }
         });
         back_icon_login_img.setOnClickListener(new View.OnClickListener() {
@@ -272,7 +273,7 @@ public class TypesActivity extends AppCompatActivity {
         Log.e("KEY_UID", "" + userDetails.get(SessionManager.KEY_UID));
         String user_id = "";
         String token = "";
-
+//todo login
         if (session.isLoggedIn()) {
             user_id = userDetails.get(SessionManager.KEY_UID);
             token = userDetails.get(SessionManager.KEY_token);

@@ -60,11 +60,19 @@
         android:usesCleartextTraffic="true"
         android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
         tools:replace="android:icon,android:theme,android:allowBackup">
-        <!-- <activity
+        <activity
+            android:name=".Activity.SearchNewActivity"
+            android:exported="false" />
+        <!--
+         <activity
             android:name=".Activity.BrowseActivityNew"
-            android:exported="false" /> -->
+            android:exported="false" />
+        -->
         <activity
             android:name=".Activity.MakeTypeScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AdvanceCompletedNewActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.NamePlaceSerachActivity"

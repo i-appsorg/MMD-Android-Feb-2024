@@ -66,7 +66,7 @@ public class NotificationActivity extends CommonMenuActivity {
         notification_recyclerview=(RecyclerView)findViewById(R.id.notification_recyclerview);
 
         NotificationAPI();
-
+//todo login
 
         if (session.isLoggedIn()) {
 
@@ -126,6 +126,7 @@ public class NotificationActivity extends CommonMenuActivity {
         Log.e("userDetails", "" + userDetails);
         Log.e("KEY_UID", "" + userDetails.get(SessionManager.KEY_UID));
         String user_id = "";
+        //todo login
         if (session.isLoggedIn()) {
             user_id = userDetails.get(SessionManager.KEY_UID);
         }

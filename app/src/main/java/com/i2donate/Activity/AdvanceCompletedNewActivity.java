@@ -1,9 +1,13 @@
 package com.i2donate.Activity;
 
+import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -12,42 +16,71 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.gson.JsonObject;
 import com.i2donate.Adapter.CategorylistAdapter;
-import com.i2donate.Model.ChangeActivity;
+import com.i2donate.Adapter.NewCategorylistAdapter;
+import com.i2donate.CommonActivity.CommonBackActivity;
+import com.i2donate.CommonActivity.CommonMenuActivity;
+import com.i2donate.Model.Category_new;
+import com.i2donate.Model.child_categorynew;
+import com.i2donate.Model.subcategorynew;
 import com.i2donate.R;
+import com.i2donate.RetrofitAPI.ApiClient;
+import com.i2donate.RetrofitAPI.ApiInterface;
 import com.i2donate.Session.IDonateSharedPreference;
 import com.i2donate.Session.SessionManager;
 
-import java.util.ArrayList;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-public class AdvanceCompletedActivity extends AppCompatActivity {
-    private static final String TAG = AdvanceCompletedActivity.class.getSimpleName();
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class AdvanceCompletedNewActivity extends CommonBackActivity {
+    private static final String TAG = AdvanceCompletedNewActivity.class.getSimpleName();
     RecyclerView recyclerview_advancesearch;
     static SessionManager session;
+    static HashMap<String, String> userDetails;
+    ApiInterface apiService;
+    String response_data;
+    int i = 0;
+    public static ArrayList<Category_new> category_newArrayList = new ArrayList<>();
+    public static ArrayList<subcategorynew> sub_category_newArrayList = new ArrayList<>();
+    public static ArrayList<child_categorynew> child_category_newArrayList = new ArrayList<>();
     AlertDialog.Builder builder;
     private RecyclerView.LayoutManager layoutManager;
     TextView exempt_tv_deselect, exempt_tv_select, non_exempt_deselect_tv, non_exempt_select_tv;
     LinearLayout bottom_layout;
-    ImageView back_icon_login_img;
     String select = "";
     String select1 = "";
     static ArrayList<String> listOfdate = new ArrayList<>();
     RelativeLayout search_types_sub_types, annualRevenue;
     int flag = 1;
+    int IsType = 0, IsRevenue = 0;
+
     Button reset_button, apply_button;
     IDonateSharedPreference iDonateSharedPreference;
+    RecyclerView RvSearch, RvRevenue;
+    NewCategorylistAdapter categorylistAdapter;
     ArrayList<String> arraychecked_item = new ArrayList<>();
     ArrayList<String> categorychecked_item = new ArrayList<>();
-
+    private ArrayList<GroupName> Array = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_advance_completed);
+        setView(R.layout.activity_advance_completed_new,TAG);
+        CommonBackActivity.show();
         init();
         listener();
 
@@ -144,24 +177,34 @@ public class AdvanceCompletedActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 flag = 0;
-                ChangeActivity.changeActivity(AdvanceCompletedActivity.this, AnnualRevenueActivity.class);
+                if (IsRevenue == 0) {
+                    IsRevenue = 1;
+                    ((ImageView) findViewById(R.id.IvPlus2)).setImageResource(R.drawable.remove_icon);
+                    RvRevenue.setVisibility(View.VISIBLE);
+                } else {
+                    ((ImageView) findViewById(R.id.IvPlus2)).setImageResource(R.drawable.add_icon);
+                    IsRevenue = 0;
+                    RvRevenue.setVisibility(View.GONE);
+                }
+//                ChangeActivity.changeActivity(AdvanceCompletedActivity.this, AnnualRevenueActivity.class);
             }
         });
 
         search_types_sub_types.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ChangeActivity.changeActivity(AdvanceCompletedActivity.this, TitleSubTitleActivity.class);
-
+                if (IsType == 0) {
+                    IsType = 1;
+                    ((ImageView) findViewById(R.id.IvPlus)).setImageResource(R.drawable.remove_icon);
+                    RvSearch.setVisibility(View.VISIBLE);
+                } else {
+                    ((ImageView) findViewById(R.id.IvPlus)).setImageResource(R.drawable.add_icon);
+                    IsType = 0;
+                    RvSearch.setVisibility(View.GONE);
+                }
+//                ChangeActivity.changeActivity(AdvanceCompletedActivity.this, TitleSubTitleActivity.class);
             }
         });
-        back_icon_login_img.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dailogue_forgot();
-            }
-        });
-
         apply_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -170,7 +213,7 @@ public class AdvanceCompletedActivity extends AppCompatActivity {
                 iDonateSharedPreference.setselected_iem_list(getApplicationContext(), arraychecked_item);
                 Log.e("search_type", "" + iDonateSharedPreference.getAdvancepage(getApplicationContext()));
                 if (iDonateSharedPreference.getAdvancepage(getApplicationContext()).equalsIgnoreCase("unitedstate")) {
-                    Intent intent = new Intent(AdvanceCompletedActivity.this, UnitedStateActivity.class);
+                    Intent intent = new Intent(AdvanceCompletedNewActivity.this, UnitedStateActivity.class);
                     intent.putExtra("data", "1");
                     startActivity(intent);
                     TitleSubTitleActivity.listOfcategory.clear();
@@ -178,7 +221,7 @@ public class AdvanceCompletedActivity extends AppCompatActivity {
                     Log.e("listOfcategory_item1", "" + arraychecked_item);
                     finishAffinity();
                 } else if (iDonateSharedPreference.getAdvancepage(getApplicationContext()).equalsIgnoreCase("international")) {
-                    Intent intent = new Intent(AdvanceCompletedActivity.this, InternationalCharitiesActivity.class);
+                    Intent intent = new Intent(AdvanceCompletedNewActivity.this, InternationalCharitiesActivity.class);
                     intent.putExtra("data", "1");
                     startActivity(intent);
                     TitleSubTitleActivity.listOfcategory.clear();
@@ -186,7 +229,7 @@ public class AdvanceCompletedActivity extends AppCompatActivity {
                     Log.e("listOfcategory_item1", "" + arraychecked_item);
                     finishAffinity();
                 } else {
-                    Intent intent = new Intent(AdvanceCompletedActivity.this, NameSearchActivity.class);
+                    Intent intent = new Intent(AdvanceCompletedNewActivity.this, NameSearchActivity.class);
                     intent.putExtra("data", "1");
                     startActivity(intent);
                     TitleSubTitleActivity.listOfcategory.clear();
@@ -233,10 +276,11 @@ public class AdvanceCompletedActivity extends AppCompatActivity {
         non_exempt_deselect_tv = (TextView) findViewById(R.id.non_exempt_deselect_tv);
         non_exempt_select_tv = (TextView) findViewById(R.id.non_exempt_select_tv);
         bottom_layout = (LinearLayout) findViewById(R.id.bottom_layout);
-        back_icon_login_img = (ImageView) findViewById(R.id.back_icon_login_img);
         reset_button = (Button) findViewById(R.id.reset_button);
         apply_button = (Button) findViewById(R.id.apply_button);
         search_types_sub_types = (RelativeLayout) findViewById(R.id.search_types_sub_types);
+        RvSearch = (RecyclerView) findViewById(R.id.RvSearch);
+        RvRevenue = (RecyclerView) findViewById(R.id.RvRevenue);
         layoutManager = new LinearLayoutManager(this);
         recyclerview_advancesearch.setLayoutManager(layoutManager);
         recyclerview_advancesearch.setItemAnimator(new DefaultItemAnimator());
@@ -247,6 +291,118 @@ public class AdvanceCompletedActivity extends AppCompatActivity {
             }
 
         }
+        IsType = 0;
+        IsRevenue = 0;
+        RvSearch.setVisibility(View.GONE);
+        RvRevenue.setVisibility(View.GONE);
+        layoutManager = new LinearLayoutManager(this);
+        RvSearch.setLayoutManager(layoutManager);
+        RvSearch.setItemAnimator(new DefaultItemAnimator());
+        AdvanceCatAPI();
+    }
+
+    private void AdvanceCatAPI() {
+        Array = new ArrayList<>();
+        GroupName groupName = new GroupName("0", "Char / Chatur Dham", "All the 'dhamas' are related to four Yuga's (epochs)");
+        Array.add(groupName);
+        groupName = new GroupName("1", "Arrupadai Vedu", "Arupadaiveedu refers to the six abodes of Lord Murugan showing the six different forms of Murugan pertaining to the six major events that took place where he was the saviour");
+        Array.add(groupName);
+        groupName = new GroupName("2", "Adi Shakthi Peethas", "These original Shakthi Sthlams and are places of worship consecrated to Goddess Shakthi");
+        Array.add(groupName);
+        categorylistAdapter = new NewCategorylistAdapter(AdvanceCompletedNewActivity.this, Array);
+        RvSearch.setAdapter(categorylistAdapter);
+//        final ProgressDialog progressDialog = new ProgressDialog(this);
+//        progressDialog.setMessage("Loading...");
+//        progressDialog.show();
+//
+//        userDetails = session.getUserDetails();
+//        Log.e("userDetails", "" + userDetails);
+//        Log.e("KEY_UID", "" + userDetails.get(SessionManager.KEY_UID));
+//        String user_id = "";
+//        String token = "";
+////todo login
+//        if (session.isLoggedIn()) {
+//            user_id = userDetails.get(SessionManager.KEY_UID);
+//            token = userDetails.get(SessionManager.KEY_token);
+//        }
+//        JsonObject jsonObject1 = new JsonObject();
+//        jsonObject1.addProperty("user_id", user_id);
+//        jsonObject1.addProperty("token", token);
+//        jsonObject1.addProperty("device_id", getDeviceUniqueID(AdvanceCompletedNewActivity.this));
+//        Log.e("jsonObject1", "" + jsonObject1);
+//
+//        apiService = ApiClient.getClient().create(ApiInterface.class);
+//
+//        try {
+//            Call<JsonObject> call = apiService.Adavncecategories(jsonObject1);
+//            call.enqueue(new Callback<JsonObject>() {
+//                @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+//                @Override
+//                public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+//                    progressDialog.dismiss();
+//                    Log.e(TAG, "" + response.body());
+//                    response_data = String.valueOf(response.body());
+//                    i = 2;
+//                    category_newArrayList.clear();
+//                    child_category_newArrayList.clear();
+//                    sub_category_newArrayList.clear();
+//
+//                    try {
+//                        JSONObject jsonObject = new JSONObject(String.valueOf(response.body()));
+//                        Log.e("jsonObject", "" + jsonObject);
+//                        String status = jsonObject.getString("status");
+//                        String message = jsonObject.getString("message");
+//                        String data = jsonObject.getString("data");
+//                        if (status.equalsIgnoreCase("1")) {
+//
+//                            JSONArray jsonArray = new JSONArray(data);
+//                            Log.e("1232", "" + jsonArray.length());
+//                            if (!data.equalsIgnoreCase("")) {
+//
+//                                for (int i = 0; i < jsonArray.length(); i++) {
+//                                    sub_category_newArrayList.clear();
+//                                    JSONObject object = jsonArray.getJSONObject(i);
+//                                    Category_new category_new = new Category_new();
+//                                    category_new.setCategory_id(object.getString("category_id"));
+//                                    category_new.setCategory_code(object.getString("category_code"));
+//                                    category_new.setCategory_name(object.getString("category_name"));
+//                                    category_new.setSubcategory(object.getJSONArray("subcategory"));
+////                                    category_new.setSlected("false");
+//                                    JSONArray subjsonarray = object.getJSONArray("subcategory");
+//                                    Log.e("subcategory", "" + subjsonarray);
+//                                    Log.e("subjsonarraylength", "" + subjsonarray.length());
+//                                    category_newArrayList.add(category_new);
+//
+//                                    Log.e("category_newArrayList", "" + category_newArrayList);
+//                                    Log.e("catetsize", "" + category_newArrayList.size());
+//                                    categorylistAdapter = new CategorylistAdapter(AdvanceCompletedNewActivity.this, category_newArrayList);
+//                                    RvSearch.setAdapter(categorylistAdapter);
+//
+//                                }
+//                            }
+//                        }
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//
+//                @Override
+//                public void onFailure(Call<JsonObject> call, Throwable t) {
+//                    progressDialog.dismiss();
+//                    Log.e(TAG, t.toString());
+//                }
+//            });
+//        } catch (Exception e) {
+//
+//            e.printStackTrace();
+//            Log.e("Exception", "" + e);
+//        }
+    }
+
+    public static String getDeviceUniqueID(Activity activity) {
+        String device_unique_id = Settings.Secure.getString(activity.getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+        return device_unique_id;
     }
 
     @Override
@@ -321,5 +477,39 @@ public class AdvanceCompletedActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         dailogue_forgot();
+    }
+
+    public class GroupName {
+        String TempleId, TempleDhamName, TempleDhamDesc;
+
+        public GroupName(String templeId, String templeDhamName, String templeDhamDesc) {
+            TempleId = templeId;
+            TempleDhamName = templeDhamName;
+            TempleDhamDesc = templeDhamDesc;
+        }
+
+        public String getTempleId() {
+            return TempleId;
+        }
+
+        public void setTempleId(String templeId) {
+            TempleId = templeId;
+        }
+
+        public String getTempleDhamName() {
+            return TempleDhamName;
+        }
+
+        public void setTempleDhamName(String templeDhamName) {
+            TempleDhamName = templeDhamName;
+        }
+
+        public String getTempleDhamDesc() {
+            return TempleDhamDesc;
+        }
+
+        public void setTempleDhamDesc(String templeDhamDesc) {
+            TempleDhamDesc = templeDhamDesc;
+        }
     }
 }

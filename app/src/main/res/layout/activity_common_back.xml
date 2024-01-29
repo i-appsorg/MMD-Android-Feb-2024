@@ -21,6 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?android:actionBarSize"
                 android:contentInsetStart="0dp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:contentInsetLeft="0dp"
                 android:contentInsetEnd="0dp"
                 android:contentInsetRight="0dp"
@@ -51,8 +52,8 @@
                      android:typeface="serif" />-->
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_30sdp"
-                    android:src="@drawable/idonate_logo" />
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/toplogo" />
 
                 <ImageView
                     android:id="@+id/refreshMenu"

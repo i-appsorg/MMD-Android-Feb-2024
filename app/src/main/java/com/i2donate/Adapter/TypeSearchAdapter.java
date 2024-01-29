@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.JsonArray;
 import com.i2donate.Activity.AdvanceCompletedActivity;
+import com.i2donate.Activity.AdvanceCompletedNewActivity;
 import com.i2donate.Activity.LoginActivity;
 import com.i2donate.Activity.TypesActivity;
 import com.i2donate.Model.Category_new;
@@ -172,8 +173,9 @@ public class TypeSearchAdapter extends RecyclerView.Adapter<TypeSearchAdapter.My
         holder.sublinearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
-                    ChangeActivity.changeActivity(mContext, AdvanceCompletedActivity.class);
+                    ChangeActivity.changeActivity(mContext, AdvanceCompletedNewActivity.class);
                     // finish();
                 } else {
 

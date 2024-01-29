@@ -164,7 +164,7 @@ public class UnitedStateActivity extends CommonBackActivity {
         if (listOfdate.size() > 0) {
             CharityAPI(pageno, "none");
         }
-
+//todo login
         if (session.isLoggedIn()) {
             title_tv1.setVisibility(View.VISIBLE);
         } else {
@@ -429,9 +429,10 @@ public class UnitedStateActivity extends CommonBackActivity {
                 iDonateSharedPreference.setselectedtypedata(getApplicationContext(), listOfdate);
                 iDonateSharedPreference.setselectedsubcategorydata(getApplicationContext(), listofsubCategory);
                 iDonateSharedPreference.setselectedchildcategorydata(getApplicationContext(), listofchilCategory);
+                //todo login
                 if (session.isLoggedIn()) {
                     iDonateSharedPreference.setAdvancepage(getApplicationContext(), "unitedstate");
-                    ChangeActivity.changeActivity(UnitedStateActivity.this, AdvanceCompletedActivity.class);
+                    ChangeActivity.changeActivity(UnitedStateActivity.this, AdvanceCompletedNewActivity.class);
                 } else {
                     LoginDialog();
                 }
@@ -536,7 +537,7 @@ public class UnitedStateActivity extends CommonBackActivity {
         Log.e("userDetails", "" + userDetails);
         Log.e("KEY_UID", "" + userDetails.get(SessionManager.KEY_UID));
         String user_id = "";
-
+//todo login
         if (session.isLoggedIn()) {
             user_id = userDetails.get(SessionManager.KEY_UID);
         }

@@ -166,7 +166,7 @@ public class TypeSerchActivity extends CommonBackActivity {
         if (listOfdate.size() > 0) {
             CharityAPI(page, "none");
         }
-
+//todo login
         if (session.isLoggedIn()) {
             title_tv1.setVisibility(View.VISIBLE);
         } else {
@@ -471,9 +471,10 @@ public class TypeSerchActivity extends CommonBackActivity {
                 iDonateSharedPreference.setselectedtypedata(getApplicationContext(), listOfdate);
                 iDonateSharedPreference.setselectedsubcategorydata(getApplicationContext(), listofsubCategory);
                 iDonateSharedPreference.setselectedchildcategorydata(getApplicationContext(), listofchilCategory);
+                //todo login
                 if (session.isLoggedIn()) {
                     iDonateSharedPreference.setAdvancepage(getApplicationContext(), "unitedstate");
-                    ChangeActivity.changeActivity(TypeSerchActivity.this, AdvanceCompletedActivity.class);
+                    ChangeActivity.changeActivity(TypeSerchActivity.this, AdvanceCompletedNewActivity.class);
                 } else {
                     LoginDialog();
                 }
@@ -489,9 +490,10 @@ public class TypeSerchActivity extends CommonBackActivity {
                 iDonateSharedPreference.setselectedtypedata(getApplicationContext(), listOfdate);
                 iDonateSharedPreference.setselectedsubcategorydata(getApplicationContext(), listofsubCategory);
                 iDonateSharedPreference.setselectedchildcategorydata(getApplicationContext(), listofchilCategory);
+                //todo login
                 if (session.isLoggedIn()) {
                     iDonateSharedPreference.setAdvancepage(getApplicationContext(), "unitedstate");
-                    ChangeActivity.changeActivity(TypeSerchActivity.this, AdvanceCompletedActivity.class);
+                    ChangeActivity.changeActivity(TypeSerchActivity.this, AdvanceCompletedNewActivity.class);
                 } else {
                     LoginDialog();
                 }
@@ -583,7 +585,7 @@ public class TypeSerchActivity extends CommonBackActivity {
         Log.e(TAG, "userDetails - " + userDetails);
         Log.e(TAG, "KEY_UID - " + userDetails.get(SessionManager.KEY_UID));
         String user_id = "";
-
+//todo login
         if (session.isLoggedIn()) {
             user_id = userDetails.get(SessionManager.KEY_UID);
         }

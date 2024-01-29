@@ -182,6 +182,7 @@ public class CommonBackActivity extends AppCompatActivity implements Connectivit
             }
         } else if (id == R.id.linear_myspace) {
             if (Selected.Myspace != select) {
+                //todo login
                 if (session.isLoggedIn()) {
                     Log.e("Myspace", "Myspace");
                     ChangeActivity.changeActivityback(CommonBackActivity.this, MyspaceActivity.class);

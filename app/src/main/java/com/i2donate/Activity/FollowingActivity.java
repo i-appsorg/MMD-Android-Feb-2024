@@ -148,11 +148,12 @@ public class FollowingActivity extends CommonMenuActivity {
         Log.e("KEY_UID", "" + userDetails.get(SessionManager.KEY_UID));
         String user_id = "";
         String token = "";
-        if (session.isLoggedIn()) {
+        //todo login
+//        if (session.isLoggedIn()) {
             user_id = userDetails.get(SessionManager.KEY_UID);
             token = userDetails.get(SessionManager.KEY_token);
 
-        }
+//        }
         JsonObject jsonObject1 = new JsonObject();
         jsonObject1.addProperty("user_id", user_id);
         jsonObject1.addProperty("token", token);

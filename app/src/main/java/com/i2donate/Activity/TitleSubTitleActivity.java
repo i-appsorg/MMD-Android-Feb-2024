@@ -270,7 +270,7 @@ public class TitleSubTitleActivity extends AppCompatActivity {
         Log.e("KEY_UID", "" + userDetails.get(SessionManager.KEY_UID));
         String user_id = "";
         String token = "";
-
+//todo login
         if (session.isLoggedIn()) {
 
             user_id = userDetails.get(SessionManager.KEY_UID);
@@ -363,7 +363,7 @@ public class TitleSubTitleActivity extends AppCompatActivity {
         Log.e("KEY_UID", "" + userDetails.get(SessionManager.KEY_UID));
         String user_id = "";
         String token = "";
-
+//todo login
         if (session.isLoggedIn()) {
 
             user_id = userDetails.get(SessionManager.KEY_UID);

@@ -149,6 +149,7 @@ public class SettingActivity extends CommonMenuActivity {
         Log.e("userDetails", "" + userDetails);
         Log.e("KEY_UID", "" + userDetails.get(SessionManager.KEY_UID));
         String user_id="";
+        //todo login
         if (sessionManager.isLoggedIn()){
             user_id= userDetails.get(SessionManager.KEY_UID);
         }

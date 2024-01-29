@@ -285,6 +285,7 @@ public class LoadMoreUnitesStateLocationDetailsAdapterList extends RecyclerView.
         holder.follow_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
 
                     String like = "0";
@@ -305,6 +306,7 @@ public class LoadMoreUnitesStateLocationDetailsAdapterList extends RecyclerView.
         holder.unfollow_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
 
                     String like = "1";
@@ -324,6 +326,7 @@ public class LoadMoreUnitesStateLocationDetailsAdapterList extends RecyclerView.
         holder.like_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
 
                     String like = "1";
@@ -340,6 +343,7 @@ public class LoadMoreUnitesStateLocationDetailsAdapterList extends RecyclerView.
         holder.unlike_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
 
                     String like = "0";
@@ -391,6 +395,7 @@ public class LoadMoreUnitesStateLocationDetailsAdapterList extends RecyclerView.
             public void onClick(View v) {
 //                Intent intent = new Intent(mContext, MakeTypeScreenActivity.class);
 //                mContext.startActivity(intent);
+                //todo login
                 if (session.isLoggedIn()) {
                     d = new BottomSheetDialog(mContext, R.style.payment_dailog);
                     d.setContentView(R.layout.payment_alert_dailog);

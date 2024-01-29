@@ -117,6 +117,7 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
                 .build();
         linear_browse.setOnClickListener(this);
         linear_myspace.setOnClickListener(this);
+        //todo login
         if (session.isLoggedIn()) {
             userDetails = session.getUserDetails();
             Log.e("userDetails", "" + userDetails);
@@ -156,6 +157,7 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
         edit_linear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //todo login
                 if (session.isLoggedIn()) {
                     iDonateSharedPreference.seteditprofile(getApplicationContext(), "1");
                     ChangeActivity.changeActivity(CommonMenuActivity.this, UpdateActivity.class);
@@ -170,7 +172,7 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
 
             }
         });
-
+//todo login
         if (session.isLoggedIn()) {
             userDetails = session.getUserDetails();
             Log.e("userDetails---", "" + userDetails);
@@ -222,6 +224,7 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
 
                             case "my notifications":
                                 Log.e("demotestingsss", "testing");
+                                //todo login
                                 if (session.isLoggedIn()) {
                                     ChangeActivity.changeActivity(CommonMenuActivity.this, NotificationActivity.class);
                                     finish();
@@ -248,6 +251,7 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
                             case "logout":
                                 iDonateSharedPreference.setlogintype(getApplicationContext(), "non");
                                 Log.e("settings", "settings");
+                                //todo login
                                 if (session.isLoggedIn()) {
                                     signOut1();
                                     FacebookSdk.sdkInitialize(getApplicationContext());
@@ -286,6 +290,7 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
                                 break;
                             case "login":
                                 Log.e("settings", "settings");
+                                //todo login
                                 if (session.isLoggedIn()) {
 
                                     Log.e("email", "" + iDonateSharedPreference.getsocialMedia(getApplicationContext()));
@@ -444,6 +449,7 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
 
      private void referesh() {
         menuListView.setAdapter(new CommonActionBarListAdapter(this));
+         //todo login
         if (session.isLoggedIn()) {
             userDetails = session.getUserDetails();
             Log.e("userDetails", "" + userDetails);
@@ -496,6 +502,7 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
         } else if (id == R.id.linear_myspace) {
             if (Selected.Myspace != select) {
                 Log.e("Myspace", "Myspace");
+                //todo login
                 if (session.isLoggedIn()) {
                     ChangeActivity.changeActivity(CommonMenuActivity.this, MyspaceActivity.class);
                     myspace_tv.setTextColor(getResources().getColor(R.color.quantum_white_text));
