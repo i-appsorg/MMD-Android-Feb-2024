@@ -99,7 +99,7 @@
                 <ImageView
                     android:id="@+id/unlike_icon_img"
                     android:layout_width="0dp"
-                    android:layout_height="@dimen/_15sdp"
+                    android:layout_height="18dp"
                     android:layout_weight="0.3"
                     android:src="@drawable/thump_like_icon"
                     android:visibility="visible" />

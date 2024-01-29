@@ -47,6 +47,7 @@
 
     <!--trans_black_dailog-->
     <color name="trans_black">#B3000000</color>
+    <color name="tv_search_hint">#666666</color>
     <color name="dailog_cancel_color">#d0bacb</color>
 <!--    <color name="title_color">#FCFCEF</color>-->
     <color name="title_color">#333333</color>
