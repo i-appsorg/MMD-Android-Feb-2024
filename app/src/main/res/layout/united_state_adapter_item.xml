@@ -25,13 +25,15 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
 
-            <com.i2donate.Model.CustomImageView
+            <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/logo_img"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_70sdp"
                 android:layout_weight=".8"
                 android:focusableInTouchMode="true"
-                android:src="@drawable/ic_profile_holder" />
+                android:adjustViewBounds="true"
+                app:riv_corner_radius="@dimen/_8sdp"
+                android:src="@drawable/ic_launcher_background" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -81,6 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_1sdp"
             android:layout_marginTop="@dimen/_5sdp"
+            android:alpha="0.5"
             android:background="@color/orange" />
 
         <LinearLayout

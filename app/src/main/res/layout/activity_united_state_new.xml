@@ -155,6 +155,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_12sdp"
                         android:layout_marginTop="10dp"
+                        android:visibility="gone"
                         android:layout_marginRight="@dimen/_12sdp"
                         android:text="Type at least 3 letters to search."
                         android:textColor="@color/title_color"

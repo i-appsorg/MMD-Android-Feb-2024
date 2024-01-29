@@ -33,15 +33,18 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.gson.JsonObject;
+import com.i2donate.CommonActivity.CommonBackActivity;
 import com.i2donate.Model.ChangeActivity;
 import com.i2donate.R;
 import com.i2donate.RetrofitAPI.ApiClient;
 import com.i2donate.RetrofitAPI.ApiInterface;
 import com.i2donate.Session.IDonateSharedPreference;
 import com.i2donate.Session.SessionManager;
+import com.i2donate.databinding.ActivityUnitedStateDetailsBinding;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -53,9 +56,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class UnitedStateDetailsActivity extends AppCompatActivity {
+public class UnitedStateDetailsActivity extends CommonBackActivity {
     private String TAG = "TypesActivity";
-    TextView name_tv, location_tv, like_count_tv, unlike_count_tv, follow_count_tv, unfollow_count_tv, description_tv;
+    TextView name_tv, location_tv, like_count_tv, unlike_count_tv, follow_count_tv, unfollow_count_tv, description_tv,TvAbout,TvPrograms,TvPuja,TvSponsorship;
     ImageView back_icon_login_img, logo_img;
     static HashMap<String, String> userDetails;
     LinearLayout like_linear_layout, unlike_linear_layout, follow_linear_layout, unfollow_linear_layout;
@@ -64,12 +67,19 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
     ApiInterface apiService;
     LinearLayout donate_linear_layout;
     Dialog d;
+    Toolbar toolbar;
     IDonateSharedPreference iDonateSharedPreference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_united_state_details);
+//        setContentView(R.layout.activity_united_state_details);
+
+        setView(R.layout.activity_united_state_details, TAG);
+
+        toolbar = findViewById(R.id.commonMenuActivityToolbar);
+        toolbar.setVisibility(View.GONE);
+
         getWindow().setBackgroundDrawableResource(R.drawable.dashbord_background);
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
@@ -103,6 +113,10 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
         follow_count_tv = (TextView) findViewById(R.id.follow_count_tv);
         unfollow_count_tv = (TextView) findViewById(R.id.unfollow_count_tv);
         description_tv = (TextView) findViewById(R.id.description_tv);
+        TvAbout = (TextView) findViewById(R.id.TvAbout);
+        TvPrograms = (TextView) findViewById(R.id.TvPrograms);
+        TvPuja = (TextView) findViewById(R.id.TvPuja);
+        TvSponsorship = (TextView) findViewById(R.id.TvSponsorship);
         like_linear_layout = (LinearLayout) findViewById(R.id.like_linear_layout);
         unlike_linear_layout = (LinearLayout) findViewById(R.id.unlike_linear_layout);
         follow_linear_layout = (LinearLayout) findViewById(R.id.follow_linear_layout);
@@ -239,6 +253,43 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
                 }
             }
         });
+
+        TvPrograms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UnitedStateDetailsActivity.this, MakeTypeScreenActivity.class);
+                intent.putExtra("tvTopType", "PROGRAMS");
+                intent.putExtra("tvWebsiteId", "www.svst.org");
+                intent.putExtra("tvEmailId", "helpdesk@svst.org");
+                intent.putExtra("tvContactId", "+91-8772266666");
+                startActivity(intent);
+            }
+        });
+
+        TvPuja.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UnitedStateDetailsActivity.this, MakeTypeScreenActivity.class);
+                intent.putExtra("tvTopType", "PUJA");
+                intent.putExtra("tvWebsiteId", "www.svst.org");
+                intent.putExtra("tvEmailId", "helpdesk@svst.org");
+                intent.putExtra("tvContactId", "+91-8772266666");
+                startActivity(intent);
+            }
+        });
+
+        TvSponsorship.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UnitedStateDetailsActivity.this, MakeTypeScreenActivity.class);
+                intent.putExtra("tvTopType", "SPONSORSHIP");
+                intent.putExtra("tvWebsiteId", "www.svst.org");
+                intent.putExtra("tvEmailId", "helpdesk@svst.org");
+                intent.putExtra("tvContactId", "+91-8772266666");
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void LoginDialog() {

@@ -49,6 +49,7 @@ import com.i2donate.RetrofitAPI.ApiClient;
 import com.i2donate.RetrofitAPI.ApiInterface;
 import com.i2donate.Session.IDonateSharedPreference;
 import com.i2donate.Session.SessionManager;
+import com.makeramen.roundedimageview.RoundedImageView;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
@@ -235,7 +236,8 @@ public class LoadmoreInternationlocationAdapterList extends RecyclerView.Adapter
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView txtxCountry, name_tv, location_name_tv, like_count_tv, unlike_count_tv, follow_count_tv, unfollow_count_tv;
-        public CustomImageView logo_img;
+//        public CustomImageView logo_img;
+        public RoundedImageView logo_img;
         public ImageView like_icon_img;
         public LinearLayout united_item_layout, donate_linear_layout, like_linear_layout, unlike_linear_layout, follow_linear_layout, unfollow_linear_layout;
 
@@ -246,7 +248,8 @@ public class LoadmoreInternationlocationAdapterList extends RecyclerView.Adapter
             donate_linear_layout = (LinearLayout) view.findViewById(R.id.donate_linear_layout);
             name_tv = (TextView) view.findViewById(R.id.name_tv);
             location_name_tv = (TextView) view.findViewById(R.id.location_name_tv);
-            logo_img = (CustomImageView) view.findViewById(R.id.logo_img);
+//            logo_img = (CustomImageView) view.findViewById(R.id.logo_img);
+            logo_img = (RoundedImageView) view.findViewById(R.id.logo_img);
             like_count_tv = (TextView) view.findViewById(R.id.like_count_tv);
             unlike_count_tv = (TextView) view.findViewById(R.id.unlike_count_tv);
             like_icon_img = (ImageView) view.findViewById(R.id.like_icon_img);
@@ -377,7 +380,8 @@ public class LoadmoreInternationlocationAdapterList extends RecyclerView.Adapter
             Charitylist charitylistimg = charitylist1.get(position);
             if (!charitylist1.get(position).getLogo().equalsIgnoreCase("null")) {
                 try {
-                    Picasso.get().load(charitylistimg.getLogo()).into(holder.logo_img);
+//                    Picasso.get().load(charitylistimg.getLogo()).into(holder.logo_img);
+                    Picasso.get().load(R.drawable.ic_launcher_background).into(holder.logo_img);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

@@ -145,7 +145,8 @@
     <string name="united_state_adapter_new_york">New York,United States</string>
     <string name="united_state_adapter_like">173 Likes</string>
     <string name="united_state_adapter_following">Follow</string>
-    <string name="united_state_adapter_donate">Donate</string>
+<!--    <string name="united_state_adapter_donate">Donate</string>-->
+    <string name="united_state_adapter_donate">Hundi</string>
     <string name="name_search_adapter">search name</string>
 
     <!--Search By Type-->
@@ -332,4 +333,5 @@
     <string name="sponsorship">SPONSORSHIP</string>
     <string name="temple_by_location">Temple By Location</string>
     <string name="all_the_dhamas_are_related_to_four_yuga_s_epochs">All the \'dhamas\' are related to four Yuga\'s (epochs)</string>
+    <string name="about">ABOUT</string>
 </resources>
