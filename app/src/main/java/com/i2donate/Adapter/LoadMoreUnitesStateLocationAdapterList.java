@@ -49,6 +49,7 @@ import com.i2donate.RetrofitAPI.ApiClient;
 import com.i2donate.RetrofitAPI.ApiInterface;
 import com.i2donate.Session.IDonateSharedPreference;
 import com.i2donate.Session.SessionManager;
+import com.makeramen.roundedimageview.RoundedImageView;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
@@ -238,7 +239,8 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView txtxCountry, name_tv, location_name_tv, like_count_tv, unlike_count_tv, follow_count_tv, unfollow_count_tv;
-        public CustomImageView logo_img;
+//        public CustomImageView logo_img;
+        public RoundedImageView logo_img;
         public ImageView like_icon_img;
         public LinearLayout united_item_layout, donate_linear_layout, like_linear_layout, unlike_linear_layout, follow_linear_layout, unfollow_linear_layout;
 
@@ -249,7 +251,8 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
             name_tv = (TextView) view.findViewById(R.id.name_tv);
             txtxCountry = (TextView) view.findViewById(R.id.txtxCountry);
             location_name_tv = (TextView) view.findViewById(R.id.location_name_tv);
-            logo_img = (CustomImageView) view.findViewById(R.id.logo_img);
+//            logo_img = (CustomImageView) view.findViewById(R.id.logo_img);
+            logo_img = (RoundedImageView) view.findViewById(R.id.logo_img);
             like_count_tv = (TextView) view.findViewById(R.id.like_count_tv);
             unlike_count_tv = (TextView) view.findViewById(R.id.unlike_count_tv);
             like_icon_img = (ImageView) view.findViewById(R.id.like_icon_img);

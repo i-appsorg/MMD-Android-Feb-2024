@@ -8,7 +8,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/advance_search_tv"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +83,7 @@
             android:id="@+id/name_relative_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:src="@drawable/ic_temple_by_name"
             app:layout_constraintStart_toStartOf="@+id/united_state_location_relative"
             app:layout_constraintTop_toBottomOf="@+id/united_state_location_relative" />
