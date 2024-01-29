@@ -107,7 +107,8 @@
     <string name="browse_better">A better way to give</string>
     <string name="browse_sentence">Do a deed of simple kindness; though its end you may not see, it may reach like widening ripples down a long eternity.</string>
     <string name="browse_writter_name">- Joseph Norris</string>
-    <string name="browse_united_state">united states</string>
+<!--    <string name="browse_united_state">united states</string>-->
+    <string name="browse_united_state">TEMPLES IN INDIA</string>
     <string name="browse_international">international \ncharites\n Registered in usa</string>
     <string name="browse_charites">charites</string>
     <string name="browse_register">Registered in usa</string>
@@ -127,12 +128,14 @@
 
     <string name="united_state_search_hint">Search for city,state</string>
     <string name="united_state_filter">Filter by</string>
-    <string name="united_state_name">Name</string>
+    <string name="united_state_name">NAME</string>
     <string name="united_state_title_name">Search by Name</string>
-    <string name="united_state_type">Type</string>
+    <string name="united_state_type">DEITY</string>
     <string name="united_state_search">Advanced Search</string>
-    <string name="united_state_nonprofit">Nonprofits &amp; Charities near you...</string>
-    <string name="united_state_location">Search by city/state</string>
+<!--    <string name="united_state_nonprofit">Nonprofits &amp; Charities near you...</string>-->
+    <string name="united_state_nonprofit">Temples near you...</string>
+<!--    <string name="united_state_location">Search by city/state</string>-->
+    <string name="united_state_location">Filter By Location</string>
     <string name="united_state_internationlocation">Search by country</string>
     <string name="united_state_search_name">Enter nonprofit/charity name</string>
     <string name="united_state_name_location">Location</string>
