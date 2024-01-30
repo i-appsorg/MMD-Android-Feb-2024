@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Activity.UnitedStateDetailsActivity">
 
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/commonMenuActivityToolbar"
         android:layout_width="match_parent"
@@ -33,7 +32,8 @@
                 android:src="@drawable/back_icon"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -43,7 +43,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -56,7 +57,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -65,7 +66,8 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_15sdp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
                 <!--<androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -76,9 +78,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:background="@drawable/card_view_radius"
                     android:orientation="vertical"
-                    android:layout_marginTop="@dimen/_10sdp"
                     android:padding="@dimen/_10sdp">
 
                     <LinearLayout
@@ -92,13 +94,14 @@
                             android:layout_weight=".8"
                             android:adjustViewBounds="true"
                             android:src="@drawable/ic_launcher_background"
-                            app:riv_corner_radius="@dimen/_8sdp" />
+                            app:riv_corner_radius="@dimen/_8sdp"
+                            tools:ignore="ImageContrastCheck" />
 
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
                             android:layout_weight="2"
                             android:orientation="vertical">
 
@@ -133,7 +136,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginTop="@dimen/_10sdp"
-                        android:gravity="center_vertical">
+                        android:gravity="center_vertical"
+                        tools:ignore="DisableBaselineAlignment">
 
                         <LinearLayout
                             android:id="@+id/like_linear_layout"
@@ -149,7 +153,8 @@
                                 android:layout_height="@dimen/_15sdp"
                                 android:layout_weight="0.3"
                                 android:src="@drawable/thump_like_icon"
-                                android:visibility="visible" />
+                                android:visibility="visible"
+                                tools:ignore="ContentDescription,ImageContrastCheck,NestedWeights" />
 
                             <TextView
                                 android:id="@+id/like_count_tv"
@@ -158,7 +163,7 @@
                                 android:layout_weight=".8"
                                 android:text="@string/united_state_adapter_like"
                                 android:textColor="@color/title_color"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_10ssp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -176,7 +181,8 @@
                                 android:layout_height="@dimen/_15sdp"
                                 android:layout_weight="0.3"
                                 android:src="@drawable/ic_liked"
-                                android:visibility="visible" />
+                                android:visibility="visible"
+                                tools:ignore="ContentDescription,NestedWeights" />
 
                             <TextView
                                 android:id="@+id/unlike_count_tv"
@@ -185,7 +191,7 @@
                                 android:layout_weight=".8"
                                 android:text="@string/united_state_adapter_like"
                                 android:textColor="@color/colorAccent"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_10ssp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -202,7 +208,8 @@
                                 android:layout_height="@dimen/_15sdp"
                                 android:layout_weight="0.3"
                                 android:src="@drawable/heart_like_icon"
-                                android:visibility="visible" />
+                                android:visibility="visible"
+                                tools:ignore="ContentDescription,ImageContrastCheck,NestedWeights" />
 
                             <TextView
                                 android:id="@+id/follow_count_tv"
@@ -211,7 +218,7 @@
                                 android:layout_weight=".8"
                                 android:text="@string/united_state_adapter_following"
                                 android:textColor="@color/title_color"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_10ssp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -228,24 +235,25 @@
                                 android:layout_width="0dp"
                                 android:layout_height="@dimen/_15sdp"
                                 android:layout_weight="0.3"
-                                android:src="@drawable/ic_followed" />
+                                android:src="@drawable/ic_followed"
+                                tools:ignore="ContentDescription,NestedWeights" />
 
                             <TextView
                                 android:id="@+id/unfollow_count_tv"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginStart="@dimen/_2sdp"
                                 android:layout_weight=".8"
                                 android:text="@string/united_state_adapter_following"
                                 android:textColor="@color/title_color"
-                                android:textSize="@dimen/_12sdp" />
+                                android:textSize="@dimen/_12ssp" />
                         </LinearLayout>
 
                         <LinearLayout
                             android:id="@+id/donate_linear_layout"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
                             android:layout_weight="1"
                             android:background="@drawable/donate_border"
                             android:gravity="center_vertical"
@@ -255,18 +263,21 @@
                             <ImageView
                                 android:layout_width="@dimen/_15sdp"
                                 android:layout_height="@dimen/_15sdp"
-                                android:src="@drawable/donate_icon" />
+                                android:src="@drawable/donate_icon"
+                                tools:ignore="ContentDescription" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_marginStart="@dimen/_5sdp"
                                 android:text="@string/united_state_adapter_donate"
                                 android:textColor="@android:color/white"
-                                android:textSize="@dimen/_12sdp" />
+                                android:textSize="@dimen/_12ssp"
+                                tools:ignore="TextContrastCheck" />
                         </LinearLayout>
 
                     </LinearLayout>
+
                 </LinearLayout>
 
                 <!--</androidx.cardview.widget.CardView>-->
@@ -276,18 +287,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAlignment="gravity"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textSize="@dimen/_12ssp" />
 
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_20sdp"
-                    android:visibility="gone">
+                    android:visibility="gone"
+                    tools:ignore="DisableBaselineAlignment">
 
                     <RelativeLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:background="@drawable/browse_layout_border"
                         android:paddingTop="@dimen/_25sdp">
@@ -297,7 +309,8 @@
                             android:layout_width="@dimen/_50sdp"
                             android:layout_height="@dimen/_50sdp"
                             android:layout_centerHorizontal="true"
-                            android:src="@drawable/team_icon" />
+                            android:src="@drawable/team_icon"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -313,7 +326,7 @@
                     <RelativeLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:layout_weight="1"
                         android:background="@drawable/browse_layout_border"
                         android:gravity="center"
@@ -324,7 +337,8 @@
                             android:layout_width="@dimen/_50sdp"
                             android:layout_height="@dimen/_50sdp"
                             android:layout_centerHorizontal="true"
-                            android:src="@drawable/value_icon" />
+                            android:src="@drawable/value_icon"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
                             android:id="@+id/browse_international_tv"
@@ -349,18 +363,20 @@
                             android:gravity="center"
                             android:layout_below="@+id/browse_charites_tv"/>-->
                     </RelativeLayout>
+
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_20sdp"
-                    android:visibility="gone">
+                    android:visibility="gone"
+                    tools:ignore="DisableBaselineAlignment">
 
                     <RelativeLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:background="@drawable/browse_layout_border"
                         android:paddingTop="@dimen/_25sdp"
@@ -371,7 +387,8 @@
                             android:layout_width="@dimen/_50sdp"
                             android:layout_height="@dimen/_50sdp"
                             android:layout_centerHorizontal="true"
-                            android:src="@drawable/goal_icon" />
+                            android:src="@drawable/goal_icon"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -384,10 +401,10 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:id="@+id/type_relative_layout"
+                        android:id="@+id/IvContactt"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:layout_weight="1"
                         android:background="@drawable/browse_layout_border"
                         android:paddingTop="@dimen/_25sdp">
@@ -397,7 +414,8 @@
                             android:layout_width="@dimen/_50sdp"
                             android:layout_height="@dimen/_50sdp"
                             android:layout_centerHorizontal="true"
-                            android:src="@drawable/contact_icon" />
+                            android:src="@drawable/contact_icon"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -408,7 +426,6 @@
                             android:text="@string/united_state_contact"
                             android:textAllCaps="true" />
                     </RelativeLayout>
-
 
                 </LinearLayout>
 
@@ -442,7 +459,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/TvPuja"
                         app:layout_constraintStart_toEndOf="@+id/TvAbout"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="TextSizeCheck" />
 
                     <TextView
                         android:id="@+id/TvPuja"
@@ -455,7 +473,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/TvSponsorship"
                         app:layout_constraintStart_toEndOf="@+id/TvPrograms"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="TextSizeCheck" />
 
                     <TextView
                         android:id="@+id/TvSponsorship"
@@ -468,8 +487,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/TvPuja"
-                        app:layout_constraintTop_toTopOf="parent" />
-
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="TextSizeCheck" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -487,53 +506,54 @@
                     app:layout_constraintVertical_chainStyle="packed">
 
                     <ImageView
-                        android:id="@+id/united_state_location_relative"
+                        android:id="@+id/IVLocationMapAndNearbyPlaces"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/bt_location_map_and_nearby_places"
-                        app:layout_constraintEnd_toStartOf="@+id/international_layout"
+                        app:layout_constraintEnd_toStartOf="@+id/IVTempleMahimaItihasa"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
 
                     <ImageView
-                        android:id="@+id/international_layout"
+                        android:id="@+id/IVTempleMahimaItihasa"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:src="@drawable/bt_temple_mahima_itihasa"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/united_state_location_relative"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintStart_toEndOf="@+id/IVLocationMapAndNearbyPlaces"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
 
                     <ImageView
-                        android:id="@+id/name_relative_layout"
+                        android:id="@+id/IvTempleArchitecture"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_15sdp"
                         android:src="@drawable/bt_temple_architecture"
-                        app:layout_constraintStart_toStartOf="@+id/united_state_location_relative"
-                        app:layout_constraintTop_toBottomOf="@+id/united_state_location_relative" />
+                        app:layout_constraintStart_toStartOf="@+id/IVLocationMapAndNearbyPlaces"
+                        app:layout_constraintTop_toBottomOf="@+id/IVLocationMapAndNearbyPlaces"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
 
                     <ImageView
-                        android:id="@+id/type_relative_layou"
+                        android:id="@+id/IvContact"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_15sdp"
                         android:src="@drawable/bt_contact"
-                        app:layout_constraintBottom_toBottomOf="@+id/name_relative_layout"
+                        app:layout_constraintBottom_toBottomOf="@+id/IvTempleArchitecture"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/name_relative_layout"
-                        app:layout_constraintTop_toTopOf="@+id/name_relative_layout" />
+                        app:layout_constraintStart_toEndOf="@+id/IvTempleArchitecture"
+                        app:layout_constraintTop_toTopOf="@+id/IvTempleArchitecture"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
 
             </LinearLayout>
 
         </RelativeLayout>
 
-
     </ScrollView>
-
 
 </RelativeLayout>

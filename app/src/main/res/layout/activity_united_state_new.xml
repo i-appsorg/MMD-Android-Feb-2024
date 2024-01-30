@@ -35,7 +35,7 @@
                 android:id="@+id/search_relativelayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_45sdp">
+                android:layout_marginTop="@dimen/_60sdp">
 
                 <LinearLayout
                     android:id="@+id/linear1"
@@ -47,7 +47,7 @@
                         android:id="@+id/titleTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:padding="@dimen/_5sdp"
                         android:text="@string/browse_united_state"
                         android:textAllCaps="true"
@@ -71,7 +71,7 @@
                         <ImageView
                             android:id="@+id/search_icon_loc"
                             android:layout_width="0dp"
-                            android:layout_height="@dimen/_10sdp"
+                            android:layout_height="@dimen/_15sdp"
                             android:layout_gravity="center_vertical"
                             android:layout_weight=".1"
                             android:src="@drawable/search_icon" />
@@ -81,16 +81,17 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
                             android:layout_weight="1"
                             android:background="@null"
                             android:editable="true"
                             android:gravity="center_vertical"
                             android:hint="@string/united_state_location"
-                            android:textColor="@color/title_color"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
+                            android:textColor="@color/tv_search_hint"
                             android:textColorHint="@color/tv_search_hint" />
                         <!--                        android:textColor="@color/trans_black"-->
-
 
                         <ImageView
                             android:id="@+id/close_img_loc"
@@ -106,7 +107,7 @@
                     <LinearLayout
                         android:id="@+id/namesearchLayout"
                         android:layout_width="fill_parent"
-                        android:layout_height="@dimen/_35sdp"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_7sdp"
                         android:layout_marginRight="@dimen/_10sdp"
@@ -114,11 +115,12 @@
                         android:orientation="horizontal"
                         android:padding="@dimen/_7sdp"
                         android:visibility="gone">
+                        <!--                        android:layout_height="@dimen/_35sdp"-->
 
                         <ImageView
                             android:id="@+id/search_icon"
                             android:layout_width="0dp"
-                            android:layout_height="@dimen/_10sdp"
+                            android:layout_height="@dimen/_15sdp"
                             android:layout_gravity="center_vertical"
                             android:layout_weight=".1"
                             android:src="@drawable/search_icon" />
@@ -126,9 +128,9 @@
                         <EditText
                             android:id="@+id/search_name_et1"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
                             android:layout_weight="1"
                             android:background="@null"
                             android:editable="true"
@@ -136,8 +138,8 @@
                             android:hint="@string/united_state_search_name"
                             android:imeOptions="actionDone"
                             android:singleLine="true"
-                            android:textColor="@color/trans_black"
-                            android:textColorHint="@color/colorPrimary" />
+                            android:textColor="@color/tv_search_hint"
+                            android:textColorHint="@color/tv_search_hint" />
 
                         <ImageView
                             android:id="@+id/close_img"
@@ -155,11 +157,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_12sdp"
                         android:layout_marginTop="10dp"
-                        android:visibility="gone"
                         android:layout_marginRight="@dimen/_12sdp"
                         android:text="Type at least 3 letters to search."
                         android:textColor="@color/title_color"
-                        android:textSize="@dimen/_10sdp" />
+                        android:textSize="@dimen/_10sdp"
+                        android:visibility="gone" />
 
                     <LinearLayout
                         android:id="@+id/filter_linear_layout1"
@@ -200,7 +202,7 @@
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginStart="@dimen/_2sdp"
                                 android:layout_weight=".3"
                                 android:text="@string/united_state_name"
                                 android:textColor="@color/title_color"
@@ -222,17 +224,20 @@
                                 android:layout_height="@dimen/_15sdp"
                                 android:layout_gravity="center"
                                 android:layout_weight=".5"
-                                android:src="@drawable/usa_icon" />
+                                android:src="@drawable/usa_icon"
+                                app:tint="@color/colorPrimary" />
 
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/_1sdp"
+                                android:layout_marginStart="@dimen/_1sdp"
                                 android:layout_weight="1"
                                 android:gravity="center_vertical"
-                                android:text="Location"
-                                android:textColor="@color/colorAccent"
+                                android:text="@string/location"
+                                android:textAllCaps="true"
+                                android:textColor="@color/title_color"
                                 android:textSize="@dimen/_10sdp" />
+
                         </LinearLayout>
 
                         <LinearLayout
@@ -309,6 +314,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:contentInsetStart="0dp"
                 android:contentInsetLeft="0dp"
                 android:contentInsetEnd="0dp"
@@ -325,19 +331,23 @@
                     android:id="@+id/relative_before_toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_7sdp"
-                    android:layout_marginRight="@dimen/_10sdp"
-                    android:layout_marginBottom="@dimen/_10sdp"
                     android:visibility="gone">
+                    <!--                    android:layout_marginTop="@dimen/_7sdp"-->
+                    <!--                    android:layout_marginEnd="@dimen/_10sdp"-->
+                    <!--                    android:layout_marginBottom="@dimen/_10sdp"-->
 
 
                     <ImageView
                         android:id="@+id/back_icon_name_img"
-                        android:layout_width="45dp"
-                        android:layout_height="@dimen/_35sdp"
-                        android:layout_gravity="start|left"
-                        android:padding="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="start"
+                        android:padding="@dimen/_10sdp"
                         android:src="@drawable/back_icon" />
+
                     <!-- <TextView
                          android:id="@+id/commonMenuActivityTitleTextView"
                          android:layout_width="wrap_content"
@@ -351,20 +361,26 @@
                          android:textSize="@dimen/contentSizeNormal"
                          android:textStyle="bold"
                          android:typeface="serif" />-->
+
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_30sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
                         android:src="@drawable/toplogo" />
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/relative_toolbar"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/_2sdp"
-                    android:layout_marginRight="@dimen/_10sdp"
                     android:gravity="center_vertical"
                     android:visibility="visible">
+                    <!--                    android:layout_marginTop="@dimen/_2sdp"-->
+                    <!--                    android:layout_marginEnd="@dimen/_10sdp"-->
 
                     <LinearLayout
                         android:layout_width="fill_parent"
@@ -373,23 +389,24 @@
 
                         <ImageView
                             android:id="@+id/back_icon_img1"
-                            android:layout_width="45dp"
-                            android:layout_height="@dimen/_30sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:padding="8dp"
+                            android:padding="@dimen/_8sdp"
                             android:src="@drawable/back_icon" />
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/_12sdp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginRight="@dimen/_12sdp"
-                            android:text="Type at least 3 letters to search."
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:gravity="center"
+                            android:text="@string/type_at_least_3_letters_to_search"
                             android:textColor="@color/title_color"
-                            android:textSize="@dimen/_10sdp"
-
-                            />
+                            android:textSize="@dimen/_10ssp" />
+                        <!--                        android:layout_marginLeft="@dimen/_12sdp"-->
+                        <!--                        android:layout_marginTop="10dp"-->
+                        <!--                        android:layout_marginRight="@dimen/_12sdp"-->
 
                         <ImageView
                             android:id="@+id/filter_show_img"

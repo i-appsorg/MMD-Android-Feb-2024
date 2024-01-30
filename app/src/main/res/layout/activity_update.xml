@@ -12,6 +12,7 @@
         android:id="@+id/commonMenuActivityToolbar"
         android:layout_width="match_parent"
         android:layout_height="?android:actionBarSize"
+        android:layout_marginTop="@dimen/_20sdp"
         android:contentInsetStart="0dp"
         android:contentInsetLeft="0dp"
         android:contentInsetEnd="0dp"
@@ -19,19 +20,35 @@
         android:elevation="5dp"
         app:contentInsetEnd="0dp"
         app:contentInsetStart="0dp">
-        <ImageView
-            android:id="@+id/back_icon_img"
-            android:layout_width="45dp"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_gravity="start|left"
-            android:padding="8dp"
-            android:src="@drawable/back_icon" />
-        <ImageView
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_30sdp"
-            android:src="@drawable/toplogo"
-            android:layout_centerVertical="true"
-            />
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back_icon_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:padding="8dp"
+                android:src="@drawable/back_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/toplogo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
@@ -41,7 +58,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
 
             <LinearLayout
@@ -57,7 +74,7 @@
                     android:layout_marginTop="@dimen/_10sdp"
                     android:text="@string/update_update"
                     android:textAllCaps="true"
-                    android:textColor="@color/title_color"
+                    android:textColor="@color/tv_login"
                     android:textSize="@dimen/_20sdp"
                     android:textStyle="bold" />
 
@@ -76,7 +93,7 @@
                         android:layout_marginTop="@dimen/_20sdp"
                         android:padding="5dp"
                         android:src="@drawable/ic_profile_holder"
-                        android:visibility="gone"
+                        android:visibility="visible"
                         app:civ_border_color="#e5dfff"
                         app:civ_border_width="1dp" />
 
@@ -85,9 +102,9 @@
                         android:layout_width="@dimen/_24sdp"
                         android:layout_height="@dimen/_24sdp"
                         android:layout_below="@+id/myprofile_edit_img"
-                        android:layout_marginLeft="@dimen/_35sdp"
+                        android:layout_marginStart="@dimen/_35sdp"
                         android:layout_marginTop="-28dp"
-                        android:layout_marginRight="0dp"
+                        android:layout_marginEnd="0dp"
                         android:src="@drawable/ic_camera_edit_icon"
                         android:visibility="gone" />
                 </LinearLayout>
@@ -104,17 +121,18 @@
                         android:layout_marginTop="@dimen/_10sdp"
                         android:gravity="center_vertical"
                         android:text="@string/updated_individual"
+                        android:textColor="@color/title_color"
                         android:textSize="@dimen/_14sdp" />
 
                     <TextView
                         android:id="@+id/selected_business_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:text="@string/update_business_selected_data"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                        android:textColor="@android:color/black"
+                        android:textColor="@color/title_color"
                         android:visibility="gone" />
 
                     <RadioGroup
@@ -122,7 +140,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:orientation="horizontal"
                         android:visibility="visible">
@@ -139,9 +157,10 @@
                             android:id="@+id/radio_btn_business"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
                             android:text="@string/register_yes"
-                            android:textSize="@dimen/_14sdp"/>
+                            android:visibility="gone"
+                            android:textSize="@dimen/_14sdp" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -176,7 +195,8 @@
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/edittextline_color"
                         android:hint="@string/register_name"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/title_color" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -193,7 +213,8 @@
                         android:focusableInTouchMode="false"
                         android:hint="@string/register_email"
                         android:inputType="textEmailAddress"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/title_color" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -209,7 +230,8 @@
                         android:backgroundTint="@color/edittextline_color"
                         android:hint="@string/update_mobile"
                         android:inputType="number"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/title_color" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -225,6 +247,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:text="@string/register_gender"
+                        android:textColor="@color/title_color"
                         android:textSize="@dimen/_12sdp" />
 
                     <RadioGroup
@@ -232,7 +255,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:orientation="horizontal">
 
                         <RadioButton
@@ -240,23 +263,26 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/register_male"
-                           android:textSize="@dimen/_12sdp" />
+                            android:textColor="@color/title_color"
+                            android:textSize="@dimen/_12sdp" />
 
 
                         <RadioButton
                             android:id="@+id/radio_btn_female"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
                             android:text="@string/register_female"
+                            android:textColor="@color/title_color"
                             android:textSize="@dimen/_12sdp" />
 
                         <RadioButton
                             android:id="@+id/radio_btn_orthers"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
                             android:text="@string/register_orthers"
+                            android:textColor="@color/title_color"
                             android:textSize="@dimen/_12sdp" />
 
 
@@ -268,24 +294,37 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:orientation="horizontal"
-                    android:padding="5dp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
                     android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/TvCountry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/country"
+                        android:textColor="@color/title_color"
+                        android:textSize="@dimen/_12ssp" />
 
                     <com.i2donate.Commonmethod.SearchableSpinner
                         android:id="@+id/spin_country"
-                        android:layout_width="match_parent"
+                        android:layout_width="@dimen/_220sdp"
                         android:layout_height="50dp"
-                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="@dimen/_30sdp"
                         android:layout_weight="1.5"
-                        android:textSize="@dimen/_12sdp"
                         android:background="@android:color/transparent"
-                        android:spinnerMode="dropdown" />
+                        android:spinnerMode="dropdown"
+                        android:textColor="@color/title_color"
+                        android:textSize="@dimen/_12sdp" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="-40dp"
+                        android:layout_marginStart="-20dp"
                         android:src="@drawable/ic_drop_down" />
+                    <!--                    android:layout_marginStart="-40dp"-->
+
                     <!-- <ImageView
                          android:background=""
                          android:layout_width="match_parent"
@@ -298,17 +337,71 @@
                 </LinearLayout>
 
                 <View
-                    android:layout_width="match_parent"
+                    android:layout_width="@dimen/_225sdp"
                     android:layout_height="1dp"
+                    android:layout_gravity="end"
+                    android:background="@color/bottom_text_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/TvState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/state"
+                        android:textColor="@color/title_color"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <com.i2donate.Commonmethod.SearchableSpinner
+                        android:id="@+id/spin_country2"
+                        android:layout_width="@dimen/_220sdp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="@dimen/_44sdp"
+                        android:layout_weight="1.5"
+                        android:background="@android:color/transparent"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@color/title_color"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="-20dp"
+                        android:src="@drawable/ic_drop_down" />
+                    <!--                    android:layout_marginStart="-40dp"-->
+
+                    <!-- <ImageView
+                         android:background=""
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_centerVertical="true"
+                         android:layout_gravity="center"
+                         android:layout_weight="8.5"
+                         android:scaleType="fitXY" />-->
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/_225sdp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="end"
                     android:background="@color/bottom_text_color" />
 
                 <LinearLayout
                     android:id="@+id/lay_incorp_doc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -326,7 +419,7 @@
                             android:id="@+id/upload_btn_incorp_doc"
                             android:layout_width="@dimen/_100sdp"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
                             android:background="@drawable/login_botton_border"
                             android:text="@string/upload"
                             android:textAllCaps="false"
@@ -348,9 +441,9 @@
                     android:id="@+id/lay_alloc_doc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -368,7 +461,7 @@
                             android:id="@+id/upload_btn_alloc_doc"
                             android:layout_width="@dimen/_100sdp"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
                             android:background="@drawable/login_botton_border"
                             android:text="@string/upload"
                             android:textAllCaps="false"
@@ -390,9 +483,9 @@
                     android:id="@+id/lay_stand_doc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -410,7 +503,7 @@
                             android:id="@+id/upload_btn_stand_doc"
                             android:layout_width="@dimen/_100sdp"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
                             android:background="@drawable/login_botton_border"
                             android:text="@string/upload"
                             android:textAllCaps="false"
@@ -432,9 +525,9 @@
                     android:id="@+id/lay_other_doc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -452,7 +545,7 @@
                             android:id="@+id/upload_btn_other_doc"
                             android:layout_width="@dimen/_100sdp"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
                             android:background="@drawable/login_botton_border"
                             android:text="@string/upload"
                             android:textAllCaps="false"
@@ -471,21 +564,22 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/terms_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/terms_layout"
                     android:layout_marginTop="@dimen/_20sdp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:visibility="gone">
 
                     <CheckBox
-                        android:layout_width="wrap_content"
                         android:id="@+id/checkbox_btn"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
                     <TextView
+                        android:id="@+id/iagree_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/iagree_tv"
                         android:text="@string/register_agree"
                         android:textSize="@dimen/_14sdp" />
 
@@ -493,10 +587,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/register_terms"
-                        android:textSize="@dimen/_12sdp"
                         android:textColor="@color/terms_color"
+                        android:textSize="@dimen/_12sdp"
                         android:textStyle="bold" />
                 </LinearLayout>
+
                 <Button
                     android:id="@+id/update_btn"
                     android:layout_width="match_parent"
@@ -506,14 +601,15 @@
                     android:layout_marginRight="@dimen/_60sdp"
                     android:background="@drawable/login_botton_border"
                     android:text="@string/update_btn"
+                    android:textStyle="bold"
                     android:textColor="@android:color/white" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_70sdp"
+                    android:layout_marginStart="@dimen/_70sdp"
                     android:layout_marginTop="@dimen/_15sdp"
-                    android:layout_marginRight="@dimen/_60sdp"
+                    android:layout_marginEnd="@dimen/_60sdp"
                     android:layout_marginBottom="@dimen/_20sdp"
                     android:gravity="center">
 
@@ -527,7 +623,7 @@
                             android:id="@+id/skip_btn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:text="@string/update_skip"
                             android:textColor="@color/bottom_text_color" />
                     </RelativeLayout>

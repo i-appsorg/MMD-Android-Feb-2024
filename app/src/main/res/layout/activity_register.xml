@@ -322,14 +322,24 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:orientation="horizontal"
-                        android:padding="5dp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
                         android:weightSum="10">
+
+                        <TextView
+                            android:id="@+id/TvCountry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/country"
+                            android:textColor="@color/title_color"
+                            android:textSize="@dimen/_12ssp" />
 
                         <com.i2donate.Commonmethod.SearchableSpinner
                             android:id="@+id/spin_country"
-                            android:layout_width="match_parent"
+                            android:layout_width="@dimen/_220sdp"
                             android:layout_height="50dp"
-                            android:layout_marginStart="2dp"
+                            android:layout_marginStart="@dimen/_30sdp"
                             android:layout_weight="1.5"
                             android:background="@android:color/transparent"
                             android:imeOptions="actionDone"
@@ -341,7 +351,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_marginStart="-40dp"
+                            android:layout_marginStart="-20dp"
                             android:src="@drawable/ic_drop_down"
                             tools:ignore="ContentDescription" />
                         <!-- <ImageView
@@ -356,8 +366,9 @@
                     </LinearLayout>
 
                     <View
-                        android:layout_width="match_parent"
+                        android:layout_width="@dimen/_225sdp"
                         android:layout_height="1dp"
+                        android:layout_gravity="end"
                         android:background="@color/bottom_text_color" />
 
                     <LinearLayout
@@ -530,8 +541,10 @@
 
                     <LinearLayout
                         android:id="@+id/terms_layout"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
                         android:layout_marginTop="@dimen/_20sdp"
                         android:orientation="horizontal">
 
@@ -548,14 +561,14 @@
                             android:layout_height="wrap_content"
                             android:text="@string/register_agree"
                             android:textColor="@color/title_color"
-                            android:textSize="@dimen/_12ssp" />
+                            android:textSize="@dimen/_11ssp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/register_terms"
                             android:textColor="@color/title_color"
-                            android:textSize="@dimen/_12ssp"
+                            android:textSize="@dimen/_11ssp"
                             android:textStyle="bold" />
 
                     </LinearLayout>

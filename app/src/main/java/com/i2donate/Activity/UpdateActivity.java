@@ -122,7 +122,8 @@ public class UpdateActivity extends AppCompatActivity {
     static HashMap<String, String> userDetails;
     SessionManager session;
     String business_name = "";
-    String type = "";
+//    String type = "";
+    String type = "Individual";
     String permission = "";
     ActivityUpdateBinding binding;
     String pathIncorpDoc = "", pathAllocDoc = "", pathStandDoc = "", pathOtherDoc = "";
@@ -244,29 +245,29 @@ public class UpdateActivity extends AppCompatActivity {
         Log.e("KEY_BUSINESS", "" + userDetails.get(SessionManager.KEY_BUSINESS));
         type = userDetails.get(SessionManager.KEY_type);
         business_name = userDetails.get(SessionManager.KEY_BUSINESS);
-        if (!type.isEmpty()) {
-            String typeupper = type.substring(0, 1).toUpperCase() + type.substring(1);
-            selected_business_tv.setText(typeupper);
-            if (type.equalsIgnoreCase("business")) {
-                business_name_input_layout.setVisibility(View.VISIBLE);
-                gender_layout.setVisibility(View.GONE);
-                selected_business_tv.setVisibility(View.VISIBLE);
-                business_radioGroup1.setVisibility(View.GONE);
-                if (!business_name.isEmpty()) {
-                    business_reg_name_et.setText(business_name.substring(0, 1).toUpperCase() + business_name.substring(1));
-                }
-            } else if (type.equalsIgnoreCase("individual")) {
+//        if (!type.isEmpty()) {
+//            String typeupper = type.substring(0, 1).toUpperCase() + type.substring(1);
+//            selected_business_tv.setText(typeupper);
+//            if (type.equalsIgnoreCase("business")) {
+//                business_name_input_layout.setVisibility(View.VISIBLE);
+//                gender_layout.setVisibility(View.GONE);
+//                selected_business_tv.setVisibility(View.VISIBLE);
+//                business_radioGroup1.setVisibility(View.GONE);
+//                if (!business_name.isEmpty()) {
+//                    business_reg_name_et.setText(business_name.substring(0, 1).toUpperCase() + business_name.substring(1));
+//                }
+//            } else if (type.equalsIgnoreCase("individual")) {
                 business_name_input_layout.setVisibility(View.GONE);
                 gender_layout.setVisibility(View.VISIBLE);
                 business_radioGroup1.setVisibility(View.GONE);
                 selected_business_tv.setVisibility(View.VISIBLE);
-            } else {
-                business_name_input_layout.setVisibility(View.GONE);
-                gender_layout.setVisibility(View.VISIBLE);
-                selected_business_tv.setVisibility(View.GONE);
-                business_radioGroup1.setVisibility(View.VISIBLE);
-            }
-        }
+//            } else {
+//                business_name_input_layout.setVisibility(View.GONE);
+//                gender_layout.setVisibility(View.VISIBLE);
+//                selected_business_tv.setVisibility(View.GONE);
+//                business_radioGroup1.setVisibility(View.VISIBLE);
+//            }
+//        }
 
 
         try {
@@ -311,7 +312,8 @@ public class UpdateActivity extends AppCompatActivity {
                 checkbox_btn.setChecked(true);
             } else {
                 skip_btn.setVisibility(View.GONE);
-                terms_layout.setVisibility(View.VISIBLE);
+//                terms_layout.setVisibility(View.VISIBLE);
+                terms_layout.setVisibility(View.GONE);
             }
             Log.e("countryupdate", country);
             if (isOnline()) {
@@ -333,7 +335,8 @@ public class UpdateActivity extends AppCompatActivity {
                 checkbox_btn.setChecked(true);
             } else {
                 skip_btn.setVisibility(View.GONE);
-                terms_layout.setVisibility(View.VISIBLE);
+//                terms_layout.setVisibility(View.VISIBLE);
+                terms_layout.setVisibility(View.GONE);
             }
             String image = iDonateSharedPreference.getsocialProfileimg(getApplicationContext());
 
@@ -348,7 +351,8 @@ public class UpdateActivity extends AppCompatActivity {
             }
             myprofile_edit_img.setVisibility(View.VISIBLE);
             back_icon_img.setVisibility(View.VISIBLE);
-            ic_edit_icon.setVisibility(View.VISIBLE);
+//            ic_edit_icon.setVisibility(View.VISIBLE);
+            ic_edit_icon.setVisibility(View.GONE);
         } else if (editprofile.equalsIgnoreCase("2")) {
             skip_btn.setVisibility(View.GONE);
             String image = iDonateSharedPreference.getsocialProfileimg(getApplicationContext());
@@ -364,7 +368,8 @@ public class UpdateActivity extends AppCompatActivity {
             }
             myprofile_edit_img.setVisibility(View.VISIBLE);
             back_icon_img.setVisibility(View.GONE);
-            ic_edit_icon.setVisibility(View.VISIBLE);
+//            ic_edit_icon.setVisibility(View.VISIBLE);
+            ic_edit_icon.setVisibility(View.GONE);
 
         } else {
             skip_btn.setVisibility(View.GONE);

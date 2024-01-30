@@ -137,7 +137,8 @@
     <!--    <string name="united_state_location">Search by city/state</string>-->
     <string name="united_state_location">Filter By Location</string>
     <string name="united_state_internationlocation">Search by country</string>
-    <string name="united_state_search_name">Enter nonprofit/charity name</string>
+    <!--    <string name="united_state_search_name">Enter nonprofit/charity name</string>-->
+    <string name="united_state_search_name">Filter By Name</string>
     <string name="united_state_name_location">Location</string>
 
     <!--united_state_adapter_page-->
@@ -145,7 +146,7 @@
     <string name="united_state_adapter_new_york">New York,United States</string>
     <string name="united_state_adapter_like">173 Likes</string>
     <string name="united_state_adapter_following">Follow</string>
-<!--    <string name="united_state_adapter_donate">Donate</string>-->
+    <!--    <string name="united_state_adapter_donate">Donate</string>-->
     <string name="united_state_adapter_donate">Hundi</string>
     <string name="name_search_adapter">search name</string>
 
@@ -334,4 +335,12 @@
     <string name="temple_by_location">Temple By Location</string>
     <string name="all_the_dhamas_are_related_to_four_yuga_s_epochs">All the \'dhamas\' are related to four Yuga\'s (epochs)</string>
     <string name="about">ABOUT</string>
+    <string name="type_at_least_3_letters_to_search">Type at least 3 letters to search.</string>
+    <string name="location">Location</string>
+    <string name="mahima_itihasa">MAHIMA / ITIHASA</string>
+    <string name="this_is_the_section_for_displaying_mahima_ithihasa_information">THIS IS THE SECTION FOR DISPLAYING MAHIMA / ITHIHASA INFORMATION</string>
+    <string name="temple_architecture">TEMPLE ARCHITECTURE</string>
+    <string name="contact">CONTACT</string>
+    <string name="country">Country</string>
+    <string name="state">State</string>
 </resources>
