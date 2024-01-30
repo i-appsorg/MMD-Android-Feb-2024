@@ -159,17 +159,17 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
             @Override
             public void onClick(View v) {
                 //todo login
-                if (session.isLoggedIn()) {
+//                if (session.isLoggedIn()) {
                     iDonateSharedPreference.seteditprofile(getApplicationContext(), "1");
                     ChangeActivity.changeActivity(CommonMenuActivity.this, UpdateActivity.class);
                     // finish();
                     ;
-                } else {
-                    LoginDialog();
-                    //ChangeActivity.changeActivity(CommonMenuActivity.this, LoginActivity.class);
-                    //  finish();
-                    ;
-                }
+//                } else {
+//                    LoginDialog();
+//                    //ChangeActivity.changeActivity(CommonMenuActivity.this, LoginActivity.class);
+//                    //  finish();
+//                    ;
+//                }
 
             }
         });
