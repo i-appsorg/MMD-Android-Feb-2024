@@ -134,7 +134,7 @@
                             <TextView
                                 android:id="@+id/like_count_tv"
                                 android:layout_width="0dp"
-                                android:layout_height="wrap_content"
+                                android:layout_height="19dp"
                                 android:layout_weight=".8"
                                 android:text="@string/united_state_adapter_like"
                                 android:textColor="@color/colorAccent"

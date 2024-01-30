@@ -210,15 +210,15 @@ public class BrowseActivity extends CommonMenuActivity {
             @Override
             public void onClick(View v) {
                 //todo login
-//                if (session.isLoggedIn()) {
+                if (session.isLoggedIn()) {
                     iDonateSharedPreference.setAdvancepage(getApplicationContext(), "namesearch");
                     iDonateSharedPreference.setLocation(getApplicationContext(), "");
                     iDonateSharedPreference.setSelectedtype(getApplicationContext(), "advancesearch");
                     iDonateSharedPreference.setselected_iem_list(getApplicationContext(), arraychecked_item);
                     ChangeActivity.changeActivity(BrowseActivity.this, AdvanceCompletedNewActivity.class);
-//                } else {
-//                    LoginDialog();
-//                }
+                } else {
+                    LoginDialog();
+                }
             }
         });
         type_relative_layout.setOnClickListener(new View.OnClickListener() {
