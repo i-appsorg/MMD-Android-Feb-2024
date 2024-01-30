@@ -19,8 +19,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_12sdp"
                 android:layout_marginBottom="@dimen/_20sdp"
                 android:orientation="vertical">
 
@@ -43,10 +43,11 @@
                     android:textSize="@dimen/_12sdp" />
 
                 <TextView
+                    android:id="@+id/RefindDiety"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_15sdp"
-                    android:text="@string/advanced_tax"
+                    android:text="@string/Refined_Deity_Search"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_14sdp"
                     android:textStyle="bold" />
@@ -154,6 +155,7 @@
                         android:layout_height="wrap_content"
                         android:visibility="gone"
                         android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:layout_below="@+id/IvPlus" />
                 </RelativeLayout>
 
@@ -208,6 +210,7 @@
                         android:layout_height="wrap_content"
                         android:visibility="gone"
                         android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:layout_below="@+id/IvPlus2" />
                 </RelativeLayout>
 
@@ -314,7 +317,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/reset_button_border"
                 android:padding="@dimen/_5sdp"
-                android:text="@string/type_reset_button"
+                android:text="@string/back"
                 android:textColor="@android:color/black" />
 
             <Button

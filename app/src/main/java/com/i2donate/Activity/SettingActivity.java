@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
 
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.gson.JsonObject;
@@ -36,7 +37,8 @@ public class SettingActivity extends CommonMenuActivity {
     IDonateSharedPreference iDonateSharedPreference;
     RelativeLayout relative_layout_changepassword;
     String logintype="";
-    Switch notification_status,sound_on_off;
+    SwitchCompat notification_status;
+    SwitchCompat sound_on_off;
     ApiInterface apiService;
     static HashMap<String, String> userDetails;
     SessionManager sessionManager;
@@ -56,8 +58,8 @@ public class SettingActivity extends CommonMenuActivity {
         sessionManager = new SessionManager(getApplicationContext());
         iDonateSharedPreference = new IDonateSharedPreference();
         relative_layout_changepassword=(RelativeLayout)findViewById(R.id.relative_layout_changepassword);
-        notification_status=(Switch)findViewById(R.id.notification_status);
-        sound_on_off=(Switch)findViewById(R.id.sound_on_off);
+        notification_status=(SwitchCompat)findViewById(R.id.notification_status);
+        sound_on_off=(SwitchCompat)findViewById(R.id.sound_on_off);
         logintype=iDonateSharedPreference.getlogintype(getApplicationContext());
         if (iDonateSharedPreference.getNotificationstatus(getApplicationContext())==1){
             notification_status.setChecked(true);

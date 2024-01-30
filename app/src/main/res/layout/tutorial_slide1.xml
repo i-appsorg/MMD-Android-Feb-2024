@@ -17,7 +17,7 @@
         <ImageView
             android:layout_width="@dimen/_130sdp"
             android:layout_height="@dimen/_70sdp"
-            android:src="@drawable/idonate_logo"
+            android:src="@drawable/logo_splash"
             android:layout_marginTop="@dimen/_50sdp"/>
         <TextView
             android:layout_width="wrap_content"

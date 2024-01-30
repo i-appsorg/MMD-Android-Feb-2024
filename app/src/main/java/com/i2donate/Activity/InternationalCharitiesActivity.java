@@ -171,7 +171,7 @@ public class InternationalCharitiesActivity extends CommonBackActivity {
         }
         iDonateSharedPreference.setdailoguepage(getApplicationContext(), "0");
         slideUp = AnimationUtils.loadAnimation(this, R.anim.visiblity_animation);
-        back_icon_img = (ImageView) findViewById(R.id.back_icon_name_img);
+        back_icon_img = (ImageView) findViewById(R.id.back_icon_login_img);
         back_icon_img1 = (ImageView) findViewById(R.id.back_icon_img1);
         appbar_layout = (AppBarLayout) findViewById(R.id.appbar_layout);
         relative_before_toolbar = (RelativeLayout) findViewById(R.id.relative_before_toolbar);
@@ -189,7 +189,7 @@ public class InternationalCharitiesActivity extends CommonBackActivity {
         name_search_layout = (LinearLayout) findViewById(R.id.name_search_layout);
         united_state_recyclerview = (RecyclerView) findViewById(R.id.united_state_recyclerview);
         search_us_et = (EditText) findViewById(R.id.search_us_et);
-        search_us_et.setFocusable(false);
+//        search_us_et.setFocusable(false);
         search_name_et1 = (EditText) findViewById(R.id.search_name_et1);
         search_icon = (ImageView) findViewById(R.id.search_icon);
         advance_search_text = (TextView) findViewById(R.id.advance_search_text);
@@ -275,6 +275,24 @@ public class InternationalCharitiesActivity extends CommonBackActivity {
                             @Override
                             public void onGlobalLayout() {
 
+                            /*    Rect r = new Rect();
+                                v.getWindowVisibleDisplayFrame(r);
+                                int screenHeight = v.getRootView().getHeight();
+
+                                // r.bottom is the position above soft keypad or device button.
+                                // if keypad is shown, the r.bottom is smaller than that before.
+                                int keypadHeight = screenHeight - r.bottom;
+
+                                Log.d(TAG, "keypadHeight = " + keypadHeight);
+
+                                if (keypadHeight > screenHeight * 0.15) { // 0.15 ratio is perhaps enough to determine keypad height.
+                                    // keyboard is opened
+
+                                    CommonBackActivity.hide();
+                                } else {
+                                    // keyboard is closed
+                                    CommonBackActivity.show();
+                                }*/
                                 Rect r = new Rect();
                                 v.getWindowVisibleDisplayFrame(r);
                                 int screenHeight = v.getRootView().getHeight();
@@ -297,7 +315,7 @@ public class InternationalCharitiesActivity extends CommonBackActivity {
                         });
 
 
-                flag = 1;
+/*                flag = 1;
                 if (data.equalsIgnoreCase("3")) {
                     Intent intent = new Intent(InternationalCharitiesActivity.this, PlaceSearchActivity.class);
                     intent.putExtra("mylist", charitylist1);
@@ -312,7 +330,7 @@ public class InternationalCharitiesActivity extends CommonBackActivity {
                     intent.putExtra("data", "2");
                     startActivity(intent);
                     finish();
-                }
+                }*/
             }
         });
 
@@ -432,22 +450,22 @@ public class InternationalCharitiesActivity extends CommonBackActivity {
                     if (data.equalsIgnoreCase("3")) {
                         iDonateSharedPreference.setcountrycode(getApplicationContext(), "normalsearch");
                         iDonateSharedPreference.setAdvancepage(getApplicationContext(), "namesearch");
-                        ChangeActivity.changeActivityData(InternationalCharitiesActivity.this, NewtypesActivity.class, "1");
+                        ChangeActivity.changeActivityData(InternationalCharitiesActivity.this, NewSeachtypesActivity.class, "1");
                     } else {
                         iDonateSharedPreference.setAdvancepage(getApplicationContext(), "international");
                         iDonateSharedPreference.setcountrycode(getApplicationContext(), "INTsearch");
-                        ChangeActivity.changeActivityData(InternationalCharitiesActivity.this, NewtypesActivity.class, "1");
+                        ChangeActivity.changeActivityData(InternationalCharitiesActivity.this, NewSeachtypesActivity.class, "1");
                     }
 
                 } else {
                     if (data.equalsIgnoreCase("3")) {
                         iDonateSharedPreference.setcountrycode(getApplicationContext(), "normalsearch");
                         iDonateSharedPreference.setAdvancepage(getApplicationContext(), "namesearch");
-                        ChangeActivity.changeActivityData(InternationalCharitiesActivity.this, NewtypesActivity.class, "0");
+                        ChangeActivity.changeActivityData(InternationalCharitiesActivity.this, NewSeachtypesActivity.class, "0");
                     } else {
                         iDonateSharedPreference.setAdvancepage(getApplicationContext(), "international");
                         iDonateSharedPreference.setcountrycode(getApplicationContext(), "INTsearch");
-                        ChangeActivity.changeActivityData(InternationalCharitiesActivity.this, NewtypesActivity.class, "0");
+                        ChangeActivity.changeActivityData(InternationalCharitiesActivity.this, NewSeachtypesActivity.class, "0");
                     }
                 }
             }

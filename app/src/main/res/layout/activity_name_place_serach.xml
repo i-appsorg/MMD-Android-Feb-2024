@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_30sdp"
             android:layout_centerVertical="true"
-            android:src="@drawable/idonate_logo" />
+            android:src="@drawable/toplogo" />
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
@@ -45,7 +45,7 @@
         <ImageView
             android:id="@+id/search_icon"
             android:layout_width="0dp"
-            android:layout_height="@dimen/_10sdp"
+            android:layout_height="@dimen/_15sdp"
             android:layout_gravity="center_vertical"
             android:layout_weight=".1"
             android:src="@drawable/search_icon" />
@@ -64,8 +64,9 @@
             android:hint="@string/autocomplete_hint"
             android:imeOptions="actionDone"
             android:singleLine="true"
+            android:textSize="@dimen/_12sdp"
             android:textColor="@color/trans_black"
-            android:textColorHint="@color/colorPrimary" />
+            android:textColorHint="@color/title_color" />
 
         <ImageView
             android:id="@+id/close_img"
@@ -74,7 +75,8 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="@dimen/_2sdp"
             android:layout_weight=".1"
-            android:src="@drawable/close"
+             android:src="@drawable/close"
+            android:tint="@color/orange"
             android:visibility="gone" />
     </LinearLayout>
 

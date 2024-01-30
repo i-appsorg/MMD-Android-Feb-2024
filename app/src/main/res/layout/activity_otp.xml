@@ -16,7 +16,6 @@
         android:elevation="5dp"
         android:visibility="visible"
         app:contentInsetEnd="0dp"
-        android:background="@drawable/toolbarbg"
         app:contentInsetStart="0dp">
 
         <ImageView
@@ -37,7 +36,7 @@
             android:text="@string/pint_otp_title"
             android:textAllCaps="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@android:color/white" />
+            android:textColor="@color/title_color" />
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
@@ -69,6 +68,7 @@
                         android:layout_height="@dimen/_80sdp"
                         android:layout_centerVertical="true"
                         android:layout_marginTop="@dimen/_20sdp"
+                        android:visibility="gone"
                         android:src="@drawable/splashlogo" />
 
                     <TextView
@@ -78,6 +78,7 @@
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:id="@+id/otp_received_tv"
+                        android:textColor="@color/title_color"
                         />
                     <TextView
                         android:layout_width="match_parent"
@@ -86,6 +87,7 @@
                         android:text="@string/forgot_note_pt"
                         android:gravity="center"
                         android:layout_gravity="center"
+                        android:textColor="@color/title_color"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         />
 
@@ -102,6 +104,7 @@
                             android:id="@+id/pin_first_edittext"
                             android:cursorVisible="true"
                             android:inputType="number"
+                            android:textColor="@color/title_color"
                             android:layout_weight="1"
                             android:backgroundTint="@color/edittextline_color"
                             android:contentDescription="@string/pin_content_desc"
@@ -113,6 +116,7 @@
                             android:cursorVisible="true"
                             android:inputType="number"
                             android:layout_weight="1"
+                            android:textColor="@color/title_color"
                             android:backgroundTint="@color/edittextline_color"
                             android:contentDescription="@string/pin_content_desc"
                             style="@style/pin_edittext_style"/>
@@ -122,6 +126,7 @@
                             android:cursorVisible="true"
                             android:inputType="number"
                             android:layout_weight="1"
+                            android:textColor="@color/title_color"
                             android:id="@+id/pin_third_edittext"
                             android:backgroundTint="@color/edittextline_color"
                             android:contentDescription="@string/pin_content_desc"
@@ -132,6 +137,7 @@
                             android:cursorVisible="true"
                             android:inputType="number"
                             android:layout_weight="1"
+                            android:textColor="@color/title_color"
                             android:backgroundTint="@color/edittextline_color"
                             android:id="@+id/pin_forth_edittext"
                             android:contentDescription="@string/pin_content_desc"
@@ -175,6 +181,7 @@
                             android:id="@+id/resend_btn_tv"
                             android:layout_alignParentRight="true"
                             android:layout_marginTop="@dimen/_5sdp"
+                            android:textColor="@color/title_color"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:text="@string/pin_resend_code" />
                     </RelativeLayout>

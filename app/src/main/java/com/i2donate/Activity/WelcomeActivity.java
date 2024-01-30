@@ -82,13 +82,12 @@ public class WelcomeActivity extends AppCompatActivity {
         giving_tv.setTypeface(Typeface.createFromAsset(getAssets(), "Chunkfive.otf"));*/
         prefManager = new PrefManager(this);
 //        if (!prefManager.isFirstTimeLaunch()) {
-//           /* handler.postDelayed(new Runnable() {
-//                @Override
-//                public void run() {*/
-//                    launchHomeScreen1();
-//                    finish();
-//          /*      }
-//                }, 5000);*/
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    btnNext.performClick();
+                }
+                }, 5000);
 //
 //        }else {
 //            if (Build.VERSION.SDK_INT >= 21) {
@@ -103,10 +102,11 @@ public class WelcomeActivity extends AppCompatActivity {
         // add few more layouts if you want
         layouts = new int[]{
                 /*R.layout.tutorial_slide1,*/
-                R.layout.tutorial_slide2};
+//                R.layout.tutorial_slide2};
+                R.layout.tutorial_slide2_new};
 
         // adding bottom dots
-        addBottomDots(0);
+//        addBottomDots(0);
 
         // making notification bar transparent
         changeStatusBarColor();

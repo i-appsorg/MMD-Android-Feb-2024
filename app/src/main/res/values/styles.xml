@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@drawable/dashbord_background</item>
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">#FF461F</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:listDivider">@android:color/transparent</item>
     </style>
@@ -13,7 +13,7 @@
             <!-- Customize your theme here. -->
             <item name="android:windowBackground">@drawable/dashbord_background</item>
             <item name="colorPrimary">@color/colorPrimary</item>
-            <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+            <item name="colorPrimaryDark">#FF461F</item>
             <item name="colorAccent">@color/colorAccent</item>
             <item name="android:listDivider">@android:color/transparent</item>
         </style>
@@ -21,22 +21,22 @@
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@drawable/dashbord_background</item>
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/color_switch</item>
+        <item name="colorPrimaryDark">#FF461F</item>
+        <item name="colorAccent">@color/colorPrimary</item>
         <item name="android:listDivider">@android:color/transparent</item>
     </style>
 
         <style name="ChatBackground" parent="Theme.AppCompat.Light.NoActionBar">
             <item name="android:windowBackground">@drawable/dashbord_background</item>
             <item name="colorPrimary">@color/colorPrimary</item>
-            <item name="colorPrimaryDark">@color/colorPrimary</item>
+            <item name="colorPrimaryDark">#FF461F</item>
             <item name="colorAccent">@color/colorAccent</item>
             <item name="android:listDivider">@android:color/transparent</item>
         </style>
         <style name="adavance_theme" parent="Theme.AppCompat.Light.NoActionBar">
             <item name="android:windowBackground">@drawable/dashbord_background</item>
             <item name="colorPrimary">@color/colorPrimary</item>
-            <item name="colorPrimaryDark">@color/colorPrimary</item>
+            <item name="colorPrimaryDark">#FF461F</item>
             <item name="colorAccent">@color/colorPrimary</item>
             <item name="android:listDivider">@android:color/transparent</item>
         </style>

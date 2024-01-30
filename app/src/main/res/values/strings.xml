@@ -145,13 +145,14 @@
     <string name="united_state_adapter_new_york">New York,United States</string>
     <string name="united_state_adapter_like">173 Likes</string>
     <string name="united_state_adapter_following">Follow</string>
-<!--    <string name="united_state_adapter_donate">Donate</string>-->
+    <!--    <string name="united_state_adapter_donate">Donate</string>-->
     <string name="united_state_adapter_donate">Hundi</string>
     <string name="name_search_adapter">search name</string>
 
     <!--Search By Type-->
 
     <string name="search_by_type">Search By Type</string>
+    <string name="search_by_deities">SEARCH BY DEITIES</string>
     <string name="search_sub_type">Sub-types</string>
     <string name="type_education">Arts,culture &amp; Humanites </string>
     <string name="type_evniroment">Education</string>
@@ -179,7 +180,8 @@
     <string name="setting_app">App Settings</string>
     <string name="setting_alloe">All notifications</string>
     <string name="setting_not_distrub">Do not distrub</string>
-    <string name="setting_make_sound">Disable sound &amp; vibrate</string>
+<!--    <string name="setting_make_sound">Disable sound &amp; vibrate</string>-->
+    <string name="setting_make_sound">Notifications will not make sound or\nvibrate</string>
     <string name="setting_account_setting">Account Settings</string>
     <string name="setting_account_setting_available">(Available only for in-app registration)</string>
     <string name="setting_change_password">Change Password</string>
@@ -198,6 +200,7 @@
 
     <string name="welcome_better_to_give">A Better Way to give</string>
     <string name="welcome_all_in_one">All - in - One</string>
+    <string name="welcome">Swagatham</string>
     <string name="welcome_giving">giving</string>
     <string name="welcome_we_want">we want to make giving simple</string>
     <string name="welcome_meaningful">and meaningful for you.the</string>
@@ -216,8 +219,8 @@
     <string name="advanced_search">advanced search</string>
     <string name="advanced_narrow">Refine your search with greater granularity or interesting details</string>
     <!--    <string name="advanced_narrow">Narrow down search results for complex searches by using the Advanced Search.</string>-->
-    <string name="advanced_tax">Refined Deity Search</string>
-    <!--    <string name="advanced_tax">Tax Status</string>-->
+    <string name="Refined_Deity_Search">Refined Deity Search</string>
+    <string name="advanced_tax">Tax Status</string>
     <string name="advanced_exempt">Deductible</string>
     <string name="advanced_not_exempt">Not Deductible</string>
     <string name="advanced_sub_types">Types</string>
@@ -263,7 +266,9 @@
     <string name="privacy_title">i2~Donate privacy policy</string>
     <!--About i2~donate-->
 
-    <string name="about_title">ABOUT i2~DONATE</string>
+    <string name="about_title">ABOUT</string>
+<!--    <string name="about_title">ABOUT i2~DONATE</string>-->
+    <string name="about_dummy_text">some test will be displayed here . You can use this screen design for displaying information that is related to \n\nAbout Mama Devalayam or you can use this for display Help and Support Information Or for displaying Terms and Conditions or use oit for displaying Privacy policy content.\n\nsome test will be displayed here . You can use this screen design for displaying information that is related to \n\nAbout Mama Devalayam or you can use this for display Help and Support Information Or for displaying Terms and Conditions or use oit for displaying Privacy policy content.\n\nsome test will be displayed here . You can use this screen design for displaying information that is related to \n\nAbout Mama Devalayam or you can use this for display Help and Support Information Or for displaying Terms and Conditions or use oit for displaying Privacy policy content.\n\nsome test will be displayed here . You can use this screen design for displaying information that is related to \n\nAbout Mama Devalayam or you can use this for display Help and Support Information Or for displaying Terms and Conditions or use oit for displaying Privacy policy content.</string>
     <string name="about_idonate_text">i-Donate looks at an enduring giving and sharing process. It combines simplicity with disruption. It seeks to change the giving behavior and process. i-Donate proprietary solution is unique in its ability for contextual communication, which is a form of dynamic intelligence. </string>
     <string name="about_cloud_based">It is a cloud-based solution allowing nonprofits to focus on their primary goal – attract, retain and engage with donors and volunteers and allows Donors easy and quick access to information, set your goals, personalize your giving, track and share your giving and volunteer opportunities.  </string>
     <string name="about_idonate_impact">i2~Donate impacts</string>
@@ -284,7 +289,8 @@
 
     <!--Forgot Password-->
 
-    <string name="forgot_password_title">Forgot Password</string>
+<!--    <string name="forgot_password_title">Forgot Password</string>-->
+    <string name="forgot_password_title">CHANGE PASSWORD</string>
     <string name="forgot_password_hint">Enter your registered email address above. We will send you an OTP for reset your password.</string>
     <string name="forgot_send">Send</string>
     <string name="forgot_note_pt">Note: Please check the spam folder in case you have not received any mail.</string>
@@ -334,4 +340,7 @@
     <string name="temple_by_location">Temple By Location</string>
     <string name="all_the_dhamas_are_related_to_four_yuga_s_epochs">All the \'dhamas\' are related to four Yuga\'s (epochs)</string>
     <string name="about">ABOUT</string>
+    <string name="back">Back</string>
+    <string name="splash_text">Mama \nDevalayam</string>
+    <string name="change_password_msg">You have Successfully Changed Your Password</string>
 </resources>

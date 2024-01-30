@@ -396,11 +396,9 @@ public class LoadMoreUnitesStateLocationDetailsAdapterList extends RecyclerView.
             @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(mContext, MakeTypeScreenActivity.class);
-//                mContext.startActivity(intent);
-                //todo login
+                 //todo login
                 if (session.isLoggedIn()) {
-                    d = new BottomSheetDialog(mContext, R.style.payment_dailog);
+                  /*  d = new BottomSheetDialog(mContext, R.style.payment_dailog);
                     d.setContentView(R.layout.payment_alert_dailog);
                     LinearLayout payment_dailog_linear = (LinearLayout) d.findViewById(R.id.payment_dailog_linear);
                     final EditText payment_et = (EditText) d.findViewById(R.id.payment_et);
@@ -563,7 +561,14 @@ public class LoadMoreUnitesStateLocationDetailsAdapterList extends RecyclerView.
                         }
                     });
                     d.setCancelable(true);
-                    d.show();
+                    d.show();*/
+
+                    Intent intent = new Intent(mContext, MakeTypeScreenActivity.class);
+                    intent.putExtra("tvTopType", holder.txtxCountry.getText().toString());
+                    intent.putExtra("tvWebsiteId", mContext.getString(R.string.wesite_id));
+                    intent.putExtra("tvEmailId",  mContext.getString(R.string.emailId));
+                    intent.putExtra("tvContactId",  mContext.getString(R.string.contact_id));
+                    mContext.startActivity(intent);
                 } else {
                     LoginDialog();
                 }

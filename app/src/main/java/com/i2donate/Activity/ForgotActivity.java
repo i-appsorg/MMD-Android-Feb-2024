@@ -26,6 +26,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.gson.JsonObject;
+import com.i2donate.CommonActivity.CommonBackActivity;
 import com.i2donate.Commonmethod.ConstantFunctions;
 import com.i2donate.Model.ChangeActivity;
 import com.i2donate.R;
@@ -40,7 +41,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ForgotActivity extends AppCompatActivity {
+public class ForgotActivity extends CommonBackActivity {
     private static final String TAG = ForgotActivity.class.getSimpleName();
     Button mail_send_btn;
     TextInputLayout email_input_layout;
@@ -53,7 +54,7 @@ public class ForgotActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forgot);
+        setView(R.layout.activity_forgot,TAG);
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         init();
@@ -67,7 +68,7 @@ public class ForgotActivity extends AppCompatActivity {
         mail_send_btn=(Button)findViewById(R.id.mail_send_btn);
         email_input_layout=(TextInputLayout)findViewById(R.id.email_input_layout);
         reg_email_et=(EditText)findViewById(R.id.reg_email_et);
-        back_icon_login_img=(ImageView)findViewById(R.id.back_icon_login_img);
+//        back_icon_login_img=(ImageView)findViewById(R.id.back_icon_login_img);
         forgot_tv=(TextView)findViewById(R.id.forgot_tv);
         builder = new AlertDialog.Builder(this);
     }
@@ -126,12 +127,12 @@ public class ForgotActivity extends AppCompatActivity {
 
             }
         });
-        back_icon_login_img.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               dailogue_forgot();
-            }
-        });
+//        back_icon_login_img.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//               dailogue_forgot();
+//            }
+//        });
 
     }
 

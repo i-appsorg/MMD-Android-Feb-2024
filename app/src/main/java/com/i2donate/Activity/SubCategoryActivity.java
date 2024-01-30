@@ -78,6 +78,30 @@ public class SubCategoryActivity extends AppCompatActivity {
         listener();
     }
 
+    private void init() {
+        listofsubcategory.clear();
+        listofchildcategory.clear();
+        listofchildcodecategory.clear();
+        selectedSubcategory.clear();
+        selectedChildcategory.clear();
+        Bundle bundle = getIntent().getExtras();
+        String name = bundle.getString("category_name");
+        page = bundle.getString("page");/**/
+        Log.e(TAG, "name - " + name);
+        expandable_listview = (ExpandableListView) findViewById(R.id.expandable_listview);
+        category_title_name = (TextView) findViewById(R.id.category_title_name);
+        back_icon_advance_img = (ImageView) findViewById(R.id.back_icon_advance_img);
+        apply_button = (Button) findViewById(R.id.apply_button);
+        reset_button = (Button) findViewById(R.id.reset_button);
+        bottom_layout = (LinearLayout) findViewById(R.id.bottom_layout);
+        category_title_name.setText(name);
+        myCategoriesExpandableListAdapter = new MyCategoriesExpandableListAdapterComplete(this, parentItems, expandable_listview, childItems, false, index = 0);
+        expandable_listview.setAdapter(myCategoriesExpandableListAdapter);
+        expandable_listview.setGroupIndicator(null);
+        expandable_listview.setChildIndicator(null);
+
+    }
+
     private void listener() {
         back_icon_advance_img.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -168,30 +192,6 @@ public class SubCategoryActivity extends AppCompatActivity {
                 }
             }
         });
-    }
-
-    private void init() {
-        listofsubcategory.clear();
-        listofchildcategory.clear();
-        listofchildcodecategory.clear();
-        selectedSubcategory.clear();
-        selectedChildcategory.clear();
-        Bundle bundle = getIntent().getExtras();
-        String name = bundle.getString("category_name");
-        page = bundle.getString("page");/**/
-        Log.e(TAG, "name - " + name);
-        expandable_listview = (ExpandableListView) findViewById(R.id.expandable_listview);
-        category_title_name = (TextView) findViewById(R.id.category_title_name);
-        back_icon_advance_img = (ImageView) findViewById(R.id.back_icon_advance_img);
-        apply_button = (Button) findViewById(R.id.apply_button);
-        reset_button = (Button) findViewById(R.id.reset_button);
-        bottom_layout = (LinearLayout) findViewById(R.id.bottom_layout);
-        category_title_name.setText(name);
-        myCategoriesExpandableListAdapter = new MyCategoriesExpandableListAdapterComplete(this, parentItems, expandable_listview, childItems, false, index = 0);
-        expandable_listview.setAdapter(myCategoriesExpandableListAdapter);
-        expandable_listview.setGroupIndicator(null);
-        expandable_listview.setChildIndicator(null);
-
     }
 
     private void dailogue_forgot() {

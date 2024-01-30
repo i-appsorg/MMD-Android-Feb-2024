@@ -27,6 +27,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -65,7 +66,8 @@ public class UnitedStateActivity extends CommonBackActivity {
     TextView title_tv1, advance_search_text, advance_search_text1, titleTextView;
     ImageView close_img, close_img_loc, filter_show_img, back_icon_img, back_icon_img1, search_icon, search_icon_loc;
     static ApiInterface apiService;
-    RelativeLayout relative_before_toolbar, relative_toolbar, search_relativelayout;
+    RelativeLayout relative_toolbar, search_relativelayout;
+    ConstraintLayout relative_before_toolbar;
     static RecyclerView united_state_recyclerview;
     static ShimmerFrameLayout shimmer_view_container;
     static ArrayList<String> listOfdate = new ArrayList<>();
@@ -120,10 +122,10 @@ public class UnitedStateActivity extends CommonBackActivity {
         iDonateSharedPreference = new IDonateSharedPreference();
         iDonateSharedPreference.setdailoguepage(getApplicationContext(), "0");
         slideUp = AnimationUtils.loadAnimation(this, R.anim.visiblity_animation);
-        back_icon_img = (ImageView) findViewById(R.id.back_icon_name_img);
+        back_icon_img = (ImageView) findViewById(R.id.back_icon_login_img);
         back_icon_img1 = (ImageView) findViewById(R.id.back_icon_img1);
         appbar_layout = (AppBarLayout) findViewById(R.id.appbar_layout);
-        relative_before_toolbar = (RelativeLayout) findViewById(R.id.relative_before_toolbar);
+        relative_before_toolbar = (ConstraintLayout) findViewById(R.id.relative_before_toolbar);
         relative_toolbar = (RelativeLayout) findViewById(R.id.relative_toolbar);
         filter_show_img = (ImageView) findViewById(R.id.filter_show_img);
         linear_tool_test = (LinearLayout) findViewById(R.id.linear_tool_test);
@@ -147,7 +149,7 @@ public class UnitedStateActivity extends CommonBackActivity {
         advance_search_text1 = (TextView) findViewById(R.id.advance_search_text1);
         close_img_loc = (ImageView) findViewById(R.id.close_img_loc);
         no_data_linear = (LinearLayout) findViewById(R.id.no_data_linear);
-        no_data_tv =  findViewById(R.id.no_data_tv);
+        no_data_tv = findViewById(R.id.no_data_tv);
         type_linear_layout = (LinearLayout) findViewById(R.id.type_linear_layout);
         type_linear_layout1 = (LinearLayout) findViewById(R.id.type_linear_layout1);
         close_img = (ImageView) findViewById(R.id.close_img);
@@ -404,12 +406,12 @@ public class UnitedStateActivity extends CommonBackActivity {
                 if (search_us_et.getText().length() > 0) {
                     iDonateSharedPreference.setAdvancepage(getApplicationContext(), "unitedstate");
                     iDonateSharedPreference.setcountrycode(getApplicationContext(), "USsearch");
-                    ChangeActivity.changeActivityData(UnitedStateActivity.this, NewtypesActivity.class, "1");
+                    ChangeActivity.changeActivityData(UnitedStateActivity.this, NewSeachtypesActivity.class, "1");
                     finish();
                 } else {
                     iDonateSharedPreference.setAdvancepage(getApplicationContext(), "unitedstate");
                     iDonateSharedPreference.setcountrycode(getApplicationContext(), "USsearch");
-                    ChangeActivity.changeActivityData(UnitedStateActivity.this, NewtypesActivity.class, "0");
+                    ChangeActivity.changeActivityData(UnitedStateActivity.this, NewSeachtypesActivity.class, "0");
                     finish();
                 }
             }

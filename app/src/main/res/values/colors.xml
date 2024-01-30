@@ -61,6 +61,8 @@
     <color name="black_light">#33333366</color>
     <color name="yellow_light">#FFF8DD</color>
     <color name="orange">#FF5936</color>
+    <color name="dark_yellow">#F4BB36</color>
+    <color name="yellow">#FFF8DD</color>
     <color name="gray">#666666</color>
 <!--    <color name="edittextline_color">#9C7192</color>-->
 <!--    <color name="edittextline_color">#ADE0E0D5</color>-->

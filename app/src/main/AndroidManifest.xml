@@ -69,6 +69,9 @@
             android:exported="false" />
         -->
         <activity
+            android:name=".Activity.TitleSubTitleNewActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.MakeTypeScreenActivity"
             android:exported="false" />
         <activity
@@ -142,9 +145,11 @@
         <activity android:name=".Activity.AdavanceSearch_new" />
         <activity android:name=".Activity.HelpSupportActivity" />
         <activity android:name=".Activity.AboutActivity" />
+        <activity android:name=".Activity.AboutNewActivity" />
         <activity android:name=".Activity.InternationalCharitiesActivity" />
         <activity android:name=".Activity.PlaceSearchActivity" />
         <activity android:name=".Activity.AutosearchActivity" />
+        <activity android:name=".Activity.NewSeachtypesActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -255,7 +260,7 @@
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@drawable/idonate_logo" />
+            android:resource="@drawable/toplogo" />
         <!--
  Set color used with incoming notification messages. This is used when no color is set for the incoming
              notification message. See README(https://goo.gl/6BKBk7) for more.

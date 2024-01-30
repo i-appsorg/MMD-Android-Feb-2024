@@ -35,6 +35,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 import com.i2donate.Activity.AboutActivity;
+import com.i2donate.Activity.AboutNewActivity;
 import com.i2donate.Activity.BrowseActivity;
 import com.i2donate.Activity.HelpSupportActivity;
 import com.i2donate.Activity.LoginActivity;
@@ -238,11 +239,16 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
                                 ChangeActivity.changeActivity(CommonMenuActivity.this, SettingActivity.class);
                                 finish();
                                 break;
-                            case "about i2-donate":
+                            case "about mama devalayam’s":
                                 Log.e("settings", "settings");
-                                ChangeActivity.changeActivity(CommonMenuActivity.this, AboutActivity.class);
+                                ChangeActivity.changeActivity(CommonMenuActivity.this, AboutNewActivity.class);
                                 finish();
                                 break;
+//                            case "about i2-donate":
+//                                Log.e("settings", "settings");
+//                                ChangeActivity.changeActivity(CommonMenuActivity.this, AboutNewActivity.class);
+//                                finish();
+//                                break;
                             case "help/support":
                                 Log.e("settings", "settings");
                                 ChangeActivity.changeActivity(CommonMenuActivity.this, HelpSupportActivity.class);

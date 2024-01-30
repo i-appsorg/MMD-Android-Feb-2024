@@ -55,7 +55,7 @@ public class AutosearchActivity extends AppCompatActivity implements GoogleApiCl
         mAutocompleteView = (EditText)findViewById(R.id.autocomplete_places);
 
         delete=(ImageView)findViewById(R.id.cross);
-        back_icon_place_img=(ImageView)findViewById(R.id.back_icon_place_img);
+        back_icon_place_img=(ImageView)findViewById(R.id.back_icon_login_img);
         mAutoCompleteAdapter =  new PlacesAutoCompleteAdapter(this, R.layout.searchview_adapter,
                 mGoogleApiClient, BOUNDS_INDIA, null);
 

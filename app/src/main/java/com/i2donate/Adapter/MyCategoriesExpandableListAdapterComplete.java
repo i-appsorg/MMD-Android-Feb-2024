@@ -165,8 +165,9 @@ public class MyCategoriesExpandableListAdapterComplete extends BaseExpandableLis
             viewHolderParent.no_data_item_linear.setVisibility(View.VISIBLE);
           //  viewHolderParent.add_linear.setVisibility(View.VISIBLE);
             // viewHolderParent.add_linear.setVisibility(View.VISIBLE);
-            String sourceString = "<b>" + parentItems.get(groupPosition).get(ConstantManager.Parameter.SUB_CATEGORY_NAME) + "</b> ";
-            viewHolderParent.tvMainCategoryName.setText(Html.fromHtml(sourceString));
+//            String sourceString = "<b>" + parentItems.get(groupPosition).get(ConstantManager.Parameter.SUB_CATEGORY_NAME) + "</b> ";
+//            viewHolderParent.tvMainCategoryName.setText(Html.fromHtml(sourceString));
+            viewHolderParent.tvMainCategoryName.setText(parentItems.get(groupPosition).get(ConstantManager.Parameter.SUB_CATEGORY_NAME));
 
         }
 

@@ -50,7 +50,8 @@
                 android:visibility="gone"
                 android:layout_marginLeft="@dimen/_2sdp"
                 android:layout_height="@dimen/_20sdp"
-                android:src="@drawable/close"
+                 android:src="@drawable/close"
+            android:tint="@color/orange"
                 />
         </LinearLayout>
 

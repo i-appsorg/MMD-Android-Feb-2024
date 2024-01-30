@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.i2donate.Activity.AdvanceCompletedActivity;
 import com.i2donate.Activity.LoginActivity;
+import com.i2donate.Activity.NewSeachtypesActivity;
 import com.i2donate.Activity.NewtypesActivity;
 import com.i2donate.Activity.SubCategoryActivity;
 import com.i2donate.Model.Category_new;
@@ -70,6 +71,17 @@ public class TypesCategorylistAdapter extends RecyclerView.Adapter<TypesCategory
     }
 
     public TypesCategorylistAdapter(NewtypesActivity newtypesActivity, ArrayList<Category_new> category_newArrayList) {
+
+        this.mContext = newtypesActivity;
+        this.categorylis = category_newArrayList;
+        parentItems = new ArrayList<>();
+        childItems = new ArrayList<>();
+        iDonateSharedPreference = new IDonateSharedPreference();
+        session = new SessionManager(mContext);
+        Log.e(TAG, "listOfdate - " + categorylis.size());
+    }
+
+    public TypesCategorylistAdapter(NewSeachtypesActivity newtypesActivity, ArrayList<Category_new> category_newArrayList) {
 
         this.mContext = newtypesActivity;
         this.categorylis = category_newArrayList;

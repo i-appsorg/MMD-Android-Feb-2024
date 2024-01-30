@@ -28,6 +28,7 @@ import com.i2donate.Adapter.NewCategorylistAdapter;
 import com.i2donate.CommonActivity.CommonBackActivity;
 import com.i2donate.CommonActivity.CommonMenuActivity;
 import com.i2donate.Model.Category_new;
+import com.i2donate.Model.ChangeActivity;
 import com.i2donate.Model.child_categorynew;
 import com.i2donate.Model.subcategorynew;
 import com.i2donate.R;
@@ -76,6 +77,8 @@ public class AdvanceCompletedNewActivity extends CommonBackActivity {
     ArrayList<String> arraychecked_item = new ArrayList<>();
     ArrayList<String> categorychecked_item = new ArrayList<>();
     private ArrayList<GroupName> Array = new ArrayList<>();
+    private TextView RefindDiety;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,7 +89,51 @@ public class AdvanceCompletedNewActivity extends CommonBackActivity {
 
     }
 
+    private void init() {
+        iDonateSharedPreference = new IDonateSharedPreference();
+        iDonateSharedPreference.setselected_iem_list(getApplicationContext(), arraychecked_item);
+        session = new SessionManager(getApplicationContext());
+        builder = new AlertDialog.Builder(this);
+        recyclerview_advancesearch = (RecyclerView) findViewById(R.id.recyclerview_advancesearch);
+        exempt_tv_deselect = (TextView) findViewById(R.id.exempt_tv_deselect);
+        exempt_tv_select = (TextView) findViewById(R.id.exempt_tv_select);
+        annualRevenue = (RelativeLayout) findViewById(R.id.revenueRelativeLayout);
+        non_exempt_deselect_tv = (TextView) findViewById(R.id.non_exempt_deselect_tv);
+        non_exempt_select_tv = (TextView) findViewById(R.id.non_exempt_select_tv);
+        bottom_layout = (LinearLayout) findViewById(R.id.bottom_layout);
+        reset_button = (Button) findViewById(R.id.reset_button);
+        apply_button = (Button) findViewById(R.id.apply_button);
+        search_types_sub_types = (RelativeLayout) findViewById(R.id.search_types_sub_types);
+        RvSearch = (RecyclerView) findViewById(R.id.RvSearch);
+        RvRevenue = (RecyclerView) findViewById(R.id.RvRevenue);
+        RefindDiety = (android.widget.TextView) findViewById(R.id.RefindDiety);
+        layoutManager = new LinearLayoutManager(this);
+        recyclerview_advancesearch.setLayoutManager(layoutManager);
+        recyclerview_advancesearch.setItemAnimator(new DefaultItemAnimator());
+        arraychecked_item = iDonateSharedPreference.getselected_iem_list(getApplicationContext());
+        for (String details : arraychecked_item) {
+            if (details.equalsIgnoreCase("YES")) {
+                bottom_layout.setVisibility(View.VISIBLE);
+            }
+
+        }
+        IsType = 0;
+        IsRevenue = 0;
+        RvSearch.setVisibility(View.GONE);
+        RvRevenue.setVisibility(View.GONE);
+        layoutManager = new LinearLayoutManager(this);
+        RvRevenue.setLayoutManager(layoutManager);
+        RvRevenue.setItemAnimator(new DefaultItemAnimator());
+        AdvanceCatAPI();
+    }
+
     private void listener() {
+        RefindDiety.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ChangeActivity.changeActivity(AdvanceCompletedNewActivity.this, TitleSubTitleNewActivity.class);
+            }
+        });
         exempt_tv_deselect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -264,43 +311,6 @@ public class AdvanceCompletedNewActivity extends CommonBackActivity {
         });
     }
 
-    private void init() {
-        iDonateSharedPreference = new IDonateSharedPreference();
-        iDonateSharedPreference.setselected_iem_list(getApplicationContext(), arraychecked_item);
-        session = new SessionManager(getApplicationContext());
-        builder = new AlertDialog.Builder(this);
-        recyclerview_advancesearch = (RecyclerView) findViewById(R.id.recyclerview_advancesearch);
-        exempt_tv_deselect = (TextView) findViewById(R.id.exempt_tv_deselect);
-        exempt_tv_select = (TextView) findViewById(R.id.exempt_tv_select);
-        annualRevenue = (RelativeLayout) findViewById(R.id.revenueRelativeLayout);
-        non_exempt_deselect_tv = (TextView) findViewById(R.id.non_exempt_deselect_tv);
-        non_exempt_select_tv = (TextView) findViewById(R.id.non_exempt_select_tv);
-        bottom_layout = (LinearLayout) findViewById(R.id.bottom_layout);
-        reset_button = (Button) findViewById(R.id.reset_button);
-        apply_button = (Button) findViewById(R.id.apply_button);
-        search_types_sub_types = (RelativeLayout) findViewById(R.id.search_types_sub_types);
-        RvSearch = (RecyclerView) findViewById(R.id.RvSearch);
-        RvRevenue = (RecyclerView) findViewById(R.id.RvRevenue);
-        layoutManager = new LinearLayoutManager(this);
-        recyclerview_advancesearch.setLayoutManager(layoutManager);
-        recyclerview_advancesearch.setItemAnimator(new DefaultItemAnimator());
-        arraychecked_item = iDonateSharedPreference.getselected_iem_list(getApplicationContext());
-        for (String details : arraychecked_item) {
-            if (details.equalsIgnoreCase("YES")) {
-                bottom_layout.setVisibility(View.VISIBLE);
-            }
-
-        }
-        IsType = 0;
-        IsRevenue = 0;
-        RvSearch.setVisibility(View.GONE);
-        RvRevenue.setVisibility(View.GONE);
-        layoutManager = new LinearLayoutManager(this);
-        RvSearch.setLayoutManager(layoutManager);
-        RvSearch.setItemAnimator(new DefaultItemAnimator());
-        AdvanceCatAPI();
-    }
-
     private void AdvanceCatAPI() {
         Array = new ArrayList<>();
         GroupName groupName = new GroupName("0", "Char / Chatur Dham", "All the 'dhamas' are related to four Yuga's (epochs)");
@@ -310,7 +320,7 @@ public class AdvanceCompletedNewActivity extends CommonBackActivity {
         groupName = new GroupName("2", "Adi Shakthi Peethas", "These original Shakthi Sthlams and are places of worship consecrated to Goddess Shakthi");
         Array.add(groupName);
         categorylistAdapter = new NewCategorylistAdapter(AdvanceCompletedNewActivity.this, Array);
-        RvSearch.setAdapter(categorylistAdapter);
+        RvRevenue.setAdapter(categorylistAdapter);
 //        final ProgressDialog progressDialog = new ProgressDialog(this);
 //        progressDialog.setMessage("Loading...");
 //        progressDialog.show();
@@ -470,12 +480,13 @@ public class AdvanceCompletedNewActivity extends CommonBackActivity {
 
         AlertDialog alert = builder.create();
         alert.setCanceledOnTouchOutside(false);
-        alert.show();
+        if (!isFinishing()) {
+            alert.show();
+        }
     }
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
         dailogue_forgot();
     }
 

@@ -228,7 +228,7 @@ public class BrowseActivity extends CommonMenuActivity {
                 iDonateSharedPreference.setAdvancepage(getApplicationContext(), "typesearch");
                 iDonateSharedPreference.setcountrycode(getApplicationContext(), "normalsearch");
                 iDonateSharedPreference.setSelectedtype(getApplicationContext(), "typesearch");
-                ChangeActivity.changeActivityData(BrowseActivity.this, NewtypesActivity.class, "0");
+                ChangeActivity.changeActivityData(BrowseActivity.this, NewSeachtypesActivity.class, "0");
             }
         });
         international_layout.setOnClickListener(new View.OnClickListener() {

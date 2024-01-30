@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -25,6 +26,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.gson.JsonObject;
+import com.i2donate.CommonActivity.CommonBackActivity;
 import com.i2donate.Commonmethod.ConstantFunctions;
 import com.i2donate.R;
 import com.i2donate.RetrofitAPI.ApiClient;
@@ -42,7 +44,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ChangePasswordActivity extends AppCompatActivity {
+public class ChangePasswordActivity extends CommonBackActivity {
     private static final String TAG = ChangePasswordActivity.class.getSimpleName();
 //    @BindView(R.id.old_password_layout_input)
     TextInputLayout old_password_layout_input;
@@ -50,7 +52,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
     TextInputLayout new_password_layout_input;
     EditText old_password,new_password;
     Button submit_btn;
-    ImageView back_icon_change_img;
+//    ImageView back_icon_change_img;
     ApiInterface apiService;
     static SessionManager session;
     static HashMap<String, String> userDetails;
@@ -58,9 +60,8 @@ public class ChangePasswordActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_change);
-        getWindow().setSoftInputMode(
-                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        setView(R.layout.activity_change,TAG);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         init();
         listener();
     }
@@ -73,7 +74,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
         old_password=(EditText)findViewById(R.id.old_password);
         new_password=(EditText)findViewById(R.id.new_password);
         submit_btn=(Button)findViewById(R.id.submit_btn);
-        back_icon_change_img=(ImageView)findViewById(R.id.back_icon_change_img);
+//        back_icon_change_img=(ImageView)findViewById(R.id.back_icon_change_img);
         builder = new AlertDialog.Builder(this);
     }
 
@@ -186,12 +187,12 @@ public class ChangePasswordActivity extends AppCompatActivity {
             }
         });
 
-        back_icon_change_img.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
+//        back_icon_change_img.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                onBackPressed();
+//            }
+//        });
 
     }
     public static String getDeviceUniqueID(Activity activity){
@@ -239,8 +240,31 @@ public class ChangePasswordActivity extends AppCompatActivity {
                         String status=jsonObject.getString("status");
                         String message=jsonObject.getString("message");
                         if (status.equalsIgnoreCase("1")){
-                           finish();
-                            Toast.makeText(ChangePasswordActivity.this, message, Toast.LENGTH_SHORT).show();
+                            builder.setMessage(R.string.change_password);
+
+                            //Setting message manually and performing action on button click
+                            builder.setMessage(R.string.change_password_msg)
+                                    .setCancelable(false)
+                                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            finish();
+                                            Toast.makeText(ChangePasswordActivity.this, message, Toast.LENGTH_SHORT).show();
+                                        }
+                                    })
+                                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            //  Action for 'NO' Button
+                                            dialog.cancel();
+
+                                        }
+                                    });
+
+                            //Creating dialog box
+                            AlertDialog alert = builder.create();
+                            //Setting the title manually
+                            alert.setCanceledOnTouchOutside(false);
+                            alert.show();
+
                         }else {
                             ConstantFunctions.showSnackbar(old_password,message,ChangePasswordActivity.this);
                         }

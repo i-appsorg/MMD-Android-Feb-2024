@@ -168,7 +168,7 @@ public class NameSearchActivity extends CommonBackActivity {
         iDonateSharedPreference.setdailoguepage(getApplicationContext(), "0");
         session = new SessionManager(getApplicationContext());
         slideUp = AnimationUtils.loadAnimation(this, R.anim.visiblity_animation);
-        back_icon_img = (ImageView) findViewById(R.id.back_icon_name_img);
+        back_icon_img = (ImageView) findViewById(R.id.back_icon_login_img);
         back_icon_img1 = (ImageView) findViewById(R.id.back_icon_img1);
         appbar_layout = (AppBarLayout) findViewById(R.id.appbar_layout);
         relative_before_toolbar = (RelativeLayout) findViewById(R.id.relative_before_toolbar);
@@ -423,11 +423,11 @@ public class NameSearchActivity extends CommonBackActivity {
                 if (data.equalsIgnoreCase("1")) {
                     iDonateSharedPreference.setAdvancepage(getApplicationContext(), "namesearch");
                     iDonateSharedPreference.setcountrycode(getApplicationContext(), "normalsearch");
-                    ChangeActivity.changeActivityData(NameSearchActivity.this, NewtypesActivity.class, "1");
+                    ChangeActivity.changeActivityData(NameSearchActivity.this, NewSeachtypesActivity.class, "1");
                 } else {
                     iDonateSharedPreference.setAdvancepage(getApplicationContext(), "namesearch");
                     iDonateSharedPreference.setcountrycode(getApplicationContext(), "normalsearch");
-                    ChangeActivity.changeActivityData(NameSearchActivity.this, NewtypesActivity.class, "0");
+                    ChangeActivity.changeActivityData(NameSearchActivity.this, NewSeachtypesActivity.class, "0");
                 }
             }
         });

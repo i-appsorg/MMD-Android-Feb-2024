@@ -18,6 +18,7 @@ import com.i2donate.Activity.AdvanceCompletedActivity;
 import com.i2donate.Activity.AdvanceCompletedNewActivity;
 import com.i2donate.Activity.SubCategoryActivity;
 import com.i2donate.Activity.TitleSubTitleActivity;
+import com.i2donate.Activity.TitleSubTitleNewActivity;
 import com.i2donate.Model.Category_new;
 import com.i2donate.Model.ConstantManager;
 import com.i2donate.Model.child_categorynew;
@@ -66,6 +67,16 @@ public class CategorylistAdapter extends RecyclerView.Adapter<CategorylistAdapte
     public CategorylistAdapter(AdvanceCompletedNewActivity advanceCompletedActivity, ArrayList<Category_new> categorylis) {
         this.mContext = advanceCompletedActivity;
         this.categorylis = categorylis;
+        parentItems = new ArrayList<>();
+        childItems = new ArrayList<>();
+        iDonateSharedPreference = new IDonateSharedPreference();
+        Log.e("listOfdate", "" + categorylis.size());
+    }
+
+    public CategorylistAdapter(TitleSubTitleNewActivity titleSubTitleActivity, ArrayList<Category_new> category_newArrayList) {
+
+        this.mContext = titleSubTitleActivity;
+        this.categorylis = category_newArrayList;
         parentItems = new ArrayList<>();
         childItems = new ArrayList<>();
         iDonateSharedPreference = new IDonateSharedPreference();

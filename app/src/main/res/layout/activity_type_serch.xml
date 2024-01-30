@@ -67,7 +67,7 @@
 
                         <ImageView android:id="@+id/search_icon_loc"
                             android:layout_width="0dp"
-                            android:layout_height="@dimen/_10sdp"
+                            android:layout_height="@dimen/_15sdp"
                             android:layout_gravity="center_vertical"
                             android:layout_weight=".1"
                             android:src="@drawable/search_icon" />
@@ -82,9 +82,10 @@
                             android:background="@null"
                             android:editable="true"
                             android:gravity="center_vertical"
+                            android:textSize="@dimen/_12sdp"
                             android:hint="@string/united_state_location"
                             android:textColor="@color/trans_black"
-                            android:textColorHint="@color/colorPrimary" />
+                            android:textColorHint="@color/title_color" />
 
                         <ImageView android:id="@+id/close_img_loc"
                             android:layout_width="0dp"
@@ -92,7 +93,8 @@
                             android:layout_gravity="center_vertical"
                             android:layout_marginLeft="@dimen/_2sdp"
                             android:layout_weight=".1"
-                            android:src="@drawable/close"
+                             android:src="@drawable/close"
+            android:tint="@color/orange"
                             android:visibility="gone" />
                     </LinearLayout>
                     <LinearLayout
@@ -110,7 +112,7 @@
                         <ImageView
                             android:id="@+id/search_icon"
                             android:layout_width="0dp"
-                            android:layout_height="@dimen/_10sdp"
+                            android:layout_height="@dimen/_15sdp"
                             android:layout_gravity="center_vertical"
                             android:layout_weight=".1"
                             android:src="@drawable/search_icon" />
@@ -127,9 +129,10 @@
                             android:background="@null"
                             android:editable="true"
                             android:gravity="center_vertical"
+                            android:textSize="@dimen/_12sdp"
                             android:hint="@string/united_state_search_name"
                             android:textColor="@color/trans_black"
-                            android:textColorHint="@color/colorPrimary" />
+                            android:textColorHint="@color/title_color" />
 
                         <ImageView
                             android:id="@+id/close_img"
@@ -138,7 +141,8 @@
                             android:layout_gravity="center_vertical"
                             android:layout_marginLeft="@dimen/_2sdp"
                             android:layout_weight=".1"
-                            android:src="@drawable/close"
+                             android:src="@drawable/close"
+            android:tint="@color/orange"
                             android:visibility="gone" />
                     </LinearLayout>
                     <TextView
@@ -148,6 +152,7 @@
                         android:layout_marginRight="@dimen/_12sdp"
                         android:layout_marginTop="10dp"
                         android:textSize="@dimen/_10sdp"
+                        android:visibility="gone"
                         android:text="Type at least 3 letters to search."
 
                         />
@@ -194,7 +199,7 @@
                                 android:layout_marginLeft="@dimen/_2sdp"
                                 android:layout_height="wrap_content"
                                 android:text="@string/united_state_name"
-                                android:textColor="@color/colorAccent"/>
+                                android:textColor="@color/title_color"/>
                         </LinearLayout>
                         <LinearLayout
                             android:id="@+id/locationtitle_search_layout"
@@ -211,6 +216,7 @@
                                 android:layout_height="@dimen/_15sdp"
                                 android:layout_gravity="center"
                                 android:layout_weight=".5"
+                                android:tint="@color/orange"
                                 android:src="@drawable/usa_icon" />
 
                             <TextView
@@ -220,7 +226,7 @@
                                 android:layout_weight="1"
                                 android:gravity="center_vertical"
                                 android:text="Location"
-                                android:textColor="@color/colorAccent"
+                                android:textColor="@color/title_color"
                                 android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
                         <LinearLayout
@@ -248,7 +254,7 @@
                                 android:layout_marginLeft="@dimen/_3sdp"
                                 android:layout_weight="2"
                                 android:text="@string/united_state_type"
-                                android:textColor="@color/colorAccent"
+                                android:textColor="@color/title_color"
                                 android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
 
@@ -261,7 +267,7 @@
                             android:background="@drawable/login_botton_border"
                             android:gravity="center"
                             android:text="@string/united_state_search"
-                            android:textColor="@color/title_color"
+                            android:textColor="@color/colorWhite"
                             android:textSize="@dimen/_10sdp" />
 
                     </LinearLayout>
@@ -297,7 +303,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:contentInsetStart="0dp"
-                android:background="@drawable/toolbarbg"
                 android:contentInsetLeft="0dp"
                 android:contentInsetEnd="0dp"
                 android:contentInsetRight="0dp"
@@ -317,30 +322,35 @@
                     android:visibility="gone">
 
 
-                    <ImageView
-                        android:id="@+id/back_icon_name_img"
-                        android:layout_width="45dp"
-                        android:layout_height="@dimen/_35sdp"
-                        android:layout_gravity="start|left"
-                        android:padding="8dp"
-                        android:src="@drawable/back_icon" />
-                    <!-- <TextView
-                         android:id="@+id/commonMenuActivityTitleTextView"
-                         android:layout_width="wrap_content"
-                         android:layout_height="match_parent"
-                         android:layout_marginLeft="@dimen/contentSizeNormal"
-                         android:layout_marginRight="@dimen/contentSizeNormal"
-                         android:gravity="center"
-                         android:maxLines="2"
-                         android:text="demo"
-                         android:textColor="@color/title_text_color"
-                         android:textSize="@dimen/contentSizeNormal"
-                         android:textStyle="bold"
-                         android:typeface="serif" />-->
-                    <ImageView
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_30sdp"
-                        android:src="@drawable/toplogo" />
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/back_icon_login_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/back_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/toplogo"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="ContentDescription" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
                 </RelativeLayout>
 
 
@@ -373,6 +383,7 @@
                             android:layout_marginRight="@dimen/_12sdp"
                             android:layout_marginTop="10dp"
                             android:textSize="@dimen/_10sdp"
+                            android:textColor="@color/title_color"
                             android:text="Type at least 3 letters to search."
 
                             />
@@ -456,6 +467,7 @@
                     android:layout_height="@dimen/_15sdp"
                     android:layout_gravity="center"
                     android:layout_weight=".5"
+                    android:tint="@color/orange"
                     android:src="@drawable/usa_icon" />
 
                 <TextView
@@ -465,7 +477,7 @@
                     android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:text="Location"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/title_color"
                     android:textSize="@dimen/_10sdp" />
             </LinearLayout>
             <LinearLayout

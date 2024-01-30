@@ -35,7 +35,7 @@
                 android:id="@+id/search_relativelayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_45sdp">
+                android:layout_marginTop="@dimen/_70sdp">
 
                 <LinearLayout
                     android:id="@+id/linear1"
@@ -71,7 +71,7 @@
                         <ImageView
                             android:id="@+id/search_icon_loc"
                             android:layout_width="0dp"
-                            android:layout_height="@dimen/_10sdp"
+                            android:layout_height="@dimen/_15sdp"
                             android:layout_gravity="center_vertical"
                             android:layout_weight=".1"
                             android:src="@drawable/search_icon" />
@@ -81,10 +81,11 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
                             android:layout_weight="1"
                             android:background="@null"
                             android:editable="true"
+                            android:textSize="@dimen/_12sdp"
                             android:gravity="center_vertical"
                             android:hint="@string/united_state_location"
                             android:textColor="@color/title_color"
@@ -99,14 +100,15 @@
                             android:layout_gravity="center_vertical"
                             android:layout_marginLeft="@dimen/_2sdp"
                             android:layout_weight=".1"
-                            android:src="@drawable/close"
+                             android:src="@drawable/close"
+            android:tint="@color/orange"
                             android:visibility="gone" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/namesearchLayout"
                         android:layout_width="fill_parent"
-                        android:layout_height="@dimen/_35sdp"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_7sdp"
                         android:layout_marginRight="@dimen/_10sdp"
@@ -118,7 +120,7 @@
                         <ImageView
                             android:id="@+id/search_icon"
                             android:layout_width="0dp"
-                            android:layout_height="@dimen/_10sdp"
+                            android:layout_height="@dimen/_15sdp"
                             android:layout_gravity="center_vertical"
                             android:layout_weight=".1"
                             android:src="@drawable/search_icon" />
@@ -136,8 +138,9 @@
                             android:hint="@string/united_state_search_name"
                             android:imeOptions="actionDone"
                             android:singleLine="true"
+                            android:textSize="@dimen/_12sdp"
                             android:textColor="@color/trans_black"
-                            android:textColorHint="@color/colorPrimary" />
+                            android:textColorHint="@color/title_color" />
 
                         <ImageView
                             android:id="@+id/close_img"
@@ -146,7 +149,8 @@
                             android:layout_gravity="center_vertical"
                             android:layout_marginLeft="@dimen/_2sdp"
                             android:layout_weight=".1"
-                            android:src="@drawable/close"
+                             android:src="@drawable/close"
+            android:tint="@color/orange"
                             android:visibility="gone" />
                     </LinearLayout>
 
@@ -222,6 +226,7 @@
                                 android:layout_height="@dimen/_15sdp"
                                 android:layout_gravity="center"
                                 android:layout_weight=".5"
+                                android:tint="@color/orange"
                                 android:src="@drawable/usa_icon" />
 
                             <TextView
@@ -231,7 +236,7 @@
                                 android:layout_weight="1"
                                 android:gravity="center_vertical"
                                 android:text="Location"
-                                android:textColor="@color/colorAccent"
+                                android:textColor="@color/title_color"
                                 android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
 
@@ -308,11 +313,12 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
+                android:layout_height="@dimen/_50sdp"
                 android:contentInsetStart="0dp"
                 android:contentInsetLeft="0dp"
                 android:contentInsetEnd="0dp"
                 android:contentInsetRight="0dp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:elevation="0dp"
                 app:contentInsetEnd="0dp"
                 app:contentInsetStart="0dp"
@@ -321,41 +327,37 @@
                 <!--                android:background="@drawable/toolbarbg"-->
 
 
-                <RelativeLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/relative_before_toolbar"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_7sdp"
-                    android:layout_marginRight="@dimen/_10sdp"
-                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_height="match_parent"
                     android:visibility="gone">
 
+                    <ImageView
+                        android:id="@+id/back_icon_login_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/back_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
 
                     <ImageView
-                        android:id="@+id/back_icon_name_img"
-                        android:layout_width="45dp"
-                        android:layout_height="@dimen/_35sdp"
-                        android:layout_gravity="start|left"
-                        android:padding="8dp"
-                        android:src="@drawable/back_icon" />
-                    <!-- <TextView
-                         android:id="@+id/commonMenuActivityTitleTextView"
-                         android:layout_width="wrap_content"
-                         android:layout_height="match_parent"
-                         android:layout_marginLeft="@dimen/contentSizeNormal"
-                         android:layout_marginRight="@dimen/contentSizeNormal"
-                         android:gravity="center"
-                         android:maxLines="2"
-                         android:text="demo"
-                         android:textColor="@color/title_text_color"
-                         android:textSize="@dimen/contentSizeNormal"
-                         android:textStyle="bold"
-                         android:typeface="serif" />-->
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_30sdp"
-                        android:src="@drawable/toplogo" />
-                </RelativeLayout>
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/toplogo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <RelativeLayout
                     android:id="@+id/relative_toolbar"
@@ -474,6 +476,7 @@
                     android:layout_height="@dimen/_15sdp"
                     android:layout_gravity="center"
                     android:layout_weight=".5"
+                    android:tint="@color/orange"
                     android:src="@drawable/usa_icon" />
 
                 <TextView
@@ -483,7 +486,7 @@
                     android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:text="Location"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/title_color"
                     android:textSize="@dimen/_10sdp" />
             </LinearLayout>
 

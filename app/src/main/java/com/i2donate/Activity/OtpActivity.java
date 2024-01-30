@@ -216,8 +216,34 @@ public class OtpActivity extends AppCompatActivity implements View.OnFocusChange
                         String message = jsonObject.getString("message");
 
                         if (status.equalsIgnoreCase("1")) {
-                            sample();
-                            Toast.makeText(OtpActivity.this, message, Toast.LENGTH_SHORT).show();
+                            builder.setMessage(R.string.change_password);
+
+                            //Setting message manually and performing action on button click
+                            builder.setMessage(R.string.change_password_msg)
+                                    .setCancelable(false)
+                                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            Toast.makeText(OtpActivity.this, message, Toast.LENGTH_SHORT).show();
+
+                                            Intent intent = new Intent(OtpActivity.this, LoginActivity.class);
+                                            intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                            startActivity(intent);
+
+                                        }
+                                    })
+                                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            //  Action for 'NO' Button
+                                            dialog.cancel();
+
+                                        }
+                                    });
+
+                            //Creating dialog box
+                            AlertDialog alert = builder.create();
+                            //Setting the title manually
+                            alert.setCanceledOnTouchOutside(false);
+                            alert.show();
                         } else {
                             ConstantFunctions.showSnackbar(mPinFirstDigitEditText, message, OtpActivity.this);
                         }
