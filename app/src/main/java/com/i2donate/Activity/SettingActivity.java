@@ -15,6 +15,7 @@ import androidx.appcompat.widget.SwitchCompat;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.gson.JsonObject;
+import com.i2donate.CommonActivity.CommonBackActivity;
 import com.i2donate.CommonActivity.CommonMenuActivity;
 import com.i2donate.Model.ChangeActivity;
 import com.i2donate.R;
@@ -31,7 +32,7 @@ import java.util.HashMap;
 import retrofit2.Call;
 import retrofit2.Response;
 
-public class SettingActivity extends CommonMenuActivity {
+public class SettingActivity extends CommonBackActivity {
     private String TAG = "SettingActivity";
     Toolbar toolbar;
     IDonateSharedPreference iDonateSharedPreference;

@@ -147,7 +147,6 @@ public class CommonBackActivity extends AppCompatActivity implements Connectivit
     @Override
     protected void onResume() {
         super.onResume();
-
         // register connection status listener
         MyApplication.getInstance().setConnectivityListener(this);
     }
@@ -161,7 +160,6 @@ public class CommonBackActivity extends AppCompatActivity implements Connectivit
         Log.e("network", "checking");
         showSnack(isConnected);
     }
-
 
     @Override
     public void onClick(View v) {
@@ -203,7 +201,6 @@ public class CommonBackActivity extends AppCompatActivity implements Connectivit
             }
         }
 
-
     }
     private void LoginDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(CommonBackActivity.this);
@@ -243,8 +240,6 @@ public class CommonBackActivity extends AppCompatActivity implements Connectivit
                 myspace_img.setColorFilter(getApplicationContext().getResources().getColor(R.color.quantum_white_text));
                 myspace_tv.setTextColor(textColor);
                 break;
-
-
         }
     }
 
@@ -268,7 +263,6 @@ public class CommonBackActivity extends AppCompatActivity implements Connectivit
                     }
                 }, 2000);
             } else {
-
                 ChangeActivity.changeActivityback(CommonBackActivity.this, BrowseActivity.class);
                 browse_tv.setTextColor(getResources().getColor(R.color.quantum_white_text));
                 finish();
@@ -277,5 +271,3 @@ public class CommonBackActivity extends AppCompatActivity implements Connectivit
         }
     }
 }
-
-

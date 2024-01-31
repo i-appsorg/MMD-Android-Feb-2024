@@ -20,8 +20,8 @@
                 android:id="@+id/commonMenuActivityToolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?android:actionBarSize"
-                android:contentInsetStart="0dp"
                 android:layout_marginTop="@dimen/_20sdp"
+                android:contentInsetStart="0dp"
                 android:contentInsetLeft="0dp"
                 android:contentInsetEnd="0dp"
                 android:contentInsetRight="0dp"
@@ -29,15 +29,21 @@
                 app:contentInsetEnd="0dp"
                 app:contentInsetStart="0dp">
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/back_icon_img"
-                    android:layout_width="45dp"
-                    android:layout_height="@dimen/_30sdp"
-                    android:layout_gravity="start"
-                    android:padding="8dp"
-                    android:src="@drawable/back_icon" />
-                <!-- <TextView
+                    <ImageView
+                        android:id="@+id/back_icon_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/back_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <!-- <TextView
                      android:id="@+id/commonMenuActivityTitleTextView"
                      android:layout_width="wrap_content"
                      android:layout_height="match_parent"
@@ -50,20 +56,31 @@
                      android:textSize="@dimen/contentSizeNormal"
                      android:textStyle="bold"
                      android:typeface="serif" />-->
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:src="@drawable/toplogo" />
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/toplogo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:id="@+id/refreshMenu"
-                    android:layout_width="45dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="end"
-                    android:padding="10dp"
-                    android:paddingBottom="10dp"
-                    android:visibility="gone" />
+                    <ImageView
+                        android:id="@+id/refreshMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:padding="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
             </androidx.appcompat.widget.Toolbar>
 
             <FrameLayout
@@ -82,7 +99,7 @@
                 android:gravity="center_horizontal"
                 android:orientation="horizontal"
                 android:padding="5dp">
-<!--                android:background="@drawable/bottombar_gradient"-->
+                <!--                android:background="@drawable/bottombar_gradient"-->
 
 
                 <LinearLayout
@@ -108,9 +125,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_3sdp"
                         android:text="Browse"
-                        android:visibility="gone"
                         android:textColor="@color/colorAccent"
-                        android:textSize="@dimen/_12sdp" />
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -136,9 +153,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_3sdp"
                         android:text="My Space"
-                        android:visibility="gone"
                         android:textColor="@color/colorAccent"
-                        android:textSize="@dimen/_12sdp" />
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone" />
                 </LinearLayout>
 
             </LinearLayout>

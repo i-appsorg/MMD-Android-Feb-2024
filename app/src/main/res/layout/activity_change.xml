@@ -5,13 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.ChangePasswordActivity">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/commonMenuActivityToolbar"
                 android:layout_width="match_parent"
@@ -29,113 +32,119 @@
                     android:layout_width="45dp"
                     android:layout_height="@dimen/_30sdp"
                     android:layout_gravity="start|left"
-                    android:visibility="gone"
                     android:padding="8dp"
-                    android:src="@drawable/back_icon" />
+                    android:src="@drawable/back_icon"
+                    android:visibility="gone" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_10sdp"
-                    android:layout_marginRight="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
                     android:text="@string/forgot_password_title"
                     android:textAllCaps="true"
                     android:textColor="@color/tv_login"
                     android:textSize="@dimen/_20sdp"
                     android:textStyle="bold" />
             </androidx.appcompat.widget.Toolbar>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/_20sdp"
                 android:layout_below="@+id/commonMenuActivityToolbar"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_80sdp"
                     android:layout_centerVertical="true"
-                    android:visibility="gone"
                     android:layout_marginTop="@dimen/_40sdp"
-                    android:src="@drawable/splashlogo" />
+                    android:src="@drawable/splashlogo"
+                    android:visibility="gone" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_10sdp"
-                    android:layout_marginRight="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:textColor="@color/title_color"
-                    android:text="@string/change_password_title"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
                     android:gravity="center_horizontal"
-                  android:textSize="@dimen/_14sdp"
-                    />
+                    android:text="@string/change_password_title"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/_14sdp" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/register_password_hint"
+                    android:layout_marginLeft="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:textSize="@dimen/_10sdp"
-                    android:textColor="@color/title_color"
-                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
                     android:gravity="center_horizontal"
-                    android:layout_marginRight="@dimen/_10sdp"/>
+                    android:text="@string/register_password_hint"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/_10sdp" />
+
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:id="@+id/old_password_layout_input"
-                    android:layout_marginLeft="@dimen/_10sdp"
-                    android:layout_marginRight="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_20sdp"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    app:passwordToggleEnabled="true"
-                    app:passwordToggleTint="@color/orange">
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/old_password"
-                        android:hint="@string/change_old_password"
-                        android:text=""
-                        android:backgroundTint="@color/edittextline_color"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                        android:inputType="textPassword"/>
-                </com.google.android.material.textfield.TextInputLayout>
-                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/new_password_layout_input"
                     android:layout_marginLeft="@dimen/_10sdp"
-                    android:layout_marginRight="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     app:passwordToggleEnabled="true"
                     app:passwordToggleTint="@color/orange">
+
                     <EditText
+                        android:id="@+id/old_password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/new_password"
-                        android:hint="@string/change_change_password"
-                        android:text=""
                         android:backgroundTint="@color/edittextline_color"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                        android:inputType="textPassword"/>
+                        android:hint="@string/change_old_password"
+                        android:inputType="textPassword"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/new_password_layout_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/orange">
+
+                    <EditText
+                        android:id="@+id/new_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/edittextline_color"
+                        android:hint="@string/change_change_password"
+                        android:inputType="textPassword"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
+                    android:id="@+id/submit_btn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/submit_btn"
                     android:layout_marginLeft="@dimen/_60sdp"
                     android:layout_marginTop="@dimen/_35sdp"
                     android:layout_marginRight="@dimen/_60sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
                     android:background="@drawable/login_botton_border"
                     android:text="@string/change_submit"
-                    android:layout_marginBottom="@dimen/_20sdp"
                     android:textColor="@android:color/white" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
 
 
 </RelativeLayout>

@@ -353,4 +353,6 @@
     <string name="contact">CONTACT</string>
     <string name="country">Country</string>
     <string name="state">State</string>
+    <string name="this_is_the_section_for_displaying_architecture_information">THIS IS THE SECTION FOR DISPLAYING ARCHITECTURE INFORMATION</string>
+    <string name="this_is_the_section_for_displaying_contact_information">THIS IS THE SECTION FOR DISPLAYING CONTACT INFORMATION</string>
 </resources>

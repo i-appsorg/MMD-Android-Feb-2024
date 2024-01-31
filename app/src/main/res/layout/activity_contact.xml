@@ -68,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_10sdp"
         android:gravity="center"
-        android:text="@string/this_is_the_section_for_displaying_mahima_ithihasa_information"
+        android:text="@string/this_is_the_section_for_displaying_contact_information"
         android:textAllCaps="true"
         android:textColor="@color/title_color"
         android:textSize="@dimen/_15ssp"

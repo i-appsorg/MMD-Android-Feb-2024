@@ -10,7 +10,7 @@
         android:id="@+id/titleTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
         android:padding="@dimen/_5sdp"
         android:text="@string/browse_united_state"
         android:textAllCaps="true"
