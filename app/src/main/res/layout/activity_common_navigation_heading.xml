@@ -35,7 +35,7 @@
             app:civ_border_width="1dp"
             app:civ_border_color="#e5dfff"
             android:padding="5dp"
-            android:src="@drawable/ic_profile_holder"/>
+            android:src="@drawable/app_icon"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

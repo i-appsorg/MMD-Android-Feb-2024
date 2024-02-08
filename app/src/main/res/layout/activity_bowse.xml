@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.BrowseActivity">
+    tools:context="com.MamaDevalayam.Activity.BrowseActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -35,7 +35,7 @@
             app:layout_constraintEnd_toEndOf="@+id/united_state_location_relative"
             app:layout_constraintStart_toStartOf="@+id/united_state_location_relative">
 
-            <com.i2donate.Commonmethod.SearchableSpinner
+            <com.MamaDevalayam.Commonmethod.SearchableSpinner
                 android:id="@+id/spin_country"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -163,7 +163,7 @@
                     app:layout_constraintEnd_toEndOf="united_state_location_relative"
                     app:layout_constraintStart_toEndOf="@+id/united_state_location_relative">
 
-                    <com.i2donate.Commonmethod.SearchableSpinner
+                    <com.MamaDevalayam.Commonmethod.SearchableSpinner
                         android:id="@+id/spin_country"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"

@@ -1,10 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace 'com.i2donate'
+    namespace 'com.MamaDevalayam'
     compileSdkVersion 34
     defaultConfig {
-        applicationId "com.i2donate"
+        applicationId "com.MamaDevalayam"
+//        applicationId "com.i2donate"
         minSdkVersion 21
         targetSdkVersion 34
         versionCode 33
@@ -23,6 +24,19 @@ android {
         }
     }
     signingConfigs {
+        /*debug {
+            storeFile file("${rootDir}/new_mama_devalayam_keystore.jks")
+            storePassword 'mamadevalayam'
+            keyAlias 'mamadevalayam'
+            keyPassword 'mamadevalayam'
+        }
+        release {
+            storeFile file("${rootDir}/new_mama_devalayam_keystore.jks")
+            storePassword 'mamadevalayam'
+            keyAlias 'mamadevalayam'
+            keyPassword 'mamadevalayam'
+        }*/
+
         /*release {
             storeFile file('D:\\dhruvi\\I2_Donate\\I2_Donate_Android\\Android-Master\\i2-Donate_Android\\i2~donate.jks')
             storePassword 'i2~donate'
@@ -33,11 +47,13 @@ android {
 
     buildTypes {
         release {
-            // signingConfig signingConfigs.release
+//             signingConfig signingConfigs.release
         }
 
         debug {
             debuggable true
+//            signingConfig signingConfigs.release
+
         }
     }
     compileOptions {

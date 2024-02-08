@@ -26,7 +26,9 @@
             app:contentScrim="@android:color/transparent"
             app:elevation="0dp"
             app:expandedTitleTextAppearance="@android:color/transparent"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+          >
+<!--            app:layout_scrollFlags="scroll|exitUntilCollapsed"-->
+
             <!-- <RelativeLayout
                  android:layout_width="match_parent"
                  android:layout_height="match_parent">-->
@@ -223,7 +225,7 @@
                                 android:layout_gravity="center"
                                 android:layout_weight=".5"
                                 android:src="@drawable/usa_icon"
-                                android:tint="@color/orange" />
+                                app:tint="@color/orange" />
 
                             <TextView
                                 android:layout_width="0dp"
@@ -231,7 +233,8 @@
                                 android:layout_marginLeft="@dimen/_1sdp"
                                 android:layout_weight="1"
                                 android:gravity="center_vertical"
-                                android:text="Location"
+                                android:text="@string/location"
+                                android:singleLine="true"
                                 android:textColor="@color/title_color"
                                 android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
@@ -474,7 +477,7 @@
                     android:layout_gravity="center"
                     android:layout_weight=".5"
                     android:src="@drawable/usa_icon"
-                    android:tint="@color/orange" />
+                    app:tint="@color/orange" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -482,7 +485,8 @@
                     android:layout_marginLeft="@dimen/_1sdp"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="Location"
+                    android:text="@string/location"
+                    android:singleLine="true"
                     android:textColor="@color/title_color"
                     android:textSize="@dimen/_10sdp" />
             </LinearLayout>

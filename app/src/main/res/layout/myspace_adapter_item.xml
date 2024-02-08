@@ -18,8 +18,10 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_60sdp"
-                android:src="@drawable/ic_profile_holder"
+                android:src="@drawable/app_icon"
                 android:layout_weight="1"/>
+<!--            android:src="@drawable/ic_profile_holder"-->
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

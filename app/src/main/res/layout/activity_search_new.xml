@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.SearchNewActivity">
+    tools:context="com.MamaDevalayam.Activity.SearchNewActivity">
 
     <TextView
         android:id="@+id/titleTextView"

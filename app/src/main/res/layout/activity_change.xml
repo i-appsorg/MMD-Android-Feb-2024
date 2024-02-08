@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.ChangePasswordActivity">
+    tools:context="com.MamaDevalayam.Activity.ChangePasswordActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -61,7 +61,7 @@
                     android:layout_height="@dimen/_80sdp"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="@dimen/_40sdp"
-                    android:src="@drawable/splashlogo"
+                    android:src="@drawable/splash_background"
                     android:visibility="gone" />
 
                 <TextView

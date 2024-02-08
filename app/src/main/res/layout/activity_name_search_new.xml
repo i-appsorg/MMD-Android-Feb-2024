@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".Activity.NameSearchActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar_layout"
@@ -25,7 +26,9 @@
             app:contentScrim="@android:color/transparent"
             app:elevation="0dp"
             app:expandedTitleTextAppearance="@android:color/transparent"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            >
+<!--            app:layout_scrollFlags="scroll|exitUntilCollapsed"-->
+
             <!-- <RelativeLayout
                  android:layout_width="match_parent"
                  android:layout_height="match_parent">-->
@@ -163,7 +166,8 @@
                                 android:layout_marginStart="@dimen/_1sdp"
                                 android:layout_weight="1"
                                 android:gravity="center_vertical"
-                                android:text="LOCATION"
+                                android:text="@string/location"
+                                android:singleLine="true"
                                 android:textColor="@color/title_color"
                                 android:textSize="@dimen/_10ssp"
                                 tools:ignore="HardcodedText,TextSizeCheck" />
@@ -226,7 +230,8 @@
                                 android:layout_marginStart="@dimen/_5sdp"
                                 android:layout_weight="1"
                                 android:gravity="center_vertical"
-                                android:text="LOCATION"
+                                android:text="@string/location"
+                                android:singleLine="true"
                                 android:textColor="@color/title_color"
                                 android:textSize="@dimen/_10ssp"
                                 tools:ignore="HardcodedText" />
@@ -291,6 +296,7 @@
                                 android:layout_weight="1"
                                 android:gravity="center"
                                 android:text="@string/united_state_name_location"
+                                android:singleLine="true"
                                 android:textColor="@color/title_color"
                                 android:textSize="@dimen/_10ssp" />
                         </LinearLayout>
@@ -583,7 +589,8 @@
                     android:layout_marginStart="@dimen/_1sdp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="LOCATION"
+                    android:text="@string/location"
+                    android:singleLine="true"
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/_10ssp"
                     tools:ignore="HardcodedText" />
@@ -615,7 +622,8 @@
                     android:layout_marginStart="@dimen/_5sdp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="LOCATION"
+                    android:text="@string/location"
+                    android:singleLine="true"
                     android:textColor="@color/title_color"
                     android:textSize="@dimen/_10ssp"
                     tools:ignore="HardcodedText" />
@@ -647,6 +655,7 @@
                     android:layout_marginStart="@dimen/_5sdp"
                     android:layout_weight="1"
                     android:text="@string/united_state_name_location"
+                    android:singleLine="true"
                     android:textColor="@color/title_color"
                     android:textSize="@dimen/_10ssp" />
             </LinearLayout>
@@ -783,7 +792,8 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_10sdp"
-                android:layoutAnimation="@anim/layout_animation_fall_down"></androidx.recyclerview.widget.RecyclerView>
+                android:layoutAnimation="@anim/layout_animation_fall_down">
+            </androidx.recyclerview.widget.RecyclerView>
 
             <LinearLayout
                 android:id="@+id/no_data_linear"

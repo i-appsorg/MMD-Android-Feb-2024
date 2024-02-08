@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.UnitedStateDetailsActivity">
+    tools:context="com.MamaDevalayam.Activity.UnitedStateDetailsActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/commonMenuActivityToolbar"
@@ -90,7 +90,8 @@
                             android:layout_width="0dp"
                             android:layout_height="@dimen/_70sdp"
                             android:layout_weight=".8"
-                            android:src="@drawable/ic_profile_holder" />
+                            android:src="@drawable/logo_splash" />
+<!--                        android:src="@drawable/ic_profile_holder" />-->
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -172,6 +173,7 @@
                                 android:layout_height="@dimen/_15sdp"
                                 android:layout_weight="0.3"
                                 android:src="@drawable/ic_liked"
+                                app:tint="@color/colorPrimary"
                                 android:visibility="visible" />
 
                             <TextView

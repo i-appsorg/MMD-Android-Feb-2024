@@ -12,7 +12,7 @@
         android:alwaysDrawnWithCache="true"
         android:descendantFocusability="beforeDescendants"
         android:focusableInTouchMode="true"
-        tools:context=".Activity.LoginActivity">
+        tools:context="com.MamaDevalayam.Activity.LoginActivity">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/commonMenuActivityToolbar"

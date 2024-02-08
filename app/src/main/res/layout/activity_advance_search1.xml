@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/dashbord_background"
-    tools:context=".Activity.AdvanceSearch1Activity">
+    tools:context="com.MamaDevalayam.Activity.AdvanceSearch1Activity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/commonMenuActivityToolbar"

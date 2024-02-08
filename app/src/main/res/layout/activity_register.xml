@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:descendantFocusability="beforeDescendants"
         android:focusableInTouchMode="true"
-        tools:context=".Activity.RegisterActivity">
+        tools:context="com.MamaDevalayam.Activity.RegisterActivity">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/commonMenuActivityToolbar"
@@ -335,7 +335,7 @@
                             android:textColor="@color/title_color"
                             android:textSize="@dimen/_12ssp" />
 
-                        <com.i2donate.Commonmethod.SearchableSpinner
+                        <com.MamaDevalayam.Commonmethod.SearchableSpinner
                             android:id="@+id/spin_country"
                             android:layout_width="@dimen/_220sdp"
                             android:layout_height="50dp"

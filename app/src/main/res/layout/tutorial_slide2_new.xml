@@ -7,7 +7,7 @@
     android:layout_gravity="center_horizontal"
     android:background="@drawable/dashbord_background"
     android:gravity="center_horizontal"
-    tools:context=".Activity.WelcomeActivity">
+    tools:context="com.MamaDevalayam.Activity.WelcomeActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -38,14 +38,14 @@
             <ImageView
                 android:layout_width="@dimen/_250sdp"
                 android:layout_height="@dimen/_100sdp"
-                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_25sdp"
                 android:layout_gravity="center"
                 android:src="@drawable/logo_splash" />
 
             <ImageView
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_140sdp"
-                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:src="@drawable/finance_icon"
                 android:visibility="gone" />
 
@@ -53,7 +53,7 @@
                 android:id="@+id/smarter_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:text="@string/splash_text"
                 android:layout_gravity="center"
                 android:gravity="center"

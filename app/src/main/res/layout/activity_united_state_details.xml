@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.UnitedStateDetailsActivity">
+    tools:context="com.MamaDevalayam.Activity.UnitedStateDetailsActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/commonMenuActivityToolbar"
@@ -93,7 +93,7 @@
                             android:layout_height="@dimen/_70sdp"
                             android:layout_weight=".8"
                             android:adjustViewBounds="true"
-                            android:src="@drawable/ic_launcher_background"
+                            android:src="@drawable/logo_splash"
                             app:riv_corner_radius="@dimen/_8sdp"
                             tools:ignore="ImageContrastCheck" />
 
@@ -182,7 +182,8 @@
                                 android:layout_weight="0.3"
                                 android:src="@drawable/ic_liked"
                                 android:visibility="visible"
-                                tools:ignore="ContentDescription,NestedWeights" />
+                                tools:ignore="ContentDescription,NestedWeights"
+                                app:tint="@color/colorPrimary" />
 
                             <TextView
                                 android:id="@+id/unlike_count_tv"

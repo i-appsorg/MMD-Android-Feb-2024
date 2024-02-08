@@ -33,7 +33,7 @@
                 android:focusableInTouchMode="true"
                 android:adjustViewBounds="true"
                 app:riv_corner_radius="@dimen/_8sdp"
-                android:src="@drawable/ic_launcher_background" />
+                android:src="@drawable/logo_splash" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -135,6 +135,7 @@
                     android:layout_height="@dimen/_15sdp"
                     android:layout_weight="0.3"
                     android:src="@drawable/ic_liked"
+                    app:tint="@color/colorPrimary"
                     android:visibility="visible" />
 
                 <TextView

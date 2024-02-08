@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splash_background"
-    tools:context=".Activity.SplashScreenActivity">
+    android:background="@drawable/dashbord_background"
+    tools:context="com.MamaDevalayam.Activity.SplashScreenActivity">
 
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="@dimen/_100sdp"
-        android:src="@drawable/splashlogo"
+        android:src="@drawable/splash_background"
         android:layout_centerVertical="true"
         />
 

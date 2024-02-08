@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.OtpActivity">
+    tools:context="com.MamaDevalayam.Activity.OtpActivity">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/commonMenuActivityToolbar"
         android:layout_width="match_parent"
@@ -69,7 +69,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginTop="@dimen/_20sdp"
                         android:visibility="gone"
-                        android:src="@drawable/splashlogo" />
+                        android:src="@drawable/splash_background" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -204,7 +204,7 @@
                             android:layout_height="@dimen/_80sdp"
                             android:layout_centerVertical="true"
                             android:layout_marginTop="@dimen/_40sdp"
-                            android:src="@drawable/splashlogo" />
+                            android:src="@drawable/logo_splash" />
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -214,6 +214,7 @@
                             android:text="@string/update_password_title"
                             android:layout_gravity="center_horizontal"
                             android:gravity="center_horizontal"
+                            android:textColor="@color/tv_login"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             />
                         <TextView
