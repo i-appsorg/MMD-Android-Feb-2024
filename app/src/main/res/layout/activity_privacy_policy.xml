@@ -26,6 +26,7 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_gravity="start|left"
             android:padding="8dp"
+            android:layout_marginStart="@dimen/_10sdp"
             android:src="@drawable/back_icon" />
 
         <ImageView

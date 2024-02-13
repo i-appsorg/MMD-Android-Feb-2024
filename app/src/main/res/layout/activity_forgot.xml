@@ -28,7 +28,7 @@
             android:text="@string/forgot_password_title"
             android:textAllCaps="true"
             android:textColor="@color/tv_login"
-            android:textSize="@dimen/_20sdp"
+            android:textSize="@dimen/_14sdp"
             android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
 

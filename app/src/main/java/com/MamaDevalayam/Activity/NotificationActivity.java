@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.MamaDevalayam.CommonActivity.CommonBackActivity;
 import com.MamaDevalayam.CommonActivity.CommonMenuActivity;
 import com.MamaDevalayam.RetrofitAPI.ApiClient;
 import com.MamaDevalayam.RetrofitAPI.ApiInterface;
@@ -34,7 +35,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class NotificationActivity extends CommonMenuActivity {
+public class NotificationActivity extends CommonBackActivity {
 
     private String TAG = "TypesActivity";
     Toolbar toolbar;
@@ -67,6 +68,7 @@ public class NotificationActivity extends CommonMenuActivity {
 
         NotificationAPI();
 //todo login
+
 
         if (session.isLoggedIn()) {
 
@@ -214,5 +216,10 @@ public class NotificationActivity extends CommonMenuActivity {
             listOfdate.add(map);
         }
 
+    }
+
+    @Override
+    public void onBackPressed() {
+//        super.onBackPressed();
     }
 }

@@ -43,21 +43,21 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/title_location_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/title_location_tv"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:padding="@dimen/_5sdp"
                         android:text="@string/temple_by_location"
                         android:textAllCaps="true"
                         android:textColor="@color/tv_login"
-                        android:textSize="@dimen/_20sdp"
+                        android:textSize="@dimen/_14sdp"
                         android:textStyle="bold" />
 
                     <LinearLayout
+                        android:id="@+id/search_location_layout"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/search_location_layout"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_7sdp"
                         android:layout_marginRight="@dimen/_10sdp"
@@ -75,17 +75,17 @@
                         <EditText
                             android:id="@+id/search_us_et"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center_vertical"
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:layout_weight="1"
                             android:background="@null"
                             android:editable="true"
-                            android:textSize="@dimen/_12sdp"
-                            android:textColorHint="@color/title_color"
                             android:gravity="center_vertical"
                             android:hint="@string/united_state_location"
                             android:textColor="@color/trans_black"
+                            android:textColorHint="@color/title_color"
+                            android:textSize="@dimen/_12sdp"
                             tools:ignore="TouchTargetSizeCheck" />
 
                         <ImageView
@@ -98,17 +98,18 @@
                             android:tint="@color/orange"
                             android:visibility="gone" />
                     </LinearLayout>
+
                     <LinearLayout
+                        android:id="@+id/namesearchLayout"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_7sdp"
                         android:layout_marginRight="@dimen/_10sdp"
-                        android:id="@+id/namesearchLayout"
-                        android:visibility="gone"
                         android:background="@drawable/search_border"
                         android:orientation="horizontal"
-                        android:padding="@dimen/_7sdp">
+                        android:padding="@dimen/_7sdp"
+                        android:visibility="gone">
 
                         <ImageView
                             android:id="@+id/search_icon"
@@ -116,7 +117,7 @@
                             android:layout_height="@dimen/_15sdp"
                             android:layout_gravity="center_vertical"
                             android:layout_weight=".1"
-                            android:src="@drawable/search_icon" />
+                            android:src="@drawable/search_icon"/>
 
                         <EditText
                             android:id="@+id/search_name_et1"
@@ -125,15 +126,15 @@
                             android:layout_gravity="center_vertical"
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:layout_weight="1"
-                            android:singleLine="true"
-                            android:imeOptions="actionDone"
                             android:background="@null"
                             android:editable="true"
                             android:gravity="center_vertical"
-                            android:textSize="@dimen/_12sdp"
                             android:hint="@string/united_state_search_name"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
                             android:textColor="@color/trans_black"
-                            android:textColorHint="@color/title_color" />
+                            android:textColorHint="@color/title_color"
+                            android:textSize="@dimen/_12sdp" />
 
                         <ImageView
                             android:id="@+id/close_img"
@@ -142,8 +143,8 @@
                             android:layout_gravity="center_vertical"
                             android:layout_marginLeft="@dimen/_2sdp"
                             android:layout_weight=".1"
-                             android:src="@drawable/close"
-            android:tint="@color/orange"
+                            android:src="@drawable/close"
+                            android:tint="@color/orange"
                             android:visibility="gone" />
                     </LinearLayout>
 
@@ -151,12 +152,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_12sdp"
-                        android:layout_marginRight="@dimen/_12sdp"
                         android:layout_marginTop="10dp"
-                        android:textSize="@dimen/_10sdp"
-                        android:visibility="gone"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:text="Type at least 3 letters to search."
                         android:textColor="@color/title_color"
-                        android:text="Type at least 3 letters to search."/>
+                        android:textSize="@dimen/_10sdp"
+                        android:visibility="gone" />
+
                     <LinearLayout
                         android:id="@+id/filter_linear_layout1"
                         android:layout_width="fill_parent"
@@ -189,26 +191,27 @@
                             <ImageView
                                 android:layout_width="0dp"
                                 android:layout_height="@dimen/_15sdp"
-                                android:layout_weight="1"
                                 android:layout_gravity="center"
-                                android:tint="@color/orange"
-                                android:src="@drawable/name_icon"/>
+                                android:layout_weight="1"
+                                android:src="@drawable/name_icon"
+                                android:tint="@color/orange" />
 
                             <TextView
                                 android:layout_width="0dp"
-                                android:layout_weight="1.2"
-                                android:textSize="@dimen/_10sdp"
-                                android:layout_marginLeft="@dimen/_2sdp"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_weight="1.2"
                                 android:text="@string/united_state_name"
-                                android:textColor="@color/title_color"/>
+                                android:textColor="@color/title_color"
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
+
                         <LinearLayout
                             android:id="@+id/locationtitle_search_layout"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:layout_weight="2.5"
+                            android:layout_weight="2.2"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
                             android:visibility="gone">
@@ -227,11 +230,12 @@
                                 android:layout_marginLeft="@dimen/_1sdp"
                                 android:layout_weight="1"
                                 android:gravity="center_vertical"
-                                android:text="@string/location"
                                 android:singleLine="true"
+                                android:text="@string/location"
                                 android:textColor="@color/title_color"
                                 android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
+
                         <LinearLayout
                             android:id="@+id/type_linear_layout"
                             android:layout_width="0dp"
@@ -247,8 +251,8 @@
                                 android:layout_gravity="center"
                                 android:layout_marginLeft="@dimen/_10sdp"
                                 android:layout_weight="1"
-                                android:tint="@color/orange"
-                                android:src="@drawable/type_icon" />
+                                android:src="@drawable/type_icon"
+                                android:tint="@color/orange" />
 
                             <TextView
                                 android:layout_width="0dp"
@@ -283,8 +287,8 @@
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_marginRight="@dimen/_10sdp"
                         android:text="@string/united_state_nonprofit"
-                        android:textSize="@dimen/_12sdp"
-                        android:textColor="@color/gray" />
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/_12sdp" />
 
                     <LinearLayout
                         android:id="@+id/linear_tool_test"
@@ -304,11 +308,11 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_50sdp"
+                android:layout_height="?android:actionBarSize"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:contentInsetStart="0dp"
                 android:contentInsetLeft="0dp"
                 android:contentInsetEnd="0dp"
-                android:layout_marginTop="@dimen/_20sdp"
                 android:contentInsetRight="0dp"
                 android:elevation="0dp"
                 app:contentInsetEnd="0dp"
@@ -320,7 +324,6 @@
                     android:id="@+id/relative_before_toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/_7sdp"
                     android:visibility="gone">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -332,6 +335,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="start"
+                            android:layout_marginStart="@dimen/_10sdp"
                             android:padding="@dimen/_10sdp"
                             android:src="@drawable/back_icon"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -343,13 +347,11 @@
                             android:id="@+id/imageView2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
                             android:src="@drawable/toplogo"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            tools:ignore="ContentDescription" />
+                            app:layout_constraintTop_toTopOf="parent" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </RelativeLayout>
@@ -372,6 +374,7 @@
                             android:layout_width="45dp"
                             android:layout_height="@dimen/_30sdp"
                             android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/_10sdp"
                             android:padding="8dp"
                             android:src="@drawable/back_icon" />
 
@@ -379,13 +382,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/_12sdp"
-                            android:layout_marginRight="@dimen/_12sdp"
                             android:layout_marginTop="10dp"
-                            android:textSize="@dimen/_10sdp"
-                            android:textColor="@color/orange"
+                            android:layout_marginRight="@dimen/_12sdp"
                             android:text="Type at least 3 letters to search."
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/_10sdp"
 
                             />
+
                         <ImageView
                             android:id="@+id/filter_show_img"
                             android:layout_width="0dp"
@@ -451,12 +455,13 @@
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/_10sdp" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/locationtitle_search_layout1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="2.5"
+                android:layout_weight="2.2"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:visibility="gone">
@@ -475,11 +480,12 @@
                     android:layout_marginLeft="@dimen/_1sdp"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="@string/location"
                     android:singleLine="true"
+                    android:text="@string/location"
                     android:textColor="@color/title_color"
                     android:textSize="@dimen/_10sdp" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/type_linear_layout1"
                 android:layout_width="0dp"
@@ -571,16 +577,18 @@
                 android:layoutAnimation="@anim/layout_animation_fall_down"
                 android:nestedScrollingEnabled="true"
                 android:visibility="gone" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:gravity="center"
-                android:visibility="gone"
-                android:textColor="@color/colorPrimary"
                 android:text="@string/name_search_noresult"
-                android:textSize="@dimen/_15sdp" />
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15sdp"
+                android:visibility="gone" />
+
             <LinearLayout
                 android:id="@+id/no_data_linear"
                 android:layout_width="match_parent"
@@ -603,10 +611,10 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:gravity="center"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorPrimary"
                     android:text="@string/name_search_noresult"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
         </LinearLayout>

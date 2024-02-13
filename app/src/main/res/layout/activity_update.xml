@@ -32,6 +32,7 @@
                 android:layout_gravity="start"
                 android:padding="@dimen/_10sdp"
                 android:src="@drawable/back_icon"
+                android:layout_marginStart="@dimen/_10sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -75,10 +76,10 @@
                     android:text="@string/update_update"
                     android:textAllCaps="true"
                     android:textColor="@color/tv_login"
-                    android:textSize="@dimen/_20sdp"
+                    android:textSize="@dimen/_14sdp"
                     android:textStyle="bold" />
 
-                <LinearLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -92,7 +93,11 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/_20sdp"
                         android:padding="5dp"
-                        android:src="@drawable/logo_splash"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@drawable/ic_build_profile"
                         android:visibility="visible"
                         app:civ_border_color="#e5dfff"
                         app:civ_border_width="1dp" />
@@ -102,12 +107,11 @@
                         android:layout_width="@dimen/_24sdp"
                         android:layout_height="@dimen/_24sdp"
                         android:layout_below="@+id/myprofile_edit_img"
-                        android:layout_marginStart="@dimen/_35sdp"
-                        android:layout_marginTop="-28dp"
-                        android:layout_marginEnd="0dp"
                         android:src="@drawable/ic_camera_edit_icon"
-                        android:visibility="gone" />
-                </LinearLayout>
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        app:layout_constraintEnd_toEndOf="@id/myprofile_edit_img"
+                        app:layout_constraintBottom_toBottomOf="@id/myprofile_edit_img"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"

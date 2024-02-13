@@ -14,12 +14,15 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.MamaDevalayam.Adapter.CategorylistAdapter;
 import com.MamaDevalayam.CommonActivity.CommonBackActivity;
+import com.MamaDevalayam.Commonmethod.ConstantFunctions;
 import com.MamaDevalayam.Model.Category_new;
 import com.MamaDevalayam.Model.ChangeActivity;
 import com.MamaDevalayam.Model.child_categorynew;
@@ -33,7 +36,7 @@ import com.MamaDevalayam.Adapter.NewCategorylistAdapter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class AdvanceCompletedNewActivity extends CommonBackActivity {
+public class AdvanceCompletedNewActivity extends AppCompatActivity {
     private static final String TAG = AdvanceCompletedNewActivity.class.getSimpleName();
     RecyclerView recyclerview_advancesearch;
     static SessionManager session;
@@ -63,11 +66,13 @@ public class AdvanceCompletedNewActivity extends CommonBackActivity {
     ArrayList<String> categorychecked_item = new ArrayList<>();
     private ArrayList<GroupName> Array = new ArrayList<>();
     private TextView RefindDiety;
+    private Toolbar toolbar;
+    private View back_icon_login_img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setView(R.layout.activity_advance_completed_new,TAG);
+        setContentView(R.layout.activity_advance_completed_new);
         CommonBackActivity.show();
         init();
         listener();
@@ -110,6 +115,33 @@ public class AdvanceCompletedNewActivity extends CommonBackActivity {
         RvRevenue.setLayoutManager(layoutManager);
         RvRevenue.setItemAnimator(new DefaultItemAnimator());
         AdvanceCatAPI();
+        toolbar = findViewById(R.id.commonMenuActivityToolbar);
+//        toolbar.setVisibility(View.GONE);
+
+        back_icon_login_img = findViewById(R.id.back_icon_login_img);
+        back_icon_login_img.setOnClickListener(v -> onBackPressed());
+        session = new SessionManager(this);
+        findViewById(R.id.linear_browse).setOnClickListener(v -> {
+
+            ChangeActivity.changeActivity(this, BrowseActivity.class);
+            ((TextView)findViewById(R.id.browse_tv)).setTextColor(getResources().getColor(R.color.quantum_white_text));
+            // browse_img.setImageTintMode();
+            ((ImageView)findViewById(R.id.browse_img)).setColorFilter(getApplicationContext().getResources().getColor(R.color.quantum_white_text));
+            finish();
+        });
+        findViewById(R.id.linear_myspace).setOnClickListener(v -> {
+
+            if (session.isLoggedIn()) {
+                ChangeActivity.changeActivity(this, MyspaceActivity.class);
+                ((TextView)findViewById(R.id.my_space_tv)).setTextColor(getResources().getColor(R.color.quantum_white_text));
+                ((ImageView)findViewById(R.id.my_space_img)).setColorFilter(getApplicationContext().getResources().getColor(R.color.quantum_white_text));
+                finish();
+            } else {
+                ConstantFunctions.LoginDialog(this);
+                // ChangeActivity.changeActivity(CommonMenuActivity.this, LoginActivity.class);
+                //finish();
+            }
+        });
     }
 
     private void listener() {

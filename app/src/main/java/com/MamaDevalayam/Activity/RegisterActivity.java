@@ -138,7 +138,7 @@ public class RegisterActivity extends AppCompatActivity implements
     SessionManager sessionManager;
     IDonateSharedPreference iDonateSharedPreference;
     private LinearLayout register_gender_layout;
-    String type = "";
+    String type = "Individual";
     String business_name = "";
     TwitterLoginButton twitter_login_btn;
     private TwitterAuthClient client;

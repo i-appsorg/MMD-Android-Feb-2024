@@ -25,36 +25,49 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:orientation="horizontal"
-            android:padding="5dp"
+            android:layout_margin="8dp"
             android:weightSum="10"
             app:layout_constraintBottom_toBottomOf="@+id/united_state_location_relative"
             app:layout_constraintEnd_toEndOf="@+id/united_state_location_relative"
             app:layout_constraintStart_toStartOf="@+id/united_state_location_relative">
 
+            <ProgressBar
+                android:id="@+id/ProgressCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/_8sdp"/>
+
             <com.MamaDevalayam.Commonmethod.SearchableSpinner
                 android:id="@+id/spin_country"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="20dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="10dp"
+                android:layout_toStartOf="@+id/CountryArrow"
                 android:layout_weight="1.5"
-                android:dropDownHeight="@dimen/_200sdp"
                 android:background="@android:color/transparent"
+                android:dropDownHeight="@dimen/_200sdp"
+                android:gravity="center"
                 android:imeOptions="actionDone"
-                android:spinnerMode="dropdown"
                 android:overlapAnchor="false"
+                android:spinnerMode="dropdown"
                 android:textColor="@color/title_color"
                 android:textSize="@dimen/_12ssp"
                 tools:ignore="SpeakableTextPresentCheck" />
 <!--            android:dropDownVerticalOffset="-5dp"-->
 
             <ImageView
+                android:id="@+id/CountryArrow"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="-40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/_10sdp"
                 android:src="@drawable/ic_drop_down"
                 tools:ignore="ContentDescription" />
 
@@ -67,7 +80,7 @@
                  android:layout_weight="8.5"
                  android:scaleType="fitXY" />-->
 
-        </LinearLayout>
+        </RelativeLayout>
 
         <ImageView
             android:id="@+id/international_layout"

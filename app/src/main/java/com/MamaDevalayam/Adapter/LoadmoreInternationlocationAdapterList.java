@@ -384,6 +384,8 @@ public class LoadmoreInternationlocationAdapterList extends RecyclerView.Adapter
                 bundle.putString("city", charitylist1.get(position).getCity());
                 bundle.putString("likecount", charitylist1.get(position).getLike_count());
                 bundle.putString("description", "");
+                bundle.putString("latitude",  charitylist1.get(position).getLatitude());
+                bundle.putString("longitude", charitylist1.get(position).getLongitude());
                 bundle.putString("id", charitylist1.get(position).getId());
                 bundle.putString("followed", charitylist1.get(position).getFollowed());
                 bundle.putString("liked", charitylist1.get(position).getLiked());
@@ -399,6 +401,11 @@ public class LoadmoreInternationlocationAdapterList extends RecyclerView.Adapter
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, MakeTypeScreenActivity.class);
+                intent.putExtra("tvTopType", "HUNDI");
+                intent.putExtra("tvWebsiteId", "www.Vishnavodevi.org");
+                intent.putExtra("tvEmailId", "helpdesk@Vishnavodevi.org");
+                intent.putExtra("tvContactId", "+91-8772277777");
+                intent.putExtra("isHome", true);
                 mContext.startActivity(intent);
 //                if (session.isLoggedIn()) {
 //                    d = new BottomSheetDialog(mContext, R.style.payment_dailog);

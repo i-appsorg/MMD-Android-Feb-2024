@@ -53,7 +53,7 @@
                         android:text="@string/browse_united_state"
                         android:textAllCaps="true"
                         android:textColor="@color/tv_login"
-                        android:textSize="@dimen/_20sdp"
+                        android:textSize="@dimen/_14sdp"
                         android:textStyle="bold"
                         tools:ignore="TextSizeCheck" />
 
@@ -82,7 +82,7 @@
                         <EditText
                             android:id="@+id/search_us_et"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="@dimen/_8sdp"
                             android:layout_weight="1"
@@ -136,7 +136,7 @@
                         <EditText
                             android:id="@+id/search_name_et1"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="@dimen/_8sdp"
                             android:layout_weight="1"
@@ -148,6 +148,7 @@
                             android:singleLine="true"
                             android:textColor="@color/tv_search_hint"
                             android:textColorHint="@color/tv_search_hint"
+                            android:textSize="@dimen/_12sdp"
                             tools:ignore="Autofill,Deprecated,TextFields" />
 
                         <ImageView
@@ -201,7 +202,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:layout_weight="2"
+                            android:layout_weight="2.2"
                             android:gravity="center_vertical"
                             android:orientation="horizontal">
 
@@ -229,7 +230,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:layout_weight="2.5"
+                            android:layout_weight="2.2"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
                             android:visibility="gone">
@@ -364,6 +365,7 @@
                         android:layout_gravity="start"
                         android:padding="@dimen/_10sdp"
                         android:src="@drawable/back_icon"
+                        android:layout_marginStart="@dimen/_10sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -405,6 +407,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:padding="@dimen/_8sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
                             android:src="@drawable/back_icon"
                             tools:ignore="ContentDescription,ImageContrastCheck" />
 
@@ -496,7 +499,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="2.5"
+                android:layout_weight="2.2"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:visibility="gone">

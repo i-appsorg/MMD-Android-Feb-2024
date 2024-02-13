@@ -7,12 +7,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.MamaDevalayam.CommonActivity.CommonMenuActivity;
+import com.MamaDevalayam.Commonmethod.ConstantFunctions;
 import com.MamaDevalayam.RetrofitAPI.ApiClient;
 import com.MamaDevalayam.RetrofitAPI.ApiInterface;
 import com.google.gson.JsonObject;
@@ -38,7 +40,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class FollowingActivity extends CommonMenuActivity {
+public class FollowingActivity extends AppCompatActivity {
     private String TAG = "MyspaceActivity";
     Toolbar toolbar;
     ImageView menu;
@@ -63,9 +65,36 @@ public class FollowingActivity extends CommonMenuActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setView(R.layout.activity_following, TAG);
+        setContentView(R.layout.activity_following);
+//        setView(R.layout.activity_following, TAG);
         setTitle("My space");
         toolbar = findViewById(R.id.commonMenuActivityToolbar);
+//        toolbar.setVisibility(View.GONE);
+
+        ImageView back_icon_login_img = findViewById(R.id.back_icon_login_img);
+        back_icon_login_img.setOnClickListener(v -> onBackPressed());
+        session = new SessionManager(this);
+        findViewById(R.id.linear_browse).setOnClickListener(v -> {
+
+            ChangeActivity.changeActivity(this, BrowseActivity.class);
+            ((TextView)findViewById(R.id.browse_tv)).setTextColor(getResources().getColor(R.color.quantum_white_text));
+            // browse_img.setImageTintMode();
+            ((ImageView)findViewById(R.id.browse_img)).setColorFilter(getApplicationContext().getResources().getColor(R.color.quantum_white_text));
+            finish();
+        });
+        findViewById(R.id.linear_myspace).setOnClickListener(v -> {
+
+            if (session.isLoggedIn()) {
+                ChangeActivity.changeActivity(this, MyspaceActivity.class);
+                ((TextView)findViewById(R.id.my_space_tv)).setTextColor(getResources().getColor(R.color.quantum_white_text));
+                ((ImageView)findViewById(R.id.my_space_img)).setColorFilter(getApplicationContext().getResources().getColor(R.color.quantum_white_text));
+                finish();
+            } else {
+                ConstantFunctions.LoginDialog(this);
+                // ChangeActivity.changeActivity(CommonMenuActivity.this, LoginActivity.class);
+                //finish();
+            }
+        });
         init();
     }
 
@@ -84,18 +113,18 @@ public class FollowingActivity extends CommonMenuActivity {
 
         Log.e(TAG, "DonatedCharityList1: "+DonatedCharityList1.size() );
         Log.e(TAG, "follow_charitylist1: "+follow_charitylist1.size() );
-        menu = (ImageView) findViewById(R.id.menu);
+//        menu = (ImageView) findViewById(R.id.menu);
         following_recyclerview = (RecyclerView) findViewById(R.id.following_recyclerview);
         no_data_linear = (LinearLayout) findViewById(R.id.no_data_linear);
         no_data_tv = (TextView) findViewById(R.id.no_data_tv);
         charity_name_tv = (TextView) findViewById(R.id.charity_name_tv);
-        menu.setImageResource(R.drawable.back_icon);
-        menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
+//        menu.setImageResource(R.drawable.back_icon);
+//        menu.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                onBackPressed();
+//            }
+//        });
         if (type.equalsIgnoreCase("likes")) {
             charity_name_tv.setText("My likes");
         } else if (type.equalsIgnoreCase("follows")) {

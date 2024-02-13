@@ -25,16 +25,17 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.MamaDevalayam.Interwork.MyApplication;
+import com.MamaDevalayam.Model.ChangeActivity;
+
+import com.MamaDevalayam.R;
 import com.MamaDevalayam.RetrofitAPI.ApiClient;
+import com.MamaDevalayam.Session.PrefManager;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.MamaDevalayam.Model.ChangeActivity;
-import com.MamaDevalayam.R;
-import com.MamaDevalayam.Session.PrefManager;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -144,7 +145,6 @@ public class WelcomeActivity extends AppCompatActivity {
 //        }
 
         // Making notification bar transparent
-
 //        launchHomeScreen();
     }
 
@@ -160,20 +160,21 @@ public class WelcomeActivity extends AppCompatActivity {
                     String sheetID = MyApplication.getSheetId();
                     String apiKEY = MyApplication.getSheetApiKey();
 //                    String sheetTabName = "i2D-Dev";
+//                    String sheetTabName = "MMD-Dev";
                     String sheetTabName = "i2D-Prod";
                     String urls = "https://sheets.googleapis.com/v4/spreadsheets/" + sheetID + "/values/" + sheetTabName + "?key=" + apiKEY;
+
+//                    String urls = "https://sheets.googleapis.com/v4/spreadsheets/1ZjrKWAsBuB0-P9A3-TePPUa3_t1iQxvY_FrH79fc5eQ/values/MMD-Dev?key=AIzaSyA9Cjc0gdK_CYnXSq1P_z3kG1dWg27h7c0";
                     Log.e(TAG, "onClick:urls ----  "+urls );
-
-
                     RequestQueue queue = Volley.newRequestQueue(WelcomeActivity.this);
-
                     JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, urls, null, new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
+                            Log.e(TAG, " response - " + response);
+
                             progressDialog.dismiss();
                             try {
                                 jsonArrayValues = response.getJSONArray("values");
-
                                 for (int i = 0; i < jsonArrayValues.length(); i++) {
                                     JSONArray jsonArrayPos = jsonArrayValues.getJSONArray(i);
                                     for (int j = 0; j < jsonArrayPos.length(); j++) {
@@ -181,29 +182,24 @@ public class WelcomeActivity extends AppCompatActivity {
                                             Log.e(TAG, " Server_URL - " + jsonArrayPos.get(j + 1).toString());
                                             ApiClient.Server_URL = jsonArrayPos.get(j + 1).toString() + "/";
                                         }
-
                                         if (jsonArrayPos.get(j).toString().contains("TC_URL")) {
                                             Log.e(TAG, " TC_URL - " + jsonArrayPos.get(j + 1).toString());
                                             ApiClient.TC_URL = jsonArrayPos.get(j + 1).toString();
                                         }
-
                                         if (jsonArrayPos.get(j).toString().contains("Privacy_URL")) {
                                             Log.e(TAG, " Privacy_URL - " + jsonArrayPos.get(j + 1).toString());
                                             ApiClient.Privacy_URL = jsonArrayPos.get(j + 1).toString();
                                         }
-
                                         if (jsonArrayPos.get(j).toString().contains("Help_URL")) {
                                             Log.e(TAG, " Help_URL - " + jsonArrayPos.get(j + 1).toString());
                                             ApiClient.Help_URL = jsonArrayPos.get(j + 1).toString();
                                         }
-
                                         if (jsonArrayPos.get(j).toString().contains("About_URL")) {
                                             Log.e(TAG, " About_URL - " + jsonArrayPos.get(j + 1).toString());
                                             ApiClient.About_URL = jsonArrayPos.get(j + 1).toString();
                                         }
                                     }
                                 }
-
                                 if (ApiClient.Server_URL.length() > 0) {
                                     index1 = 1;
                                     launchHomeScreen1();
@@ -221,6 +217,8 @@ public class WelcomeActivity extends AppCompatActivity {
                         public void onErrorResponse(VolleyError error) {
                             progressDialog.dismiss();
                             Log.e(TAG, " error - " + error.getLocalizedMessage());
+                            Log.e(TAG, " error1 - " + error.getMessage());
+                            Log.e(TAG, " error2 - " + error.toString());
                         }
                     });
                     queue.add(jsonObjectRequest);

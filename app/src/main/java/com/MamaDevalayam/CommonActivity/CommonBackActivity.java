@@ -4,6 +4,7 @@ import static com.MamaDevalayam.Model.ChangeActivity.showSnackbar;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -46,15 +47,16 @@ public class CommonBackActivity extends AppCompatActivity implements Connectivit
     private CircleImageView myprofile_img;
     private TextView myaccount_name_tv, titleTextView;
     private ListView menuListView;
-    TextView browse_tv,myspace_tv;
+    TextView browse_tv, myspace_tv;
     static LinearLayout linear_browse;
     LinearLayout linear_myspace;
     static LinearLayout tabMode;
-    ImageView browse_img,myspace_img;
+    ImageView browse_img, myspace_img;
     private View headerView;
     private Selected select;
     boolean doubleclickToClose = false;
     SessionManager session;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,15 +69,15 @@ public class CommonBackActivity extends AppCompatActivity implements Connectivit
         drawerLayout = findViewById(R.id.commonMenuActivityDrawerLayout);
         back_icon_img = findViewById(R.id.back_icon_img);
         refreshMenu = findViewById(R.id.refreshMenu);
-        browse_img=(ImageView)findViewById(R.id.browse_img);
-        myspace_img=(ImageView)findViewById(R.id.my_space_img);
-        browse_tv=(TextView)findViewById(R.id.browse_tv);
-        myspace_tv=(TextView)findViewById(R.id.my_space_tv);
-        linear_browse=(LinearLayout)findViewById(R.id.linear_browse);
-        linear_myspace=(LinearLayout)findViewById(R.id.linear_myspace);
+        browse_img = (ImageView) findViewById(R.id.browse_img);
+        myspace_img = (ImageView) findViewById(R.id.my_space_img);
+        browse_tv = (TextView) findViewById(R.id.browse_tv);
+        myspace_tv = (TextView) findViewById(R.id.my_space_tv);
+        linear_browse = (LinearLayout) findViewById(R.id.linear_browse);
+        linear_myspace = (LinearLayout) findViewById(R.id.linear_myspace);
         menuListView = findViewById(R.id.commonMenuActivityDrawerListView);
         menuActivityFrameLayout = findViewById(R.id.menuActivityFrameLayout);
-         tabMode=(LinearLayout)findViewById(R.id.tabMode);
+        tabMode = (LinearLayout) findViewById(R.id.tabMode);
         //titleTextView = findViewById(R.id.commonMenuActivityTitleTextView);
 //        sosImg.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -90,21 +92,54 @@ public class CommonBackActivity extends AppCompatActivity implements Connectivit
             @Override
             public void onClick(View v) {
 
-                onBackPressed();
+//                onBackPressed();
 
+                if (drawerLayout.isDrawerOpen(GravityCompat.END)) {
+                    drawerLayout.closeDrawer(GravityCompat.END);
+                } else {
+                    if (Selected.Browse == select) {
+                        if (doubleclickToClose) {
+                            finish();
+                            return;
+                        }
+                        doubleclickToClose = true;
+                        showSnackbar(drawerLayout, "Please click BACK again to exit", CommonBackActivity.this);
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                doubleclickToClose = false;
+                            }
+                        }, 2000);
+                    } else {
+//                        ChangeActivity.changeActivityback(CommonBackActivity.this, BrowseActivity.class);
+                        Intent i = new Intent(CommonBackActivity.this, BrowseActivity.class);
+//        i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                        i.putExtra("IsBack", true);
+                        i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        CommonBackActivity.this.startActivity(i);
+                        CommonBackActivity.this.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                        browse_tv.setTextColor(getResources().getColor(R.color.quantum_white_text));
+                        finish();
+                        // super.onBackPressed();
+                    }
+                }
             }
         });
-
-
-
-
-
     }
 
-    public static void hide(){
+    public void showDrawer() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        } else {
+            drawerLayout.openDrawer(GravityCompat.START);
+        }
+    }
+
+    public static void hide() {
         tabMode.setVisibility(View.GONE);
     }
-    public static void show(){
+
+    public static void show() {
         tabMode.setVisibility(View.VISIBLE);
     }
 
@@ -202,6 +237,7 @@ public class CommonBackActivity extends AppCompatActivity implements Connectivit
         }
 
     }
+
     private void LoginDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(CommonBackActivity.this);
         builder.setTitle("");
@@ -221,6 +257,7 @@ public class CommonBackActivity extends AppCompatActivity implements Connectivit
         builder.setCancelable(false);
         builder.show();
     }
+
     public void setSelected(Selected select) {
         this.select = select;
         int textColor;

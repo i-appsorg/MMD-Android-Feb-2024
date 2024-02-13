@@ -25,7 +25,7 @@ public class CommonActionBarListAdapter extends BaseAdapter {
     private String[] idonate_listName = {
             "My Notifications",
             "My Settings",
-            "About Mama Devalayam’s",
+            "About Mama Devalayam",
             "Help/Support",
             "Logout",};
 

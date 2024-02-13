@@ -54,7 +54,7 @@
                         android:text="@string/united_state_title_name"
                         android:textAllCaps="true"
                         android:textColor="@color/tv_login"
-                        android:textSize="@dimen/_20ssp"
+                        android:textSize="@dimen/_14sdp"
                         android:textStyle="bold"
                         tools:ignore="TextSizeCheck" />
 
@@ -146,7 +146,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:layout_weight="2.5"
+                            android:layout_weight="2.2"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
                             android:visibility="visible">
@@ -179,7 +179,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:layout_weight="2.5"
+                            android:layout_weight="2.2"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
                             android:visibility="gone">
@@ -210,7 +210,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="@dimen/_1sdp"
-                            android:layout_weight="2"
+                            android:layout_weight="2.2"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
                             android:visibility="gone">
@@ -243,13 +243,11 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="@dimen/_1sdp"
-                            android:layout_weight="2"
+                            android:layout_weight="2.2"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
                             android:visibility="gone"
-                            tools:ignore="ExtraText"><![CDATA[
-
-                            ]]>
+                            tools:ignore="ExtraText">
 
                             <ImageView
                                 android:layout_width="0dp"
@@ -276,7 +274,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="@dimen/_6sdp"
-                            android:layout_weight="2"
+                            android:layout_weight="2.2"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
                             android:visibility="gone">
@@ -307,7 +305,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="@dimen/_1sdp"
-                            android:layout_weight="2"
+                            android:layout_weight="2.2"
                             android:orientation="horizontal">
 
                             <ImageView
@@ -339,7 +337,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="@dimen/_1sdp"
-                            android:layout_weight="2"
+                            android:layout_weight="2.2"
                             android:orientation="horizontal"
                             android:visibility="gone">
 
@@ -455,6 +453,7 @@
                             android:layout_gravity="start"
                             android:padding="@dimen/_10sdp"
                             android:src="@drawable/back_icon"
+                            android:layout_marginStart="@dimen/_10sdp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -501,6 +500,7 @@
                                 android:layout_gravity="start"
                                 android:padding="@dimen/_10sdp"
                                 android:src="@drawable/back_icon"
+                                android:layout_marginStart="@dimen/_10sdp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
@@ -569,7 +569,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="2.5"
+                android:layout_weight="2.2"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:visibility="visible">
@@ -602,7 +602,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="@dimen/_1sdp"
-                android:layout_weight="2"
+                android:layout_weight="2.2"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:visibility="gone">
@@ -635,7 +635,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="@dimen/_5sdp"
-                android:layout_weight="2"
+                android:layout_weight="2.2"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:visibility="gone">
@@ -666,7 +666,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="@dimen/_5sdp"
-                android:layout_weight="2"
+                android:layout_weight="2.2"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -695,7 +695,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="@dimen/_5sdp"
-                android:layout_weight="2"
+                android:layout_weight="2.2"
                 android:orientation="horizontal"
                 android:visibility="gone">
 

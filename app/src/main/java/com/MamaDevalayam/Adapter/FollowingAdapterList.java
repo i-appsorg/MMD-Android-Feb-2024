@@ -230,6 +230,8 @@ public class FollowingAdapterList extends RecyclerView.Adapter<FollowingAdapterL
                 bundle.putString("likecount", charitylist1.get(position).getLike_count());
                 // bundle.putString("description", charitylist1.get(position).getDescription());
                 bundle.putString("description", "");
+                bundle.putString("latitude",  charitylist1.get(position).getLatitude());
+                bundle.putString("longitude", charitylist1.get(position).getLongitude());
                 bundle.putString("id", charitylist1.get(position).getId());
                 bundle.putString("followed", charitylist1.get(position).getFollowed());
                 bundle.putString("liked", charitylist1.get(position).getLiked());

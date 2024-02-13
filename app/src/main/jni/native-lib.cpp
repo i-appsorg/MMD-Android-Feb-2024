@@ -4,7 +4,9 @@
 extern "C" JNIEXPORT jstring
 JNICALL
 Java_com_MamaDevalayam_Interwork_MyApplication_getSheetApiKey(JNIEnv *env, jobject){
+//    std::string mNativeKey = "AIzaSyA9Cjc0gdK_CYnXSq1P_z3kG1dWg27h7c0";
     std::string mNativeKey = "AIzaSyDQzTsnTRgYvCDfEUm1ac0rQgHZbiiB_ew";
+//    std::string mNativeKey = "AIzaSyAor4O91Bve-uqKx7au3QBr2Gl9_2Vr2kg";
     return env->NewStringUTF(mNativeKey.c_str());
 }
 
@@ -19,6 +21,7 @@ extern "C" JNIEXPORT jstring
 JNICALL
 Java_com_MamaDevalayam_Interwork_MyApplication_getSheetId(JNIEnv *env, jobject){
     std::string mNativeKey = "1O-8LD2wcWDqBiKw9I3QDI0JuwWCVrenyN_IzVHVMd4E";
+//    std::string mNativeKey = "1ZjrKWAsBuB0-P9A3-TePPUa3_t1iQxvY_FrH79fc5eQ";
     return env->NewStringUTF(mNativeKey.c_str());
 }
 

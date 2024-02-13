@@ -37,7 +37,7 @@ public class HelpSupportActivity extends CommonBackActivity {
         webView.loadUrl(ApiClient.Help_URL);
 
         final WebSettings webSettings = webView.getSettings();
-        webSettings.setTextZoom(webSettings.getTextZoom() - 68);
+//        webSettings.setTextZoom(webSettings.getTextZoom() - 68);
 
 
     }

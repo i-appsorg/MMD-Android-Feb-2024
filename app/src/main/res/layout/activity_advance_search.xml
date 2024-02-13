@@ -31,6 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="start|left"
                 android:padding="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -74,6 +75,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/advanced_search"
                     android:textAllCaps="true"
+                    android:textSize="@dimen/_14sdp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="@color/tv_login"
                     android:textStyle="bold" />

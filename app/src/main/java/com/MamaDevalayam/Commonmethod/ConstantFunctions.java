@@ -11,8 +11,12 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 
+import com.MamaDevalayam.Activity.LoginActivity;
+import com.MamaDevalayam.Activity.UnitedStateDetailsActivity;
+import com.MamaDevalayam.Model.ChangeActivity;
 import com.google.android.material.snackbar.Snackbar;
 import com.MamaDevalayam.R;
 
@@ -102,5 +106,19 @@ public class ConstantFunctions {
 
         return matcher.matches();
 
+    }
+
+
+    public static void LoginDialog(Activity context) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle("");
+        builder.setMessage("For Advance Features Please Log-in/Register");
+        builder.setPositiveButton("OK",
+                (dialog, which) -> ChangeActivity.changeActivity(context, LoginActivity.class));
+        builder.setNegativeButton(android.R.string.no, (dialog, which) -> {
+
+        });
+        builder.setCancelable(false);
+        builder.show();
     }
 }

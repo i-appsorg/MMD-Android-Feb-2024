@@ -3,12 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.MamaDevalayam">
 
-
-    <!--    <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE"/>-->
-    <!--    <permission-->
-    <!--        android:name="${applicationId}.permission.C2D_MESSAGE"-->
-    <!--        android:protectionLevel="signature"/>-->
-
+    <!-- <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE"/> -->
+    <!-- <permission -->
+    <!-- android:name="${applicationId}.permission.C2D_MESSAGE" -->
+    <!-- android:protectionLevel="signature"/> -->
     <supports-screens
         android:anyDensity="true"
         android:largeScreens="true"
@@ -17,12 +15,9 @@
         android:xlargeScreens="true" />
 
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-
-    <!--    <permission-->
-    <!--        android:name="com.kuliza.taxi.permission.MAPS_RECEIVE"-->
-    <!--        android:protectionLevel="signature" />-->
-
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- <permission -->
+    <!-- android:name="com.kuliza.taxi.permission.MAPS_RECEIVE" -->
+    <!-- android:protectionLevel="signature" /> -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -50,7 +45,7 @@
         android:required="false" />
 
     <application
-        android:name="com.MamaDevalayam.Interwork.MyApplication"
+        android:name=".Interwork.MyApplication"
         android:allowBackup="true"
         android:exported="false"
         android:fullBackupContent="false"
@@ -65,20 +60,41 @@
         android:theme="@style/ChatBackground"
         android:usesCleartextTraffic="true"
         android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
-        <!--        android:icon="@drawable/logo"-->
-        <!--        android:roundIcon="@mipmap/ic_launcher"-->
+
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDwyL_q0Z9StsO0xYL_7qR7_ZIeW85I110" />
 
         <activity
-            android:name="com.MamaDevalayam.Activity.ContactActivity"
+            android:name=".Activity.MapsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".Activity.MapActivity"
+            android:exported="false" /> <!-- android:icon="@drawable/logo" -->
+        <!-- android:roundIcon="@mipmap/ic_launcher" -->
+        <activity
+            android:name=".Activity.ContactActivity"
             android:exported="false" />
         <activity
-            android:name="com.MamaDevalayam.Activity.TempleArchitectureActivity"
+            android:name=".Activity.TempleArchitectureActivity"
             android:exported="false" />
         <activity
-            android:name="com.MamaDevalayam.Activity.MahimaIthihasaActivity"
+            android:name=".Activity.MahimaIthihasaActivity"
             android:exported="false" />
         <activity
-            android:name="com.MamaDevalayam.Activity.SearchNewActivity"
+            android:name=".Activity.SearchNewActivity"
             android:exported="false" />
         <!--
          <activity
@@ -86,29 +102,29 @@
             android:exported="false" />
         -->
         <activity
-            android:name="com.MamaDevalayam.Activity.TitleSubTitleNewActivity"
+            android:name=".Activity.TitleSubTitleNewActivity"
             android:exported="false" />
         <activity
-            android:name="com.MamaDevalayam.Activity.MakeTypeScreenActivity"
+            android:name=".Activity.MakeTypeScreenActivity"
             android:exported="false" />
         <activity
-            android:name="com.MamaDevalayam.Activity.AdvanceCompletedNewActivity"
+            android:name=".Activity.AdvanceCompletedNewActivity"
             android:exported="false" />
         <activity
-            android:name="com.MamaDevalayam.Activity.NamePlaceSerachActivity"
+            android:name=".Activity.NamePlaceSerachActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.MamaDevalayam.Activity.TypeSerchActivity"
+            android:name=".Activity.TypeSerchActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name="com.MamaDevalayam.Activity.PrivactPolicyActivity" />
+        <activity android:name=".Activity.PrivactPolicyActivity" />
         <activity
             android:name="com.braintreepayments.api.BraintreeBrowserSwitchActivity"
             android:exported="true"
@@ -122,10 +138,10 @@
                 <data android:scheme="${applicationId}.braintree" />
             </intent-filter>
         </activity>
-        <activity android:name="com.MamaDevalayam.Activity.BrainTreePaymentActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.PrivacyPolicyActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.TermsAndConditionActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.NewtypesActivity" />
+        <activity android:name=".Activity.BrainTreePaymentActivity" />
+        <activity android:name=".Activity.PrivacyPolicyActivity" />
+        <activity android:name=".Activity.TermsAndConditionActivity" />
+        <activity android:name=".Activity.NewtypesActivity" />
 
         <meta-data
             android:name="firebase_crashlytics_collection_enabled"
@@ -143,30 +159,30 @@
         <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
         <!-- </intent-filter> -->
         <!-- </receiver> -->
-        <activity android:name="com.MamaDevalayam.Activity.ConfirmationActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.AnnualRevenueActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.TitleSubTitleActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.SubCategoryActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.AdvanceCompletedActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.PaymentSuccessActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.SelectPaymentActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.ChangePasswordActivity" />
+        <activity android:name=".Activity.ConfirmationActivity" />
+        <activity android:name=".Activity.AnnualRevenueActivity" />
+        <activity android:name=".Activity.TitleSubTitleActivity" />
+        <activity android:name=".Activity.SubCategoryActivity" />
+        <activity android:name=".Activity.AdvanceCompletedActivity" />
+        <activity android:name=".Activity.PaymentSuccessActivity" />
+        <activity android:name=".Activity.SelectPaymentActivity" />
+        <activity android:name=".Activity.ChangePasswordActivity" />
         <activity
-            android:name="com.MamaDevalayam.Activity.OtpActivity"
+            android:name=".Activity.OtpActivity"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
-        <activity android:name="com.MamaDevalayam.Activity.ForgotActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.AdvanceSearchActivity" />
+        <activity android:name=".Activity.ForgotActivity" />
+        <activity android:name=".Activity.AdvanceSearchActivity" />
         <activity
-            android:name="com.MamaDevalayam.Activity.AdavanceSearchUIDesign"
+            android:name=".Activity.AdavanceSearchUIDesign"
             android:theme="@style/adavance_theme" />
-        <activity android:name="com.MamaDevalayam.Activity.AdavanceSearch_new" />
-        <activity android:name="com.MamaDevalayam.Activity.HelpSupportActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.AboutActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.AboutNewActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.InternationalCharitiesActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.PlaceSearchActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.AutosearchActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.NewSeachtypesActivity" />
+        <activity android:name=".Activity.AdavanceSearch_new" />
+        <activity android:name=".Activity.HelpSupportActivity" />
+        <activity android:name=".Activity.AboutActivity" />
+        <activity android:name=".Activity.AboutNewActivity" />
+        <activity android:name=".Activity.InternationalCharitiesActivity" />
+        <activity android:name=".Activity.PlaceSearchActivity" />
+        <activity android:name=".Activity.AutosearchActivity" />
+        <activity android:name=".Activity.NewSeachtypesActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -180,10 +196,10 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDwyL_q0Z9StsO0xYL_7qR7_ZIeW85I110" />
         -->
-        <activity android:name="com.MamaDevalayam.Activity.UpdateActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.AdvanceSearch1Activity" />
+        <activity android:name=".Activity.UpdateActivity" />
+        <activity android:name=".Activity.AdvanceSearch1Activity" />
         <activity
-            android:name="com.MamaDevalayam.Activity.WelcomeActivity"
+            android:name=".Activity.WelcomeActivity"
             android:exported="true"
             android:theme="@style/inter_splash_screen">
             <intent-filter>
@@ -193,26 +209,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.MamaDevalayam.Activity.UnitedStateDetailsActivity"
+            android:name=".Activity.UnitedStateDetailsActivity"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
         <activity
-            android:name="com.MamaDevalayam.Activity.SettingActivity"
+            android:name=".Activity.SettingActivity"
             android:theme="@style/AppTheme1" />
-        <activity android:name="com.MamaDevalayam.Activity.NotificationActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.FollowingActivity" />
-        <activity android:name="com.MamaDevalayam.Activity.TypesActivity" />
+        <activity android:name=".Activity.NotificationActivity" />
+        <activity android:name=".Activity.FollowingActivity" />
+        <activity android:name=".Activity.TypesActivity" />
         <activity
-            android:name="com.MamaDevalayam.Activity.NameSearchActivity"
+            android:name=".Activity.NameSearchActivity"
             android:theme="@style/ChatBackground"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
         <activity
-            android:name="com.MamaDevalayam.Activity.UnitedStateActivity"
+            android:name=".Activity.UnitedStateActivity"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
-            android:name="com.MamaDevalayam.CommonActivity.CommonBackActivity"
+            android:name=".CommonActivity.CommonBackActivity"
             android:theme="@style/ChatBackground"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
-        <activity android:name="com.MamaDevalayam.Activity.RegisterActivity" />
+        <activity android:name=".Activity.RegisterActivity" />
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
@@ -230,11 +246,11 @@
             </intent-filter>
         </activity> <!-- facebooklogin -->
         <activity
-            android:name="com.MamaDevalayam.Activity.LoginActivity"
+            android:name=".Activity.LoginActivity"
             android:theme="@style/ChatBackground"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
         <activity
-            android:name="com.MamaDevalayam.Activity.SplashScreenActivity"
+            android:name=".Activity.SplashScreenActivity"
             android:exported="true"
             android:theme="@style/inter_splash_screen">
 
@@ -245,15 +261,12 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name="com.MamaDevalayam.Activity.MyspaceActivity" />
-        <activity android:name="com.MamaDevalayam.CommonActivity.CommonMenuActivity" />
+        <activity android:name=".Activity.MyspaceActivity" />
+        <activity android:name=".CommonActivity.CommonMenuActivity" />
         <activity
-            android:name="com.MamaDevalayam.Activity.BrowseActivity"
+            android:name=".Activity.BrowseActivity"
             android:windowSoftInputMode="adjustResize" />
 
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDfOZf_bITlewuOVvnVICvjQ70VdFHmR2Q" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" /> <!-- <meta-data -->
@@ -267,7 +280,7 @@
             android:value="@string/facebook_client_token" />
 
         <receiver
-            android:name="com.MamaDevalayam.Interwork.ConnectivityReceiver"
+            android:name=".Interwork.ConnectivityReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>

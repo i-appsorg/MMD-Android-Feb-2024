@@ -83,6 +83,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -92,7 +93,8 @@ public class UpdateActivity extends AppCompatActivity {
     private EditText update_name_et, update_email_et, update_mobile_et, business_reg_name_et;
     TextInputLayout name_input_layout_update;
     private TextView skip_btn;
-    private ImageView back_icon_img, myprofile_edit_img, ic_edit_icon;
+    private ImageView back_icon_img, ic_edit_icon;
+    private CircleImageView myprofile_edit_img;
     IDonateSharedPreference iDonateSharedPreference;
     private static final int REQUEST_READ_PERMISSION = 786;
     private int GALLERY = 1, CAMERA = 2;
@@ -223,7 +225,7 @@ public class UpdateActivity extends AppCompatActivity {
         radio_btn_male = (RadioButton) findViewById(R.id.radio_btn_male);
         radio_btn_female = (RadioButton) findViewById(R.id.radio_btn_female);
         radio_btn_orthers = (RadioButton) findViewById(R.id.radio_btn_orthers);
-        myprofile_edit_img = (ImageView) findViewById(R.id.myprofile_edit_img);
+        myprofile_edit_img = (CircleImageView) findViewById(R.id.myprofile_edit_img);
         name_input_layout_update = (TextInputLayout) findViewById(R.id.name_input_layout_update);
         skip_btn = (TextView) findViewById(R.id.skip_btn);
         update_btn = (Button) findViewById(R.id.update_btn);
@@ -351,8 +353,8 @@ public class UpdateActivity extends AppCompatActivity {
             }
             myprofile_edit_img.setVisibility(View.VISIBLE);
             back_icon_img.setVisibility(View.VISIBLE);
-//            ic_edit_icon.setVisibility(View.VISIBLE);
-            ic_edit_icon.setVisibility(View.GONE);
+            ic_edit_icon.setVisibility(View.VISIBLE);
+//            ic_edit_icon.setVisibility(View.GONE);
         } else if (editprofile.equalsIgnoreCase("2")) {
             skip_btn.setVisibility(View.GONE);
             String image = iDonateSharedPreference.getsocialProfileimg(getApplicationContext());
@@ -368,8 +370,8 @@ public class UpdateActivity extends AppCompatActivity {
             }
             myprofile_edit_img.setVisibility(View.VISIBLE);
             back_icon_img.setVisibility(View.GONE);
-//            ic_edit_icon.setVisibility(View.VISIBLE);
-            ic_edit_icon.setVisibility(View.GONE);
+            ic_edit_icon.setVisibility(View.VISIBLE);
+//            ic_edit_icon.setVisibility(View.GONE);
 
         } else {
             skip_btn.setVisibility(View.GONE);

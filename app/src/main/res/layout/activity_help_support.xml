@@ -15,7 +15,7 @@
         android:text="@string/help_support"
         android:textAllCaps="true"
         android:textColor="@color/tv_login"
-        android:textSize="@dimen/_20sdp"
+        android:textSize="@dimen/_14sdp"
         android:textStyle="bold"
         tools:ignore="TextSizeCheck" />
 

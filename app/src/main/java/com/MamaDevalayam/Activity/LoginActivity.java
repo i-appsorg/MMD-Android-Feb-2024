@@ -34,6 +34,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.app.ActivityCompat;
 
+import com.MamaDevalayam.CommonActivity.CommonBackActivity;
 import com.MamaDevalayam.Commonmethod.ConstantFunctions;
 import com.MamaDevalayam.RetrofitAPI.ApiClient;
 import com.MamaDevalayam.RetrofitAPI.ApiInterface;
@@ -177,8 +178,8 @@ public class LoginActivity extends AppCompatActivity implements
                 MessageDigest md = MessageDigest.getInstance("SHA");
                 md.update(signature.toByteArray());
                 Log.e(TAG, "KeyHash: " + Base64.encodeToString(md.digest(), Base64.DEFAULT));
-                Log.d("KeyHash:",
-                        Base64.encodeToString(md.digest(), Base64.DEFAULT));
+//                Log.d("KeyHash:",
+//                        Base64.encodeToString(md.digest(), Base64.DEFAULT));
             }
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
@@ -1236,7 +1237,12 @@ public class LoginActivity extends AppCompatActivity implements
     @Override
     public void onBackPressed() {
         iDonateSharedPreference.setlogintype(getApplicationContext(), "non");
-        //  ChangeActivity.changeActivity(LoginActivity.this, BrowseActivity.class);
+        Intent i = new Intent(LoginActivity.this, BrowseActivity.class);
+//        i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        i.putExtra("IsBack", true);
+        i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         finish();
 
     }

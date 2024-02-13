@@ -36,6 +36,7 @@ public class ApiClient {
     public static Retrofit getClient() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
+//                    .baseUrl("https://devmmd.i-apps.org/MMD_mob/webservice/")
                     .baseUrl(Server_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(httpClient.build())

@@ -32,9 +32,11 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.MamaDevalayam.CommonActivity.CommonBackActivity;
+import com.MamaDevalayam.CommonActivity.CommonMenuActivity;
 import com.MamaDevalayam.Model.ChangeActivity;
 import com.MamaDevalayam.RetrofitAPI.ApiClient;
 import com.MamaDevalayam.RetrofitAPI.ApiInterface;
@@ -54,7 +56,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class UnitedStateDetailsActivity extends CommonBackActivity {
+public class UnitedStateDetailsActivity extends AppCompatActivity {
     private final String TAG = "TypesActivity";
     TextView name_tv, location_tv, like_count_tv, unlike_count_tv, follow_count_tv, unfollow_count_tv, description_tv, TvAbout, TvPrograms, TvPuja, TvSponsorship;
     ImageView back_icon_login_img, logo_img, IVLocationMapAndNearbyPlaces, IVTempleMahimaItihasa, IvTempleArchitecture, IvContact;
@@ -71,12 +73,12 @@ public class UnitedStateDetailsActivity extends CommonBackActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_united_state_details);
+        setContentView(R.layout.activity_united_state_details);
 
-        setView(R.layout.activity_united_state_details, TAG);
+//        setView(R.layout.activity_united_state_details, TAG);
 
         toolbar = findViewById(R.id.commonMenuActivityToolbar);
-        toolbar.setVisibility(View.GONE);
+//        toolbar.setVisibility(View.GONE);
 
         getWindow().setBackgroundDrawableResource(R.drawable.dashbord_background);
         getWindow().setSoftInputMode(
@@ -170,6 +172,27 @@ public class UnitedStateDetailsActivity extends CommonBackActivity {
     @SuppressLint("SetTextI18n")
     private void listener() {
         back_icon_login_img.setOnClickListener(v -> onBackPressed());
+        findViewById(R.id.linear_browse).setOnClickListener(v -> {
+
+            ChangeActivity.changeActivity(this, BrowseActivity.class);
+            ((TextView) findViewById(R.id.browse_tv)).setTextColor(getResources().getColor(R.color.quantum_white_text));
+            // browse_img.setImageTintMode();
+            ((ImageView) findViewById(R.id.browse_img)).setColorFilter(getApplicationContext().getResources().getColor(R.color.quantum_white_text));
+            finish();
+        });
+        findViewById(R.id.linear_myspace).setOnClickListener(v -> {
+
+            if (session.isLoggedIn()) {
+                ChangeActivity.changeActivity(this, MyspaceActivity.class);
+                ((TextView) findViewById(R.id.my_space_tv)).setTextColor(getResources().getColor(R.color.quantum_white_text));
+                ((ImageView) findViewById(R.id.my_space_img)).setColorFilter(getApplicationContext().getResources().getColor(R.color.quantum_white_text));
+                finish();
+            } else {
+                LoginDialog();
+                // ChangeActivity.changeActivity(CommonMenuActivity.this, LoginActivity.class);
+                //finish();
+            }
+        });
 
         like_linear_layout.setOnClickListener(v -> {
             //todo login
@@ -234,7 +257,14 @@ public class UnitedStateDetailsActivity extends CommonBackActivity {
 
         donate_linear_layout.setOnClickListener(v -> {
             if (session.isLoggedIn()) {
-                paymentdailogue();
+//                paymentdailogue();
+                Intent intent = new Intent(UnitedStateDetailsActivity.this, MakeTypeScreenActivity.class);
+                intent.putExtra("tvTopType", "HUNDI");
+                intent.putExtra("tvWebsiteId", "www.Vishnavodevi.org");
+                intent.putExtra("tvEmailId", "helpdesk@Vishnavodevi.org");
+                intent.putExtra("tvContactId", "+91-8772277777");
+                intent.putExtra("isHome", true);
+                startActivity(intent);
             } else {
                 LoginDialog();
             }
@@ -246,6 +276,7 @@ public class UnitedStateDetailsActivity extends CommonBackActivity {
             intent.putExtra("tvWebsiteId", "www.svst.org");
             intent.putExtra("tvEmailId", "helpdesk@svst.org");
             intent.putExtra("tvContactId", "+91-8772266666");
+            intent.putExtra("isHome", false);
             startActivity(intent);
         });
 
@@ -255,6 +286,7 @@ public class UnitedStateDetailsActivity extends CommonBackActivity {
             intent.putExtra("tvWebsiteId", "www.svst.org");
             intent.putExtra("tvEmailId", "helpdesk@svst.org");
             intent.putExtra("tvContactId", "+91-8772266666");
+            intent.putExtra("isHome", false);
             startActivity(intent);
         });
 
@@ -264,11 +296,15 @@ public class UnitedStateDetailsActivity extends CommonBackActivity {
             intent.putExtra("tvWebsiteId", "www.svst.org");
             intent.putExtra("tvEmailId", "helpdesk@svst.org");
             intent.putExtra("tvContactId", "+91-8772266666");
+            intent.putExtra("isHome", false);
             startActivity(intent);
         });
 
         IVLocationMapAndNearbyPlaces.setOnClickListener(view -> {
-//            Intent intent = new Intent(UnitedStateDetailsActivity.this, MakeTypeScreenActivity.class);
+//            Intent intent = new Intent(UnitedStateDetailsActivity.this, MapsActivity.class);
+//            intent.putExtra("Address", name_tv.getText().toString() + " " + location_tv.getText().toString());
+//            intent.putExtra("latitude", getIntent().getDoubleExtra("latitude",0));
+//            intent.putExtra("longitude", getIntent().getDoubleExtra("longitude",0));
 //            startActivity(intent);
         });
 

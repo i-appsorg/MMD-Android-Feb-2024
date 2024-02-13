@@ -236,7 +236,7 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
                                 ChangeActivity.changeActivity(CommonMenuActivity.this, SettingActivity.class);
                                 finish();
                                 break;
-                            case "about mama devalayam’s":
+                            case "about mama devalayam":
                                 Log.e("settings", "settings");
                                 ChangeActivity.changeActivity(CommonMenuActivity.this, AboutNewActivity.class);
                                 finish();
@@ -343,8 +343,9 @@ public class CommonMenuActivity extends AppCompatActivity implements Connectivit
                 } else drawerLayout.closeDrawer(GravityCompat.START);
             }
         });
-
-
+    }
+    public void showDrawer(){
+        menuImageView.performClick();
     }
 
     private void LoginDialog() {

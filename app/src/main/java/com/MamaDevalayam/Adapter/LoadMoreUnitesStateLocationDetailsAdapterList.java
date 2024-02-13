@@ -366,6 +366,8 @@ public class LoadMoreUnitesStateLocationDetailsAdapterList extends RecyclerView.
                 bundle.putString("city", charitylist1.get(position).getCity());
                 bundle.putString("likecount", charitylist1.get(position).getLike_count());
                 bundle.putString("description", "");
+                bundle.putString("latitude",  charitylist1.get(position).getLatitude());
+                bundle.putString("longitude", charitylist1.get(position).getLongitude());
                 bundle.putString("id", charitylist1.get(position).getId());
                 bundle.putString("followed", charitylist1.get(position).getFollowed());
                 bundle.putString("liked", charitylist1.get(position).getLiked());
@@ -551,6 +553,7 @@ public class LoadMoreUnitesStateLocationDetailsAdapterList extends RecyclerView.
                     intent.putExtra("tvWebsiteId", mContext.getString(R.string.wesite_id));
                     intent.putExtra("tvEmailId",  mContext.getString(R.string.emailId));
                     intent.putExtra("tvContactId",  mContext.getString(R.string.contact_id));
+                    intent.putExtra("isHome", false);
                     mContext.startActivity(intent);
                 } else {
                     LoginDialog();

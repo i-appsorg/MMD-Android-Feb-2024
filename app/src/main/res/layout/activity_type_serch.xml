@@ -53,7 +53,7 @@
                         android:text="Search By Type"
                         android:textAllCaps="true"
                         android:textColor="@color/tv_login"
-                        android:textSize="@dimen/_20sdp"
+                        android:textSize="@dimen/_14sdp"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -78,7 +78,7 @@
                         <EditText
                             android:id="@+id/search_us_et"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center_vertical"
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:layout_weight="1"
@@ -188,7 +188,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:layout_weight="2"
+                            android:layout_weight="2.2"
                             android:gravity="center_vertical"
                             android:orientation="horizontal">
 
@@ -214,7 +214,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:layout_weight="2.5"
+                            android:layout_weight="2.2"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
                             android:visibility="gone">
@@ -340,6 +340,7 @@
                             android:layout_gravity="start"
                             android:padding="@dimen/_10sdp"
                             android:src="@drawable/back_icon"
+                            android:layout_marginStart="@dimen/_10sdp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -380,6 +381,7 @@
                             android:layout_height="@dimen/_30sdp"
                             android:layout_gravity="center_vertical"
                             android:padding="8dp"
+                            android:layout_marginStart="@dimen/_10sdp"
                             android:src="@drawable/back_icon" />
 
                         <TextView
@@ -466,7 +468,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="2.5"
+                android:layout_weight="2.2"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:visibility="gone">
