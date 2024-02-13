@@ -102,33 +102,39 @@ public class BrowseActivity extends CommonMenuActivity {
         call.enqueue(new Callback<JsonObject>() {
             @Override
             public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
-                Log.e(TAG, "123" + response);
+                Log.e(TAG, "123 CountryAPI" + response);
                 try {
                     JSONObject jsonObject = new JSONObject(String.valueOf(response.body()));
-                    Log.e(TAG, "" + jsonObject.toString());
+                    Log.e(TAG, "CountryAPI jsonObject = " + jsonObject.toString());
                     String message = jsonObject.getString("message");
-                    Log.e(TAG, "" + message.toString());
+                    Log.e(TAG, "CountryAPI message = " + message.toString());
                     if (jsonObject.getString("status").equals("1")) {
                         String data = jsonObject.getString("data");
                         jsonArray = new JSONArray(data);
-                        Log.e(TAG, "" + jsonArray.toString());
+                        Log.e(TAG, "CountryAPI jsonArray = " + jsonArray.toString());
+                        Log.e(TAG, "CountryAPI jsonArray length = " + jsonArray.length());
                         HashMap<String, String> map = new HashMap<>();
 
                         for (int i = 0; i < jsonArray.length(); i++) {
 
                             JSONObject countryobject = jsonArray.getJSONObject(i);
-                            Log.e(TAG, "" + countryobject.toString());
+                            Log.e(TAG, "CountryAPI countryobject = " + countryobject.toString());
                             CurrencyBean ctb = new CurrencyBean();
                             country.add(countryobject.getString("name"));
-                            ctb.setCurrency_id(countryobject.getString("sortname"));
+                            //TODO 13 FEB 2024
+//                            ctb.setCurrency_id(countryobject.getString("sortname"));
+                            ctb.setCurrency_id(countryobject.getString("iso3"));
                             ctb.setCurrency_name(countryobject.getString("name"));
-                            country_name_id.add(countryobject.getString("sortname"));
+//                            country_name_id.add(countryobject.getString("sortname"));
+                            country_name_id.add(countryobject.getString("iso3"));
                             country_name_list.add(ctb);
                             country1.add(ctb);
                             if (countryobject.getString("name").equalsIgnoreCase("India")) {
 //                            if (countryobject.getString("name").equalsIgnoreCase("United States")) {
                                 country_spinner.setDefaultText(countryobject.getString("name"));
-                                country_symbol = countryobject.getString("sortname");
+                                //TODO 13 FEB 2024
+//                                country_symbol = countryobject.getString("sortname");
+                                country_symbol = countryobject.getString("iso3");
                                 country_spinner.setVisibility(View.VISIBLE);
                                 CountryArrow.setVisibility(View.VISIBLE);
                                 ProgressCountry.setVisibility(View.GONE);
@@ -268,7 +274,9 @@ public class BrowseActivity extends CommonMenuActivity {
                     try {
                         countryobject = jsonArray.getJSONObject(i1);
                         if (countryobject.getString("name").equals(value)) {
-                            country_symbol = countryobject.getString("sortname");
+                            //TODO 13 FEB 2024
+//                            country_symbol = countryobject.getString("sortname");
+                            country_symbol = countryobject.getString("iso3");
                             Log.e(TAG, country_symbol);
                         }
                     } catch (JSONException e) {

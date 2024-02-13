@@ -110,7 +110,7 @@ public class UnitedStateActivity extends CommonBackActivity {
         setView(R.layout.activity_united_state_new, TAG);
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-        setTitle("United State");
+        setTitle("India");
         toolbar = findViewById(R.id.commonMenuActivityToolbar);
         toolbar.setVisibility(View.GONE);
         init();
@@ -642,6 +642,7 @@ public class UnitedStateActivity extends CommonBackActivity {
         call.enqueue(new Callback<JsonObject>() {
             @Override
             public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                Log.e(TAG, "123 CharitylistAPI" + response);
                 shimmer_view_container.stopShimmer();
                 shimmer_view_container.setVisibility(View.GONE);
                 no_data_linear.setVisibility(View.GONE);
@@ -705,6 +706,7 @@ public class UnitedStateActivity extends CommonBackActivity {
                                 map.put("country", object.getString("country"));
                                 charitylist1.add(charitylistm);
                                 Log.e("charity12", "charity");
+                                Log.e(TAG, "onResponse:charitylist1---> "+charitylist1);
                             }
 
                             if (charitylist1.size() != 0) {
@@ -746,6 +748,8 @@ public class UnitedStateActivity extends CommonBackActivity {
                 no_data_linear.setVisibility(View.VISIBLE);
                 united_state_recyclerview.setVisibility(View.GONE);
                 Log.e(TAG, t.toString());
+                Log.e(TAG, "onFailure:---> "+t.toString() );
+                Log.e(TAG, "onFailure:---> " );
             }
         });
     }

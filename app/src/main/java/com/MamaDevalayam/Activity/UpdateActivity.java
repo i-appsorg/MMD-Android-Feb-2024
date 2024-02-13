@@ -151,6 +151,8 @@ public class UpdateActivity extends AppCompatActivity {
         listener();
     }
 
+
+    //TODO 13 FEB 2024
     private void CountryAPI(final String country) {
 
         this.country2.clear();
@@ -182,19 +184,27 @@ public class UpdateActivity extends AppCompatActivity {
                             JSONObject countryobject = jsonArray.getJSONObject(i);
                             CurrencyBean ctb = new CurrencyBean();
                             UpdateActivity.this.country2.add(countryobject.getString("name"));
-                            ctb.setCurrency_id(countryobject.getString("sortname"));
+                            //TODO 13 FEB 2024
+//                            ctb.setCurrency_id(countryobject.getString("sortname"));
+                            ctb.setCurrency_id(countryobject.getString("iso3"));
                             ctb.setCurrency_name(countryobject.getString("name"));
-                            country_name_id.add(countryobject.getString("sortname"));
+//                            country_name_id.add(countryobject.getString("sortname"));
+                            country_name_id.add(countryobject.getString("iso3"));
                             country_name_list.add(ctb);
                             country1.add(ctb);
-                            if (countryobject.getString("sortname").equalsIgnoreCase(country)) {
+//                            if (countryobject.getString("sortname").equalsIgnoreCase(country)) {
+                            if (countryobject.getString("iso3").equalsIgnoreCase(country)) {
                                 index = 1;
                                 country_spinner.setDefaultText(countryobject.getString("name"));
-                                country_symbol = countryobject.getString("sortname");
-                            } else if (countryobject.getString("name").equalsIgnoreCase("United States")) {
+//                                country_symbol = countryobject.getString("sortname");
+                                country_symbol = countryobject.getString("iso3");
+                                //TODO 13 FEB 2024
+//                            } else if (countryobject.getString("name").equalsIgnoreCase("United States")) {
+                            } else if (countryobject.getString("name").equalsIgnoreCase("India")) {
                                 if (index == 0) {
                                     country_spinner.setDefaultText(countryobject.getString("name"));
-                                    country_symbol = countryobject.getString("sortname");
+//                                    country_symbol = countryobject.getString("sortname");
+                                    country_symbol = countryobject.getString("iso3");
                                 }
                             }
                         }
@@ -521,7 +531,9 @@ public class UpdateActivity extends AppCompatActivity {
                     try {
                         countryobject = jsonArray.getJSONObject(i1);
                         if (countryobject.getString("name").equals(value)) {
-                            country = countryobject.getString("sortname");
+                            //TODO 13 FEB 2024
+//                            country = countryobject.getString("sortname");
+                            country = countryobject.getString("iso3");
                             Log.e(TAG, country);
                         }
                     } catch (JSONException e) {

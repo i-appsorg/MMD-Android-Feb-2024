@@ -180,7 +180,10 @@ public class WelcomeActivity extends AppCompatActivity {
                                     for (int j = 0; j < jsonArrayPos.length(); j++) {
                                         if (jsonArrayPos.get(j).toString().contains("Server_URL")) {
                                             Log.e(TAG, " Server_URL - " + jsonArrayPos.get(j + 1).toString());
-                                            ApiClient.Server_URL = jsonArrayPos.get(j + 1).toString() + "/";
+//                                            ApiClient.Server_URL = jsonArrayPos.get(j + 1).toString() + "/";
+
+                                            //TODO 13 FEB 2024
+                                            ApiClient.Server_URL = "https://devmmd.i-apps.org/MMD_mob/webservice/";
                                         }
                                         if (jsonArrayPos.get(j).toString().contains("TC_URL")) {
                                             Log.e(TAG, " TC_URL - " + jsonArrayPos.get(j + 1).toString());

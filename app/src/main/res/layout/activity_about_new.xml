@@ -125,12 +125,15 @@
             android:textColor="@color/title_color" />
 
     </LinearLayout>
+
+<!--    TODO 13 FEB 2024-->
     <Button
         android:id="@+id/annual_back_button"
         android:layout_width="@dimen/_100sdp"
         android:layout_height="@dimen/_30sdp"
         android:layout_marginBottom="@dimen/_18sdp"
         android:layout_weight="1"
+        android:visibility="gone"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@drawable/reset_button_border"

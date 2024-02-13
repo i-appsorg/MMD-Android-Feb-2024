@@ -198,15 +198,21 @@ public class RegisterActivity extends AppCompatActivity implements
                             Log.e(TAG, "" + countryobject.toString());
                             CurrencyBean ctb = new CurrencyBean();
                             country.add(countryobject.getString("name"));
-                            ctb.setCurrency_id(countryobject.getString("sortname"));
+                            //TODO 13 FEB 2024
+//                            ctb.setCurrency_id(countryobject.getString("sortname"));
+                            ctb.setCurrency_id(countryobject.getString("iso3"));
                             ctb.setCurrency_name(countryobject.getString("name"));
-                            country_name_id.add(countryobject.getString("sortname"));
+//                            country_name_id.add(countryobject.getString("sortname"));
+                            country_name_id.add(countryobject.getString("iso3"));
                             country_name_list.add(ctb);
                             country1.add(ctb);
-                            if (countryobject.getString("name").equalsIgnoreCase("United States")) {
+                            //TODO 13 FEB 2024
+//                            if (countryobject.getString("name").equalsIgnoreCase("United States")) {
+                            if (countryobject.getString("name").equalsIgnoreCase("India")) {
 
                                 country_spinner.setDefaultText(countryobject.getString("name"));
-                                country_symbol = countryobject.getString("sortname");
+//                                country_symbol = countryobject.getString("sortname");
+                                country_symbol = countryobject.getString("iso3");
                             }
                         }
                         country_spinner.setData(country);
@@ -746,7 +752,9 @@ public class RegisterActivity extends AppCompatActivity implements
                     try {
                         countryobject = jsonArray.getJSONObject(i1);
                         if (countryobject.getString("name").equals(value)) {
-                            country_symbol = countryobject.getString("sortname");
+                            //TODO 13 FEB 2024
+//                            country_symbol = countryobject.getString("sortname");
+                            country_symbol = countryobject.getString("iso3");
                             Log.e(TAG, country_symbol);
                         }
                     } catch (JSONException e) {
