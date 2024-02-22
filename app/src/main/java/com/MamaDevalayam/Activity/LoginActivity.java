@@ -1,10 +1,10 @@
 package com.MamaDevalayam.Activity;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -34,10 +34,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.app.ActivityCompat;
 
-import com.MamaDevalayam.CommonActivity.CommonBackActivity;
 import com.MamaDevalayam.Commonmethod.ConstantFunctions;
+import com.MamaDevalayam.Model.ChangeActivity;
+import com.MamaDevalayam.R;
 import com.MamaDevalayam.RetrofitAPI.ApiClient;
 import com.MamaDevalayam.RetrofitAPI.ApiInterface;
+import com.MamaDevalayam.Session.IDonateSharedPreference;
+import com.MamaDevalayam.Session.SessionManager;
 import com.MamaDevalayam.Validation.Validation;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
@@ -45,7 +48,6 @@ import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
-import com.facebook.GraphResponse;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
@@ -55,18 +57,12 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.JsonObject;
-import com.MamaDevalayam.Model.ChangeActivity;
-import com.MamaDevalayam.R;
-import com.MamaDevalayam.Session.IDonateSharedPreference;
-import com.MamaDevalayam.Session.SessionManager;
 import com.twitter.sdk.android.core.Callback;
 import com.twitter.sdk.android.core.Result;
 import com.twitter.sdk.android.core.Twitter;
@@ -87,7 +83,6 @@ import java.security.NoSuchAlgorithmException;
 
 import retrofit2.Call;
 import retrofit2.Response;
-
 
 public class LoginActivity extends AppCompatActivity implements
         GoogleApiClient.OnConnectionFailedListener {
@@ -113,7 +108,7 @@ public class LoginActivity extends AppCompatActivity implements
     private TwitterAuthClient client;
     String device_token;
     int user_id;
-    private int STORAGE_PERMISSION_CODE = 1;
+    private final int STORAGE_PERMISSION_CODE = 1;
     /*private final String host = "api.linkedin.com";
     private final String topCardUrl = "https://" + host + "/v1/people/~:(email-address,formatted-name,phone-numbers,public-profile-url,picture-url,picture-urls::(original))";
     */
@@ -168,7 +163,6 @@ public class LoginActivity extends AppCompatActivity implements
 
     }
 
-
     private void calculateHashKey(String yourPackageName) {
         try {
             PackageInfo info = getPackageManager().getPackageInfo(
@@ -188,9 +182,6 @@ public class LoginActivity extends AppCompatActivity implements
         }
     }
 
-
-
-
     private void requestStoragePermission() {
         if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                 Manifest.permission.READ_EXTERNAL_STORAGE)) {
@@ -198,18 +189,10 @@ public class LoginActivity extends AppCompatActivity implements
             builder.setTitle("Permission Alert");
             builder.setMessage("Camera permission is required to in order to provide photo capture features in profile update and donation pages.");
             builder.setPositiveButton("OK",
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            ActivityCompat.requestPermissions(LoginActivity.this,
-                                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
-                        }
-                    });
-            builder.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                    Toast.makeText(getApplicationContext(),
-                            android.R.string.no, Toast.LENGTH_SHORT).show();
-                }
-            });
+                    (dialog, which) -> ActivityCompat.requestPermissions(LoginActivity.this,
+                            new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE));
+            builder.setNegativeButton(android.R.string.no, (dialog, which) -> Toast.makeText(getApplicationContext(),
+                    android.R.string.no, Toast.LENGTH_SHORT).show());
             builder.setCancelable(false);
             builder.show();
 
@@ -235,18 +218,10 @@ public class LoginActivity extends AppCompatActivity implements
             builder.setTitle("Permission Alert");
             builder.setMessage("Camera permission is required to in order to provide photo capture features in profile update and donation pages.");
             builder.setPositiveButton("OK",
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            ActivityCompat.requestPermissions(LoginActivity.this,
-                                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
-                        }
-                    });
-            builder.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                    Toast.makeText(getApplicationContext(),
-                            android.R.string.no, Toast.LENGTH_SHORT).show();
-                }
-            });
+                    (dialog, which) -> ActivityCompat.requestPermissions(LoginActivity.this,
+                            new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE));
+            builder.setNegativeButton(android.R.string.no, (dialog, which) -> Toast.makeText(getApplicationContext(),
+                    android.R.string.no, Toast.LENGTH_SHORT).show());
             builder.setCancelable(false);
             builder.show();
         }
@@ -342,13 +317,13 @@ public class LoginActivity extends AppCompatActivity implements
                 // App code
             }
         });*/
+
         facebook_login_btn.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
 
                 getUserProfile(AccessToken.getCurrentAccessToken());
                 Log.e("click12", "click");
-
                 // App code
             }
 
@@ -359,7 +334,7 @@ public class LoginActivity extends AppCompatActivity implements
             }
 
             @Override
-            public void onError(FacebookException exception) {
+            public void onError(@NonNull FacebookException exception) {
                 Log.e("click", "click---------" + exception);
                 // App code
             }
@@ -392,6 +367,7 @@ public class LoginActivity extends AppCompatActivity implements
 
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private void listener() {
 
         login_username.addTextChangedListener(new TextWatcher() {
@@ -430,21 +406,19 @@ public class LoginActivity extends AppCompatActivity implements
             }
         });
 
-        login_password.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (login_username.getText().toString().trim().length() <= 0) {
-                    email_layout_input.setError("Required password");
+        login_password.setOnTouchListener((v, event) -> {
+            if (login_username.getText().toString().trim().length() <= 0) {
+                email_layout_input.setError("Required password");
+            } else {
+                if (login_username.getText().toString().trim().matches(Validation.emailPattern)) {
+                    email_layout_input.setError("");
                 } else {
-                    if (login_username.getText().toString().trim().matches(Validation.emailPattern)) {
-                        email_layout_input.setError("");
-                    } else {
-                        email_layout_input.setError("Required email");
-                    }
+                    email_layout_input.setError("Required email");
                 }
-                return false;
             }
+            return false;
         });
+
         login_password.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -484,101 +458,76 @@ public class LoginActivity extends AppCompatActivity implements
             }
         });
 
-        login_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!isEmpty(login_username) && !isEmpty(login_password)) {
-                    if (login_username.getText().toString().trim().matches(Validation.emailPattern)) {
-                        if (login_password.getText().toString().trim().matches(Validation.PASSWORD_PATTERN) && login_password.getText().toString().trim().length() >= 8) {
-                            if (isOnline()) {
+        login_btn.setOnClickListener(v -> {
+            if (!isEmpty(login_username) && !isEmpty(login_password)) {
+                if (login_username.getText().toString().trim().matches(Validation.emailPattern)) {
+                    if (login_password.getText().toString().trim().matches(Validation.PASSWORD_PATTERN) && login_password.getText().toString().trim().length() >= 8) {
+                        if (isOnline()) {
 
-                                LoginAPI();
+                            LoginAPI();
 
-                            } else {
-                                //Toast.makeText(LoginActivity.this, "Please check internet connection", Toast.LENGTH_SHORT).show();
-                                // ConstantFunctions.showSnakBar("Please check internet connection", v);
-                                ConstantFunctions.showSnackbar(login_username, "Please check internet connection", LoginActivity.this);
-                            }
                         } else {
-                            Toast.makeText(LoginActivity.this, "Enter correct password", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(LoginActivity.this, "Please check internet connection", Toast.LENGTH_SHORT).show();
+                            // ConstantFunctions.showSnakBar("Please check internet connection", v);
+                            ConstantFunctions.showSnackbar(login_username, "Please check internet connection", LoginActivity.this);
                         }
-
-
                     } else {
-                        Toast.makeText(LoginActivity.this, "Enter correct mail", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, "Enter correct password", Toast.LENGTH_SHORT).show();
                     }
 
 
                 } else {
-                    Toast.makeText(LoginActivity.this, "Enter all fields", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Enter correct mail", Toast.LENGTH_SHORT).show();
                 }
 
-            }
-        });
-        register_btn_tv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ChangeActivity.changeActivity(LoginActivity.this, RegisterActivity.class);
-                finish();
-            }
-        });
-        back_icon_login_img.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
-        forgot_btn_tv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ChangeActivity.changeActivity(LoginActivity.this, ForgotActivity.class);
-            }
-        });
-        google_sign_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (isOnline()) {
 
-                    signIn();
-
-                } else {
-                    //Toast.makeText(LoginActivity.this, "Please check internet connection", Toast.LENGTH_SHORT).show();
-                    ConstantFunctions.showSnakBar("Please check internet connection", v);
-                }
-
+            } else {
+                Toast.makeText(LoginActivity.this, "Enter all fields", Toast.LENGTH_SHORT).show();
             }
+
+        });
+        register_btn_tv.setOnClickListener(v -> {
+            ChangeActivity.changeActivity(LoginActivity.this, RegisterActivity.class);
+            finish();
+        });
+        back_icon_login_img.setOnClickListener(v -> onBackPressed());
+        forgot_btn_tv.setOnClickListener(v -> ChangeActivity.changeActivity(LoginActivity.this, ForgotActivity.class));
+        google_sign_btn.setOnClickListener(v -> {
+            if (isOnline()) {
+
+                signIn();
+
+            } else {
+                //Toast.makeText(LoginActivity.this, "Please check internet connection", Toast.LENGTH_SHORT).show();
+                ConstantFunctions.showSnakBar("Please check internet connection", v);
+            }
+
         });
 
-        facebook_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (isOnline()) {
+        facebook_login.setOnClickListener(v -> {
+            if (isOnline()) {
 
-                    facebook_login_btn.performClick();
-                    Log.e("click", "click243");
+                facebook_login_btn.performClick();
+                Log.e("click", "click243");
 
-                } else {
-                    //Toast.makeText(LoginActivity.this, "Please check internet connection", Toast.LENGTH_SHORT).show();
-                    ConstantFunctions.showSnakBar("Please check internet connection", v);
-                }
-
+            } else {
+                //Toast.makeText(LoginActivity.this, "Please check internet connection", Toast.LENGTH_SHORT).show();
+                ConstantFunctions.showSnakBar("Please check internet connection", v);
             }
+
         });
 
-        twitter_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        twitter_login.setOnClickListener(v -> {
 
-                if (isOnline()) {
-                    defaultLoginTwitter();
-                    Log.e("click-511", "click243");
+            if (isOnline()) {
+                defaultLoginTwitter();
+                Log.e("click-511", "click243");
 
-                } else {
-                    //Toast.makeText(LoginActivity.this, "Please check internet connection", Toast.LENGTH_SHORT).show();
-                    ConstantFunctions.showSnakBar("Please check internet connection", v);
-                }
-
+            } else {
+                //Toast.makeText(LoginActivity.this, "Please check internet connection", Toast.LENGTH_SHORT).show();
+                ConstantFunctions.showSnakBar("Please check internet connection", v);
             }
+
         });
 
 
@@ -811,7 +760,7 @@ public class LoginActivity extends AppCompatActivity implements
             Call<JsonObject> call = apiService.userLogin(jsonObject1);
             call.enqueue(new retrofit2.Callback<JsonObject>() {
                 @Override
-                public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                public void onResponse(@NonNull Call<JsonObject> call, @NonNull Response<JsonObject> response) {
                     Log.e(TAG, "123 LoginAPI = " + response);
 
                     progressDialog.dismiss();
@@ -847,7 +796,7 @@ public class LoginActivity extends AppCompatActivity implements
                 }
 
                 @Override
-                public void onFailure(Call<JsonObject> call, Throwable t) {
+                public void onFailure(@NonNull Call<JsonObject> call, @NonNull Throwable t) {
                     progressDialog.dismiss();
                     Log.e("error ", t.toString());
                 }
@@ -969,7 +918,7 @@ public class LoginActivity extends AppCompatActivity implements
             Call<JsonObject> call = apiService.device_update(jsonObject1);
             call.enqueue(new retrofit2.Callback<JsonObject>() {
                 @Override
-                public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                public void onResponse(@NonNull Call<JsonObject> call, @NonNull Response<JsonObject> response) {
                     Log.e(TAG, "" + response.body());
                     try {
                         JSONObject jsonObject = new JSONObject(String.valueOf(response.body()));
@@ -997,7 +946,7 @@ public class LoginActivity extends AppCompatActivity implements
                 }
 
                 @Override
-                public void onFailure(Call<JsonObject> call, Throwable t) {
+                public void onFailure(@NonNull Call<JsonObject> call, @NonNull Throwable t) {
                     Log.e(TAG, t.toString());
                 }
             });
@@ -1028,7 +977,7 @@ public class LoginActivity extends AppCompatActivity implements
             Call<JsonObject> call = apiService.socialmedialogin(jsonObject1);
             call.enqueue(new retrofit2.Callback<JsonObject>() {
                 @Override
-                public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                public void onResponse(@NonNull Call<JsonObject> call, @NonNull Response<JsonObject> response) {
                     Log.e(TAG, "123 gmailfacebookloginAPI = " + response);
 
                     progressDialog.dismiss();
@@ -1084,7 +1033,7 @@ public class LoginActivity extends AppCompatActivity implements
                 }
 
                 @Override
-                public void onFailure(Call<JsonObject> call, Throwable t) {
+                public void onFailure(@NonNull Call<JsonObject> call, @NonNull Throwable t) {
                     progressDialog.dismiss();
                     Log.e("999", "error" + t.toString());
                     if (iDonateSharedPreference.getsocialMedia(getApplicationContext()).equalsIgnoreCase("email")) {
@@ -1107,13 +1056,10 @@ public class LoginActivity extends AppCompatActivity implements
 
     private void signOut() {
         Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback(
-                new ResultCallback<Status>() {
-                    @Override
-                    public void onResult(Status status) {
-                        Log.e("logout", "logout");
-                        ChangeActivity.changeActivity(LoginActivity.this, LoginActivity.class);
-                        finish();
-                    }
+                status -> {
+                    Log.e("logout", "logout");
+                    ChangeActivity.changeActivity(LoginActivity.this, LoginActivity.class);
+                    finish();
                 });
     }
 
@@ -1167,35 +1113,32 @@ public class LoginActivity extends AppCompatActivity implements
     }*/
     private void getUserProfile(AccessToken currentAccessToken) {
         GraphRequest request = GraphRequest.newMeRequest(
-                currentAccessToken, new GraphRequest.GraphJSONObjectCallback() {
-                    @Override
-                    public void onCompleted(JSONObject object, GraphResponse response) {
-                        Log.e("objectresponse", "" + object.toString());
-                        try {
-                            String personName = object.getString("first_name");
-                            String last_name = object.getString("last_name");
-                            String email = "";
+                currentAccessToken, (object, response) -> {
+                    Log.e("objectresponse", "" + object.toString());
+                    try {
+                        String personName = object.getString("first_name");
+                        String last_name = object.getString("last_name");
+                        String email = "";
 //                            if(object.getString("email") != "") {
 //                                email = object.getString("email");
 //                            }
 
-                            String id = object.getString("id");
-                            String image_url = "https://graph.facebook.com/" + id + "/picture?type=normal";
-                            Log.e("image_url", "" + image_url);
-                            Log.e("first_name", "" + personName);
-                            String socialname = "facebook";
-                            gmailfacebookloginAPI(personName, email, socialname, image_url);
+                        String id = object.getString("id");
+                        String image_url = "https://graph.facebook.com/" + id + "/picture?type=normal";
+                        Log.e("image_url", "" + image_url);
+                        Log.e("first_name", "" + personName);
+                        String socialname = "facebook";
+                        gmailfacebookloginAPI(personName, email, socialname, image_url);
 
-                            //   txtUsername.setText("First Name: " + first_name + "\nLast Name: " + last_name);
-                            //  txtEmail.setText(email);
-                            // Picasso.with(MainActivity.this).load(image_url).into(imageView);
+                        //   txtUsername.setText("First Name: " + first_name + "\nLast Name: " + last_name);
+                        //  txtEmail.setText(email);
+                        // Picasso.with(MainActivity.this).load(image_url).into(imageView);
 
-                        } catch (JSONException e) {
-                            Toast.makeText(LoginActivity.this, "Please give email permission", Toast.LENGTH_SHORT).show();
-                            e.printStackTrace();
-                        }
-
+                    } catch (JSONException e) {
+                        Toast.makeText(LoginActivity.this, "Please give email permission", Toast.LENGTH_SHORT).show();
+                        e.printStackTrace();
                     }
+
                 });
 
         Bundle parameters = new Bundle();

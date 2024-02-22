@@ -27,8 +27,14 @@ import androidx.viewpager.widget.ViewPager;
 import com.MamaDevalayam.Interwork.MyApplication;
 import com.MamaDevalayam.Model.ChangeActivity;
 
+import com.MamaDevalayam.Model.DeityModel;
+import com.MamaDevalayam.Model.GetParmsDataModel;
+import com.MamaDevalayam.Model.GetParmsModel;
+import com.MamaDevalayam.Model.TempleListDataModel;
+import com.MamaDevalayam.Model.TempleListModel;
 import com.MamaDevalayam.R;
 import com.MamaDevalayam.RetrofitAPI.ApiClient;
+import com.MamaDevalayam.RetrofitAPI.ApiInterface;
 import com.MamaDevalayam.Session.PrefManager;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -39,6 +45,19 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import java.util.List;
+
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.OkHttpClient;
+import okhttp3.RequestBody;
+import retrofit2.Call;
+import retrofit2.Retrofit;
+//import retrofit2.converter.gson.GsonConverterFactory;
+
+import retrofit2.Callback;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class WelcomeActivity extends AppCompatActivity {
 
@@ -59,13 +78,70 @@ public class WelcomeActivity extends AppCompatActivity {
     JSONArray jsonArrayValues;
     String TAG = WelcomeActivity.class.getSimpleName();
 
+    static GetParmsModel getParmsModel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         Log.e("demochecking", "demochecking");
         init();
+        getParmsApi();
         listener();
+    }
+
+    private void getParmsApi() {
+
+        if (isOnline()) {
+            Log.e(TAG, "onClick:--->> ");
+
+            final ProgressDialog progressDialog = new ProgressDialog(WelcomeActivity.this);
+            progressDialog.setMessage("Loading...");
+            progressDialog.show();
+
+            MediaType mediaType = MediaType.parse("text/plain");
+            RequestBody requestBody = RequestBody.create(mediaType, "gparms");
+
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl("https://devmmdmob.i-apps.org/")
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+
+            ApiInterface apiInterface = retrofit.create(ApiInterface.class);
+
+            Call<GetParmsModel> call = apiInterface.getParms(requestBody);
+            call.enqueue(new Callback<GetParmsModel>() {
+                @Override
+                public void onResponse(Call<GetParmsModel> call, retrofit2.Response<GetParmsModel> response) {
+                    Log.e(TAG, "123 GetParmsAPI = " + response);
+
+                    progressDialog.dismiss();
+
+                    getParmsModel = response.body();
+                    List<GetParmsDataModel> getParmsDataModels = getParmsModel.getData();
+                    Log.e(TAG, "onResponse:getParmsDataModels --->> " + getParmsDataModels);
+
+                }
+
+                @Override
+                public void onFailure(Call<GetParmsModel> call, Throwable t) {
+                    progressDialog.dismiss();
+                    Log.e(TAG, t.toString());
+                    Log.e(TAG, "onFailure: " + t.getMessage());
+                    Log.e(TAG, "onFailure: " + t.toString());
+                    Log.e(TAG, "onFailure: error - " + t.getLocalizedMessage());
+                    Log.e(TAG, "onFailure: Failed with error msg:\t" + t.getMessage());
+                    Log.e(TAG, "onFailure: Error StackTrace: \t" + t.getStackTrace());
+
+                }
+
+            });
+
+        } else {
+            Toast.makeText(WelcomeActivity.this, "Please check Internet connection", Toast.LENGTH_SHORT).show();
+            Log.e(TAG, "onClick:No Internet");
+        }
+
     }
 
     private void init() {
@@ -78,12 +154,14 @@ public class WelcomeActivity extends AppCompatActivity {
         giving_tv.setTypeface(Typeface.createFromAsset(getAssets(), "Chunkfive.otf"));*/
         prefManager = new PrefManager(this);
 //        if (!prefManager.isFirstTimeLaunch()) {
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    btnNext.performClick();
-                }
-                }, 5000);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Log.e(TAG, "run:---> ");
+
+                btnNext.performClick();
+            }
+        }, 5000);
 //
 //        }else {
 //            if (Build.VERSION.SDK_INT >= 21) {
@@ -153,19 +231,37 @@ public class WelcomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (isOnline()) {
+                    Log.e(TAG, "onClick:--->> ");
+
                     final ProgressDialog progressDialog = new ProgressDialog(WelcomeActivity.this);
                     progressDialog.setMessage("Loading...");
                     progressDialog.show();
+
+                    List<GetParmsDataModel> getParmsDataModels = getParmsModel.getData();
+                    String google_sheet_id = getParmsDataModels.get(0).getMetaValue().toString();
+                    String google_sheet_key = getParmsDataModels.get(1).getMetaValue().toString();
+                    String google_sheet_tab = getParmsDataModels.get(2).getMetaValue().toString();
+                    Log.e(TAG, "onClick:google_sheet_id === " + google_sheet_id);
+                    Log.e(TAG, "onClick:google_sheet_key === " + google_sheet_key);
+                    Log.e(TAG, "onClick:google_sheet_tab === " + google_sheet_tab);
+
+                    String urls = "https://sheets.googleapis.com/v4/spreadsheets/" + google_sheet_id + "/values/" + google_sheet_tab + "?key=" + google_sheet_key;
 
                     String sheetID = MyApplication.getSheetId();
                     String apiKEY = MyApplication.getSheetApiKey();
 //                    String sheetTabName = "i2D-Dev";
 //                    String sheetTabName = "MMD-Dev";
-                    String sheetTabName = "i2D-Prod";
-                    String urls = "https://sheets.googleapis.com/v4/spreadsheets/" + sheetID + "/values/" + sheetTabName + "?key=" + apiKEY;
+//                    TODO new
+                    String sheetTabName = "MMD-Dev";
+//                    TODO old
+//                    String sheetTabName = "i2D-Prod";
+
+//                    String urls = "https://sheets.googleapis.com/v4/spreadsheets/" + sheetID + "/values/" + sheetTabName + "?key=" + apiKEY;
 
 //                    String urls = "https://sheets.googleapis.com/v4/spreadsheets/1ZjrKWAsBuB0-P9A3-TePPUa3_t1iQxvY_FrH79fc5eQ/values/MMD-Dev?key=AIzaSyA9Cjc0gdK_CYnXSq1P_z3kG1dWg27h7c0";
-                    Log.e(TAG, "onClick:urls ----  "+urls );
+
+
+                    Log.e(TAG, "onClick:urls === " + urls);
                     RequestQueue queue = Volley.newRequestQueue(WelcomeActivity.this);
                     JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, urls, null, new Response.Listener<JSONObject>() {
                         @Override
@@ -175,15 +271,23 @@ public class WelcomeActivity extends AppCompatActivity {
                             progressDialog.dismiss();
                             try {
                                 jsonArrayValues = response.getJSONArray("values");
+
                                 for (int i = 0; i < jsonArrayValues.length(); i++) {
                                     JSONArray jsonArrayPos = jsonArrayValues.getJSONArray(i);
                                     for (int j = 0; j < jsonArrayPos.length(); j++) {
                                         if (jsonArrayPos.get(j).toString().contains("Server_URL")) {
                                             Log.e(TAG, " Server_URL - " + jsonArrayPos.get(j + 1).toString());
+
+                                            String url = jsonArrayPos.get(j + 1).toString() + "/";
+//                                            String fixedUrl = url.replaceFirst("^https?://https://", "https://");
+//                                            Log.e(TAG, "onResponse:fixedUrl - " + fixedUrl);
+                                            ApiClient.Server_URL = url.replaceFirst("^https?://https://", "https://");
+
 //                                            ApiClient.Server_URL = jsonArrayPos.get(j + 1).toString() + "/";
+                                            Log.e(TAG, "onResponse:ApiClient.Server_URL - " + ApiClient.Server_URL);
 
                                             //TODO 13 FEB 2024
-                                            ApiClient.Server_URL = "https://devmmd.i-apps.org/MMD_mob/webservice/";
+//                                            ApiClient.Server_URL = "https://devmmd.i-apps.org/MMD_mob/webservice/";
                                         }
                                         if (jsonArrayPos.get(j).toString().contains("TC_URL")) {
                                             Log.e(TAG, " TC_URL - " + jsonArrayPos.get(j + 1).toString());
@@ -219,14 +323,28 @@ public class WelcomeActivity extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error) {
                             progressDialog.dismiss();
-                            Log.e(TAG, " error - " + error.getLocalizedMessage());
-                            Log.e(TAG, " error1 - " + error.getMessage());
+                            Log.e(TAG, "onErrorResponse: error - " + error.getLocalizedMessage());
+                            Log.e(TAG, "onErrorResponse: error1 - " + error.getMessage());
                             Log.e(TAG, " error2 - " + error.toString());
+
+                            Log.e(TAG, "onErrorResponse: Failed with error msg:\t" + error.getMessage());
+                            Log.e(TAG, "onErrorResponse: Error StackTrace: \t" + error.getStackTrace());
+                            try {
+                                byte[] htmlBodyBytes = error.networkResponse.data;
+                                Log.e(TAG, new String(htmlBodyBytes), error);
+                            } catch (NullPointerException e) {
+                                e.printStackTrace();
+                            }
+                            if (error.getMessage() == null) {
+                                Log.e(TAG, "onErrorResponse:---->>> ");
+                            }
+
                         }
                     });
                     queue.add(jsonObjectRequest);
                 } else {
                     Toast.makeText(WelcomeActivity.this, "Please check Internet connection", Toast.LENGTH_SHORT).show();
+                    Log.e(TAG, "onClick:No Internet");
                 }
 
 

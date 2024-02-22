@@ -574,11 +574,12 @@ public class UpdateActivity extends AppCompatActivity {
                 radiofn();
                 if (!isEmpty(update_name_et)) {
                     if (isOnline()) {
-                        if (checkbox_btn.isChecked()) {
-                            UpadteAPI();
-                        } else {
-                            Toast.makeText(UpdateActivity.this, "Please accept our Terms and Conditions", Toast.LENGTH_SHORT).show();
-                        }
+                        UpadteAPI();
+//                        if (checkbox_btn.isChecked()) {
+//
+//                        } else {
+//                            Toast.makeText(UpdateActivity.this, "Please accept our Terms and Conditions", Toast.LENGTH_SHORT).show();
+//                        }
                     } else {
                         ConstantFunctions.showSnackbar(update_name_et, "Please check internet connection", UpdateActivity.this);
                     }
@@ -732,7 +733,7 @@ public class UpdateActivity extends AppCompatActivity {
         jsonObject1.addProperty("type", type);
         jsonObject1.addProperty("terms", "Yes");
 
-        if (type.equalsIgnoreCase("business")) {
+        /*if (type.equalsIgnoreCase("business")) {
             if (pathIncorpDoc.length() > 0) {
                 jsonObject1.addProperty("incorp_doc", base64PathIncorpDoc);
                 jsonObject1.addProperty("incorp_doc_type", pathIncorpDoc.substring(pathIncorpDoc.lastIndexOf(".")));
@@ -749,7 +750,7 @@ public class UpdateActivity extends AppCompatActivity {
                 jsonObject1.addProperty("oth_doc", base64PathOtherDoc);
                 jsonObject1.addProperty("oth_doc_type", pathOtherDoc.substring(pathOtherDoc.lastIndexOf(".")));
             }
-        }
+        }*/
 
         Log.e("jsonObject1", "" + jsonObject1);
 
@@ -760,6 +761,7 @@ public class UpdateActivity extends AppCompatActivity {
             call.enqueue(new Callback<JsonObject>() {
                 @Override
                 public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                    Log.e(TAG, "onResponse:123 update_profileAPIb = "+response );
                     progressDialog.dismiss();
                     Log.e(TAG, "" + response.body());
                     try {

@@ -312,7 +312,7 @@ public class NewtypesActivity extends AppCompatActivity {
         apiService = ApiClient.getClient().create(ApiInterface.class);
 
         try {
-
+// TODO not use
             Call<JsonObject> call = apiService.Adavncecategories(jsonObject1);
             call.enqueue(new Callback<JsonObject>() {
                 @RequiresApi(api = Build.VERSION_CODES.KITKAT)

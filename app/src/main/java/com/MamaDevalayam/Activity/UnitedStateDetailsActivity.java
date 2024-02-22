@@ -63,7 +63,10 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
     static HashMap<String, String> userDetails;
     LinearLayout like_linear_layout, unlike_linear_layout, follow_linear_layout, unfollow_linear_layout;
     SessionManager session;
-    String id, followed, liked, searchname;
+    String id;
+    Integer followed;
+    Integer liked;
+    String searchname;
     ApiInterface apiService;
     LinearLayout donate_linear_layout;
     Dialog d;
@@ -97,13 +100,22 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
         Log.e("bundle", "" + bundle);
         String name = bundle.getString("name");
         String logo = bundle.getString("logo");
-        String street = bundle.getString("street");
+//        String street = bundle.getString("street");
         String city = bundle.getString("city");
-        String likecount = bundle.getString("likecount");
+        String state = bundle.getString("state");
+        /*String likecount = bundle.getString("likecount")+"";
+        String followedcount = bundle.getString("followed")+"";*/
+        Integer likecount = bundle.getInt("likecount");
+        Integer followedcount = bundle.getInt("followed");
         String description = bundle.getString("description");
+
+        liked=likecount;
+        followed=followedcount;
+
         id = bundle.getString("id");
-        liked = bundle.getString("liked");
-        followed = bundle.getString("followed");
+//        liked = bundle.getString("liked");
+//        followed = bundle.getString("followed");
+
         searchname = bundle.getString("searchname");
         back_icon_login_img = findViewById(R.id.back_icon_login_img);
         name_tv = findViewById(R.id.name_tv);
@@ -128,31 +140,61 @@ public class UnitedStateDetailsActivity extends AppCompatActivity {
         unfollow_linear_layout = findViewById(R.id.unfollow_linear_layout);
         donate_linear_layout = findViewById(R.id.donate_linear_layout);
         name_tv.setText(name);
-        location_tv.setText(city + " " + street);
+
+        if (city.equalsIgnoreCase("")){
+            location_tv.setText(state);
+        } else if ( state.equalsIgnoreCase("")) {
+            location_tv.setText(city);
+        }else {
+            location_tv.setText(city + ", " + state);
+        }
+/*        location_tv.setText(city);
+        location_tv.setText(state);*/
+
         like_count_tv.setText(likecount + " " + "Likes");
         unlike_count_tv.setText(likecount + " " + "Likes");
         if (!description.equalsIgnoreCase("null")) {
             description_tv.setText(description);
         }
 
-        if (liked.equalsIgnoreCase("1")) {
-            unlike_linear_layout.setVisibility(View.VISIBLE);
-            like_linear_layout.setVisibility(View.GONE);
-        } else {
+//        if (liked.equalsIgnoreCase("1")) {
+        if (liked == 0) {
+            /*unlike_linear_layout.setVisibility(View.VISIBLE);
+            like_linear_layout.setVisibility(View.GONE);*/
+
             unlike_linear_layout.setVisibility(View.GONE);
             like_linear_layout.setVisibility(View.VISIBLE);
+        } else {
+            /*unlike_linear_layout.setVisibility(View.GONE);
+            like_linear_layout.setVisibility(View.VISIBLE);*/
+
+            unlike_linear_layout.setVisibility(View.VISIBLE);
+            like_linear_layout.setVisibility(View.GONE);
         }
-        if (followed.equalsIgnoreCase("1")) {
-            follow_linear_layout.setVisibility(View.VISIBLE);
+
+//        if (followed.equalsIgnoreCase("1")) {
+        if (followed == 0) {
+            /*follow_linear_layout.setVisibility(View.VISIBLE);
             unfollow_linear_layout.setVisibility(View.GONE);
             follow_count_tv.setText("Following");
-            unfollow_count_tv.setText("Following");
-        } else {
+            unfollow_count_tv.setText("Following");*/
+
             follow_linear_layout.setVisibility(View.GONE);
             unfollow_linear_layout.setVisibility(View.VISIBLE);
             follow_count_tv.setText("Follow");
             unfollow_count_tv.setText("Follow");
+        } else {
+            /*follow_linear_layout.setVisibility(View.GONE);
+            unfollow_linear_layout.setVisibility(View.VISIBLE);
+            follow_count_tv.setText("Follow");
+            unfollow_count_tv.setText("Follow");*/
+
+            follow_linear_layout.setVisibility(View.VISIBLE);
+            unfollow_linear_layout.setVisibility(View.GONE);
+            follow_count_tv.setText("Following");
+            unfollow_count_tv.setText("Following");
         }
+
         try {
             URL url = new URL(logo);
             Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());

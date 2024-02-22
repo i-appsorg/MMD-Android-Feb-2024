@@ -686,7 +686,8 @@ public class RegisterActivity extends AppCompatActivity implements
                             if (!radi_business.isEmpty()) {
                                 if (checkbox_btn.isChecked()) {
                                     if (radi_business.equals("no")) {
-                                        if (!country_symbol.isEmpty()) {
+                                        RegisterAPI();
+                                        /*if (!country_symbol.isEmpty()) {
 
                                             if (pathIncorpDoc.length() == 0) {
                                                 Toast.makeText(RegisterActivity.this, " Please choose Incorporation documents", Toast.LENGTH_SHORT).show();
@@ -705,10 +706,11 @@ public class RegisterActivity extends AppCompatActivity implements
                                             }
                                         } else {
                                             Toast.makeText(RegisterActivity.this, "Select country", Toast.LENGTH_SHORT).show();
-                                        }
+                                        }*/
                                     } else {
                                         if (reg_name_et.getText().toString().toString().trim().matches(Validation.NAME_PATTERN)) {
-                                            if (!country_symbol.isEmpty()) {
+                                            RegisterAPI();
+                                            /*if (!country_symbol.isEmpty()) {
 
                                                 if (isOnline()) {
                                                     RegisterAPI();
@@ -717,7 +719,7 @@ public class RegisterActivity extends AppCompatActivity implements
                                                 }
                                             } else {
                                                 Toast.makeText(RegisterActivity.this, "Select country", Toast.LENGTH_SHORT).show();
-                                            }
+                                            }*/
                                         } else {
                                             Toast.makeText(RegisterActivity.this, "Name format is invalid", Toast.LENGTH_SHORT).show();
                                         }
@@ -1118,8 +1120,8 @@ public class RegisterActivity extends AppCompatActivity implements
                 public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
                     progressDialog.dismiss();
 
-                    Log.e(TAG, "" + response.body());
-                    Log.e("response", "" + response);
+                    Log.e(TAG, "123 social_loginAPI response.body = " + response.body());
+                    Log.e("123 social_loginAPI = ", "" + response);
                     iDonateSharedPreference.setsocialmedia(getApplicationContext(), socialmedia);
                     try {
                         JSONObject jsonObject = new JSONObject(String.valueOf(response.body()));

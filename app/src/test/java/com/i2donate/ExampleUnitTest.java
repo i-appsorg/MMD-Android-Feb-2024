@@ -1,4 +1,4 @@
-package com.i2donate;
+package com.MamaDevalayam;
 
 import org.junit.Test;
 

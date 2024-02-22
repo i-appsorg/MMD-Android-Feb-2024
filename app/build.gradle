@@ -24,6 +24,22 @@ android {
         }
     }
     signingConfigs {
+        //todo New
+        /*debug {
+            storeFile file("${rootDir}/mamadevalayam.jks")
+            storePassword 'mamadevalayam'
+            keyAlias 'mamadevalayam'
+            keyPassword 'mamadevalayam'
+        }
+        release {
+            storeFile file("${rootDir}/mamadevalayam.jks")
+            storePassword 'mamadevalayam'
+            keyAlias 'mamadevalayam'
+
+            keyPassword 'mamadevalayam'
+        }*/
+
+        //todo old
         /*debug {
             storeFile file("${rootDir}/new_mama_devalayam_keystore.jks")
             storePassword 'mamadevalayam'
@@ -34,6 +50,7 @@ android {
             storeFile file("${rootDir}/new_mama_devalayam_keystore.jks")
             storePassword 'mamadevalayam'
             keyAlias 'mamadevalayam'
+
             keyPassword 'mamadevalayam'
         }*/
 

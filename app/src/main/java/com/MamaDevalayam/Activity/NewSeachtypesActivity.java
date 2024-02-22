@@ -22,8 +22,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.MamaDevalayam.Adapter.CategorylistAdapter;
+import com.MamaDevalayam.Adapter.NewTypesCategorylistAdapter2;
 import com.MamaDevalayam.Model.Category_new;
 import com.MamaDevalayam.Model.ConstantManager;
+import com.MamaDevalayam.Model.DeityDataModel;
+import com.MamaDevalayam.Model.DeityModel;
+import com.MamaDevalayam.Model.TempleListDataModel;
+import com.MamaDevalayam.Model.TempleListModel;
 import com.MamaDevalayam.Model.child_categorynew;
 import com.MamaDevalayam.Model.subcategorynew;
 import com.MamaDevalayam.RetrofitAPI.ApiClient;
@@ -40,7 +45,10 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -57,6 +65,7 @@ public class NewSeachtypesActivity extends AppCompatActivity {
     public static ArrayList<subcategorynew> sub_category_newArrayList = new ArrayList<>();
     public static ArrayList<child_categorynew> child_category_newArrayList = new ArrayList<>();
     NewTypesCategorylistAdapter categorylistAdapter;
+    NewTypesCategorylistAdapter2 categorylistAdapter2;
     String response_data;
     ImageView back_icon_login_img;
     static Button reset_button, apply_button;
@@ -67,6 +76,8 @@ public class NewSeachtypesActivity extends AppCompatActivity {
     static ArrayList<String> arraychecked_item = new ArrayList<>();
     static IDonateSharedPreference iDonateSharedPreference;
     int i = 0;
+
+    static DeityModel deityModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -284,7 +295,8 @@ public class NewSeachtypesActivity extends AppCompatActivity {
         return device_unique_id;
     }
 
-    private void AdvanceCatAPI() {
+   /* private void AdvanceCatAPI() {
+        Log.e(TAG, "AdvanceCatAPI:--->> " );
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading...");
@@ -318,6 +330,9 @@ public class NewSeachtypesActivity extends AppCompatActivity {
                 @RequiresApi(api = Build.VERSION_CODES.KITKAT)
                 @Override
                 public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                    Log.e(TAG, "onResponse:1 categoriesAPI response = " + response );
+                    Log.e(TAG, "onResponse:1 categoriesresponse.body() = " + response.body());
+
                     progressDialog.dismiss();
                     Log.e(TAG, "" + response.body());
                     response_data = String.valueOf(response.body());
@@ -383,9 +398,14 @@ public class NewSeachtypesActivity extends AppCompatActivity {
         }
 
 
-    }
+    }*/
 
-    private void StoreSubChildCode() {
+    private void AdvanceCatAPI() {
+        Log.e(TAG, "AdvanceCatAPI:--->> " );
+
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Loading...");
+        progressDialog.show();
 
         userDetails = session.getUserDetails();
         Log.e("userDetails", "" + userDetails);
@@ -410,17 +430,133 @@ public class NewSeachtypesActivity extends AppCompatActivity {
 
         try {
 
+            MediaType mediaType = MediaType.parse("text/plain");
+            RequestBody pageBody = RequestBody.create(mediaType, "1");
+            RequestBody selectCodeBody = RequestBody.create(mediaType, "2");
+            RequestBody deityCodeBody = RequestBody.create(mediaType, "A");
+
+//            Call<JsonObject> call = apiService.Adavncecategories(jsonObject1);
+            Call<DeityModel> call = apiService.Adavncedeity(pageBody, selectCodeBody, deityCodeBody);
+            call.enqueue(new Callback<DeityModel>() {
+                @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+                @Override
+                public void onResponse(Call<DeityModel> call, Response<DeityModel> response) {
+                    Log.e(TAG, "onResponse:1 categoriesAPI response = " + response );
+                    Log.e(TAG, "onResponse:1 categoriesresponse.body() = " + response.body());
+
+                    deityModel = response.body();
+                    List<DeityDataModel> deityModelDataList = deityModel.getData();
+
+                    progressDialog.dismiss();
+
+                    response_data = String.valueOf(response.body());
+                    no_data_linear.setVisibility(View.GONE);
+                    i = 2;
+                    listOfcategory.clear();
+                    category_newArrayList.clear();
+                    child_category_newArrayList.clear();
+                    sub_category_newArrayList.clear();
+                    bottom_layout.setVisibility(View.GONE);
+                    try {
+                        categorylistAdapter2 = new NewTypesCategorylistAdapter2(NewSeachtypesActivity.this, deityModelDataList);
+                        recyclerview_types_sub_types.setAdapter(categorylistAdapter2);
+
+/*                        JSONObject jsonObject = new JSONObject(String.valueOf(response.body()));
+                        Log.e("jsonObject", "" + jsonObject);
+                        String status = jsonObject.getString("status");
+                        String message = jsonObject.getString("message");
+                        String data = jsonObject.getString("data");
+                        if (status.equalsIgnoreCase("1")) {
+
+                            JSONArray jsonArray = new JSONArray(data);
+                            Log.e("1232", "" + jsonArray.length());
+                            if (!data.equalsIgnoreCase("")) {
+
+                                for (int i = 0; i < jsonArray.length(); i++) {
+                                    sub_category_newArrayList.clear();
+                                    JSONObject object = jsonArray.getJSONObject(i);
+                                    Category_new category_new = new Category_new();
+                                    category_new.setCategory_id(object.getString("category_id"));
+                                    category_new.setCategory_code(object.getString("category_code"));
+                                    category_new.setCategory_name(object.getString("category_name"));
+                                    category_new.setSubcategory(object.getJSONArray("subcategory"));
+                                    category_new.setSelected(false);
+//                                    category_new.setSlected("false");
+                                    JSONArray subjsonarray = object.getJSONArray("subcategory");
+                                    Log.e("subcategory", "" + subjsonarray);
+                                    Log.e("subjsonarraylength", "" + subjsonarray.length());
+                                    category_newArrayList.add(category_new);
+
+                                    Log.e("category_newArrayList", "" + category_newArrayList);
+                                    Log.e("catetsize", "" + category_newArrayList.size());
+                                    categorylistAdapter = new NewTypesCategorylistAdapter(NewSeachtypesActivity.this, category_newArrayList);
+                                    recyclerview_types_sub_types.setAdapter(categorylistAdapter);
+
+                                }
+                            }
+                        }*/
+                    } /*catch (JSONException e) {
+                        e.printStackTrace();
+                    }*/ catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
+
+                }
+
+                @Override
+                public void onFailure(Call<DeityModel> call, Throwable t) {
+                    progressDialog.dismiss();
+                    no_data_linear.setVisibility(View.VISIBLE);
+                    Log.e(TAG, t.toString());
+                }
+            });
+        } catch (Exception e) {
+
+            e.printStackTrace();
+            Log.e("Exception", "" + e);
+        }
+
+
+    }
+
+    /*private void StoreSubChildCode() {
+        Log.e(TAG, "StoreSubChildCode:--->> " );
+
+        userDetails = session.getUserDetails();
+        Log.e("userDetails", "" + userDetails);
+        Log.e("KEY_UID", "" + userDetails.get(SessionManager.KEY_UID));
+        String user_id = "";
+        String token = "";
+//todo login
+        if (session.isLoggedIn()) {
+
+            user_id = userDetails.get(SessionManager.KEY_UID);
+            token = userDetails.get(SessionManager.KEY_token);
+
+        }
+        JsonObject jsonObject1 = new JsonObject();
+        jsonObject1.addProperty("user_id", user_id);
+        jsonObject1.addProperty("token", token);
+        jsonObject1.addProperty("device_id", getDeviceUniqueID(NewSeachtypesActivity.this));
+        Log.e("jsonObject1", "" + jsonObject1);
+
+
+        apiService = ApiClient.getClient().create(ApiInterface.class);
+        try {
+
             Call<JsonObject> call = apiService.Adavncecategories(jsonObject1);
             call.enqueue(new Callback<JsonObject>() {
                 @RequiresApi(api = Build.VERSION_CODES.KITKAT)
                 @Override
                 public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
-                    Log.e(TAG, "" + response.body());
+                    Log.e(TAG, "onResponse:2 categoriesAPI response = " + response );
+                    Log.e(TAG, "onResponse:2 categories response.body() = " + response.body());
+
                     response_data = String.valueOf(response.body());
                     i = 2;
-                    /*category_newArrayList.clear();
+                    *//*category_newArrayList.clear();
                     child_category_newArrayList.clear();
-                    sub_category_newArrayList.clear();*/
+                    sub_category_newArrayList.clear();*//*
                     listOfItem.clear();
 
                     try {
@@ -472,6 +608,141 @@ public class NewSeachtypesActivity extends AppCompatActivity {
         }
 
 
+    }*/
+
+    private void StoreSubChildCode() {
+        Log.e(TAG, "StoreSubChildCode:--->> " );
+
+        userDetails = session.getUserDetails();
+        Log.e("userDetails", "" + userDetails);
+        Log.e("KEY_UID", "" + userDetails.get(SessionManager.KEY_UID));
+        String user_id = "";
+        String token = "";
+//todo login
+        if (session.isLoggedIn()) {
+            user_id = userDetails.get(SessionManager.KEY_UID);
+            token = userDetails.get(SessionManager.KEY_token);
+        }
+        JsonObject jsonObject1 = new JsonObject();
+        jsonObject1.addProperty("user_id", user_id);
+        jsonObject1.addProperty("token", token);
+        jsonObject1.addProperty("device_id", getDeviceUniqueID(NewSeachtypesActivity.this));
+        Log.e("jsonObject1", "" + jsonObject1);
+
+
+        apiService = ApiClient.getClient().create(ApiInterface.class);
+        try {
+
+            MediaType mediaType = MediaType.parse("text/plain");
+            RequestBody pageBody = RequestBody.create(mediaType, "1");
+            RequestBody selectCodeBody = RequestBody.create(mediaType, "2");
+            RequestBody deityCodeBody = RequestBody.create(mediaType, "A");
+
+
+//            Call<JsonObject> call = apiService.Adavncecategories(jsonObject1);
+            Call<DeityModel> call = apiService.Adavncedeity(pageBody, selectCodeBody, deityCodeBody);
+            call.enqueue(new Callback<DeityModel>() {
+                @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+                @Override
+                public void onResponse(Call<DeityModel> call, Response<DeityModel> response) {
+                    Log.e(TAG, "onResponse:2 categoriesAPI response = " + response );
+                    Log.e(TAG, "onResponse:2 categories response.body() = " + response.body());
+
+                    deityModel = response.body();
+                    List<DeityDataModel> deityModelDataList = deityModel.getData();
+
+                    response_data = String.valueOf(response.body());
+                    i = 2;
+                    category_newArrayList.clear();
+                    child_category_newArrayList.clear();
+                    sub_category_newArrayList.clear();
+                    listOfItem.clear();
+
+                    try {
+                        /*JSONObject jsonObject = new JSONObject(String.valueOf(response.body()));
+                        Log.e("jsonObject", "" + jsonObject);
+                        String status = jsonObject.getString("status");
+                        String message = jsonObject.getString("message");
+                        String data = jsonObject.getString("data");*/
+
+                        /*if (status.equalsIgnoreCase("1")) {
+
+                            JSONArray jsonArray = new JSONArray(data);
+                            Log.e("1232", "" + jsonArray.length());
+                            if (!data.equalsIgnoreCase("")) {
+
+                                for (int i = 0; i < jsonArray.length(); i++) {
+                                    JSONObject object = jsonArray.getJSONObject(i);
+                                    JSONArray subjsonarray = object.getJSONArray("subcategory");
+                                    Log.e("subcategory", "" + subjsonarray);
+                                    Log.e("subjsonarraylength", "" + subjsonarray.length());
+                                    for (int j = 0; j < subjsonarray.length(); j++) {
+                                        listOfItem.add(subjsonarray.getJSONObject(j).getString("sub_category_code"));
+                                        JSONArray childjsonarray = subjsonarray.getJSONObject(j).getJSONArray("child_category");
+                                        for (int k = 0; k < childjsonarray.length(); k++) {
+                                            listOfItem.add(childjsonarray.getJSONObject(k).getString("child_category_code"));
+                                        }
+                                    }
+
+                                }
+                            }
+                            Log.e("ListOfItem", "" + listOfItem);
+                            iDonateSharedPreference.setSelectedItems(context, listOfItem);
+                        }*/
+
+                        //        if (charitylist1.get(position).getLiked().equalsIgnoreCase("1")) {
+//                        if (charitylist1.get(position).getLikeCount() == 0) {
+
+//                        if (deityModel.getStatus() == 0) {
+
+//                            JSONArray jsonArray = new JSONArray(data);
+//                            Log.e("1232", "" + jsonArray.length());
+//                            if (!data.equalsIgnoreCase("")) {
+
+//                                for (int i = 0; i < jsonArray.length(); i++) {
+                                for (int i = 0; i < deityModelDataList.size(); i++) {
+//                                    JSONObject object = jsonArray.getJSONObject(i);
+//                                    JSONArray subjsonarray = object.getJSONArray("subcategory");
+//                                    Log.e("subcategory", "" + subjsonarray);
+//                                    Log.e("subjsonarraylength", "" + subjsonarray.length());
+//                                    for (int j = 0; j < subjsonarray.length(); j++) {
+                                    for (int j = 0; j < deityModelDataList.size(); j++) {
+//                                        listOfItem.add(subjsonarray.getJSONObject(j).getString("sub_category_code"));
+                                        listOfItem.add(deityModelDataList.toString());
+//                                        JSONArray childjsonarray = subjsonarray.getJSONObject(j).getJSONArray("child_category");
+//                                        JSONArray childjsonarray = subjsonarray.getJSONObject(j).getJSONArray("child_category");
+//                                        for (int k = 0; k < childjsonarray.length(); k++) {
+//                                            listOfItem.add(childjsonarray.getJSONObject(k).getString("child_category_code"));
+//                                        }
+                                    }
+
+                                }
+//                            }
+                            Log.e("ListOfItem", "" + listOfItem);
+                            iDonateSharedPreference.setSelectedItems(context, listOfItem);
+//                        }
+
+
+                    }/* catch (JSONException e) {
+                        e.printStackTrace();
+                    }*/ catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
+
+                }
+
+                @Override
+                public void onFailure(Call<DeityModel> call, Throwable t) {
+                    Log.e(TAG, t.toString());
+                }
+            });
+        } catch (Exception e) {
+
+            e.printStackTrace();
+            Log.e("Exception", "" + e);
+        }
+
+
     }
 
     private void seletedApi(String response_data) {
@@ -486,7 +757,7 @@ public class NewSeachtypesActivity extends AppCompatActivity {
             String status = jsonObject.getString("status");
             String message = jsonObject.getString("message");
             String data = jsonObject.getString("data");
-            if (status.equalsIgnoreCase("1")) {
+          /*  if (status.equalsIgnoreCase("1")) {
 
                 JSONArray jsonArray = new JSONArray(data);
                 Log.e("1232", "" + jsonArray.length());
@@ -507,13 +778,21 @@ public class NewSeachtypesActivity extends AppCompatActivity {
                         category_newArrayList.add(category_new);
                         Log.e("category_newArrayList", "" + category_newArrayList);
                         Log.e("catetsize", "" + category_newArrayList.size());
-                        categorylistAdapter = new NewTypesCategorylistAdapter(NewSeachtypesActivity.this, category_newArrayList);
-                        recyclerview_types_sub_types.setAdapter(categorylistAdapter);
+//                        categorylistAdapter = new NewTypesCategorylistAdapter(NewSeachtypesActivity.this, category_newArrayList);
+//                        recyclerview_types_sub_types.setAdapter(categorylistAdapter);
+
+                        List<DeityDataModel> deityModelDataList = deityModel.getData();
+                        categorylistAdapter2 = new NewTypesCategorylistAdapter2(NewSeachtypesActivity.this, deityModelDataList);
+                        recyclerview_types_sub_types.setAdapter(categorylistAdapter2);
 
                     }
 
                 }
-            }
+            }*/
+
+            List<DeityDataModel> deityModelDataList = deityModel.getData();
+            categorylistAdapter2 = new NewTypesCategorylistAdapter2(NewSeachtypesActivity.this, deityModelDataList);
+            recyclerview_types_sub_types.setAdapter(categorylistAdapter2);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -528,8 +807,12 @@ public class NewSeachtypesActivity extends AppCompatActivity {
             Log.e(TAG, "Non-Empty");
             // bottom_layout.setVisibility(View.VISIBLE);
         }
-        categorylistAdapter = new NewTypesCategorylistAdapter(NewSeachtypesActivity.this, category_newArrayList);
-        recyclerview_types_sub_types.setAdapter(categorylistAdapter);
+      /*  categorylistAdapter = new NewTypesCategorylistAdapter(NewSeachtypesActivity.this, category_newArrayList);
+        recyclerview_types_sub_types.setAdapter(categorylistAdapter);*/
+//        List<DeityDataModel> deityModelDataList = deityModel.getData();
+//        categorylistAdapter2 = new NewTypesCategorylistAdapter2(NewSeachtypesActivity.this, deityModelDataList);
+//        recyclerview_types_sub_types.setAdapter(categorylistAdapter2);
+
         /*for (String details : arraychecked_item) {
             Log.e("details",""+details);
             if (details.equalsIgnoreCase("YES")){

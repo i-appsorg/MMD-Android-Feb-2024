@@ -70,11 +70,11 @@ public class AdvanceSearch1Activity extends AppCompatActivity {
         childItems = new ArrayList<>();
         init();
         listener();
-        AdvanceCatAPI();
+//        AdvanceCatAPI();
 
     }
 
-    private void AdvanceCatAPI() {
+  /*  private void AdvanceCatAPI() {
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading...");
@@ -181,15 +181,14 @@ public class AdvanceSearch1Activity extends AppCompatActivity {
                                 secondLevelNew.add(secondLevelValue);
                                 dataFinal.add(thirdLevelNew);
 
-
                             }
 
                             firstLevelValueNew = new String[firstLevelArray.size()];
 
                             firstLevelArray.toArray(firstLevelValueNew);
                             /// checkbox();
-                           /* AdvanceSearchAdapterGrand threeLevelListAdapterAdapters = new AdvanceSearchAdapterGrand(context, firstLevelValueNew, secondLevelNew, dataFinal);
-                            expandible_listview.setAdapter(threeLevelListAdapterAdapters);*/
+                           *//* AdvanceSearchAdapterGrand threeLevelListAdapterAdapters = new AdvanceSearchAdapterGrand(context, firstLevelValueNew, secondLevelNew, dataFinal);
+                            expandible_listview.setAdapter(threeLevelListAdapterAdapters);*//*
                             String[] firstLevelValue = new String[firstLevelArray.size()];
                             firstLevelArray.toArray(firstLevelValue);
 
@@ -213,7 +212,7 @@ public class AdvanceSearch1Activity extends AppCompatActivity {
             Log.e(TAG, "Exception - " + e);
             e.printStackTrace();
         }
-    }
+    }*/
 
     private void checkbox() {
 

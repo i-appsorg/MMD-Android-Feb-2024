@@ -38,6 +38,7 @@
         android:layout_marginBottom="@dimen/_10sdp"
         android:layout_marginLeft="@dimen/_5sdp"
         android:orientation="horizontal">
+
         <CheckBox
             android:layout_width="0dp"
             android:layout_weight="3"
@@ -50,6 +51,7 @@
            android:textSize="@dimen/_12sdp"
             android:textColor="@color/colorPrimary"
             android:buttonTint="@color/colorPrimary"/>
+
         <TextView
             android:id="@+id/btn_next"
             android:layout_width="0dp"
@@ -62,6 +64,7 @@
             android:visibility="visible"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@color/colorPrimary" />
+
     </LinearLayout>
 
 

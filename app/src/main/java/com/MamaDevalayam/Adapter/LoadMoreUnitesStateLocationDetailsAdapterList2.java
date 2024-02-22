@@ -3,97 +3,74 @@ package com.MamaDevalayam.Adapter;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
-import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.LevelListDrawable;
 import android.os.Bundle;
-import android.os.Handler;
 import android.provider.Settings;
-import android.text.Editable;
-import android.text.Html;
-import android.text.Spanned;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.MamaDevalayam.Activity.LoginActivity;
-import com.MamaDevalayam.Activity.NameSearchActivity;
-import com.MamaDevalayam.Activity.SelectPaymentActivity;
+import com.MamaDevalayam.Activity.MakeTypeScreenActivity;
+import com.MamaDevalayam.Activity.UnitedStateActivity;
+import com.MamaDevalayam.Activity.UnitedStateDetailsActivity;
+import com.MamaDevalayam.Model.ChangeActivity;
+import com.MamaDevalayam.Model.TempleListDataModel;
+import com.MamaDevalayam.Model.TempleListModel;
+import com.MamaDevalayam.R;
 import com.MamaDevalayam.RetrofitAPI.ApiClient;
 import com.MamaDevalayam.RetrofitAPI.ApiInterface;
 import com.MamaDevalayam.Session.IDonateSharedPreference;
 import com.MamaDevalayam.Session.SessionManager;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.gson.JsonObject;
-import com.MamaDevalayam.Activity.UnitedStateDetailsActivity;
-import com.MamaDevalayam.Model.ChangeActivity;
-import com.MamaDevalayam.Model.Charitylist;
-import com.MamaDevalayam.R;
 import com.makeramen.roundedimageview.RoundedImageView;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+
+public class LoadMoreUnitesStateLocationDetailsAdapterList2 extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+
     private Activity mContext;
-    List<HashMap<String, String>> charitylist;
-    ArrayList<Charitylist> charitylist1;
-    ArrayList<Charitylist> locationlist;
-    List<Charitylist> names;
-    List<Charitylist> location;
-    int lastPosition = -1;
+//    private ArrayList<Charitylist> charitylist1;
+//    private TempleListModel charitylist1;
+    private List<TempleListDataModel> charitylist1;
+//    List<Charitylist> names;
+    TempleListModel names;
     int index = 0;
-    SessionManager session;
     static HashMap<String, String> userDetails;
+    SessionManager session;
     ApiInterface apiService;
-    IDonateSharedPreference iDonateSharedPreference;
     Dialog d;
-    private Handler handler = new Handler();
     private final int VIEW_TYPE_ITEM = 0;
     private final int VIEW_TYPE_LOADING = 1;
+    IDonateSharedPreference iDonateSharedPreference;
 
-    public LoadMoreUnitesStateLocationAdapterList(Activity mContext, ArrayList<Charitylist> charitylist1) {
+    public LoadMoreUnitesStateLocationDetailsAdapterList2(Activity mContext, List<TempleListDataModel> charitylist1) {
         this.mContext = mContext;
         this.charitylist1 = charitylist1;
-        this.names = new ArrayList<Charitylist>();
-        this.location = new ArrayList<Charitylist>();
-        this.names.addAll(charitylist1);
-        this.location.addAll(charitylist1);
-        Log.e("charitylist121", "" + charitylist1);
+//        this.names = new ArrayList<Charitylist>();
+//        this.names = new TempleListModel();
+//        this.names.addAll((Collection<? extends DataItem>) charitylist1);
         session = new SessionManager(mContext);
         userDetails = session.getUserDetails();
         iDonateSharedPreference = new IDonateSharedPreference();
-
-        session = new SessionManager(mContext);
-        userDetails = session.getUserDetails();
-
     }
 
     @NonNull
@@ -112,15 +89,10 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
 
         if (viewHolder instanceof MyViewHolder) {
-
             populateItemRows((MyViewHolder) viewHolder, position);
         } else if (viewHolder instanceof LoadingViewHolder) {
             showLoadingView((LoadingViewHolder) viewHolder, position);
         }
-    }
-
-    public interface IMethodCaller {
-        void yourDesiredMethod();
     }
 
     public static String getDeviceUniqueID(Activity activity) {
@@ -130,7 +102,6 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
     }
 
     private void followAPI(String id, final String like, String user_id, String token_id, final MyViewHolder holder) {
-
 
         JsonObject jsonObject1 = new JsonObject();
         jsonObject1.addProperty("user_id", user_id);
@@ -153,7 +124,7 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
 
                     String status = jsonObject.getString("status");
                     if (status.equalsIgnoreCase("1")) {
-                        NameSearchActivity.like();
+                        UnitedStateActivity.like();
                         String data = jsonObject.getString("data");
                         JSONObject jsonObject2 = new JSONObject(data);
                     }
@@ -193,7 +164,7 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
 
                     String status = jsonObject.getString("status");
                     if (status.equalsIgnoreCase("1")) {
-                        NameSearchActivity.like();
+                        UnitedStateActivity.like();
                         String data = jsonObject.getString("data");
                         JSONObject jsonObject2 = new JSONObject(data);
                         Log.e("like_count", "" + jsonObject2.getString("like_count"));
@@ -209,6 +180,7 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                             holder.like_linear_layout.setVisibility(View.VISIBLE);
                         }
                     }
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -219,22 +191,24 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                 Log.e("unitedstate", t.toString());
             }
         });
-
     }
 
     @Override
     public int getItemCount() {
+        Log.e("TAG", "getItemCount:---> "+charitylist1.size());
         return charitylist1 == null ? 0 : charitylist1.size();
+//        return charitylist1 == null ? 0 : charitylist1.size();
     }
 
     @Override
     public int getItemViewType(int position) {
         return charitylist1.get(position) == null ? VIEW_TYPE_LOADING : VIEW_TYPE_ITEM;
+//        return charitylist1.get(position) == null ? VIEW_TYPE_LOADING : VIEW_TYPE_ITEM;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView txtxCountry, name_tv, location_name_tv, like_count_tv, unlike_count_tv, follow_count_tv, unfollow_count_tv;
-//        public CustomImageView logo_img;
+        //        public CustomImageView logo_img;
         public RoundedImageView logo_img;
         public ImageView like_icon_img;
         public LinearLayout united_item_layout, donate_linear_layout, like_linear_layout, unlike_linear_layout, follow_linear_layout, unfollow_linear_layout;
@@ -276,48 +250,77 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
     }
 
     private void populateItemRows(final MyViewHolder holder, final int position) {
-
+//        holder.name_tv.setText(charitylist1.get(position).getName());
+//        holder.location_name_tv.setText(charitylist1.get(position).getStreet() + " , " + charitylist1.get(position).getCity() + ", " + charitylist1.get(position).getState());
+//        holder.like_count_tv.setText(charitylist1.get(position).getLike_count() + " " + "Likes");
+//        holder.unlike_count_tv.setText(charitylist1.get(position).getLike_count() + " " + "Likes");
 
         holder.name_tv.setText(charitylist1.get(position).getName());
-        holder.location_name_tv.setText(charitylist1.get(position).getStreet() + ", " + charitylist1.get(position).getCity() + ", " + charitylist1.get(position).getCountry());
-        holder.like_count_tv.setText(charitylist1.get(position).getLike_count() + " " + "Likes");
-        holder.unlike_count_tv.setText(charitylist1.get(position).getLike_count() + " " + "Likes");
 
-        if (charitylist1.get(position).getLiked().equalsIgnoreCase("1" + "")) {
-            holder.unlike_linear_layout.setVisibility(View.VISIBLE);
-            holder.like_linear_layout.setVisibility(View.GONE);
-        } else {
+        if (charitylist1.get(position).getCity().equalsIgnoreCase("")){
+            holder.location_name_tv.setText(charitylist1.get(position).getState() );
+        } else if ( charitylist1.get(position).getState().equalsIgnoreCase("")) {
+            holder.location_name_tv.setText(charitylist1.get(position).getCity() );
+        }else {
+            holder.location_name_tv.setText(charitylist1.get(position).getCity() + ", " + charitylist1.get(position).getState());
+        }
+
+        holder.like_count_tv.setText(charitylist1.get(position).getLikeCount() + " " + "Likes");
+        holder.unlike_count_tv.setText(charitylist1.get(position).getLikeCount() + " " + "Likes");
+
+//        if (charitylist1.get(position).getLiked().equalsIgnoreCase("1")) {
+        if (charitylist1.get(position).getLikeCount() == 0) {
+//            holder.unlike_linear_layout.setVisibility(View.VISIBLE);
+//            holder.like_linear_layout.setVisibility(View.GONE);
+
             holder.unlike_linear_layout.setVisibility(View.GONE);
             holder.like_linear_layout.setVisibility(View.VISIBLE);
+        } else {
+//            holder.unlike_linear_layout.setVisibility(View.GONE);
+//            holder.like_linear_layout.setVisibility(View.VISIBLE);
+
+            holder.unlike_linear_layout.setVisibility(View.VISIBLE);
+            holder.like_linear_layout.setVisibility(View.GONE);
         }
-        if (charitylist1.get(position).getFollowed().equalsIgnoreCase("1")) {
-            holder.follow_count_tv.setText("Following");
+//        if (charitylist1.get(position).getFollowed().equalsIgnoreCase("1")) {
+        if (charitylist1.get(position).getFollowingCount() == 0) {
+           /* holder.follow_count_tv.setText("Following");
             holder.unfollow_count_tv.setText("Following");
             holder.follow_linear_layout.setVisibility(View.VISIBLE);
-            holder.unfollow_linear_layout.setVisibility(View.GONE);
-        } else {
+            holder.unfollow_linear_layout.setVisibility(View.GONE);*/
+
             holder.follow_count_tv.setText("Follow");
             holder.unfollow_count_tv.setText("Follow");
             holder.follow_linear_layout.setVisibility(View.GONE);
             holder.unfollow_linear_layout.setVisibility(View.VISIBLE);
+        } else {
+            /*holder.follow_count_tv.setText("Follow");
+            holder.unfollow_count_tv.setText("Follow");
+            holder.follow_linear_layout.setVisibility(View.GONE);
+            holder.unfollow_linear_layout.setVisibility(View.VISIBLE);*/
+
+            holder.follow_count_tv.setText("Following");
+            holder.unfollow_count_tv.setText("Following");
+            holder.follow_linear_layout.setVisibility(View.VISIBLE);
+            holder.unfollow_linear_layout.setVisibility(View.GONE);
         }
         holder.follow_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //todo login
                 if (session.isLoggedIn()) {
-                    if (mContext instanceof IMethodCaller) {
-                        ((IMethodCaller) mContext).yourDesiredMethod();
-                    }
+
                     String like = "0";
                     String user_id = userDetails.get(SessionManager.KEY_UID);
                     Log.e("blike", "" + like);
                     String token_id = userDetails.get(SessionManager.KEY_token);
+//                    followAPI(charitylist1.get(position).getId(), like, user_id, token_id, holder);
                     followAPI(charitylist1.get(position).getId(), like, user_id, token_id, holder);
                     holder.follow_linear_layout.setVisibility(View.GONE);
                     holder.unfollow_linear_layout.setVisibility(View.VISIBLE);
                     holder.follow_count_tv.setText("Follow");
                     holder.unfollow_count_tv.setText("Follow");
+
                 } else {
                     LoginDialog();
                 }
@@ -328,13 +331,12 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
             public void onClick(View v) {
                 //todo login
                 if (session.isLoggedIn()) {
-                    if (mContext instanceof IMethodCaller) {
-                        ((IMethodCaller) mContext).yourDesiredMethod();
-                    }
+
                     String like = "1";
                     String user_id = userDetails.get(SessionManager.KEY_UID);
                     Log.e("blike", "" + like);
                     String token_id = userDetails.get(SessionManager.KEY_token);
+//                    followAPI(charitylist1.get(position).getId(), like, user_id, token_id, holder);
                     followAPI(charitylist1.get(position).getId(), like, user_id, token_id, holder);
                     holder.follow_linear_layout.setVisibility(View.VISIBLE);
                     holder.unfollow_linear_layout.setVisibility(View.GONE);
@@ -350,13 +352,12 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
             public void onClick(View v) {
                 //todo login
                 if (session.isLoggedIn()) {
-                    if (mContext instanceof IMethodCaller) {
-                        ((IMethodCaller) mContext).yourDesiredMethod();
-                    }
+
                     String like = "1";
                     String user_id = userDetails.get(SessionManager.KEY_UID);
                     Log.e("blike", "" + like);
                     String token_id = userDetails.get(SessionManager.KEY_token);
+//                    likeAPI(charitylist1.get(position).getId(), like, user_id, token_id, holder);
                     likeAPI(charitylist1.get(position).getId(), like, user_id, token_id, holder);
                 } else {
                     LoginDialog();
@@ -369,30 +370,31 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
             public void onClick(View v) {
                 //todo login
                 if (session.isLoggedIn()) {
-                    if (mContext instanceof IMethodCaller) {
-                        ((IMethodCaller) mContext).yourDesiredMethod();
-                    }
+
                     String like = "0";
                     String user_id = userDetails.get(SessionManager.KEY_UID);
                     Log.e("disblike", "" + like);
                     String token_id = userDetails.get(SessionManager.KEY_token);
+//                    likeAPI(charitylist1.get(position).getId(), like, user_id, token_id, holder);
                     likeAPI(charitylist1.get(position).getId(), like, user_id, token_id, holder);
                 } else {
                     LoginDialog();
                 }
             }
         });
+//        if (!charitylist1.get(position).getLogo().isEmpty()) {
         if (!charitylist1.get(position).getLogo().isEmpty()) {
-            Charitylist charitylistimg = charitylist1.get(position);
+//            Charitylist charitylistimg = charitylist1.get(position);
+            TempleListDataModel charitylistimg = charitylist1.get(position);
+//            if (!charitylist1.get(position).getLogo().equalsIgnoreCase("null")) {
             if (!charitylist1.get(position).getLogo().equalsIgnoreCase("null")) {
                 try {
-
 //                    Picasso.get().load(charitylistimg.getLogo()).into(holder.logo_img);
-
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
+
         }
         holder.united_item_layout.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ResourceAsColor")
@@ -401,19 +403,36 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
 
                 Intent intent = new Intent(mContext, UnitedStateDetailsActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putString("name", charitylist1.get(position).getName());
+                /*bundle.putString("name", charitylist1.get(position).getName());
                 bundle.putString("logo", charitylist1.get(position).getLogo());
                 bundle.putString("street", charitylist1.get(position).getStreet());
                 bundle.putString("city", charitylist1.get(position).getCity());
                 bundle.putString("likecount", charitylist1.get(position).getLike_count());
                 bundle.putString("description", "");
-
-                bundle.putString("latitude",  charitylist1.get(position).getLatitude());
+                bundle.putString("latitude", charitylist1.get(position).getLatitude());
                 bundle.putString("longitude", charitylist1.get(position).getLongitude());
                 bundle.putString("id", charitylist1.get(position).getId());
                 bundle.putString("followed", charitylist1.get(position).getFollowed());
-                bundle.putString("liked", charitylist1.get(position).getLiked());
-                bundle.putString("searchname", "namesearch");
+                bundle.putString("liked", charitylist1.get(position).getLiked());*/
+
+                bundle.putString("name", charitylist1.get(position).getName());
+                bundle.putString("logo", charitylist1.get(position).getLogo());
+//                bundle.putString("street", charitylist1.get(position).getStreet());
+                bundle.putString("city", charitylist1.get(position).getCity());
+                bundle.putString("state", charitylist1.get(position).getState());
+               /* bundle.putString("likecount", charitylist1.get(position).getLikeCount()+"");
+                bundle.putString("followed", charitylist1.get(position).getFollowingCount()+"");*/
+                bundle.putInt("likecount", charitylist1.get(position).getLikeCount());
+                bundle.putInt("followed", charitylist1.get(position).getFollowingCount());
+                bundle.putString("description", "");
+//                bundle.putString("latitude", charitylist1.get(position).getLatitude());
+//                bundle.putString("longitude", charitylist1.get(position).getLongitude());
+                bundle.putString("id", charitylist1.get(position).getId());
+
+//                bundle.putString("followed", charitylist1.get(position).getFollowed());
+//                bundle.putString("liked", charitylist1.get(position).getLiked());
+
+                bundle.putString("searchname", "locationsearch");
                 intent.putExtras(bundle);
                 mContext.startActivity(intent);
                 mContext.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
@@ -425,7 +444,7 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
             public void onClick(View v) {
                 //todo login
                 if (session.isLoggedIn()) {
-                    d = new BottomSheetDialog(mContext, R.style.payment_dailog);
+                  /*  d = new BottomSheetDialog(mContext, R.style.payment_dailog);
                     d.setContentView(R.layout.payment_alert_dailog);
                     LinearLayout payment_dailog_linear = (LinearLayout) d.findViewById(R.id.payment_dailog_linear);
                     final EditText payment_et = (EditText) d.findViewById(R.id.payment_et);
@@ -447,10 +466,13 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                             Drawable empty = mContext.getResources().getDrawable(id);
                             d.addLevel(0, 0, empty);
                             d.setBounds(0, 0, empty.getIntrinsicWidth(), empty.getIntrinsicHeight());
+
                             return d;
+
                         }
                     }, null);
                     textview_percentage.setText(spanned);
+                    //  payment_et.append("10.00");
                     d.getWindow().setBackgroundDrawable(new ColorDrawable(R.color.trans_black));
                     payment_et.addTextChangedListener(new TextWatcher() {
                         @Override
@@ -531,8 +553,7 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
 
                                     ProgressDialog progressDialog = ProgressDialog.show(mContext, "", "Please wait.", true);
                                     progressDialog.show();
-                                    apiService =
-                                            ApiClient.getClient().create(ApiInterface.class);
+                                    apiService = ApiClient.getClient().create(ApiInterface.class);
 
                                     Call<String> call = apiService.getbraintree();
                                     call.enqueue(new Callback<String>() {
@@ -541,9 +562,10 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                                             progressDialog.dismiss();
                                             if (response.isSuccessful()) {
                                                 try {
-                                                    Log.e("Response_payment1", response.body().toString());
+                                                    Log.e("Response_payment1", response.body());
 
-                                                    Intent intent = new Intent(mContext, SelectPaymentActivity.class);
+                                                    Intent intent = new Intent(mContext, MakeTypeScreenActivity.class);
+//                                                    Intent intent = new Intent(mContext, SelectPaymentActivity.class);
                                                     Bundle bundle = new Bundle();
                                                     iDonateSharedPreference.setdailogueamt(mContext, payment);
                                                     bundle.putString("payment_amt", payment);
@@ -552,6 +574,7 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                                                     bundle.putString("cToken", response.body());
                                                     iDonateSharedPreference.setcharity_id(mContext, charitylist1.get(position).getId());
                                                     iDonateSharedPreference.setcharity_name(mContext, charitylist1.get(position).getName());
+                                                    iDonateSharedPreference.setpaymentvalue(mContext, payment);
                                                     intent.putExtras(bundle);
                                                     mContext.startActivity(intent);
                                                     mContext.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
@@ -584,26 +607,21 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                         }
                     });
                     d.setCancelable(true);
-                    d.show();
+                    d.show();*/
+
+                    Intent intent = new Intent(mContext, MakeTypeScreenActivity.class);
+                    intent.putExtra("tvTopType", holder.txtxCountry.getText().toString());
+                    intent.putExtra("tvWebsiteId", mContext.getString(R.string.wesite_id));
+                    intent.putExtra("tvEmailId", mContext.getString(R.string.emailId));
+                    intent.putExtra("tvContactId", mContext.getString(R.string.contact_id));
+                    intent.putExtra("isHome", false);
+                    mContext.startActivity(intent);
                 } else {
                     LoginDialog();
-                    //  ChangeActivity.changeActivity(mContext, LoginActivity.class);
-                    //  mContext.finish();
                 }
-
             }
         });
     }
-
-    public void updateList(ArrayList<Charitylist> list) {
-        Log.e("TAG", "updateList: " + charitylist1.size());
-        charitylist1 = new ArrayList<>();
-        charitylist1.addAll(list);
-
-        Log.e("TAG", "updateList: " + list.size());
-        notifyDataSetChanged();
-    }
-
     private void LoginDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
         builder.setTitle("");
@@ -623,5 +641,4 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
         builder.setCancelable(false);
         builder.show();
     }
-
 }

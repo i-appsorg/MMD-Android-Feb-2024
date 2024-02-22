@@ -1,12 +1,23 @@
 package com.MamaDevalayam.RetrofitAPI;
 
 
+import com.MamaDevalayam.Model.DeityModel;
+import com.MamaDevalayam.Model.GetParmsModel;
+import com.MamaDevalayam.Model.TempleListModel;
 import com.google.gson.JsonObject;
+import com.squareup.okhttp.ResponseBody;
 
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.Field;
+import retrofit2.http.GET;
 import retrofit2.http.Headers;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface ApiInterface {
 
@@ -20,6 +31,10 @@ public interface ApiInterface {
    //// @FormUrlEncoded    // annotation that used with POST type request
     @POST("login")
     Call<JsonObject> userLogin(@Body JsonObject loginInput);
+
+    @POST("Get_Parms")
+    @Multipart
+    Call<GetParmsModel> getParms(@Part ("type") RequestBody type);
 
     @POST("country_list")
     Call<JsonObject> countryAPI(@Body JsonObject loginInput);
@@ -36,8 +51,23 @@ public interface ApiInterface {
     @POST("categories")
     Call<JsonObject> Adavncecategories(@Body JsonObject categories);
 
+    @POST("deity")
+    @Multipart
+    Call<DeityModel> Adavncedeity(@Part ("page") RequestBody page,
+                                  @Part ("select_code") RequestBody select_code,
+                                  @Part ("deity_code") RequestBody deity_code);
+
+    @POST("temple_program")
+    @Multipart
+    Call<DeityModel> templeProgram(@Part ("temple_id") RequestBody temple_id);
+
     @POST("charity_list")
     Call<JsonObject> Charitylist(@Body JsonObject categories);
+
+    @POST("temple_list")
+//    Call<TempleListModel> getTempleList();
+//    Call<TempleListModel> getTemples(@Query("country_code") String countryCode);
+    Call<TempleListModel> getTemples();
 
     @POST("charity_like_dislike")
     Call<JsonObject> charity_like_dislike(@Body JsonObject categories);

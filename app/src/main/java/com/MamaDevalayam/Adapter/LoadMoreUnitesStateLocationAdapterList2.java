@@ -38,18 +38,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.MamaDevalayam.Activity.LoginActivity;
 import com.MamaDevalayam.Activity.NameSearchActivity;
 import com.MamaDevalayam.Activity.SelectPaymentActivity;
+import com.MamaDevalayam.Activity.UnitedStateDetailsActivity;
+import com.MamaDevalayam.Model.ChangeActivity;
+import com.MamaDevalayam.Model.Charitylist;
+import com.MamaDevalayam.Model.TempleListDataModel;
+import com.MamaDevalayam.R;
 import com.MamaDevalayam.RetrofitAPI.ApiClient;
 import com.MamaDevalayam.RetrofitAPI.ApiInterface;
 import com.MamaDevalayam.Session.IDonateSharedPreference;
 import com.MamaDevalayam.Session.SessionManager;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.gson.JsonObject;
-import com.MamaDevalayam.Activity.UnitedStateDetailsActivity;
-import com.MamaDevalayam.Model.ChangeActivity;
-import com.MamaDevalayam.Model.Charitylist;
-import com.MamaDevalayam.R;
 import com.makeramen.roundedimageview.RoundedImageView;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -61,13 +61,15 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+
+public class LoadMoreUnitesStateLocationAdapterList2 extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Activity mContext;
     List<HashMap<String, String>> charitylist;
-    ArrayList<Charitylist> charitylist1;
+//    ArrayList<Charitylist> charitylist1;
+    private List<TempleListDataModel> charitylist1;
     ArrayList<Charitylist> locationlist;
-    List<Charitylist> names;
-    List<Charitylist> location;
+    List<TempleListDataModel> names;
+    List<TempleListDataModel> location;
     int lastPosition = -1;
     int index = 0;
     SessionManager session;
@@ -79,13 +81,13 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
     private final int VIEW_TYPE_ITEM = 0;
     private final int VIEW_TYPE_LOADING = 1;
 
-    public LoadMoreUnitesStateLocationAdapterList(Activity mContext, ArrayList<Charitylist> charitylist1) {
+    public LoadMoreUnitesStateLocationAdapterList2(Activity mContext, List<TempleListDataModel> charitylist1) {
         this.mContext = mContext;
         this.charitylist1 = charitylist1;
-        this.names = new ArrayList<Charitylist>();
-        this.location = new ArrayList<Charitylist>();
-        this.names.addAll(charitylist1);
-        this.location.addAll(charitylist1);
+        this.names = new ArrayList<TempleListDataModel>();
+        this.location = new ArrayList<TempleListDataModel>();
+//        this.names.addAll(charitylist1);
+//        this.location.addAll(charitylist1);
         Log.e("charitylist121", "" + charitylist1);
         session = new SessionManager(mContext);
         userDetails = session.getUserDetails();
@@ -279,28 +281,60 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
 
 
         holder.name_tv.setText(charitylist1.get(position).getName());
-        holder.location_name_tv.setText(charitylist1.get(position).getStreet() + ", " + charitylist1.get(position).getCity() + ", " + charitylist1.get(position).getCountry());
-        holder.like_count_tv.setText(charitylist1.get(position).getLike_count() + " " + "Likes");
-        holder.unlike_count_tv.setText(charitylist1.get(position).getLike_count() + " " + "Likes");
+//        holder.location_name_tv.setText(charitylist1.get(position).getStreet() + ", " + charitylist1.get(position).getCity() + ", " + charitylist1.get(position).getCountry());
 
-        if (charitylist1.get(position).getLiked().equalsIgnoreCase("1" + "")) {
-            holder.unlike_linear_layout.setVisibility(View.VISIBLE);
-            holder.like_linear_layout.setVisibility(View.GONE);
-        } else {
+        if (charitylist1.get(position).getCity().equalsIgnoreCase("")){
+            holder.location_name_tv.setText(charitylist1.get(position).getState() );
+        } else if ( charitylist1.get(position).getState().equalsIgnoreCase("")) {
+            holder.location_name_tv.setText(charitylist1.get(position).getCity() );
+        }else {
+            holder.location_name_tv.setText(charitylist1.get(position).getCity() + ", " + charitylist1.get(position).getState());
+        }
+
+        /*holder.like_count_tv.setText(charitylist1.get(position).getLike_count() + " " + "Likes");
+        holder.unlike_count_tv.setText(charitylist1.get(position).getLike_count() + " " + "Likes");*/
+        holder.like_count_tv.setText(charitylist1.get(position).getLikeCount() + " " + "Likes");
+        holder.unlike_count_tv.setText(charitylist1.get(position).getLikeCount() + " " + "Likes");
+
+
+//        if (charitylist1.get(position).getLiked().equalsIgnoreCase("1")) {
+        if (charitylist1.get(position).getLikeCount() == 0) {
+//            holder.unlike_linear_layout.setVisibility(View.VISIBLE);
+//            holder.like_linear_layout.setVisibility(View.GONE);
+
             holder.unlike_linear_layout.setVisibility(View.GONE);
             holder.like_linear_layout.setVisibility(View.VISIBLE);
+        } else {
+//            holder.unlike_linear_layout.setVisibility(View.GONE);
+//            holder.like_linear_layout.setVisibility(View.VISIBLE);
+
+            holder.unlike_linear_layout.setVisibility(View.VISIBLE);
+            holder.like_linear_layout.setVisibility(View.GONE);
         }
-        if (charitylist1.get(position).getFollowed().equalsIgnoreCase("1")) {
-            holder.follow_count_tv.setText("Following");
+
+//        if (charitylist1.get(position).getFollowed().equalsIgnoreCase("1")) {
+        if (charitylist1.get(position).getFollowingCount() == 0) {
+           /* holder.follow_count_tv.setText("Following");
             holder.unfollow_count_tv.setText("Following");
             holder.follow_linear_layout.setVisibility(View.VISIBLE);
-            holder.unfollow_linear_layout.setVisibility(View.GONE);
-        } else {
+            holder.unfollow_linear_layout.setVisibility(View.GONE);*/
+
             holder.follow_count_tv.setText("Follow");
             holder.unfollow_count_tv.setText("Follow");
             holder.follow_linear_layout.setVisibility(View.GONE);
             holder.unfollow_linear_layout.setVisibility(View.VISIBLE);
+        } else {
+            /*holder.follow_count_tv.setText("Follow");
+            holder.unfollow_count_tv.setText("Follow");
+            holder.follow_linear_layout.setVisibility(View.GONE);
+            holder.unfollow_linear_layout.setVisibility(View.VISIBLE);*/
+
+            holder.follow_count_tv.setText("Following");
+            holder.unfollow_count_tv.setText("Following");
+            holder.follow_linear_layout.setVisibility(View.VISIBLE);
+            holder.unfollow_linear_layout.setVisibility(View.GONE);
         }
+
         holder.follow_linear_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -383,7 +417,7 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
             }
         });
         if (!charitylist1.get(position).getLogo().isEmpty()) {
-            Charitylist charitylistimg = charitylist1.get(position);
+            TempleListDataModel charitylistimg = charitylist1.get(position);
             if (!charitylist1.get(position).getLogo().equalsIgnoreCase("null")) {
                 try {
 
@@ -403,16 +437,21 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
                 Bundle bundle = new Bundle();
                 bundle.putString("name", charitylist1.get(position).getName());
                 bundle.putString("logo", charitylist1.get(position).getLogo());
-                bundle.putString("street", charitylist1.get(position).getStreet());
+//                bundle.putString("street", charitylist1.get(position).getStreet());
                 bundle.putString("city", charitylist1.get(position).getCity());
-                bundle.putString("likecount", charitylist1.get(position).getLike_count());
+                bundle.putString("state", charitylist1.get(position).getState());
+
+//                bundle.putString("likecount", charitylist1.get(position).getLike_count());
+                bundle.putInt("likecount", charitylist1.get(position).getLikeCount());
+                bundle.putInt("followed", charitylist1.get(position).getFollowingCount());
+
                 bundle.putString("description", "");
 
-                bundle.putString("latitude",  charitylist1.get(position).getLatitude());
-                bundle.putString("longitude", charitylist1.get(position).getLongitude());
+//                bundle.putString("latitude",  charitylist1.get(position).getLatitude());
+//                bundle.putString("longitude", charitylist1.get(position).getLongitude());
                 bundle.putString("id", charitylist1.get(position).getId());
-                bundle.putString("followed", charitylist1.get(position).getFollowed());
-                bundle.putString("liked", charitylist1.get(position).getLiked());
+//                bundle.putString("followed", charitylist1.get(position).getFollowed());
+//                bundle.putString("liked", charitylist1.get(position).getLiked());
                 bundle.putString("searchname", "namesearch");
                 intent.putExtras(bundle);
                 mContext.startActivity(intent);
@@ -595,7 +634,8 @@ public class LoadMoreUnitesStateLocationAdapterList extends RecyclerView.Adapter
         });
     }
 
-    public void updateList(ArrayList<Charitylist> list) {
+//    public void updateList(ArrayList<Charitylist> list) {
+    public void updateList(List<TempleListDataModel> list) {
         Log.e("TAG", "updateList: " + charitylist1.size());
         charitylist1 = new ArrayList<>();
         charitylist1.addAll(list);

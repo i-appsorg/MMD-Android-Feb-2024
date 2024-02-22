@@ -115,8 +115,6 @@ public class SessionManager {
         user.put(KEY_country,pref.getString(KEY_country,null));
         user.put(KEY_gender,pref.getString(KEY_gender,null));
         user.put(KEY_type,pref.getString(KEY_type,null));
-
-
         return user;
     }
     /**

@@ -30,10 +30,10 @@
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_70sdp"
                 android:layout_weight=".8"
-                android:focusableInTouchMode="true"
                 android:adjustViewBounds="true"
-                app:riv_corner_radius="@dimen/_8sdp"
-                android:src="@drawable/logo_splash" />
+                android:focusableInTouchMode="true"
+                android:src="@drawable/logo_splash"
+                app:riv_corner_radius="@dimen/_8sdp" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -135,8 +135,8 @@
                     android:layout_height="@dimen/_15sdp"
                     android:layout_weight="0.3"
                     android:src="@drawable/ic_liked"
-                    app:tint="@color/colorPrimary"
-                    android:visibility="visible" />
+                    android:visibility="visible"
+                    app:tint="@color/colorPrimary" />
 
                 <TextView
                     android:id="@+id/unlike_count_tv"

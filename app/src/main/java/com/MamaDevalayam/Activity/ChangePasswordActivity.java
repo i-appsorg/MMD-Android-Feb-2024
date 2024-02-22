@@ -228,6 +228,7 @@ public class ChangePasswordActivity extends CommonBackActivity {
             call.enqueue(new Callback<JsonObject>() {
                 @Override
                 public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                    Log.e(TAG, "onResponse:change_passwordAPI = "+response );
                     progressDialog.dismiss();
                     Log.e(TAG, "" + response.body());
                     try {

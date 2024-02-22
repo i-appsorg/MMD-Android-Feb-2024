@@ -193,7 +193,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight=".8"
                                 android:text="@string/united_state_adapter_like"
-                                android:textColor="@color/colorAccent"
+                                android:textColor="@color/title_color"
                                 android:textSize="@dimen/_10ssp" />
                         </LinearLayout>
 

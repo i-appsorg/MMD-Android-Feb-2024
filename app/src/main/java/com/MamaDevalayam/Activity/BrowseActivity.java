@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
@@ -95,7 +96,7 @@ public class BrowseActivity extends CommonMenuActivity {
         country_name_list.clear();
         JsonObject jsonObject1 = new JsonObject();
         jsonObject1.addProperty("email", API_KEY);
-        apiService = ApiClient.getClient().create(ApiInterface.class);
+         apiService = ApiClient.getClient().create(ApiInterface.class);
 
         Call<JsonObject> call = apiService.countryAPI(jsonObject1);
         Log.e(TAG, "CountryAPI: " + apiService);
@@ -118,7 +119,7 @@ public class BrowseActivity extends CommonMenuActivity {
                         for (int i = 0; i < jsonArray.length(); i++) {
 
                             JSONObject countryobject = jsonArray.getJSONObject(i);
-                            Log.e(TAG, "CountryAPI countryobject = " + countryobject.toString());
+//                            Log.e(TAG, "CountryAPI countryobject = " + countryobject.toString());
                             CurrencyBean ctb = new CurrencyBean();
                             country.add(countryobject.getString("name"));
                             //TODO 13 FEB 2024
@@ -135,6 +136,8 @@ public class BrowseActivity extends CommonMenuActivity {
                                 //TODO 13 FEB 2024
 //                                country_symbol = countryobject.getString("sortname");
                                 country_symbol = countryobject.getString("iso3");
+                                Log.e(TAG, "onResponse:country_symbol --->> "+ country_symbol);
+
                                 country_spinner.setVisibility(View.VISIBLE);
                                 CountryArrow.setVisibility(View.VISIBLE);
                                 ProgressCountry.setVisibility(View.GONE);
@@ -154,22 +157,21 @@ public class BrowseActivity extends CommonMenuActivity {
         });
     }
 
-
-//    private void notification() {
-//        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-//            NotificationManager mNotificationManager =
-//                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-//            int importance = NotificationManager.IMPORTANCE_HIGH;
-//            NotificationChannel mChannel = new NotificationChannel(Constants.CHANNEL_ID, Constants.CHANNEL_NAME, importance);
-//            mChannel.setDescription(Constants.CHANNEL_DESCRIPTION);
-//            mChannel.enableLights(true);
-//            mChannel.setLightColor(Color.RED);
-//            mChannel.enableVibration(true);
-//            mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
-//            mNotificationManager.createNotificationChannel(mChannel);
-//        }
-//        MyNotificationManager.getInstance(this).displayNotification("Greetings", "Hello how are you?");
-//    }
+/*    private void notification() {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            NotificationManager mNotificationManager =
+                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+            NotificationChannel mChannel = new NotificationChannel(Constants.CHANNEL_ID, Constants.CHANNEL_NAME, importance);
+            mChannel.setDescription(Constants.CHANNEL_DESCRIPTION);
+            mChannel.enableLights(true);
+            mChannel.setLightColor(Color.RED);
+            mChannel.enableVibration(true);
+            mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
+            mNotificationManager.createNotificationChannel(mChannel);
+        }
+        MyNotificationManager.getInstance(this).displayNotification("Greetings", "Hello how are you?");
+    }*/
 
     @SuppressLint("MissingPermission")
     private void init() {
@@ -216,7 +218,13 @@ public class BrowseActivity extends CommonMenuActivity {
             public void onClick(View v) {
                 iDonateSharedPreference.setLocation(getApplicationContext(), "");
                 iDonateSharedPreference.setSelectedtype(getApplicationContext(), "");
-                ChangeActivity.changeActivityData(BrowseActivity.this, UnitedStateActivity.class, "0");
+//                ChangeActivity.changeActivityData(BrowseActivity.this, UnitedStateActivity.class, "0");
+
+                Intent i = new Intent(BrowseActivity.this, UnitedStateActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_NEW_TASK);
+                i.putExtra("country_symbol", country_symbol);
+                startActivity(i);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
         name_relative_layout.setOnClickListener(new View.OnClickListener() {
@@ -250,6 +258,8 @@ public class BrowseActivity extends CommonMenuActivity {
                 iDonateSharedPreference.setAdvancepage(getApplicationContext(), "typesearch");
                 iDonateSharedPreference.setcountrycode(getApplicationContext(), "normalsearch");
                 iDonateSharedPreference.setSelectedtype(getApplicationContext(), "typesearch");
+//                ChangeActivity.changeActivityData(BrowseActivity.this, NewtypesActivity.class, "0");
+
                 ChangeActivity.changeActivityData(BrowseActivity.this, NewSeachtypesActivity.class, "0");
             }
         });
@@ -261,8 +271,8 @@ public class BrowseActivity extends CommonMenuActivity {
                 ChangeActivity.changeActivityData(BrowseActivity.this, InternationalCharitiesActivity.class, "0");
             }
         });
-
         country_spinner.setSelectionListener(new SearchableSpinner.OnSelectionListener() {
+
             @Override
             public void onSelect(int spinnerId, int i, String value) {
                 Log.e("Select2", "Position : " + i + " : Value : " + value + " : " + spinnerId);
@@ -277,7 +287,7 @@ public class BrowseActivity extends CommonMenuActivity {
                             //TODO 13 FEB 2024
 //                            country_symbol = countryobject.getString("sortname");
                             country_symbol = countryobject.getString("iso3");
-                            Log.e(TAG, country_symbol);
+                            Log.e(TAG, "onSelect:country_symbol --->> "+country_symbol);
                         }
                     } catch (JSONException e) {
                     }
